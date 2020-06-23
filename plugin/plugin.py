@@ -47,7 +47,7 @@ config.OpenWebif.identifier_custom = ConfigYesNo(default=False)
 config.OpenWebif.identifier_text = ConfigText(default="", fixed_size=False)
 config.OpenWebif.port = ConfigInteger(default=80, limits=(1, 65535))
 config.OpenWebif.streamport = ConfigInteger(default=8001, limits=(1, 65535))
-config.OpenWebif.auth = ConfigYesNo(default=True)
+config.OpenWebif.auth = ConfigYesNo(default=False)
 config.OpenWebif.xbmcservices = ConfigYesNo(default=False)
 config.OpenWebif.webcache = ConfigSubsection()
 # FIXME: anything better than a ConfigText?
@@ -72,7 +72,7 @@ config.OpenWebif.auth_for_streaming = ConfigYesNo(default=False)
 config.OpenWebif.no_root_access = ConfigYesNo(default=False)
 config.OpenWebif.local_access_only = ConfigSelection(default=' ', choices=[' '])
 config.OpenWebif.vpn_access = ConfigYesNo(default=False)
-config.OpenWebif.allow_upload_ipk = ConfigYesNo(default=True)
+config.OpenWebif.allow_upload_ipk = ConfigYesNo(default=False)
 # encoding of EPG data
 config.OpenWebif.epg_encoding = ConfigSelection(default='utf-8', choices=['utf-8',
 										'iso-8859-15',
