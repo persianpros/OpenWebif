@@ -224,7 +224,7 @@ def getInfo(session=None, need_fullinfo=False):
 	info['mem2'] = "%s %s" % (memFree, _("kB"))
 	info['mem3'] = _("%s free / %s total") % (info['mem2'], info['mem1'])
 
-	info['uptime'] = about.getSTBUptime()
+	info['uptime'] = about.getBoxUptime()
 
 	info["webifver"] = OPENWEBIFVER
 	info['imagedistro'] = boxbranding.getImageDistro()
