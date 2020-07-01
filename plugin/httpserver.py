@@ -2,14 +2,25 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 
-##############################################################################
-#                        2011 E2OpenPlugins                                  #
-#                                                                            #
-#  This file is open source software; you can redistribute it and/or modify  #
-#     it under the terms of the GNU General Public License version 2 as      #
-#               published by the Free Software Foundation.                   #
-#                                                                            #
-##############################################################################
+##########################################################################
+# OpenWebif: httpserver
+##########################################################################
+# Copyright (C) 2011 - 2020 E2OpenPlugins
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
+##########################################################################
 
 import enigma
 from Screens.MessageBox import MessageBox
@@ -18,7 +29,6 @@ from Tools.Directories import fileExists
 from twisted import version
 from twisted.internet import reactor, ssl
 from twisted.web import server, http, resource
-#from twisted.web import server, http, static, resource, error, version
 from twisted.internet.error import CannotListenError
 from twisted.internet.protocol import Factory, Protocol
 
@@ -31,8 +41,8 @@ from Components.Network import iNetwork
 
 import os
 import imp
-#import re
 import ipaddress
+import six
 
 global listener, server_to_stop, site, sslsite
 listener = []
@@ -53,7 +63,7 @@ def getAllNetworks():
 				tmpaddr = str(ipaddress.ip_address(int(tmp[0], 16)))
 				if tmp[2].lower() != "ff":
 					tmpaddr = "%s/%s" % (tmpaddr, int(tmp[2].lower(), 16))
-					tmpaddr = str(ipaddress.IPv6Network(unicode(tmpaddr), strict=False))
+					tmpaddr = str(ipaddress.IPv6Network(six.text_type(tmpaddr), strict=False))
 
 				tempaddrs.append(tmpaddr)
 	# Crappy legacy IPv4 has no proc entry with clean addresses
@@ -66,7 +76,7 @@ def getAllNetworks():
 		ip = '.'.join(str(x) for x in crap)
 		netmask = str(sum([bin(int(x)).count('1') for x in iNetwork.getAdapterAttribute(iface, "netmask")]))
 		ip = ip + "/" + netmask
-		tmpaddr = str(ipaddress.IPv4Network(unicode(ip), strict=False))
+		tmpaddr = str(ipaddress.IPv4Network(six.text_type(ip), strict=False))
 		tempaddrs.append(tmpaddr)
 
 	if tempaddrs == []:
@@ -158,7 +168,7 @@ def buildRootTree(session):
 
 		if len(loaded_plugins) > 0:
 			for plugin in loaded_plugins:
-				root.putChild(plugin[0], plugin[1])
+				root.putChild2(plugin[0], plugin[1])
 				# print("[OpenWebif] plugin '%s' loaded on path '/%s'" % (plugin[2], plugin[0]))
 		else:
 			print("[OpenWebif] no plugins to load")
@@ -179,6 +189,7 @@ def HttpdStart(session):
 		temproot = buildRootTree(session)
 		root = AuthResource(session, temproot)
 		site = server.Site(root)
+		site.displayTracebacks = config.OpenWebif.displayTracebacks.value
 
 		# start http webserver on configured port
 		try:
@@ -189,7 +200,7 @@ def HttpdStart(session):
 				# ipv4 only
 				listener.append( reactor.listenTCP(port, site) )
 			print("[OpenWebif] started on %i"% (port))
-			BJregisterService('http',port)
+			BJregisterService('http', port)
 		except CannotListenError:
 			print("[OpenWebif] failed to listen on Port %i" % (port))
 
@@ -244,7 +255,7 @@ def HttpdStart(session):
 					# ipv4 only
 					listener.append( reactor.listenSSL(httpsPort, sslsite, context) )
 				print("[OpenWebif] started on", httpsPort)
-				BJregisterService('https',httpsPort)
+				BJregisterService('https', httpsPort)
 			except CannotListenError:
 				print("[OpenWebif] failed to listen on Port", httpsPort)
 			except:
@@ -298,14 +309,14 @@ class AuthResource(resource.Resource):
 			peer = request.transport.socket.getpeername()[0]
 
 		if peer.startswith("::ffff:"):
-			peer = peer.replace("::ffff:","")
+			peer = peer.replace("::ffff:", "")
 
 		if peer.startswith("fe80::") and "%" in peer:
 			peer = peer.split ("%")[0]
 
 		if self.login(request.getUser(), request.getPassword(), peer) is False:
 			request.setHeader('WWW-authenticate', 'Basic realm="%s"' % ("OpenWebif"))
-			errpage = resource.ErrorPage(http.UNAUTHORIZED,"Unauthorized","401 Authentication required")
+			errpage = resource.ErrorPage(http.UNAUTHORIZED, "Unauthorized", "401 Authentication required")
 			return errpage.render(request)
 		else:
 			return self.resource.render(request)
@@ -322,7 +333,7 @@ class AuthResource(resource.Resource):
 			peer = request.transport.socket.getpeername()[0]
 
 		if peer.startswith("::ffff:"):
-			peer = peer.replace("::ffff:","")
+			peer = peer.replace("::ffff:", "")
 
 		if peer.startswith("fe80::") and "%" in peer:
 			peer = peer.split ("%")[0]
@@ -334,16 +345,16 @@ class AuthResource(resource.Resource):
 			networks = getAllNetworks()
 			if networks:
 				for network in networks:
-					if ipaddress.ip_address(unicode(peer)) in ipaddress.ip_network(unicode(network), strict=False):
+					if ipaddress.ip_address(six.text_type(peer)) in ipaddress.ip_network(six.text_type(network), strict=False):
 						return self.resource.getChildWithDefault(path, request)
 
 		# #2: Auth is disabled and access is from private address space (Usually VPN) and access for VPNs has been granted
 		if (not request.isSecure() and config.OpenWebif.auth.value is False) or (request.isSecure() and config.OpenWebif.https_auth.value is False):
-			if config.OpenWebif.vpn_access.value is True and ipaddress.ip_address(unicode(peer)).is_private:
+			if config.OpenWebif.vpn_access.value is True and ipaddress.ip_address(six.text_type(peer)).is_private:
 				return self.resource.getChildWithDefault(path, request)
 
 		# #3: Access is from localhost and streaming auth is disabled - or - we only want to see our IPv6 (For inadyn-mt)
-		if ((host == "localhost" or host == "127.0.0.1" or host == "::ffff:127.0.0.1" or host == "::1") and not (request.uri.startswith("/web/stream?StreamService=") and config.OpenWebif.auth_for_streaming.value) or request.uri == "/web/getipv6"):
+		if ((host == "localhost" or host == "127.0.0.1" or host == "::ffff:127.0.0.1" or host == "::1") and not (request.uri.startswith(b"/web/stream?StreamService=") and config.OpenWebif.auth_for_streaming.value) or request.uri == b"/web/getipv6"):
 			return self.resource.getChildWithDefault(path, request)
 
 		# #4: Web TV is accessing streams and "auths" by parent session id
@@ -351,7 +362,7 @@ class AuthResource(resource.Resource):
 			sid = str(request.getPassword())
 			try:
 				oldsession = site.getSession(sid).sessionNamespaces
-				if "logged" in oldsession.keys() and oldsession["logged"]:
+				if "logged" in list(oldsession.keys()) and oldsession["logged"]:
 					session = request.getSession().sessionNamespaces
 					session["logged"] = True
 					return self.resource.getChildWithDefault(path, request)
@@ -360,7 +371,7 @@ class AuthResource(resource.Resource):
 
 			try:
 				oldsession = sslsite.getSession(sid).sessionNamespaces
-				if "logged" in oldsession.keys() and oldsession["logged"]:
+				if "logged" in list(oldsession.keys()) and oldsession["logged"]:
 					session = request.getSession().sessionNamespaces
 					session["logged"] = True
 					return self.resource.getChildWithDefault(path, request)
@@ -370,15 +381,15 @@ class AuthResource(resource.Resource):
 		# If we get to here, no exception applied
 		# Either block with forbidden (If auth is disabled) ...
 		if (not request.isSecure() and config.OpenWebif.auth.value is False) or (request.isSecure() and config.OpenWebif.https_auth.value is False):
-			return resource.ErrorPage(http.FORBIDDEN,'Forbidden','403.6 IP address rejected')
+			return resource.ErrorPage(http.FORBIDDEN, 'Forbidden', '403.6 IP address rejected')
 
 		# ... or auth
-		if "logged" in session.keys() and session["logged"]:
+		if "logged" in list(session.keys()) and session["logged"]:
 			return self.resource.getChildWithDefault(path, request)
 
 		if self.login(request.getUser(), request.getPassword(), peer) is False:
 			request.setHeader('WWW-authenticate', 'Basic realm="%s"' % ("OpenWebif"))
-			return resource.ErrorPage(http.UNAUTHORIZED,"Unauthorized","401 Authentication required")
+			return resource.ErrorPage(http.UNAUTHORIZED, "Unauthorized", "401 Authentication required")
 		else:
 			session["logged"] = True
 			session["user"] = request.getUser()
@@ -394,9 +405,9 @@ class AuthResource(resource.Resource):
 			networks = getAllNetworks()
 			if networks:
 				for network in networks:
-					if ipaddress.ip_address(unicode(peer)) in ipaddress.ip_network(unicode(network), strict=False):
+					if ipaddress.ip_address(six.text_type(peer)) in ipaddress.ip_network(six.text_type(network), strict=False):
 						samenet=True
-			if not (ipaddress.ip_address(unicode(peer)).is_private or samenet):
+			if not (ipaddress.ip_address(six.text_type(peer)).is_private or samenet):
 				return False
 		from crypt import crypt
 		from pwd import getpwnam

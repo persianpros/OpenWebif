@@ -2,6 +2,27 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 
+##########################################################################
+# OpenWebif: config
+##########################################################################
+# Copyright (C) 2011 - 2020 E2OpenPlugins
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
+##########################################################################
+
+from __future__ import print_function
 from enigma import eEnv
 from Components.SystemInfo import SystemInfo
 from Components.config import config
@@ -226,7 +247,7 @@ def getConfigsSections():
 	}
 
 def privSettingValues(prefix, top, result):
-	for (key, val) in top.items():
+	for (key, val) in list(top.items()):
 		name = prefix + "." + key
 		if isinstance(val, dict):
 			privSettingValues(name, val, result)
@@ -242,16 +263,15 @@ def getSettings():
 		"result": True,
 		"settings": configkeyval
 	}
-	
+
 def getUtcOffset():
 	now = time.time()
-	offset = (datetime.fromtimestamp(now) - 
-			datetime.utcfromtimestamp(now)).total_seconds()
+	offset = (datetime.fromtimestamp(now) - datetime.utcfromtimestamp(now)).total_seconds()
 	hours = round(offset / 3600)
 	minutes = (offset - (hours * 3600))
 	return {
 		"result": True,
-		#round minutes to next quarter hour
+		# round minutes to next quarter hour
 		"utcoffset": "{:+05}".format(int(hours * 100 + (round(minutes / 900) * 900 / 60)))
 	}
 

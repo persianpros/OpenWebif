@@ -4,7 +4,7 @@
 ##########################################################################
 # OpenWebif: BQEController
 ##########################################################################
-# Copyright (C) 2013 - 2018 jbleyel and E2OpenPlugins
+# Copyright (C) 2013 - 2020 jbleyel and E2OpenPlugins
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -26,8 +26,10 @@ from enigma import eServiceCenter, eServiceReference, iServiceInformation
 from Plugins.Extensions.OpenWebif.controllers.base import BaseController
 from Components.config import config
 from Components.ParentalControl import parentalControl
+from Plugins.Extensions.OpenWebif.controllers.utilities import getUrlArg
 import os
 import json
+import six
 
 # FIXME:
 # remove #from Screens.ChannelSelection import service_types_tv
@@ -62,7 +64,8 @@ class BQEWebController(BaseController):
 		list = {}
 		for key in paramlist:
 			if key in args:
-				list[key] = args[key][0]
+				k = six.ensure_binary(key)
+				list[key] = six.ensure_str(args[k][0])
 			else:
 				list[key] = None
 		return list
@@ -195,7 +198,7 @@ class BQEWebController(BaseController):
 		try:
 			from Plugins.Extensions.OpenWebif.controllers.BouquetEditor import BouquetEditor
 			bqe = BouquetEditor(self.session, func=BouquetEditor.BACKUP)
-			bqe.handleCommand(request.args['Filename'][0])
+			bqe.handleCommand(six.ensure_str(request.args[b'Filename'][0]))
 			return self.returnResult(request, bqe.result)
 		except ImportError:
 			return self.returnResult(request, [False, 'BouquetEditor plugin not found'])
@@ -205,7 +208,7 @@ class BQEWebController(BaseController):
 		try:
 			from Plugins.Extensions.OpenWebif.controllers.BouquetEditor import BouquetEditor
 			bqe = BouquetEditor(self.session, func=BouquetEditor.RESTORE)
-			bqe.handleCommand(request.args['Filename'][0])
+			bqe.handleCommand(six.ensure_str(request.args[b'Filename'][0]))
 			return self.returnResult(request, bqe.result)
 		except ImportError:
 			return self.returnResult(request, [False, 'BouquetEditor plugin not found'])
@@ -242,10 +245,7 @@ class BQEWebController(BaseController):
 #		return {"services": services}
 
 	def P_getservices(self, request):
-		if "sRef" in request.args.keys():
-			sRef = request.args["sRef"][0]
-		else:
-			sRef = ""
+		sRef = getUrlArg(request, "sRef", "")
 		services = []
 
 		CalcPos = False
@@ -265,7 +265,6 @@ class BQEWebController(BaseController):
 		pos = 0
 		oPos = 0
 		for item in fulllist:
-			
 			oldoPos = oPos
 			if CalcPos:
 				sref = item[0].toString()
@@ -300,7 +299,7 @@ class BQEWebController(BaseController):
 					if item[0].flags & eServiceReference.isGroup:
 						gservices = []
 						service['isgroup'] = '1'
-						#get members of group
+						# get members of group
 						gserviceslist = serviceHandler.list(eServiceReference(sref))
 						gfulllist = gserviceslist and gserviceslist.getContent("RN", True)
 						for gitem in gfulllist:
@@ -320,7 +319,7 @@ class BQEWebController(BaseController):
 					protection = parentalControl.getProtectionLevel(sref)
 					if protection != -1:
 						if config.ParentalControl.type.value == "blacklist":
-							if parentalControl.blacklist.has_key(sref):
+							if sref in parentalControl.blacklist:
 								if "SERVICE" in parentalControl.blacklist[sref]:
 									service['isprotected'] = '1'
 								elif "BOUQUET" in parentalControl.blacklist[sref]:
@@ -328,7 +327,7 @@ class BQEWebController(BaseController):
 								else:
 									service['isprotected'] = '3'
 						elif config.ParentalControl.type.value == "whitelist":
-							if not parentalControl.whitelist.has_key(sref):
+							if sref not in parentalControl.whitelist:
 								if item[0].flags & eServiceReference.isGroup:
 									service['isprotected'] = '5'
 								else:
@@ -343,8 +342,8 @@ class BQEWebController(BaseController):
 				type = "0"
 			else:
 				type = "1"
-			setuppin = "setuppin" in config.ParentalControl.dict().keys() and config.ParentalControl.setuppin.value or -1
-			setuppinactive = "setuppin" in config.ParentalControl.dict().keys() and config.ParentalControl.setuppinactive.value
+			setuppin = "setuppin" in list(config.ParentalControl.dict().keys()) and config.ParentalControl.setuppin.value or -1
+			setuppinactive = "setuppin" in list(config.ParentalControl.dict().keys()) and config.ParentalControl.setuppinactive.value
 		else:
 			type = ""
 			setuppin = ""
@@ -369,7 +368,7 @@ class BQEUploadFile(resource.Resource):
 		request.setResponseCode(http.OK)
 		request.setHeader('content-type', 'text/plain')
 		request.setHeader('charset', 'UTF-8')
-		content = request.args['rfile'][0]
+		content = request.args[b'rfile'][0]
 		if not content:
 			result = [False, 'Error upload File']
 		else:
@@ -386,7 +385,7 @@ class BQEUploadFile(resource.Resource):
 				result = [False, 'Error writing File']
 			else:
 				result = [True, self.FN]
-		return json.dumps({"Result": result})
+		return six.ensure_binary(json.dumps({"Result": result}))
 
 class BQEImport(resource.Resource):
 	def __init__(self, session):
@@ -398,7 +397,7 @@ class BQEImport(resource.Resource):
 		request.setHeader('content-type', 'text/plain')
 		request.setHeader('charset', 'UTF-8')
 		result = [False, 'Error upload File']
-		if "json" in request.args.keys():
+		if getUrlArg(request, "json") != None:
 			try:
 				from Plugins.Extensions.OpenWebif.controllers.BouquetEditor import BouquetEditor
 				bqe = BouquetEditor(self.session, func=BouquetEditor.IMPORT_BOUQUET)
@@ -420,8 +419,8 @@ class BQEApiController(BQEWebController):
 class BQEController(BaseController):
 	def __init__(self, session, path=""):
 		BaseController.__init__(self, path=path, session=session)
-		self.putChild("web", BQEWebController(session))
-		self.putChild("api", BQEApiController(session))
-		self.putChild('tmp', static.File('/tmp'))  # nosec
-		self.putChild('uploadrestore', BQEUploadFile(session))
-		self.putChild('import', BQEImport(session))
+		self.putChild(b"web", BQEWebController(session))
+		self.putChild(b"api", BQEApiController(session))
+		self.putChild(b"tmp", static.File(b"/tmp"))  # nosec
+		self.putChild(b"uploadrestore", BQEUploadFile(session))
+		self.putChild(b"import", BQEImport(session))

@@ -2,16 +2,28 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 
-##############################################################################
-#                        2011-2017 E2OpenPlugins                             #
-#                                                                            #
-#  This file is open source software; you can redistribute it and/or modify  #
-#     it under the terms of the GNU General Public License version 2 as      #
-#               published by the Free Software Foundation.                   #
-#                                                                            #
-##############################################################################
+##########################################################################
+# OpenWebif: info
+##########################################################################
+# Copyright (C) 2011 - 2020 E2OpenPlugins
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
+##########################################################################
 
 import os
+import six
 import sys
 import time
 from twisted import version
@@ -27,11 +39,12 @@ from ServiceReference import ServiceReference
 from RecordTimer import parseEvent, RecordTimerEntry
 from timer import TimerEntry
 from Screens.InfoBar import InfoBar
-from Tools.Directories import fileExists, pathExists
+from Tools.Directories import fileExists
 from enigma import eDVBVolumecontrol, eServiceCenter, eServiceReference, getEnigmaVersionString, eEPGCache, getBoxType, getBoxBrand, eGetEnigmaDebugLvl
 from Tools.StbHardware import getFPVersion, getBoxProc, getBoxProcType, getHWSerial, getBoxRCType
 from Plugins.Extensions.OpenWebif.controllers.i18n import _
 from Plugins.Extensions.OpenWebif.controllers.defaults import OPENWEBIFVER
+from Plugins.Extensions.OpenWebif.controllers.utilities import removeBad, removeBad2
 import boxbranding
 from Plugins.Extensions.OpenWebif.controllers.models.owibranding import getLcd, getGrabPip
 
@@ -50,7 +63,7 @@ def getIPMethod(iface):
 	ipmethod = _("SLAAC")
 	if fileExists('/etc/network/interfaces'):
 		ifaces = '/etc/network/interfaces'
-		for line in file(ifaces).readlines():
+		for line in open(ifaces).readlines():
 			if not line.startswith('#'):
 				if line.startswith('iface') and "inet6" in line and iface in line:
 					if "static" in line:
@@ -69,7 +82,7 @@ def getIPv4Method(iface):
 	ipv4method = _("static")
 	if fileExists('/etc/network/interfaces'):
 		ifaces = '/etc/network/interfaces'
-		for line in file(ifaces).readlines():
+		for line in open(ifaces).readlines():
 			if not line.startswith('#'):
 				if line.startswith('iface') and "inet " in line and iface in line:
 					if "static" in line:
@@ -140,14 +153,14 @@ def getAdapterIPv6(ifname):
 		if has_ipv6 and version.major >= 12:
 			proc = '/proc/net/if_inet6'
 			tempaddrs = []
-			for line in file(proc).readlines():
+			for line in open(proc).readlines():
 				if line.startswith('fe80'):
 					continue
 
 				tmpaddr = ""
 				tmp = line.split()
 				if ifname == tmp[5]:
-					tmpaddr = ":".join([tmp[0][i:i + 4] for i in range(0, len(tmp[0]), 4)])
+					tmpaddr = ":".join([tmp[0][i:i + 4] for i in list(range(0, len(tmp[0]), 4))])
 
 					if firstpublic is None and (tmpaddr.startswith('2') or tmpaddr.startswith('3')):
 						firstpublic = normalize_ipv6(tmpaddr)
@@ -198,12 +211,12 @@ def getInfo(session=None, need_fullinfo=False):
 
 	try:
 		info['lcd'] = getLcd()
-	except:
+	except:  # noqa: E722
 		info['lcd'] = 0
 
 	try:
 		info['grabpip'] = getGrabPip()
-	except:
+	except:  # noqa: E722
 		info['grabpip'] = 0
 
 	cpu = about.getCPUInfoString()
@@ -284,7 +297,7 @@ def getInfo(session=None, need_fullinfo=False):
 		info['fp_version'] = None
 
 	info['tuners'] = []
-	for i in range(0, nimmanager.getSlotCount()):
+	for i in list(range(0, nimmanager.getSlotCount())):
 		print("[OpenWebif] -D- tuner '%d' '%s' '%s'" % (i, nimmanager.getNimName(i), nimmanager.getNim(i).getSlotName()))
 		info['tuners'].append({
 			"name": nimmanager.getNim(i).getSlotName(),
@@ -367,7 +380,7 @@ def getInfo(session=None, need_fullinfo=False):
 	for autofs in autofiles:
 		if fileExists(autofs):
 			method = "autofs"
-			for line in file(autofs).readlines():
+			for line in open(autofs).readlines():
 				if not line.startswith('#'):
 					# Replace escaped spaces that can appear inside credentials with underscores
 					# Not elegant but we wouldn't want to expose credentials on the OWIF anyways
@@ -397,7 +410,7 @@ def getInfo(session=None, need_fullinfo=False):
 					uri = tmp[2]
 					parts = []
 					parts = tmp[2].split(':')
-					if parts[0] is "":
+					if parts[0] == "":
 						server = uri.split('/')[2]
 						uri = uri.strip()[1:]
 					else:
@@ -441,14 +454,12 @@ def getInfo(session=None, need_fullinfo=False):
 
 	if session:
 		try:
-# gets all current stream clients for images using eStreamServer
-# TODO: merge eStreamServer and streamList
-# TODO: get tuner info for streams
-# TODO: get recoding/timer info if more than one
-
+			#  gets all current stream clients for images using eStreamServer
+			#  TODO: merge eStreamServer and streamList
+			#  TODO: get tuner info for streams
+			#  TODO: get recoding/timer info if more than one
 			info['streams'] = []
 			try:
-				streams = []
 				from enigma import eStreamServer
 				streamServer = eStreamServer.getInstance()
 				if streamServer is not None:
@@ -468,7 +479,7 @@ def getInfo(session=None, need_fullinfo=False):
 				print("[OpenWebif] -D- no eStreamServer %s" % error)
 			recs = NavigationInstance.instance.getRecordings()
 			if recs:
-# only one stream and only TV
+				#  only one stream and only TV
 				from Plugins.Extensions.OpenWebif.controllers.stream import streamList
 				s_name = ''
 				# s_cip = ''
@@ -498,7 +509,7 @@ def getInfo(session=None, need_fullinfo=False):
 				timers = []
 				for timer in NavigationInstance.instance.RecordTimer.timer_list:
 					if timer.isRunning() and not timer.justplay:
-						timers.append(timer.service_ref.getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', ''))
+						timers.append(removeBad(timer.service_ref.getServiceName()))
 						print("[OpenWebif] -D- timer '%s'" % timer.service_ref.getServiceName())
 # TODO: more than one recording
 				if len(timers) == 1:
@@ -533,9 +544,9 @@ def getInfo(session=None, need_fullinfo=False):
 
 	info['timerpipzap'] = False
 	info['timerautoadjust'] = False
-	
+
 	try:
-		timer = RecordTimerEntry('',0,0,'','',0)
+		timer = RecordTimerEntry('', 0, 0, '', '', 0)
 		if hasattr(timer, "pipzap"):
 			info['timerpipzap'] = True
 		if hasattr(timer, "autoadjust"):
@@ -616,7 +627,7 @@ def getStreamServiceName(ref):
 	if isinstance(ref, eServiceReference):
 		servicereference = ServiceReference(ref)
 		if servicereference:
-			return servicereference.getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '')
+			return removeBad(servicereference.getServiceName())
 	return ""
 
 
@@ -627,7 +638,6 @@ def getStreamEventName(ref):
 		if event:
 			return event.getEventName()
 	return ""
-
 
 def getStatusInfo(self):
 	# Get Current Volume and Mute Status
@@ -653,8 +663,7 @@ def getStatusInfo(self):
 		serviceinfo = service and service.info()
 		event = serviceinfo and serviceinfo.getEvent(0)
 		serviceref_string = serviceref.toString()
-		currservice_station = serviceHandlerInfo.getName(
-			serviceref).replace('\xc2\x86', '').replace('\xc2\x87', '')
+		currservice_station = removeBad(serviceHandlerInfo.getName(serviceref))
 	else:
 		event = None
 		serviceHandlerInfo = None
@@ -664,21 +673,26 @@ def getStatusInfo(self):
 		curEvent = parseEvent(event)
 		begin_timestamp = int(curEvent[0]) + (config.recording.margin_before.value * 60)
 		end_timestamp = int(curEvent[1]) - (config.recording.margin_after.value * 60)
-		statusinfo['currservice_name'] = curEvent[2].replace('\xc2\x86', '').replace('\xc2\x87', '')
+		statusinfo['currservice_name'] = removeBad(curEvent[2])
 		statusinfo['currservice_serviceref'] = serviceref_string
 		statusinfo['currservice_begin'] = time.strftime("%H:%M", (time.localtime(begin_timestamp)))
 		statusinfo['currservice_begin_timestamp'] = begin_timestamp
 		statusinfo['currservice_end'] = time.strftime("%H:%M", (time.localtime(end_timestamp)))
 		statusinfo['currservice_end_timestamp'] = end_timestamp
-		statusinfo['currservice_description'] = curEvent[3]
-		if len(curEvent[3].decode('utf-8')) > 220:
-			statusinfo['currservice_description'] = curEvent[3].decode('utf-8')[0:220].encode('utf-8') + "..."
+		desc = curEvent[3]
+		if six.PY2:
+			desc = desc.decode('utf-8')
+		if len(desc) > 220:
+			desc = desc + u"..."
+		if six.PY2:
+			desc = desc.encode('utf-8')
+		statusinfo['currservice_description'] = desc
 		statusinfo['currservice_station'] = currservice_station
 		if statusinfo['currservice_serviceref'].startswith('1:0:0'):
 			statusinfo['currservice_filename'] = '/' + '/'.join(serviceref_string.split("/")[1:])
 		full_desc = statusinfo['currservice_name'] + '\n'
 		full_desc += statusinfo['currservice_begin'] + " - " + statusinfo['currservice_end'] + '\n\n'
-		full_desc += event.getExtendedDescription().replace('\xc2\x86', '').replace('\xc2\x87', '').replace('\xc2\x8a', '\n')
+		full_desc += removeBad2(event.getExtendedDescription())
 		statusinfo['currservice_fulldescription'] = full_desc
 		statusinfo['currservice_id'] = curEvent[4]
 	else:
@@ -715,7 +729,7 @@ def getStatusInfo(self):
 		for timer in NavigationInstance.instance.RecordTimer.timer_list:
 			if timer.state == TimerEntry.StateRunning:
 				if not timer.justplay:
-					statusinfo['Recording_list'] += timer.service_ref.getServiceName().replace('\xc2\x86', '').replace('\xc2\x87', '') + ": " + timer.name + "\n"
+					statusinfo['Recording_list'] += removeBad(timer.service_ref.getServiceName()) + ": " + timer.name + "\n"
 		if statusinfo['Recording_list'] == "\n":
 			statusinfo['isRecording'] = "false"
 	else:

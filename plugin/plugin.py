@@ -1,34 +1,38 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-##############################################################################
-#                         <<< OpenWebif >>>                                  #
-#                                                                            #
-#                        2011 E2OpenPlugins                                  #
-#                                                                            #
-#  This file is open source software; you can redistribute it and/or modify  #
-#     it under the terms of the GNU General Public License version 2 as      #
-#               published by the Free Software Foundation.                   #
-#                                                                            #
-##############################################################################
+##########################################################################
+# OpenWebif: plugin
+##########################################################################
+# Copyright (C) 2011 - 2020 E2OpenPlugins
 #
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
 #
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
+##########################################################################
 #
 # Authors: meo <lupomeo@hotmail.com>, skaman <sandro@skanetwork.com>
 # Graphics: .....
 
 from Screens.Screen import Screen
 from Plugins.Plugin import PluginDescriptor
-#from Screens.MessageBox import MessageBox
 from Components.ActionMap import ActionMap
 from Components.Label import Label
 from Components.ConfigList import ConfigListScreen
 from Components.config import config, getConfigListEntry, ConfigSubsection, ConfigInteger, ConfigYesNo, ConfigText, ConfigSelection, configfile
 from enigma import getDesktop
 from Plugins.Extensions.OpenWebif.controllers.defaults import getKinopoisk
-
 from Plugins.Extensions.OpenWebif.httpserver import HttpdStart, HttpdStop, HttpdRestart
-
 from Plugins.Extensions.OpenWebif.controllers.i18n import _
 
 # not used redmond -> original , trontastic , ui-lightness
@@ -87,6 +91,8 @@ config.OpenWebif.epg_encoding = ConfigSelection(default='utf-8', choices=['utf-8
 										'iso-8859-9',
 										'iso-8859-10',
 										'iso-8859-16'])
+
+config.OpenWebif.displayTracebacks = ConfigYesNo(default=False)
 
 from Plugins.Extensions.OpenWebif import vtiaddon
 vtiaddon.expandConfig()
@@ -150,6 +156,7 @@ class OpenWebifConfig(Screen, ConfigListScreen):
 			self.list.append(getConfigListEntry(_("Enable Parental Control"), config.OpenWebif.parentalenabled))
 			self.list.append(getConfigListEntry(_("Add service name to stream information"), config.OpenWebif.service_name_for_stream))
 			self.list.append(getConfigListEntry(_("Allow IPK Upload"), config.OpenWebif.allow_upload_ipk))
+			self.list.append(getConfigListEntry(_("Debug - Display Tracebacks in browser"), config.OpenWebif.displayTracebacks))
 			# FIXME Submenu			
 			# self.list.append(getConfigListEntry(_("Webinterface jQuery UI Theme"), config.OpenWebif.webcache.theme))
 			# self.list.append(getConfigListEntry(_("Movie List Sort"), config.OpenWebif.webcache.moviesort))

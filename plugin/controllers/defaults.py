@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from __future__ import print_function
-#!/usr/bin/env python
 import os
 import sys
 
@@ -10,7 +9,7 @@ from Components.config import config as comp_config
 
 from enigma import eEnv
 
-OPENWEBIFVER = "OWIF 1.4.8 for Open Vision"
+OPENWEBIFVER = "OWIF 1.4.9 for Open Vision"
 
 PLUGIN_NAME = 'OpenWebif'
 PLUGIN_DESCRIPTION = "OpenWebif Configuration"
@@ -82,6 +81,7 @@ def getPiconPath():
 #							return PICONPATH
 
 	return None
+
 
 #: PICON PATH FIXME: check path again after a few hours to detect new paths
 PICON_PATH = getPiconPath()

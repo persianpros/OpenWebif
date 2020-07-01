@@ -1,8 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from __future__ import print_function
-#!/usr/bin/env python
 import re
+import six
+import sys
+
+PY3 = sys.version_info[0] == 3
 
 MANY_SLASHES_PATTERN = r'[\/]+'
 MANY_SLASHES_REGEX = re.compile(MANY_SLASHES_PATTERN)
@@ -36,16 +39,16 @@ SERVICE_TYPE_RADIOA = 0x0a
 
 
 SERVICE_TYPE = {
-	SERVICE_TYPE_TV : 'TV',
-	SERVICE_TYPE_HDTV : 'HDTV',
-	SERVICE_TYPE_RADIO : 'RADIO',
-	SERVICE_TYPE_RADIOA : 'RADIO',
-	SERVICE_TYPE_UHD : 'UHD',
-	SERVICE_TYPE_SD4 : 'SD4',
-	SERVICE_TYPE_OPT : 'OPT',
+	SERVICE_TYPE_TV: 'TV',
+	SERVICE_TYPE_HDTV: 'HDTV',
+	SERVICE_TYPE_RADIO: 'RADIO',
+	SERVICE_TYPE_RADIOA: 'RADIO',
+	SERVICE_TYPE_UHD: 'UHD',
+	SERVICE_TYPE_SD4: 'SD4',
+	SERVICE_TYPE_OPT: 'OPT',
 }
 
-SERVICE_TYPE_LOOKUP = {k: v for k, v in SERVICE_TYPE.iteritems()}
+SERVICE_TYPE_LOOKUP = {k: v for k, v in six.iteritems(SERVICE_TYPE)}
 
 #: Namespace - DVB-C services
 NS_DVB_C = 0xffff0000
@@ -64,7 +67,7 @@ NS = {
 }
 
 #: Namespace:Label lookup map
-NS_LOOKUP = {v: k for k, v in NS.iteritems()}
+NS_LOOKUP = {v: k for k, v in six.iteritems(NS)}
 
 
 def lenient_decode(value, encoding=None):
@@ -84,7 +87,7 @@ def lenient_decode(value, encoding=None):
 	>>> lenient_decode("HällöÜ")
 	u'H\\xe4ll\\xf6\\xdc'
 	"""
-	if isinstance(value, unicode):
+	if isinstance(value, six.text_type):
 		return value
 
 	if encoding is None:
@@ -270,6 +273,46 @@ def getGenreStringLong(hn, ln):
 # Fallback moviePlayState
 def _moviePlayState(cutsFileName, ref, length):
 	return 0
+
+
+def getUrlArg(request, key, default=None):
+	if PY3:
+		k = six.ensure_binary(key)
+		if k in list(request.args.keys()):
+			return six.ensure_str(request.args[k][0])
+	else:
+		if key in request.args.keys():
+			return request.args[key][0]
+	return default
+
+def getUrlArg2(args, key, default=None):
+	if PY3:
+		k = six.ensure_binary(key)
+		if k in list(args.keys()):
+			return six.ensure_str(args[k][0])
+	else:
+		if key in args.keys():
+			return args[key][0]
+	return default
+
+
+def removeBad(val):
+	if val is not None:
+		if PY3:
+			return val.replace('\x86', '').replace('\x87', '')
+		else:
+			return val.replace('\xc2\x86', '').replace('\xc2\x87', '')
+	return val
+
+
+def removeBad2(val):
+	if val is not None:
+		if PY3:
+			return val.replace('\x86', '').replace('\x87', '').replace('\xc2\x8a','\n')
+		else:
+			return val.replace('\xc2\x86', '').replace('\xc2\x87', '').replace('\xc2\x8a','\n')
+	return val
+
 
 if __name__ == '__main__':
 	import doctest

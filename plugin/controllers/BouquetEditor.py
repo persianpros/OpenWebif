@@ -158,7 +158,7 @@ class BouquetEditor(Source):
 			if param["mode"] is not None:
 				mode = int(param["mode"])
 
-		if param.has_key("BouquetRefRoot"):
+		if "BouquetRefRoot" in param:
 			bouquet_root = param["BouquetRefRoot"]  # only when removing alternative
 		else:
 			bouquet_root = None
@@ -305,7 +305,7 @@ class BouquetEditor(Source):
 		mutableBouquetList = self.getMutableList(bouquetRef)
 		if mutableBouquetList is not None:
 			if sRefUrl:
-				ref = eServiceReference(4097,0,sRef + ':' + sName)
+				ref = eServiceReference(4097, 0, sRef + ':' + sName)
 			else:
 				ref = eServiceReference(sRef)
 			if sName:
@@ -444,7 +444,7 @@ class BouquetEditor(Source):
 					if mutableAlternatives:
 						mutableAlternatives.setListName(name)
 						if mutableAlternatives.addService(cur_ref):
-									print("add", cur_ref.toString(), "to new alternatives failed")
+							print("add", cur_ref.toString(), "to new alternatives failed")
 						mutableAlternatives.flushChanges()
 						self.setRoot(sBouquetRef)
 						sCurrentRef = sref  # currentRef is now an alternative (bouquet)
@@ -517,7 +517,7 @@ class BouquetEditor(Source):
 				sRef = param["sRef"]
 		if sRef is None:
 			return (False, _("No service given!"))
-		if "setuppinactive" in config.ParentalControl.dict().keys() and config.ParentalControl.setuppinactive.value:
+		if "setuppinactive" in list(config.ParentalControl.dict().keys()) and config.ParentalControl.setuppinactive.value:
 			password = None
 			if "password" in param:
 				if param["password"] is not None:
@@ -542,18 +542,18 @@ class BouquetEditor(Source):
 			serviceType = "Service"
 		if protection:
 			if config.ParentalControl.type.value == "blacklist":
-				if parentalControl.blacklist.has_key(sRef):
-					if "SERVICE" in parentalControl.blacklist.has_key(sRef):
+				if sRef in parentalControl.blacklist:
+					if "SERVICE" in (sRef in parentalControl.blacklist):
 						protectionText = _("Service %s is locked.") % self.getName(cur_ref)
-					elif "BOUQUET" in parentalControl.blacklist.has_key(sRef):
+					elif "BOUQUET" in (sRef in parentalControl.blacklist):
 						protectionText = _("Bouquet %s is locked.") % self.getName(cur_ref)
 					else:
 						protectionText = _("%s %s is locked.") % (serviceType, self.getName(cur_ref))
 			else:
-				if hasattr(parentalControl, "whitelist") and parentalControl.whitelist.has_key(sRef):
-					if "SERVICE" in parentalControl.whitelist.has_key(sRef):
+				if hasattr(parentalControl, "whitelist") and sRef in parentalControl.whitelist:
+					if "SERVICE" in (sRef in parentalControl.whitelist):
 						protectionText = _("Service %s is unlocked.") % self.getName(cur_ref)
-					elif "BOUQUET" in parentalControl.whitelist.has_key(sRef):
+					elif "BOUQUET" in (sRef in parentalControl.whitelist):
 						protectionText = _("Bouquet %s is unlocked.") % self.getName(cur_ref)
 		return (True, protectionText)
 

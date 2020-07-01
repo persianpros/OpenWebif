@@ -1,18 +1,28 @@
 language: python
 
-python:
-- "2.7"
-
-before_install:
-- sudo apt-get install -y closure-compiler nodejs npm
-- "npm config set strict-ssl false"
-- sudo npm install -g jshint
-
-install:
-- pip install -r requirements.txt
-- pip install bandit
-
-script: 
-- python -m compileall -l . -l plugin -l plugin/backport -l plugin/controllers -l plugin/controllers/models
-- cheetah compile -R plugin
-- python testsuite/evil_eval.py
+matrix:
+  include:
+    - name: "Python 2.7"
+      python: 2.7
+      before_install:
+        - sudo apt-get install -y closure-compiler nodejs npm
+        - "npm config set strict-ssl false"
+        - sudo npm install -g jshint
+        - pip install Cheetah
+        - pip install -r requirements.txt
+        - pip install bandit
+      script:
+        - python -m compileall -l . -l plugin -l plugin/backport -l plugin/controllers -l plugin/controllers/models
+        - cheetah compile -R plugin
+        - python testsuite/evil_eval.py
+        - futurize --stage1 **/*.py > futurize_stage1.txt
+        - futurize --stage2 **/*.py > futurize_stage2.txt
+        - 2to3 -f all . > 2to3.txt
+    - name: "Python 3.8"
+      python: 3.8
+      before_install:
+        - pip install Cheetah3
+      script:
+        - python -m compileall -l . -r 10 -q
+        - cheetah compile -R plugin
+        - python testsuite/evil_eval.py

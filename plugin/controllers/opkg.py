@@ -2,26 +2,38 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 
-##############################################################################
-#                        2011 E2OpenPlugins                                  #
-#                                                                            #
-#  This file is open source software; you can redistribute it and/or modify  #
-#     it under the terms of the GNU General Public License version 2 as      #
-#               published by the Free Software Foundation.                   #
-#                                                                            #
-##############################################################################
+##########################################################################
+# OpenWebif: OpkgController
+##########################################################################
+# Copyright (C) 2011 - 2020 E2OpenPlugins
+#
+# This program is free software; you can redistribute it and/or modify it
+# under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
+##########################################################################
 
 from enigma import eConsoleAppContainer
 from twisted.web import server, resource, http
-# from os import path, popen, remove, stat
 
 import os
 import json
+import six
 
 from Plugins.Extensions.OpenWebif.controllers.base import BaseController
 from Components.config import config
 
 from Plugins.Extensions.OpenWebif.controllers.i18n import _
+from Plugins.Extensions.OpenWebif.controllers.utilities import getUrlArg, PY3
 
 PACKAGES = '/var/lib/opkg/lists'
 INSTALLEDPACKAGES = '/var/lib/opkg/status'
@@ -30,22 +42,16 @@ INSTALLEDPACKAGES = '/var/lib/opkg/status'
 class OpkgController(BaseController):
 	def __init__(self, session, path=""):
 		BaseController.__init__(self, path=path, session=session)
-		self.putChild('upload', OPKGUpload(self.session))
+		self.putChild(b'upload', OPKGUpload(self.session))
 
 	def render(self, request):
-		action = ''
-		package = ''
 		self.request = request
 		self.json = False
 		self.container = None
-		if "command" in request.args:
-			action = request.args["command"][0]
-		if "package" in request.args:
-			package = request.args["package"][0]
-		if "format" in request.args:
-			if request.args["format"][0] == "json":
-				self.json = True
-		if action is not '':
+		action = getUrlArg(request, "command", "")
+		package = getUrlArg(request, "package", "")
+		self.json = getUrlArg(request, "format") == "json"
+		if action != '':
 			if action in ("update", "upgrade"):
 				return self.CallOPKG(request, action)
 			elif action in ("info", "status", "install", "remove"):
@@ -64,7 +70,10 @@ class OpkgController(BaseController):
 						'date': os.stat(tmpfile).st_mtime,
 					})
 				request.setHeader("content-type", "text/plain")
-				request.write(json.dumps({'ipkfiles': ipks}, encoding="ISO-8859-1"))
+				if PY3:
+					request.write(json.dumps({'ipkfiles': ipks}).encode("ISO-8859-1"))
+				else:
+					request.write(json.dumps({'ipkfiles': ipks}, encoding="ISO-8859-1"))
 				request.finish()
 				return server.NOT_DONE_YET
 			else:
@@ -139,7 +148,7 @@ class OpkgController(BaseController):
 						map[package][3] = nv
 				package = None
 
-		keys = map.keys()
+		keys = list(map.keys())
 		keys.sort()
 		self.ResultString = ""
 		if action == "listall":
@@ -167,7 +176,6 @@ class OpkgController(BaseController):
 					self.ResultString += name + " - " + map[name][3] + " - " + map[name][0] + "<br>"
 		if self.json:
 			data = []
-			# nresult = unicode(nresult, errors='ignore')
 			data.append({"result": True, "packages": self.ResultString.split("<br>")})
 			return data
 		return self.ResultString
@@ -178,14 +186,14 @@ class OpkgController(BaseController):
 		if self.json:
 			request.setHeader("content-type", "application/json; charset=utf-8")
 			try:
-				return json.dumps(data, indent=1)
+				return six.ensure_binary(json.dumps(data, indent=1))
 			except Exception as exc:
 				request.setResponseCode(http.INTERNAL_SERVER_ERROR)
-				return json.dumps({"result": False, "request": request.path, "exception": repr(exc)})
+				return json.dumps(six.ensure_binary({"result": False, "request": request.path, "exception": repr(exc)}))
 				pass
 		else:
 			request.setHeader("content-type", "text/plain")
-			request.write("<html><body><br>" + data + "</body></html>")
+			request.write(b"<html><body><br>" + six.ensure_binary(data) + b"</body></html>")
 			request.finish()
 		return server.NOT_DONE_YET
 
@@ -222,30 +230,32 @@ class OpkgController(BaseController):
 			nresult = nresult.replace("\n ", " ")
 			if self.json:
 				data = []
-				nresult = unicode(nresult, errors='ignore')
+				nresult = six.text_type(nresult, errors='ignore')
 				data.append({"result": True, "packages": nresult.split("\n")})
 				self.request.setHeader("content-type", "text/plain")
-				self.request.write(json.dumps(data))
+				self.request.write(six.ensure_binary(json.dumps(data)))
 				self.request.finish()
 			else:
-				self.request.write("<html><body>\n")
-				self.request.write(nresult.replace("\n", "<br>\n"))
-				self.request.write("</body></html>\n")
+				nresult = six.ensure_binary(nresult)
+				self.request.write(b"<html><body>\n")
+				self.request.write(nresult.replace(b"\n", b"<br>\n"))
+				self.request.write(b"</body></html>\n")
 				self.request.finish()
 
 	def Moredata(self, data):
 		if data != self.olddata or self.olddata is None and self.IsAlive:
+			data = six.ensure_str(data)
 			self.ResultString += data
 
 	def CallOPKGP(self, request, action, pack):
-		if pack is not '':
+		if pack != '':
 			return self.CallOPKG(request, action, [pack])
 		else:
 			return self.ShowError(request, "parameter: package is missing")
 
 	def ShowError(self, request, text):
 		request.setResponseCode(http.OK)
-		request.write(text)
+		request.write(six.ensure_binary(text))
 		request.finish()
 		return server.NOT_DONE_YET
 
@@ -257,7 +267,7 @@ class OpkgController(BaseController):
 		html += "Valid Formats:<br>json,html(default)<br>"
 		html += "</body></html>"
 		request.setResponseCode(http.OK)
-		request.write(html)
+		request.write(six.ensure_binary(html))
 		request.finish()
 		return server.NOT_DONE_YET
 
@@ -277,8 +287,8 @@ class OPKGUpload(resource.Resource):
 		request.setResponseCode(http.OK)
 		request.setHeader('content-type', 'text/plain')
 		request.setHeader('charset', 'UTF-8')
-		content = request.args['rfile'][0]
-		filename = self.mbasename(request.args['filename'][0])
+		content = request.args[b'rfile'][0]
+		filename = self.mbasename(getUrlArg(request, "filename"))
 		if not content or not config.OpenWebif.allow_upload_ipk.value:
 			result = [False, _('Error upload File')]
 		else:
@@ -299,4 +309,4 @@ class OPKGUpload(resource.Resource):
 					result = [False, _('Error writing File')]
 				else:
 					result = [True, FN]
-		return json.dumps({"Result": result})
+		return six.ensure_binary(json.dumps({"Result": result}))

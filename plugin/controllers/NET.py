@@ -4,7 +4,7 @@
 ##########################################################################
 # OpenWebif: NetController
 ##########################################################################
-# Copyright (C) 2018 jbleyel and E2OpenPlugins
+# Copyright (C) 2018-2020 jbleyel and E2OpenPlugins
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -23,6 +23,7 @@
 
 from twisted.web import server, http, resource
 import json
+import six
 from re import sub as re_sub
 from Plugins.SystemPlugins.NetworkBrowser.AutoMount import iAutoMount
 
@@ -30,7 +31,7 @@ from Plugins.SystemPlugins.NetworkBrowser.AutoMount import iAutoMount
 class NetController(resource.Resource):
 	def __init__(self, session, path=""):
 		resource.Resource.__init__(self)
-		self.path = path
+		self.path = six.ensure_text(path)
 		self.callback = None
 		self.session = session
 		self.result = {}
@@ -71,7 +72,8 @@ class NetController(resource.Resource):
 		list = {}
 		for key in paramlist:
 			if key in args:
-				list[key] = args[key][0]
+				k = six.ensure_binary(key)
+				list[key] = six.ensure_text(args[k][0])
 			else:
 				list[key] = None
 		return list
@@ -82,7 +84,7 @@ class NetController(resource.Resource):
 	def P_listmounts(self):
 		list = []
 		mounts = iAutoMount.getMountsList()
-		for sharename in mounts.keys():
+		for sharename in list(mounts.keys()):
 			mountentry = iAutoMount.automounts[sharename]
 			list.append(mountentry)
 		self.result["result"] = True

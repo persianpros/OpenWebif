@@ -36,10 +36,10 @@ cd /tmp
 init 4                        # graceful enigma2 shutdown
 # fetching -- wget '<URL of .ipk file>'
 # example:
-wget 'https://github.com/OpenVisionE2/OpenWebif/blob/gh-pages/enigma2-plugin-extensions-openwebif_1.2.7-e2openpluginsgit20171014_all.ipk'
+wget 'https://github.com/OpenVisionE2/OpenWebif/raw/gh-pages/enigma2-plugin-extensions-openwebif_1.4.0-latest_all.ipk'
 # installing -- opkg install <.ipk file>
 # example:
-opkg install ./enigma2-plugin-extensions-openwebif_1.2.7-e2openpluginsgit20171014_all.ipk
+opkg install ./enigma2-plugin-extensions-openwebif_1.4.0-latest_all.ipk
 init 3                        # start enigma2 again
 ```
 
@@ -59,6 +59,7 @@ The following additional packages need to be installed:
     python-pyopenssl
     python-compression
     python-ipaddress
+    python-six (>= 1.14)
 
 _(Dependencies should be handled by using opkg packages)_
 
