@@ -22,7 +22,6 @@ from __future__ import print_function
 # Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
 ##########################################################################
 
-from __future__ import print_function
 from OpenSSL import crypto
 from socket import gethostname
 from time import time

@@ -122,7 +122,7 @@ class EvilEvalTestCase(unittest.TestCase):
 
 			configfile.save()
 			config.save()
-			print config.pickle()
+			print(config.pickle())
 
 		"""
 		global config

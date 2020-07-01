@@ -22,7 +22,6 @@ from __future__ import print_function
 # Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
 ##########################################################################
 
-from __future__ import print_function
 from enigma import eConsoleAppContainer
 from Screens.InfoBar import InfoBar
 from twisted.web import resource, server

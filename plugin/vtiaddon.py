@@ -122,7 +122,7 @@ COLORS = [
 ]
 
 def expandConfig():
-	config.OpenWebif.responsive_enabled = ConfigYesNo(default=False)
+	config.OpenWebif.responsive_enabled = ConfigYesNo(default=True)
 	config.OpenWebif.responsive_skinColor = ConfigSelection(default="black", choices=COLORS)
 	config.OpenWebif.responsive_epgsearch_only_bq = ConfigYesNo(default=True)
 	config.OpenWebif.responsive_epgsearch_full = ConfigYesNo(default=False)
