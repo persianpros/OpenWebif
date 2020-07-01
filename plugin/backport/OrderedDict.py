@@ -6,12 +6,12 @@
 
 try:
 	from thread import get_ident as _get_ident
-except ImportError:
+except ImportError as e:
 	from dummy_thread import get_ident as _get_ident
 
 try:
 	from _abcoll import KeysView, ValuesView, ItemsView
-except ImportError:
+except ImportError as e:
 	pass
 
 class OrderedDict(dict):

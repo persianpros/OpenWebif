@@ -38,13 +38,13 @@ from Plugins.Extensions.OpenWebif.controllers.utilities import getUrlArg2, PY3
 
 try:
 	from Components.MovieList import moviePlayState as _moviePlayState
-except ImportError:
+except ImportError as e:
 	from Plugins.Extensions.OpenWebif.controllers.utilities import _moviePlayState
 	pass
 
 try:
 	from Components.DataBaseAPI import moviedb
-except ImportError:
+except ImportError as e:
 	pass
 
 
@@ -393,7 +393,7 @@ def removeMovie(session, sRef, Force=False):
 					MovieSelection.moveServiceFiles(service.ref, trash)
 					result = True
 					message = "The recording '%s' has been successfully moved to trashcan" % name
-				except ImportError:
+				except ImportError as e:
 					message = "trashcan exception"
 					pass
 				except Exception as e:
@@ -421,7 +421,7 @@ def removeMovie(session, sRef, Force=False):
 						result = True
 					else:
 						message = _("Delete failed, because there is no movie trash !\nDisable movie trash in configuration to delete this item")
-				except ImportError:
+				except ImportError as e:
 					message = "trashdir exception"
 					pass
 				except Exception as e:

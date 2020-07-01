@@ -67,7 +67,7 @@ class WOLSetupController(resource.Resource):
 					try:
 						from Plugins.SystemPlugins.WOLSetup.plugin import WOLSetup, _deviseWOL, _flagForceEnable, _flagSupportWol, _tryQuitTable, _ethDevice  # noqa: F401
 						from Screens.Standby import TryQuitMainloop
-					except ImportError:
+					except ImportError as e:
 						return b'<?xml version="1.0" encoding="UTF-8" ?><e2simplexmlresult><e2state>false</e2state><e2statetext>WOLSetup plugin is not installed or your STB does not support WOL</e2statetext></e2simplexmlresult>'
 					WOLSetup.ActivateWOL(self.session, writeDevice=True)
 					self.session.open(TryQuitMainloop, _tryQuitTable["deepstandby"])

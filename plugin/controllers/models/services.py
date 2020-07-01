@@ -44,12 +44,12 @@ from Plugins.Extensions.OpenWebif.controllers.defaults import PICON_PATH
 
 try:
 	from Components.Converter.genre import getGenreStringLong
-except ImportError:
+except ImportError as e:
 	from Plugins.Extensions.OpenWebif.controllers.utilities import getGenreStringLong
 
 try:
 	from collections import OrderedDict
-except ImportError:
+except ImportError as e:
 	from Plugins.Extensions.OpenWebif.backport.OrderedDict import OrderedDict
 
 # The fields fetched by filterName() and convertDesc() all need to be

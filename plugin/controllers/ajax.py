@@ -97,7 +97,7 @@ class AjaxController(BaseController):
 		try:
 			from Plugins.Extensions.AutoTimer.AutoTimer import AutoTimer  # noqa: F401
 			at = True
-		except ImportError:
+		except ImportError as e:
 			pass
 		event['at'] = at
 		event['transcoding'] = getHaveTranscoding()
@@ -149,7 +149,7 @@ class AjaxController(BaseController):
 			try:
 				from Plugins.Extensions.AutoTimer.AutoTimer import AutoTimer  # noqa: F401
 				at = True
-			except ImportError:
+			except ImportError as e:
 				pass
 		if config.OpenWebif.webcache.theme.value:
 			theme = config.OpenWebif.webcache.theme.value
@@ -321,7 +321,7 @@ class AjaxController(BaseController):
 		try:
 			from Plugins.Extensions.AutoTimer.AutoTimer import typeMap
 			ret['types'] = typeMap
-		except ImportError:
+		except ImportError as e:
 			pass
 		loc = getLocations()
 		ret['locations'] = loc['locations']
@@ -329,17 +329,17 @@ class AjaxController(BaseController):
 		try:
 			from Plugins.SystemPlugins.vps import Vps  # noqa: F401
 			ret['hasVPS'] = 1
-		except ImportError:
+		except ImportError as e:
 			pass
 		try:
 			from Plugins.Extensions.SeriesPlugin.plugin import Plugins  # noqa: F401
 			ret['hasSeriesPlugin'] = 1
-		except ImportError:
+		except ImportError as e:
 			pass
 		try:
 			from Plugins.Extensions.AutoTimer.AutoTimerResource import AutoTimerTestResource  # noqa: F401
 			ret['test'] = 1
-		except ImportError:
+		except ImportError as e:
 			pass
 		return ret
 
