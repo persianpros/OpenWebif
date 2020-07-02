@@ -406,7 +406,7 @@ class BQEImport(resource.Resource):
 			except ImportError as e:
 				result = [False, 'BouquetEditor plugin not found']
 
-		return json.dumps({"Result": result})
+		return six.ensure_binary(json.dumps({"Result": result}))
 
 class BQEApiController(BQEWebController):
 	def __init__(self, session, path=""):
