@@ -23,6 +23,15 @@ sys.path.insert(0, PLUGIN_ROOT_PATH)
 
 GLOBALPICONPATH = None
 
+#: get transcoding feature
+def getTranscoding():
+	if os.path.isfile("/proc/stb/encoder/0/bitrate"):
+		lp = eEnv.resolve('${libdir}/enigma2/python/Plugins/SystemPlugins/')
+		for p in ['TranscodingSetup', 'TransCodingSetup', 'MultiTransCodingSetup']:
+			if os.path.exists(lp + p + '/plugin.pyo'):
+				return True
+	return False
+
 #: get kinopoisk feature
 def getKinopoisk():
 	if language.getLanguage()[0:2] in ['ru', 'uk', 'lv', 'lt', 'et']:
