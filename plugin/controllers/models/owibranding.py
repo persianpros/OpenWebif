@@ -39,7 +39,7 @@ def getAllInfo():
 	info = {}
 
 	grabpip = 0
-	if "4k" or "uhd" or "ultra" in model or brand in ("dinobot","maxytec") or model in ("dm900","dm920","sf8008","sf8008m","beyonwizv2","hd60","hd61","h9","h9combo","h10","i55plus") or pathExists("/proc/hisi") or fileExists("/usr/bin/hihalt"):
+	if "4k" or "uhd" or "ultra" in model or brand in ("dinobot","maxytec") or model in ("dm900","dm920","sf8008","sf8008m","beyonwizv2","hd60","hd61","h9","h9combo","h10","h0","i55plus") or pathExists("/proc/hisi") or fileExists("/usr/bin/hihalt"):
 		grabpip = 1
 
 	info['grabpip'] = grabpip or 0
@@ -194,6 +194,8 @@ def getAllInfo():
 		remote = "tm6"
 	elif model in ("dinobot4kmini","dinobot4kplus","dinobot4k","dinobot4kse","dinobot4kl","dinobot4kpro","dinobotu55","dinoboth265"):
 		remote = "dinobot"
+	elif model in ("dinobotu43","turing"):
+		remote = "turing"
 	elif model in ("axashis4kcombo","axashis4kcomboplus"):
 		remote = "axas1"
 	elif model == "axashisc4k":
