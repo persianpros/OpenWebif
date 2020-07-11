@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+from __future__ import division
 
 ##############################################################################
 #                        2011 E2OpenPlugins                                  #
@@ -162,7 +163,7 @@ def getTS(self, request):
 			line6 = metafile.readline()  # length
 
 			if line6:
-				seconds = float(line6.strip()) / 90000  # In seconds
+				seconds = float(line6.strip()) // 90000  # In seconds
 
 			if config.OpenWebif.service_name_for_stream.value:
 				progopt = "%s#EXTINF:%d,%s\n" % (progopt, seconds, name)
