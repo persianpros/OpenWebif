@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import division, print_function
+from __future__ import print_function
 
 ##########################################################################
 # OpenWebif: services
@@ -269,17 +269,17 @@ def getCurrentFullInfo(session):
 	if frontendStatus is not None:
 		percent = frontendStatus.get("tuner_signal_quality")
 		if percent is not None:
-			inf['snr'] = int(percent * 100 // 65535)
+			inf['snr'] = int(percent * 100 / 65535)
 			inf['snr_db'] = inf['snr']
 		percent = frontendStatus.get("tuner_signal_quality_db")
 		if percent is not None:
-			inf['snr_db'] = "%3.02f dB" % (percent // 100.0)
+			inf['snr_db'] = "%3.02f dB" % (percent / 100.0)
 		percent = frontendStatus.get("tuner_signal_power")
 		if percent is not None:
-			inf['agc'] = int(percent * 100 // 65535)
+			inf['agc'] = int(percent * 100 / 65535)
 		percent = frontendStatus.get("tuner_bit_error_rate")
 		if percent is not None:
-			inf['ber'] = int(percent * 100 // 65535)
+			inf['ber'] = int(percent * 100 / 65535)
 	else:
 		inf['snr'] = 0
 		inf['snr_db'] = inf['snr']
@@ -469,8 +469,8 @@ def getChannels(idbouquet, stype):
 				chan['now_title'] = filterName(nowevent[0][0])
 				chan['now_begin'] = strftime("%H:%M", (localtime(nowevent[0][1])))
 				chan['now_end'] = strftime("%H:%M", (localtime(nowevent[0][1] + nowevent[0][2])))
-				chan['now_left'] = int(((nowevent[0][1] + nowevent[0][2]) - nowevent[0][3]) // 60)
-				chan['progress'] = int(((nowevent[0][3] - nowevent[0][1]) * 100 // nowevent[0][2]))
+				chan['now_left'] = int(((nowevent[0][1] + nowevent[0][2]) - nowevent[0][3]) / 60)
+				chan['progress'] = int(((nowevent[0][3] - nowevent[0][1]) * 100 / nowevent[0][2]))
 				chan['now_ev_id'] = nowevent[0][4]
 				chan['now_idp'] = "nowd" + str(idp)
 				nextevent = epgcache.lookupEvent(['TBDIX', (channel[0], +1, -1)])
@@ -483,7 +483,7 @@ def getChannels(idbouquet, stype):
 					chan['next_title'] = filterName(nextevent[0][0])
 					chan['next_begin'] = strftime("%H:%M", (localtime(nextevent[0][1])))
 					chan['next_end'] = strftime("%H:%M", (localtime(nextevent[0][1] + nextevent[0][2])))
-					chan['next_duration'] = int(nextevent[0][2] // 60)
+					chan['next_duration'] = int(nextevent[0][2] / 60)
 					chan['next_ev_id'] = nextevent[0][3]
 					chan['next_idp'] = "nextd" + str(idp)
 				else:   # Have to fudge one in, as rest of OWI code expects it...
@@ -715,7 +715,7 @@ def getChannelEpg(ref, begintime=-1, endtime=-1, encode=True):
 					ev['date'] = "%s %s" % (tstrings[("day_" + strftime("%w", (localtime(event[1]))))], strftime("%d.%m.%Y", (localtime(event[1]))))
 					ev['begin'] = strftime("%H:%M", (localtime(event[1])))
 					ev['begin_timestamp'] = event[1]
-					ev['duration'] = int(event[2] // 60)
+					ev['duration'] = int(event[2] / 60)
 					ev['duration_sec'] = event[2]
 					ev['end'] = strftime("%H:%M", (localtime(event[1] + event[2])))
 					ev['title'] = filterName(event[3], encode)
@@ -723,11 +723,11 @@ def getChannelEpg(ref, begintime=-1, endtime=-1, encode=True):
 					ev['longdesc'] = convertDesc(event[5], encode)
 					ev['sref'] = ref
 					ev['sname'] = filterName(event[6], encode)
-					ev['tleft'] = int(((event[1] + event[2]) - event[7]) // 60)
+					ev['tleft'] = int(((event[1] + event[2]) - event[7]) / 60)
 					if ev['duration_sec'] == 0:
 						ev['progress'] = 0
 					else:
-						ev['progress'] = int(((event[7] - event[1]) * 100 // event[2]) * 4)
+						ev['progress'] = int(((event[7] - event[1]) * 100 / event[2]) * 4)
 					ev['now_timestamp'] = event[7]
 					ev['genre'], ev['genreid'] = convertGenre(event[8])
 					ret.append(ev)
@@ -947,7 +947,7 @@ def getSearchEpg(sstr, endtime=None, fulldesc=False, bouquetsonly=False, encode=
 			ev['begin_timestamp'] = event[1]
 			ev['begin'] = strftime("%H:%M", (localtime(event[1])))
 			ev['duration_sec'] = event[2]
-			ev['duration'] = int(event[2] // 60)
+			ev['duration'] = int(event[2] / 60)
 			ev['end'] = strftime("%H:%M", (localtime(event[1] + event[2])))
 			ev['title'] = filterName(event[3], encode)
 			ev['shortdesc'] = convertDesc(event[4], encode)
@@ -993,7 +993,7 @@ def getSearchSimilarEpg(ref, eventid, encode=False):
 			ev['begin_timestamp'] = event[1]
 			ev['begin'] = strftime("%H:%M", (localtime(event[1])))
 			ev['duration_sec'] = event[2]
-			ev['duration'] = int(event[2] // 60)
+			ev['duration'] = int(event[2] / 60)
 			ev['end'] = strftime("%H:%M", (localtime(event[1] + event[2])))
 			ev['title'] = filterName(event[3], encode)
 			ev['shortdesc'] = convertDesc(event[4], encode)
@@ -1087,7 +1087,7 @@ def getMultiEpg(self, ref, begintime=-1, endtime=None, Mode=1):
 				picons[channel] = getPicon(event[4])
 
 			if Mode == 1:
-				slot = int((event[1] - offset) // 7200)
+				slot = int((event[1] - offset) / 7200)
 				if slot < 0:
 					slot = 0
 				if slot < 12 and event[1] < lastevent:

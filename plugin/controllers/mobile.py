@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import division
 
 ##########################################################################
 # OpenWebif: MobileController
@@ -110,7 +109,7 @@ class MobileController(BaseController):
 			event['id'] = eventid
 			event['picon'] = getPicon(ref)
 			event['end'] = event['begin'] + event['duration']
-			event['duration'] = int(event['duration'] // 60)
+			event['duration'] = int(event['duration'] / 60)
 			event['start'] = event['begin']
 			event['begin'] = strftime("%H:%M", (localtime(event['begin'])))
 			event['end'] = strftime("%H:%M", (localtime(event['end'])))

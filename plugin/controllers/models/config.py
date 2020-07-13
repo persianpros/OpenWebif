@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import division, print_function
+from __future__ import print_function
 
 ##########################################################################
 # OpenWebif: config
@@ -266,12 +266,12 @@ def getSettings():
 def getUtcOffset():
 	now = time.time()
 	offset = (datetime.fromtimestamp(now) - datetime.utcfromtimestamp(now)).total_seconds()
-	hours = round(offset // 3600)
+	hours = round(offset / 3600)
 	minutes = (offset - (hours * 3600))
 	return {
 		"result": True,
 		# round minutes to next quarter hour
-		"utcoffset": "{:+05}".format(int(hours * 100 + (round(minutes // 900) * 900 // 60)))
+		"utcoffset": "{:+05}".format(int(hours * 100 + (round(minutes / 900) * 900 / 60)))
 	}
 
 class ConfigFiles:

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import division, print_function
+from __future__ import print_function
 
 ##########################################################################
 # OpenWebif: movies
@@ -195,7 +195,7 @@ def getMovieList(rargs=None, locations=None):
 					pass
 
 				if length_minutes:
-					movie['length'] = "%d:%02d" % (length_minutes // 60, length_minutes % 60)
+					movie['length'] = "%d:%02d" % (length_minutes / 60, length_minutes % 60)
 					if fields is None or 'pos' in fields:
 						movie['lastseen'] = _moviePlayState(filename + '.cuts', serviceref, length_minutes) or 0
 
@@ -221,11 +221,11 @@ def getMovieList(rargs=None, locations=None):
 					try:
 						size = os.stat(filename).st_size
 						if size > 1073741824:
-							sz = "%.2f %s" % ((size // 1073741824.), _("GB"))
+							sz = "%.2f %s" % ((size / 1073741824.), _("GB"))
 						elif size > 1048576:
-							sz = "%.2f %s" % ((size // 1048576.), _("MB"))
+							sz = "%.2f %s" % ((size / 1048576.), _("MB"))
 						elif size > 1024:
-							sz = "%.2f %s" % ((size // 1024.), _("kB"))
+							sz = "%.2f %s" % ((size / 1024.), _("kB"))
 					except:  # noqa: E722
 						pass
 
@@ -315,7 +315,7 @@ def getMovieSearchList(rargs=None, locations=None):
 			pass
 
 		if length_minutes:
-			movie['length'] = "%d:%02d" % (length_minutes // 60, length_minutes % 60)
+			movie['length'] = "%d:%02d" % (length_minutes / 60, length_minutes % 60)
 			#  if fields is None or 'pos' in fields:
 			#  	movie['lastseen'] = getPosition(filename + '.cuts', length_minutes)
 
@@ -340,11 +340,11 @@ def getMovieSearchList(rargs=None, locations=None):
 			try:
 				size = os.stat(filename).st_size
 				if size > 1073741824:
-					sz = "%.2f %s" % ((size // 1073741824.), _("GB"))
+					sz = "%.2f %s" % ((size / 1073741824.), _("GB"))
 				elif size > 1048576:
-					sz = "%.2f %s" % ((size // 1048576.), _("MB"))
+					sz = "%.2f %s" % ((size / 1048576.), _("MB"))
 				elif size > 1024:
-					sz = "%.2f %s" % ((size // 1024.), _("kB"))
+					sz = "%.2f %s" % ((size / 1024.), _("kB"))
 			except:  # noqa: E722
 				pass
 
@@ -437,7 +437,7 @@ def removeMovie(session, sRef, Force=False):
 	if result is False:
 		return {
 			"result": False,
-			"message": "Could not delete Movie '%s' // %s" % (name, message)
+			"message": "Could not delete Movie '%s' / %s" % (name, message)
 		}
 	else:
 		return {
@@ -726,7 +726,7 @@ def getMovieDetails(sRef=None):
 			pass
 
 		if length_minutes:
-			movie['length'] = "%d:%02d" % (length_minutes // 60, length_minutes % 60)
+			movie['length'] = "%d:%02d" % (length_minutes / 60, length_minutes % 60)
 			movie['lastseen'] = _moviePlayState(filename + '.cuts', serviceref, length_minutes) or 0
 
 		txtfile = name + '.txt'
@@ -748,11 +748,11 @@ def getMovieDetails(sRef=None):
 		try:
 			size = os.stat(filename).st_size
 			if size > 1073741824:
-				sz = "%.2f %s" % ((size // 1073741824.), _("GB"))
+				sz = "%.2f %s" % ((size / 1073741824.), _("GB"))
 			elif size > 1048576:
-				sz = "%.2f %s" % ((size // 1048576.), _("MB"))
+				sz = "%.2f %s" % ((size / 1048576.), _("MB"))
 			elif size > 1024:
-				sz = "%.2f %s" % ((size // 1024.), _("kB"))
+				sz = "%.2f %s" % ((size / 1024.), _("kB"))
 		except:  # noqa: E722
 			pass
 

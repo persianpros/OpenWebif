@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import division, print_function
+from __future__ import print_function
 
 ##########################################################################
 # OpenWebif: info
@@ -330,28 +330,28 @@ def getInfo(session=None, need_fullinfo=False):
 		dev = hdd.findMount()
 		if dev:
 			stat = os.statvfs(dev)
-			free = stat.f_bavail * stat.f_frsize // 1048576.
+			free = stat.f_bavail * stat.f_frsize / 1048576.
 		else:
 			free = -1
 
 		if free <= 1024:
 			free = "%i %s" % (free, _("MB"))
 		else:
-			free = free // 1024.
+			free = free / 1024.
 			free = "%.1f %s" % (free, _("GB"))
 
-		size = hdd.diskSize() * 1000000 // 1048576.
+		size = hdd.diskSize() * 1000000 / 1048576.
 		if size > 1048576:
-			size = "%.1f %s" % ((size // 1048576.), _("TB"))
+			size = "%.1f %s" % ((size / 1048576.), _("TB"))
 		elif size > 1024:
-			size = "%.1f %s" % ((size // 1024.), _("GB"))
+			size = "%.1f %s" % ((size / 1024.), _("GB"))
 		else:
 			size = "%d %s" % (size, _("MB"))
 
 		iecsize = hdd.diskSize()
 		# Harddisks > 1000 decimal Gigabytes are labelled in TB
 		if iecsize > 1000000:
-			iecsize = (iecsize + 50000) // float(100000) // 10
+			iecsize = (iecsize + 50000) // float(100000) / 10
 			# Omit decimal fraction if it is 0
 			if (iecsize % 1 > 0):
 				iecsize = "%.1f %s" % (iecsize, _("TB"))
@@ -372,7 +372,7 @@ def getInfo(session=None, need_fullinfo=False):
 			"labelled_capacity": iecsize,
 			"free": free,
 			"mount": dev,
-			"friendlycapacity": _("%s free // %s total") % (free, size + ' ("' + iecsize + '")')
+			"friendlycapacity": _("%s free / %s total") % (free, size + ' ("' + iecsize + '")')
 		})
 
 	info['shares'] = []
@@ -527,7 +527,7 @@ def getInfo(session=None, need_fullinfo=False):
 						cur_info = feinfo.getTransponderData(True)
 						if cur_info:
 							nr = frontendData['tuner_number']
-							info['tuners'][nr]['rec'] = getOrbitalText(cur_info) + ' // ' + sname
+							info['tuners'][nr]['rec'] = getOrbitalText(cur_info) + ' / ' + sname
 
 			service = session.nav.getCurrentService()
 			if service is not None:
@@ -538,7 +538,7 @@ def getInfo(session=None, need_fullinfo=False):
 					cur_info = feinfo.getTransponderData(True)
 					if cur_info:
 						nr = frontendData['tuner_number']
-						info['tuners'][nr]['live'] = getOrbitalText(cur_info) + ' // ' + sname
+						info['tuners'][nr]['live'] = getOrbitalText(cur_info) + ' / ' + sname
 		except Exception as error:
 			info['EX'] = error
 
@@ -574,7 +574,7 @@ def getOrb(pos):
 	if pos > 1800:
 		pos = 3600 - pos
 		direction = _("W")
-	return "%d.%d° %s" % (pos // 10, pos % 10, direction)
+	return "%d.%d° %s" % (pos / 10, pos % 10, direction)
 
 
 def getFrontendStatus(session):
@@ -600,17 +600,17 @@ def getFrontendStatus(session):
 	if frontendStatus is not None:
 		percent = frontendStatus.get("tuner_signal_quality")
 		if percent is not None:
-			inf['snr'] = int(percent * 100 // 65535)
+			inf['snr'] = int(percent * 100 / 65535)
 			inf['snr_db'] = inf['snr']
 		percent = frontendStatus.get("tuner_signal_quality_db")
 		if percent is not None:
-			inf['snr_db'] = "%3.02f" % (percent // 100.0)
+			inf['snr_db'] = "%3.02f" % (percent / 100.0)
 		percent = frontendStatus.get("tuner_signal_power")
 		if percent is not None:
-			inf['agc'] = int(percent * 100 // 65535)
+			inf['agc'] = int(percent * 100 / 65535)
 		percent = frontendStatus.get("tuner_bit_error_rate")
 		if percent is not None:
-			inf['ber'] = int(percent * 100 // 65535)
+			inf['ber'] = int(percent * 100 / 65535)
 
 	return inf
 
