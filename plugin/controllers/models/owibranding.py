@@ -60,7 +60,7 @@ def getAllInfo():
 		remote = "vu3"
 	elif model in ("vuuno4kse","vuzero4k","vuduo4k"):
 		remote = "vu4"
-	elif model in ("evoe3hd","geniuse3hd","axase3","axase3c"):
+	elif model == "axase3":
 		remote = "e3hd"
 	elif model == "et9x00" and not procmodel == "et9500":
 		remote = "et9x00"
@@ -244,10 +244,8 @@ def getAllInfo():
 		remote = "beyonwiz1"
 	elif model == "beyonwizv2":
 		remote = "beyonwiz2"
-	elif model in ("starsatlx","axodin","axodinc"):
+	elif model == "axodin":
 		remote = "odinm6"
-	elif model in ("classm","genius","evo","galaxym6"):
-		remote = "odinm7"
 	elif model == "maram9":
 		remote = "odinm9"
 	elif model == "ustym4kpro":
