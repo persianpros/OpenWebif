@@ -293,8 +293,7 @@ class AuthResource(resource.Resource):
 		resource.Resource.__init__(self)
 		self.resource = root
 
-	def noShell(self, request):
-		user = request.getUser()
+	def noShell(self, user):
 		if fileExists('/etc/passwd'):
 			for line in open('/etc/passwd').readlines():
 				line = line.strip()
@@ -326,12 +325,14 @@ class AuthResource(resource.Resource):
 		session = request.getSession().sessionNamespaces
 		host = request.getHost().host
 		peer = request.getClientIP()
+		host = six.ensure_str(host)
 		if request.getHeader("x-forwarded-for"):
 			peer = request.getHeader("x-forwarded-for")
 
 		if peer is None:
 			peer = request.transport.socket.getpeername()[0]
 
+		peer = six.ensure_str(peer)
 		if peer.startswith("::ffff:"):
 			peer = peer.replace("::ffff:", "")
 
@@ -358,8 +359,10 @@ class AuthResource(resource.Resource):
 			return self.resource.getChildWithDefault(path, request)
 
 		# #4: Web TV is accessing streams and "auths" by parent session id
-		if request.getUser() == "-sid":
-			sid = str(request.getPassword())
+		ruser = six.ensure_str(request.getUser())
+		rpw = six.ensure_str(request.getPassword())
+		if ruser == "-sid":
+			sid = str(rpw)
 			try:
 				oldsession = site.getSession(sid).sessionNamespaces
 				if "logged" in list(oldsession.keys()) and oldsession["logged"]:
@@ -387,15 +390,15 @@ class AuthResource(resource.Resource):
 		if "logged" in list(session.keys()) and session["logged"]:
 			return self.resource.getChildWithDefault(path, request)
 
-		if self.login(request.getUser(), request.getPassword(), peer) is False:
+		if self.login(ruser, rpw, peer) is False:
 			request.setHeader('WWW-authenticate', 'Basic realm="%s"' % ("OpenWebif"))
 			return resource.ErrorPage(http.UNAUTHORIZED, "Unauthorized", "401 Authentication required")
 		else:
 			session["logged"] = True
-			session["user"] = request.getUser()
+			session["user"] = ruser
 			session["pwd"] = None
-			if self.noShell(request):
-				session["pwd"] = request.getPassword()
+			if self.noShell(ruser):
+				session["pwd"] = rpw
 			return self.resource.getChildWithDefault(path, request)
 
 	def login(self, user, passwd, peer):
