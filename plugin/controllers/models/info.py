@@ -198,6 +198,7 @@ def getInfo(session=None, need_fullinfo=False):
 
 	info['brand'] = getBoxBrand()
 	info['model'] = getBoxType()
+	info['platform'] = boxbranding.getMachineBuild()
 
 	try:
 		info['procmodel'] = getBoxProc()
@@ -222,6 +223,7 @@ def getInfo(session=None, need_fullinfo=False):
 	cpu = about.getCPUInfoString()
 	info['chipset'] = cpu
 	info['cpubrand'] = about.getCPUBrand()
+	info['socfamily'] = boxbranding.getSoCFamily()
 	info['cpuarch'] = about.getCPUArch()
 	info['cpubenchmark'] = about.getCPUBenchmark()
 	info['flashtype'] = about.getFlashType()
