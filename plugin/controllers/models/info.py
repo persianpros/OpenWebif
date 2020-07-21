@@ -43,7 +43,7 @@ from Tools.Directories import fileExists
 from enigma import eDVBVolumecontrol, eServiceCenter, eServiceReference, getEnigmaVersionString, eEPGCache, getBoxType, getBoxBrand, eGetEnigmaDebugLvl
 from Tools.StbHardware import getFPVersion, getBoxProc, getBoxProcType, getHWSerial, getBoxRCType
 from Plugins.Extensions.OpenWebif.controllers.i18n import _
-from Plugins.Extensions.OpenWebif.controllers.defaults import OPENWEBIFVER
+from Plugins.Extensions.OpenWebif.controllers.defaults import OPENWEBIFVER, TRANSCODING
 from Plugins.Extensions.OpenWebif.controllers.utilities import removeBad, removeBad2
 import boxbranding
 from Plugins.Extensions.OpenWebif.controllers.models.owibranding import getLcd, getGrabPip
@@ -647,7 +647,7 @@ def getStatusInfo(self):
 	statusinfo = {
 		'volume': vcontrol.getVolume(),
 		'muted': vcontrol.isMuted(),
-		'transcoding': boxbranding.getHaveTranscoding(),
+		'transcoding': TRANSCODING,
 		'currservice_filename': "",
 		'currservice_id': -1,
 	}

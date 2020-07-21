@@ -8,8 +8,9 @@ from Components.Language import language
 from Components.config import config as comp_config
 
 from enigma import eEnv
+from boxbranding import getHaveTranscoding, getHaveMultiTranscoding
 
-OPENWEBIFVER = "OWIF 1.4.10 for Open Vision"
+OPENWEBIFVER = "OWIF 1.4.11 for Open Vision"
 
 PLUGIN_NAME = 'OpenWebif'
 PLUGIN_DESCRIPTION = "OpenWebif Configuration"
@@ -25,11 +26,8 @@ GLOBALPICONPATH = None
 
 #: get transcoding feature
 def getTranscoding():
-	if os.path.isfile("/proc/stb/encoder/0/bitrate"):
-		lp = eEnv.resolve('${libdir}/enigma2/python/Plugins/SystemPlugins/')
-		for p in ['TranscodingSetup', 'TransCodingSetup', 'MultiTransCodingSetup']:
-			if os.path.exists(lp + p + '/plugin.pyo'):
-				return True
+	if getHaveTranscoding() == "True" or getHaveMultiTranscoding() == "True":
+		return True
 	return False
 
 #: get kinopoisk feature
@@ -96,3 +94,5 @@ def getPiconPath():
 PICON_PATH = getPiconPath()
 
 KINOPOISK = getKinopoisk()
+
+TRANSCODING = getTranscoding()

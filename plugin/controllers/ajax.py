@@ -35,11 +35,12 @@ from Plugins.Extensions.OpenWebif.controllers.models.config import getConfigs, g
 from Plugins.Extensions.OpenWebif.controllers.models.stream import GetSession
 from Plugins.Extensions.OpenWebif.controllers.base import BaseController
 from Plugins.Extensions.OpenWebif.controllers.models.locations import getLocations
-from Plugins.Extensions.OpenWebif.controllers.defaults import OPENWEBIFVER, getPublicPath, VIEWS_PATH
+from Plugins.Extensions.OpenWebif.controllers.defaults import OPENWEBIFVER, getPublicPath, VIEWS_PATH, TRANSCODING
 from Plugins.Extensions.OpenWebif.controllers.utilities import getUrlArg
-from boxbranding import getHaveTranscoding
 from enigma import getBoxType, getBoxBrand
+from boxbranding import getMachineBuild
 
+type = getBoxType()
 
 class AjaxController(BaseController):
 	"""
@@ -81,7 +82,7 @@ class AjaxController(BaseController):
 		stype = getUrlArg(request, "stype", "tv")
 		idbouquet = getUrlArg(request, "id", "ALL")
 		channels = getChannels(idbouquet, stype)
-		channels['transcoding'] = getHaveTranscoding()
+		channels['transcoding'] = TRANSCODING
 		channels['type'] = stype
 		channels['showchannelpicon'] = config.OpenWebif.webcache.showchannelpicon.value
 		return channels
@@ -100,7 +101,7 @@ class AjaxController(BaseController):
 		except ImportError as e:
 			pass
 		event['at'] = at
-		event['transcoding'] = getHaveTranscoding()
+		event['transcoding'] = TRANSCODING
 		if config.OpenWebif.webcache.moviedb.value:
 			event['moviedb'] = config.OpenWebif.webcache.moviedb.value
 		else:
@@ -114,7 +115,6 @@ class AjaxController(BaseController):
 
 	def P_boxinfo(self, request):
 		info = getInfo(self.session, need_fullinfo=True)
-		type = getBoxType()
 
 		if fileExists(getPublicPath("/images/boxes/" + type + ".png")):
 			info["boximage"] = type + ".png"
@@ -169,7 +169,7 @@ class AjaxController(BaseController):
 
 	def P_movies(self, request):
 		movies = getMovieList(request.args)
-		movies['transcoding'] = getHaveTranscoding()
+		movies['transcoding'] = TRANSCODING
 
 		sorttype = config.OpenWebif.webcache.moviesort.value
 		unsort = movies['movies']
@@ -188,7 +188,7 @@ class AjaxController(BaseController):
 
 	def P_moviesearch(self, request):
 		movies = getMovieSearchList(request.args)
-		movies['transcoding'] = getHaveTranscoding()
+		movies['transcoding'] = TRANSCODING
 
 		sorttype = config.OpenWebif.webcache.moviesort.value
 		unsort = movies['movies']
@@ -355,12 +355,12 @@ class AjaxController(BaseController):
 		vxgenabled = False
 		if fileExists(getPublicPath("/vxg/media_player.pexe")):
 			vxgenabled = True
-		transcoding = getHaveTranscoding()
+		transcoding = TRANSCODING
 		transcoder_port = 0
 		if transcoding:
 			try:
 				transcoder_port = int(config.plugins.transcodingsetup.port.value)
-				if getBoxType() in ("sezammarvel","xpeedlx3","atemionemesis","mbultra","beyonwizt4","hd2400","et10000","et13000","beyonwizu4","sf5008","x2plus","formuler1","tiviaraplus","e4hdultra","protek4k"):
+				if getMachineBuild() in ("inihdp","8100s") or type in ("hd2400","et10000","et13000","beyonwizu4","sf5008","x2plus","formuler1","tiviaraplus"):
 					transcoder_port = int(config.OpenWebif.streamport.value)
 			except Exception:
 				transcoder_port = 0

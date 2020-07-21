@@ -20,8 +20,6 @@
 # along with this program; if not, write to the Free Software Foundation,
 # Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
 ##############################################################################
-# Simulate the oe-a boxbranding module (Only functions required by OWIF)     #
-##############################################################################
 
 from Tools.Directories import fileExists, pathExists
 from time import time
@@ -29,23 +27,26 @@ import os
 import hashlib
 from enigma import getBoxType, getBoxBrand
 from Tools.StbHardware import getFPVersion, getBoxProc
+from boxbranding import getMachineBuild
+from Components.SystemInfo import SystemInfo
 
 fp_version = str(getFPVersion())
 brand = getBoxBrand()
 model = getBoxType()
+platform = getMachineBuild()
 procmodel = getBoxProc()
 
 def getAllInfo():
 	info = {}
 
 	grabpip = 0
-	if "4k" or "uhd" or "ultra" in model or brand in ("dinobot","maxytec") or model in ("dm900","dm920","sf8008","sf8008m","beyonwizv2","hd60","hd61","h9","h9combo","h10","h0","i55plus") or pathExists("/proc/hisi") or fileExists("/usr/bin/hihalt"):
+	if "4k" or "uhd" or "ultra" in model or SystemInfo["HiSilicon"] or platform == "dm4kgen":
 		grabpip = 1
 
 	info['grabpip'] = grabpip or 0
 
 	lcd = 0
-	if "lcd" in model or model in ("e4hdultra","sf208","sf228","sf238","protek4k"):
+	if "lcd" in model or platform in ("8100s","7210s") or model == "sf238":
 		lcd = 1
 
 	info['lcd'] = lcd or 0
@@ -84,9 +85,9 @@ def getAllInfo():
 		remote = "gb1"
 	elif model in ("gbx2","gbx3h","gbultraueh"):
 		remote = "gb2"
-	elif model in ("gbquad4k","gbue4k","gbtrio4k","gbip4k","gbx34k"):
+	elif platform in ("gbmv200","gb7252","gb72604"):
 		remote = "gb3"
-	elif model in ("formuler1","formuler3","formuler4","formuler4turbo"):
+	elif brand == "formuler":
 		remote = "formuler1"
 	elif model in ("azboxme","azboxminime"):
 		remote = "azboxme"
@@ -118,19 +119,19 @@ def getAllInfo():
 		remote = "hd60"
 	elif model == "hd61":
 		remote = "ax4"
-	elif model in ("multibox","multiboxplus"):
+	elif brand == "maxytec":
 		remote = "maxytec1"
-	elif model in ("spycat","spycatmini","spycatminiplus","spycat4kmini","spycat4k","spycat4kcombo"):
+	elif platform in ("4kspycat","mipsspycat"):
 		remote = "xcore1"
 	elif model in ("osmini","osminiplus","osmega"):
 		remote = "xcore3"
-	elif model in ("ixussone","ixusszero"):
+	elif brand == "ixuss":
 		remote = "ixuss"
 	elif model == "dm8000":
 		remote = "dmm0"
 	elif model in ("dm800","dm800se","dm500hd"):
 		remote = "dmm1"
-	elif model in ("dm7080","dm7020hd","dm7020hdv2","dm800sev2","dm500hdv2","dm520","dm820","dm900","dm920"):
+	elif platform in ("dm4kgen","dm2gen","dm3gen") or model == "dm7020hd":
 		remote = "dmm2"
 	elif model == "wetekplay":
 		remote = "wetek"
@@ -142,7 +143,7 @@ def getAllInfo():
 		remote = "edision1"
 	elif model == "osninopro":
 		remote = "edision2"
-	elif model in ("osmio4k","osmio4kplus","osmini4k"):
+	elif platform == "edision4k":
 		remote = "edision3"
 	elif model in ("fusionhd","fusionhdse","purehd","purehdse"):
 		remote = "fusionhd"
@@ -194,7 +195,7 @@ def getAllInfo():
 		remote = "tm6"
 	elif model in ("dinobot4kmini","dinobot4kplus","dinobot4k","dinobot4kse","dinobot4kl","dinobot4kpro","dinobotu55","dinoboth265"):
 		remote = "dinobot"
-	elif model in ("dinobotu43","turing"):
+	elif platform == "u43":
 		remote = "turing"
 	elif model in ("axashis4kcombo","axashis4kcomboplus"):
 		remote = "axas1"
@@ -214,7 +215,7 @@ def getAllInfo():
 		remote = "hardkernel"
 	elif model == "cube":
 		remote = "cube"
-	elif model in ("ebox5000","ebox5100","ebox7358","eboxlumi"):
+	elif brand == "ebox":
 		remote = "ebox5000"
 	elif model == "sogno8800hd":
 		remote = "sogno"
@@ -262,7 +263,7 @@ def getAllInfo():
 		remote = "red1"
 	elif model in ("singleboxlcd","twinboxlcdci5"):
 		remote = "red2"
-	elif model in ("triplex","ultrabox"):
+	elif brand == "ax":
 		remote = "triplex"
 	elif model == "xpeedc":
 		remote = "gi1"
@@ -288,19 +289,19 @@ def getAllInfo():
 		remote = "evo8"
 	elif model == "sf108":
 		remote = "sf108"
-	elif model in ("sf208","sf228","sf238"):
+	elif platform == "7210s" or model == "sf238":
 		remote = "sf2x8"
-	elif model in ("sf3038","sf128","sf138","sf4008"):
+	elif platform == "g100" or model in ("sf3038","sf4008"):
 		remote = "sf3038"
 	elif model == "sf5008":
 		remote = "sf5008"
-	elif model in ("sf8008","sf8008m"):
+	elif platform == "octagonhisil":
 		remote = "sf8008"
 	elif model == "sf98":
 		remote = "sf98"
 	elif model in ("bre2ze","bre2ze4k","bre2zet2c"):
 		remote = "wwio1"
-	elif model in ("tiviarmin","tiviaraplus"):
+	elif brand == "tiviar":
 		remote = "tiviar1"
 	elif model in ("odin2hybrid","odinplus"):
 		remote = "ax1"

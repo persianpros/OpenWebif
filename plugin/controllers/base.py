@@ -290,9 +290,9 @@ class BaseController(resource.Resource):
 			if ip_list:
 				ip = "%d.%d.%d.%d" % (ip_list[0], ip_list[1], ip_list[2], ip_list[3])
 
-				if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/LCD4linux/WebSite.pyo")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/LCD4linux/WebSite.py")):
+				if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/LCD4linux/WebSite.pyo")):
 					lcd4linux_key = "lcd4linux/config"
-					if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/WebInterface/plugin.pyo")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/WebInterface/plugin.py")):
+					if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/WebInterface/plugin.pyo")):
 						try:
 							lcd4linux_port = "http://" + ip + ":" + str(config.plugins.Webinterface.http.port.value) + "/"
 							lcd4linux_key = lcd4linux_port + 'lcd4linux/config'
