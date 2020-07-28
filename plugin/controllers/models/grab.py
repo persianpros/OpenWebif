@@ -28,7 +28,6 @@ from twisted.web import resource, server
 from enigma import eDBoxLCD
 import time
 from Plugins.Extensions.OpenWebif.controllers.utilities import getUrlArg
-from boxbranding import getImageArch
 
 GRAB_PATH = '/usr/bin/grab'
 
@@ -37,10 +36,7 @@ class GrabRequest(object):
 		self.request = request
 
 		mode = None
-		if getImageArch() == "sh4":
-			graboptions = [GRAB_PATH]
-		else:
-			graboptions = [GRAB_PATH, '-q', '-s']
+		graboptions = [GRAB_PATH, '-q', '-s']
 		
 		fileformat = getUrlArg(request, "format", "jpg")
 		if fileformat == "jpg":
@@ -62,15 +58,14 @@ class GrabRequest(object):
 				graboptions.append("-o")
 			elif mode == "video":
 				graboptions.append("-v")
-			elif getImageArch() != "sh4":
-				if mode == "pip":
-					graboptions.append("-v")
-					if InfoBar.instance.session.pipshown:
-						graboptions.append("-i 1")
-				elif mode == "lcd":
-					eDBoxLCD.getInstance().dumpLCD()
-					fileformat = "png"
-					command = "cat /tmp/lcdshot.%s" % fileformat
+			elif mode == "pip":
+				graboptions.append("-v")
+				if InfoBar.instance.session.pipshown:
+					graboptions.append("-i 1")
+			elif mode == "lcd":
+				eDBoxLCD.getInstance().dumpLCD()
+				fileformat = "png"
+				command = "cat /tmp/lcdshot.%s" % fileformat
 
 		self.filepath = "/tmp/screenshot." + fileformat
 		self.container = eConsoleAppContainer()
