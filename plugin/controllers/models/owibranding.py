@@ -85,8 +85,10 @@ def getAllInfo():
 		remote = "gb1"
 	elif model in ("gbx2","gbx3h","gbultraueh"):
 		remote = "gb2"
-	elif platform in ("gbmv200","gb7252","gb72604"):
+	elif platform in ("gbmv200","gb72604") or model == "gbquad4k":
 		remote = "gb3"
+	elif model == "gbue4k":
+		remote = "gb4"
 	elif brand == "formuler":
 		remote = "formuler1"
 	elif model in ("azboxme","azboxminime"):
