@@ -251,7 +251,7 @@ def getInfo(session=None, need_fullinfo=False):
 
 	info['enigmaver'] = getEnigmaVersionString()
 	info['driverdate'] = about.getDriverInstalledDate()
-	info['kernelver'] = about.getKernelVersionString()
+	info['kernelver'] = boxbranding.getKernelVersion()
 	info['dvbapitype'] = about.getDVBAPI()
 	info['gstreamerversion'] = about.getGStreamerVersionString(cpu)
 	info['ffmpegversion'] = about.getFFmpegVersionString()
