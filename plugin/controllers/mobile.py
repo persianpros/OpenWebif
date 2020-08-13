@@ -125,10 +125,6 @@ class MobileController(BaseController):
 		return movies
 
 	def P_remote(self, request):
-		try:
-			from Components.RcModel import rc_model
-			REMOTE = rc_model.getRcFolder() + "/remote"
-		except:
-			from Plugins.Extensions.OpenWebif.controllers.models.owibranding import rc_model
-			REMOTE = rc_model().getRcFolder()
+		from Plugins.Extensions.OpenWebif.controllers.models.owibranding import rc_model
+		REMOTE = rc_model().getRcFolder()
 		return { "remote": REMOTE }

@@ -58,13 +58,8 @@ def new_getRequestHostname(self):
 http.Request.getRequestHostname = new_getRequestHostname
 
 REMOTE = ''
-
-try:
-	from Components.RcModel import rc_model
-	REMOTE = rc_model.getRcFolder() + "/remote"
-except:  # noqa: E722
-	from Plugins.Extensions.OpenWebif.controllers.models.owibranding import rc_model
-	REMOTE = rc_model().getRcFolder()
+from Plugins.Extensions.OpenWebif.controllers.models.owibranding import rc_model
+REMOTE = rc_model().getRcFolder()
 
 
 class BaseController(resource.Resource):
