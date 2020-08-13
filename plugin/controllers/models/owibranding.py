@@ -25,12 +25,13 @@ from Tools.Directories import fileExists, pathExists
 from time import time
 import os
 import hashlib
-from enigma import getBoxType
+from enigma import getBoxType, getBoxBrand
 from Tools.StbHardware import getFPVersion, getBoxProc
-from boxbranding import getMachineBuild, getDisplayType, getRCName
+from boxbranding import getMachineBuild, getDisplayType, getRCName, getImageArch
 from Components.SystemInfo import SystemInfo
 
 fp_version = str(getFPVersion())
+brand = getBoxBrand()
 model = getBoxType()
 platform = getMachineBuild()
 procmodel = getBoxProc()
@@ -70,7 +71,8 @@ def getAllInfo():
 		remote = "ini1"
 	elif model == "ventonhdx" or procmodel == "ini-3000" and not fp_version.startswith('1'):
 		remote = "ini2"
-
+	elif getImageArch() == "sh4" and brand != "nbox":
+		remote = "spark"
 	info['remote'] = remote
 
 	return info
