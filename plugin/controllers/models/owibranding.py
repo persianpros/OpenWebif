@@ -25,13 +25,12 @@ from Tools.Directories import fileExists, pathExists
 from time import time
 import os
 import hashlib
-from enigma import getBoxType, getBoxBrand
+from enigma import getBoxType
 from Tools.StbHardware import getFPVersion, getBoxProc
-from boxbranding import getMachineBuild
+from boxbranding import getMachineBuild, getDisplayType, getRCName
 from Components.SystemInfo import SystemInfo
 
 fp_version = str(getFPVersion())
-brand = getBoxBrand()
 model = getBoxType()
 platform = getMachineBuild()
 procmodel = getBoxProc()
@@ -46,277 +45,31 @@ def getAllInfo():
 	info['grabpip'] = grabpip or 0
 
 	lcd = 0
-	if "lcd" in model or platform in ("8100s","7210s") or model == "sf238":
+	if "lcd" in model or getDisplayType() in ("bwlcd96","bwlcd128","bwlcd140","bwlcd255","colorlcd128","colorlcd220","colorlcd400","colorlcd480","colorlcd720","colorlcd800"):
 		lcd = 1
 
 	info['lcd'] = lcd or 0
 
-	remote = "dmm1"
+	remote = getRCName()
 
-	if model in ("vusolo","vuduo","vuuno","vusolo2","vusolose","vuzero","vusolo4k","vuuno4k","vuultimo4k"):
-		remote = "vu"
-	elif model == "vuultimo":
-		remote = "vu2"
-	elif model == "vuduo2":
-		remote = "vu3"
-	elif model in ("vuuno4kse","vuzero4k","vuduo4k"):
-		remote = "vu4"
-	elif model == "axase3":
-		remote = "e3hd"
-	elif model == "et9x00" and not procmodel == "et9500":
+	if model == "et9x00" and not procmodel == "et9500":
 		remote = "et9x00"
 	elif procmodel == "et9500":
 		remote = "et9500"
 	elif model in ("et5x00","et6x00") and not procmodel == "et6500":
 		remote = "et6x00"
-	elif model == "et4x00":
-		remote = "et4x00"
 	elif procmodel == "et6500":
 		remote = "et6500"
-	elif model in ("et8000","et8500","et10000"):
-		remote = "et8000"
-	elif model == "et7x00":
-		remote = "et7x00"
-	elif model in ("et7000mini","et1x000"):
-		remote = "et7x00mini"
-	elif model in ("gbquad","gb800se","gb800ue","gb800solo","gb800seplus","gb800ueplus","gbipbox","gbultrase","gbultraue","gbx1","gbx3"):
-		remote = "gb0"
-	elif model == "gbquadplus":
-		remote = "gb1"
-	elif model in ("gbx2","gbx3h","gbultraueh"):
-		remote = "gb2"
-	elif platform in ("gbmv200","gb72604") or model == "gbquad4k":
-		remote = "gb3"
-	elif model == "gbue4k":
-		remote = "gb4"
-	elif brand == "formuler":
-		remote = "formuler1"
-	elif model in ("azboxme","azboxminime"):
-		remote = "azboxme"
 	elif model == "azboxhd" and not procmodel in ("elite","ultra"):
 		remote = "azboxhd"
 	elif procmodel in ("elite","ultra"):
 		remote = "azboxelite"
-	elif model in ("optimussos","optimussos1","optimussos1plus","optimussos2","optimussos2plus"):
-		remote = "optimuss1"
-	elif model == "optimussos3plus":
-		remote = "optimuss2"	
-	elif model in ("mbtwinplus","mbmicro","mbmicrov2"):
-		remote = "miraclebox"
-	elif model == "alphatriplehd":
-		remote = "sab1"
-	elif model == "xp1000":
-		remote = "xp1000"
-	elif brand in ("nbox","ferguson","sagemcom"):
-		remote = "nbox"
-	elif brand in ("fulan","forerver"):
-		remote = "fulan"
-	elif model in ("hd1100","hd1200","hd1265","hd51","hd11","hd500c","hd1500","vs1000","vs1500"):
-		remote = "hd1100"
-	elif model == "hd2400":
-		remote = "hd2400"
-	elif model == "hd530c":
-		remote = "hd530c"
-	elif model == "hd60":
-		remote = "hd60"
-	elif model == "hd61":
-		remote = "ax4"
-	elif brand == "maxytec":
-		remote = "maxytec1"
-	elif platform in ("4kspycat","mipsspycat"):
-		remote = "xcore1"
-	elif model in ("osmini","osminiplus","osmega"):
-		remote = "xcore3"
-	elif brand == "ixuss":
-		remote = "ixuss"
-	elif model == "dm8000":
-		remote = "dmm0"
-	elif model in ("dm800","dm800se","dm500hd"):
-		remote = "dmm1"
-	elif platform in ("dm4kgen","dm2gen","dm3gen") or model == "dm7020hd":
-		remote = "dmm2"
-	elif model == "wetekplay":
-		remote = "wetek"
-	elif model == "wetekplay2":
-		remote = "wetek2"
-	elif model == "wetekhub":
-		remote = "wetek3"
-	elif model in ("osnino","osninoplus"):
-		remote = "edision1"
-	elif model == "osninopro":
-		remote = "edision2"
-	elif platform == "edision4k":
-		remote = "edision3"
-	elif model in ("fusionhd","fusionhdse","purehd","purehdse"):
-		remote = "fusionhd"
-	elif model in ("revo4k","galaxy4k"):
-		remote = "revo"
-	elif model in ("lunix34k","lunix"):
-		remote = "qviart1"
-	elif model == "lunix4k":
-		remote = "qviart3"
-	elif model == "lunixco":
-		remote = "qviart4"
-	elif model == "sh1":
-		remote = "zgemma1"
-	elif model == "lc":
-		remote = "zgemma2"
-	elif model in ("h3","h4","h5","h6","h7","h9","h9combo","i55plus"):
-		remote = "zgemma3"
-	elif model == "i55":
-		remote = "zgemma5"
-	elif model == "h10":
-		remote = "zgemma7"
-	elif model == "vipercombohdd":
-		remote = "amiko1"
-	elif model in ("vipercombo","vipert2c","viperslim"):
-		remote = "amiko2"
-	elif model == "alien5":
-		remote = "amiko3"
-	elif model == "viper4k":
-		remote = "amiko4"
-	elif model in ("k1pro","k2pro","k2prov2","k1plus","k1plusv2"):
-		remote = "k1pro"
-	elif model == "k3pro":
-		remote = "k3pro"
-	elif model in ("e4hd","e4hdhybrid"):
-		remote = "e4hd"
-	elif model in ("e4hdultra","e4hdcombo"):
-		remote = "e4hdcombo"
-	elif model in ("tmtwin","tm2t"):
-		remote = "tm1"
-	elif model in ("tmsingle","tmnano","tmnano2t","tmnano3t","tmnano2super"):
-		remote = "tm2"
-	elif model in ("tmnanose","tmnanosecombo"):
-		remote = "tm3"
-	elif model in ("tmnanosem2","tmnanosem2plus","tmnanoseplus"):
-		remote = "tm4"
-	elif model == "tmnanom3":
-		remote = "tm5"
-	elif model in ("tmtwin4k","tm4ksuper"):
-		remote = "tm6"
-	elif model in ("dinobot4kmini","dinobot4kplus","dinobot4k","dinobot4kse","dinobot4kl","dinobot4kpro","dinobotu55","dinoboth265"):
-		remote = "dinobot"
-	elif platform == "u43":
-		remote = "turing"
-	elif model in ("axashis4kcombo","axashis4kcomboplus"):
-		remote = "axas1"
-	elif model == "axashisc4k":
-		remote = "axas2"
-	elif model == "axashistwin":
-		remote = "axas3"
-	elif model in ("anadol4k","anadol4kv2"):
-		remote = "anadol1"
-	elif model == "anadolprohd5":
-		remote = "anadol3"
-	elif model == "iziboxx3":
-		remote = "izibox1"
-	elif model in ("arivatwin","arivacombo"):
-		remote = "ariva"
-	elif model == "odroidc2":
-		remote = "hardkernel"
-	elif model == "cube":
-		remote = "cube"
-	elif brand == "ebox":
-		remote = "ebox5000"
-	elif model == "sogno8800hd":
-		remote = "sogno"
-	elif model == "uniboxhde":
-		remote = "uniboxhde"
 	elif model == "ventonhdx" or procmodel == "ini-3000" and fp_version.startswith('1'):
 		remote = "ini0"
 	elif procmodel in ("ini-5000","ini-7000","ini-7012"):
 		remote = "ini1"
 	elif model == "ventonhdx" or procmodel == "ini-3000" and not fp_version.startswith('1'):
 		remote = "ini2"
-	elif model in ("sezam1000hd","sezam5000hd"):
-		remote = "ini2"
-	elif model in ("mbmini","mbminiplus","mbhybrid","mbtwin","mbultra"):
-		remote = "ini3"
-	elif model in ("atemio5x00","atemio6000","atemio6100","atemio6200","atemionemesis","xpeedlx","xpeedlx3","sezammarvel"):
-		remote = "ini4"
-	elif model == "beyonwizt3":
-		remote = "ini5"
-	elif model in ("bwidowx","bwidowx2"):
-		remote = "ini6"
-	elif model in ("beyonwizt2","beyonwizt4"):
-		remote = "ini7"
-	elif model == "opticumtt":
-		remote = "ini8"
-	elif model == "beyonwizu4":
-		remote = "beyonwiz1"
-	elif model == "beyonwizv2":
-		remote = "beyonwiz2"
-	elif model == "axodin":
-		remote = "odinm6"
-	elif model == "maram9":
-		remote = "odinm9"
-	elif model == "ustym4kpro":
-		remote = "uclan"
-	elif model == "valalinux":
-		remote = "vala"
-	elif model in ("force4","iqonios100hd","iqonios200hd","iqonios300hd","iqonios300hdv2","force2se","force2","force2plus","force2plushv","force2nano"):
-		remote = "iqon1"
-	elif model in ("force1","force1plus","worldvisionf1","worldvisionf1plus"):
-		remote = "iqon2"
-	elif model in ("force3uhdplus","force3uhd"):
-		remote = "iqon3"
-	elif model == "twinboxlcd":
-		remote = "red1"
-	elif model in ("singleboxlcd","twinboxlcdci5"):
-		remote = "red2"
-	elif brand == "ax":
-		remote = "triplex"
-	elif model == "xpeedc":
-		remote = "gi1"
-	elif model == "mediabox":
-		remote = "mediabox"
-	elif model == "9900lx":
-		remote = "protek1"
-	elif model in ("9910lx","9911lx","protek4k","9920lx"):
-		remote = "protek2"
-	elif model == "protek4kx1":
-		remote = "protek3"
-	elif model == "enfinity":
-		remote = "evo1"
-	elif model == "x2plus":
-		remote = "evo2"
-	elif model in ("xcombo","x1plus"):
-		remote = "evo3"
-	elif model == "t2cable":
-		remote = "evo4"
-	elif model in ("evomini","evominiplus"):
-		remote = "evo5"
-	elif model in ("evoslim","evoslimse","evoslimt2c"):
-		remote = "evo8"
-	elif model == "sf108":
-		remote = "sf108"
-	elif platform == "7210s" or model == "sf238":
-		remote = "sf2x8"
-	elif platform == "g100" or model in ("sf3038","sf4008"):
-		remote = "sf3038"
-	elif model == "sf5008":
-		remote = "sf5008"
-	elif platform == "octagonhisil":
-		remote = "sf8008"
-	elif model == "sf98":
-		remote = "sf98"
-	elif model in ("bre2ze","bre2ze4k","bre2zet2c"):
-		remote = "wwio1"
-	elif brand == "tiviar":
-		remote = "tiviar1"
-	elif model in ("odin2hybrid","odinplus"):
-		remote = "ax1"
-	elif model == "axultra":
-		remote = "ax51"
-	elif model == "enibox":
-		remote = "hdbox"
-	elif model == "mago":
-		remote = "relook"
-	elif model == "tyrant":
-		remote = "tyrant"
-	elif model == "marvel1":
-		remote = "visionnet"
 
 	info['remote'] = remote
 
