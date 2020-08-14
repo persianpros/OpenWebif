@@ -46,6 +46,7 @@ THEMES = [
 
 config.OpenWebif = ConfigSubsection()
 config.OpenWebif.enabled = ConfigYesNo(default=True)
+config.OpenWebif.about_benchmark = ConfigYesNo(default=False)
 config.OpenWebif.identifier = ConfigYesNo(default=True)
 config.OpenWebif.identifier_custom = ConfigYesNo(default=False)
 config.OpenWebif.identifier_text = ConfigText(default="", fixed_size=False)
@@ -132,6 +133,7 @@ class OpenWebifConfig(Screen, ConfigListScreen):
 		self.list = []
 		self.list.append(getConfigListEntry(_("OpenWebInterface Enabled"), config.OpenWebif.enabled))
 		if config.OpenWebif.enabled.value:
+			self.list.append(getConfigListEntry(_("Show benchmark in STB information"), config.OpenWebif.about_benchmark))
 			self.list.append(getConfigListEntry(_("Use new design"), config.OpenWebif.responsive_enabled))
 			if config.OpenWebif.responsive_enabled.value:
 				self.list.append(getConfigListEntry(_("Use custom Color"), config.OpenWebif.responsive_skinColor))

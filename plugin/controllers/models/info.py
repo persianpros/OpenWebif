@@ -54,10 +54,6 @@ def getEnigmaVersionString():
 
 STATICBOXINFO = None
 
-def getFriendlyImageDistro():
-	dist = boxbranding.getImageDistro().replace("openvision", "Open Vision")
-	return dist
-
 def getIPMethod(iface):
 	# iNetwork.getAdapterAttribute is crap and not portable
 	ipmethod = _("SLAAC")
@@ -225,7 +221,10 @@ def getInfo(session=None, need_fullinfo=False):
 	info['cpubrand'] = about.getCPUBrand()
 	info['socfamily'] = boxbranding.getSoCFamily()
 	info['cpuarch'] = about.getCPUArch()
-	info['cpubenchmark'] = about.getCPUBenchmark()
+	if config.OpenWebif.about_benchmark.value is True:
+		info['cpubenchmark'] = about.getCPUBenchmark()
+	else:
+		info['cpubenchmark'] = _("Disabled in configuration")
 	info['flashtype'] = about.getFlashType()
 
 	memFree = 0
@@ -243,7 +242,6 @@ def getInfo(session=None, need_fullinfo=False):
 
 	info["webifver"] = OPENWEBIFVER
 	info['imagedistro'] = boxbranding.getImageDistro()
-	info['friendlyimagedistro'] = getFriendlyImageDistro()
 	info['oever'] = boxbranding.getImageBuild()
 	info['visionversion'] = boxbranding.getVisionVersion()
 	info['visionrevision'] = boxbranding.getVisionRevision()
