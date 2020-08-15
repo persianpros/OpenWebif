@@ -287,12 +287,6 @@ class BaseController(resource.Resource):
 
 				if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/LCD4linux/WebSite.pyo")):
 					lcd4linux_key = "lcd4linux/config"
-					if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/WebInterface/plugin.pyo")):
-						try:
-							lcd4linux_port = "http://" + ip + ":" + str(config.plugins.Webinterface.http.port.value) + "/"
-							lcd4linux_key = lcd4linux_port + 'lcd4linux/config'
-						except:  # noqa: E722
-							lcd4linux_key = None
 					if lcd4linux_key:
 						extras.append({'key': lcd4linux_key, 'description': _("LCD4Linux Setup"), 'nw': '1'})
 
@@ -338,7 +332,7 @@ class BaseController(resource.Resource):
 		try:
 			# this will currenly only works if NO Webiterface plugin installed
 			# TODO: test if webinterface AND openwebif installed
-			from Plugins.Extensions.WebInterface.WebChilds.Toplevel import loaded_plugins
+			from Plugins.Extensions.OpenWebif.WebChilds.Toplevel import loaded_plugins
 			for plugins in loaded_plugins:
 				if plugins[0] in ["fancontrol", "iptvplayer", "serienrecorderui"]:
 					try:

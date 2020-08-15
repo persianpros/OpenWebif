@@ -2063,7 +2063,7 @@ class WebController(BaseController):
 			HTTP response with headers
 		"""
 		try:
-			from Plugins.Extensions.WebInterface.WebChilds.Toplevel import loaded_plugins
+			from Plugins.Extensions.OpenWebif.WebChilds.Toplevel import loaded_plugins
 			return {
 				"plugins": loaded_plugins
 			}
