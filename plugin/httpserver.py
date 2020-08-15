@@ -43,6 +43,7 @@ import os
 import imp
 import ipaddress
 import six
+import shutil
 
 global listener, server_to_stop, site, sslsite
 listener = []
@@ -99,7 +100,7 @@ def buildRootTree(session):
 
 	origwebifpath = enigma.eEnv.resolve('${libdir}/enigma2/python/Plugins/Extensions/WebInterface')
 	if pathExists(origwebifpath):
-		os.remove(origwebifpath)
+		shutil.rmtree(origwebifpath)
 
 	# import modules
 	# print("[OpenWebif] loading external plugins...")
