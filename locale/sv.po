@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-21 04:39+0430\n"
+"POT-Creation-Date: 2020-08-18 02:22+0430\n"
 "PO-Revision-Date: 2017-06-08 10:05+0200\n"
 "Last-Translator: Svevrstt <svevrstt@gmail.com>\n"
 "Language-Team: \n"
@@ -21,8 +21,8 @@ msgstr ""
 msgid "%s %s is locked."
 msgstr "%s %s är låst."
 
-#: ../plugin/controllers/models/info.py:240
-#: ../plugin/controllers/models/info.py:377
+#: ../plugin/controllers/models/info.py:239
+#: ../plugin/controllers/models/info.py:375
 #, python-format
 msgid "%s free / %s total"
 msgstr "%s ledigt / %s totalt"
@@ -91,7 +91,7 @@ msgstr "Lägg till kanalen som alternativ"
 msgid "Add channel(s) to Bouquet"
 msgstr "Lägg till kanal(er) till en favoritlista"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:159
 msgid "Add service name to stream information"
 msgstr "Lägg till distributörens namn till strömningsinformationen"
 
@@ -128,7 +128,7 @@ msgstr ""
 msgid "All alternative services deleted."
 msgstr "Alla alternativa distributörer togs bort."
 
-#: ../plugin/plugin.py:158
+#: ../plugin/plugin.py:160
 msgid "Allow IPK Upload"
 msgstr ""
 
@@ -145,7 +145,7 @@ msgstr "Misslyckades med att skapa alternativ distributör %s"
 msgid "Always"
 msgstr "Alltid"
 
-#: ../plugin/controllers/models/info.py:275
+#: ../plugin/controllers/models/info.py:273
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "Dölj stor fjärrkontroll"
@@ -199,7 +199,7 @@ msgstr "Automatiskt"
 msgid "AutoPoll"
 msgstr "Automatiskt bevakning"
 
-#: ../plugin/controllers/base.py:330
+#: ../plugin/controllers/base.py:319
 msgid "AutoTimer"
 msgstr "AutoTimer"
 
@@ -308,7 +308,7 @@ msgstr "Namnet på favoritlistan ändrades."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Favoritlistans inställningar återskapades."
 
-#: ../plugin/controllers/base.py:335
+#: ../plugin/controllers/base.py:324
 msgid "BouquetEditor"
 msgstr "Redigera favoritlistor"
 
@@ -350,7 +350,7 @@ msgstr "Kabel-TV"
 msgid "Calendar Week"
 msgstr ""
 
-#: ../plugin/plugin.py:117 ../plugin/controllers/i18n.py:96
+#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:96
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -429,7 +429,7 @@ msgstr "Pågående aktivitet"
 msgid "Custom STB name"
 msgstr "Anpassat boxnamn"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:144
 msgid "Custom box name"
 msgstr "Anpassat boxnamn"
 
@@ -437,8 +437,8 @@ msgstr "Anpassat boxnamn"
 msgid "Custom offset"
 msgstr "Anpassad extra tidsmarginal"
 
-#: ../plugin/controllers/i18n.py:120 ../plugin/controllers/models/info.py:72
-#: ../plugin/controllers/models/info.py:91
+#: ../plugin/controllers/models/info.py:68
+#: ../plugin/controllers/models/info.py:87 ../plugin/controllers/i18n.py:120
 msgid "DHCP"
 msgstr "DHCP"
 
@@ -454,7 +454,7 @@ msgstr ""
 msgid "Date"
 msgstr "Datum"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:161
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -514,9 +514,14 @@ msgstr "Beskrivning"
 msgid "Disable Timer"
 msgstr "Slå av timern"
 
-#: ../plugin/plugin.py:152
+#: ../plugin/plugin.py:154
 msgid "Disable remote access for user root"
 msgstr "Slå av fjärråtkomst för rootanvändaren"
+
+#: ../plugin/controllers/models/info.py:227
+#, fuzzy
+msgid "Disabled in configuration"
+msgstr "Avaktiverad vid konflikt"
 
 #: ../plugin/controllers/i18n.py:405
 msgid "Disabled on Conflict"
@@ -583,7 +588,7 @@ msgstr "Version av drivrutinerna"
 msgid "Duration"
 msgstr "Varaktighet (i min)"
 
-#: ../plugin/controllers/models/info.py:575
+#: ../plugin/controllers/models/info.py:573
 msgid "E"
 msgstr "Ö"
 
@@ -595,7 +600,7 @@ msgstr "EPG"
 msgid "EPG encoding"
 msgstr "EPG teckenkodning"
 
-#: ../plugin/controllers/base.py:339
+#: ../plugin/controllers/base.py:328
 msgid "EPGRefresh"
 msgstr "EPGRefresh"
 
@@ -611,7 +616,7 @@ msgstr "Redigera timern"
 msgid "Editor"
 msgstr "Redigerare"
 
-#: ../plugin/plugin.py:151
+#: ../plugin/plugin.py:153
 msgid "Enable Authentication for streaming"
 msgstr "Aktivera autentisering för strömning"
 
@@ -619,15 +624,15 @@ msgstr "Aktivera autentisering för strömning"
 msgid "Enable Filtering"
 msgstr "Slå på filtrering"
 
-#: ../plugin/plugin.py:144
+#: ../plugin/plugin.py:146
 msgid "Enable HTTP Authentication"
 msgstr "Aktivera HTTP autentisering"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:147
 msgid "Enable HTTPS"
 msgstr "Aktivera HTTPS"
 
-#: ../plugin/plugin.py:148
+#: ../plugin/plugin.py:150
 msgid "Enable HTTPS Authentication"
 msgstr "Aktivera HTTPS autentisering"
 
@@ -635,7 +640,7 @@ msgstr "Aktivera HTTPS autentisering"
 msgid "Enable Messages"
 msgstr "Aktivera statusmeddelanden"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:158
 msgid "Enable Parental Control"
 msgstr "Aktivera föräldrakontroll"
 
@@ -643,7 +648,7 @@ msgstr "Aktivera föräldrakontroll"
 msgid "Enable Timer"
 msgstr "Aktivera timern"
 
-#: ../plugin/plugin.py:155
+#: ../plugin/plugin.py:157
 msgid "Enable access from VPNs"
 msgstr "Aktivera åtkomst från VPN"
 
@@ -828,10 +833,10 @@ msgstr "Frontprocessorversion"
 msgid "Full remote"
 msgstr "Dölj stor fjärrkontroll"
 
-#: ../plugin/controllers/models/info.py:343
-#: ../plugin/controllers/models/info.py:349
-#: ../plugin/controllers/models/info.py:364
-#: ../plugin/controllers/models/info.py:367
+#: ../plugin/controllers/models/info.py:341
+#: ../plugin/controllers/models/info.py:347
+#: ../plugin/controllers/models/info.py:362
+#: ../plugin/controllers/models/info.py:365
 #: ../plugin/controllers/models/movies.py:224
 #: ../plugin/controllers/models/movies.py:343
 #: ../plugin/controllers/models/movies.py:751
@@ -863,11 +868,11 @@ msgstr "Den föränderliga listan för en ny favorit kunde inte hämtas!"
 msgid "Grab Screenshot"
 msgstr "Ta en skärmdump"
 
-#: ../plugin/plugin.py:143
+#: ../plugin/plugin.py:145
 msgid "HTTP port"
 msgstr "HTTP port"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:149
 msgid "HTTPS port"
 msgstr "HTTPS port"
 
@@ -900,11 +905,11 @@ msgstr "Timme"
 msgid "IPv4 address"
 msgstr "IPv4-adress"
 
-#: ../plugin/controllers/i18n.py:173 ../plugin/controllers/models/info.py:151
+#: ../plugin/controllers/models/info.py:147 ../plugin/controllers/i18n.py:173
 msgid "IPv4-only Python/Twisted"
 msgstr "Endast Python/Twisted för IPv4"
 
-#: ../plugin/controllers/i18n.py:171 ../plugin/controllers/models/info.py:147
+#: ../plugin/controllers/models/info.py:143 ../plugin/controllers/i18n.py:171
 msgid "IPv4-only kernel"
 msgstr "Kernel enbart för IPv4"
 
@@ -1024,7 +1029,7 @@ msgstr "Kernel"
 msgid "LCD"
 msgstr ""
 
-#: ../plugin/controllers/base.py:302
+#: ../plugin/controllers/base.py:291
 msgid "LCD4Linux Setup"
 msgstr "LCD4Linux inställning"
 
@@ -1032,7 +1037,7 @@ msgstr "LCD4Linux inställning"
 msgid "LICENSE"
 msgstr "LICENS"
 
-#: ../plugin/controllers/models/info.py:277
+#: ../plugin/controllers/models/info.py:275
 #, fuzzy
 msgid "LIRC remote"
 msgstr "Fjärrkontroll"
@@ -1066,9 +1071,9 @@ msgstr "Låst"
 msgid "MAC address"
 msgstr "MAC-adress"
 
-#: ../plugin/controllers/models/info.py:340
-#: ../plugin/controllers/models/info.py:351
-#: ../plugin/controllers/models/info.py:369
+#: ../plugin/controllers/models/info.py:338
+#: ../plugin/controllers/models/info.py:349
+#: ../plugin/controllers/models/info.py:367
 #: ../plugin/controllers/models/movies.py:226
 #: ../plugin/controllers/models/movies.py:345
 #: ../plugin/controllers/models/movies.py:753
@@ -1193,7 +1198,7 @@ msgstr "MultiEPG"
 msgid "MultiTranscoding"
 msgstr "Koda om"
 
-#: ../plugin/controllers/base.py:326
+#: ../plugin/controllers/base.py:315
 #, fuzzy
 msgid "NCam Webinterface"
 msgstr "Webbgränssnitt för OSCam "
@@ -1347,7 +1352,7 @@ msgstr "Nu"
 msgid "OE"
 msgstr "Ö"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:313
 msgid "OSCam Webinterface"
 msgstr "Webbgränssnitt för OSCam "
 
@@ -1414,7 +1419,7 @@ msgstr "Gui version"
 msgid "Open in new window"
 msgstr "Öppna i ett nytt fönster"
 
-#: ../plugin/plugin.py:133
+#: ../plugin/plugin.py:134
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWebif är aktiverad"
 
@@ -1422,7 +1427,7 @@ msgstr "OpenWebif är aktiverad"
 msgid "OpenWebif Browser Settings"
 msgstr "OpenWebifs inställningar för webbläsare"
 
-#: ../plugin/plugin.py:168 ../plugin/plugin.py:234 ../plugin/plugin.py:236
+#: ../plugin/plugin.py:170 ../plugin/plugin.py:236 ../plugin/plugin.py:238
 msgid "OpenWebif Configuration"
 msgstr "Inställningar för OpenWebif"
 
@@ -1430,12 +1435,12 @@ msgstr "Inställningar för OpenWebif"
 msgid "OpenWebif Settings"
 msgstr "Inställningar för OpenWebif"
 
-#: ../plugin/plugin.py:119
+#: ../plugin/plugin.py:120
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif url: http://din_ipadress:port"
 
-#: ../plugin/controllers/i18n.py:475
 #: ../plugin/controllers/models/services.py:259
+#: ../plugin/controllers/i18n.py:475
 msgid "Orbital Position"
 msgstr "Omloppsbanans position"
 
@@ -1627,7 +1632,7 @@ msgstr "Byt namn på inspelningen"
 msgid "Repeated"
 msgstr "Repeterat"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:151
 msgid "Require client cert for HTTPS"
 msgstr "Kräv klientcertifikat för HTTPS"
 
@@ -1656,7 +1661,7 @@ msgstr "Tider skall bokas endast vissa datum"
 msgid "Root"
 msgstr "Root"
 
-#: ../plugin/controllers/models/info.py:63
+#: ../plugin/controllers/models/info.py:59
 msgid "SLAAC"
 msgstr "SLAAC"
 
@@ -1711,7 +1716,7 @@ msgstr "Satfinder"
 msgid "Saturday"
 msgstr "Lördag"
 
-#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:236
+#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:236
 #: ../plugin/controllers/i18n.py:390 ../plugin/controllers/i18n.py:442
 msgid "Save"
 msgstr "Spara"
@@ -1831,7 +1836,7 @@ msgid "Set maximum duration"
 msgstr "Ställ in maximal varaktighet (i min)"
 
 #: ../plugin/controllers/i18n.py:247 ../plugin/controllers/i18n.py:394
-#: ../plugin/controllers/base.py:286
+#: ../plugin/controllers/base.py:281
 msgid "Settings"
 msgstr "Inställningar"
 
@@ -1857,7 +1862,11 @@ msgstr "Visa digitalboxens namn i rubriken"
 msgid "Show Service type in channel list"
 msgstr "Visa programikon i kanallistan"
 
-#: ../plugin/plugin.py:138
+#: ../plugin/plugin.py:136
+msgid "Show benchmark in STB information"
+msgstr ""
+
+#: ../plugin/plugin.py:140
 msgid "Show box name in header"
 msgstr "Visa digitalboxens namn i rubriken"
 
@@ -1990,9 +1999,9 @@ msgstr "Sön"
 msgid "Sunday"
 msgstr "Söndag"
 
-#: ../plugin/controllers/models/info.py:347
+#: ../plugin/controllers/models/info.py:345
+#: ../plugin/controllers/models/info.py:357
 #: ../plugin/controllers/models/info.py:359
-#: ../plugin/controllers/models/info.py:361
 msgid "TB"
 msgstr "TB"
 
@@ -2024,7 +2033,7 @@ msgstr "Television"
 msgid "Template Engine"
 msgstr "Webbutvecklingsverktyg"
 
-#: ../plugin/controllers/base.py:357
+#: ../plugin/controllers/base.py:346
 msgid "Terminal"
 msgstr ""
 
@@ -2276,7 +2285,7 @@ msgstr "Använd en anpassad lagringsplats"
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:137
+#: ../plugin/plugin.py:139
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Använd en anpassad lagringsplats"
@@ -2286,11 +2295,11 @@ msgstr "Använd en anpassad lagringsplats"
 msgid "Use custom STB name"
 msgstr "Använd anpassat boxnamn"
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:142
 msgid "Use custom box name"
 msgstr "Använd anpassat boxnamn"
 
-#: ../plugin/plugin.py:135 ../plugin/controllers/i18n.py:507
+#: ../plugin/plugin.py:137 ../plugin/controllers/i18n.py:507
 msgid "Use new design"
 msgstr ""
 
@@ -2339,7 +2348,7 @@ msgstr "Volymkontroll"
 msgid "Vpid"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:578
+#: ../plugin/controllers/models/info.py:576
 msgid "W"
 msgstr "V"
 
@@ -2392,7 +2401,7 @@ msgstr "Veckovis (måndag)"
 msgid "Weekly (Sunday)"
 msgstr "Veckovis (söndag)"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:156
 msgid "Without auth only local access is allowed!"
 msgstr "Endast lokal åtkomst är tillåten utan inloggning!"
 
@@ -2494,8 +2503,8 @@ msgstr "i kortfattade beskrivningen"
 msgid "in Title"
 msgstr "i titeln"
 
-#: ../plugin/controllers/models/info.py:236
-#: ../plugin/controllers/models/info.py:239
+#: ../plugin/controllers/models/info.py:235
+#: ../plugin/controllers/models/info.py:238
 #: ../plugin/controllers/models/movies.py:228
 #: ../plugin/controllers/models/movies.py:347
 #: ../plugin/controllers/models/movies.py:755
@@ -2506,8 +2515,8 @@ msgstr "kB"
 msgid "loading"
 msgstr "laddar"
 
-#: ../plugin/controllers/models/info.py:74
-#: ../plugin/controllers/models/info.py:93
+#: ../plugin/controllers/models/info.py:70
+#: ../plugin/controllers/models/info.py:89
 msgid "manual/disabled"
 msgstr "manuell/avaktiverad"
 
@@ -2520,7 +2529,7 @@ msgstr "Minut"
 msgid "no description available"
 msgstr "beskrivning saknas"
 
-#: ../plugin/controllers/i18n.py:172 ../plugin/controllers/models/info.py:180
+#: ../plugin/controllers/models/info.py:176 ../plugin/controllers/i18n.py:172
 msgid "none/IPv4-only network"
 msgstr "inga/endast IPv4-nätverk"
 
@@ -2538,12 +2547,12 @@ msgid "partial match"
 msgstr "ofullständig matchning"
 
 # Lämnas oöversatt t.v. eftersom begreppen kan vara mer kända på engelska än svenska. Står för behörigheten: Enbart läsbehörighet
-#: ../plugin/controllers/models/info.py:410
+#: ../plugin/controllers/models/info.py:408
 msgid "r/o"
 msgstr ""
 
 # Lämnas oöversatt t.v. eftersom begreppen kan vara mer kända på engelska än svenska. Står för behörigheten: Läs- och skriv-behörighet
-#: ../plugin/controllers/models/info.py:406
+#: ../plugin/controllers/models/info.py:404
 msgid "r/w"
 msgstr ""
 
@@ -2587,9 +2596,9 @@ msgstr "standard"
 msgid "start match"
 msgstr "titelns inledning matchar"
 
-#: ../plugin/controllers/models/info.py:70
-#: ../plugin/controllers/models/info.py:82
-#: ../plugin/controllers/models/info.py:89
+#: ../plugin/controllers/models/info.py:66
+#: ../plugin/controllers/models/info.py:78
+#: ../plugin/controllers/models/info.py:85
 msgid "static"
 msgstr "statisk"
 
@@ -2610,8 +2619,8 @@ msgstr "omkodad"
 msgid "type %s is not a number"
 msgstr "typ %s är inte en siffra"
 
-#: ../plugin/controllers/models/info.py:102
-#: ../plugin/controllers/models/info.py:110
+#: ../plugin/controllers/models/info.py:98
+#: ../plugin/controllers/models/info.py:106
 msgid "unknown"
 msgstr "okänd"
 

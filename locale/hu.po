@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-21 04:39+0430\n"
+"POT-Creation-Date: 2020-08-18 02:22+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: mcfly82 <https://github.com/mcfly822>\n"
 "Language-Team: mcfly82\n"
@@ -19,8 +19,8 @@ msgstr ""
 msgid "%s %s is locked."
 msgstr "%s %s zárolva van."
 
-#: ../plugin/controllers/models/info.py:240
-#: ../plugin/controllers/models/info.py:377
+#: ../plugin/controllers/models/info.py:239
+#: ../plugin/controllers/models/info.py:375
 #, python-format
 msgid "%s free / %s total"
 msgstr "%s szabad /%s összesen"
@@ -89,7 +89,7 @@ msgstr "Csatornák hozzáadása alternatívákhoz"
 msgid "Add channel(s) to Bouquet"
 msgstr "Csatornák hozzáadása listához"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:159
 msgid "Add service name to stream information"
 msgstr "Adja hozzá a szolgáltatás nevét az adatfolyam információihoz"
 
@@ -126,7 +126,7 @@ msgstr "A szoftver összes fájlja nyílt forráskódú szoftver; továbbadhatja
 msgid "All alternative services deleted."
 msgstr "Minden alternatív szolgáltatás törölve."
 
-#: ../plugin/plugin.py:158
+#: ../plugin/plugin.py:160
 msgid "Allow IPK Upload"
 msgstr "IPK feltöltés engedélyezése"
 
@@ -143,7 +143,7 @@ msgstr "A %s alternatíva létrehozása sikertelen."
 msgid "Always"
 msgstr "Mindig"
 
-#: ../plugin/controllers/models/info.py:275
+#: ../plugin/controllers/models/info.py:273
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "Teljes távvezérlő"
@@ -196,7 +196,7 @@ msgstr "Auto"
 msgid "AutoPoll"
 msgstr "Automatikus szavazás"
 
-#: ../plugin/controllers/base.py:330
+#: ../plugin/controllers/base.py:319
 msgid "AutoTimer"
 msgstr "Automatikus időzítő"
 
@@ -305,7 +305,7 @@ msgstr "Bouquet sikeresen átnevezve."
 msgid "Bouquet-settings were restored successfully"
 msgstr "A Bouquet-beállítások sikeresen helyreálltak"
 
-#: ../plugin/controllers/base.py:335
+#: ../plugin/controllers/base.py:324
 msgid "BouquetEditor"
 msgstr "Bouquet szerkesztő"
 
@@ -347,7 +347,7 @@ msgstr "Kábel"
 msgid "Calendar Week"
 msgstr "Naptári hét"
 
-#: ../plugin/plugin.py:117 ../plugin/controllers/i18n.py:96
+#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:96
 msgid "Cancel"
 msgstr "Töröl"
 
@@ -423,7 +423,7 @@ msgstr "Aktuális esemény"
 msgid "Custom STB name"
 msgstr "Egyéni box név"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:144
 msgid "Custom box name"
 msgstr "Egyéni box név"
 
@@ -431,8 +431,8 @@ msgstr "Egyéni box név"
 msgid "Custom offset"
 msgstr "Egyéni eltolás"
 
-#: ../plugin/controllers/i18n.py:120 ../plugin/controllers/models/info.py:72
-#: ../plugin/controllers/models/info.py:91
+#: ../plugin/controllers/models/info.py:68
+#: ../plugin/controllers/models/info.py:87 ../plugin/controllers/i18n.py:120
 msgid "DHCP"
 msgstr "DHCP"
 
@@ -448,7 +448,7 @@ msgstr ""
 msgid "Date"
 msgstr "Dátum"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:161
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -508,9 +508,14 @@ msgstr "Leírás"
 msgid "Disable Timer"
 msgstr "Időzítő letiltása"
 
-#: ../plugin/plugin.py:152
+#: ../plugin/plugin.py:154
 msgid "Disable remote access for user root"
 msgstr "Távoli hozzáférés letiltása a root felhasználó számára"
+
+#: ../plugin/controllers/models/info.py:227
+#, fuzzy
+msgid "Disabled in configuration"
+msgstr "Letiltva ütközés esetén"
 
 #: ../plugin/controllers/i18n.py:405
 msgid "Disabled on Conflict"
@@ -577,7 +582,7 @@ msgstr "Driverek"
 msgid "Duration"
 msgstr "Időtartam"
 
-#: ../plugin/controllers/models/info.py:575
+#: ../plugin/controllers/models/info.py:573
 msgid "E"
 msgstr "E"
 
@@ -589,7 +594,7 @@ msgstr "EPG"
 msgid "EPG encoding"
 msgstr "EPG kódolás"
 
-#: ../plugin/controllers/base.py:339
+#: ../plugin/controllers/base.py:328
 msgid "EPGRefresh"
 msgstr "EPG frissítés"
 
@@ -605,7 +610,7 @@ msgstr "Időzítő szerkesztése"
 msgid "Editor"
 msgstr "Szerkesztő"
 
-#: ../plugin/plugin.py:151
+#: ../plugin/plugin.py:153
 msgid "Enable Authentication for streaming"
 msgstr "Engedélyezze a hitelesítést streaminghez"
 
@@ -613,15 +618,15 @@ msgstr "Engedélyezze a hitelesítést streaminghez"
 msgid "Enable Filtering"
 msgstr "Szűrés engedélyezése"
 
-#: ../plugin/plugin.py:144
+#: ../plugin/plugin.py:146
 msgid "Enable HTTP Authentication"
 msgstr "HTTP hitelesítés engedélyezése"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:147
 msgid "Enable HTTPS"
 msgstr "HTTPS engedélyezése"
 
-#: ../plugin/plugin.py:148
+#: ../plugin/plugin.py:150
 msgid "Enable HTTPS Authentication"
 msgstr "HTTPS hitelesítés engedélyezése"
 
@@ -629,7 +634,7 @@ msgstr "HTTPS hitelesítés engedélyezése"
 msgid "Enable Messages"
 msgstr "Üzenetek engedélyezése"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:158
 msgid "Enable Parental Control"
 msgstr "Engedélyezze a szülői felügyeletet"
 
@@ -637,7 +642,7 @@ msgstr "Engedélyezze a szülői felügyeletet"
 msgid "Enable Timer"
 msgstr "Időzítő engedélyezése"
 
-#: ../plugin/plugin.py:155
+#: ../plugin/plugin.py:157
 msgid "Enable access from VPNs"
 msgstr "A VPN-ekről való hozzáférés engedélyezése"
 
@@ -821,10 +826,10 @@ msgstr "Frontprocesszor verzió"
 msgid "Full remote"
 msgstr "Teljes távvezérlő"
 
-#: ../plugin/controllers/models/info.py:343
-#: ../plugin/controllers/models/info.py:349
-#: ../plugin/controllers/models/info.py:364
-#: ../plugin/controllers/models/info.py:367
+#: ../plugin/controllers/models/info.py:341
+#: ../plugin/controllers/models/info.py:347
+#: ../plugin/controllers/models/info.py:362
+#: ../plugin/controllers/models/info.py:365
 #: ../plugin/controllers/models/movies.py:224
 #: ../plugin/controllers/models/movies.py:343
 #: ../plugin/controllers/models/movies.py:751
@@ -856,11 +861,11 @@ msgstr "A változás lista létrehozása az új bouquethez nem sikerült!"
 msgid "Grab Screenshot"
 msgstr "Pillanatkép rögzítése"
 
-#: ../plugin/plugin.py:143
+#: ../plugin/plugin.py:145
 msgid "HTTP port"
 msgstr "HTTP port"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:149
 msgid "HTTPS port"
 msgstr "HTTPS port"
 
@@ -893,11 +898,11 @@ msgstr "Óra"
 msgid "IPv4 address"
 msgstr "IPv4 cím"
 
-#: ../plugin/controllers/i18n.py:173 ../plugin/controllers/models/info.py:151
+#: ../plugin/controllers/models/info.py:147 ../plugin/controllers/i18n.py:173
 msgid "IPv4-only Python/Twisted"
 msgstr "IPv4-only Python/Twisted"
 
-#: ../plugin/controllers/i18n.py:171 ../plugin/controllers/models/info.py:147
+#: ../plugin/controllers/models/info.py:143 ../plugin/controllers/i18n.py:171
 msgid "IPv4-only kernel"
 msgstr "IPv4-only kernel"
 
@@ -1014,7 +1019,7 @@ msgstr "Kernel"
 msgid "LCD"
 msgstr "LCD"
 
-#: ../plugin/controllers/base.py:302
+#: ../plugin/controllers/base.py:291
 msgid "LCD4Linux Setup"
 msgstr "LCD4Linux Beállítás"
 
@@ -1022,7 +1027,7 @@ msgstr "LCD4Linux Beállítás"
 msgid "LICENSE"
 msgstr "ENGEDÉLY"
 
-#: ../plugin/controllers/models/info.py:277
+#: ../plugin/controllers/models/info.py:275
 #, fuzzy
 msgid "LIRC remote"
 msgstr "Távirányító"
@@ -1056,9 +1061,9 @@ msgstr "Zárolt"
 msgid "MAC address"
 msgstr "MAC cím"
 
-#: ../plugin/controllers/models/info.py:340
-#: ../plugin/controllers/models/info.py:351
-#: ../plugin/controllers/models/info.py:369
+#: ../plugin/controllers/models/info.py:338
+#: ../plugin/controllers/models/info.py:349
+#: ../plugin/controllers/models/info.py:367
 #: ../plugin/controllers/models/movies.py:226
 #: ../plugin/controllers/models/movies.py:345
 #: ../plugin/controllers/models/movies.py:753
@@ -1181,7 +1186,7 @@ msgstr "MultiEPG"
 msgid "MultiTranscoding"
 msgstr "Átkódolás"
 
-#: ../plugin/controllers/base.py:326
+#: ../plugin/controllers/base.py:315
 msgid "NCam Webinterface"
 msgstr "NCam Webinterface"
 
@@ -1333,7 +1338,7 @@ msgstr "Most"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:313
 msgid "OSCam Webinterface"
 msgstr "OSCam Webinterface"
 
@@ -1398,7 +1403,7 @@ msgstr "Gui version"
 msgid "Open in new window"
 msgstr "Megnyitás új ablakban"
 
-#: ../plugin/plugin.py:133
+#: ../plugin/plugin.py:134
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWebInterface engedélyezve"
 
@@ -1406,7 +1411,7 @@ msgstr "OpenWebInterface engedélyezve"
 msgid "OpenWebif Browser Settings"
 msgstr "OpenWebif Böngésző beállítások"
 
-#: ../plugin/plugin.py:168 ../plugin/plugin.py:234 ../plugin/plugin.py:236
+#: ../plugin/plugin.py:170 ../plugin/plugin.py:236 ../plugin/plugin.py:238
 msgid "OpenWebif Configuration"
 msgstr "OpenWebif konfiguráció"
 
@@ -1414,12 +1419,12 @@ msgstr "OpenWebif konfiguráció"
 msgid "OpenWebif Settings"
 msgstr "OpenWebif beállítások"
 
-#: ../plugin/plugin.py:119
+#: ../plugin/plugin.py:120
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif url: http://yourip:port"
 
-#: ../plugin/controllers/i18n.py:475
 #: ../plugin/controllers/models/services.py:259
+#: ../plugin/controllers/i18n.py:475
 msgid "Orbital Position"
 msgstr "Orbitális pozíció"
 
@@ -1606,7 +1611,7 @@ msgstr "A felvétel átnevezése"
 msgid "Repeated"
 msgstr "Megismételt"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:151
 msgid "Require client cert for HTTPS"
 msgstr "A kliens tanúsítvány megkövetelése HTTPS protokollhoz"
 
@@ -1634,7 +1639,7 @@ msgstr "Korlátozza az eseményeket bizonyos időpontokban"
 msgid "Root"
 msgstr "Root"
 
-#: ../plugin/controllers/models/info.py:63
+#: ../plugin/controllers/models/info.py:59
 msgid "SLAAC"
 msgstr "SLAAC"
 
@@ -1689,7 +1694,7 @@ msgstr "Műholdkereső"
 msgid "Saturday"
 msgstr "Szombat"
 
-#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:236
+#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:236
 #: ../plugin/controllers/i18n.py:390 ../plugin/controllers/i18n.py:442
 msgid "Save"
 msgstr "Mentés"
@@ -1807,7 +1812,7 @@ msgid "Set maximum duration"
 msgstr "Állítsa be a maximális időt"
 
 #: ../plugin/controllers/i18n.py:247 ../plugin/controllers/i18n.py:394
-#: ../plugin/controllers/base.py:286
+#: ../plugin/controllers/base.py:281
 msgid "Settings"
 msgstr "Beállítások"
 
@@ -1832,7 +1837,11 @@ msgstr "A box nevének mutatása a fejlécben"
 msgid "Show Service type in channel list"
 msgstr "A csatorna típus megjelenítése a csatornalistában"
 
-#: ../plugin/plugin.py:138
+#: ../plugin/plugin.py:136
+msgid "Show benchmark in STB information"
+msgstr ""
+
+#: ../plugin/plugin.py:140
 msgid "Show box name in header"
 msgstr "A box nevének mutatása a fejlécben"
 
@@ -1962,9 +1971,9 @@ msgstr "Vasárnap"
 msgid "Sunday"
 msgstr "Vasárnap"
 
-#: ../plugin/controllers/models/info.py:347
+#: ../plugin/controllers/models/info.py:345
+#: ../plugin/controllers/models/info.py:357
 #: ../plugin/controllers/models/info.py:359
-#: ../plugin/controllers/models/info.py:361
 msgid "TB"
 msgstr "TB"
 
@@ -1996,7 +2005,7 @@ msgstr "Televízió"
 msgid "Template Engine"
 msgstr "Sablon motor"
 
-#: ../plugin/controllers/base.py:357
+#: ../plugin/controllers/base.py:346
 msgid "Terminal"
 msgstr "Terminál"
 
@@ -2244,7 +2253,7 @@ msgstr "Használjon egyedi helyet"
 msgid "Use as PiP if possible"
 msgstr "Használat PiP módban (ha lehetséges)"
 
-#: ../plugin/plugin.py:137
+#: ../plugin/plugin.py:139
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Használjon egyedi helyet"
@@ -2254,11 +2263,11 @@ msgstr "Használjon egyedi helyet"
 msgid "Use custom STB name"
 msgstr "Használjon egyedi box nevet"
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:142
 msgid "Use custom box name"
 msgstr "Használjon egyedi box nevet"
 
-#: ../plugin/plugin.py:135 ../plugin/controllers/i18n.py:507
+#: ../plugin/plugin.py:137 ../plugin/controllers/i18n.py:507
 msgid "Use new design"
 msgstr "Az új kinézet használata"
 
@@ -2306,7 +2315,7 @@ msgstr "Hangerőszabályozó"
 msgid "Vpid"
 msgstr "Vpid"
 
-#: ../plugin/controllers/models/info.py:578
+#: ../plugin/controllers/models/info.py:576
 msgid "W"
 msgstr "W"
 
@@ -2358,7 +2367,7 @@ msgstr "Hetente (hétfő)"
 msgid "Weekly (Sunday)"
 msgstr "Hetente (vasárnap)"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:156
 msgid "Without auth only local access is allowed!"
 msgstr "Hitelesítés nélkül csak helyi hozzáférés engedélyezett!"
 
@@ -2459,8 +2468,8 @@ msgstr "a rövid leírásban"
 msgid "in Title"
 msgstr "a címben"
 
-#: ../plugin/controllers/models/info.py:236
-#: ../plugin/controllers/models/info.py:239
+#: ../plugin/controllers/models/info.py:235
+#: ../plugin/controllers/models/info.py:238
 #: ../plugin/controllers/models/movies.py:228
 #: ../plugin/controllers/models/movies.py:347
 #: ../plugin/controllers/models/movies.py:755
@@ -2471,8 +2480,8 @@ msgstr "kB"
 msgid "loading"
 msgstr "töltés"
 
-#: ../plugin/controllers/models/info.py:74
-#: ../plugin/controllers/models/info.py:93
+#: ../plugin/controllers/models/info.py:70
+#: ../plugin/controllers/models/info.py:89
 msgid "manual/disabled"
 msgstr "kézi/tiltva"
 
@@ -2484,7 +2493,7 @@ msgstr "perc"
 msgid "no description available"
 msgstr "nincs elérhető leírás"
 
-#: ../plugin/controllers/i18n.py:172 ../plugin/controllers/models/info.py:180
+#: ../plugin/controllers/models/info.py:176 ../plugin/controllers/i18n.py:172
 msgid "none/IPv4-only network"
 msgstr "egyik sem/Csak IPv4-alapú hálózat"
 
@@ -2500,11 +2509,11 @@ msgstr "egy kettő három négy ismeretlen parancs"
 msgid "partial match"
 msgstr "részleges egyezés"
 
-#: ../plugin/controllers/models/info.py:410
+#: ../plugin/controllers/models/info.py:408
 msgid "r/o"
 msgstr "r/o"
 
-#: ../plugin/controllers/models/info.py:406
+#: ../plugin/controllers/models/info.py:404
 msgid "r/w"
 msgstr "r/w"
 
@@ -2548,9 +2557,9 @@ msgstr "alapértelmezett"
 msgid "start match"
 msgstr "start egyezés"
 
-#: ../plugin/controllers/models/info.py:70
-#: ../plugin/controllers/models/info.py:82
-#: ../plugin/controllers/models/info.py:89
+#: ../plugin/controllers/models/info.py:66
+#: ../plugin/controllers/models/info.py:78
+#: ../plugin/controllers/models/info.py:85
 msgid "static"
 msgstr "statikus"
 
@@ -2571,8 +2580,8 @@ msgstr "átkódolt"
 msgid "type %s is not a number"
 msgstr "a %s típus nem számjegy"
 
-#: ../plugin/controllers/models/info.py:102
-#: ../plugin/controllers/models/info.py:110
+#: ../plugin/controllers/models/info.py:98
+#: ../plugin/controllers/models/info.py:106
 msgid "unknown"
 msgstr "ismeretlen"
 

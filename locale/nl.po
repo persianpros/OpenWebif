@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-21 04:39+0430\n"
+"POT-Creation-Date: 2020-08-18 02:22+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Frenske <voorzitter@openpli.org>\n"
 "Language-Team: \n"
@@ -19,8 +19,8 @@ msgstr ""
 msgid "%s %s is locked."
 msgstr "%s %s is vergrendeld."
 
-#: ../plugin/controllers/models/info.py:240
-#: ../plugin/controllers/models/info.py:377
+#: ../plugin/controllers/models/info.py:239
+#: ../plugin/controllers/models/info.py:375
 #, python-format
 msgid "%s free / %s total"
 msgstr "%s vrij / %s totaal"
@@ -89,7 +89,7 @@ msgstr "Zender(s) toevoegen als alternatief"
 msgid "Add channel(s) to Bouquet"
 msgstr "Zender(s) toevoegen aan Bouquet"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:159
 msgid "Add service name to stream information"
 msgstr "De zendernaam toevoegen aan stream informatie"
 
@@ -126,7 +126,7 @@ msgstr "Alle bestanden van deze software zijn Open Source; u kunt deze herdistri
 msgid "All alternative services deleted."
 msgstr "Alle alternatieve zenders verwijderd."
 
-#: ../plugin/plugin.py:158
+#: ../plugin/plugin.py:160
 msgid "Allow IPK Upload"
 msgstr "IPK upload toestaan"
 
@@ -143,7 +143,7 @@ msgstr "Maken alternatieve %s is mislukt."
 msgid "Always"
 msgstr "Altijd"
 
-#: ../plugin/controllers/models/info.py:275
+#: ../plugin/controllers/models/info.py:273
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "Volledige AB"
@@ -196,7 +196,7 @@ msgstr "Auto"
 msgid "AutoPoll"
 msgstr "AutoPoll"
 
-#: ../plugin/controllers/base.py:330
+#: ../plugin/controllers/base.py:319
 msgid "AutoTimer"
 msgstr "Autotimer"
 
@@ -306,7 +306,7 @@ msgstr "Bouquet met succes hernoemd."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Bouquet-instellingen werden hersteld"
 
-#: ../plugin/controllers/base.py:335
+#: ../plugin/controllers/base.py:324
 msgid "BouquetEditor"
 msgstr "Bouquet Editor"
 
@@ -348,7 +348,7 @@ msgstr "Kabel"
 msgid "Calendar Week"
 msgstr "Kalender week"
 
-#: ../plugin/plugin.py:117 ../plugin/controllers/i18n.py:96
+#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:96
 msgid "Cancel"
 msgstr "Annuleren"
 
@@ -424,7 +424,7 @@ msgstr "Huidig programma"
 msgid "Custom STB name"
 msgstr "Alternatieve naam voor de box"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:144
 msgid "Custom box name"
 msgstr "Alternatieve naam voor de box"
 
@@ -432,8 +432,8 @@ msgstr "Alternatieve naam voor de box"
 msgid "Custom offset"
 msgstr "Eigen tijd afwijking"
 
-#: ../plugin/controllers/i18n.py:120 ../plugin/controllers/models/info.py:72
-#: ../plugin/controllers/models/info.py:91
+#: ../plugin/controllers/models/info.py:68
+#: ../plugin/controllers/models/info.py:87 ../plugin/controllers/i18n.py:120
 msgid "DHCP"
 msgstr "DHCP"
 
@@ -449,7 +449,7 @@ msgstr ""
 msgid "Date"
 msgstr "Datum"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:161
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -509,9 +509,14 @@ msgstr "Beschrijving"
 msgid "Disable Timer"
 msgstr "Timer uitschakelen"
 
-#: ../plugin/plugin.py:152
+#: ../plugin/plugin.py:154
 msgid "Disable remote access for user root"
 msgstr "Déactiveer de externe toegang voor de gebruiker 'root'"
+
+#: ../plugin/controllers/models/info.py:227
+#, fuzzy
+msgid "Disabled in configuration"
+msgstr "Uitgeschakeld bij Conflict"
 
 #: ../plugin/controllers/i18n.py:405
 msgid "Disabled on Conflict"
@@ -578,7 +583,7 @@ msgstr "stuurprogramma datum"
 msgid "Duration"
 msgstr "Duur"
 
-#: ../plugin/controllers/models/info.py:575
+#: ../plugin/controllers/models/info.py:573
 msgid "E"
 msgstr "E"
 
@@ -590,7 +595,7 @@ msgstr "EPG"
 msgid "EPG encoding"
 msgstr "EPG codering"
 
-#: ../plugin/controllers/base.py:339
+#: ../plugin/controllers/base.py:328
 msgid "EPGRefresh"
 msgstr "EPGRefresh"
 
@@ -606,7 +611,7 @@ msgstr "Pas timer aan"
 msgid "Editor"
 msgstr "Editor"
 
-#: ../plugin/plugin.py:151
+#: ../plugin/plugin.py:153
 msgid "Enable Authentication for streaming"
 msgstr "Streaming authentificatie inschakelen"
 
@@ -614,15 +619,15 @@ msgstr "Streaming authentificatie inschakelen"
 msgid "Enable Filtering"
 msgstr "Filters inschakelen"
 
-#: ../plugin/plugin.py:144
+#: ../plugin/plugin.py:146
 msgid "Enable HTTP Authentication"
 msgstr "HTTP authentificatie inschakelen"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:147
 msgid "Enable HTTPS"
 msgstr "HTTPS inschakelen"
 
-#: ../plugin/plugin.py:148
+#: ../plugin/plugin.py:150
 msgid "Enable HTTPS Authentication"
 msgstr "HTTPS authentificatie inschakelen"
 
@@ -630,7 +635,7 @@ msgstr "HTTPS authentificatie inschakelen"
 msgid "Enable Messages"
 msgstr "Berichten inschakelen"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:158
 msgid "Enable Parental Control"
 msgstr "Kinderslot inschakelen"
 
@@ -638,7 +643,7 @@ msgstr "Kinderslot inschakelen"
 msgid "Enable Timer"
 msgstr "Timer inschakelen"
 
-#: ../plugin/plugin.py:155
+#: ../plugin/plugin.py:157
 msgid "Enable access from VPNs"
 msgstr "Toegang voor VPN's inschakelen"
 
@@ -822,10 +827,10 @@ msgstr "Frontprocessor Versie"
 msgid "Full remote"
 msgstr "Volledige AB"
 
-#: ../plugin/controllers/models/info.py:343
-#: ../plugin/controllers/models/info.py:349
-#: ../plugin/controllers/models/info.py:364
-#: ../plugin/controllers/models/info.py:367
+#: ../plugin/controllers/models/info.py:341
+#: ../plugin/controllers/models/info.py:347
+#: ../plugin/controllers/models/info.py:362
+#: ../plugin/controllers/models/info.py:365
 #: ../plugin/controllers/models/movies.py:224
 #: ../plugin/controllers/models/movies.py:343
 #: ../plugin/controllers/models/movies.py:751
@@ -857,11 +862,11 @@ msgstr "Ontvangen van gewijzigde lijst voor maken bouquet mislukt!"
 msgid "Grab Screenshot"
 msgstr "Maak screenshot"
 
-#: ../plugin/plugin.py:143
+#: ../plugin/plugin.py:145
 msgid "HTTP port"
 msgstr "HTTP poort"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:149
 msgid "HTTPS port"
 msgstr "HTTPS poort"
 
@@ -894,11 +899,11 @@ msgstr "Uur"
 msgid "IPv4 address"
 msgstr "IPv4-adres"
 
-#: ../plugin/controllers/i18n.py:173 ../plugin/controllers/models/info.py:151
+#: ../plugin/controllers/models/info.py:147 ../plugin/controllers/i18n.py:173
 msgid "IPv4-only Python/Twisted"
 msgstr "IPv4-only Python/Twisted"
 
-#: ../plugin/controllers/i18n.py:171 ../plugin/controllers/models/info.py:147
+#: ../plugin/controllers/models/info.py:143 ../plugin/controllers/i18n.py:171
 msgid "IPv4-only kernel"
 msgstr "Alleen IPv4-kernel"
 
@@ -1015,7 +1020,7 @@ msgstr "Kernel versie"
 msgid "LCD"
 msgstr "LCD"
 
-#: ../plugin/controllers/base.py:302
+#: ../plugin/controllers/base.py:291
 msgid "LCD4Linux Setup"
 msgstr "LCD4Linux instellingen"
 
@@ -1023,7 +1028,7 @@ msgstr "LCD4Linux instellingen"
 msgid "LICENSE"
 msgstr "Licentie"
 
-#: ../plugin/controllers/models/info.py:277
+#: ../plugin/controllers/models/info.py:275
 #, fuzzy
 msgid "LIRC remote"
 msgstr "Afstandsbediening"
@@ -1057,9 +1062,9 @@ msgstr "Vergrendeld"
 msgid "MAC address"
 msgstr "MAC-adres"
 
-#: ../plugin/controllers/models/info.py:340
-#: ../plugin/controllers/models/info.py:351
-#: ../plugin/controllers/models/info.py:369
+#: ../plugin/controllers/models/info.py:338
+#: ../plugin/controllers/models/info.py:349
+#: ../plugin/controllers/models/info.py:367
 #: ../plugin/controllers/models/movies.py:226
 #: ../plugin/controllers/models/movies.py:345
 #: ../plugin/controllers/models/movies.py:753
@@ -1182,7 +1187,7 @@ msgstr "Multi-EPG"
 msgid "MultiTranscoding"
 msgstr "Transcoderen"
 
-#: ../plugin/controllers/base.py:326
+#: ../plugin/controllers/base.py:315
 msgid "NCam Webinterface"
 msgstr "NCam Webinterface"
 
@@ -1334,7 +1339,7 @@ msgstr "Nu"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:313
 msgid "OSCam Webinterface"
 msgstr "OSCam Webinterface"
 
@@ -1399,7 +1404,7 @@ msgstr "Gui versie"
 msgid "Open in new window"
 msgstr "Open in nieuw venster"
 
-#: ../plugin/plugin.py:133
+#: ../plugin/plugin.py:134
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWebinterface status"
 
@@ -1407,7 +1412,7 @@ msgstr "OpenWebinterface status"
 msgid "OpenWebif Browser Settings"
 msgstr "Openwebif Browser instellingen"
 
-#: ../plugin/plugin.py:168 ../plugin/plugin.py:234 ../plugin/plugin.py:236
+#: ../plugin/plugin.py:170 ../plugin/plugin.py:236 ../plugin/plugin.py:238
 msgid "OpenWebif Configuration"
 msgstr "Openwebif configuratie"
 
@@ -1415,12 +1420,12 @@ msgstr "Openwebif configuratie"
 msgid "OpenWebif Settings"
 msgstr "Openwebif instellingen"
 
-#: ../plugin/plugin.py:119
+#: ../plugin/plugin.py:120
 msgid "OpenWebif url: http://yourip:port"
 msgstr "Openwebif url: http://uwIP:poort"
 
-#: ../plugin/controllers/i18n.py:475
 #: ../plugin/controllers/models/services.py:259
+#: ../plugin/controllers/i18n.py:475
 msgid "Orbital Position"
 msgstr "Orbitale-positie (graden)"
 
@@ -1607,7 +1612,7 @@ msgstr "Hernoem opname"
 msgid "Repeated"
 msgstr "Herhaald"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:151
 msgid "Require client cert for HTTPS"
 msgstr "Een gebruikers certificaat is vereist voor HTTPS"
 
@@ -1635,7 +1640,7 @@ msgstr "Beperk tot bepaalde data"
 msgid "Root"
 msgstr "Root"
 
-#: ../plugin/controllers/models/info.py:63
+#: ../plugin/controllers/models/info.py:59
 msgid "SLAAC"
 msgstr "SLAAC"
 
@@ -1690,7 +1695,7 @@ msgstr "Signaalzoeker"
 msgid "Saturday"
 msgstr "zaterdag"
 
-#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:236
+#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:236
 #: ../plugin/controllers/i18n.py:390 ../plugin/controllers/i18n.py:442
 msgid "Save"
 msgstr "Bevestigen"
@@ -1808,7 +1813,7 @@ msgid "Set maximum duration"
 msgstr "Stel de maximale duur in"
 
 #: ../plugin/controllers/i18n.py:247 ../plugin/controllers/i18n.py:394
-#: ../plugin/controllers/base.py:286
+#: ../plugin/controllers/base.py:281
 msgid "Settings"
 msgstr "Instellingen"
 
@@ -1833,7 +1838,11 @@ msgstr "Toon de naam van de box rechtsboven"
 msgid "Show Service type in channel list"
 msgstr "Toon het zendertype in de zenderlijst"
 
-#: ../plugin/plugin.py:138
+#: ../plugin/plugin.py:136
+msgid "Show benchmark in STB information"
+msgstr ""
+
+#: ../plugin/plugin.py:140
 msgid "Show box name in header"
 msgstr "Toon de naam van de box rechtsboven"
 
@@ -1963,9 +1972,9 @@ msgstr "zo"
 msgid "Sunday"
 msgstr "zondag"
 
-#: ../plugin/controllers/models/info.py:347
+#: ../plugin/controllers/models/info.py:345
+#: ../plugin/controllers/models/info.py:357
 #: ../plugin/controllers/models/info.py:359
-#: ../plugin/controllers/models/info.py:361
 msgid "TB"
 msgstr "TB"
 
@@ -1997,7 +2006,7 @@ msgstr "Televisie"
 msgid "Template Engine"
 msgstr "Template-Engine"
 
-#: ../plugin/controllers/base.py:357
+#: ../plugin/controllers/base.py:346
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -2245,7 +2254,7 @@ msgstr "Gebruik een aangepaste locatie"
 msgid "Use as PiP if possible"
 msgstr "Gebruik indien mogelijk als PIP"
 
-#: ../plugin/plugin.py:137
+#: ../plugin/plugin.py:139
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Gebruik een aangepaste locatie"
@@ -2255,11 +2264,11 @@ msgstr "Gebruik een aangepaste locatie"
 msgid "Use custom STB name"
 msgstr "Gebruik een alternatieve naam voor de box"
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:142
 msgid "Use custom box name"
 msgstr "Gebruik een alternatieve naam voor de box"
 
-#: ../plugin/plugin.py:135 ../plugin/controllers/i18n.py:507
+#: ../plugin/plugin.py:137 ../plugin/controllers/i18n.py:507
 msgid "Use new design"
 msgstr "Gebruik de nieuwe vormgeving"
 
@@ -2307,7 +2316,7 @@ msgstr "Volume controle"
 msgid "Vpid"
 msgstr "Vpid"
 
-#: ../plugin/controllers/models/info.py:578
+#: ../plugin/controllers/models/info.py:576
 msgid "W"
 msgstr "W"
 
@@ -2359,7 +2368,7 @@ msgstr "Wekelijks (maandag)"
 msgid "Weekly (Sunday)"
 msgstr "Wekelijks (zondag)"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:156
 msgid "Without auth only local access is allowed!"
 msgstr "Zonder authentificatie is alléén lokale toegang mogelijk!"
 
@@ -2460,8 +2469,8 @@ msgstr "in korte beschrijving"
 msgid "in Title"
 msgstr "in titel"
 
-#: ../plugin/controllers/models/info.py:236
-#: ../plugin/controllers/models/info.py:239
+#: ../plugin/controllers/models/info.py:235
+#: ../plugin/controllers/models/info.py:238
 #: ../plugin/controllers/models/movies.py:228
 #: ../plugin/controllers/models/movies.py:347
 #: ../plugin/controllers/models/movies.py:755
@@ -2472,8 +2481,8 @@ msgstr "kB"
 msgid "loading"
 msgstr "bezig met laden"
 
-#: ../plugin/controllers/models/info.py:74
-#: ../plugin/controllers/models/info.py:93
+#: ../plugin/controllers/models/info.py:70
+#: ../plugin/controllers/models/info.py:89
 msgid "manual/disabled"
 msgstr "handmatig/uitgeschakeld"
 
@@ -2485,7 +2494,7 @@ msgstr "minuut"
 msgid "no description available"
 msgstr "Geen beschrijving beschikbaar"
 
-#: ../plugin/controllers/i18n.py:172 ../plugin/controllers/models/info.py:180
+#: ../plugin/controllers/models/info.py:176 ../plugin/controllers/i18n.py:172
 msgid "none/IPv4-only network"
 msgstr "geen / IPv4-only netwerk"
 
@@ -2501,11 +2510,11 @@ msgstr "één twee drie vier onbekende commando's"
 msgid "partial match"
 msgstr "gedeeltelijke overeenkomst"
 
-#: ../plugin/controllers/models/info.py:410
+#: ../plugin/controllers/models/info.py:408
 msgid "r/o"
 msgstr "r/o"
 
-#: ../plugin/controllers/models/info.py:406
+#: ../plugin/controllers/models/info.py:404
 msgid "r/w"
 msgstr "r/w"
 
@@ -2549,9 +2558,9 @@ msgstr "standaard"
 msgid "start match"
 msgstr "aanvangen met vergelijken"
 
-#: ../plugin/controllers/models/info.py:70
-#: ../plugin/controllers/models/info.py:82
-#: ../plugin/controllers/models/info.py:89
+#: ../plugin/controllers/models/info.py:66
+#: ../plugin/controllers/models/info.py:78
+#: ../plugin/controllers/models/info.py:85
 msgid "static"
 msgstr "statisch"
 
@@ -2572,8 +2581,8 @@ msgstr "Getranscodeerd"
 msgid "type %s is not a number"
 msgstr "type %s is geen getal"
 
-#: ../plugin/controllers/models/info.py:102
-#: ../plugin/controllers/models/info.py:110
+#: ../plugin/controllers/models/info.py:98
+#: ../plugin/controllers/models/info.py:106
 msgid "unknown"
 msgstr "onbekend"
 

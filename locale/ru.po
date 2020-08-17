@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-21 04:39+0430\n"
+"POT-Creation-Date: 2020-08-18 02:22+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Dimitrij <Dima-73@inbox.lv>\n"
 "Language-Team: \n"
@@ -20,8 +20,8 @@ msgstr ""
 msgid "%s %s is locked."
 msgstr "%s %s заблокирован."
 
-#: ../plugin/controllers/models/info.py:240
-#: ../plugin/controllers/models/info.py:377
+#: ../plugin/controllers/models/info.py:239
+#: ../plugin/controllers/models/info.py:375
 #, python-format
 msgid "%s free / %s total"
 msgstr "%s свободно / %s всего"
@@ -90,7 +90,7 @@ msgstr "Добавить канал(ы) как альтернативу"
 msgid "Add channel(s) to Bouquet"
 msgstr "Добавить канал(ы) в букет"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:159
 msgid "Add service name to stream information"
 msgstr "Добавить название сервиса в информацию стрима"
 
@@ -127,7 +127,7 @@ msgstr "Все файлы данного ПО являются открытым 
 msgid "All alternative services deleted."
 msgstr "Все альтернативные сервисы удалены."
 
-#: ../plugin/plugin.py:158
+#: ../plugin/plugin.py:160
 msgid "Allow IPK Upload"
 msgstr "Разрешить загрузку IPK"
 
@@ -144,7 +144,7 @@ msgstr "Ошибка создания %s альтернативы."
 msgid "Always"
 msgstr "Всегда"
 
-#: ../plugin/controllers/models/info.py:275
+#: ../plugin/controllers/models/info.py:273
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "Весь пульт"
@@ -197,7 +197,7 @@ msgstr "Авто"
 msgid "AutoPoll"
 msgstr "Авто проверка"
 
-#: ../plugin/controllers/base.py:330
+#: ../plugin/controllers/base.py:319
 msgid "AutoTimer"
 msgstr "Автотаймер"
 
@@ -306,7 +306,7 @@ msgstr "Букет переименован успешно."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Настройки букетов востановлены успешно"
 
-#: ../plugin/controllers/base.py:335
+#: ../plugin/controllers/base.py:324
 msgid "BouquetEditor"
 msgstr "Редактор букетов"
 
@@ -348,7 +348,7 @@ msgstr "Кабельный"
 msgid "Calendar Week"
 msgstr "Календарь недели"
 
-#: ../plugin/plugin.py:117 ../plugin/controllers/i18n.py:96
+#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:96
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -424,7 +424,7 @@ msgstr "Текущее событие"
 msgid "Custom STB name"
 msgstr "Пользовательское имя ресивера"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:144
 msgid "Custom box name"
 msgstr "Пользовательское имя ресивера"
 
@@ -432,8 +432,8 @@ msgstr "Пользовательское имя ресивера"
 msgid "Custom offset"
 msgstr "Пользовательский сдвиг"
 
-#: ../plugin/controllers/i18n.py:120 ../plugin/controllers/models/info.py:72
-#: ../plugin/controllers/models/info.py:91
+#: ../plugin/controllers/models/info.py:68
+#: ../plugin/controllers/models/info.py:87 ../plugin/controllers/i18n.py:120
 msgid "DHCP"
 msgstr "DHCP"
 
@@ -449,7 +449,7 @@ msgstr ""
 msgid "Date"
 msgstr "Дата"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:161
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -509,9 +509,14 @@ msgstr "Описание"
 msgid "Disable Timer"
 msgstr "Отключить таймер"
 
-#: ../plugin/plugin.py:152
+#: ../plugin/plugin.py:154
 msgid "Disable remote access for user root"
 msgstr "Отключить доступ для пользователя root"
+
+#: ../plugin/controllers/models/info.py:227
+#, fuzzy
+msgid "Disabled in configuration"
+msgstr "Добавить как отключенный при конфликте"
 
 #: ../plugin/controllers/i18n.py:405
 msgid "Disabled on Conflict"
@@ -578,7 +583,7 @@ msgstr "Драйвера"
 msgid "Duration"
 msgstr "Длительность"
 
-#: ../plugin/controllers/models/info.py:575
+#: ../plugin/controllers/models/info.py:573
 msgid "E"
 msgstr "E"
 
@@ -590,7 +595,7 @@ msgstr "EPG"
 msgid "EPG encoding"
 msgstr "Кодировка EPG"
 
-#: ../plugin/controllers/base.py:339
+#: ../plugin/controllers/base.py:328
 msgid "EPGRefresh"
 msgstr "Обновление EPG"
 
@@ -606,7 +611,7 @@ msgstr "Редактировать таймер"
 msgid "Editor"
 msgstr "Редактор"
 
-#: ../plugin/plugin.py:151
+#: ../plugin/plugin.py:153
 msgid "Enable Authentication for streaming"
 msgstr "Включить аутентификацию для стриминга"
 
@@ -614,15 +619,15 @@ msgstr "Включить аутентификацию для стриминга"
 msgid "Enable Filtering"
 msgstr "Применить фильтрацию"
 
-#: ../plugin/plugin.py:144
+#: ../plugin/plugin.py:146
 msgid "Enable HTTP Authentication"
 msgstr "Применить HTTP аутентификацию"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:147
 msgid "Enable HTTPS"
 msgstr "Применить HTTPS"
 
-#: ../plugin/plugin.py:148
+#: ../plugin/plugin.py:150
 msgid "Enable HTTPS Authentication"
 msgstr "Применить HTTPS аутентификацию"
 
@@ -630,7 +635,7 @@ msgstr "Применить HTTPS аутентификацию"
 msgid "Enable Messages"
 msgstr "Включить сообщения"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:158
 msgid "Enable Parental Control"
 msgstr "Включить родительский контроль"
 
@@ -638,7 +643,7 @@ msgstr "Включить родительский контроль"
 msgid "Enable Timer"
 msgstr "Включить таймер"
 
-#: ../plugin/plugin.py:155
+#: ../plugin/plugin.py:157
 msgid "Enable access from VPNs"
 msgstr "Включить доступ из VPN"
 
@@ -822,10 +827,10 @@ msgstr "Версия фронтпроцессора"
 msgid "Full remote"
 msgstr "Весь пульт"
 
-#: ../plugin/controllers/models/info.py:343
-#: ../plugin/controllers/models/info.py:349
-#: ../plugin/controllers/models/info.py:364
-#: ../plugin/controllers/models/info.py:367
+#: ../plugin/controllers/models/info.py:341
+#: ../plugin/controllers/models/info.py:347
+#: ../plugin/controllers/models/info.py:362
+#: ../plugin/controllers/models/info.py:365
 #: ../plugin/controllers/models/movies.py:224
 #: ../plugin/controllers/models/movies.py:343
 #: ../plugin/controllers/models/movies.py:751
@@ -857,11 +862,11 @@ msgstr "Получить изменяемый список для нового �
 msgid "Grab Screenshot"
 msgstr "Сделать скриншот"
 
-#: ../plugin/plugin.py:143
+#: ../plugin/plugin.py:145
 msgid "HTTP port"
 msgstr "Порт HTTP"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:149
 msgid "HTTPS port"
 msgstr "Порт HTTPS"
 
@@ -894,11 +899,11 @@ msgstr "Час"
 msgid "IPv4 address"
 msgstr "IPv4 адрес"
 
-#: ../plugin/controllers/i18n.py:173 ../plugin/controllers/models/info.py:151
+#: ../plugin/controllers/models/info.py:147 ../plugin/controllers/i18n.py:173
 msgid "IPv4-only Python/Twisted"
 msgstr "IPv4-только Python/Twisted"
 
-#: ../plugin/controllers/i18n.py:171 ../plugin/controllers/models/info.py:147
+#: ../plugin/controllers/models/info.py:143 ../plugin/controllers/i18n.py:171
 msgid "IPv4-only kernel"
 msgstr "IPv4-только ядро"
 
@@ -1015,7 +1020,7 @@ msgstr "Ядро линукса"
 msgid "LCD"
 msgstr "LCD"
 
-#: ../plugin/controllers/base.py:302
+#: ../plugin/controllers/base.py:291
 msgid "LCD4Linux Setup"
 msgstr "Настройки LCD4Linux"
 
@@ -1023,7 +1028,7 @@ msgstr "Настройки LCD4Linux"
 msgid "LICENSE"
 msgstr "ЛИЦЕНЗИЯ"
 
-#: ../plugin/controllers/models/info.py:277
+#: ../plugin/controllers/models/info.py:275
 #, fuzzy
 msgid "LIRC remote"
 msgstr "Пульт"
@@ -1057,9 +1062,9 @@ msgstr "Заблокировано"
 msgid "MAC address"
 msgstr "MAC адрес"
 
-#: ../plugin/controllers/models/info.py:340
-#: ../plugin/controllers/models/info.py:351
-#: ../plugin/controllers/models/info.py:369
+#: ../plugin/controllers/models/info.py:338
+#: ../plugin/controllers/models/info.py:349
+#: ../plugin/controllers/models/info.py:367
 #: ../plugin/controllers/models/movies.py:226
 #: ../plugin/controllers/models/movies.py:345
 #: ../plugin/controllers/models/movies.py:753
@@ -1182,7 +1187,7 @@ msgstr "Мульти EPG"
 msgid "MultiTranscoding"
 msgstr "Транскодирование"
 
-#: ../plugin/controllers/base.py:326
+#: ../plugin/controllers/base.py:315
 msgid "NCam Webinterface"
 msgstr "Веб-интерфейс NCam"
 
@@ -1334,7 +1339,7 @@ msgstr "Сейчас"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:313
 msgid "OSCam Webinterface"
 msgstr "Веб-интерфейс OSCam"
 
@@ -1399,7 +1404,7 @@ msgstr "Версия GUI"
 msgid "Open in new window"
 msgstr "Открыть в новом окне"
 
-#: ../plugin/plugin.py:133
+#: ../plugin/plugin.py:134
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWebif включен"
 
@@ -1407,7 +1412,7 @@ msgstr "OpenWebif включен"
 msgid "OpenWebif Browser Settings"
 msgstr "Настройки браузера OpenWebif"
 
-#: ../plugin/plugin.py:168 ../plugin/plugin.py:234 ../plugin/plugin.py:236
+#: ../plugin/plugin.py:170 ../plugin/plugin.py:236 ../plugin/plugin.py:238
 msgid "OpenWebif Configuration"
 msgstr "Настройки OpenWebif"
 
@@ -1415,12 +1420,12 @@ msgstr "Настройки OpenWebif"
 msgid "OpenWebif Settings"
 msgstr "Настройки OpenWebif"
 
-#: ../plugin/plugin.py:119
+#: ../plugin/plugin.py:120
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif url: http://IP ресивера:порт"
 
-#: ../plugin/controllers/i18n.py:475
 #: ../plugin/controllers/models/services.py:259
+#: ../plugin/controllers/i18n.py:475
 msgid "Orbital Position"
 msgstr "Орбитальная позиция"
 
@@ -1607,7 +1612,7 @@ msgstr "Переименовать запись"
 msgid "Repeated"
 msgstr "Повторить"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:151
 msgid "Require client cert for HTTPS"
 msgstr "Требовать клиентский сертификат для HTTPS"
 
@@ -1635,7 +1640,7 @@ msgstr "Ограничение событий на определенные да
 msgid "Root"
 msgstr "Root"
 
-#: ../plugin/controllers/models/info.py:63
+#: ../plugin/controllers/models/info.py:59
 msgid "SLAAC"
 msgstr "SLAAC"
 
@@ -1690,7 +1695,7 @@ msgstr "Сигнал спутника"
 msgid "Saturday"
 msgstr "Суббота"
 
-#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:236
+#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:236
 #: ../plugin/controllers/i18n.py:390 ../plugin/controllers/i18n.py:442
 msgid "Save"
 msgstr "Сохранить"
@@ -1808,7 +1813,7 @@ msgid "Set maximum duration"
 msgstr "Установите максимальную продолжительность"
 
 #: ../plugin/controllers/i18n.py:247 ../plugin/controllers/i18n.py:394
-#: ../plugin/controllers/base.py:286
+#: ../plugin/controllers/base.py:281
 msgid "Settings"
 msgstr "Настройки"
 
@@ -1833,7 +1838,11 @@ msgstr "Показывать имя ресивера в заголовке"
 msgid "Show Service type in channel list"
 msgstr "Показать тип сервиса в списке каналов"
 
-#: ../plugin/plugin.py:138
+#: ../plugin/plugin.py:136
+msgid "Show benchmark in STB information"
+msgstr ""
+
+#: ../plugin/plugin.py:140
 msgid "Show box name in header"
 msgstr "Показывать имя ресивера в заголовке"
 
@@ -1963,9 +1972,9 @@ msgstr "Вск"
 msgid "Sunday"
 msgstr "Воскресенье"
 
-#: ../plugin/controllers/models/info.py:347
+#: ../plugin/controllers/models/info.py:345
+#: ../plugin/controllers/models/info.py:357
 #: ../plugin/controllers/models/info.py:359
-#: ../plugin/controllers/models/info.py:361
 msgid "TB"
 msgstr "ТБ"
 
@@ -1997,7 +2006,7 @@ msgstr "Телевидение"
 msgid "Template Engine"
 msgstr "Шаблон движка"
 
-#: ../plugin/controllers/base.py:357
+#: ../plugin/controllers/base.py:346
 msgid "Terminal"
 msgstr "Терминал"
 
@@ -2245,7 +2254,7 @@ msgstr "Пользовательское расположение"
 msgid "Use as PiP if possible"
 msgstr "Использовать как PiP при возможности"
 
-#: ../plugin/plugin.py:137
+#: ../plugin/plugin.py:139
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Пользовательское расположение"
@@ -2255,11 +2264,11 @@ msgstr "Пользовательское расположение"
 msgid "Use custom STB name"
 msgstr "Использовать пользовательское имя ресивера"
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:142
 msgid "Use custom box name"
 msgstr "Использовать пользовательское имя ресивера"
 
-#: ../plugin/plugin.py:135 ../plugin/controllers/i18n.py:507
+#: ../plugin/plugin.py:137 ../plugin/controllers/i18n.py:507
 msgid "Use new design"
 msgstr "Использование нового дизайна"
 
@@ -2307,7 +2316,7 @@ msgstr "Контроль громкости"
 msgid "Vpid"
 msgstr "Vpid"
 
-#: ../plugin/controllers/models/info.py:578
+#: ../plugin/controllers/models/info.py:576
 msgid "W"
 msgstr "W"
 
@@ -2359,7 +2368,7 @@ msgstr "Еженедельно (понедельник)"
 msgid "Weekly (Sunday)"
 msgstr "Еженедельно (воскресенье)"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:156
 msgid "Without auth only local access is allowed!"
 msgstr "Без аутентификации разрешен только локальный доступ!"
 
@@ -2460,8 +2469,8 @@ msgstr "в коротком описании"
 msgid "in Title"
 msgstr "в названии"
 
-#: ../plugin/controllers/models/info.py:236
-#: ../plugin/controllers/models/info.py:239
+#: ../plugin/controllers/models/info.py:235
+#: ../plugin/controllers/models/info.py:238
 #: ../plugin/controllers/models/movies.py:228
 #: ../plugin/controllers/models/movies.py:347
 #: ../plugin/controllers/models/movies.py:755
@@ -2472,8 +2481,8 @@ msgstr "КБ"
 msgid "loading"
 msgstr "загрузка"
 
-#: ../plugin/controllers/models/info.py:74
-#: ../plugin/controllers/models/info.py:93
+#: ../plugin/controllers/models/info.py:70
+#: ../plugin/controllers/models/info.py:89
 msgid "manual/disabled"
 msgstr "ручной/отключено"
 
@@ -2485,7 +2494,7 @@ msgstr "минута"
 msgid "no description available"
 msgstr "нет доступного описания"
 
-#: ../plugin/controllers/i18n.py:172 ../plugin/controllers/models/info.py:180
+#: ../plugin/controllers/models/info.py:176 ../plugin/controllers/i18n.py:172
 msgid "none/IPv4-only network"
 msgstr "ничего/IPv4-только сеть"
 
@@ -2501,11 +2510,11 @@ msgstr "одна /две / три / четыре неизвестные кома
 msgid "partial match"
 msgstr "частичное совпадение"
 
-#: ../plugin/controllers/models/info.py:410
+#: ../plugin/controllers/models/info.py:408
 msgid "r/o"
 msgstr "r/o"
 
-#: ../plugin/controllers/models/info.py:406
+#: ../plugin/controllers/models/info.py:404
 msgid "r/w"
 msgstr "r/w"
 
@@ -2549,9 +2558,9 @@ msgstr "стандарт"
 msgid "start match"
 msgstr "начало совпадения"
 
-#: ../plugin/controllers/models/info.py:70
-#: ../plugin/controllers/models/info.py:82
-#: ../plugin/controllers/models/info.py:89
+#: ../plugin/controllers/models/info.py:66
+#: ../plugin/controllers/models/info.py:78
+#: ../plugin/controllers/models/info.py:85
 msgid "static"
 msgstr "статистический"
 
@@ -2572,8 +2581,8 @@ msgstr "транскодировать"
 msgid "type %s is not a number"
 msgstr "тип %s не численный"
 
-#: ../plugin/controllers/models/info.py:102
-#: ../plugin/controllers/models/info.py:110
+#: ../plugin/controllers/models/info.py:98
+#: ../plugin/controllers/models/info.py:106
 msgid "unknown"
 msgstr "неизвестно"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-21 04:39+0430\n"
+"POT-Creation-Date: 2020-08-18 02:22+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Samzam <http://www.opena.tv>\n"
 "Language-Team: \n"
@@ -19,8 +19,8 @@ msgstr ""
 msgid "%s %s is locked."
 msgstr "%s %s on lukittu."
 
-#: ../plugin/controllers/models/info.py:240
-#: ../plugin/controllers/models/info.py:377
+#: ../plugin/controllers/models/info.py:239
+#: ../plugin/controllers/models/info.py:375
 #, python-format
 msgid "%s free / %s total"
 msgstr "%s vapaana / %s kaikkiaan"
@@ -89,7 +89,7 @@ msgstr "Lisää vaihtoehtoisia kanavia"
 msgid "Add channel(s) to Bouquet"
 msgstr "Lisää kanavia suosikkilistaan"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:159
 msgid "Add service name to stream information"
 msgstr "Lisää kanavannimi suoratoistotietoihin"
 
@@ -126,7 +126,7 @@ msgstr "Kaikki tämän ohjelma tiedostot ovat avointa lähdekoodia; Voit jakaa j
 msgid "All alternative services deleted."
 msgstr "Kaikki vaihtoehtoiset kanavat poistettu."
 
-#: ../plugin/plugin.py:158
+#: ../plugin/plugin.py:160
 msgid "Allow IPK Upload"
 msgstr ""
 
@@ -143,7 +143,7 @@ msgstr "Vaihtoehdon %s lisääminen epäonnistui."
 msgid "Always"
 msgstr "Aina"
 
-#: ../plugin/controllers/models/info.py:275
+#: ../plugin/controllers/models/info.py:273
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "Piilota koko kaukosäädin"
@@ -196,7 +196,7 @@ msgstr "Automaattinen"
 msgid "AutoPoll"
 msgstr "Automaattinen haku"
 
-#: ../plugin/controllers/base.py:330
+#: ../plugin/controllers/base.py:319
 msgid "AutoTimer"
 msgstr "Automaattiajastus"
 
@@ -306,7 +306,7 @@ msgstr "Suosikkilistan uudelleen nimeäminen onnistui."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Suosikkilistojen asetuksien palautus onnistui"
 
-#: ../plugin/controllers/base.py:335
+#: ../plugin/controllers/base.py:324
 msgid "BouquetEditor"
 msgstr "Suosikkien järjestely"
 
@@ -348,7 +348,7 @@ msgstr "Kaapeliverkko"
 msgid "Calendar Week"
 msgstr ""
 
-#: ../plugin/plugin.py:117 ../plugin/controllers/i18n.py:96
+#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:96
 msgid "Cancel"
 msgstr "Peruuta"
 
@@ -426,7 +426,7 @@ msgstr "Nykyinen ohjelma"
 msgid "Custom STB name"
 msgstr "Oma vastaanotinnimi"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:144
 msgid "Custom box name"
 msgstr "Oma vastaanotinnimi"
 
@@ -434,8 +434,8 @@ msgstr "Oma vastaanotinnimi"
 msgid "Custom offset"
 msgstr "Aseta lisäajat"
 
-#: ../plugin/controllers/i18n.py:120 ../plugin/controllers/models/info.py:72
-#: ../plugin/controllers/models/info.py:91
+#: ../plugin/controllers/models/info.py:68
+#: ../plugin/controllers/models/info.py:87 ../plugin/controllers/i18n.py:120
 msgid "DHCP"
 msgstr "DHCP"
 
@@ -451,7 +451,7 @@ msgstr ""
 msgid "Date"
 msgstr "Päivämäärä"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:161
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -511,9 +511,14 @@ msgstr "Kuvaus"
 msgid "Disable Timer"
 msgstr "Poista ajastus käytöstä"
 
-#: ../plugin/plugin.py:152
+#: ../plugin/plugin.py:154
 msgid "Disable remote access for user root"
 msgstr "Poista pääsy käyttäjän juuritiedostoihin"
+
+#: ../plugin/controllers/models/info.py:227
+#, fuzzy
+msgid "Disabled in configuration"
+msgstr "Poistettu käytöstä ristiriidan takia"
 
 #: ../plugin/controllers/i18n.py:405
 msgid "Disabled on Conflict"
@@ -580,7 +585,7 @@ msgstr "Ajurit"
 msgid "Duration"
 msgstr "Kesto"
 
-#: ../plugin/controllers/models/info.py:575
+#: ../plugin/controllers/models/info.py:573
 msgid "E"
 msgstr "O"
 
@@ -592,7 +597,7 @@ msgstr "EPG"
 msgid "EPG encoding"
 msgstr "EPG:n enkoodaaus"
 
-#: ../plugin/controllers/base.py:339
+#: ../plugin/controllers/base.py:328
 msgid "EPGRefresh"
 msgstr "EPGRefresh"
 
@@ -608,7 +613,7 @@ msgstr "Muokkaa ajastusta"
 msgid "Editor"
 msgstr "Muokkaaja"
 
-#: ../plugin/plugin.py:151
+#: ../plugin/plugin.py:153
 msgid "Enable Authentication for streaming"
 msgstr "Vaadi salasana suoratoistolle"
 
@@ -616,15 +621,15 @@ msgstr "Vaadi salasana suoratoistolle"
 msgid "Enable Filtering"
 msgstr "Suodata"
 
-#: ../plugin/plugin.py:144
+#: ../plugin/plugin.py:146
 msgid "Enable HTTP Authentication"
 msgstr "Vaadi HTTP:llä pääsyyn salasana"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:147
 msgid "Enable HTTPS"
 msgstr "Käytä HTTPS:ää"
 
-#: ../plugin/plugin.py:148
+#: ../plugin/plugin.py:150
 msgid "Enable HTTPS Authentication"
 msgstr "Vaadi HTTPS:llä pääsyyn salasana"
 
@@ -632,7 +637,7 @@ msgstr "Vaadi HTTPS:llä pääsyyn salasana"
 msgid "Enable Messages"
 msgstr "Salli viestit"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:158
 msgid "Enable Parental Control"
 msgstr "Käytä lapsilukkoa"
 
@@ -640,7 +645,7 @@ msgstr "Käytä lapsilukkoa"
 msgid "Enable Timer"
 msgstr "Ota ajastus käyttöön"
 
-#: ../plugin/plugin.py:155
+#: ../plugin/plugin.py:157
 msgid "Enable access from VPNs"
 msgstr "Salli pääsy VPN-tunnelista"
 
@@ -825,10 +830,10 @@ msgstr "Edustaprosessorin versio"
 msgid "Full remote"
 msgstr "Piilota koko kaukosäädin"
 
-#: ../plugin/controllers/models/info.py:343
-#: ../plugin/controllers/models/info.py:349
-#: ../plugin/controllers/models/info.py:364
-#: ../plugin/controllers/models/info.py:367
+#: ../plugin/controllers/models/info.py:341
+#: ../plugin/controllers/models/info.py:347
+#: ../plugin/controllers/models/info.py:362
+#: ../plugin/controllers/models/info.py:365
 #: ../plugin/controllers/models/movies.py:224
 #: ../plugin/controllers/models/movies.py:343
 #: ../plugin/controllers/models/movies.py:751
@@ -860,11 +865,11 @@ msgstr "Listanmuutos uudelle suosikkilistalle epäonnistui!"
 msgid "Grab Screenshot"
 msgstr "Ota kuvankaappaus"
 
-#: ../plugin/plugin.py:143
+#: ../plugin/plugin.py:145
 msgid "HTTP port"
 msgstr "HTTP-portti"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:149
 msgid "HTTPS port"
 msgstr "HTTPS-portti"
 
@@ -897,11 +902,11 @@ msgstr "Tunti"
 msgid "IPv4 address"
 msgstr "IPv4-osoite"
 
-#: ../plugin/controllers/i18n.py:173 ../plugin/controllers/models/info.py:151
+#: ../plugin/controllers/models/info.py:147 ../plugin/controllers/i18n.py:173
 msgid "IPv4-only Python/Twisted"
 msgstr "Vain IPv4 Python/Twisted"
 
-#: ../plugin/controllers/i18n.py:171 ../plugin/controllers/models/info.py:147
+#: ../plugin/controllers/models/info.py:143 ../plugin/controllers/i18n.py:171
 msgid "IPv4-only kernel"
 msgstr "Vain IPv4 Kernel"
 
@@ -1021,7 +1026,7 @@ msgstr "Kernel"
 msgid "LCD"
 msgstr ""
 
-#: ../plugin/controllers/base.py:302
+#: ../plugin/controllers/base.py:291
 msgid "LCD4Linux Setup"
 msgstr "LCD4Linux-asetukset"
 
@@ -1029,7 +1034,7 @@ msgstr "LCD4Linux-asetukset"
 msgid "LICENSE"
 msgstr "LISENSSI"
 
-#: ../plugin/controllers/models/info.py:277
+#: ../plugin/controllers/models/info.py:275
 #, fuzzy
 msgid "LIRC remote"
 msgstr "Kaukosäädin"
@@ -1063,9 +1068,9 @@ msgstr "Lukittu"
 msgid "MAC address"
 msgstr "MAC-osoite"
 
-#: ../plugin/controllers/models/info.py:340
-#: ../plugin/controllers/models/info.py:351
-#: ../plugin/controllers/models/info.py:369
+#: ../plugin/controllers/models/info.py:338
+#: ../plugin/controllers/models/info.py:349
+#: ../plugin/controllers/models/info.py:367
 #: ../plugin/controllers/models/movies.py:226
 #: ../plugin/controllers/models/movies.py:345
 #: ../plugin/controllers/models/movies.py:753
@@ -1190,7 +1195,7 @@ msgstr "MultiEPG"
 msgid "MultiTranscoding"
 msgstr "Transkoodaus"
 
-#: ../plugin/controllers/base.py:326
+#: ../plugin/controllers/base.py:315
 #, fuzzy
 msgid "NCam Webinterface"
 msgstr "OSCam Webinterface"
@@ -1344,7 +1349,7 @@ msgstr "Nyt"
 msgid "OE"
 msgstr "O"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:313
 msgid "OSCam Webinterface"
 msgstr "OSCam Webinterface"
 
@@ -1409,7 +1414,7 @@ msgstr "GUI-Versio"
 msgid "Open in new window"
 msgstr "Avaa uuteen ikkunaan"
 
-#: ../plugin/plugin.py:133
+#: ../plugin/plugin.py:134
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWeb-käyttöliittymä sallittu"
 
@@ -1417,7 +1422,7 @@ msgstr "OpenWeb-käyttöliittymä sallittu"
 msgid "OpenWebif Browser Settings"
 msgstr "OpenWebif selaimen asetukset"
 
-#: ../plugin/plugin.py:168 ../plugin/plugin.py:234 ../plugin/plugin.py:236
+#: ../plugin/plugin.py:170 ../plugin/plugin.py:236 ../plugin/plugin.py:238
 msgid "OpenWebif Configuration"
 msgstr "OpenWebif-asetukset"
 
@@ -1425,12 +1430,12 @@ msgstr "OpenWebif-asetukset"
 msgid "OpenWebif Settings"
 msgstr "OpenWebif asetukset"
 
-#: ../plugin/plugin.py:119
+#: ../plugin/plugin.py:120
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif-url: http://ip-osoite:portti"
 
-#: ../plugin/controllers/i18n.py:475
 #: ../plugin/controllers/models/services.py:259
+#: ../plugin/controllers/i18n.py:475
 msgid "Orbital Position"
 msgstr "Satelliitin sijainti"
 
@@ -1619,7 +1624,7 @@ msgstr "Uudelleennimeä tallennus"
 msgid "Repeated"
 msgstr "Toistetaan"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:151
 msgid "Require client cert for HTTPS"
 msgstr "Vaadi asiakkaalta HTTPS-hyväksyntä"
 
@@ -1647,7 +1652,7 @@ msgstr "Rajoita vain tiettyjen päivien ohjelmiin"
 msgid "Root"
 msgstr "Juuri"
 
-#: ../plugin/controllers/models/info.py:63
+#: ../plugin/controllers/models/info.py:59
 msgid "SLAAC"
 msgstr "SLAAC"
 
@@ -1702,7 +1707,7 @@ msgstr "Satelliittietsin"
 msgid "Saturday"
 msgstr "Lauantai"
 
-#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:236
+#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:236
 #: ../plugin/controllers/i18n.py:390 ../plugin/controllers/i18n.py:442
 msgid "Save"
 msgstr "Tallenna"
@@ -1821,7 +1826,7 @@ msgid "Set maximum duration"
 msgstr "Aseta maksimikesto"
 
 #: ../plugin/controllers/i18n.py:247 ../plugin/controllers/i18n.py:394
-#: ../plugin/controllers/base.py:286
+#: ../plugin/controllers/base.py:281
 msgid "Settings"
 msgstr "Asetukset"
 
@@ -1847,7 +1852,11 @@ msgstr "Näytä vastaanottimen nimi otsikossa"
 msgid "Show Service type in channel list"
 msgstr "Näytä kuvake kanavalistassa"
 
-#: ../plugin/plugin.py:138
+#: ../plugin/plugin.py:136
+msgid "Show benchmark in STB information"
+msgstr ""
+
+#: ../plugin/plugin.py:140
 msgid "Show box name in header"
 msgstr "Näytä vastaanottimen nimi otsikossa"
 
@@ -1978,9 +1987,9 @@ msgstr "Su"
 msgid "Sunday"
 msgstr "Sunnuntai"
 
-#: ../plugin/controllers/models/info.py:347
+#: ../plugin/controllers/models/info.py:345
+#: ../plugin/controllers/models/info.py:357
 #: ../plugin/controllers/models/info.py:359
-#: ../plugin/controllers/models/info.py:361
 msgid "TB"
 msgstr "TB"
 
@@ -2012,7 +2021,7 @@ msgstr "Televisio"
 msgid "Template Engine"
 msgstr "Teema"
 
-#: ../plugin/controllers/base.py:357
+#: ../plugin/controllers/base.py:346
 msgid "Terminal"
 msgstr ""
 
@@ -2261,7 +2270,7 @@ msgstr "Käytä omaa tiedostosijaintia"
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:137
+#: ../plugin/plugin.py:139
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Käytä omaa tiedostosijaintia"
@@ -2271,11 +2280,11 @@ msgstr "Käytä omaa tiedostosijaintia"
 msgid "Use custom STB name"
 msgstr "Käytä omaa vastaanotinnimeä"
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:142
 msgid "Use custom box name"
 msgstr "Käytä omaa vastaanotinnimeä"
 
-#: ../plugin/plugin.py:135 ../plugin/controllers/i18n.py:507
+#: ../plugin/plugin.py:137 ../plugin/controllers/i18n.py:507
 msgid "Use new design"
 msgstr ""
 
@@ -2323,7 +2332,7 @@ msgstr "Äänenvoimakkuussäädin"
 msgid "Vpid"
 msgstr "Vpid"
 
-#: ../plugin/controllers/models/info.py:578
+#: ../plugin/controllers/models/info.py:576
 msgid "W"
 msgstr "W"
 
@@ -2376,7 +2385,7 @@ msgstr "Viikottain (maanantai)"
 msgid "Weekly (Sunday)"
 msgstr "Viikottain (sunnuntai)"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:156
 msgid "Without auth only local access is allowed!"
 msgstr "Vain lähiverkko-osoitteet sallittu!"
 
@@ -2478,8 +2487,8 @@ msgstr "lyhyessä kuvauksessa"
 msgid "in Title"
 msgstr "nimessä"
 
-#: ../plugin/controllers/models/info.py:236
-#: ../plugin/controllers/models/info.py:239
+#: ../plugin/controllers/models/info.py:235
+#: ../plugin/controllers/models/info.py:238
 #: ../plugin/controllers/models/movies.py:228
 #: ../plugin/controllers/models/movies.py:347
 #: ../plugin/controllers/models/movies.py:755
@@ -2490,8 +2499,8 @@ msgstr "kB"
 msgid "loading"
 msgstr "lataa"
 
-#: ../plugin/controllers/models/info.py:74
-#: ../plugin/controllers/models/info.py:93
+#: ../plugin/controllers/models/info.py:70
+#: ../plugin/controllers/models/info.py:89
 msgid "manual/disabled"
 msgstr "manuaalinen/pois"
 
@@ -2504,7 +2513,7 @@ msgstr "Minuutti"
 msgid "no description available"
 msgstr "ei kuvausta saatavilla"
 
-#: ../plugin/controllers/i18n.py:172 ../plugin/controllers/models/info.py:180
+#: ../plugin/controllers/models/info.py:176 ../plugin/controllers/i18n.py:172
 msgid "none/IPv4-only network"
 msgstr "Ei/vain IPv4-verkko"
 
@@ -2520,11 +2529,11 @@ msgstr "yksi, kaksi, kolme, tuntematon komento"
 msgid "partial match"
 msgstr "Osittainen vastaavuus"
 
-#: ../plugin/controllers/models/info.py:410
+#: ../plugin/controllers/models/info.py:408
 msgid "r/o"
 msgstr "r/o"
 
-#: ../plugin/controllers/models/info.py:406
+#: ../plugin/controllers/models/info.py:404
 msgid "r/w"
 msgstr "r/w"
 
@@ -2568,9 +2577,9 @@ msgstr "Vakio"
 msgid "start match"
 msgstr "hae alku"
 
-#: ../plugin/controllers/models/info.py:70
-#: ../plugin/controllers/models/info.py:82
-#: ../plugin/controllers/models/info.py:89
+#: ../plugin/controllers/models/info.py:66
+#: ../plugin/controllers/models/info.py:78
+#: ../plugin/controllers/models/info.py:85
 msgid "static"
 msgstr "staattinen"
 
@@ -2591,8 +2600,8 @@ msgstr "transkoodaus"
 msgid "type %s is not a number"
 msgstr "tyyppi %s ei ole numero"
 
-#: ../plugin/controllers/models/info.py:102
-#: ../plugin/controllers/models/info.py:110
+#: ../plugin/controllers/models/info.py:98
+#: ../plugin/controllers/models/info.py:106
 msgid "unknown"
 msgstr "tuntematon"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-21 04:39+0430\n"
+"POT-Creation-Date: 2020-08-18 02:22+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: William <ghenessior@gmail.com>\n"
 "Language-Team: www.vuplus-community.net <insanity@>\n"
@@ -26,8 +26,8 @@ msgstr ""
 msgid "%s %s is locked."
 msgstr "%s %s bloccato."
 
-#: ../plugin/controllers/models/info.py:240
-#: ../plugin/controllers/models/info.py:377
+#: ../plugin/controllers/models/info.py:239
+#: ../plugin/controllers/models/info.py:375
 #, python-format
 msgid "%s free / %s total"
 msgstr "%s liberi / %s totale"
@@ -96,7 +96,7 @@ msgstr "Aggiungere canale(i) come alternativo(i)"
 msgid "Add channel(s) to Bouquet"
 msgstr "Aggiungere canale(i) al bouquet"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:159
 msgid "Add service name to stream information"
 msgstr "Aggiungi nome canale alle informaz.della trasmissione"
 
@@ -133,7 +133,7 @@ msgstr "Tutti i file di questo software sono open source: potete ridistribuirli 
 msgid "All alternative services deleted."
 msgstr "Eliminati tutti i canali alternativi."
 
-#: ../plugin/plugin.py:158
+#: ../plugin/plugin.py:160
 msgid "Allow IPK Upload"
 msgstr "Consentire il caricamento di file IPK"
 
@@ -150,7 +150,7 @@ msgstr "Creazione alternativa fallita %s ."
 msgid "Always"
 msgstr "Sempre"
 
-#: ../plugin/controllers/models/info.py:275
+#: ../plugin/controllers/models/info.py:273
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "Mostrare il telecomando"
@@ -203,7 +203,7 @@ msgstr "Automatica"
 msgid "AutoPoll"
 msgstr "Controllo automatico (nuovi eventi)"
 
-#: ../plugin/controllers/base.py:330
+#: ../plugin/controllers/base.py:319
 msgid "AutoTimer"
 msgstr "AutoTimer"
 
@@ -312,7 +312,7 @@ msgstr "Bouquet rinominato con successo."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Configurazioni bouquet ripristinate con successo"
 
-#: ../plugin/controllers/base.py:335
+#: ../plugin/controllers/base.py:324
 msgid "BouquetEditor"
 msgstr "Editor bouquet"
 
@@ -354,7 +354,7 @@ msgstr "Cavo"
 msgid "Calendar Week"
 msgstr "Calendario settimanale"
 
-#: ../plugin/plugin.py:117 ../plugin/controllers/i18n.py:96
+#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:96
 msgid "Cancel"
 msgstr "Annullare"
 
@@ -430,7 +430,7 @@ msgstr "Evento attuale"
 msgid "Custom STB name"
 msgstr "Personalizzare il nome del ricevitore"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:144
 msgid "Custom box name"
 msgstr "Personalizzare il nome del ricevitore"
 
@@ -438,8 +438,8 @@ msgstr "Personalizzare il nome del ricevitore"
 msgid "Custom offset"
 msgstr "Margine personalizzato"
 
-#: ../plugin/controllers/i18n.py:120 ../plugin/controllers/models/info.py:72
-#: ../plugin/controllers/models/info.py:91
+#: ../plugin/controllers/models/info.py:68
+#: ../plugin/controllers/models/info.py:87 ../plugin/controllers/i18n.py:120
 msgid "DHCP"
 msgstr "DHCP"
 
@@ -455,7 +455,7 @@ msgstr ""
 msgid "Date"
 msgstr "Data"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:161
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -516,9 +516,14 @@ msgstr "Descrizione"
 msgid "Disable Timer"
 msgstr "Disabilitare il timer"
 
-#: ../plugin/plugin.py:152
+#: ../plugin/plugin.py:154
 msgid "Disable remote access for user root"
 msgstr "Disabilitare l'accesso remoto per l'utente root"
+
+#: ../plugin/controllers/models/info.py:227
+#, fuzzy
+msgid "Disabled in configuration"
+msgstr "Disabilitato se in conflitto"
 
 #: ../plugin/controllers/i18n.py:405
 msgid "Disabled on Conflict"
@@ -585,7 +590,7 @@ msgstr "Drivers"
 msgid "Duration"
 msgstr "Durata"
 
-#: ../plugin/controllers/models/info.py:575
+#: ../plugin/controllers/models/info.py:573
 msgid "E"
 msgstr "E"
 
@@ -597,7 +602,7 @@ msgstr "EPG"
 msgid "EPG encoding"
 msgstr "Codifica EPG"
 
-#: ../plugin/controllers/base.py:339
+#: ../plugin/controllers/base.py:328
 msgid "EPGRefresh"
 msgstr "EPGRefresh"
 
@@ -613,7 +618,7 @@ msgstr "Modificare il timer"
 msgid "Editor"
 msgstr "Editor"
 
-#: ../plugin/plugin.py:151
+#: ../plugin/plugin.py:153
 msgid "Enable Authentication for streaming"
 msgstr "Abilitare l'autenticazione per la trasmissione"
 
@@ -621,15 +626,15 @@ msgstr "Abilitare l'autenticazione per la trasmissione"
 msgid "Enable Filtering"
 msgstr "Abilitare filtri"
 
-#: ../plugin/plugin.py:144
+#: ../plugin/plugin.py:146
 msgid "Enable HTTP Authentication"
 msgstr "Abilitare l'autenticazione HTTP"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:147
 msgid "Enable HTTPS"
 msgstr "Abilitare il protocollo HTTPS"
 
-#: ../plugin/plugin.py:148
+#: ../plugin/plugin.py:150
 msgid "Enable HTTPS Authentication"
 msgstr "Abilitare l'autenticazione HTTPS"
 
@@ -637,7 +642,7 @@ msgstr "Abilitare l'autenticazione HTTPS"
 msgid "Enable Messages"
 msgstr "Abilitare messaggi"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:158
 msgid "Enable Parental Control"
 msgstr "Abilitare il Controllo genitori"
 
@@ -645,7 +650,7 @@ msgstr "Abilitare il Controllo genitori"
 msgid "Enable Timer"
 msgstr "Abilitare timer"
 
-#: ../plugin/plugin.py:155
+#: ../plugin/plugin.py:157
 msgid "Enable access from VPNs"
 msgstr "Abilitare l'accesso da VPN"
 
@@ -829,10 +834,10 @@ msgstr "Versione del Frontprocessor"
 msgid "Full remote"
 msgstr "Mostrare il telecomando"
 
-#: ../plugin/controllers/models/info.py:343
-#: ../plugin/controllers/models/info.py:349
-#: ../plugin/controllers/models/info.py:364
-#: ../plugin/controllers/models/info.py:367
+#: ../plugin/controllers/models/info.py:341
+#: ../plugin/controllers/models/info.py:347
+#: ../plugin/controllers/models/info.py:362
+#: ../plugin/controllers/models/info.py:365
 #: ../plugin/controllers/models/movies.py:224
 #: ../plugin/controllers/models/movies.py:343
 #: ../plugin/controllers/models/movies.py:751
@@ -864,11 +869,11 @@ msgstr "Fallito il prelevamento lista variabile per la creazione bouquet!"
 msgid "Grab Screenshot"
 msgstr "Catturare schermo"
 
-#: ../plugin/plugin.py:143
+#: ../plugin/plugin.py:145
 msgid "HTTP port"
 msgstr "Porta HTTP"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:149
 msgid "HTTPS port"
 msgstr "Porta HTTPS"
 
@@ -901,11 +906,11 @@ msgstr "Ora"
 msgid "IPv4 address"
 msgstr "Indirizzo IPv4"
 
-#: ../plugin/controllers/i18n.py:173 ../plugin/controllers/models/info.py:151
+#: ../plugin/controllers/models/info.py:147 ../plugin/controllers/i18n.py:173
 msgid "IPv4-only Python/Twisted"
 msgstr "IPv4-solo Python/Twisted"
 
-#: ../plugin/controllers/i18n.py:171 ../plugin/controllers/models/info.py:147
+#: ../plugin/controllers/models/info.py:143 ../plugin/controllers/i18n.py:171
 msgid "IPv4-only kernel"
 msgstr "IPv4-solo kernel"
 
@@ -1022,7 +1027,7 @@ msgstr "Kernel"
 msgid "LCD"
 msgstr ""
 
-#: ../plugin/controllers/base.py:302
+#: ../plugin/controllers/base.py:291
 msgid "LCD4Linux Setup"
 msgstr "Impostazioni LCD4Linux"
 
@@ -1030,7 +1035,7 @@ msgstr "Impostazioni LCD4Linux"
 msgid "LICENSE"
 msgstr "LICENZA"
 
-#: ../plugin/controllers/models/info.py:277
+#: ../plugin/controllers/models/info.py:275
 #, fuzzy
 msgid "LIRC remote"
 msgstr "Telecomando"
@@ -1064,9 +1069,9 @@ msgstr "Bloccato"
 msgid "MAC address"
 msgstr "Indirizzo MAC"
 
-#: ../plugin/controllers/models/info.py:340
-#: ../plugin/controllers/models/info.py:351
-#: ../plugin/controllers/models/info.py:369
+#: ../plugin/controllers/models/info.py:338
+#: ../plugin/controllers/models/info.py:349
+#: ../plugin/controllers/models/info.py:367
 #: ../plugin/controllers/models/movies.py:226
 #: ../plugin/controllers/models/movies.py:345
 #: ../plugin/controllers/models/movies.py:753
@@ -1189,7 +1194,7 @@ msgstr "MultiEPG"
 msgid "MultiTranscoding"
 msgstr "Trascodifica"
 
-#: ../plugin/controllers/base.py:326
+#: ../plugin/controllers/base.py:315
 #, fuzzy
 msgid "NCam Webinterface"
 msgstr "Interfaccia OSCam"
@@ -1342,7 +1347,7 @@ msgstr "Adesso"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:313
 msgid "OSCam Webinterface"
 msgstr "Interfaccia OSCam"
 
@@ -1407,7 +1412,7 @@ msgstr "Versione interfaccia"
 msgid "Open in new window"
 msgstr "Aprire in una nuova finestra"
 
-#: ../plugin/plugin.py:133
+#: ../plugin/plugin.py:134
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWebInterface abilitata"
 
@@ -1415,7 +1420,7 @@ msgstr "OpenWebInterface abilitata"
 msgid "OpenWebif Browser Settings"
 msgstr "Impostazioni browser OpenWebif"
 
-#: ../plugin/plugin.py:168 ../plugin/plugin.py:234 ../plugin/plugin.py:236
+#: ../plugin/plugin.py:170 ../plugin/plugin.py:236 ../plugin/plugin.py:238
 msgid "OpenWebif Configuration"
 msgstr "Configurazione OpenWebif"
 
@@ -1423,12 +1428,12 @@ msgstr "Configurazione OpenWebif"
 msgid "OpenWebif Settings"
 msgstr "OpenWebif"
 
-#: ../plugin/plugin.py:119
+#: ../plugin/plugin.py:120
 msgid "OpenWebif url: http://yourip:port"
 msgstr "Indirizzo OpenWebif: http://ip_ricevitore:porta"
 
-#: ../plugin/controllers/i18n.py:475
 #: ../plugin/controllers/models/services.py:259
+#: ../plugin/controllers/i18n.py:475
 msgid "Orbital Position"
 msgstr "Posizione orbitale"
 
@@ -1617,7 +1622,7 @@ msgstr "Rinominare registrazione"
 msgid "Repeated"
 msgstr "Repliche"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:151
 msgid "Require client cert for HTTPS"
 msgstr "Richiedere il certificato client per HTTPS"
 
@@ -1645,7 +1650,7 @@ msgstr "Limitare agli eventi in determinate date"
 msgid "Root"
 msgstr "Root"
 
-#: ../plugin/controllers/models/info.py:63
+#: ../plugin/controllers/models/info.py:59
 msgid "SLAAC"
 msgstr "SLAAC"
 
@@ -1700,7 +1705,7 @@ msgstr "SATFINDER"
 msgid "Saturday"
 msgstr "Sabato"
 
-#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:236
+#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:236
 #: ../plugin/controllers/i18n.py:390 ../plugin/controllers/i18n.py:442
 msgid "Save"
 msgstr "Salvare"
@@ -1819,7 +1824,7 @@ msgid "Set maximum duration"
 msgstr "Impostare durata massima"
 
 #: ../plugin/controllers/i18n.py:247 ../plugin/controllers/i18n.py:394
-#: ../plugin/controllers/base.py:286
+#: ../plugin/controllers/base.py:281
 msgid "Settings"
 msgstr "Configurazioni"
 
@@ -1845,7 +1850,11 @@ msgstr "Mostrare il nome del ricevitore nell'intestazione"
 msgid "Show Service type in channel list"
 msgstr "Mostrare i Picon nella lista canali"
 
-#: ../plugin/plugin.py:138
+#: ../plugin/plugin.py:136
+msgid "Show benchmark in STB information"
+msgstr ""
+
+#: ../plugin/plugin.py:140
 msgid "Show box name in header"
 msgstr "Mostrare il nome del ricevitore nell'intestazione"
 
@@ -1976,9 +1985,9 @@ msgstr "Dom"
 msgid "Sunday"
 msgstr "Domenica"
 
-#: ../plugin/controllers/models/info.py:347
+#: ../plugin/controllers/models/info.py:345
+#: ../plugin/controllers/models/info.py:357
 #: ../plugin/controllers/models/info.py:359
-#: ../plugin/controllers/models/info.py:361
 msgid "TB"
 msgstr "TB"
 
@@ -2010,7 +2019,7 @@ msgstr "Televisione"
 msgid "Template Engine"
 msgstr "Modello motore"
 
-#: ../plugin/controllers/base.py:357
+#: ../plugin/controllers/base.py:346
 msgid "Terminal"
 msgstr "Terminale"
 
@@ -2258,7 +2267,7 @@ msgstr "Usare una posizione personalizzata"
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:137
+#: ../plugin/plugin.py:139
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Usare una posizione personalizzata"
@@ -2268,11 +2277,11 @@ msgstr "Usare una posizione personalizzata"
 msgid "Use custom STB name"
 msgstr "Usare un nome ricevitore personalizzato"
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:142
 msgid "Use custom box name"
 msgstr "Usare un nome ricevitore personalizzato"
 
-#: ../plugin/plugin.py:135 ../plugin/controllers/i18n.py:507
+#: ../plugin/plugin.py:137 ../plugin/controllers/i18n.py:507
 msgid "Use new design"
 msgstr "Usare nuova interfaccia"
 
@@ -2320,7 +2329,7 @@ msgstr "Controllo volume"
 msgid "Vpid"
 msgstr "Vpid"
 
-#: ../plugin/controllers/models/info.py:578
+#: ../plugin/controllers/models/info.py:576
 msgid "W"
 msgstr "O"
 
@@ -2372,7 +2381,7 @@ msgstr "Settimanale (lunedì)"
 msgid "Weekly (Sunday)"
 msgstr "Settimanale (domenica)"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:156
 msgid "Without auth only local access is allowed!"
 msgstr "Senza autorizzazione è consentito solo l'accesso locale"
 
@@ -2473,8 +2482,8 @@ msgstr "Nella descrizione breve"
 msgid "in Title"
 msgstr "Nel titolo"
 
-#: ../plugin/controllers/models/info.py:236
-#: ../plugin/controllers/models/info.py:239
+#: ../plugin/controllers/models/info.py:235
+#: ../plugin/controllers/models/info.py:238
 #: ../plugin/controllers/models/movies.py:228
 #: ../plugin/controllers/models/movies.py:347
 #: ../plugin/controllers/models/movies.py:755
@@ -2485,8 +2494,8 @@ msgstr "KB"
 msgid "loading"
 msgstr "Caricamento"
 
-#: ../plugin/controllers/models/info.py:74
-#: ../plugin/controllers/models/info.py:93
+#: ../plugin/controllers/models/info.py:70
+#: ../plugin/controllers/models/info.py:89
 msgid "manual/disabled"
 msgstr "Manuale / disabilitato"
 
@@ -2498,7 +2507,7 @@ msgstr "Minuto"
 msgid "no description available"
 msgstr "Nessuna descrizione disponibile"
 
-#: ../plugin/controllers/i18n.py:172 ../plugin/controllers/models/info.py:180
+#: ../plugin/controllers/models/info.py:176 ../plugin/controllers/i18n.py:172
 msgid "none/IPv4-only network"
 msgstr "Nessuno / Solo rete IPv4"
 
@@ -2514,11 +2523,11 @@ msgstr "Uno due tre quattro comando sconosciuto"
 msgid "partial match"
 msgstr "corrispondenza parziale"
 
-#: ../plugin/controllers/models/info.py:410
+#: ../plugin/controllers/models/info.py:408
 msgid "r/o"
 msgstr "r/o"
 
-#: ../plugin/controllers/models/info.py:406
+#: ../plugin/controllers/models/info.py:404
 msgid "r/w"
 msgstr "r/w"
 
@@ -2562,9 +2571,9 @@ msgstr "Standard"
 msgid "start match"
 msgstr "Il titolo inizia per"
 
-#: ../plugin/controllers/models/info.py:70
-#: ../plugin/controllers/models/info.py:82
-#: ../plugin/controllers/models/info.py:89
+#: ../plugin/controllers/models/info.py:66
+#: ../plugin/controllers/models/info.py:78
+#: ../plugin/controllers/models/info.py:85
 msgid "static"
 msgstr "Statico"
 
@@ -2585,8 +2594,8 @@ msgstr "Trascodificato"
 msgid "type %s is not a number"
 msgstr "Il tipo %s non è un numero"
 
-#: ../plugin/controllers/models/info.py:102
-#: ../plugin/controllers/models/info.py:110
+#: ../plugin/controllers/models/info.py:98
+#: ../plugin/controllers/models/info.py:106
 msgid "unknown"
 msgstr "Sconosciuto"
 
