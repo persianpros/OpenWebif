@@ -25,16 +25,13 @@ from Tools.Directories import fileExists, pathExists
 from time import time
 import os
 import hashlib
-from enigma import getBoxType, getBoxBrand
-from Tools.StbHardware import getFPVersion, getBoxProc
+from enigma import getBoxType
 from boxbranding import getMachineBuild, getDisplayType, getRCName, getImageArch
 from Components.SystemInfo import SystemInfo
 
-fp_version = str(getFPVersion())
 brand = getBoxBrand()
 model = getBoxType()
 platform = getMachineBuild()
-procmodel = getBoxProc()
 
 def getAllInfo():
 	info = {}
@@ -53,26 +50,9 @@ def getAllInfo():
 
 	remote = getRCName()
 
-	if model == "et9x00" and not procmodel == "et9500":
-		remote = "et9x00"
-	elif procmodel == "et9500":
-		remote = "et9500"
-	elif model in ("et5x00","et6x00") and not procmodel == "et6500":
-		remote = "et6x00"
-	elif procmodel == "et6500":
-		remote = "et6500"
-	elif model == "azboxhd" and not procmodel in ("elite","ultra"):
-		remote = "azboxhd"
-	elif procmodel in ("elite","ultra"):
-		remote = "azboxelite"
-	elif model == "ventonhdx" or procmodel == "ini-3000" and fp_version.startswith('1'):
-		remote = "ini0"
-	elif procmodel in ("ini-5000","ini-7000","ini-7012"):
-		remote = "ini1"
-	elif model == "ventonhdx" or procmodel == "ini-3000" and not fp_version.startswith('1'):
-		remote = "ini2"
-	elif getImageArch() == "sh4" and brand != "nbox":
+	if getImageArch() == "sh4" and brand != "nbox":
 		remote = "spark"
+
 	info['remote'] = remote
 
 	return info
