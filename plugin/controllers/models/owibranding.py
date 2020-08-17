@@ -25,7 +25,7 @@ from Tools.Directories import fileExists, pathExists
 from time import time
 import os
 import hashlib
-from enigma import getBoxType
+from enigma import getBoxType, getBoxBrand
 from boxbranding import getMachineBuild, getDisplayType, getRCName, getImageArch
 from Components.SystemInfo import SystemInfo
 
