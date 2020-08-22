@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-18 02:22+0430\n"
+"POT-Creation-Date: 2020-08-22 19:17+0430\n"
 "PO-Revision-Date: 2018-03-30 13:04+0200\n"
 "Last-Translator: kvinto <badsystem@ukr.net>\n"
 "Language-Team: \n"
@@ -90,7 +90,7 @@ msgstr "Додати канал(и) як альтернативу"
 msgid "Add channel(s) to Bouquet"
 msgstr "Додати канал(и) в букет"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:160
 msgid "Add service name to stream information"
 msgstr "Додати назву сервісу в інформацію потоку"
 
@@ -127,7 +127,7 @@ msgstr "Всі файли даного ПЗ є відкритим вихідни
 msgid "All alternative services deleted."
 msgstr "Всі альтернативні сервіси видалено."
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:161
 msgid "Allow IPK Upload"
 msgstr "Дозволити завантаження IPK"
 
@@ -349,7 +349,7 @@ msgstr "Кабельний"
 msgid "Calendar Week"
 msgstr "Календарний тиждень"
 
-#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:96
+#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:96
 msgid "Cancel"
 msgstr "Скасування"
 
@@ -427,7 +427,7 @@ msgstr "Поточна подія"
 msgid "Custom STB name"
 msgstr "Альтернативне ім'я ресивера"
 
-#: ../plugin/plugin.py:144
+#: ../plugin/plugin.py:145
 msgid "Custom box name"
 msgstr "Альтернативне ім'я ресивера"
 
@@ -452,7 +452,7 @@ msgstr ""
 msgid "Date"
 msgstr "Дата"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:163
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -513,7 +513,7 @@ msgstr "Опис"
 msgid "Disable Timer"
 msgstr "Відключити таймер"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:155
 msgid "Disable remote access for user root"
 msgstr "Відключити доступ для користувача root"
 
@@ -615,7 +615,7 @@ msgstr "Редагувати таймер"
 msgid "Editor"
 msgstr "Редактор"
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:154
 msgid "Enable Authentication for streaming"
 msgstr "Включити аутентифікацію для стрімінга"
 
@@ -623,15 +623,15 @@ msgstr "Включити аутентифікацію для стрімінга"
 msgid "Enable Filtering"
 msgstr "Застосувати фільтрацію"
 
-#: ../plugin/plugin.py:146
+#: ../plugin/plugin.py:147
 msgid "Enable HTTP Authentication"
 msgstr "Ввімкнути HTTP аутентифікацію"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:148
 msgid "Enable HTTPS"
 msgstr "Ввімкнути HTTPS"
 
-#: ../plugin/plugin.py:150
+#: ../plugin/plugin.py:151
 msgid "Enable HTTPS Authentication"
 msgstr "Ввімкнути HTTPS аутентифікацію"
 
@@ -639,7 +639,7 @@ msgstr "Ввімкнути HTTPS аутентифікацію"
 msgid "Enable Messages"
 msgstr "Включити повідомлення"
 
-#: ../plugin/plugin.py:158
+#: ../plugin/plugin.py:159
 msgid "Enable Parental Control"
 msgstr "Включити батьківський контроль"
 
@@ -647,7 +647,7 @@ msgstr "Включити батьківський контроль"
 msgid "Enable Timer"
 msgstr "Ввімкнути таймер"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:158
 msgid "Enable access from VPNs"
 msgstr "Ввімкнути доступ з VPN"
 
@@ -866,11 +866,11 @@ msgstr "Не вдалося отримати змінюваний список �
 msgid "Grab Screenshot"
 msgstr "Зробити скріншот"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:146
 msgid "HTTP port"
 msgstr "Порт HTTP"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:150
 msgid "HTTPS port"
 msgstr "Порт HTTPS"
 
@@ -1409,7 +1409,7 @@ msgstr "Версія GUI"
 msgid "Open in new window"
 msgstr "Відкрити в новому вікні"
 
-#: ../plugin/plugin.py:134
+#: ../plugin/plugin.py:135
 msgid "OpenWebInterface Enabled"
 msgstr "Веб-інтерфейс ввімкнено"
 
@@ -1417,7 +1417,7 @@ msgstr "Веб-інтерфейс ввімкнено"
 msgid "OpenWebif Browser Settings"
 msgstr "Налаштування браузера веб-інтерфейса"
 
-#: ../plugin/plugin.py:170 ../plugin/plugin.py:236 ../plugin/plugin.py:238
+#: ../plugin/plugin.py:172 ../plugin/plugin.py:238 ../plugin/plugin.py:240
 msgid "OpenWebif Configuration"
 msgstr "Налаштування OpenWebif"
 
@@ -1425,7 +1425,7 @@ msgstr "Налаштування OpenWebif"
 msgid "OpenWebif Settings"
 msgstr "Налаштування Веб-інтерфейса"
 
-#: ../plugin/plugin.py:120
+#: ../plugin/plugin.py:121
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif url: http://IP ресивера:порт"
 
@@ -1486,6 +1486,10 @@ msgstr ""
 #: ../plugin/controllers/i18n.py:213
 msgid "Playback"
 msgstr "Відтворити"
+
+#: ../plugin/plugin.py:162
+msgid "Playback IPTV Streams in browser"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:214
 msgid "Playlist"
@@ -1619,7 +1623,7 @@ msgstr "Перейменувати запис"
 msgid "Repeated"
 msgstr "Повторити"
 
-#: ../plugin/plugin.py:151
+#: ../plugin/plugin.py:152
 msgid "Require client cert for HTTPS"
 msgstr "Вимагати клієнтський сертифікат для HTTPS"
 
@@ -1702,7 +1706,7 @@ msgstr "Пошук супутника"
 msgid "Saturday"
 msgstr "Субота"
 
-#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:236
+#: ../plugin/plugin.py:120 ../plugin/controllers/i18n.py:236
 #: ../plugin/controllers/i18n.py:390 ../plugin/controllers/i18n.py:442
 msgid "Save"
 msgstr "Зберегти"
@@ -1845,11 +1849,11 @@ msgstr "Показувати назву ресивера в заголовку"
 msgid "Show Service type in channel list"
 msgstr "Показати тип каналу в списку каналів"
 
-#: ../plugin/plugin.py:136
+#: ../plugin/plugin.py:137
 msgid "Show benchmark in STB information"
 msgstr ""
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 msgid "Show box name in header"
 msgstr "Показувати назву ресивера в заголовку"
 
@@ -2262,7 +2266,7 @@ msgstr "Використовуйте інше розташування"
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:139
+#: ../plugin/plugin.py:140
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Використовуйте інше розташування"
@@ -2272,11 +2276,11 @@ msgstr "Використовуйте інше розташування"
 msgid "Use custom STB name"
 msgstr "Використовувати альтернативне ім'я ресивера"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:143
 msgid "Use custom box name"
 msgstr "Використовувати альтернативне ім'я ресивера"
 
-#: ../plugin/plugin.py:137 ../plugin/controllers/i18n.py:507
+#: ../plugin/plugin.py:138 ../plugin/controllers/i18n.py:507
 msgid "Use new design"
 msgstr "Використовуйте новий дизайн"
 
@@ -2376,7 +2380,7 @@ msgstr "Щотижня (понеділок)"
 msgid "Weekly (Sunday)"
 msgstr "Щотижня (неділя)"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:157
 msgid "Without auth only local access is allowed!"
 msgstr "Без аутентифікації дозволяється тільки локальний доступ!"
 

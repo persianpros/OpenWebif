@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-18 02:22+0430\n"
+"POT-Creation-Date: 2020-08-22 19:17+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Dominik Paľo <dominik@palo.sk>\n"
 "Language-Team: \n"
@@ -88,7 +88,7 @@ msgstr "Pridať stanicu(e) ako alternatívu"
 msgid "Add channel(s) to Bouquet"
 msgstr "Pridať stanicu(e) do prehľadu"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:160
 msgid "Add service name to stream information"
 msgstr "Pridať názov služby do informácie o prúde"
 
@@ -125,7 +125,7 @@ msgstr "Všetky súbory v tomto softvéri sú open source; môžete ho šíriť 
 msgid "All alternative services deleted."
 msgstr "Všetky alternatívne stanice odstránené."
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:161
 msgid "Allow IPK Upload"
 msgstr "Povoliť nahratie IPK"
 
@@ -347,7 +347,7 @@ msgstr "Káblové"
 msgid "Calendar Week"
 msgstr "Týždenný kalendár"
 
-#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:96
+#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:96
 msgid "Cancel"
 msgstr "Zrušiť"
 
@@ -425,7 +425,7 @@ msgstr "Aktuálna relácia"
 msgid "Custom STB name"
 msgstr "Vlastný názov prijímača"
 
-#: ../plugin/plugin.py:144
+#: ../plugin/plugin.py:145
 msgid "Custom box name"
 msgstr "Vlastný názov prijímača"
 
@@ -450,7 +450,7 @@ msgstr ""
 msgid "Date"
 msgstr "Dátum"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:163
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -510,7 +510,7 @@ msgstr "Popis"
 msgid "Disable Timer"
 msgstr "Vypnúť časovač"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:155
 msgid "Disable remote access for user root"
 msgstr "Zakázať prístup pre užívateľa root"
 
@@ -612,7 +612,7 @@ msgstr "Upraviť časovač"
 msgid "Editor"
 msgstr "Editor"
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:154
 msgid "Enable Authentication for streaming"
 msgstr "Zapnúť overovanie pre streaming"
 
@@ -620,15 +620,15 @@ msgstr "Zapnúť overovanie pre streaming"
 msgid "Enable Filtering"
 msgstr "Povoliť filtrovanie"
 
-#: ../plugin/plugin.py:146
+#: ../plugin/plugin.py:147
 msgid "Enable HTTP Authentication"
 msgstr "Vyžadovať prihlásenie pre HTTP"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:148
 msgid "Enable HTTPS"
 msgstr "Povoliť HTTPS"
 
-#: ../plugin/plugin.py:150
+#: ../plugin/plugin.py:151
 msgid "Enable HTTPS Authentication"
 msgstr "Vyžadovať prihlásenie pre HTTPS"
 
@@ -636,7 +636,7 @@ msgstr "Vyžadovať prihlásenie pre HTTPS"
 msgid "Enable Messages"
 msgstr "Povoliť správy"
 
-#: ../plugin/plugin.py:158
+#: ../plugin/plugin.py:159
 msgid "Enable Parental Control"
 msgstr "Zapnúť rodičovskú kontrolu"
 
@@ -644,7 +644,7 @@ msgstr "Zapnúť rodičovskú kontrolu"
 msgid "Enable Timer"
 msgstr "Zapnúť časovač"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:158
 msgid "Enable access from VPNs"
 msgstr "Povoliť prístup z VPN"
 
@@ -864,11 +864,11 @@ msgstr "Získanie premenlivého zoznamu pre novovytvorený prehľad zlyhalo!"
 msgid "Grab Screenshot"
 msgstr "Snímka obrazovky"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:146
 msgid "HTTP port"
 msgstr "HTTP port"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:150
 msgid "HTTPS port"
 msgstr "HTTPS port"
 
@@ -1413,7 +1413,7 @@ msgstr "Verzia GUI"
 msgid "Open in new window"
 msgstr "Otvoriť v novom okne"
 
-#: ../plugin/plugin.py:134
+#: ../plugin/plugin.py:135
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWebInterface zapnuté"
 
@@ -1421,7 +1421,7 @@ msgstr "OpenWebInterface zapnuté"
 msgid "OpenWebif Browser Settings"
 msgstr "Nastavenia prehliadača OpenWebif"
 
-#: ../plugin/plugin.py:170 ../plugin/plugin.py:236 ../plugin/plugin.py:238
+#: ../plugin/plugin.py:172 ../plugin/plugin.py:238 ../plugin/plugin.py:240
 msgid "OpenWebif Configuration"
 msgstr "Nastavenie OpenWebif"
 
@@ -1429,7 +1429,7 @@ msgstr "Nastavenie OpenWebif"
 msgid "OpenWebif Settings"
 msgstr "Nastavenia OpenWebif"
 
-#: ../plugin/plugin.py:120
+#: ../plugin/plugin.py:121
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif adresa: http://vašaIP:port"
 
@@ -1490,6 +1490,10 @@ msgstr ""
 #: ../plugin/controllers/i18n.py:213
 msgid "Playback"
 msgstr "Prehrávanie"
+
+#: ../plugin/plugin.py:162
+msgid "Playback IPTV Streams in browser"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:214
 msgid "Playlist"
@@ -1623,7 +1627,7 @@ msgstr "Premenovať nahrávku"
 msgid "Repeated"
 msgstr "Opakované"
 
-#: ../plugin/plugin.py:151
+#: ../plugin/plugin.py:152
 msgid "Require client cert for HTTPS"
 msgstr "Vyžadovať certifikát klienta pre HTTPS"
 
@@ -1705,7 +1709,7 @@ msgstr "Hľadač satelitov"
 msgid "Saturday"
 msgstr "Sobota"
 
-#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:236
+#: ../plugin/plugin.py:120 ../plugin/controllers/i18n.py:236
 #: ../plugin/controllers/i18n.py:390 ../plugin/controllers/i18n.py:442
 msgid "Save"
 msgstr "Uložiť"
@@ -1850,11 +1854,11 @@ msgstr "Zobraziť názov prijímača v záhlaví"
 msgid "Show Service type in channel list"
 msgstr "Zobraziť pikonu v zozname staníc"
 
-#: ../plugin/plugin.py:136
+#: ../plugin/plugin.py:137
 msgid "Show benchmark in STB information"
 msgstr ""
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 msgid "Show box name in header"
 msgstr "Zobraziť názov prijímača v záhlaví"
 
@@ -2268,7 +2272,7 @@ msgstr "Použiť vlastné umiestnenie"
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:139
+#: ../plugin/plugin.py:140
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Použiť vlastné umiestnenie"
@@ -2278,11 +2282,11 @@ msgstr "Použiť vlastné umiestnenie"
 msgid "Use custom STB name"
 msgstr "Použiť vlastný názov prijímača"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:143
 msgid "Use custom box name"
 msgstr "Použiť vlastný názov prijímača"
 
-#: ../plugin/plugin.py:137 ../plugin/controllers/i18n.py:507
+#: ../plugin/plugin.py:138 ../plugin/controllers/i18n.py:507
 msgid "Use new design"
 msgstr "Používať nový dizajn"
 
@@ -2383,7 +2387,7 @@ msgstr "Týždenne (pondelok)"
 msgid "Weekly (Sunday)"
 msgstr "Týždenne (nedeľa)"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:157
 msgid "Without auth only local access is allowed!"
 msgstr "Bez autorizácie je povolený iba lokálny prístup!"
 

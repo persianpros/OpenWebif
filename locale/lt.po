@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-18 02:22+0430\n"
+"POT-Creation-Date: 2020-08-22 19:17+0430\n"
 "PO-Revision-Date: 2017-11-11 23:16+0200\n"
 "Last-Translator: Vytenis P. <vyteniui@gmail.com>\n"
 "Language-Team: Vytenis Pulokas <vyteniui@gmail.com>\n"
@@ -90,7 +90,7 @@ msgstr "Įtraukti kanalą(us), kaip atsarginį"
 msgid "Add channel(s) to Bouquet"
 msgstr "Įtraukti kanalą(us) į bukietą"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:160
 msgid "Add service name to stream information"
 msgstr "Į transliacijos informaciją įtraukti kanalo pavadinimą"
 
@@ -127,7 +127,7 @@ msgstr "Visi šios programinės įrangos failai yra atviro kodo; jūs galite pla
 msgid "All alternative services deleted."
 msgstr "Visi alternatyvūs kanalai ištrinti."
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:161
 msgid "Allow IPK Upload"
 msgstr ""
 
@@ -348,7 +348,7 @@ msgstr "Kabelinė"
 msgid "Calendar Week"
 msgstr "Kalendorinė savaitė"
 
-#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:96
+#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:96
 msgid "Cancel"
 msgstr "Atšaukti"
 
@@ -426,7 +426,7 @@ msgstr "Dabas rodoma"
 msgid "Custom STB name"
 msgstr "Savas aparato pavadinimas"
 
-#: ../plugin/plugin.py:144
+#: ../plugin/plugin.py:145
 msgid "Custom box name"
 msgstr "Savas aparato pavadinimas"
 
@@ -451,7 +451,7 @@ msgstr ""
 msgid "Date"
 msgstr "Data"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:163
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -511,7 +511,7 @@ msgstr "Aprašymas"
 msgid "Disable Timer"
 msgstr "Išjungti laikmatį"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:155
 msgid "Disable remote access for user root"
 msgstr "Uždrausti 'root' vartotojo prieigą"
 
@@ -613,7 +613,7 @@ msgstr "Redaguoti laikmatį"
 msgid "Editor"
 msgstr "Redaktorius"
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:154
 msgid "Enable Authentication for streaming"
 msgstr "Transliacijoms įjungti autentikaciją"
 
@@ -621,15 +621,15 @@ msgstr "Transliacijoms įjungti autentikaciją"
 msgid "Enable Filtering"
 msgstr "Įjungti filtravimą"
 
-#: ../plugin/plugin.py:146
+#: ../plugin/plugin.py:147
 msgid "Enable HTTP Authentication"
 msgstr "Įjungti HTTP autentikaciją"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:148
 msgid "Enable HTTPS"
 msgstr "Įjungti HTTPS"
 
-#: ../plugin/plugin.py:150
+#: ../plugin/plugin.py:151
 msgid "Enable HTTPS Authentication"
 msgstr "Įjungti HTTPS autentikaciją"
 
@@ -637,7 +637,7 @@ msgstr "Įjungti HTTPS autentikaciją"
 msgid "Enable Messages"
 msgstr "Įjungti žinutes"
 
-#: ../plugin/plugin.py:158
+#: ../plugin/plugin.py:159
 msgid "Enable Parental Control"
 msgstr "Įjungti tėvų kontrolę"
 
@@ -645,7 +645,7 @@ msgstr "Įjungti tėvų kontrolę"
 msgid "Enable Timer"
 msgstr "Įjungti laikmatį"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:158
 msgid "Enable access from VPNs"
 msgstr "Leisti VPN prieigą"
 
@@ -865,11 +865,11 @@ msgstr "Naujai sukurtas bukietas neįkeltas į kintamą sąrašą!"
 msgid "Grab Screenshot"
 msgstr "Ekrano nuotrauka"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:146
 msgid "HTTP port"
 msgstr "HTTP prievadas"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:150
 msgid "HTTPS port"
 msgstr "HTTPS prievadas"
 
@@ -1414,7 +1414,7 @@ msgstr "Grafinės aplinkos versija"
 msgid "Open in new window"
 msgstr "Atverti naujame lange"
 
-#: ../plugin/plugin.py:134
+#: ../plugin/plugin.py:135
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWeb sąsaja įjungta"
 
@@ -1422,7 +1422,7 @@ msgstr "OpenWeb sąsaja įjungta"
 msgid "OpenWebif Browser Settings"
 msgstr "OpenWebif naršyklės nuostatos"
 
-#: ../plugin/plugin.py:170 ../plugin/plugin.py:236 ../plugin/plugin.py:238
+#: ../plugin/plugin.py:172 ../plugin/plugin.py:238 ../plugin/plugin.py:240
 msgid "OpenWebif Configuration"
 msgstr "OpenWebif konfigūravimas"
 
@@ -1430,7 +1430,7 @@ msgstr "OpenWebif konfigūravimas"
 msgid "OpenWebif Settings"
 msgstr "OpenWebif nuostatos"
 
-#: ../plugin/plugin.py:120
+#: ../plugin/plugin.py:121
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif nuoroda: http://imtuvo_IP:prievadas"
 
@@ -1491,6 +1491,10 @@ msgstr ""
 #: ../plugin/controllers/i18n.py:213
 msgid "Playback"
 msgstr "Atkūrimas"
+
+#: ../plugin/plugin.py:162
+msgid "Playback IPTV Streams in browser"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:214
 msgid "Playlist"
@@ -1624,7 +1628,7 @@ msgstr "Pervadinti įrašą"
 msgid "Repeated"
 msgstr "Pakartotinas"
 
-#: ../plugin/plugin.py:151
+#: ../plugin/plugin.py:152
 msgid "Require client cert for HTTPS"
 msgstr "Reikalauti HTTPS kliento sertifikato"
 
@@ -1707,7 +1711,7 @@ msgstr "Palydovų ieškiklis"
 msgid "Saturday"
 msgstr "šeštadienis"
 
-#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:236
+#: ../plugin/plugin.py:120 ../plugin/controllers/i18n.py:236
 #: ../plugin/controllers/i18n.py:390 ../plugin/controllers/i18n.py:442
 msgid "Save"
 msgstr "Išsaugoti"
@@ -1852,11 +1856,11 @@ msgstr "Antraštėje rodyti aparato pavadinimą"
 msgid "Show Service type in channel list"
 msgstr "Kanalų sąraše rodyti piktogramas"
 
-#: ../plugin/plugin.py:136
+#: ../plugin/plugin.py:137
 msgid "Show benchmark in STB information"
 msgstr ""
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 msgid "Show box name in header"
 msgstr "Antraštėje rodyti aparato pavadinimą"
 
@@ -2270,7 +2274,7 @@ msgstr "Naudoti išsirinktą vietą"
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:139
+#: ../plugin/plugin.py:140
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Naudoti išsirinktą vietą"
@@ -2280,11 +2284,11 @@ msgstr "Naudoti išsirinktą vietą"
 msgid "Use custom STB name"
 msgstr "Naudoti savą aparato pavadinimą"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:143
 msgid "Use custom box name"
 msgstr "Naudoti savą aparato pavadinimą"
 
-#: ../plugin/plugin.py:137 ../plugin/controllers/i18n.py:507
+#: ../plugin/plugin.py:138 ../plugin/controllers/i18n.py:507
 msgid "Use new design"
 msgstr ""
 
@@ -2385,7 +2389,7 @@ msgstr "Kas savaitę (pirmadienis)"
 msgid "Weekly (Sunday)"
 msgstr "Kas savaitę (sekmadienis)"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:157
 msgid "Without auth only local access is allowed!"
 msgstr "Be autentikacijos leidžiamas tik vietinis prisijungimas!"
 

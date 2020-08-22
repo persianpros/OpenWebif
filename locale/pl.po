@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-18 02:22+0430\n"
+"POT-Creation-Date: 2020-08-22 19:17+0430\n"
 "PO-Revision-Date: 2019-09-11 12:00+0200\n"
 "Last-Translator: mickey <mickeyreg@gmail.com>\n"
 "Language-Team: none\n"
@@ -87,7 +87,7 @@ msgstr "Dodaj kanał(y) jako alternatywny(e)"
 msgid "Add channel(s) to Bouquet"
 msgstr "Dodaj kanał(y) do bukietu"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:160
 msgid "Add service name to stream information"
 msgstr "Dodaj nazwę kanału do strumienia"
 
@@ -124,7 +124,7 @@ msgstr "Wszystkie Pliki tego Oprogramowania to oprogramowanie otwarte; możesz j
 msgid "All alternative services deleted."
 msgstr "Usunięto wszystkie alternatywne kanały."
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:161
 msgid "Allow IPK Upload"
 msgstr "Zezwalaj na wysyłanie plików IPK"
 
@@ -346,7 +346,7 @@ msgstr "Kablowy"
 msgid "Calendar Week"
 msgstr "Kalendarz tygodniowy"
 
-#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:96
+#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:96
 msgid "Cancel"
 msgstr "Anuluj"
 
@@ -424,7 +424,7 @@ msgstr "Aktualne wydarzenie"
 msgid "Custom STB name"
 msgstr "Własna nazwa odbiornika"
 
-#: ../plugin/plugin.py:144
+#: ../plugin/plugin.py:145
 msgid "Custom box name"
 msgstr "Własna nazwa odbiornika"
 
@@ -449,7 +449,7 @@ msgstr ""
 msgid "Date"
 msgstr "Data"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:163
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -511,7 +511,7 @@ msgstr "Opis"
 msgid "Disable Timer"
 msgstr "Wyłącz zadanie planowe"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:155
 msgid "Disable remote access for user root"
 msgstr "Zablokuj dostęp dla użytkownika root"
 
@@ -613,7 +613,7 @@ msgstr "Edytuj zadanie planowe"
 msgid "Editor"
 msgstr "Edytor"
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:154
 msgid "Enable Authentication for streaming"
 msgstr "Włącz uwierzytelnianie dla strumieniowania"
 
@@ -621,15 +621,15 @@ msgstr "Włącz uwierzytelnianie dla strumieniowania"
 msgid "Enable Filtering"
 msgstr "Włącz filtrowanie"
 
-#: ../plugin/plugin.py:146
+#: ../plugin/plugin.py:147
 msgid "Enable HTTP Authentication"
 msgstr "Włącz uwierzytelnianie HTTP"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:148
 msgid "Enable HTTPS"
 msgstr "Włącz dostęp przez HTTPS"
 
-#: ../plugin/plugin.py:150
+#: ../plugin/plugin.py:151
 msgid "Enable HTTPS Authentication"
 msgstr "Włącz uwierzytelnianie HTTPS"
 
@@ -637,7 +637,7 @@ msgstr "Włącz uwierzytelnianie HTTPS"
 msgid "Enable Messages"
 msgstr "Włącz wiadmości"
 
-#: ../plugin/plugin.py:158
+#: ../plugin/plugin.py:159
 msgid "Enable Parental Control"
 msgstr "Włącz kontrolę rodzicielską"
 
@@ -645,7 +645,7 @@ msgstr "Włącz kontrolę rodzicielską"
 msgid "Enable Timer"
 msgstr "Włącz zadanie planowe"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:158
 msgid "Enable access from VPNs"
 msgstr "Włącz dostęp przez VPN"
 
@@ -865,11 +865,11 @@ msgstr "Uzyskanie listy wyboru dla nowo utworzonego bukietu zakończone niepowod
 msgid "Grab Screenshot"
 msgstr "Wykonaj zrzut ekranu"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:146
 msgid "HTTP port"
 msgstr "Port HTTP"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:150
 msgid "HTTPS port"
 msgstr "Port HTTPS"
 
@@ -1414,7 +1414,7 @@ msgstr "Wersja GUI"
 msgid "Open in new window"
 msgstr "Otwórz w nowym oknie"
 
-#: ../plugin/plugin.py:134
+#: ../plugin/plugin.py:135
 msgid "OpenWebInterface Enabled"
 msgstr "Interfejs OpenWebif włączony"
 
@@ -1422,7 +1422,7 @@ msgstr "Interfejs OpenWebif włączony"
 msgid "OpenWebif Browser Settings"
 msgstr "Ustawienia przeglądarki OpenWebif"
 
-#: ../plugin/plugin.py:170 ../plugin/plugin.py:236 ../plugin/plugin.py:238
+#: ../plugin/plugin.py:172 ../plugin/plugin.py:238 ../plugin/plugin.py:240
 msgid "OpenWebif Configuration"
 msgstr "Konfiguracja OpenWebif"
 
@@ -1430,7 +1430,7 @@ msgstr "Konfiguracja OpenWebif"
 msgid "OpenWebif Settings"
 msgstr "Ustawienia OpenWebif"
 
-#: ../plugin/plugin.py:120
+#: ../plugin/plugin.py:121
 msgid "OpenWebif url: http://yourip:port"
 msgstr "Adres OpenWebif: http://ip_tunera:port"
 
@@ -1491,6 +1491,10 @@ msgstr ""
 #: ../plugin/controllers/i18n.py:213
 msgid "Playback"
 msgstr "Odtwarzanie"
+
+#: ../plugin/plugin.py:162
+msgid "Playback IPTV Streams in browser"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:214
 msgid "Playlist"
@@ -1624,7 +1628,7 @@ msgstr "Zmień nazwę nagrania"
 msgid "Repeated"
 msgstr "Powtarzalny"
 
-#: ../plugin/plugin.py:151
+#: ../plugin/plugin.py:152
 msgid "Require client cert for HTTPS"
 msgstr "Wymagaj certyfikatu klienta dla HTTPS"
 
@@ -1707,7 +1711,7 @@ msgstr "Miernik sygnału"
 msgid "Saturday"
 msgstr "Sobota"
 
-#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:236
+#: ../plugin/plugin.py:120 ../plugin/controllers/i18n.py:236
 #: ../plugin/controllers/i18n.py:390 ../plugin/controllers/i18n.py:442
 msgid "Save"
 msgstr "Zapisz"
@@ -1852,11 +1856,11 @@ msgstr "Pokaż nazwę odbiornika w nagłówku"
 msgid "Show Service type in channel list"
 msgstr "Pokaż typ kanału na liście kanałów"
 
-#: ../plugin/plugin.py:136
+#: ../plugin/plugin.py:137
 msgid "Show benchmark in STB information"
 msgstr ""
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 msgid "Show box name in header"
 msgstr "Pokaż nazwę odbiornika w nagłówku"
 
@@ -2270,7 +2274,7 @@ msgstr "Użyj własnej lokalizacji"
 msgid "Use as PiP if possible"
 msgstr "Użyj jako PiP jeśli to możliwe"
 
-#: ../plugin/plugin.py:139
+#: ../plugin/plugin.py:140
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Użyj własnej lokalizacji"
@@ -2280,11 +2284,11 @@ msgstr "Użyj własnej lokalizacji"
 msgid "Use custom STB name"
 msgstr "Użyj własnej nazwy odbiornika"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:143
 msgid "Use custom box name"
 msgstr "Użyj własnej nazwy odbiornika"
 
-#: ../plugin/plugin.py:137 ../plugin/controllers/i18n.py:507
+#: ../plugin/plugin.py:138 ../plugin/controllers/i18n.py:507
 msgid "Use new design"
 msgstr "Używaj nowego interfejsu"
 
@@ -2385,7 +2389,7 @@ msgstr "Co tydzień (od poniedziałku)"
 msgid "Weekly (Sunday)"
 msgstr "Co tydzień (od niedzieli)"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:157
 msgid "Without auth only local access is allowed!"
 msgstr "Bez autoryzacji dozwolony jest tylko dostęp lokalny!"
 

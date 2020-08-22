@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-18 02:22+0430\n"
+"POT-Creation-Date: 2020-08-22 19:17+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Samzam <http://www.opena.tv>\n"
 "Language-Team: \n"
@@ -89,7 +89,7 @@ msgstr "Lisää vaihtoehtoisia kanavia"
 msgid "Add channel(s) to Bouquet"
 msgstr "Lisää kanavia suosikkilistaan"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:160
 msgid "Add service name to stream information"
 msgstr "Lisää kanavannimi suoratoistotietoihin"
 
@@ -126,7 +126,7 @@ msgstr "Kaikki tämän ohjelma tiedostot ovat avointa lähdekoodia; Voit jakaa j
 msgid "All alternative services deleted."
 msgstr "Kaikki vaihtoehtoiset kanavat poistettu."
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:161
 msgid "Allow IPK Upload"
 msgstr ""
 
@@ -348,7 +348,7 @@ msgstr "Kaapeliverkko"
 msgid "Calendar Week"
 msgstr ""
 
-#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:96
+#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:96
 msgid "Cancel"
 msgstr "Peruuta"
 
@@ -426,7 +426,7 @@ msgstr "Nykyinen ohjelma"
 msgid "Custom STB name"
 msgstr "Oma vastaanotinnimi"
 
-#: ../plugin/plugin.py:144
+#: ../plugin/plugin.py:145
 msgid "Custom box name"
 msgstr "Oma vastaanotinnimi"
 
@@ -451,7 +451,7 @@ msgstr ""
 msgid "Date"
 msgstr "Päivämäärä"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:163
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -511,7 +511,7 @@ msgstr "Kuvaus"
 msgid "Disable Timer"
 msgstr "Poista ajastus käytöstä"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:155
 msgid "Disable remote access for user root"
 msgstr "Poista pääsy käyttäjän juuritiedostoihin"
 
@@ -613,7 +613,7 @@ msgstr "Muokkaa ajastusta"
 msgid "Editor"
 msgstr "Muokkaaja"
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:154
 msgid "Enable Authentication for streaming"
 msgstr "Vaadi salasana suoratoistolle"
 
@@ -621,15 +621,15 @@ msgstr "Vaadi salasana suoratoistolle"
 msgid "Enable Filtering"
 msgstr "Suodata"
 
-#: ../plugin/plugin.py:146
+#: ../plugin/plugin.py:147
 msgid "Enable HTTP Authentication"
 msgstr "Vaadi HTTP:llä pääsyyn salasana"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:148
 msgid "Enable HTTPS"
 msgstr "Käytä HTTPS:ää"
 
-#: ../plugin/plugin.py:150
+#: ../plugin/plugin.py:151
 msgid "Enable HTTPS Authentication"
 msgstr "Vaadi HTTPS:llä pääsyyn salasana"
 
@@ -637,7 +637,7 @@ msgstr "Vaadi HTTPS:llä pääsyyn salasana"
 msgid "Enable Messages"
 msgstr "Salli viestit"
 
-#: ../plugin/plugin.py:158
+#: ../plugin/plugin.py:159
 msgid "Enable Parental Control"
 msgstr "Käytä lapsilukkoa"
 
@@ -645,7 +645,7 @@ msgstr "Käytä lapsilukkoa"
 msgid "Enable Timer"
 msgstr "Ota ajastus käyttöön"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:158
 msgid "Enable access from VPNs"
 msgstr "Salli pääsy VPN-tunnelista"
 
@@ -865,11 +865,11 @@ msgstr "Listanmuutos uudelle suosikkilistalle epäonnistui!"
 msgid "Grab Screenshot"
 msgstr "Ota kuvankaappaus"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:146
 msgid "HTTP port"
 msgstr "HTTP-portti"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:150
 msgid "HTTPS port"
 msgstr "HTTPS-portti"
 
@@ -1414,7 +1414,7 @@ msgstr "GUI-Versio"
 msgid "Open in new window"
 msgstr "Avaa uuteen ikkunaan"
 
-#: ../plugin/plugin.py:134
+#: ../plugin/plugin.py:135
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWeb-käyttöliittymä sallittu"
 
@@ -1422,7 +1422,7 @@ msgstr "OpenWeb-käyttöliittymä sallittu"
 msgid "OpenWebif Browser Settings"
 msgstr "OpenWebif selaimen asetukset"
 
-#: ../plugin/plugin.py:170 ../plugin/plugin.py:236 ../plugin/plugin.py:238
+#: ../plugin/plugin.py:172 ../plugin/plugin.py:238 ../plugin/plugin.py:240
 msgid "OpenWebif Configuration"
 msgstr "OpenWebif-asetukset"
 
@@ -1430,7 +1430,7 @@ msgstr "OpenWebif-asetukset"
 msgid "OpenWebif Settings"
 msgstr "OpenWebif asetukset"
 
-#: ../plugin/plugin.py:120
+#: ../plugin/plugin.py:121
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif-url: http://ip-osoite:portti"
 
@@ -1491,6 +1491,10 @@ msgstr ""
 #: ../plugin/controllers/i18n.py:213
 msgid "Playback"
 msgstr "Toista"
+
+#: ../plugin/plugin.py:162
+msgid "Playback IPTV Streams in browser"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:214
 msgid "Playlist"
@@ -1624,7 +1628,7 @@ msgstr "Uudelleennimeä tallennus"
 msgid "Repeated"
 msgstr "Toistetaan"
 
-#: ../plugin/plugin.py:151
+#: ../plugin/plugin.py:152
 msgid "Require client cert for HTTPS"
 msgstr "Vaadi asiakkaalta HTTPS-hyväksyntä"
 
@@ -1707,7 +1711,7 @@ msgstr "Satelliittietsin"
 msgid "Saturday"
 msgstr "Lauantai"
 
-#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:236
+#: ../plugin/plugin.py:120 ../plugin/controllers/i18n.py:236
 #: ../plugin/controllers/i18n.py:390 ../plugin/controllers/i18n.py:442
 msgid "Save"
 msgstr "Tallenna"
@@ -1852,11 +1856,11 @@ msgstr "Näytä vastaanottimen nimi otsikossa"
 msgid "Show Service type in channel list"
 msgstr "Näytä kuvake kanavalistassa"
 
-#: ../plugin/plugin.py:136
+#: ../plugin/plugin.py:137
 msgid "Show benchmark in STB information"
 msgstr ""
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 msgid "Show box name in header"
 msgstr "Näytä vastaanottimen nimi otsikossa"
 
@@ -2270,7 +2274,7 @@ msgstr "Käytä omaa tiedostosijaintia"
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:139
+#: ../plugin/plugin.py:140
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Käytä omaa tiedostosijaintia"
@@ -2280,11 +2284,11 @@ msgstr "Käytä omaa tiedostosijaintia"
 msgid "Use custom STB name"
 msgstr "Käytä omaa vastaanotinnimeä"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:143
 msgid "Use custom box name"
 msgstr "Käytä omaa vastaanotinnimeä"
 
-#: ../plugin/plugin.py:137 ../plugin/controllers/i18n.py:507
+#: ../plugin/plugin.py:138 ../plugin/controllers/i18n.py:507
 msgid "Use new design"
 msgstr ""
 
@@ -2385,7 +2389,7 @@ msgstr "Viikottain (maanantai)"
 msgid "Weekly (Sunday)"
 msgstr "Viikottain (sunnuntai)"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:157
 msgid "Without auth only local access is allowed!"
 msgstr "Vain lähiverkko-osoitteet sallittu!"
 

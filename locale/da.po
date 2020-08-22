@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-18 02:22+0430\n"
+"POT-Creation-Date: 2020-08-22 19:17+0430\n"
 "PO-Revision-Date: 2020-06-18 18:26+0200\n"
 "Last-Translator: JC 2020 <dk-translation@protonmail.com>\n"
 "Language-Team: Danskholdet <dk-translation@pm.me>\n"
@@ -90,7 +90,7 @@ msgstr "Tilføj kanal(er) som alternativ"
 msgid "Add channel(s) to Bouquet"
 msgstr "Tilføj kanal(er) til buket"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:160
 msgid "Add service name to stream information"
 msgstr "Tilføj kanalnavn til streaming information"
 
@@ -127,7 +127,7 @@ msgstr "Alle filer i denne software er open source software; du kan gengive det 
 msgid "All alternative services deleted."
 msgstr "Alle alternative kanaler slettet."
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:161
 msgid "Allow IPK Upload"
 msgstr "Tillad IPK upload"
 
@@ -348,7 +348,7 @@ msgstr "Kabel"
 msgid "Calendar Week"
 msgstr "Kalenderuge"
 
-#: ../plugin/plugin.py:118 ../plugin/controllers/i18n.py:96
+#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:96
 msgid "Cancel"
 msgstr "Afbryd"
 
@@ -425,7 +425,7 @@ msgstr "Aktuel begivenhed"
 msgid "Custom STB name"
 msgstr "Tilpasset boksnavn"
 
-#: ../plugin/plugin.py:144
+#: ../plugin/plugin.py:145
 msgid "Custom box name"
 msgstr "Tilpasset boksnavn"
 
@@ -450,7 +450,7 @@ msgstr ""
 msgid "Date"
 msgstr "Dato"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:163
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -512,7 +512,7 @@ msgstr "Beskrivelse"
 msgid "Disable Timer"
 msgstr "Deaktiver timer"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:155
 msgid "Disable remote access for user root"
 msgstr "Deaktiver fjernadgang for brugeren root"
 
@@ -614,7 +614,7 @@ msgstr "Rediger Timer"
 msgid "Editor"
 msgstr "Redigering"
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:154
 msgid "Enable Authentication for streaming"
 msgstr "Aktiver godkendelse for streaming"
 
@@ -622,15 +622,15 @@ msgstr "Aktiver godkendelse for streaming"
 msgid "Enable Filtering"
 msgstr "Aktiver filtrering"
 
-#: ../plugin/plugin.py:146
+#: ../plugin/plugin.py:147
 msgid "Enable HTTP Authentication"
 msgstr "Aktiver HTTP godkendelse"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:148
 msgid "Enable HTTPS"
 msgstr "Aktiver HTTPS"
 
-#: ../plugin/plugin.py:150
+#: ../plugin/plugin.py:151
 msgid "Enable HTTPS Authentication"
 msgstr "Aktiver HTTPS godkendelse"
 
@@ -638,7 +638,7 @@ msgstr "Aktiver HTTPS godkendelse"
 msgid "Enable Messages"
 msgstr "Aktiver beskeder"
 
-#: ../plugin/plugin.py:158
+#: ../plugin/plugin.py:159
 msgid "Enable Parental Control"
 msgstr "Aktiver forældrekontrol"
 
@@ -646,7 +646,7 @@ msgstr "Aktiver forældrekontrol"
 msgid "Enable Timer"
 msgstr "Aktiver timer"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:158
 msgid "Enable access from VPNs"
 msgstr "Aktiver adgang fra VPNs"
 
@@ -865,11 +865,11 @@ msgstr "Hent foranderlig liste med nyoprettet buket mislykkedes!"
 msgid "Grab Screenshot"
 msgstr "Tag et skærmdump"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:146
 msgid "HTTP port"
 msgstr "HTTP port"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:150
 msgid "HTTPS port"
 msgstr "HTTPS port"
 
@@ -1421,7 +1421,7 @@ msgstr "GUI version"
 msgid "Open in new window"
 msgstr "Åben i et nyt vindue"
 
-#: ../plugin/plugin.py:134
+#: ../plugin/plugin.py:135
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWebif er aktiveret"
 
@@ -1429,7 +1429,7 @@ msgstr "OpenWebif er aktiveret"
 msgid "OpenWebif Browser Settings"
 msgstr "OpenWebif Browser indstillinger"
 
-#: ../plugin/plugin.py:170 ../plugin/plugin.py:236 ../plugin/plugin.py:238
+#: ../plugin/plugin.py:172 ../plugin/plugin.py:238 ../plugin/plugin.py:240
 msgid "OpenWebif Configuration"
 msgstr "OpenWebif konfiguration"
 
@@ -1437,7 +1437,7 @@ msgstr "OpenWebif konfiguration"
 msgid "OpenWebif Settings"
 msgstr "OpenWebif indstillinger"
 
-#: ../plugin/plugin.py:120
+#: ../plugin/plugin.py:121
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif URL: http://ipadresse:port"
 
@@ -1498,6 +1498,10 @@ msgstr ""
 #: ../plugin/controllers/i18n.py:213
 msgid "Playback"
 msgstr "Afspilning"
+
+#: ../plugin/plugin.py:162
+msgid "Playback IPTV Streams in browser"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:214
 msgid "Playlist"
@@ -1631,7 +1635,7 @@ msgstr "Omdøb optagelse"
 msgid "Repeated"
 msgstr "Gentages"
 
-#: ../plugin/plugin.py:151
+#: ../plugin/plugin.py:152
 msgid "Require client cert for HTTPS"
 msgstr "Kræv klientcertifikat til HTTPS"
 
@@ -1714,7 +1718,7 @@ msgstr "Sat-søger"
 msgid "Saturday"
 msgstr "Lørdag"
 
-#: ../plugin/plugin.py:119 ../plugin/controllers/i18n.py:236
+#: ../plugin/plugin.py:120 ../plugin/controllers/i18n.py:236
 #: ../plugin/controllers/i18n.py:390 ../plugin/controllers/i18n.py:442
 msgid "Save"
 msgstr "Gem"
@@ -1859,11 +1863,11 @@ msgstr "Vise boksens navn i overskrift"
 msgid "Show Service type in channel list"
 msgstr "Vis Pikon i kanalliste"
 
-#: ../plugin/plugin.py:136
+#: ../plugin/plugin.py:137
 msgid "Show benchmark in STB information"
 msgstr ""
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 msgid "Show box name in header"
 msgstr "Vise boksens navn i overskrift"
 
@@ -2277,7 +2281,7 @@ msgstr "Vælg en brugerdefineret placering"
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:139
+#: ../plugin/plugin.py:140
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Vælg en brugerdefineret placering"
@@ -2287,11 +2291,11 @@ msgstr "Vælg en brugerdefineret placering"
 msgid "Use custom STB name"
 msgstr "Brug brugerdefineret boksnavn"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:143
 msgid "Use custom box name"
 msgstr "Brug brugerdefineret boksnavn"
 
-#: ../plugin/plugin.py:137 ../plugin/controllers/i18n.py:507
+#: ../plugin/plugin.py:138 ../plugin/controllers/i18n.py:507
 msgid "Use new design"
 msgstr "Brug nyt design"
 
@@ -2392,7 +2396,7 @@ msgstr "Ugentlig (Mandag)"
 msgid "Weekly (Sunday)"
 msgstr "Ugentlig (Søndag)"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:157
 msgid "Without auth only local access is allowed!"
 msgstr "Kun lokal adgang tillades uden godkendelse!"
 
