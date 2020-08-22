@@ -25,11 +25,10 @@ from Tools.Directories import fileExists, pathExists
 from time import time
 import os
 import hashlib
-from enigma import getBoxType, getBoxBrand
+from enigma import getBoxType
 from boxbranding import getMachineBuild, getDisplayType, getRCName, getImageArch
 from Components.SystemInfo import SystemInfo
 
-brand = getBoxBrand()
 model = getBoxType()
 platform = getMachineBuild()
 
@@ -50,7 +49,7 @@ def getAllInfo():
 
 	remote = getRCName()
 
-	if getImageArch() == "sh4" and brand != "nbox":
+	if getImageArch() == "sh4" and remote not in ("nbox","hl101"):
 		remote = "spark"
 
 	info['remote'] = remote
