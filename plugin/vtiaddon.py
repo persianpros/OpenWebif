@@ -3,7 +3,6 @@
 from __future__ import print_function
 from Components.config import config, ConfigYesNo, ConfigSelection
 from Plugins.Extensions.OpenWebif.controllers.utilities import getUrlArg
-from Components.SystemInfo import SystemInfo
 
 def skinColor():
 	return config.OpenWebif.responsive_skinColor.value
@@ -122,10 +121,7 @@ COLORS = [
 ]
 
 def expandConfig():
-	if SystemInfo["SmallFlash"]:
-		config.OpenWebif.responsive_enabled = ConfigYesNo(default=False)
-	else:
-		config.OpenWebif.responsive_enabled = ConfigYesNo(default=True)		
+	config.OpenWebif.responsive_enabled = ConfigYesNo(default=False)
 	config.OpenWebif.responsive_skinColor = ConfigSelection(default="black", choices=COLORS)
 	config.OpenWebif.responsive_epgsearch_only_bq = ConfigYesNo(default=True)
 	config.OpenWebif.responsive_epgsearch_full = ConfigYesNo(default=False)
