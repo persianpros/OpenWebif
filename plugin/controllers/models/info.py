@@ -274,6 +274,10 @@ def getInfo(session=None, need_fullinfo=False):
 		elif fileExists("/usr/sbin/lircd"):
 			info['boxrctype'] = _("LIRC remote")
 
+	info['ovrctype'] = boxbranding.getRCType()
+	info['ovrcname'] = boxbranding.getRCName()
+	info['ovrcidnum'] = boxbranding.getRCIDNum()
+
 	info['transcoding'] = boxbranding.getHaveTranscoding()
 	info['multitranscoding'] = boxbranding.getHaveMultiTranscoding()
 
