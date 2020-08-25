@@ -169,16 +169,10 @@ def remoteControl(key, type="", rcu=""):
 	elif rcu == "keyboard":
 		remotetype = "dreambox ir keyboard"
 	else:
-		if config.misc.rcused.value == 0:
-			remotetype = "dreambox advanced remote control (native)"
-		else:
-			remotetype = "dreambox remote control (native)"
 		try:
-			from enigma import getBoxType
-			from Tools.StbHardware import getBoxProc
-			if getBoxType() in ("xp1000","formuler1","formuler3","hd1100","hd1200") or getBoxProc() in ("et9000","et9200"):
-				remotetype = "dreambox advanced remote control (native)"
+			remotetype = "dreambox advanced remote control (native)"
 		except:  # noqa: E722
+			remotetype = "dreambox remote control (native)"
 			print("[OpenWebIf] wrong hw detection")
 
 	amap = eActionMap.getInstance()
