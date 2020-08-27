@@ -171,9 +171,10 @@ def remoteControl(key, type="", rcu=""):
 	else:
 		try:
 			remotetype = "dreambox advanced remote control (native)"
+			print("[OpenWebIf] wrong hw detection?")
 		except:  # noqa: E722
 			remotetype = "dreambox remote control (native)"
-			print("[OpenWebIf] wrong hw detection")
+			print("[OpenWebIf] wrong hw detection?")
 
 	amap = eActionMap.getInstance()
 	if type == "long":
