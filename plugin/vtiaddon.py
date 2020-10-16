@@ -4,6 +4,18 @@ from __future__ import print_function
 from Components.config import config, ConfigYesNo, ConfigSelection
 from Plugins.Extensions.OpenWebif.controllers.utilities import getUrlArg
 
+def themeMode():
+	return config.OpenWebif.responsive_themeMode.value
+
+
+def setThemeMode(self, request):
+	themeMode = getUrlArg(request, "themeMode")
+	if themeMode != None:
+		print("save theme mode:", themeMode)
+		config.OpenWebif.responsive_themeMode.value = themeMode
+		config.OpenWebif.responsive_themeMode.save()
+	return {}
+
 def skinColor():
 	return config.OpenWebif.responsive_skinColor.value
 
@@ -130,6 +142,7 @@ def setVTiWebConfig(self, request):
 
 def expand_BaseController():
 	from Plugins.Extensions.OpenWebif.controllers.web import WebController
+	WebController.P_setthememode = setThemeMode
 	WebController.P_setskincolor = setSkinColor
 	WebController.P_setvtiwebconfig = setVTiWebConfig
 
@@ -137,11 +150,12 @@ def expand_BaseController():
 expand_basecontroller = expand_BaseController()
 
 COLORS = [
-	'red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey', 'black', 'white'
+	'black', 'grey-darken-4', 'blue-grey', 'grey', 'red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown'
 ]
 
 def expandConfig():
 	config.OpenWebif.responsive_enabled = ConfigYesNo(default=False)
+	config.OpenWebif.responsive_themeMode = ConfigSelection(default="supabright", choices=['supabright', 'city-lights'])
 	config.OpenWebif.responsive_skinColor = ConfigSelection(default="black", choices=COLORS)
 	config.OpenWebif.responsive_epgsearch_only_bq = ConfigYesNo(default=True)
 	config.OpenWebif.responsive_epgsearch_full = ConfigYesNo(default=False)
