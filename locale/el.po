@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebIf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 00:39+0330\n"
+"POT-Creation-Date: 2020-10-17 18:53+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: MCelliot_g <mcelliot_g@hotmail.com>\n"
 "Language-Team: satdreamgr\n"
@@ -61,10 +61,6 @@ msgstr "Προσθήκη Σημειωτή"
 msgid "Add Name to Tags"
 msgstr "Προσθήκη ονόματος στις Ετικέτες"
 
-#: ../plugin/controllers/i18n.py:453
-msgid "Add Provider as new Bouquet"
-msgstr "Προσθήκη Παρόχου ως νέο μπουκέτο"
-
 #: ../plugin/controllers/i18n.py:414
 msgid "Add Similar on Conflict"
 msgstr "Προσθήκη Παρόμοιων κατά τη διένεξη"
@@ -86,8 +82,9 @@ msgid "Add channel(s) as alternate"
 msgstr "Προσθήκη καναλιού(ών) ως εναλλακτικό"
 
 #: ../plugin/controllers/i18n.py:454
-msgid "Add channel(s) to Bouquet"
-msgstr "Προσθήκη καναλιού(ών) σε Μπουκέτο"
+#, fuzzy
+msgid "Add selection to bouquet"
+msgstr "επιλογή Μπουκέτων"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
@@ -414,6 +411,10 @@ msgstr "Αδυναμία προσθήκης χρονοδιακόπτη '%s'!"
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Αδυναμία εύρεσης του χρονοδιακόπτη '%s' με δεδομένη ώρα έναρξης και λήξης!"
+
+#: ../plugin/controllers/i18n.py:453
+msgid "Create bouquet from selection"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:108
 msgid "Current"
@@ -2094,7 +2095,7 @@ msgstr "Γίνεται τώρα εγγραφή του χρονοδιακόπτη
 msgid "Theme"
 msgstr "Θέμα"
 
-#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:140
 #, fuzzy
 msgid "Theme mode"
 msgstr "Θέμα"
@@ -2303,7 +2304,7 @@ msgstr "Χρήση τοποθεσίας ορισμένης από το χρήσ�
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Χρήση τοποθεσίας ορισμένης από το χρήστη"

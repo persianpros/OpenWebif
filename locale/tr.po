@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 00:39+0330\n"
+"POT-Creation-Date: 2020-10-17 18:53+0330\n"
 "PO-Revision-Date: 2020-08-18 02:59+0300\n"
 "Last-Translator: audi06_19 <info@dreamosat-forum.com>\n"
 "Language-Team: Turkish\n"
@@ -65,10 +65,6 @@ msgstr "İşaretçi Ekle"
 msgid "Add Name to Tags"
 msgstr "Etiketlere Ad Ekle"
 
-#: ../plugin/controllers/i18n.py:453
-msgid "Add Provider as new Bouquet"
-msgstr "Sağlayıcıyı yeni Buket olarak Ekle"
-
 #: ../plugin/controllers/i18n.py:414
 msgid "Add Similar on Conflict"
 msgstr "Çakışmada Benzer Ekle"
@@ -90,8 +86,9 @@ msgid "Add channel(s) as alternate"
 msgstr "Kanalları alternatif olarak ekle"
 
 #: ../plugin/controllers/i18n.py:454
-msgid "Add channel(s) to Bouquet"
-msgstr "Bukete kanal ekle"
+#, fuzzy
+msgid "Add selection to bouquet"
+msgstr "Buketleri seçin"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
@@ -417,6 +414,10 @@ msgstr "Zamanlayıcı '%s' eklenemedi!"
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Verilen başlangıç ​​ve bitiş zamanına sahip '%s' zamanlayıcı bulunamadı!"
+
+#: ../plugin/controllers/i18n.py:453
+msgid "Create bouquet from selection"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:108
 msgid "Current"
@@ -2092,7 +2093,7 @@ msgstr "Zamanlayıcı '%s' şimdi kaydedildi! Devre dışı bırakılmadı!"
 msgid "Theme"
 msgstr "Tema"
 
-#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:140
 #, fuzzy
 msgid "Theme mode"
 msgstr "Tema"
@@ -2301,7 +2302,7 @@ msgstr "Özel bir konum kullan"
 msgid "Use as PiP if possible"
 msgstr "Mümkünse PiP olarak kullanın"
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 msgid "Use custom Color"
 msgstr "Özel Renk Kullan"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 00:39+0330\n"
+"POT-Creation-Date: 2020-10-17 18:53+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Pr2\n"
 "Language-Team: \n"
@@ -61,10 +61,6 @@ msgstr "Ajouter Marqueur"
 msgid "Add Name to Tags"
 msgstr "Ajouter nom aux étiquettes"
 
-#: ../plugin/controllers/i18n.py:453
-msgid "Add Provider as new Bouquet"
-msgstr "Ajouter Provider comme un nouveau Bouquet"
-
 #: ../plugin/controllers/i18n.py:414
 msgid "Add Similar on Conflict"
 msgstr "Ajouter similaire en cas de conflit"
@@ -86,8 +82,9 @@ msgid "Add channel(s) as alternate"
 msgstr "Ajouter la/les chaîne(s) comme alternatif"
 
 #: ../plugin/controllers/i18n.py:454
-msgid "Add channel(s) to Bouquet"
-msgstr "Ajouter la/les chaîne(s) au Bouquet"
+#, fuzzy
+msgid "Add selection to bouquet"
+msgstr "choisir les bouquets"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
@@ -414,6 +411,10 @@ msgstr "Impossible d'ajouter le timer '%s'!"
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Impossible de trouver le timer '%s' avec l'heure de début et de fin donnée!"
+
+#: ../plugin/controllers/i18n.py:453
+msgid "Create bouquet from selection"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:108
 msgid "Current"
@@ -2089,7 +2090,7 @@ msgstr "Le timer '%s' en cours d'enregistrement! Pas désactivé!"
 msgid "Theme"
 msgstr "Thème"
 
-#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:140
 #, fuzzy
 msgid "Theme mode"
 msgstr "Thème"
@@ -2298,7 +2299,7 @@ msgstr "Utiliser une localisation personnalisée"
 msgid "Use as PiP if possible"
 msgstr "Utiliser comme PiP si possible"
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 msgid "Use custom Color"
 msgstr "Utiliser une couleur personnalisée"
 

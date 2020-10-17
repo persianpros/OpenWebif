@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 00:39+0330\n"
+"POT-Creation-Date: 2020-10-17 18:53+0330\n"
 "PO-Revision-Date: 2020-06-18 18:26+0200\n"
 "Last-Translator: JC 2020 <dk-translation@protonmail.com>\n"
 "Language-Team: Danskholdet <dk-translation@pm.me>\n"
@@ -62,10 +62,6 @@ msgstr "Tilføj mærke"
 msgid "Add Name to Tags"
 msgstr "Tilføj navn til etiketter"
 
-#: ../plugin/controllers/i18n.py:453
-msgid "Add Provider as new Bouquet"
-msgstr "Tilføj udbyder som ny buket"
-
 #: ../plugin/controllers/i18n.py:414
 msgid "Add Similar on Conflict"
 msgstr "Tilføj lignende ved konflikt"
@@ -87,8 +83,9 @@ msgid "Add channel(s) as alternate"
 msgstr "Tilføj kanal(er) som alternativ"
 
 #: ../plugin/controllers/i18n.py:454
-msgid "Add channel(s) to Bouquet"
-msgstr "Tilføj kanal(er) til buket"
+#, fuzzy
+msgid "Add selection to bouquet"
+msgstr "Vælg buketter"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
@@ -415,6 +412,10 @@ msgstr "Kunne ikke tilføje timer '%s'!"
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Kunne ikke finde Timer '%s' med valgte start- og sluttid!"
+
+#: ../plugin/controllers/i18n.py:453
+msgid "Create bouquet from selection"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:108
 msgid "Current"
@@ -2112,7 +2113,7 @@ msgstr "Timeren '%s' nu optaget! Ikke deaktiveret!"
 msgid "Theme"
 msgstr "Tema"
 
-#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:140
 #, fuzzy
 msgid "Theme mode"
 msgstr "Tema"
@@ -2321,7 +2322,7 @@ msgstr "Vælg en brugerdefineret placering"
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Vælg en brugerdefineret placering"

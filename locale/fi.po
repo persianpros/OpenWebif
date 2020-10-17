@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 00:39+0330\n"
+"POT-Creation-Date: 2020-10-17 18:53+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Samzam <http://www.opena.tv>\n"
 "Language-Team: \n"
@@ -61,10 +61,6 @@ msgstr "Lisää väliotsikko"
 msgid "Add Name to Tags"
 msgstr "Lisää nimi merkeille"
 
-#: ../plugin/controllers/i18n.py:453
-msgid "Add Provider as new Bouquet"
-msgstr "Lisää palveluntarjoaja uudeksi suosikkilistaksi"
-
 #: ../plugin/controllers/i18n.py:414
 msgid "Add Similar on Conflict"
 msgstr "Lisää samanlaisiin ristiriidassa"
@@ -86,8 +82,9 @@ msgid "Add channel(s) as alternate"
 msgstr "Lisää vaihtoehtoisia kanavia"
 
 #: ../plugin/controllers/i18n.py:454
-msgid "Add channel(s) to Bouquet"
-msgstr "Lisää kanavia suosikkilistaan"
+#, fuzzy
+msgid "Add selection to bouquet"
+msgstr "Valitse suosikkilistat"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
@@ -416,6 +413,10 @@ msgstr "Ei voi lisätä ajastusta '%s'!"
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Ei löydy ajastusta '%s' annetuilla alku- ja loppuajoilla!"
+
+#: ../plugin/controllers/i18n.py:453
+msgid "Create bouquet from selection"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:108
 msgid "Current"
@@ -2102,7 +2103,7 @@ msgstr "Ajastusta '%s' tallennetaan! Käytössä!"
 msgid "Theme"
 msgstr "Teema"
 
-#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:140
 #, fuzzy
 msgid "Theme mode"
 msgstr "Teema"
@@ -2312,7 +2313,7 @@ msgstr "Käytä omaa tiedostosijaintia"
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Käytä omaa tiedostosijaintia"

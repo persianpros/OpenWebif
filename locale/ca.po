@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 00:39+0330\n"
+"POT-Creation-Date: 2020-10-17 18:53+0330\n"
 "PO-Revision-Date: 2017-11-10 22:14+0100\n"
 "Last-Translator: JR <openspateam@gmail.com>\n"
 "Language-Team: OpenSPA\n"
@@ -64,10 +64,6 @@ msgstr "Afegir marca"
 msgid "Add Name to Tags"
 msgstr "Afegir nom a les etiquetes"
 
-#: ../plugin/controllers/i18n.py:453
-msgid "Add Provider as new Bouquet"
-msgstr "Afegir proveïdor com nova llista"
-
 #: ../plugin/controllers/i18n.py:414
 msgid "Add Similar on Conflict"
 msgstr "Afegir similar quan hi ha conflicte"
@@ -89,8 +85,9 @@ msgid "Add channel(s) as alternate"
 msgstr "Afegir canal(s) com alternatiu"
 
 #: ../plugin/controllers/i18n.py:454
-msgid "Add channel(s) to Bouquet"
-msgstr "Afegir canal(s) a llista"
+#, fuzzy
+msgid "Add selection to bouquet"
+msgstr "sel·lecionar llistes"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
@@ -419,6 +416,10 @@ msgstr "No es pot afegir el temporitzador '%s'!"
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "No s'ha trobat el temporitzador '%s' amb aquests temps d'inici i fi."
+
+#: ../plugin/controllers/i18n.py:453
+msgid "Create bouquet from selection"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:108
 msgid "Current"
@@ -2102,7 +2103,7 @@ msgstr "Temporitzador '%s' s'ha gravat! No està deshabilitat!"
 msgid "Theme"
 msgstr "Tema"
 
-#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:140
 #, fuzzy
 msgid "Theme mode"
 msgstr "Tema"
@@ -2312,7 +2313,7 @@ msgstr "Utilitzar una ubicació personalitzada"
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Utilitzar una ubicació personalitzada"

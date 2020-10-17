@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 00:39+0330\n"
+"POT-Creation-Date: 2020-10-17 18:53+0330\n"
 "PO-Revision-Date: 2020-09-17 20:39+0300\n"
 "Last-Translator: Vytenis P. <vyteniui@gmail.com>\n"
 "Language-Team: Vytenis Pulokas <vyteniui@gmail.com>\n"
@@ -62,10 +62,6 @@ msgstr "Pridėti žymeklį"
 msgid "Add Name to Tags"
 msgstr "Pridėti pavadinimą prie žymų"
 
-#: ../plugin/controllers/i18n.py:453
-msgid "Add Provider as new Bouquet"
-msgstr "Įtraukti teikėją, kaip naują bukietą"
-
 #: ../plugin/controllers/i18n.py:414
 msgid "Add Similar on Conflict"
 msgstr "Konflikto atveju, pridėti panašų"
@@ -87,8 +83,9 @@ msgid "Add channel(s) as alternate"
 msgstr "Įtraukti kanalą(us), kaip atsarginį"
 
 #: ../plugin/controllers/i18n.py:454
-msgid "Add channel(s) to Bouquet"
-msgstr "Įtraukti kanalą(us) į bukietą"
+#, fuzzy
+msgid "Add selection to bouquet"
+msgstr "pasirinkite bukietus"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
@@ -414,6 +411,10 @@ msgstr "Laikmačio '%s' pridėti nepavyko!"
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Nepavyko rasti laikmačio '%s' su nurodytu pradžios ir pabaigos laiku!"
+
+#: ../plugin/controllers/i18n.py:453
+msgid "Create bouquet from selection"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:108
 msgid "Current"
@@ -2089,7 +2090,7 @@ msgstr "Laikmatis '%s' įrašytas dabar! Neišjungtas!"
 msgid "Theme"
 msgstr "Aplinkos tema"
 
-#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:140
 #, fuzzy
 msgid "Theme mode"
 msgstr "Aplinkos tema"
@@ -2298,7 +2299,7 @@ msgstr "Naudoti išsirinktą vietą"
 msgid "Use as PiP if possible"
 msgstr "Naudoti, kaip PiP, jei įmanoma"
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 msgid "Use custom Color"
 msgstr "Naudoti pasirinktinę spalvą"
 

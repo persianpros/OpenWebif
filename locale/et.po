@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 00:39+0330\n"
+"POT-Creation-Date: 2020-10-17 18:53+0330\n"
 "PO-Revision-Date: 2020-08-01 10:55+0300\n"
 "Last-Translator: rimas <rimas@domeen.ee>\n"
 "Language-Team: Estonian\n"
@@ -60,10 +60,6 @@ msgstr "Lisa märgis"
 msgid "Add Name to Tags"
 msgstr "Lisa siltidele nimi"
 
-#: ../plugin/controllers/i18n.py:453
-msgid "Add Provider as new Bouquet"
-msgstr "Lisa levitaja uue lemmiknimekirjana"
-
 #: ../plugin/controllers/i18n.py:414
 msgid "Add Similar on Conflict"
 msgstr "Vastuolu puhul lisa asendustaimer"
@@ -85,8 +81,9 @@ msgid "Add channel(s) as alternate"
 msgstr "Lisa asenduskanalina"
 
 #: ../plugin/controllers/i18n.py:454
-msgid "Add channel(s) to Bouquet"
-msgstr "Lisa lemmiknimekirja"
+#, fuzzy
+msgid "Add selection to bouquet"
+msgstr "Vali lemmiknimekirjad"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
@@ -412,6 +409,10 @@ msgstr "Taimeri '%s' lisamine nurjus!"
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Antud algus- ja lõpuajaga taimerit '%s' ei leitud!"
+
+#: ../plugin/controllers/i18n.py:453
+msgid "Create bouquet from selection"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:108
 msgid "Current"
@@ -2087,7 +2088,7 @@ msgstr "Taimer '%s' on nüüd salvestav! Mitte keelatud!"
 msgid "Theme"
 msgstr "Kujundus"
 
-#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:140
 #, fuzzy
 msgid "Theme mode"
 msgstr "Kujundus"
@@ -2296,7 +2297,7 @@ msgstr "Kasuta kohandatud asukohta"
 msgid "Use as PiP if possible"
 msgstr "Kasuta võimalusel PiP akent"
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Kasuta kohandatud asukohta"

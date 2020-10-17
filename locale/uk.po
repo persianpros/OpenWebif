@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 00:39+0330\n"
+"POT-Creation-Date: 2020-10-17 18:53+0330\n"
 "PO-Revision-Date: 2018-03-30 13:04+0200\n"
 "Last-Translator: kvinto <badsystem@ukr.net>\n"
 "Language-Team: \n"
@@ -62,10 +62,6 @@ msgstr "Додати маркер"
 msgid "Add Name to Tags"
 msgstr "Додати ім'я до тегів"
 
-#: ../plugin/controllers/i18n.py:453
-msgid "Add Provider as new Bouquet"
-msgstr "Додати провайдера як новий фаворит"
-
 #: ../plugin/controllers/i18n.py:414
 msgid "Add Similar on Conflict"
 msgstr "Додати подібний при конфлікті"
@@ -87,8 +83,9 @@ msgid "Add channel(s) as alternate"
 msgstr "Додати канал(и) як альтернативу"
 
 #: ../plugin/controllers/i18n.py:454
-msgid "Add channel(s) to Bouquet"
-msgstr "Додати канал(и) в букет"
+#, fuzzy
+msgid "Add selection to bouquet"
+msgstr "вибрати фаворити"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
@@ -417,6 +414,10 @@ msgstr "Не вдалося додати таймер '%s'!"
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Не вдалося знайти таймер '%s' з вказаним часом початку та закінчення!"
+
+#: ../plugin/controllers/i18n.py:453
+msgid "Create bouquet from selection"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:108
 msgid "Current"
@@ -2097,7 +2098,7 @@ msgstr "Таймер '%s' зараз записується! ННе вимкне
 msgid "Theme"
 msgstr "Тема"
 
-#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:140
 #, fuzzy
 msgid "Theme mode"
 msgstr "Тема"
@@ -2306,7 +2307,7 @@ msgstr "Використовуйте інше розташування"
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Використовуйте інше розташування"

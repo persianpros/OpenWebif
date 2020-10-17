@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 00:39+0330\n"
+"POT-Creation-Date: 2020-10-17 18:53+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: neoatomic <neoatomic@users.noreply.github.com>\n"
 "Language-Team: satfan <satfan@163.com>\n"
@@ -63,10 +63,6 @@ msgstr "添加标记"
 msgid "Add Name to Tags"
 msgstr "添加名称到标签"
 
-#: ../plugin/controllers/i18n.py:453
-msgid "Add Provider as new Bouquet"
-msgstr "添加供应商为节目分组"
-
 #: ../plugin/controllers/i18n.py:414
 msgid "Add Similar on Conflict"
 msgstr "添加类似（冲突时）"
@@ -88,8 +84,9 @@ msgid "Add channel(s) as alternate"
 msgstr "添加频道作为替代"
 
 #: ../plugin/controllers/i18n.py:454
-msgid "Add channel(s) to Bouquet"
-msgstr "添加频道到节目分组"
+#, fuzzy
+msgid "Add selection to bouquet"
+msgstr "选择节目分组"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
@@ -418,6 +415,10 @@ msgstr "不能添加定时器“%s”!"
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "未找到指定开始时间和结束时间的定时器 '%s' ！"
+
+#: ../plugin/controllers/i18n.py:453
+msgid "Create bouquet from selection"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:108
 msgid "Current"
@@ -2105,7 +2106,7 @@ msgstr "定时器 '%s' 正在录制! 不能禁用!"
 msgid "Theme"
 msgstr "主题"
 
-#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:140
 #, fuzzy
 msgid "Theme mode"
 msgstr "主题"
@@ -2314,7 +2315,7 @@ msgstr "使用自定义位置"
 msgid "Use as PiP if possible"
 msgstr "尽可能用作PiP"
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 msgid "Use custom Color"
 msgstr "使用自定义颜色"
 

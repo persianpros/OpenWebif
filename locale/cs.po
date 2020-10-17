@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 00:39+0330\n"
+"POT-Creation-Date: 2020-10-17 18:53+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: ims <ims21@users.sourceforge.net>\n"
 "Language-Team: PLi\n"
@@ -62,10 +62,6 @@ msgstr "Přidat značku"
 msgid "Add Name to Tags"
 msgstr "Přidat název do tagů"
 
-#: ../plugin/controllers/i18n.py:453
-msgid "Add Provider as new Bouquet"
-msgstr "Přidat poskytovatele jako nový přehled"
-
 #: ../plugin/controllers/i18n.py:414
 msgid "Add Similar on Conflict"
 msgstr "Přidat podobné při konfliktu"
@@ -87,8 +83,9 @@ msgid "Add channel(s) as alternate"
 msgstr "Přidat kanál(y) jako alternativu"
 
 #: ../plugin/controllers/i18n.py:454
-msgid "Add channel(s) to Bouquet"
-msgstr "Přidat kanál(y) do přehledu"
+#, fuzzy
+msgid "Add selection to bouquet"
+msgstr "vybrat přehledy"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
@@ -415,6 +412,10 @@ msgstr "Nelze přidat časovač '%s'!"
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Nebylo možné nalézt  časovač '%s' se zadaným časem začátku a konce!"
+
+#: ../plugin/controllers/i18n.py:453
+msgid "Create bouquet from selection"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:108
 msgid "Current"
@@ -2083,7 +2084,7 @@ msgstr "Časovač '%s' je právě nahráván! Nelze zakázat!"
 msgid "Theme"
 msgstr "Vzhled"
 
-#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:140
 #, fuzzy
 msgid "Theme mode"
 msgstr "Vzhled"
@@ -2292,7 +2293,7 @@ msgstr "Použít vlastní umístění"
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Použít vlastní umístění"

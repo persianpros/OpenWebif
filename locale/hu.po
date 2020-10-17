@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 00:39+0330\n"
+"POT-Creation-Date: 2020-10-17 18:53+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: mcfly82 <https://github.com/mcfly822>\n"
 "Language-Team: mcfly82\n"
@@ -61,10 +61,6 @@ msgstr "Marker hozzáadása"
 msgid "Add Name to Tags"
 msgstr "Név hozzáadása címkékhez"
 
-#: ../plugin/controllers/i18n.py:453
-msgid "Add Provider as new Bouquet"
-msgstr "A Szolgáltató hozzáadása új listaként"
-
 #: ../plugin/controllers/i18n.py:414
 msgid "Add Similar on Conflict"
 msgstr "Hasonló hozzáadása ütközés esetén"
@@ -86,8 +82,9 @@ msgid "Add channel(s) as alternate"
 msgstr "Csatornák hozzáadása alternatívákhoz"
 
 #: ../plugin/controllers/i18n.py:454
-msgid "Add channel(s) to Bouquet"
-msgstr "Csatornák hozzáadása listához"
+#, fuzzy
+msgid "Add selection to bouquet"
+msgstr "válasszon listát"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
@@ -413,6 +410,10 @@ msgstr "Nem lehet hozzáadni az '%s' időzítőt!"
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Az '%s' időzítő nem található az adott kezdő és befejező időpontban!"
+
+#: ../plugin/controllers/i18n.py:453
+msgid "Create bouquet from selection"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:108
 msgid "Current"
@@ -2088,7 +2089,7 @@ msgstr "Az '%s' időzítő éppen felvételt készít! Nem lehet tiltani!"
 msgid "Theme"
 msgstr "Téma"
 
-#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:140
 #, fuzzy
 msgid "Theme mode"
 msgstr "Téma"
@@ -2297,7 +2298,7 @@ msgstr "Használjon egyedi helyet"
 msgid "Use as PiP if possible"
 msgstr "Használat PiP módban (ha lehetséges)"
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Használjon egyedi helyet"

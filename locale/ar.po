@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 00:39+0330\n"
+"POT-Creation-Date: 2020-10-17 18:53+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: mosad - مساعد الجعيد <abo-mishal@hotmail.com>\n"
 "Language-Team: mosad - مساعد الجعيد\n"
@@ -62,10 +62,6 @@ msgstr "إضافة علامة"
 msgid "Add Name to Tags"
 msgstr "أضافه اسم إلى العلامات"
 
-#: ../plugin/controllers/i18n.py:453
-msgid "Add Provider as new Bouquet"
-msgstr "أضافه مزود قنوات كباقة جديدة"
-
 #: ../plugin/controllers/i18n.py:414
 msgid "Add Similar on Conflict"
 msgstr "أضف مماثل على المتعارض"
@@ -87,8 +83,9 @@ msgid "Add channel(s) as alternate"
 msgstr "إضافة قناة (قنوات) كبديل"
 
 #: ../plugin/controllers/i18n.py:454
-msgid "Add channel(s) to Bouquet"
-msgstr "إضافة قناة (قنوات) إلى الباقة"
+#, fuzzy
+msgid "Add selection to bouquet"
+msgstr "حدد الباقات"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
@@ -414,6 +411,10 @@ msgstr "لا يمكن إضافة المؤقت '%s'!"
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "تعذر العثور على المؤقت '%s' مع وقت البدء والانتهاء المعينين!"
+
+#: ../plugin/controllers/i18n.py:453
+msgid "Create bouquet from selection"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:108
 msgid "Current"
@@ -2094,7 +2095,7 @@ msgstr "المؤقت '%s' الأن يسجل! ليس معطلا!"
 msgid "Theme"
 msgstr "سمة"
 
-#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:140
 #, fuzzy
 msgid "Theme mode"
 msgstr "سمة"
@@ -2303,7 +2304,7 @@ msgstr "استخدام موقع مخصص"
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 #, fuzzy
 msgid "Use custom Color"
 msgstr "استخدام موقع مخصص"

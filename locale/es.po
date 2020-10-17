@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 00:39+0330\n"
+"POT-Creation-Date: 2020-10-17 18:53+0330\n"
 "PO-Revision-Date: 2017-06-08 10:02+0200\n"
 "Last-Translator: neoatomic <neoatomic@users.noreply.github.com>\n"
 "Language-Team: Linux-Box\n"
@@ -64,10 +64,6 @@ msgstr "Añadir Marca"
 msgid "Add Name to Tags"
 msgstr "Añadir nombre a las etiquetas"
 
-#: ../plugin/controllers/i18n.py:453
-msgid "Add Provider as new Bouquet"
-msgstr "Agregar proveedor como nuevo Favorito"
-
 #: ../plugin/controllers/i18n.py:414
 msgid "Add Similar on Conflict"
 msgstr "Añadir similar cuando hay conflicto"
@@ -89,8 +85,9 @@ msgid "Add channel(s) as alternate"
 msgstr "Añadir canal(es) como alternativo"
 
 #: ../plugin/controllers/i18n.py:454
-msgid "Add channel(s) to Bouquet"
-msgstr "Añadir canal(es) a Favorito"
+#, fuzzy
+msgid "Add selection to bouquet"
+msgstr "selecionar Favoritos"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
@@ -419,6 +416,10 @@ msgstr "No se puede añadir el temporizador '%s'."
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "No se ha encontrado el temporizador '%s' con estos tiempos de inicio y fin."
+
+#: ../plugin/controllers/i18n.py:453
+msgid "Create bouquet from selection"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:108
 msgid "Current"
@@ -2102,7 +2103,7 @@ msgstr "Temporizador '%s' se ha grabado! No está deshabilitado!"
 msgid "Theme"
 msgstr "tema"
 
-#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:140
 #, fuzzy
 msgid "Theme mode"
 msgstr "tema"
@@ -2312,7 +2313,7 @@ msgstr "Usar una ubicación personalizada"
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Usar una ubicación personalizada"

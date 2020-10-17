@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-17 00:39+0330\n"
+"POT-Creation-Date: 2020-10-17 18:53+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Frenske <voorzitter@openpli.org>\n"
 "Language-Team: \n"
@@ -61,10 +61,6 @@ msgstr "Marker toevoegen"
 msgid "Add Name to Tags"
 msgstr "Naam aan Tags toevoegen"
 
-#: ../plugin/controllers/i18n.py:453
-msgid "Add Provider as new Bouquet"
-msgstr "Provider toevoegen als nieuw Bouquet"
-
 #: ../plugin/controllers/i18n.py:414
 msgid "Add Similar on Conflict"
 msgstr "Soortgelijke toevoegen bij conflict"
@@ -86,8 +82,9 @@ msgid "Add channel(s) as alternate"
 msgstr "Zender(s) toevoegen als alternatief"
 
 #: ../plugin/controllers/i18n.py:454
-msgid "Add channel(s) to Bouquet"
-msgstr "Zender(s) toevoegen aan Bouquet"
+#, fuzzy
+msgid "Add selection to bouquet"
+msgstr "Kies Bouquetten"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
@@ -414,6 +411,10 @@ msgstr "Kan Timer '%s' niet toevoegen!"
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Kon de timer '%s' met aangegeven start en eindtijd niet vinden!"
+
+#: ../plugin/controllers/i18n.py:453
+msgid "Create bouquet from selection"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:108
 msgid "Current"
@@ -2089,7 +2090,7 @@ msgstr "De timer '%s' is nu opgenomen! Niet uitgeschakeld!"
 msgid "Theme"
 msgstr "Thema"
 
-#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:303 ../plugin/plugin.py:140
 #, fuzzy
 msgid "Theme mode"
 msgstr "Thema"
@@ -2298,7 +2299,7 @@ msgstr "Gebruik een aangepaste locatie"
 msgid "Use as PiP if possible"
 msgstr "Gebruik indien mogelijk als PIP"
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Gebruik een aangepaste locatie"
