@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-23 12:55+0330\n"
+"POT-Creation-Date: 2020-10-25 16:38+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: mosad - مساعد الجعيد <abo-mishal@hotmail.com>\n"
 "Language-Team: mosad - مساعد الجعيد\n"
@@ -50,11 +50,11 @@ msgstr "إضافة مؤقت تلقائي"
 msgid "Add Autotimer to Tags"
 msgstr "إضافة المؤقت التلقائي في الدلائل"
 
-#: ../plugin/controllers/i18n.py:458
+#: ../plugin/controllers/i18n.py:459
 msgid "Add Bouquet"
 msgstr "إضافة الى الباقة"
 
-#: ../plugin/controllers/i18n.py:461
+#: ../plugin/controllers/i18n.py:462
 msgid "Add Marker"
 msgstr "إضافة علامة"
 
@@ -66,7 +66,7 @@ msgstr "أضافه اسم إلى العلامات"
 msgid "Add Similar on Conflict"
 msgstr "أضف مماثل على المتعارض"
 
-#: ../plugin/controllers/i18n.py:462
+#: ../plugin/controllers/i18n.py:463
 msgid "Add Spacer"
 msgstr "أضف مسافة"
 
@@ -95,7 +95,7 @@ msgstr "إضافة اسم الخدمة إلى معلومات قنوات البث
 msgid "Added %s to alternative service %s."
 msgstr "تم إضافة %s القناة البديلة %s."
 
-#: ../plugin/controllers/i18n.py:553
+#: ../plugin/controllers/i18n.py:560
 msgid "Adjust recording time to real event time"
 msgstr ""
 
@@ -127,7 +127,7 @@ msgstr "تم حذف كافة القنوات البديلة."
 msgid "Allow IPK Upload"
 msgstr "السماح برفع الملفات المحمية"
 
-#: ../plugin/controllers/i18n.py:552
+#: ../plugin/controllers/i18n.py:559
 msgid "Allow duplicates"
 msgstr ""
 
@@ -161,7 +161,7 @@ msgstr "الإجابة هي نعم!"
 msgid "Any service/recording"
 msgstr "أي خدمة / التسجيل"
 
-#: ../plugin/controllers/i18n.py:476
+#: ../plugin/controllers/i18n.py:478
 msgid "Apid"
 msgstr "معرف مزود الخدمة"
 
@@ -237,11 +237,11 @@ msgstr "تبدء من\"بعد الحدث\" المدة الزمنية"
 msgid "Begin of timespan"
 msgstr "بداية المدى الزمنى"
 
-#: ../plugin/controllers/i18n.py:510
+#: ../plugin/controllers/i18n.py:512
 msgid "Bookmark"
 msgstr "علامة مرجعية"
 
-#: ../plugin/controllers/i18n.py:509
+#: ../plugin/controllers/i18n.py:511
 msgid "Bookmarks"
 msgstr "الاشارات المرجعيه"
 
@@ -340,7 +340,7 @@ msgstr ""
 msgid "Cable"
 msgstr "كيبل"
 
-#: ../plugin/controllers/i18n.py:501
+#: ../plugin/controllers/i18n.py:503
 msgid "Calendar Week"
 msgstr "تقويم الاسبوع"
 
@@ -348,7 +348,7 @@ msgstr "تقويم الاسبوع"
 msgid "Cancel"
 msgstr "إلغاء"
 
-#: ../plugin/controllers/i18n.py:518
+#: ../plugin/controllers/i18n.py:520
 msgid "Cancelled"
 msgstr "ملغى"
 
@@ -380,7 +380,7 @@ msgstr "تنظيف المؤقتات"
 msgid "Close"
 msgstr "إغلاق"
 
-#: ../plugin/controllers/i18n.py:521
+#: ../plugin/controllers/i18n.py:523
 msgid "Common Settings"
 msgstr "الإعدادات العامة"
 
@@ -453,6 +453,14 @@ msgstr ""
 msgid "Date"
 msgstr "تاريخ"
 
+#: ../plugin/controllers/i18n.py:555
+msgid "Date (newest)"
+msgstr ""
+
+#: ../plugin/controllers/i18n.py:554
+msgid "Date (oldest)"
+msgstr ""
+
 #: ../plugin/plugin.py:164
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
@@ -477,12 +485,12 @@ msgstr "تاخير الاستعداد"
 msgid "Delete"
 msgstr "حذف"
 
-#: ../plugin/controllers/i18n.py:511
+#: ../plugin/controllers/i18n.py:513
 #, fuzzy
 msgid "Delete Bookmark"
 msgstr "علامة مرجعية"
 
-#: ../plugin/controllers/i18n.py:460
+#: ../plugin/controllers/i18n.py:461
 msgid "Delete Bouquet"
 msgstr "حدف الباقة"
 
@@ -502,7 +510,7 @@ msgstr ""
 "فشل حذف ، لأنه لا يوجد سلة مهملات للفيلم!\n"
 "تعطيل سلة المهملات الفيلم في التشكيل لحذف هذا العنصر"
 
-#: ../plugin/controllers/i18n.py:519
+#: ../plugin/controllers/i18n.py:521
 msgid "Deleted"
 msgstr "تم الحذف"
 
@@ -527,11 +535,11 @@ msgstr "التعارضمعطل"
 msgid "Disabled on Conflict"
 msgstr "التعارضمعطل"
 
-#: ../plugin/controllers/i18n.py:497
+#: ../plugin/controllers/i18n.py:499
 msgid "Display Mode"
 msgstr "وضع العرض"
 
-#: ../plugin/controllers/i18n.py:495
+#: ../plugin/controllers/i18n.py:497
 msgid "Display duration (s)"
 msgstr "مده العرض (العروض)"
 
@@ -548,15 +556,15 @@ msgstr "تصنيف"
 msgid "Do you really want to delete the AT"
 msgstr "هل تريد حقا حذف AT"
 
-#: ../plugin/controllers/i18n.py:465
+#: ../plugin/controllers/i18n.py:466
 msgid "Do you really want to delete the bouquet"
 msgstr "هل تريد حقا حذف الباقة"
 
-#: ../plugin/controllers/i18n.py:464
+#: ../plugin/controllers/i18n.py:465
 msgid "Do you really want to delete the selected item(s)"
 msgstr "هل تريد حقا حذف العنصر (العناصر) المحدد"
 
-#: ../plugin/controllers/i18n.py:471
+#: ../plugin/controllers/i18n.py:472
 msgid "Do you really want to restore from file"
 msgstr "هل تريد حقا استعادة من الملف"
 
@@ -564,7 +572,7 @@ msgstr "هل تريد حقا استعادة من الملف"
 msgid "Dolby"
 msgstr "الصوت الدولبي"
 
-#: ../plugin/controllers/i18n.py:554
+#: ../plugin/controllers/i18n.py:561
 msgid "Don't create timer when movie exists in database"
 msgstr ""
 
@@ -656,7 +664,7 @@ msgstr "تفعيل المؤقت"
 msgid "Enable access from VPNs"
 msgstr "تمكين الدخول من الشبكة الخاصة"
 
-#: ../plugin/controllers/i18n.py:507
+#: ../plugin/controllers/i18n.py:509
 msgid "Enable/Disable Screenshot on key press or"
 msgstr "تمكين/تعطيل تصوير الشاشة على أضغط مفتاح أو"
 
@@ -689,11 +697,11 @@ msgstr ""
 msgid "Enigma2 debug level"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:468
+#: ../plugin/controllers/i18n.py:469
 msgid "Enter new name for the bouquet"
 msgstr "ادخل اسم جديد للباقة"
 
-#: ../plugin/controllers/i18n.py:469
+#: ../plugin/controllers/i18n.py:470
 msgid "Enter new name for the marker"
 msgstr "ادخل اسم جديد للعلامة"
 
@@ -737,7 +745,7 @@ msgstr "خطاء ، لم يتم إنشاء %s باستخدام معدل البا
 msgid "Error: Bouquet %s could not deleted, OSError."
 msgstr "خطاء: تعذر حذف الباقة %s ,خطاء."
 
-#: ../plugin/controllers/i18n.py:487
+#: ../plugin/controllers/i18n.py:489
 msgid "Event not found"
 msgstr "لم يتم العثور علي الحدث"
 
@@ -757,7 +765,7 @@ msgstr "إستبعاد"
 msgid "Execute \"after event\" during timespan"
 msgstr "تنفيذ \"بعد الحدث\" أثناء المدة الزمنية"
 
-#: ../plugin/controllers/i18n.py:547
+#: ../plugin/controllers/i18n.py:549
 msgid "Export"
 msgstr "تصدير"
 
@@ -832,7 +840,7 @@ msgstr "الجمعة"
 msgid "Frontprocessor"
 msgstr "إصدار المعالج الامامي"
 
-#: ../plugin/controllers/i18n.py:542
+#: ../plugin/controllers/i18n.py:544
 msgid "Full remote"
 msgstr "جهاز تحكم عن بعد كامل"
 
@@ -932,7 +940,7 @@ msgstr ""
 msgid "Image folder"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:548
+#: ../plugin/controllers/i18n.py:550
 msgid "Import"
 msgstr "استيراد"
 
@@ -944,11 +952,11 @@ msgstr "يشمل"
 msgid "Include description"
 msgstr "يشمل الوصف"
 
-#: ../plugin/controllers/i18n.py:535
+#: ../plugin/controllers/i18n.py:537
 msgid "Include extended description"
 msgstr "يشمل الوصف الموسع"
 
-#: ../plugin/controllers/i18n.py:534
+#: ../plugin/controllers/i18n.py:536
 msgid "Include short description"
 msgstr "يشمل وصف مختصر"
 
@@ -964,11 +972,11 @@ msgstr "المعلومات"
 msgid "Inherit Autotimer"
 msgstr "تركة المؤقت التلقائي"
 
-#: ../plugin/controllers/i18n.py:527
+#: ../plugin/controllers/i18n.py:529
 msgid "Install Package"
 msgstr "تثبيت الحزمة"
 
-#: ../plugin/controllers/i18n.py:529
+#: ../plugin/controllers/i18n.py:531
 msgid "Installed"
 msgstr "تنصيب"
 
@@ -1046,7 +1054,7 @@ msgstr "سلسله التسمية"
 msgid "Last update"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:503
+#: ../plugin/controllers/i18n.py:505
 #, fuzzy
 msgid "Link speed"
 msgstr "سرعه الرابط"
@@ -1054,6 +1062,11 @@ msgstr "سرعه الرابط"
 #: ../plugin/controllers/models/timers.py:466
 msgid "List of Timers has been cleaned"
 msgstr "قائمة الموقتات تم تنظيفها"
+
+#: ../plugin/controllers/i18n.py:473
+#, fuzzy
+msgid "Loading..."
+msgstr "تحميل"
 
 #: ../plugin/controllers/i18n.py:185
 msgid "Location"
@@ -1108,15 +1121,15 @@ msgstr "تم إرسال الرسالة بنجاح!"
 msgid "Method"
 msgstr "طريقة"
 
-#: ../plugin/controllers/i18n.py:524
+#: ../plugin/controllers/i18n.py:526
 msgid "Minimal EPG list"
 msgstr "الحد الأدنى من قائمة دليل البرامج الإلكترونية"
 
-#: ../plugin/controllers/i18n.py:522
+#: ../plugin/controllers/i18n.py:524
 msgid "Minimal movie list"
 msgstr "الحد الأدنى من قائمة الأفلام"
 
-#: ../plugin/controllers/i18n.py:523
+#: ../plugin/controllers/i18n.py:525
 msgid "Minimal timer list"
 msgstr "الحد الأدنى لقائمة المؤقتات"
 
@@ -1153,7 +1166,7 @@ msgstr "الاثنين"
 msgid "Monthly"
 msgstr "شهرى"
 
-#: ../plugin/controllers/i18n.py:530
+#: ../plugin/controllers/i18n.py:532
 msgid "More"
 msgstr "المزيد"
 
@@ -1162,11 +1175,11 @@ msgstr "المزيد"
 msgid "More details"
 msgstr "مشاهدة التفاصيل"
 
-#: ../plugin/controllers/i18n.py:489
+#: ../plugin/controllers/i18n.py:491
 msgid "Movie database for EPG"
 msgstr "قاعدة بيانات من دليل البرامج الإلكترونية"
 
-#: ../plugin/controllers/i18n.py:536
+#: ../plugin/controllers/i18n.py:538
 msgid "Movie search"
 msgstr "البحث عن الأفلام"
 
@@ -1206,11 +1219,19 @@ msgstr "واجهة إنترنت الاوسكام"
 msgid "Name"
 msgstr "الاسم"
 
-#: ../plugin/controllers/i18n.py:466
+#: ../plugin/controllers/i18n.py:552
+msgid "Name (a-z)"
+msgstr ""
+
+#: ../plugin/controllers/i18n.py:553
+msgid "Name (z-a)"
+msgstr ""
+
+#: ../plugin/controllers/i18n.py:467
 msgid "Name of the Bouquet"
 msgstr "اسم الباقة"
 
-#: ../plugin/controllers/i18n.py:467
+#: ../plugin/controllers/i18n.py:468
 msgid "Name of the Marker"
 msgstr "اسم العلامة"
 
@@ -1218,7 +1239,7 @@ msgstr "اسم العلامة"
 msgid "Namespace"
 msgstr "مسافة للاسم"
 
-#: ../plugin/controllers/i18n.py:504
+#: ../plugin/controllers/i18n.py:506
 msgid "Network Shares"
 msgstr "مشاركات الشبكة"
 
@@ -1310,7 +1331,7 @@ msgstr "لا يوجد مزود قناة!"
 msgid "No service given!"
 msgstr "لا توجد قناة معينة!"
 
-#: ../plugin/controllers/i18n.py:516
+#: ../plugin/controllers/i18n.py:518
 msgid "No, cancel"
 msgstr "لا ، الغ"
 
@@ -1387,7 +1408,7 @@ msgstr "على أى خدمة"
 msgid "On same service"
 msgstr "على نفس الخدمة"
 
-#: ../plugin/controllers/i18n.py:480
+#: ../plugin/controllers/i18n.py:482
 msgid "Onid"
 msgstr "معرف الشبكة الاصلي"
 
@@ -1440,7 +1461,7 @@ msgstr "فتح في نافذة جديد"
 msgid "OpenWebInterface Enabled"
 msgstr "تميكن فتح واجهة المستخدم"
 
-#: ../plugin/controllers/i18n.py:491
+#: ../plugin/controllers/i18n.py:493
 msgid "OpenWebif Browser Settings"
 msgstr "إعدادات متصفح الإنترنت المفتوح"
 
@@ -1448,7 +1469,7 @@ msgstr "إعدادات متصفح الإنترنت المفتوح"
 msgid "OpenWebif Configuration"
 msgstr "تكوين فتح واجهة إستخدام الويب"
 
-#: ../plugin/controllers/i18n.py:492
+#: ../plugin/controllers/i18n.py:494
 msgid "OpenWebif Settings"
 msgstr "إعدادات الإنترنت المفتوح"
 
@@ -1457,7 +1478,7 @@ msgid "OpenWebif url: http://yourip:port"
 msgstr "رابط الإنترنت المفتوح: http://yourip:port"
 
 #: ../plugin/controllers/models/services.py:259
-#: ../plugin/controllers/i18n.py:483
+#: ../plugin/controllers/i18n.py:485
 msgid "Orbital Position"
 msgstr "الموقع المداري"
 
@@ -1465,7 +1486,7 @@ msgstr "الموقع المداري"
 msgid "Override found with alternative service"
 msgstr "وجود تجاوز مع الخدمة بديلة"
 
-#: ../plugin/controllers/i18n.py:513
+#: ../plugin/controllers/i18n.py:515
 msgid "Packages"
 msgstr "الباقات"
 
@@ -1486,7 +1507,7 @@ msgstr "تحليل"
 msgid "Parse Autotimer"
 msgstr "تحليل المؤقت التلقائي"
 
-#: ../plugin/controllers/i18n.py:478
+#: ../plugin/controllers/i18n.py:480
 msgid "Pcrpid"
 msgstr "معرف البي سي ار"
 
@@ -1522,16 +1543,16 @@ msgstr ""
 msgid "Playlist"
 msgstr "قائمة التشغيل"
 
-#: ../plugin/controllers/i18n.py:550
+#: ../plugin/controllers/i18n.py:557
 #, fuzzy
 msgid "Playlist Format"
 msgstr "قائمة التشغيل"
 
-#: ../plugin/controllers/i18n.py:470
+#: ../plugin/controllers/i18n.py:471
 msgid "Please enter filename"
 msgstr "الرجاء إدخال اسم الملف"
 
-#: ../plugin/controllers/i18n.py:475
+#: ../plugin/controllers/i18n.py:477
 msgid "Pmtpid"
 msgstr "معرف البي أم تي"
 
@@ -1543,7 +1564,7 @@ msgstr "التحكم في الطاقة"
 msgid "PowerTimer feature not available"
 msgstr "ميزة مؤقت الأغلاق غير متوفرة"
 
-#: ../plugin/controllers/i18n.py:506
+#: ../plugin/controllers/i18n.py:508
 msgid "Primetimes"
 msgstr "الأوقات الرئيسية"
 
@@ -1593,7 +1614,7 @@ msgstr "إعادة تشغيل الجهاز"
 msgid "Record a maximum of x times"
 msgstr "تسجيل كحد أقصى من المرات"
 
-#: ../plugin/controllers/i18n.py:474
+#: ../plugin/controllers/i18n.py:476
 msgid "Record+ZAP"
 msgstr "سجل+أنتقل"
 
@@ -1618,7 +1639,7 @@ msgid "Refresh now"
 msgstr "التحديث الآن"
 
 #: ../plugin/controllers/i18n.py:397 ../plugin/controllers/i18n.py:449
-#: ../plugin/controllers/i18n.py:457
+#: ../plugin/controllers/i18n.py:458
 msgid "Reload"
 msgstr "إعادة تحميل"
 
@@ -1626,15 +1647,15 @@ msgstr "إعادة تحميل"
 msgid "Remote"
 msgstr "ريموت التحكم عن بعد"
 
-#: ../plugin/controllers/i18n.py:525
+#: ../plugin/controllers/i18n.py:527
 msgid "Remove Package"
 msgstr "بسته را حذف کنید"
 
-#: ../plugin/controllers/i18n.py:463
+#: ../plugin/controllers/i18n.py:464
 msgid "Rename"
 msgstr "إعادة التسميه"
 
-#: ../plugin/controllers/i18n.py:459
+#: ../plugin/controllers/i18n.py:460
 msgid "Rename Bouquet"
 msgstr "أعاده تسمية الباقة"
 
@@ -1682,7 +1703,7 @@ msgstr "SLAAC"
 msgid "SNR"
 msgstr "جودة الإشارة"
 
-#: ../plugin/controllers/i18n.py:537
+#: ../plugin/controllers/i18n.py:539
 msgid "START TYPING"
 msgstr "أبدا الكتابة"
 
@@ -1754,6 +1775,10 @@ msgstr "البحث في قاعدة بيانات معلومات الأفلام ع
 msgid "Search KinoPoisk"
 msgstr "البحث عن كينو بويسك"
 
+#: ../plugin/controllers/i18n.py:457
+msgid "Search by name, sd / hd / uhd, or provider"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:342
 msgid "Search strictness"
 msgstr "دقة البحث"
@@ -1762,7 +1787,7 @@ msgstr "دقة البحث"
 msgid "Search type"
 msgstr "نوع البحث"
 
-#: ../plugin/controllers/i18n.py:538
+#: ../plugin/controllers/i18n.py:540
 msgid "Select IPK File for Upload"
 msgstr "أختار ملف النظام المحمي لرفعه"
 
@@ -1859,7 +1884,7 @@ msgstr "عرض دليل البرامج الإلكترونية"
 msgid "Show Full OpenWebif"
 msgstr "عرض كامل لصفحة واجهة الانترنت مفتوحة"
 
-#: ../plugin/controllers/i18n.py:488
+#: ../plugin/controllers/i18n.py:490
 msgid "Show Picon in channel list"
 msgstr "عرض الايقونة في قائمة القنوات"
 
@@ -1868,7 +1893,7 @@ msgstr "عرض الايقونة في قائمة القنوات"
 msgid "Show STB name in header"
 msgstr "عرض أسم الجهاز في العنوان الرئيسي"
 
-#: ../plugin/controllers/i18n.py:544
+#: ../plugin/controllers/i18n.py:546
 msgid "Show Service type in channel list"
 msgstr "عرض نوع القناة في قائمة القنوات"
 
@@ -1880,7 +1905,7 @@ msgstr ""
 msgid "Show box name in header"
 msgstr "عرض أسم الجهاز في العنوان الرئيسي"
 
-#: ../plugin/controllers/i18n.py:543
+#: ../plugin/controllers/i18n.py:545
 msgid "Show details"
 msgstr "مشاهدة التفاصيل"
 
@@ -1892,11 +1917,11 @@ msgstr "عرض وحدة التحكم عن بعد بشكل كامل"
 msgid "Show in Extensionsmenu"
 msgstr "عرض في قائمة الملحقات"
 
-#: ../plugin/controllers/i18n.py:546
+#: ../plugin/controllers/i18n.py:548
 msgid "Show picon background"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:545
+#: ../plugin/controllers/i18n.py:547
 #, fuzzy
 msgid "Show picons"
 msgstr "مشاهدة التفاصيل"
@@ -1905,7 +1930,7 @@ msgstr "مشاهدة التفاصيل"
 msgid "Shutdown"
 msgstr "إغلاق"
 
-#: ../plugin/controllers/i18n.py:481
+#: ../plugin/controllers/i18n.py:483
 msgid "Sid"
 msgstr "معرف القناة"
 
@@ -1959,11 +1984,15 @@ msgstr "البرامج"
 msgid "Sorry this page is not yet implemented"
 msgstr "عذرا لم يتم تنفيذ هذه الصفحة بعد"
 
-#: ../plugin/controllers/i18n.py:494
+#: ../plugin/controllers/i18n.py:551
+msgid "Sort"
+msgstr ""
+
+#: ../plugin/controllers/i18n.py:496
 msgid "Spinner"
 msgstr "الغزال"
 
-#: ../plugin/controllers/i18n.py:482
+#: ../plugin/controllers/i18n.py:484
 msgid "Sref"
 msgstr "مرجع القناة"
 
@@ -1991,7 +2020,7 @@ msgstr "تشغيل الوقت هو بعد انتهاء الوقت"
 msgid "Stream"
 msgstr "‫Stream"
 
-#: ../plugin/controllers/i18n.py:556
+#: ../plugin/controllers/i18n.py:563
 #, fuzzy
 msgid "Stream Clients"
 msgstr "‫Stream"
@@ -2026,7 +2055,7 @@ msgstr "تيرابايت"
 msgid "TV"
 msgstr "التلفزيون"
 
-#: ../plugin/controllers/i18n.py:498
+#: ../plugin/controllers/i18n.py:500
 msgid "TV Guide"
 msgstr "دليل التلفزيون"
 
@@ -2090,7 +2119,7 @@ msgstr "تم حذف المؤقت' %s ' بنجاح"
 msgid "The timer '%s' now recorded! Not disabled!"
 msgstr "المؤقت '%s' الأن يسجل! ليس معطلا!"
 
-#: ../plugin/controllers/i18n.py:493
+#: ../plugin/controllers/i18n.py:495
 msgid "Theme"
 msgstr "سمة"
 
@@ -2115,7 +2144,7 @@ msgstr "الخميس"
 msgid "Time"
 msgstr "الوقت"
 
-#: ../plugin/controllers/i18n.py:499
+#: ../plugin/controllers/i18n.py:501
 msgid "Timeline"
 msgstr "الجدول الزمني"
 
@@ -2152,7 +2181,7 @@ msgstr "لم يتم تمكين المؤقت ' %s ' اثناء التعارض"
 msgid "Timer '%s' not saved while Conflict"
 msgstr "لم يتم حفظ المؤقت ' %s ' اثناء التعارض"
 
-#: ../plugin/controllers/i18n.py:486
+#: ../plugin/controllers/i18n.py:488
 msgid "Timer Added"
 msgstr "وأضاف المؤقت"
 
@@ -2201,7 +2230,7 @@ msgstr "الترجمة إلى الاسبانية"
 msgid "Try Guessing"
 msgstr "محاولة التخمين"
 
-#: ../plugin/controllers/i18n.py:479
+#: ../plugin/controllers/i18n.py:481
 msgid "Tsid"
 msgstr "إرسال معرف المحطة"
 
@@ -2267,31 +2296,31 @@ msgstr "أمر مجهول: ' %s '"
 msgid "Upcoming Events"
 msgstr "الأحداث القادمة"
 
-#: ../plugin/controllers/i18n.py:528
+#: ../plugin/controllers/i18n.py:530
 msgid "Update"
 msgstr "التحديث"
 
-#: ../plugin/controllers/i18n.py:526
+#: ../plugin/controllers/i18n.py:528
 msgid "Update Package"
 msgstr "تحديث الباقة"
 
-#: ../plugin/controllers/i18n.py:531
+#: ../plugin/controllers/i18n.py:533
 msgid "Update from Feed"
 msgstr "تحديث من الفييد"
 
-#: ../plugin/controllers/i18n.py:532
+#: ../plugin/controllers/i18n.py:534
 msgid "Upgrade all Packages"
 msgstr "قم بترقية جميع الحزم"
 
-#: ../plugin/controllers/i18n.py:541
+#: ../plugin/controllers/i18n.py:543
 msgid "Upload File Error"
 msgstr "خطاء رفع الملف"
 
-#: ../plugin/controllers/i18n.py:540
+#: ../plugin/controllers/i18n.py:542
 msgid "Upload package"
 msgstr "آپلود بسته"
 
-#: ../plugin/controllers/i18n.py:539
+#: ../plugin/controllers/i18n.py:541
 msgid "Uploaded Files"
 msgstr "الملفات التي تم رفعها"
 
@@ -2299,7 +2328,7 @@ msgstr "الملفات التي تم رفعها"
 msgid "Use a custom location"
 msgstr "استخدام موقع مخصص"
 
-#: ../plugin/controllers/i18n.py:551
+#: ../plugin/controllers/i18n.py:558
 msgid "Use as PiP if possible"
 msgstr ""
 
@@ -2317,7 +2346,7 @@ msgstr "إستخدام مخصص لإسم الجهاز"
 msgid "Use custom box name"
 msgstr "إستخدام مخصص لإسم الجهاز"
 
-#: ../plugin/controllers/i18n.py:515 ../plugin/plugin.py:138
+#: ../plugin/controllers/i18n.py:517 ../plugin/plugin.py:138
 msgid "Use new design"
 msgstr "استخدام التصميم الجديد"
 
@@ -2361,7 +2390,7 @@ msgstr "درجه الصوت"
 msgid "Volume Control"
 msgstr "التحكم في مستوي الصوت"
 
-#: ../plugin/controllers/i18n.py:477
+#: ../plugin/controllers/i18n.py:479
 msgid "Vpid"
 msgstr "معرف الفديو"
 
@@ -2389,7 +2418,7 @@ msgstr "تحذير"
 msgid "We"
 msgstr "الأربعاء"
 
-#: ../plugin/controllers/i18n.py:500
+#: ../plugin/controllers/i18n.py:502
 msgid "Web TV"
 msgstr "التلفزيون عبر الانترنت"
 
@@ -2430,11 +2459,11 @@ msgstr "النافذة"
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "تنسيق المعلمة الخاطئ ' ضبط = %s '. استخدام مجموعه = ضبط15 "
 
-#: ../plugin/controllers/i18n.py:533
+#: ../plugin/controllers/i18n.py:535
 msgid "Yes"
 msgstr "نعم"
 
-#: ../plugin/controllers/i18n.py:517
+#: ../plugin/controllers/i18n.py:519
 msgid "Yes, delete it"
 msgstr "نعم، أحذفه"
 
@@ -2442,7 +2471,7 @@ msgstr "نعم، أحذفه"
 msgid "Yes/No"
 msgstr "نعم/لا"
 
-#: ../plugin/controllers/i18n.py:520
+#: ../plugin/controllers/i18n.py:522
 msgid "You need to write something!"
 msgstr "يجب ان تكتب شيئا"
 
@@ -2482,7 +2511,7 @@ msgstr "تم التعطيل"
 msgid "do nothing"
 msgstr "لا تفعل شيئ"
 
-#: ../plugin/controllers/i18n.py:485
+#: ../plugin/controllers/i18n.py:487
 msgid "error! Loading Page"
 msgstr "الخطا! تحميل الصفحة"
 
@@ -2643,11 +2672,11 @@ msgstr "النوع %s ليس رقما"
 msgid "unknown"
 msgstr "غير معروف"
 
-#: ../plugin/controllers/i18n.py:505
+#: ../plugin/controllers/i18n.py:507
 msgid "using"
 msgstr "استخدام"
 
-#: ../plugin/controllers/i18n.py:473
+#: ../plugin/controllers/i18n.py:475
 msgid "via"
 msgstr "بواسطة"
 

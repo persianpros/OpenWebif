@@ -473,7 +473,7 @@ function loadeventepg(id, ref, picon) {
 	if (typeof picon !== 'undefined') {
 		channelpicon = picon;
 	} else {
-		delete channelpicon;
+		channelpicon = null;
 	}
 	var url = 'ajax/event?idev=' + id + '&sRef=' + escape(ref);
 	$("#eventdescriptionII").load(url);
@@ -1160,19 +1160,19 @@ function btn_saveTimer() {
 
 //Skin changer
 function skinChanger() {
-	$('.right-sidebar .demo-choose-skin li').on('click', function () {
+	$('.right-sidebar .skin-switcher li').on('click', function () {
 		var $body = $('body');
 		var $this = $(this);
 
-		var existTheme = $('.right-sidebar .demo-choose-skin li.active').data('theme');
-		$('.right-sidebar .demo-choose-skin li').removeClass('active');
+		var existTheme = $('.right-sidebar .skin-switcher li.active').data('theme');
+		$('.right-sidebar .skin-switcher li').removeClass('active');
 		$body.removeClass('theme-' + existTheme);
 		$this.addClass('active');
 
 		$body.addClass('theme-' + $this.data('theme'));
 		
-		$('.progress-bar, #moviedirbtn, .atbtn, .responsivebtn, .vti-colored-card').removeClass('bg-' + existTheme);
-		$('.progress-bar, #moviedirbtn, .atbtn, .responsivebtn, .vti-colored-card').addClass('bg-' + $this.data('theme'));
+		$('.progress-bar, #moviedirbtn, .responsivebtn, .vti-colored-card').removeClass('bg-' + existTheme);
+		$('.progress-bar, #moviedirbtn, .responsivebtn, .vti-colored-card').addClass('bg-' + $this.data('theme'));
 		$('.lever').removeClass('switch-col-' + existTheme);
 		$('.lever').addClass('switch-col-' + $this.data('theme'));
 		$('.radio-vti').removeClass('radio-col-' + existTheme);
@@ -1270,7 +1270,7 @@ function VTiWebConfig() {
 //Skin tab content set height and show scroll
 function setSkinListHeightAndScroll(isFirstTime) {
 	var height = $(window).height() - ($('.navbar').innerHeight() + $('.right-sidebar .nav-tabs').outerHeight());
-	var $el = $('.demo-choose-skin');
+	var $el = $('.skin-switcher');
 
 	if (!isFirstTime){
 		$el.slimScroll({ destroy: true }).height('auto');
@@ -1291,9 +1291,9 @@ function initSkin() {
 		var $body = $('body');
 		var existTheme = $body.attr('class');
 		existTheme = existTheme.replace('theme-', '');
-		$('.right-sidebar .demo-choose-skin li').removeClass('active');
+		$('.right-sidebar .skin-switcher li').removeClass('active');
 		$body.removeClass('theme-' + existTheme);
-		$('.right-sidebar .demo-choose-skin li[data-theme="' + existTheme + '"]').addClass('active');
+		$('.right-sidebar .skin-switcher li[data-theme="' + existTheme + '"]').addClass('active');
 		$body.addClass('theme-' +  existTheme);
 }
 

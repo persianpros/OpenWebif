@@ -30,7 +30,7 @@
 		.remote__group { margin: 0 auto; display: flex; justify-content: center; max-width: 156px; flex-wrap: wrap; }
 		.remote__group.collapse { display: none; }
 		.remote__group.collapse.in { display: flex; }
-		.remote__button { border: none; flex: 0 0 23%; height: 38px; margin: 1px; box-shadow: 0 0 10px rgba(0,0,0,.2); display: block; background-color: #fff; overflow: hidden; cursor: pointer; }
+		.remote__button { outline: none; border: none; flex: 0 0 23%; height: 38px; margin: 1px; box-shadow: 0 0 10px rgba(0,0,0,.2); display: block; background-color: #fff; overflow: hidden; cursor: pointer; transition: all 0.2s ease; }
 		.remote__group--numerical .remote__button, 
 		.remote__group--directional .remote__button { flex: 0 0 31%; height: 48px; }
 		.remote__group--numerical .remote__button i, 
@@ -38,8 +38,7 @@
 		.remote__button--power i { margin-left: -1px; padding: 2px; background-color: #F44336; color: #fff !important; border-radius: 50%; }
 		.remote__button--arrow { background-color: rgba(0,0,0,.12); }
 		.remote__button--colour { background-color: #707070; }
-		.remote__button i:hover { transition: all 0.2s ease; }
-		.remote__button i:hover { transform: scale(1.2); }
+		.remote__button:focus i, .remote__button:hover i { transform: scale(1.2); }
 		.remote__group .material-icons { color: #707070; text-shadow: 1px 1px 2px rgba(0,0,0,0.4); }
 	</style>
 
@@ -98,7 +97,7 @@
 						<li class="osd-toggle" id="responsive_osd_stream"></li>
 						<li class="osd-toggle" id="responsive_osd_transcoding"></li>
 						<li class="osd-toggle" id="responsive_mute_status"></li>
-						<li class="osd-toggle" id="responsive_vol_slider"><a href="#"><div id="volslider" style="width:100px;margin-top:2px;"></div></a></li>
+						<li class="osd-toggle" id="responsive_vol_slider"><a href="javascript:void(0);"><div id="volslider" style="width:100px;margin-top:2px;"></div></a></li>
 						<li class="osd-toggle" id="responsive_vol_value"><a><div class="dropdown-toggle" id="volumevalue"><b><span class="curvolume"></span></b></div></a></li>
 						<!-- Call Search -->
 						<li><a href="javascript:void(0);" class="js-search-epg" data-close="true" title="$tstrings['epgsearch']" ><i class="material-icons">search</i></a></li>
@@ -331,6 +330,7 @@
 									#end if
 								#end if
 							#end for
+								<li><a href="#current">Channel Info</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -448,90 +448,90 @@
 								</div>
 							</li>
 						</ul>
-						<ul class="demo-choose-skin">
+						<ul class="skin-switcher">
 							<li data-theme="black">
-								<div class="black"></div>
-								<span>Black</span>
+								<span class="color-swatch"></span>
+								<label>Black</label>
 							</li>
 							<li data-theme="grey-darken-4">
-								<div class="grey-darken-4"></div>
-								<span>Dark Grey</span>
+								<span class="color-swatch"></span>
+								<label>Dark Grey</label>
 							</li>
 							<li data-theme="blue-grey">
-								<div class="blue-grey"></div>
-								<span>Blue Grey</span>
+								<span class="color-swatch"></span>
+								<label>Blue Grey</label>
 							</li>
 							<li data-theme="grey">
-								<div class="grey"></div>
-								<span>Grey</span>
+								<span class="color-swatch"></span>
+								<label>Grey</label>
 							</li>
 							<li data-theme="red" class="active">
-								<div class="red"></div>
-								<span>Red</span>
+								<span class="color-swatch"></span>
+								<label>Red</label>
 							</li>
 							<li data-theme="pink">
-								<div class="pink"></div>
-								<span>Pink</span>
+								<span class="color-swatch"></span>
+								<label>Pink</label>
 							</li>
 							<li data-theme="purple">
-								<div class="purple"></div>
-								<span>Purple</span>
+								<span class="color-swatch"></span>
+								<label>Purple</label>
 							</li>
 							<li data-theme="deep-purple">
-								<div class="deep-purple"></div>
-								<span>Deep Purple</span>
+								<span class="color-swatch"></span>
+								<label>Deep Purple</label>
 							</li>
 							<li data-theme="indigo">
-								<div class="indigo"></div>
-								<span>Indigo</span>
+								<span class="color-swatch"></span>
+								<label>Indigo</label>
 							</li>
 							<li data-theme="blue">
-								<div class="blue"></div>
-								<span>Blue</span>
+								<span class="color-swatch"></span>
+								<label>Blue</label>
 							</li>
 							<li data-theme="light-blue">
-								<div class="light-blue"></div>
-								<span>Light Blue</span>
+								<span class="color-swatch"></span>
+								<label>Light Blue</label>
 							</li>
 							<li data-theme="cyan">
-								<div class="cyan"></div>
-								<span>Cyan</span>
+								<span class="color-swatch"></span>
+								<label>Cyan</label>
 							</li>
 							<li data-theme="teal">
-								<div class="teal"></div>
-								<span>Teal</span>
+								<span class="color-swatch"></span>
+								<label>Teal</label>
 							</li>
 							<li data-theme="green">
-								<div class="green"></div>
-								<span>Green</span>
+								<span class="color-swatch"></span>
+								<label>Green</label>
 							</li>
 							<li data-theme="light-green">
-								<div class="light-green"></div>
-								<span>Light Green</span>
+								<span class="color-swatch"></span>
+								<label>Light Green</label>
 							</li>
 							<li data-theme="lime">
-								<div class="lime"></div>
-								<span>Lime</span>
+								<span class="color-swatch"></span>
+								<label>Lime</label>
 							</li>
 							<li data-theme="yellow">
-								<div class="yellow"></div>
-								<span>Yellow</span>
+								<span class="color-swatch"></span>
+								<label>Yellow</label>
 							</li>
 							<li data-theme="amber">
-								<div class="amber"></div>
-								<span>Amber</span>
+								<span class="color-swatch"></span>
+								<label>Amber</label>
 							</li>
 							<li data-theme="orange">
-								<div class="orange"></div>
-								<span>Orange</span>
+								<span class="color-swatch"></span>
+								<label>Orange</label>
 							</li>
 							<li data-theme="deep-orange">
-								<div class="deep-orange"></div>
-								<span>Deep Orange</span>
+								<span class="color-swatch"></span>
+								<label>Deep Orange</label>
 							</li>
 							<li data-theme="brown">
-								<div class="brown"></div>
-								<span>Brown</span>
+								<span class="color-swatch"></span>
+								<label>Brown</label>
 							</li>
 						</ul>
 					</div>
@@ -570,7 +570,7 @@
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header bg-red">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<button type="button" class="close" data-dismiss="modal"><i class="material-icons material-icons-centered">close</i></button>
 				<h4 class="modal-title"><i class="material-icons material-icons-centered">error</i><span>Timer conflict</span></h4>
 			</div>
 				<div class="modal-body" style="max-height: calc(100vh - 180px); overflow-y: auto;">
@@ -586,7 +586,7 @@
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header vti-colored-card bg-$skinColor">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<button type="button" class="close" data-dismiss="modal"><i class="material-icons material-icons-centered">close</i></button>
 				<span class="modal-title"><i class="material-icons material-icons-centered">wifi_tethering</i>&nbsp;Streams</span>
 			</div>
 				<div class="modal-body" style="max-height: calc(100vh - 180px); overflow-y: auto;">
@@ -604,7 +604,7 @@
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header vti-colored-card bg-$skinColor">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<button type="button" class="close" data-dismiss="modal"><i class="material-icons material-icons-centered">close</i></button>
 				<h4 class="modal-title"><i class="material-icons material-icons-centered">alarm</i><span>$tstrings['timers']</span></h4>
 			</div>
 				<div class="modal-body" style="max-height: calc(100vh - 180px); overflow-y: auto;">
@@ -623,7 +623,7 @@
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<button type="button" class="close" data-dismiss="modal"><i class="material-icons material-icons-centered">close</i></button>
 				<h4 class="modal-title"><i class="material-icons material-icons-centered">view_list</i><span>$tstrings['epg']</span></h4>
 			</div>
 			<div class="modal-body" style="max-height: calc(100vh - 180px); overflow-y: auto;">
@@ -639,7 +639,7 @@
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<button type="button" class="close" data-dismiss="modal"><i class="material-icons material-icons-centered">close</i></button>
 			</div>
 				<div class="modal-body" style="max-height: calc(100vh - 180px); overflow-y: auto;">
 					<div id="eventdescriptionII"></div>
@@ -654,7 +654,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<button type="button" class="close" data-dismiss="modal"><i class="material-icons material-icons-centered">close</i></button>
 				<h4 class="modal-title" id="timerEditTitle"></h4>
 			</div>
 				<div class="modal-body" style="max-height: calc(100vh - 180px); overflow-y: auto;">
@@ -662,7 +662,7 @@
 				</div>
 			<div class="modal-footer">
 				<button type="button" class="btn waves-effect btn-default" data-dismiss="modal">$tstrings['close']</button>
-				<button type="button" class="btn waves-effect responsivebtn bg-$skinColor" data-dismiss="modal" onclick="btn_saveTimer(); return false;">$tstrings['save']</button>
+				<button type="button" class="btn waves-effect responsivebtn btn-themed" data-dismiss="modal" onclick="btn_saveTimer(); return false;">$tstrings['save']</button>
 			</div>
 		</div>
 	</div>
@@ -671,14 +671,14 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<button type="button" class="close" data-dismiss="modal"><i class="material-icons material-icons-centered">close</i></button>
 				<h4 class="modal-title"><i class="material-icons material-icons-centered">settings_power</i><span>$tstrings['powercontrol'].replace(" ","&nbsp;")</span></h4>
 			</div>
 			<div class="modal-body" style="max-height: calc(100vh - 180px); overflow-y: auto;">
 				<hr/>
 				<div class="row clearfix">
 					<div class="col-xs-12 align-center">
-						<button type="button" class="btn waves-effect responsivebtn responsivebtnpower bg-$skinColor" class="theme-link-color" data-dismiss="modal" href="#" onclick="handle_power_state_dialog(new_power_state = 0); return false">
+						<button type="button" onclick="handle_power_state_dialog(new_power_state = 0); return false;" class="btn waves-effect responsivebtn responsivebtnpower btn-themed" data-dismiss="modal">
 							<h4>
 								<i class="material-icons">power_settings_new</i>
 								<span>$tstrings['standby_toggle']</span>
@@ -689,7 +689,7 @@
 				<hr/>
 				<div class="row clearfix">
 					<div class="col-xs-12 align-center">
-						<button type="button" class="btn waves-effect responsivebtn responsivebtnpower bg-$skinColor" class="theme-link-color" data-dismiss="modal" href="#" onclick="handle_power_state_dialog(new_power_state = 1); return false">
+						<button type="button" onclick="handle_power_state_dialog(new_power_state = 1); return false;" class="btn waves-effect responsivebtn responsivebtnpower btn-themed" data-dismiss="modal">
 							<h4>
 								<i class="material-icons">vertical_align_bottom</i>
 								<span>$tstrings['deep_standby']</span>
@@ -700,7 +700,7 @@
 				<hr/>
 				<div class="row clearfix">
 					<div class="col-xs-12 align-center">
-						<button type="button" class="btn waves-effect responsivebtn responsivebtnpower bg-$skinColor" data-dismiss="modal" href="#" onclick="handle_power_state_dialog(new_power_state = 2); return false">
+						<button type="button" onclick="handle_power_state_dialog(new_power_state = 2); return false;" class="btn waves-effect responsivebtn responsivebtnpower btn-themed" data-dismiss="modal">
 							<h4>
 								<i class="material-icons">loop</i>
 								<span>$tstrings['reboot_box']</span>
@@ -711,7 +711,7 @@
 				<hr/>
 				<div class="row clearfix">
 					<div class="col-xs-12 align-center">
-						<button type="button" class="btn waves-effect responsivebtn responsivebtnpower bg-$skinColor" class="theme-link-color" data-dismiss="modal" href="#" onclick="handle_power_state_dialog(new_power_state = 3); return false">
+						<button type="button" onclick="handle_power_state_dialog(new_power_state = 3); return false" class="btn waves-effect responsivebtn responsivebtnpower btn-themed" class="theme-link-color" data-dismiss="modal">
 							<h4>
 								<i class="material-icons">settings_backup_restore</i>
 								<span>$tstrings['restart_gui']</span>
@@ -721,7 +721,7 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default waves-effect" data-dismiss="modal" onclick="closeMessageModal(); return false;">$tstrings['close']</button>
+				<button type="button" onclick="closeMessageModal(); return false;" class="btn btn-default waves-effect" data-dismiss="modal">$tstrings['close']</button>
 			</div>
 		</div>
 	</div>
@@ -730,7 +730,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" onclick="closeMessageModal(); return false;" data-dismiss="modal">&times;</button>
+				<button type="button" onclick="closeMessageModal(); return false;" class="close" data-dismiss="modal"><i class="material-icons material-icons-centered">close</i></button>
 			</div>
 			<div class="modal-body" style="max-height: calc(100vh - 180px); overflow-y: auto;">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -788,8 +788,8 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default waves-effect" data-dismiss="modal" onclick="closeMessageModal(); return false;">$tstrings['close']</button>
-				<button type="button" class="btn waves-effect responsivebtn bg-$skinColor"  onclick="sendModalMessage(); return false;">$tstrings['sendamessage'].replace(" ","&nbsp;")</button>
+				<button type="button" onclick="closeMessageModal(); return false;" class="btn btn-default waves-effect" data-dismiss="modal">$tstrings['close']</button>
+				<button type="button" onclick="sendModalMessage(); return false;" class="btn waves-effect responsivebtn btn-themed">$tstrings['sendamessage'].replace(" ","&nbsp;")</button>
 			</div>
 		</div>
 	</div>
@@ -813,20 +813,20 @@
 	});
 	SetLSValue('TimerListOffset',0);
 </script>
-<script src="themes/absb/plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="themes/absb/plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
-<script src="themes/absb/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
-<script src="themes/absb/plugins/autosize/autosize.min.js"></script>
-<script src="themes/absb/plugins/node-waves/waves.min.js"></script>
-<script src="themes/absb/plugins/jquery-countto/jquery.countTo.js"></script>
-<script src="themes/absb/plugins/nouislider/nouislider.min.js"></script>
-<script src="themes/absb/plugins/sweetalert/sweetalert.min.js"></script>
-<script src="themes/absb/plugins/momentjs/moment.js"></script>
-<script src="themes/absb/plugins/screenfull/screenfull.min.js"></script>
+<script src="/themes/absb/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="/themes/absb/plugins/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script src="/themes/absb/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+<script src="/themes/absb/plugins/autosize/autosize.min.js"></script>
+<script src="/themes/absb/plugins/node-waves/waves.min.js"></script>
+<script src="/themes/absb/plugins/jquery-countto/jquery.countTo.js"></script>
+<script src="/themes/absb/plugins/nouislider/nouislider.min.js"></script>
+<script src="/themes/absb/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="/themes/absb/plugins/momentjs/moment.js"></script>
+<script src="/themes/absb/plugins/screenfull/screenfull.min.js"></script>
 <script src="/themes/absb/js/owif.min.js"></script>
-<script src="themes/absb/js/vti-bootstrap-date-timepicker.js"></script>
-<script src="themes/absb/js/admin.js"></script>
-<script src="themes/absb/js/vti-responsive.js"></script>
+<script src="/themes/absb/js/vti-bootstrap-date-timepicker.min.js"></script>
+<script src="/themes/absb/js/admin.min.js"></script>
+<script src="/themes/absb/js/vti-responsive.min.js"></script>
 <script>initJsTranslationAddon($dumps($tstrings))</script>
 
 <script>
