@@ -42,14 +42,14 @@ def getAllInfo():
 	info['grabpip'] = grabpip or 0
 
 	lcd = 0
-	if "lcd" in model or getDisplayType() in ("bwlcd96","bwlcd128","bwlcd140","bwlcd255","colorlcd128","colorlcd220","colorlcd400","colorlcd480","colorlcd720","colorlcd800"):
+	if "lcd" in model or getDisplayType() in ("bwlcd96", "bwlcd128", "bwlcd140", "bwlcd255", "colorlcd128", "colorlcd220", "colorlcd400", "colorlcd480", "colorlcd720", "colorlcd800"):
 		lcd = 1
 
 	info['lcd'] = lcd or 0
 
 	remote = getRCName()
 
-	if getImageArch() == "sh4" and remote not in ("nbox","hl101"):
+	if getImageArch() == "sh4" and remote not in ("nbox", "hl101"):
 		remote = "spark"
 
 	info['remote'] = remote
