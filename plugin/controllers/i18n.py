@@ -394,7 +394,7 @@ tstrings = {
 	'at_filter_weekday': _("Weekday"),
 	'at_add': _("Add"),
 	'at_del': _("Delete"),
-	'at_reload': _("Reload"),
+	'at_reset': _("Reset"),
 	'at_save': _("Save"),
 	'at_parse': _("Parse"),
 	'at_simulate': _("Simulate"),
@@ -402,6 +402,9 @@ tstrings = {
 	'at_settings': _("Settings"),
 	'at_delete_autotimer_question': _("Do you really want to delete the AT"),
 	'at_label_series': _("Label series"),
+	'at_new': _("New"),
+	'at_name_hint': _("Enter a name for this AutoTimer"),
+	'at_text_hint': _("Enter the text to find in the EPG"),
 
 	'ats_auto_timer_settings': _("AutoTimer Settings"),
 	'ats_autopoll': _("AutoPoll"),
@@ -422,7 +425,7 @@ tstrings = {
 	'ats_refresh_all': _("All"),
 	'ats_editor': _("Editor"),
 	'ats_editor_plain': _("Plain"),
-	'ats_editor_wizzard': _("Wizzard"),
+	'ats_editor_wizard': _("Wizard"),
 
 	'er_enabled': _("Enabled"),
 	'er_enable_messages': _("Enable Messages"),

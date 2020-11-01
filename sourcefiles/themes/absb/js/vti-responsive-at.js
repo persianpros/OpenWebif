@@ -1,3 +1,18 @@
+var choicesConfig = {
+  removeItemButton: true,
+  duplicateItemsAllowed: false,
+  resetScrollPosition: false,
+  shouldSort: false,
+  placeholder: true,
+  placeholderValue: 'placeholderValue',
+  searchPlaceholderValue: 'searchPlaceholderValue',
+  renderSelectedChoices: 'always',
+  loadingText: 'Loading...',
+  noResultsText: 'No results found',
+  noChoicesText: 'No choices to choose from',
+  itemSelectText: '',
+};
+
 function toUnixDate(date){
 	var d = moment(date, "DD.MM.YY").unix();
 	return d;
@@ -134,7 +149,7 @@ function initValues () {
 			} else
 				showError('');
 	});
-	$('#before').val(moment(_datea).format('DD.MM.YY'));
+  $('#before').val(moment(_datea).format('DD.MM.YY'));
 }
 
 
@@ -360,10 +375,8 @@ AutoTimerObj.prototype.UpdateUI = function(){
 	$('#enabled').prop('checked', this.enabled); 
 	$('#name').val(this.name);
 	$('#match').val(this.match);
-	$('#searchType').val(this.searchType);
-	$('#searchType').selectpicker('refresh');
-	$('#searchCase').val(this.searchCase);
-	$('#searchCase').selectpicker('refresh');
+	$('#searchType').val(this.searchType).selectpicker('refresh');
+	$('#searchCase').val(this.searchCase).selectpicker('refresh');
 	$('#justplay').val(this.justplay);
 	$('#overrideAlternatives').prop('checked', this.overrideAlternatives); 
 	$('#timeSpan').prop('checked',this.timeSpan);
@@ -396,8 +409,7 @@ AutoTimerObj.prototype.UpdateUI = function(){
 			$('#beforeE').hide();
 		}
 	}
-	$("#avoidDuplicateDescription").val(this.avoidDuplicateDescription);
-	$('#avoidDuplicateDescription').selectpicker('refresh');
+	$("#avoidDuplicateDescription").val(this.avoidDuplicateDescription).selectpicker('refresh');
 	
 	if(this.location) {
 		$('#location').val(this.location);
@@ -436,15 +448,15 @@ AutoTimerObj.prototype.UpdateUI = function(){
 	$.each(this.Channels, function(index, value) {
 		$('#channels option[value="' + value + '"]').prop("selected", true);
 	});
-	$('#bouquets').selectpicker('refresh');
-	$('#channels').selectpicker('refresh');
+	// $('#bouquets').selectpicker('refresh');
+  // $('#channels').selectpicker('refresh');
 	$('#Bouquets').prop('checked',(this.Bouquets.length>0));
 	$('#Channels').prop('checked',(this.Channels.length>0));
 	$('#tags').val(null);
 	$.each(this.Tags, function(index, value) {
 		$('#tags option[value="' + value + '"]').prop("selected", true);
 	});
-	$('#tags').selectpicker('refresh');
+	// $('#tags').selectpicker('refresh');
 	var rc = $('#filterlist tr').length;
 	if(rc>1)
 	{
@@ -456,7 +468,8 @@ AutoTimerObj.prototype.UpdateUI = function(){
 		c++;
 		AddFilter(value.t,value.w,value.v);
 	});
-	$.AdminBSB.select.activate();
+  $.AdminBSB.select.activate();
+
 	$('#Filter').prop('checked',(c>0));
 	$('#counter').val(this.counter);
 	$('#left').val(this.left);
@@ -728,18 +741,28 @@ function checkValues () {
 		$('#LocationE').hide();
 	if ($('#Bouquets').is(':checked') === true)
 		$('#BouquetsE').show();
-	else
-		$('#BouquetsE').hide();
+	else {
+    $('#BouquetsE').hide();
+    try {
+      choicesB.removeActiveItems();
+    } catch(e){}
+  }
 	if ($('#Channels').is(':checked') === true)
 		$('#ChannelsE').show();
-	else
-		$('#ChannelsE').hide();
-
+	else {
+    $('#ChannelsE').hide();
+    try {
+      choicesC.removeActiveItems();
+    } catch(e){}
+  }
 	if ($('#Tags').is(':checked') === true) {
 		$('#TagsE').show();
 	}
 	else {
-		$('#TagsE').hide();
+    $('#TagsE').hide();
+    try {
+      choicesT.removeActiveItems();
+    } catch(e){}
 	}
 
 	if ($('#Filter').is(':checked') === true) {
@@ -853,9 +876,7 @@ function test_simulateAT(simulate)
 	});
 }
 
-
 function InitPage() {
-
 	$('#timeSpan').click(function() { checkValues();});
 	$('#timeSpanAE').click(function() { checkValues();});
 	$('#timeFrame').click(function() { checkValues();});
@@ -873,7 +894,7 @@ function InitPage() {
 	$('#vps').change(function () {checkValues();});
 	initValues ();
 	checkValues();
-	getData();
+  getData();
 
 	$( ".FM" ).change(function() {
 	
@@ -887,7 +908,11 @@ function InitPage() {
 			nf.find(".FS").hide();
 			nf.find(".FI").show();
 		}
-	});
+  });
+  
+  var choicesT = new Choices('#tags', choicesConfig);
+  var choicesC = new Choices('#channels', choicesConfig);
+  var choicesB = new Choices('#bouquets', choicesConfig);
 }
 
 function delAT()
@@ -951,10 +976,8 @@ function addAT(evt)
 		xml += '</timer></timers>';
 	}
 	var xmlDoc = $.parseXML( xml );
-	
 	$(xmlDoc).find("timer").each(function () {
-		$( "#atlist" ).append($("<option data-id='" + $(this).attr("id") + "' value='" + $(this).attr("id") + "' selected >" + $(this).attr("name") + "</option>"));
-		$('#atlist').selectpicker('refresh');
+		$('#atlist').append($("<option data-id='" + $(this).attr("id") + "' value='" + $(this).attr("id") + "' data-x-selected >" + $(this).attr("name") + "</option>")).selectpicker('refresh');
 		CurrentAT = new AutoTimerObj($(this));
 		CurrentAT.isNew = true;
 		CurrentAT.MustSave = true;
@@ -1007,18 +1030,15 @@ function Parse(keepSelection) {
 		return a1> b1? 1: -1;
 	});
 	
-	var selectoptions = "";
-	var i = 0;
+	var selectoptions = "<option selected disabled>Select an AutoTimer</option>";
 	$(atlist).each(function () {
 		var selected = ''
-		if ( ( i === 0 && keepSelection === -1) || ( keepSelection.toString() === $(this).attr("id").toString() ) ) {
+		if ( ( (keepSelection || "").toString() === $(this).attr("id").toString() ) ) {
 			selected = 'selected'
 		}
 		selectoptions += "<option data-id='" + $(this).attr("id") + "' value='" + $(this).attr("id") + "' " + selected + " >" + $(this).attr("name") + "</option>"
-		i++;
 	});
-	$("#atlist").html(selectoptions);
-	$("#atlist").selectpicker('refresh');
+	$("#atlist").html(selectoptions).selectpicker('refresh');
 
 	if(at2add)
 	{
@@ -1030,7 +1050,10 @@ function Parse(keepSelection) {
 		var item = $("#atlist").val();
 		if(item) {
 			FillAT(item);
-		}
+		} else {
+      // init with new entry
+      addAT();
+    }
 	}
 	if(atlist.length>0) {
 		$("#atbutton5").show();
