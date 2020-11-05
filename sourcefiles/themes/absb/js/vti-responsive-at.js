@@ -1,17 +1,4 @@
-var choicesConfig = {
-  removeItemButton: true,
-  duplicateItemsAllowed: false,
-  resetScrollPosition: false,
-  shouldSort: false,
-  placeholder: true,
-  placeholderValue: 'placeholderValue',
-  searchPlaceholderValue: 'searchPlaceholderValue',
-  renderSelectedChoices: 'always',
-  loadingText: 'Loading...',
-  noResultsText: 'No results found',
-  noChoicesText: 'No choices to choose from',
-  itemSelectText: '',
-};
+var tagList = [];
 
 function toUnixDate(date){
 	var d = moment(date, "DD.MM.YY").unix();
@@ -440,23 +427,40 @@ AutoTimerObj.prototype.UpdateUI = function(){
 		}
 	}
 	$('#afterevent').selectpicker('refresh');
-	$('#channels').val(null);
-	$('#bouquets').val(null);
-	$.each(this.Bouquets, function(index, value) {
-		$('#bouquets option[value="' + value + '"]').prop("selected", true);
-	});
-	$.each(this.Channels, function(index, value) {
-		$('#channels option[value="' + value + '"]').prop("selected", true);
-	});
-	// $('#bouquets').selectpicker('refresh');
-  // $('#channels').selectpicker('refresh');
-	$('#Bouquets').prop('checked',(this.Bouquets.length>0));
+
+	var tagOpts = [];
+	try {
+		tagOpts = tagList.map(function (tag) {
+			return {
+				value: tag,
+				label: tag,
+			}
+		});
+		tagOpts.push(this.Tags);
+	} catch(e) {
+		console.debug('Failed to process tag options');
+	}
+	autoTimerOptions['tags'].highlightAll()
+													.removeHighlightedItems()
+													.setChoices(
+														tagOpts,
+														'value',
+														'label',
+														false
+													)
+													.setChoiceByValue(this.Tags);
+
+	autoTimerOptions['channels'].highlightAll()
+															.removeHighlightedItems()
+															.setChoiceByValue(this.Channels);
+	autoTimerOptions['bouquets'].highlightAll()
+															.removeHighlightedItems()
+															.setChoiceByValue(this.Bouquets);
+
+	$('#Tags').prop('checked',(this.Tags.length>0));
 	$('#Channels').prop('checked',(this.Channels.length>0));
-	$('#tags').val(null);
-	$.each(this.Tags, function(index, value) {
-		$('#tags option[value="' + value + '"]').prop("selected", true);
-	});
-	// $('#tags').selectpicker('refresh');
+	$('#Bouquets').prop('checked',(this.Bouquets.length>0));
+
 	var rc = $('#filterlist tr').length;
 	if(rc>1)
 	{
@@ -744,7 +748,7 @@ function checkValues () {
 	else {
     $('#BouquetsE').hide();
     try {
-      choicesB.removeActiveItems();
+      bouquetChoices.removeActiveItems();
     } catch(e){}
   }
 	if ($('#Channels').is(':checked') === true)
@@ -752,7 +756,7 @@ function checkValues () {
 	else {
     $('#ChannelsE').hide();
     try {
-      choicesC.removeActiveItems();
+      channelChoices.removeActiveItems();
     } catch(e){}
   }
 	if ($('#Tags').is(':checked') === true) {
@@ -761,7 +765,7 @@ function checkValues () {
 	else {
     $('#TagsE').hide();
     try {
-      choicesT.removeActiveItems();
+      tagChoices.removeActiveItems();
     } catch(e){}
 	}
 
@@ -876,6 +880,7 @@ function test_simulateAT(simulate)
 	});
 }
 
+var autoTimerOptions;
 function InitPage() {
 	$('#timeSpan').click(function() { checkValues();});
 	$('#timeSpanAE').click(function() { checkValues();});
@@ -894,10 +899,13 @@ function InitPage() {
 	$('#vps').change(function () {checkValues();});
 	initValues ();
 	checkValues();
-  getData();
+	reloadAT();
 
-	$( ".FM" ).change(function() {
+	autoTimerOptions = owif.gui.populateAutoTimerOptions();
+	// window.autoTimerOptions['channels'].setChoiceByValue(['1:0:19:1B1F:802:2:11A0000:0:0:0:', 'BBC One NI HD']);
 	
+	$( ".FM" ).change(function() {
+
 		var nf = $(this).parent().parent();
 		if($(this).val()=="dayofweek") {
 			nf.find(".FS").show();
@@ -909,10 +917,6 @@ function InitPage() {
 			nf.find(".FI").show();
 		}
   });
-  
-  var choicesT = new Choices('#tags', choicesConfig);
-  var choicesC = new Choices('#channels', choicesConfig);
-  var choicesB = new Choices('#bouquets', choicesConfig);
 }
 
 function delAT()
@@ -1014,6 +1018,7 @@ function Parse(keepSelection) {
 	$('#filterlist').empty();
 	
 	var atlist = []
+	tagList = [];
 	
 	var state=$(atxml).find("e2state").first();
 	if (state.text() == 'false') {
@@ -1022,6 +1027,16 @@ function Parse(keepSelection) {
 
 	$(atxml).find("timer").each(function () {
 		atlist.push($(this));
+
+		$(this).find("e2tags").each(function () {
+			var tag = $(this).text();
+			// var tags = $(this).text().split(' ');
+			// tags.forEach(function (tag, index) {
+				if (tagList.indexOf(tag) < 0) {
+					tagList.push(tag);
+				}
+			// });
+		});
 	});
 
 	atlist.sort(function(a, b){
