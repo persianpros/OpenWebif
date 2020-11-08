@@ -10,7 +10,7 @@ from Components.config import config as comp_config
 from enigma import eEnv
 from boxbranding import getHaveTranscoding, getHaveMultiTranscoding
 
-OPENWEBIFVER = "OWIF 1.4.16 for Open Vision"
+OPENWEBIFVER = "OWIF 1.4.17 for Open Vision"
 
 PLUGIN_NAME = 'OpenWebif'
 PLUGIN_DESCRIPTION = "OpenWebif Configuration"
@@ -24,17 +24,24 @@ sys.path.insert(0, PLUGIN_ROOT_PATH)
 
 GLOBALPICONPATH = None
 
+STB_LANG = language.getLanguage()
+
 #: get transcoding feature
 def getTranscoding():
 	if getHaveTranscoding() == "True" or getHaveMultiTranscoding() == "True":
 		return True
 	return False
 
-#: get kinopoisk feature
-def getKinopoisk():
-	if language.getLanguage()[0:2] in ['ru', 'uk', 'lv', 'lt', 'et']:
-		return True
-	return False
+def getExtEventInfoProvider():
+	if STB_LANG[0:2] in ['ru', 'uk', 'lv', 'lt', 'et']:
+		defaultValue = 'Kinopoisk'
+	elif STB_LANG[0:2] in ['cz', 'sk']:
+		defaultValue = 'CSFD'
+	elif STB_LANG[0:5] in ['en_GB']:
+		defaultValue = 'TVguideUK'
+	else:
+		defaultValue = 'IMDb'
+	return defaultValue
 
 def getViewsPath(file=""):
 	if comp_config.OpenWebif.responsive_enabled.value and os.path.exists(VIEWS_PATH + "/responsive") and not (file.startswith('web/') or file.startswith('/web/')):
@@ -93,6 +100,6 @@ def getPiconPath():
 #: PICON PATH FIXME: check path again after a few hours to detect new paths
 PICON_PATH = getPiconPath()
 
-KINOPOISK = getKinopoisk()
+EXT_EVENT_INFO_SOURCE = getExtEventInfoProvider()
 
 TRANSCODING = getTranscoding()

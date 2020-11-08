@@ -3,19 +3,8 @@
 #from Plugins.Extensions.OpenWebif.vtiaddon import skinColor
 
 <style>
-	.btn-themed { margin: 0.4ex; }
-	
-	.atform__details__title label { min-height: 2em; font-size: inherit; font-weight: normal; }
-
-	@media (min-width: 600px) {
-		.atform__body {
-			padding: 0 100px;
-		}
-
-		.atform__details__element {
-			width: 56% !important;
-		}
-	}
+.choices__list--dropdown .choices__item {display:flex;justify-content:space-between;}
+.choices__list--dropdown .choices__item--selectable {padding-right: 10px;}
 </style>
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -33,7 +22,7 @@
 				</div>
 			</div>
 		</div>
-<div class="body" >
+		<div class="body atbody">
 			<div id="content_main">
 				<div id="info">
 					<div class="row align-center clearfix">
@@ -55,7 +44,7 @@
 
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" name="enabled" id="enabled" required class="form-control chk-col-$skinColor">
+													<input type="checkbox" name="enabled" id="enabled" required class="form-control theme-chk-col chk-col-$skinColor">
 													<label for="enabled">$tstrings['at_enabled']</label>
 												</div>
 												<div class="atform__details__element"></div>
@@ -64,7 +53,7 @@
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
 													<!-- Name -->
-													<label>$tstrings['at_description']:</label>
+													<label>$tstrings['name']:</label>
 												</div>
 												<div class="atform__details__element form-line">
 													<input type="text" name="name" id="name" placeholder="$tstrings['at_name_hint']" required class="form-control inactive">
@@ -74,7 +63,7 @@
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
 													<!-- Match text -->
-													<label>$tstrings['at_title_match']:</label>
+													<label>$tstrings['at_text_match']:</label>
 												</div>
 												<div class="atform__details__element form-line">
 													<input type="text" name="match" id="match" placeholder="$tstrings['at_text_hint']" required class="form-control inactive">
@@ -132,7 +121,7 @@
 
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" name="overrideAlternatives" id="overrideAlternatives" class="form-control chk-col-$skinColor">
+													<input type="checkbox" name="overrideAlternatives" id="overrideAlternatives" class="form-control theme-chk-col chk-col-$skinColor">
 													<!-- Use automatic selection of alternates. -->
 													<label for="overrideAlternatives">$tstrings['at_override_alt']</label>
 												</div>
@@ -142,7 +131,7 @@
 
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" name="timeSpan" id="timeSpan" class="form-control chk-col-$skinColor">
+													<input type="checkbox" name="timeSpan" id="timeSpan" class="form-control theme-chk-col chk-col-$skinColor">
 													<!-- Only match during timespan -->
 													<label for="timeSpan">$tstrings['at_timespan']</label>
 												</div>
@@ -152,14 +141,14 @@
 															<!-- Begin of timespan -->
 															<label>$tstrings['at_timespan_begin']:&nbsp;</label>
 															<div class="form-line">
-																<input type="time" id="from" class="form-control inactive time24" placeholder="06:30">
+																<input type="time" name="from" id="from" class="form-control inactive time24" placeholder="06:30">
 															</div>
 														</div>
 														<div class="atform__details__dropdown">
 															<!-- End of timespan -->
 															<label>$tstrings['at_timespan_end']:&nbsp;</label>
 															<div class="form-line">
-																<input type="time" id="to" class="form-control inactive time24" placeholder="23:30">
+																<input type="time" name="to" id="to" class="form-control inactive time24" placeholder="23:30">
 															</div>
 														</div>
 													</div>
@@ -168,57 +157,37 @@
 
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" name="timeFrame" id="timeFrame" class="form-control chk-col-$skinColor">
+													<input type="checkbox" name="timeFrame" class="form-control theme-chk-col chk-col-$skinColor" id="timeFrame">
 													<!-- Restrict to events on certain dates -->
 													<label for="timeFrame">$tstrings['at_datespan_before']</label>
 												</div>
-												<div class="atform__details__element" style="min-height: 8ex;">
-													<div class="select-related-container">
-														<div id="timeFrameAfterCheckBox" class="atform__details__dropdown" style="display:none;">
-															<input type="checkbox" class="form-control chk-col-$skinColor" id="timeFrameAfter">
-															<!-- ?? -->
-															<label for="timeFrameAfter">$tstrings['at_datespan_after']</label>
-														</div>
-														<div id="timeFrameE" class=" atform__details__dropdown" style="display:none;">
-															<div class="row clearfix">
-																<div class="col-xs-12 col-sm-4">
-																	<div class="row clearfix">
-																		<div class="col-xs-12">
-																		</div>
-																	</div>
-																</div>
-																<div class="col-xs-12 col-sm-4">
-																	<div class="row clearfix">
-																		<div class="col-xs-12">
-																			<!-- Not before -->
-																				<label>$tstrings['at_datespan_before']:&nbsp;</label>
-																				<div class="form-line">
-																					<input type="date" class="form-control inactive" id="after">
-																				</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="col-xs-12 col-sm-4">
-																	<div class="row clearfix">
-																		<div class="col-xs-12">
-																			<span id="beforeE" style="display:none;">
-																				<!-- Not after -->
-																				<label>$tstrings['at_datespan_after']:&nbsp;</label>
-																				<div class="form-line">
-																					<input type="date" class="form-control inactive" id="before">
-																				</div>
-																			</span>
-																		</div>
-																	</div>
-																</div>
-															</div>
+												<div class="atform__details__element">
+													<div class="atform__details__dropdown">
+														<div class="form-line" id="timeFrameE" style="display:none;">
+															<input type="date" name="after" class="form-control inactive" id="after">
 														</div>
 													</div>
 												</div>
 											</div>
+
+											<div class="atform__fields-container" id="timeFrameAfterCheckBox">
+												<div class="atform__details__title">
+													<input type="checkbox" name="timeFrameAfter" class="form-control theme-chk-col chk-col-$skinColor" id="timeFrameAfter">
+													<!-- Restrict to events on certain dates -->
+													<label for="timeFrameAfter">$tstrings['at_datespan_after']</label>
+												</div>
+												<div class="atform__details__element">
+													<div class=" atform__details__dropdown">
+														<div class="form-line" id="beforeE" style="display:none;">
+															<input type="date" name="before" class="form-control inactive" id="before">
+														</div>
+													</div>
+												</div>
+											</div>
+
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" class="form-control chk-col-$skinColor" id="timerOffset">
+													<input type="checkbox" name="timerOffset" class="form-control theme-chk-col chk-col-$skinColor" id="timerOffset">
 													<!-- Custom offset -->
 													<label for="timerOffset">$tstrings['at_timer_offset']</label>
 												</div>
@@ -243,7 +212,7 @@
 
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" name="maxDuration" id="maxDuration" class="form-control chk-col-$skinColor">
+													<input type="checkbox" name="maxDuration" id="maxDuration" class="form-control theme-chk-col chk-col-$skinColor">
 													<!-- Set maximum duration -->
 													<label for="maxDuration">$tstrings['at_max_duration']</label>
 												</div>
@@ -276,7 +245,7 @@
 
 											<div id="AftereventE" class="atform__fields-container" style="display:none;">
 												<div class="atform__details__title">
-													<input type="checkbox" name="timeSpanAE" id="timeSpanAE" class="form-control chk-col-$skinColor">
+													<input type="checkbox" name="timeSpanAE" id="timeSpanAE" class="form-control theme-chk-col chk-col-$skinColor">
 													<!-- Execute "after event" during timespan -->
 													<label for="timeSpanAE">$tstrings['at_event_timespan']</label>
 												</div>
@@ -365,7 +334,7 @@
 #if $autoadjust == 1
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" name="autoadjust" id="autoadjust" class="form-control chk-col-$skinColor">
+													<input type="checkbox" name="autoadjust" id="autoadjust" class="form-control theme-chk-col chk-col-$skinColor">
 													<label for="autoadjust">$tstrings['autoadjust']</label>
 												</div>
 												<div class="atform__details__element">
@@ -374,7 +343,7 @@
 
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" name="avoidDuplicateMovies" id="avoidDuplicateMovies" class="form-control chk-col-$skinColor">
+													<input type="checkbox" name="avoidDuplicateMovies" id="avoidDuplicateMovies" class="form-control theme-chk-col chk-col-$skinColor">
 													<label for="avoidDuplicateMovies">$tstrings['avoidDuplicateMovies']</label>
 												</div>
 												<div class="atform__details__element">
@@ -383,7 +352,7 @@
 
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" name="allow_duplicate" id="allow_duplicate" class="form-control chk-col-$skinColor">
+													<input type="checkbox" name="allow_duplicate" id="allow_duplicate" class="form-control theme-chk-col chk-col-$skinColor">
 													<label for="allow_duplicate">$tstrings['allow_duplicate']</label>
 												</div>
 												<div class="atform__details__element">
@@ -392,7 +361,7 @@
 #end if
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" name="Location" id="Location" class="form-control chk-col-$skinColor">
+													<input type="checkbox" name="Location" id="Location" class="form-control theme-chk-col chk-col-$skinColor">
 													<!-- Use a custom location -->
 													<label for="Location">$tstrings['at_location']</label>
 												</div>
@@ -410,7 +379,7 @@
 
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" name="Tags" id="Tags" class="form-control chk-col-$skinColor">
+													<input type="checkbox" name="Tags" id="Tags" class="form-control theme-chk-col chk-col-$skinColor">
 													<!-- Tags -->
 													<label for="Tags">$tstrings['at_tags']</label>
 												</div>
@@ -423,7 +392,7 @@
 		
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" name="Channels" id="Channels" class="form-control chk-col-$skinColor">
+													<input type="checkbox" name="Channels" id="Channels" class="form-control theme-chk-col chk-col-$skinColor">
 													<!-- Restrict to specific services -->
 													<label for="Channels">$tstrings['at_channels']</label>
 												</div>
@@ -436,7 +405,7 @@
 
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" name="Bouquets" id="Bouquets" class="form-control chk-col-$skinColor">
+													<input type="checkbox" name="Bouquets" id="Bouquets" class="form-control theme-chk-col chk-col-$skinColor">
 													<!-- Restrict to specific bouquets -->
 													<label for="Bouquets">$tstrings['bouquets']</label>
 												</div>
@@ -451,7 +420,7 @@
 
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" name="Filter" id="Filter" class="form-control chk-col-$skinColor">
+													<input type="checkbox" name="Filter" id="Filter" class="form-control theme-chk-col chk-col-$skinColor">
 													<!-- Use other filters -->
 													<label for="Filter">$tstrings['at_filter']</label>
 													<button type="button" class="btn btn-default waves-effect FilterE" id="AddFilter" >$tstrings['at_add']</button>
@@ -468,7 +437,7 @@
 #if $hasVPS == 1
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" class="form-control chk-col-$skinColor" id="vps">
+													<input type="checkbox" name="vps" class="form-control theme-chk-col chk-col-$skinColor" id="vps">
 													<label for="vps">$tstrings['vps']</label>
 												</div>
 												<div class="atform__details__element">
@@ -476,7 +445,7 @@
 														<div class="col-xs-12 col-sm-4">
 															<div class="row clearfix">
 																<div class="col-xs-12">
-																	<input type="checkbox" name="vpssm" id="vpssm" class="form-control chk-col-$skinColor">
+																	<input type="checkbox" name="vpssm" id="vpssm" class="form-control theme-chk-col chk-col-$skinColor">
 																	<label for="vpssm">$tstrings['safe_mode']</label>
 																</div>
 															</div>
@@ -488,7 +457,7 @@
 #if $hasSeriesPlugin == 1
 											<div class="atform__fields-container">
 												<div class="atform__details__title">
-													<input type="checkbox" name="series_labeling" id="series_labeling" class="form-control chk-col-$skinColor">
+													<input type="checkbox" name="series_labeling" id="series_labeling" class="form-control theme-chk-col chk-col-$skinColor">
 													<label for="series_labeling">$tstrings['at_label_series']</label>
 												</div>
 												<div class="atform__details__element">
@@ -551,7 +520,7 @@
 						<form>
 							<fieldset>
 								<div class="form-group">
-									<input type="checkbox" class="form-control chk-col-$skinColor" id="ats_autopoll" value="" >
+									<input type="checkbox" class="form-control theme-chk-col chk-col-$skinColor" id="ats_autopoll" value="" >
 									<label for="ats_autopoll">$tstrings['ats_autopoll']</label>&nbsp;
 									<br />
 									<label for="ats_interval">$tstrings['ats_interval']</label>
@@ -564,31 +533,31 @@
 										<input type="text" size="5" id="ats_maxdaysinfuture" class="form-control">
 									</div>
 									<br>
-									<input type="checkbox" id="ats_try_guessing" value="" class="form-control chk-col-$skinColor" >
+									<input type="checkbox" id="ats_try_guessing" value="" class="form-control theme-chk-col chk-col-$skinColor" >
 									<label for="ats_try_guessing">$tstrings['ats_try_guessing']</label>
 									<br />
-									<input type="checkbox" id="ats_fastscan" class="form-control chk-col-$skinColor" value="" >
+									<input type="checkbox" id="ats_fastscan" class="form-control theme-chk-col chk-col-$skinColor" value="" >
 									<label for="ats_fastscan">$tstrings['ats_fastscan']</label>
 									<br />
-									<input type="checkbox" id="ats_show_in_extensionsmenu" class="form-control chk-col-$skinColor" value="" >
+									<input type="checkbox" id="ats_show_in_extensionsmenu" class="form-control theme-chk-col chk-col-$skinColor" value="" >
 									<label for="ats_show_in_extensionsmenu">$tstrings['ats_show_in_extensionsmenu']</label>
 									<br>
-									<input type="checkbox" id="ats_disabled_on_conflict" value=""  class="form-control chk-col-$skinColor" >
+									<input type="checkbox" id="ats_disabled_on_conflict" value=""  class="form-control theme-chk-col chk-col-$skinColor" >
 									<label for="ats_disabled_on_conflict">$tstrings['ats_disabled_on_conflict']</label>
 									<br />
-									<input type="checkbox" id="ats_addsimilar_on_conflict" value="" class="form-control chk-col-$skinColor" >
+									<input type="checkbox" id="ats_addsimilar_on_conflict" value="" class="form-control theme-chk-col chk-col-$skinColor" >
 									<label for="ats_addsimilar_on_conflict">$tstrings['ats_addsimilar_on_conflict']</label>
 									<br>
-									<input type="checkbox" id="ats_notifconflict" value="" class="form-control chk-col-$skinColor" >
+									<input type="checkbox" id="ats_notifconflict" value="" class="form-control theme-chk-col chk-col-$skinColor" >
 									<label for="ats_notifconflict">$tstrings['ats_notifconflict']</label>
 									<br />
-									<input type="checkbox" id="ats_notifsimilar" value="" class="form-control chk-col-$skinColor" >
+									<input type="checkbox" id="ats_notifsimilar" value="" class="form-control theme-chk-col chk-col-$skinColor" >
 									<label for="ats_notifsimilar">$tstrings['ats_notifsimilar']</label>
 									<br>
-									<input type="checkbox" id="ats_add_autotimer_to_tags" value="" class="form-control chk-col-$skinColor" >
+									<input type="checkbox" id="ats_add_autotimer_to_tags" value="" class="form-control theme-chk-col chk-col-$skinColor" >
 									<label for="ats_add_autotimer_to_tags">$tstrings['ats_add_autotimer_to_tags']</label>
 									<br />
-									<input type="checkbox" id="ats_add_name_to_tags" value="" class="form-control chk-col-$skinColor" >
+									<input type="checkbox" id="ats_add_name_to_tags" value="" class="form-control theme-chk-col chk-col-$skinColor" >
 									<label for="ats_add_name_to_tags">$tstrings['ats_add_name_to_tags']</label>
 									<br>
 									<label for="ats_refresh">$tstrings['ats_refresh']</label>

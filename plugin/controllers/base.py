@@ -40,7 +40,7 @@ from Components.Network import iNetwork
 
 from Plugins.Extensions.OpenWebif.controllers.models.info import getInfo
 from Plugins.Extensions.OpenWebif.controllers.models.config import getCollapsedMenus, getConfigsSections, getShowName, getCustomName, getBoxName
-from Plugins.Extensions.OpenWebif.controllers.defaults import getPublicPath, getViewsPath
+from Plugins.Extensions.OpenWebif.controllers.defaults import getPublicPath, getViewsPath, EXT_EVENT_INFO_SOURCE, STB_LANG
 
 def new_getRequestHostname(self):
 	host = self.getHeader(b'host')
@@ -374,12 +374,12 @@ class BaseController(resource.Resource):
 				config.OpenWebif.webcache.theme.value = theme
 				config.OpenWebif.webcache.theme.save()
 		ret['theme'] = theme
-
-		moviedb = config.OpenWebif.webcache.moviedb.value if config.OpenWebif.webcache.moviedb.value else 'IMDb'
+		moviedb = config.OpenWebif.webcache.moviedb.value if config.OpenWebif.webcache.moviedb.value else EXT_EVENT_INFO_SOURCE
 		config.OpenWebif.webcache.moviedb.value = moviedb
 		config.OpenWebif.webcache.moviedb.save()
 		ret['moviedb'] = moviedb
 		imagedistro = getInfo()['imagedistro']
 		ret['vti'] = imagedistro in ("vti") and 1 or 0
 		ret['webtv'] = os.path.exists(getPublicPath('webtv'))
+		ret['stbLang'] = STB_LANG
 		return ret
