@@ -27,6 +27,7 @@ import unicodedata
 import six
 from time import time, localtime, strftime, mktime
 
+import NavigationInstance
 from Tools.Directories import fileExists
 from Components.Sources.ServiceList import ServiceList
 from Components.ParentalControl import parentalControl
@@ -670,9 +671,48 @@ def getEventDesc(ref, idev, encode=True):
 	return {"description": description}
 
 
+def getTimerEventStatus(event, eventLookupTable):
+	# Check if an event has an associated timer. Unfortunately
+	# we cannot simply check against timer.eit, because a timer
+	# does not necessarily have one belonging to an epg event id.
+
+	#catch ValueError
+	startTime = event[eventLookupTable.index('B')]
+	endTime = event[eventLookupTable.index('B')] + event[eventLookupTable.index('D')] - 120
+	serviceref = event[eventLookupTable.index('R')]
+	timerlist = {}
+	for timer in NavigationInstance.instance.RecordTimer.timer_list:
+		if str(timer.service_ref) not in timerlist:
+			timerlist[str(timer.service_ref)] = []
+		timerlist[str(timer.service_ref)].append(timer)
+	if serviceref in timerlist:
+		for timer in timerlist[serviceref]:
+			timerDetails = {}
+			if timer.begin <= startTime and timer.end >= endTime:
+				if timer.disabled:
+					timerDetails = { 
+						'isEnabled': 0,
+						'basicStatus': 'timer disabled'
+					}
+				else:
+					timerDetails = { 
+						'isEnabled': 1, 
+						'isZapOnly': int(timer.justplay),
+						'basicStatus': 'timer'
+					}
+				try:
+					timerDetails['isAutoTimer'] = timer.isAutoTimer
+				except AttributeError:
+					timerDetails['isAutoTimer'] = 0
+				return timerDetails
+				
+	return None
+
+
 def getEvent(ref, idev, encode=True):
 	epgcache = eEPGCache.getInstance()
-	events = epgcache.lookupEvent(['IBDTSENRWX', (ref, 2, int(idev))])
+	eventLookupTable = 'IBDTSENRWX'
+	events = epgcache.lookupEvent([eventLookupTable, (ref, 2, int(idev))]) #IBTSRND
 	info = {}
 	for event in events:
 		info['id'] = event[0]
@@ -686,6 +726,8 @@ def getEvent(ref, idev, encode=True):
 		info['channel'] = filterName(event[6], encode)
 		info['sref'] = event[7]
 		info['genre'], info['genreid'] = convertGenre(event[8])
+		info['picon'] = getPicon(event[7])
+		info['timer'] = getTimerEventStatus(event, eventLookupTable)
 		break
 	return {'event': info}
 
@@ -1009,29 +1051,13 @@ def getSearchSimilarEpg(ref, eventid, encode=False):
 
 
 def getMultiEpg(self, ref, begintime=-1, endtime=None, Mode=1):
-	# Check if an event has an associated timer. Unfortunately
-	# we cannot simply check against timer.eit, because a timer
-	# does not necessarily have one belonging to an epg event id.
-	def getTimerEventStatus(event):
-		startTime = event[1]
-		endTime = event[1] + event[6] - 120
-		serviceref = event[4]
-		if serviceref not in timerlist:
-			return ''
-		for timer in timerlist[serviceref]:
-			if timer.begin <= startTime and timer.end >= endTime:
-				if timer.disabled:
-					return 'timer disabled'
-				else:
-					return 'timer'
-		return ''
-
 	ret = OrderedDict()
 	services = eServiceCenter.getInstance().list(eServiceReference(ref))
 	if not services:
 		return {"events": ret, "result": False, "slot": None}
 
-	search = ['IBTSRND']
+	eventLookupTable = 'IBTSRND'
+	search = [eventLookupTable]
 	for service in services.getContent('S'):
 		if endtime:
 			search.append((service, 0, begintime, endtime))
@@ -1068,13 +1094,20 @@ def getMultiEpg(self, ref, begintime=-1, endtime=None, Mode=1):
 			lastevent = offset + 86399
 
 		for event in events:
+			timer = getTimerEventStatus(event, eventLookupTable)
+			# timerStatus is kept for backwards compatibility
+			basicStatus = ''
+			if timer:
+				basicStatus = timer['basicStatus']
+
 			ev = {}
 			ev['id'] = event[0]
 			ev['begin_timestamp'] = event[1]
 			ev['title'] = event[2]
 			ev['shortdesc'] = convertDesc(event[3])
 			ev['ref'] = event[4]
-			ev['timerStatus'] = getTimerEventStatus(event)
+			ev['timerStatus'] = basicStatus
+			ev['timer'] = timer
 			if Mode == 2:
 				ev['duration'] = event[6]
 
