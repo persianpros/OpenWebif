@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-08 17:14+0330\n"
+"POT-Creation-Date: 2020-11-15 13:52+0330\n"
 "PO-Revision-Date: 2018-03-30 13:04+0200\n"
 "Last-Translator: kvinto <badsystem@ukr.net>\n"
 "Language-Team: \n"
@@ -30,6 +30,14 @@ msgstr "%s вільно / %s всього"
 msgid "(Press 'shift' and click to 'hold')"
 msgstr "(Shift + Клік як Довге натискання)"
 
+#: ../plugin/controllers/i18n.py:474
+msgid "A filename is required"
+msgstr "Будь ласка, введіть назву файлу"
+
+#: ../plugin/controllers/i18n.py:525
+msgid "A value is required"
+msgstr "Вам потрібно щось написати!"
+
 #: ../plugin/controllers/i18n.py:80
 msgid "AGC"
 msgstr "Рівень сигналу"
@@ -38,57 +46,57 @@ msgstr "Рівень сигналу"
 msgid "About"
 msgstr "Про додаток"
 
-#: ../plugin/controllers/i18n.py:399
+#: ../plugin/controllers/i18n.py:329
 msgid "Add"
 msgstr "Додати"
 
-#: ../plugin/controllers/i18n.py:77
-msgid "Add AutoTimer"
-msgstr "Додати Автотаймер"
-
-#: ../plugin/controllers/i18n.py:423
-msgid "Add Autotimer to Tags"
+#: ../plugin/controllers/i18n.py:422
+msgid "Add  AutoTimer  to tags"
 msgstr "Додати Автотаймер до тегів"
 
-#: ../plugin/controllers/i18n.py:463
+#: ../plugin/controllers/i18n.py:423
+msgid "Add AutoTimer name to tags"
+msgstr "Додати ім'я до тегів"
+
+#: ../plugin/controllers/i18n.py:462
 msgid "Add Bouquet"
 msgstr "Додати фаворит"
 
-#: ../plugin/controllers/i18n.py:466
+#: ../plugin/controllers/i18n.py:465
 msgid "Add Marker"
 msgstr "Додати маркер"
 
-#: ../plugin/controllers/i18n.py:424
-msgid "Add Name to Tags"
-msgstr "Додати ім'я до тегів"
-
-#: ../plugin/controllers/i18n.py:420
-msgid "Add Similar on Conflict"
-msgstr "Додати подібний при конфлікті"
-
-#: ../plugin/controllers/i18n.py:467
+#: ../plugin/controllers/i18n.py:466
 msgid "Add Spacer"
 msgstr "Додати розділювач"
 
 #: ../plugin/controllers/i18n.py:76
-msgid "Add Timer"
+msgid "Add a timer"
 msgstr "Додати таймер"
 
 #: ../plugin/controllers/i18n.py:78
-msgid "Add Zap Timer"
+msgid "Add a zap timer"
 msgstr "Додати таймер перемикання"
 
-#: ../plugin/controllers/i18n.py:460
+#: ../plugin/controllers/i18n.py:77
+msgid "Add an AutoTimer"
+msgstr "Додати Автотаймер"
+
+#: ../plugin/controllers/i18n.py:459
 msgid "Add channel(s) as alternate"
 msgstr "Додати канал(и) як альтернативу"
 
-#: ../plugin/controllers/i18n.py:459
+#: ../plugin/controllers/i18n.py:458
 msgid "Add selection to bouquet"
 msgstr "Додати канал(и) в букет"
 
 #: ../plugin/plugin.py:161
 msgid "Add service name to stream information"
 msgstr "Додати назву сервісу в інформацію потоку"
+
+#: ../plugin/controllers/i18n.py:419
+msgid "Add similar on conflict"
+msgstr "Додати подібний при конфлікті"
 
 #: ../plugin/controllers/BouquetEditor.py:468
 #, python-format
@@ -99,15 +107,12 @@ msgstr "%s додано в альтернативні канали %s."
 msgid "Adjust recording time to real event time"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:79 ../plugin/controllers/i18n.py:440
-msgid "After Event"
-msgstr "Після події"
-
-#: ../plugin/controllers/i18n.py:363
+#: ../plugin/controllers/i18n.py:79 ../plugin/controllers/i18n.py:364
+#: ../plugin/controllers/i18n.py:439
 msgid "After event"
 msgstr "Після події"
 
-#: ../plugin/controllers/i18n.py:81 ../plugin/controllers/i18n.py:428
+#: ../plugin/controllers/i18n.py:81 ../plugin/controllers/i18n.py:427
 msgid "All"
 msgstr "Всі"
 
@@ -136,7 +141,7 @@ msgstr ""
 msgid "Alternative %s created failed."
 msgstr "Не вдалося створити альтернативу %s"
 
-#: ../plugin/controllers/i18n.py:445
+#: ../plugin/controllers/i18n.py:444
 msgid "Always"
 msgstr "Завжди"
 
@@ -144,10 +149,6 @@ msgstr "Завжди"
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "Повний пульт"
-
-#: ../plugin/controllers/i18n.py:373
-msgid "Amount of recordings left"
-msgstr "Кількість решти записів"
 
 #: ../plugin/controllers/models/message.py:52
 msgid "Answer is NO!"
@@ -161,7 +162,7 @@ msgstr "Відповідь - ТАК!"
 msgid "Any service/recording"
 msgstr "Будь який сервіс/запись"
 
-#: ../plugin/controllers/i18n.py:482
+#: ../plugin/controllers/i18n.py:481
 msgid "Apid"
 msgstr ""
 
@@ -169,11 +170,45 @@ msgstr ""
 msgid "April"
 msgstr "Квітень"
 
-#: ../plugin/controllers/i18n.py:449
+#: ../plugin/controllers/i18n.py:469
+msgid "Are you sure you want to delete the selected bouquet?"
+msgstr "Ви дійсно бажаєте видалити фаворит?"
+
+#: ../plugin/controllers/i18n.py:468
+msgid "Are you sure you want to delete the selected item(s)?"
+msgstr "Ви дійсно бажаєте видалити обраний елемент(и)"
+
+#: ../plugin/controllers/i18n.py:405
+#, fuzzy
+msgid "Are you sure you want to delete this AutoTimer?"
+msgstr "Дійсно видалити таймер?"
+
+#: ../plugin/controllers/i18n.py:115
+msgid "Are you sure you want to delete this recording?"
+msgstr "Дійсно видалити запис?"
+
+#: ../plugin/controllers/i18n.py:117
+msgid "Are you sure you want to delete this timer?"
+msgstr "Дійсно видалити таймер?"
+
+#: ../plugin/controllers/i18n.py:236
+msgid "Are you sure you want to rename this recording?"
+msgstr "Дійсно перейменувати запис?"
+
+#: ../plugin/controllers/i18n.py:475
+msgid "Are you sure you want to restore from file?"
+msgstr "Ви дійсно хочете відновити з файлу?"
+
+#: ../plugin/controllers/i18n.py:178
+#, fuzzy
+msgid "Are you sure you want to start recording instantly?"
+msgstr "Негайний запис"
+
+#: ../plugin/controllers/i18n.py:448
 msgid "Ask, default No"
 msgstr "Запитати, за замовчуванням - Так"
 
-#: ../plugin/controllers/i18n.py:448
+#: ../plugin/controllers/i18n.py:447
 msgid "Ask, default Yes"
 msgstr "Запитати, за замовчуванням - Ні"
 
@@ -185,11 +220,11 @@ msgstr "Серпень"
 msgid "Authors"
 msgstr "Автори"
 
-#: ../plugin/controllers/i18n.py:84 ../plugin/controllers/i18n.py:427
+#: ../plugin/controllers/i18n.py:84 ../plugin/controllers/i18n.py:426
 msgid "Auto"
 msgstr "Авто"
 
-#: ../plugin/controllers/i18n.py:413
+#: ../plugin/controllers/i18n.py:412
 msgid "AutoPoll"
 msgstr "Автоопитування"
 
@@ -197,18 +232,18 @@ msgstr "Автоопитування"
 msgid "AutoTimer"
 msgstr "Автотаймер"
 
-#: ../plugin/controllers/i18n.py:331
+#: ../plugin/controllers/i18n.py:332
 msgid "AutoTimer Edit"
 msgstr "Редактор Автотаймеру"
 
-#: ../plugin/controllers/i18n.py:330
-msgid "AutoTimer List"
-msgstr "Список Автотаймерів"
-
 # New Autotimer Setting Windows name (not enabled to transfer atm)
-#: ../plugin/controllers/i18n.py:412
+#: ../plugin/controllers/i18n.py:411
 msgid "AutoTimer Settings"
 msgstr "Налаштування Автотаймера"
+
+#: ../plugin/controllers/i18n.py:331
+msgid "AutoTimers"
+msgstr "Список Автотаймерів"
 
 #: ../plugin/controllers/i18n.py:285
 msgid "Autotimer Preview"
@@ -222,27 +257,28 @@ msgstr "BER"
 msgid "Back"
 msgstr "Назад"
 
-#: ../plugin/controllers/i18n.py:447
+#: ../plugin/controllers/i18n.py:446
 msgid "Background only"
 msgstr "Тільки в фоні"
 
-#: ../plugin/controllers/i18n.py:86 ../plugin/controllers/i18n.py:435
+#: ../plugin/controllers/i18n.py:86 ../plugin/controllers/i18n.py:434
 msgid "Begin"
 msgstr "Початок"
 
-#: ../plugin/controllers/i18n.py:370
-msgid "Begin of \"after event\" timespan"
+#: ../plugin/controllers/i18n.py:371
+#, fuzzy
+msgid "Begin of \"After event\" timespan"
 msgstr "Початок \"після події\" в проміжку часу"
 
-#: ../plugin/controllers/i18n.py:354
-msgid "Begin of timespan"
+#: ../plugin/controllers/i18n.py:355
+msgid "Beginning of timespan"
 msgstr "Початок тимчасового проміжку"
 
-#: ../plugin/controllers/i18n.py:516
+#: ../plugin/controllers/i18n.py:515
 msgid "Bookmark"
 msgstr "Закладка"
 
-#: ../plugin/controllers/i18n.py:515
+#: ../plugin/controllers/i18n.py:514
 msgid "Bookmarks"
 msgstr "Закладки"
 
@@ -295,6 +331,10 @@ msgstr "Видалення фаворита %s не вдалося."
 msgid "Bouquet Editor"
 msgstr "Редактор Фаворитів"
 
+#: ../plugin/controllers/i18n.py:470
+msgid "Bouquet name"
+msgstr "Назва для фавориту"
+
 #: ../plugin/controllers/BouquetEditor.py:390
 msgid "Bouquet renamed successfully."
 msgstr "Фаворит успішно перейменовано."
@@ -337,11 +377,11 @@ msgstr ""
 msgid "CPU brand"
 msgstr ""
 
-#: ../plugin/controllers/models/services.py:372
+#: ../plugin/controllers/models/services.py:373
 msgid "Cable"
 msgstr "Кабельний"
 
-#: ../plugin/controllers/i18n.py:507
+#: ../plugin/controllers/i18n.py:506
 msgid "Calendar Week"
 msgstr "Календарний тиждень"
 
@@ -349,7 +389,7 @@ msgstr "Календарний тиждень"
 msgid "Cancel"
 msgstr "Скасування"
 
-#: ../plugin/controllers/i18n.py:524
+#: ../plugin/controllers/i18n.py:523
 #, fuzzy
 msgid "Cancelled"
 msgstr "Скасування"
@@ -382,7 +422,7 @@ msgstr "Очистити таймери"
 msgid "Close"
 msgstr "Закрити"
 
-#: ../plugin/controllers/i18n.py:527
+#: ../plugin/controllers/i18n.py:526
 #, fuzzy
 msgid "Common Settings"
 msgstr "Загальні налаштування"
@@ -418,7 +458,7 @@ msgstr "Не вдалося додати таймер '%s'!"
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Не вдалося знайти таймер '%s' з вказаним часом початку та закінчення!"
 
-#: ../plugin/controllers/i18n.py:458
+#: ../plugin/controllers/i18n.py:457
 msgid "Create bouquet from selection"
 msgstr "Додати провайдера як новий фаворит"
 
@@ -439,7 +479,7 @@ msgstr "Альтернативне ім'я ресивера"
 msgid "Custom box name"
 msgstr "Альтернативне ім'я ресивера"
 
-#: ../plugin/controllers/i18n.py:359
+#: ../plugin/controllers/i18n.py:360
 msgid "Custom offset"
 msgstr "Користувальницьке зміщення"
 
@@ -460,11 +500,11 @@ msgstr ""
 msgid "Date"
 msgstr "Дата"
 
-#: ../plugin/controllers/i18n.py:559
+#: ../plugin/controllers/i18n.py:558
 msgid "Date (newest)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:558
+#: ../plugin/controllers/i18n.py:557
 msgid "Date (oldest)"
 msgstr ""
 
@@ -477,27 +517,28 @@ msgid "December"
 msgstr "Грудень"
 
 #: ../plugin/controllers/i18n.py:111
-msgid "Deep-Standby"
+#, fuzzy
+msgid "Deep standby"
 msgstr "Глибокий режим очікування"
 
 #: ../plugin/controllers/i18n.py:112
 msgid "Default"
 msgstr "За замовчуванням"
 
-#: ../plugin/controllers/i18n.py:437
+#: ../plugin/controllers/i18n.py:436
 msgid "Delay Standby"
 msgstr "Відкладене вимкнення"
 
-#: ../plugin/controllers/i18n.py:113 ../plugin/controllers/i18n.py:400
+#: ../plugin/controllers/i18n.py:113 ../plugin/controllers/i18n.py:399
 msgid "Delete"
 msgstr "Видалити"
 
-#: ../plugin/controllers/i18n.py:517
+#: ../plugin/controllers/i18n.py:516
 #, fuzzy
 msgid "Delete Bookmark"
 msgstr "Закладка"
 
-#: ../plugin/controllers/i18n.py:465
+#: ../plugin/controllers/i18n.py:464
 msgid "Delete Bouquet"
 msgstr "Видалити фаворит"
 
@@ -517,7 +558,7 @@ msgstr ""
 "Не вдалося видалити, оскільки нема кошика для фільмів!\n"
 "Disable movie trash in configuration to delete this item"
 
-#: ../plugin/controllers/i18n.py:525
+#: ../plugin/controllers/i18n.py:524
 msgid "Deleted"
 msgstr "Видалено"
 
@@ -538,15 +579,15 @@ msgstr "Відключити доступ для користувача root"
 msgid "Disabled in configuration"
 msgstr "Вимкути при конфлікті"
 
-#: ../plugin/controllers/i18n.py:419
-msgid "Disabled on Conflict"
+#: ../plugin/controllers/i18n.py:418
+msgid "Disabled on conflict"
 msgstr "Вимкути при конфлікті"
 
-#: ../plugin/controllers/i18n.py:503
+#: ../plugin/controllers/i18n.py:502
 msgid "Display Mode"
 msgstr "Режим дисплея"
 
-#: ../plugin/controllers/i18n.py:501
+#: ../plugin/controllers/i18n.py:500
 msgid "Display duration (s)"
 msgstr "Відображати тривалість (с)"
 
@@ -558,22 +599,6 @@ msgstr "Режим дисплея"
 #: ../plugin/controllers/i18n.py:124
 msgid "Distro"
 msgstr "Програмне забезпечення"
-
-#: ../plugin/controllers/i18n.py:406
-msgid "Do you really want to delete the AT"
-msgstr "Ви дійсно хочете видалити АТ?"
-
-#: ../plugin/controllers/i18n.py:470
-msgid "Do you really want to delete the bouquet"
-msgstr "Ви дійсно бажаєте видалити фаворит?"
-
-#: ../plugin/controllers/i18n.py:469
-msgid "Do you really want to delete the selected item(s)"
-msgstr "Ви дійсно бажаєте видалити обраний елемент(и)"
-
-#: ../plugin/controllers/i18n.py:476
-msgid "Do you really want to restore from file"
-msgstr "Ви дійсно хочете відновити з файлу?"
 
 #: ../plugin/controllers/i18n.py:125
 msgid "Dolby"
@@ -592,7 +617,7 @@ msgid "Download"
 msgstr "Завантажити"
 
 #: ../plugin/controllers/i18n.py:128
-msgid "Download Playlist for"
+msgid "Download playlist for"
 msgstr "Завантажити плейлист для"
 
 #: ../plugin/controllers/i18n.py:129
@@ -615,7 +640,7 @@ msgstr "EPG"
 msgid "EPG Search"
 msgstr "Пошук EPG"
 
-#: ../plugin/controllers/i18n.py:334
+#: ../plugin/controllers/i18n.py:335
 msgid "EPG encoding"
 msgstr "Декодування EPG"
 
@@ -631,17 +656,13 @@ msgstr "ПОМИЛКА: Не вдається встановити таймер 
 msgid "Edit Timer"
 msgstr "Редагувати таймер"
 
-#: ../plugin/controllers/i18n.py:429
+#: ../plugin/controllers/i18n.py:428
 msgid "Editor"
 msgstr "Редактор"
 
 #: ../plugin/plugin.py:155
 msgid "Enable Authentication for streaming"
 msgstr "Включити аутентифікацію для стрімінга"
-
-#: ../plugin/controllers/i18n.py:390
-msgid "Enable Filtering"
-msgstr "Застосувати фільтрацію"
 
 #: ../plugin/plugin.py:148
 msgid "Enable HTTP Authentication"
@@ -655,7 +676,7 @@ msgstr "Ввімкнути HTTPS"
 msgid "Enable HTTPS Authentication"
 msgstr "Ввімкнути HTTPS аутентифікацію"
 
-#: ../plugin/controllers/i18n.py:434
+#: ../plugin/controllers/i18n.py:433
 msgid "Enable Messages"
 msgstr "Включити повідомлення"
 
@@ -671,12 +692,16 @@ msgstr "Ввімкнути таймер"
 msgid "Enable access from VPNs"
 msgstr "Ввімкнути доступ з VPN"
 
-#: ../plugin/controllers/i18n.py:513
+#: ../plugin/controllers/i18n.py:390
+msgid "Enable filtering"
+msgstr "Застосувати фільтрацію"
+
+#: ../plugin/controllers/i18n.py:512
 msgid "Enable/Disable Screenshot on key press or"
 msgstr "Увімкнути/вимкнути знімок екрана на клавіші або"
 
-#: ../plugin/controllers/i18n.py:137 ../plugin/controllers/i18n.py:332
-#: ../plugin/controllers/i18n.py:433
+#: ../plugin/controllers/i18n.py:137 ../plugin/controllers/i18n.py:333
+#: ../plugin/controllers/i18n.py:432
 msgid "Enabled"
 msgstr "Ввімкнений"
 
@@ -684,15 +709,17 @@ msgstr "Ввімкнений"
 msgid "Encrypted"
 msgstr "Кодований"
 
-#: ../plugin/controllers/i18n.py:136 ../plugin/controllers/i18n.py:436
+#: ../plugin/controllers/i18n.py:136 ../plugin/controllers/i18n.py:435
 msgid "End"
 msgstr "Кінець"
 
-#: ../plugin/controllers/i18n.py:371
-msgid "End of \"after event\" timespan"
+#: ../plugin/controllers/i18n.py:372
+#, fuzzy
+msgid "End of \"After event\" timespan"
 msgstr "Закінчення \"після події\" в проміжку часу"
 
-#: ../plugin/controllers/i18n.py:355
+#: ../plugin/controllers/i18n.py:356
+#, fuzzy
 msgid "End of Timespan"
 msgstr "Кінець тимчасового проміжку"
 
@@ -704,20 +731,20 @@ msgstr ""
 msgid "Enigma2 debug level"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:409
+#: ../plugin/controllers/i18n.py:472
+msgid "Enter a name for the new bouquet"
+msgstr "Введіть нову назву фаворита"
+
+#: ../plugin/controllers/i18n.py:473
+msgid "Enter a name for the new marker"
+msgstr "Введіть нову назву маркера"
+
+#: ../plugin/controllers/i18n.py:408
 #, fuzzy
 msgid "Enter a name for this AutoTimer"
 msgstr "Введіть нову назву маркера"
 
-#: ../plugin/controllers/i18n.py:473
-msgid "Enter new name for the bouquet"
-msgstr "Введіть нову назву фаворита"
-
-#: ../plugin/controllers/i18n.py:474
-msgid "Enter new name for the marker"
-msgstr "Введіть нову назву маркера"
-
-#: ../plugin/controllers/i18n.py:410
+#: ../plugin/controllers/i18n.py:409
 msgid "Enter the text to find in the EPG"
 msgstr ""
 
@@ -761,7 +788,7 @@ msgstr "Помилка, %s створювено не редактором бук
 msgid "Error: Bouquet %s could not deleted, OSError."
 msgstr "Помилка: Букет %s не може бути видалений, OSError."
 
-#: ../plugin/controllers/i18n.py:493
+#: ../plugin/controllers/i18n.py:492
 msgid "Event not found"
 msgstr "Подію не знайдено"
 
@@ -777,11 +804,12 @@ msgstr "Кожен"
 msgid "Exclude"
 msgstr "Виключити"
 
-#: ../plugin/controllers/i18n.py:369
-msgid "Execute \"after event\" during timespan"
+#: ../plugin/controllers/i18n.py:370
+#, fuzzy
+msgid "Execute \"After event\" during timespan"
 msgstr "Виконати \"після події\" в проміжку часу"
 
-#: ../plugin/controllers/i18n.py:553
+#: ../plugin/controllers/i18n.py:552
 msgid "Export"
 msgstr "Експорт"
 
@@ -801,11 +829,11 @@ msgstr ""
 msgid "Factory RC type"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:454
+#: ../plugin/controllers/i18n.py:453
 msgid "Fake Recording"
 msgstr "Імітація запису"
 
-#: ../plugin/controllers/i18n.py:417
+#: ../plugin/controllers/i18n.py:416
 msgid "Fastscan"
 msgstr "Швидке сканування"
 
@@ -822,7 +850,7 @@ msgstr ""
 msgid "Flash type"
 msgstr "Тип пошуку"
 
-#: ../plugin/controllers/i18n.py:441
+#: ../plugin/controllers/i18n.py:440
 msgid "Force"
 msgstr "Примусово"
 
@@ -853,10 +881,10 @@ msgstr "П'ятниця"
 
 #: ../plugin/controllers/i18n.py:154
 #, fuzzy
-msgid "Frontprocessor"
+msgid "Front processor"
 msgstr "Версія фронтпроцесора"
 
-#: ../plugin/controllers/i18n.py:548
+#: ../plugin/controllers/i18n.py:547
 msgid "Full remote"
 msgstr "Повний пульт"
 
@@ -956,7 +984,7 @@ msgstr ""
 msgid "Image folder"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:554
+#: ../plugin/controllers/i18n.py:553
 msgid "Import"
 msgstr "Імпорт"
 
@@ -968,11 +996,11 @@ msgstr "Додати"
 msgid "Include description"
 msgstr "Включити опис"
 
-#: ../plugin/controllers/i18n.py:541
+#: ../plugin/controllers/i18n.py:540
 msgid "Include extended description"
 msgstr "Включити розширений опис"
 
-#: ../plugin/controllers/i18n.py:540
+#: ../plugin/controllers/i18n.py:539
 msgid "Include short description"
 msgstr "Включити короткий опис"
 
@@ -981,18 +1009,18 @@ msgid "Infinite Instant recording started"
 msgstr "Запис без певного часу закінчення розпочато"
 
 #: ../plugin/controllers/i18n.py:176
-msgid "Infos"
+msgid "Info"
 msgstr "Інформація"
 
-#: ../plugin/controllers/i18n.py:443
-msgid "Inherit Autotimer"
+#: ../plugin/controllers/i18n.py:442
+msgid "Inherit AutoTimer"
 msgstr "Наслідувати Автотаймер"
 
-#: ../plugin/controllers/i18n.py:533
+#: ../plugin/controllers/i18n.py:532
 msgid "Install Package"
 msgstr "Встановити пакет"
 
-#: ../plugin/controllers/i18n.py:535
+#: ../plugin/controllers/i18n.py:534
 msgid "Installed"
 msgstr "Встановлено"
 
@@ -1008,16 +1036,16 @@ msgstr "Миттєвий запис для поточної події розп�
 msgid "Internal error!"
 msgstr "Внутрішня помилка!"
 
-#: ../plugin/controllers/i18n.py:414
+#: ../plugin/controllers/i18n.py:413
 #, python-format
 msgid "Interval (in %s)"
 msgstr "Інтервал (в %s)"
 
-#: ../plugin/controllers/i18n.py:438
+#: ../plugin/controllers/i18n.py:437
 msgid "Interval (min.)"
 msgstr "Інтервал (хв.)"
 
-#: ../plugin/controllers/i18n.py:439
+#: ../plugin/controllers/i18n.py:438
 msgid "Interval (sec.)"
 msgstr "Інтервал (сек.)"
 
@@ -1062,7 +1090,7 @@ msgstr "Ліцензія"
 msgid "LIRC remote"
 msgstr "Пульт"
 
-#: ../plugin/controllers/i18n.py:407
+#: ../plugin/controllers/i18n.py:406
 msgid "Label series"
 msgstr "Відзначити групу"
 
@@ -1070,7 +1098,7 @@ msgstr "Відзначити групу"
 msgid "Last update"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:509
+#: ../plugin/controllers/i18n.py:508
 #, fuzzy
 msgid "Link speed"
 msgstr "Швидкість з'єднання"
@@ -1079,7 +1107,7 @@ msgstr "Швидкість з'єднання"
 msgid "List of Timers has been cleaned"
 msgstr "Список таймерів очищенно"
 
-#: ../plugin/controllers/i18n.py:477
+#: ../plugin/controllers/i18n.py:476
 #, fuzzy
 msgid "Loading..."
 msgstr "завантаження"
@@ -1117,11 +1145,15 @@ msgstr "Березень"
 msgid "Marker added."
 msgstr "Маркер додано."
 
-#: ../plugin/controllers/i18n.py:333
+#: ../plugin/controllers/i18n.py:471
+msgid "Marker name"
+msgstr "Назва маркеру"
+
+#: ../plugin/controllers/i18n.py:334
 msgid "Match text"
 msgstr "Збіг назви"
 
-#: ../plugin/controllers/i18n.py:415
+#: ../plugin/controllers/i18n.py:414
 msgid "Max Days"
 msgstr "Макс днів"
 
@@ -1133,19 +1165,19 @@ msgstr "Травень"
 msgid "Message sent successfully!"
 msgstr "Повідомлення успішно відправлено!"
 
-#: ../plugin/controllers/i18n.py:450
+#: ../plugin/controllers/i18n.py:449
 msgid "Method"
 msgstr "Метод"
 
-#: ../plugin/controllers/i18n.py:530
+#: ../plugin/controllers/i18n.py:529
 msgid "Minimal EPG list"
 msgstr "Мінімальний список EPG"
 
-#: ../plugin/controllers/i18n.py:528
+#: ../plugin/controllers/i18n.py:527
 msgid "Minimal movie list"
 msgstr "Мінімальний список записів"
 
-#: ../plugin/controllers/i18n.py:529
+#: ../plugin/controllers/i18n.py:528
 msgid "Minimal timer list"
 msgstr "Мінімальний список таймерів"
 
@@ -1182,7 +1214,7 @@ msgstr "Понеділок"
 msgid "Monthly"
 msgstr "Щомісяця"
 
-#: ../plugin/controllers/i18n.py:536
+#: ../plugin/controllers/i18n.py:535
 msgid "More"
 msgstr "Більше"
 
@@ -1191,11 +1223,11 @@ msgstr "Більше"
 msgid "More details"
 msgstr "Показати деталі"
 
-#: ../plugin/controllers/i18n.py:495
+#: ../plugin/controllers/i18n.py:494
 msgid "Movie database for EPG"
 msgstr "База даних фільмів для EPG"
 
-#: ../plugin/controllers/i18n.py:542
+#: ../plugin/controllers/i18n.py:541
 msgid "Movie search"
 msgstr "Пошук фільмів"
 
@@ -1235,27 +1267,19 @@ msgstr "Веб-інтерфейс OSCam"
 msgid "Name"
 msgstr "Ім'я"
 
-#: ../plugin/controllers/i18n.py:556
+#: ../plugin/controllers/i18n.py:555
 msgid "Name (a-z)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:557
+#: ../plugin/controllers/i18n.py:556
 msgid "Name (z-a)"
 msgstr ""
-
-#: ../plugin/controllers/i18n.py:471
-msgid "Name of the Bouquet"
-msgstr "Назва для фавориту"
-
-#: ../plugin/controllers/i18n.py:472
-msgid "Name of the Marker"
-msgstr "Назва маркеру"
 
 #: ../plugin/controllers/i18n.py:198
 msgid "Namespace"
 msgstr "Простір назв"
 
-#: ../plugin/controllers/i18n.py:510
+#: ../plugin/controllers/i18n.py:509
 msgid "Network Shares"
 msgstr "Мережеві ресурси"
 
@@ -1264,12 +1288,12 @@ msgstr "Мережеві ресурси"
 msgid "Network interface"
 msgstr "Мережевий інтерфейс"
 
-#: ../plugin/controllers/i18n.py:374 ../plugin/controllers/i18n.py:446
+#: ../plugin/controllers/i18n.py:374 ../plugin/controllers/i18n.py:445
 msgid "Never"
 msgstr "Ніколи"
 
-#: ../plugin/controllers/models/services.py:365
-#: ../plugin/controllers/i18n.py:408
+#: ../plugin/controllers/models/services.py:366
+#: ../plugin/controllers/i18n.py:407
 msgid "New"
 msgstr "Новий"
 
@@ -1348,19 +1372,19 @@ msgstr "Не заданий провайдер!"
 msgid "No service given!"
 msgstr "Не задано канал!"
 
-#: ../plugin/controllers/i18n.py:522
+#: ../plugin/controllers/i18n.py:521
 msgid "No, cancel"
 msgstr "Ні, скасувати"
 
-#: ../plugin/controllers/i18n.py:426
+#: ../plugin/controllers/i18n.py:425
 msgid "None"
 msgstr "Нема"
 
-#: ../plugin/controllers/i18n.py:357
+#: ../plugin/controllers/i18n.py:358
 msgid "Not after"
 msgstr "Немає після"
 
-#: ../plugin/controllers/i18n.py:358
+#: ../plugin/controllers/i18n.py:359
 msgid "Not before"
 msgstr "Не раніше, ніж"
 
@@ -1372,11 +1396,11 @@ msgstr "Нічого"
 msgid "Nothing playing."
 msgstr "Нічого не відтворюється."
 
-#: ../plugin/controllers/i18n.py:421
+#: ../plugin/controllers/i18n.py:420
 msgid "Notify if Conflict"
 msgstr "Повідомити при конфлікті"
 
-#: ../plugin/controllers/i18n.py:422
+#: ../plugin/controllers/i18n.py:421
 msgid "Notify if Similar"
 msgstr "Повідомити про подібний"
 
@@ -1405,12 +1429,12 @@ msgstr "OSD"
 msgid "October"
 msgstr "Жовтень"
 
-#: ../plugin/controllers/i18n.py:361
-msgid "Offset after recording (in m)"
+#: ../plugin/controllers/i18n.py:362
+msgid "Offset after recording (mins)"
 msgstr "Об'єднати після запису (в хв.)"
 
-#: ../plugin/controllers/i18n.py:360
-msgid "Offset before recording (in m)"
+#: ../plugin/controllers/i18n.py:361
+msgid "Offset before recording (mins)"
 msgstr "Об'єднати перед записом (в хв.)"
 
 #: ../plugin/controllers/i18n.py:207
@@ -1425,11 +1449,11 @@ msgstr "Для будь-якого каналу"
 msgid "On same service"
 msgstr "Для цього каналу"
 
-#: ../plugin/controllers/i18n.py:486
+#: ../plugin/controllers/i18n.py:485
 msgid "Onid"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:353
+#: ../plugin/controllers/i18n.py:354
 msgid "Only match during timespan"
 msgstr "Тільки збіг в проміжок часу"
 
@@ -1466,9 +1490,8 @@ msgid "Open Vision revision"
 msgstr ""
 
 #: ../plugin/controllers/i18n.py:314
-#, fuzzy
 msgid "Open Vision version"
-msgstr "Версія GUI"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:217
 msgid "Open in new window"
@@ -1478,7 +1501,7 @@ msgstr "Відкрити в новому вікні"
 msgid "OpenWebInterface Enabled"
 msgstr "Веб-інтерфейс ввімкнено"
 
-#: ../plugin/controllers/i18n.py:497
+#: ../plugin/controllers/i18n.py:496
 msgid "OpenWebif Browser Settings"
 msgstr "Налаштування браузера веб-інтерфейса"
 
@@ -1486,7 +1509,7 @@ msgstr "Налаштування браузера веб-інтерфейса"
 msgid "OpenWebif Configuration"
 msgstr "Налаштування OpenWebif"
 
-#: ../plugin/controllers/i18n.py:498
+#: ../plugin/controllers/i18n.py:497
 msgid "OpenWebif Settings"
 msgstr "Налаштування Веб-інтерфейса"
 
@@ -1494,16 +1517,16 @@ msgstr "Налаштування Веб-інтерфейса"
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif url: http://IP ресивера:порт"
 
-#: ../plugin/controllers/models/services.py:259
-#: ../plugin/controllers/i18n.py:489
+#: ../plugin/controllers/models/services.py:260
+#: ../plugin/controllers/i18n.py:488
 msgid "Orbital Position"
 msgstr "Орбітальна позиція"
 
-#: ../plugin/controllers/i18n.py:352
+#: ../plugin/controllers/i18n.py:353
 msgid "Override found with alternative service"
 msgstr "Скасувати використання з альтернативним каналом"
 
-#: ../plugin/controllers/i18n.py:519
+#: ../plugin/controllers/i18n.py:518
 msgid "Packages"
 msgstr "Пакети"
 
@@ -1516,15 +1539,11 @@ msgstr "Pin-код батьківського контролю невірний!
 msgid "Parent Control is not activated."
 msgstr "Батьківський контроль не активований."
 
-#: ../plugin/controllers/i18n.py:402
-msgid "Parse"
-msgstr "Аналіз"
-
-#: ../plugin/controllers/i18n.py:444
-msgid "Parse Autotimer"
+#: ../plugin/controllers/i18n.py:443
+msgid "Parse AutoTimer"
 msgstr "Пошук Автотаймера"
 
-#: ../plugin/controllers/i18n.py:484
+#: ../plugin/controllers/i18n.py:483
 msgid "Pcrpid"
 msgstr ""
 
@@ -1532,21 +1551,22 @@ msgstr ""
 msgid "PiP"
 msgstr "ПіП"
 
-#: ../plugin/controllers/i18n.py:452
+#: ../plugin/controllers/i18n.py:451
 msgid "Picture in Picture"
 msgstr "ПІП"
 
-#: ../plugin/controllers/i18n.py:453
+#: ../plugin/controllers/i18n.py:452
 msgid "Picture in Picture (hidden)"
 msgstr "ПІП (приховати)"
 
-#: ../plugin/controllers/i18n.py:430
+#: ../plugin/controllers/i18n.py:429
 msgid "Plain"
 msgstr "Простий"
 
 #: ../plugin/controllers/i18n.py:219
+#, fuzzy
 msgid "Platform"
-msgstr ""
+msgstr "Плейлист"
 
 #: ../plugin/controllers/i18n.py:220
 msgid "Playback"
@@ -1562,14 +1582,10 @@ msgstr "Плейлист"
 
 #: ../plugin/controllers/i18n.py:561
 #, fuzzy
-msgid "Playlist Format"
+msgid "Playlist format"
 msgstr "Плейлист"
 
-#: ../plugin/controllers/i18n.py:475
-msgid "Please enter filename"
-msgstr "Будь ласка, введіть назву файлу"
-
-#: ../plugin/controllers/i18n.py:481
+#: ../plugin/controllers/i18n.py:480
 msgid "Pmtpid"
 msgstr ""
 
@@ -1581,13 +1597,17 @@ msgstr "Керування живленням"
 msgid "PowerTimer feature not available"
 msgstr "Функції тамера живлення не доступні"
 
-#: ../plugin/controllers/i18n.py:512
+#: ../plugin/controllers/i18n.py:511
 msgid "Primetimes"
 msgstr "Прайм-Тайм"
 
 #: ../plugin/controllers/i18n.py:223
 msgid "Proc model"
 msgstr ""
+
+#: ../plugin/controllers/i18n.py:401
+msgid "Process"
+msgstr "Аналіз"
 
 #: ../plugin/controllers/i18n.py:225
 msgid "Provider"
@@ -1605,41 +1625,20 @@ msgstr ""
 msgid "Radio"
 msgstr "Радіо"
 
-#: ../plugin/controllers/i18n.py:115
-msgid "Really delete the recording"
-msgstr "Дійсно видалити запис?"
-
-#: ../plugin/controllers/i18n.py:117
-msgid "Really delete the timer"
-msgstr "Дійсно видалити таймер?"
-
-#: ../plugin/controllers/i18n.py:236
-msgid "Really rename the recording"
-msgstr "Дійсно перейменувати запис?"
-
-#: ../plugin/controllers/i18n.py:178
-#, fuzzy
-msgid "Really start instant record now?"
-msgstr "Негайний запис"
-
 #: ../plugin/controllers/i18n.py:229
 #, fuzzy
 msgid "Reboot STB"
 msgstr "Перезавантажити ресивер"
 
-#: ../plugin/controllers/i18n.py:372
-msgid "Record a maximum of x times"
+#: ../plugin/controllers/i18n.py:373
+msgid "Record a maximum of # times"
 msgstr "Записати максимум x разів"
-
-#: ../plugin/controllers/i18n.py:480
-msgid "Record+ZAP"
-msgstr "Запис+Переключення"
 
 #: ../plugin/controllers/i18n.py:230
 msgid "Recording Status"
 msgstr "Статус запису"
 
-#: ../plugin/controllers/i18n.py:231 ../plugin/controllers/i18n.py:425
+#: ../plugin/controllers/i18n.py:231 ../plugin/controllers/i18n.py:424
 msgid "Refresh"
 msgstr "Оновити"
 
@@ -1651,7 +1650,7 @@ msgstr "Оновити таймер"
 msgid "Refresh automatically every"
 msgstr "Оновлювати автоматично кожні"
 
-#: ../plugin/controllers/i18n.py:456
+#: ../plugin/controllers/i18n.py:455
 msgid "Refresh now"
 msgstr "Оновити зараз"
 
@@ -1663,15 +1662,15 @@ msgstr "Перезавантажити"
 msgid "Remote"
 msgstr "Пульт"
 
-#: ../plugin/controllers/i18n.py:531
+#: ../plugin/controllers/i18n.py:530
 msgid "Remove Package"
 msgstr "Видалити пакет"
 
-#: ../plugin/controllers/i18n.py:468
+#: ../plugin/controllers/i18n.py:467
 msgid "Rename"
 msgstr "Перейменувати"
 
-#: ../plugin/controllers/i18n.py:464
+#: ../plugin/controllers/i18n.py:463
 msgid "Rename Bouquet"
 msgstr "Перейменувати фаворит"
 
@@ -1700,10 +1699,10 @@ msgid "Restart GUI"
 msgstr "Рестарт GUI"
 
 #: ../plugin/controllers/i18n.py:144
-msgid "Restrict to Bouquets"
+msgid "Restrict to bouquets"
 msgstr "Обмежити для фаворитів"
 
-#: ../plugin/controllers/i18n.py:356
+#: ../plugin/controllers/i18n.py:357
 msgid "Restrict to events on certain dates"
 msgstr "Обмежити подію в певні дати"
 
@@ -1718,10 +1717,6 @@ msgstr ""
 #: ../plugin/controllers/i18n.py:263
 msgid "SNR"
 msgstr "SNR"
-
-#: ../plugin/controllers/i18n.py:543
-msgid "START TYPING"
-msgstr ""
 
 #: ../plugin/controllers/i18n.py:89
 #, fuzzy
@@ -1766,8 +1761,8 @@ msgstr "Пошук супутника"
 msgid "Saturday"
 msgstr "Субота"
 
-#: ../plugin/controllers/i18n.py:243 ../plugin/controllers/i18n.py:401
-#: ../plugin/controllers/i18n.py:455 ../plugin/plugin.py:120
+#: ../plugin/controllers/i18n.py:243 ../plugin/controllers/i18n.py:400
+#: ../plugin/controllers/i18n.py:454 ../plugin/plugin.py:120
 msgid "Save"
 msgstr "Зберегти"
 
@@ -1775,7 +1770,7 @@ msgstr "Зберегти"
 msgid "Screenshot"
 msgstr "Скріншот"
 
-#: ../plugin/controllers/i18n.py:245 ../plugin/controllers/i18n.py:461
+#: ../plugin/controllers/i18n.py:245 ../plugin/controllers/i18n.py:460
 msgid "Search"
 msgstr "Пошук"
 
@@ -1796,20 +1791,20 @@ msgstr "Пошук у KinoPoisk"
 msgid "Search TV Guide UK"
 msgstr "ТВ гід"
 
-#: ../plugin/controllers/i18n.py:462
+#: ../plugin/controllers/i18n.py:461
 msgid "Search by name, sd / hd / uhd, or provider"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:346
+#: ../plugin/controllers/i18n.py:347
 msgid "Search strictness"
 msgstr "Суворий пошук"
 
-#: ../plugin/controllers/i18n.py:335
+#: ../plugin/controllers/i18n.py:336
 msgid "Search type"
 msgstr "Тип пошуку"
 
-#: ../plugin/controllers/i18n.py:544
-msgid "Select IPK File for Upload"
+#: ../plugin/controllers/i18n.py:543
+msgid "Select IPK file for upload"
 msgstr "Виберіть файл IPK для завантаження"
 
 #: ../plugin/controllers/i18n.py:251
@@ -1884,15 +1879,15 @@ msgstr "Канал не альтернативний."
 msgid "Service renamed successfully."
 msgstr "Канал успішно перейменовано."
 
-#: ../plugin/controllers/models/services.py:367
+#: ../plugin/controllers/models/services.py:368
 msgid "Services"
 msgstr "Канали"
 
-#: ../plugin/controllers/i18n.py:362
+#: ../plugin/controllers/i18n.py:363
 msgid "Set maximum duration"
 msgstr "Встановіть максимальну тривалість"
 
-#: ../plugin/controllers/i18n.py:255 ../plugin/controllers/i18n.py:405
+#: ../plugin/controllers/i18n.py:255 ../plugin/controllers/i18n.py:404
 #: ../plugin/controllers/base.py:281
 msgid "Settings"
 msgstr "Налаштування"
@@ -1905,18 +1900,10 @@ msgstr "Показати EPG для"
 msgid "Show Full OpenWebif"
 msgstr "Показати весь OpenWebif"
 
-#: ../plugin/controllers/i18n.py:494
-msgid "Show Picon in channel list"
-msgstr "Показати пікони в списку каналів"
-
 #: ../plugin/controllers/i18n.py:213
 #, fuzzy
 msgid "Show STB name in header"
 msgstr "Показувати назву ресивера в заголовку"
-
-#: ../plugin/controllers/i18n.py:550
-msgid "Show Service type in channel list"
-msgstr "Показати тип каналу в списку каналів"
 
 #: ../plugin/plugin.py:137
 msgid "Show benchmark in STB information"
@@ -1926,7 +1913,7 @@ msgstr ""
 msgid "Show box name in header"
 msgstr "Показувати назву ресивера в заголовку"
 
-#: ../plugin/controllers/i18n.py:549
+#: ../plugin/controllers/i18n.py:548
 msgid "Show details"
 msgstr "Показати деталі"
 
@@ -1934,28 +1921,36 @@ msgstr "Показати деталі"
 msgid "Show full remote"
 msgstr "Показати повний пульт"
 
-#: ../plugin/controllers/i18n.py:418
-msgid "Show in Extensionsmenu"
+#: ../plugin/controllers/i18n.py:417
+msgid "Show in Extensions menu"
 msgstr "Показа в Меню доповнень"
 
-#: ../plugin/controllers/i18n.py:552
+#: ../plugin/controllers/i18n.py:551
 msgid "Show picon background"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:551
+#: ../plugin/controllers/i18n.py:550
 #, fuzzy
 msgid "Show picons"
 msgstr "Показати деталі"
+
+#: ../plugin/controllers/i18n.py:493
+msgid "Show picons in channel list"
+msgstr "Показати пікони в списку каналів"
+
+#: ../plugin/controllers/i18n.py:549
+msgid "Show service type in channel list"
+msgstr "Показати тип каналу в списку каналів"
 
 #: ../plugin/controllers/i18n.py:261
 msgid "Shutdown"
 msgstr "Вимкнути"
 
-#: ../plugin/controllers/i18n.py:487
+#: ../plugin/controllers/i18n.py:486
 msgid "Sid"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:403
+#: ../plugin/controllers/i18n.py:402
 msgid "Simulate"
 msgstr "Імітувати"
 
@@ -2009,15 +2004,15 @@ msgstr "ПЗ"
 msgid "Sorry this page is not yet implemented"
 msgstr "Вибачте, ця сторінка недоступна"
 
-#: ../plugin/controllers/i18n.py:555
+#: ../plugin/controllers/i18n.py:554
 msgid "Sort"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:500
+#: ../plugin/controllers/i18n.py:499
 msgid "Spinner"
 msgstr "Спінер"
 
-#: ../plugin/controllers/i18n.py:488
+#: ../plugin/controllers/i18n.py:487
 msgid "Sref"
 msgstr ""
 
@@ -2041,6 +2036,10 @@ msgstr "Негайний запис"
 msgid "Start time is after end time"
 msgstr "Час початку після часу закінчення"
 
+#: ../plugin/controllers/i18n.py:542
+msgid "Start typing..."
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:271
 msgid "Stream"
 msgstr "Стрім"
@@ -2053,6 +2052,10 @@ msgstr "Стрім"
 #: ../plugin/controllers/i18n.py:44
 msgid "Su"
 msgstr "Нд"
+
+#: ../plugin/controllers/i18n.py:559
+msgid "Subdirectories"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:272
 msgid "Subnet mask"
@@ -2080,7 +2083,7 @@ msgstr "Тб"
 msgid "TV"
 msgstr "ТВ"
 
-#: ../plugin/controllers/i18n.py:504
+#: ../plugin/controllers/i18n.py:503
 msgid "TV Guide"
 msgstr "ТВ гід"
 
@@ -2108,7 +2111,7 @@ msgstr "Шаблон"
 msgid "Terminal"
 msgstr "Термінал"
 
-#: ../plugin/controllers/models/services.py:374
+#: ../plugin/controllers/models/services.py:375
 msgid "Terrestrial"
 msgstr "Наземний"
 
@@ -2144,7 +2147,7 @@ msgstr "Не вдалося знайти таймер '%s' з заданим ч�
 msgid "The timer '%s' now recorded! Not disabled!"
 msgstr "Таймер '%s' зараз записується! ННе вимкнено!"
 
-#: ../plugin/controllers/i18n.py:499
+#: ../plugin/controllers/i18n.py:498
 msgid "Theme"
 msgstr "Тема"
 
@@ -2169,7 +2172,7 @@ msgstr "Четвер"
 msgid "Time"
 msgstr "Час"
 
-#: ../plugin/controllers/i18n.py:505
+#: ../plugin/controllers/i18n.py:504
 msgid "Timeline"
 msgstr "Часова лінія"
 
@@ -2206,7 +2209,7 @@ msgstr "Таймер '%s' не ввімкнено через конфлікт"
 msgid "Timer '%s' not saved while Conflict"
 msgstr "Таймер '%s' не збережено через конфлікт"
 
-#: ../plugin/controllers/i18n.py:492
+#: ../plugin/controllers/i18n.py:491
 msgid "Timer Added"
 msgstr "Таймер додано"
 
@@ -2218,7 +2221,7 @@ msgstr "Таймер додано"
 msgid "Timer conflict detected! Not recording!"
 msgstr "Виявлено конфлікт таймеру! Запис зупинено!"
 
-#: ../plugin/controllers/i18n.py:349
+#: ../plugin/controllers/i18n.py:350
 msgid "Timer type"
 msgstr "Тип таймеру"
 
@@ -2230,7 +2233,7 @@ msgstr "Список таймерів збережено"
 msgid "Timerlist"
 msgstr "Список таймерів"
 
-#: ../plugin/controllers/i18n.py:287 ../plugin/controllers/i18n.py:404
+#: ../plugin/controllers/i18n.py:287 ../plugin/controllers/i18n.py:403
 msgid "Timers"
 msgstr "Таймери"
 
@@ -2251,11 +2254,11 @@ msgstr "Транскодування"
 msgid "Translation to Spanish"
 msgstr "Переклад на іспанський"
 
-#: ../plugin/controllers/i18n.py:416
-msgid "Try Guessing"
+#: ../plugin/controllers/i18n.py:415
+msgid "Try guessing"
 msgstr "Сбробувати визначити"
 
-#: ../plugin/controllers/i18n.py:485
+#: ../plugin/controllers/i18n.py:484
 msgid "Tsid"
 msgstr ""
 
@@ -2321,31 +2324,31 @@ msgstr "Невідома команда: '%s'"
 msgid "Upcoming Events"
 msgstr "Наступні події"
 
-#: ../plugin/controllers/i18n.py:534
+#: ../plugin/controllers/i18n.py:533
 msgid "Update"
 msgstr "Оновлення"
 
-#: ../plugin/controllers/i18n.py:532
+#: ../plugin/controllers/i18n.py:531
 msgid "Update Package"
 msgstr "Оновити пакет"
 
-#: ../plugin/controllers/i18n.py:537
-msgid "Update from Feed"
+#: ../plugin/controllers/i18n.py:536
+msgid "Update from feed"
 msgstr "Оновлення з фіду"
 
-#: ../plugin/controllers/i18n.py:538
-msgid "Upgrade all Packages"
+#: ../plugin/controllers/i18n.py:537
+msgid "Upgrade all packages"
 msgstr "Оновити всі пакети"
 
-#: ../plugin/controllers/i18n.py:547
+#: ../plugin/controllers/i18n.py:546
 msgid "Upload File Error"
 msgstr "Помилка завантаження файлу"
 
-#: ../plugin/controllers/i18n.py:546
+#: ../plugin/controllers/i18n.py:545
 msgid "Upload package"
 msgstr "Завантажити пакет"
 
-#: ../plugin/controllers/i18n.py:545
+#: ../plugin/controllers/i18n.py:544
 msgid "Uploaded Files"
 msgstr "Завантажені файли"
 
@@ -2376,13 +2379,14 @@ msgstr "Використовувати альтернативне ім'я рес
 msgid "Use custom box name"
 msgstr "Використовувати альтернативне ім'я ресивера"
 
+#: ../plugin/controllers/i18n.py:520
+#, fuzzy
+msgid "Use modern design"
+msgstr "Використовуйте новий дизайн"
+
 #: ../plugin/controllers/i18n.py:571 ../plugin/plugin.py:138
 msgid "Use modern interface"
 msgstr "Використовуйте новий дизайн"
-
-#: ../plugin/controllers/i18n.py:521
-msgid "Use new design"
-msgstr ""
 
 #: ../plugin/controllers/i18n.py:315
 msgid "VPS"
@@ -2412,7 +2416,7 @@ msgstr "Розмір відео"
 msgid "Video Width"
 msgstr "Ширина відео"
 
-#: ../plugin/controllers/i18n.py:451
+#: ../plugin/controllers/i18n.py:450
 msgid "Visibly"
 msgstr "Видимий (режим ТВ)"
 
@@ -2424,7 +2428,7 @@ msgstr "Гучність"
 msgid "Volume Control"
 msgstr "Контроль гучності"
 
-#: ../plugin/controllers/i18n.py:483
+#: ../plugin/controllers/i18n.py:482
 msgid "Vpid"
 msgstr ""
 
@@ -2440,7 +2444,7 @@ msgstr "Очікування відповіді..."
 msgid "Wake Up"
 msgstr "Включення"
 
-#: ../plugin/controllers/i18n.py:442
+#: ../plugin/controllers/i18n.py:441
 msgid "Wakeup"
 msgstr "Включення"
 
@@ -2452,7 +2456,7 @@ msgstr "Увага"
 msgid "We"
 msgstr "Ср"
 
-#: ../plugin/controllers/i18n.py:506
+#: ../plugin/controllers/i18n.py:505
 msgid "Web TV"
 msgstr "Веб ТБ"
 
@@ -2463,14 +2467,6 @@ msgstr "Сер"
 #: ../plugin/controllers/i18n.py:56
 msgid "Wednesday"
 msgstr "Середа"
-
-#: ../plugin/controllers/i18n.py:398
-msgid "Weekday"
-msgstr "Будні"
-
-#: ../plugin/controllers/i18n.py:397
-msgid "Weekend"
-msgstr "Вихідні"
 
 #: ../plugin/controllers/i18n.py:377
 msgid "Weekly (Monday)"
@@ -2484,7 +2480,7 @@ msgstr "Щотижня (неділя)"
 msgid "Without auth only local access is allowed!"
 msgstr "Без аутентифікації дозволяється тільки локальний доступ!"
 
-#: ../plugin/controllers/i18n.py:431
+#: ../plugin/controllers/i18n.py:430
 msgid "Wizard"
 msgstr "Помічник"
 
@@ -2493,25 +2489,21 @@ msgstr "Помічник"
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Невірний формат параметру 'set=%s'. Використовуйте set=set15 "
 
-#: ../plugin/controllers/i18n.py:539
+#: ../plugin/controllers/i18n.py:522 ../plugin/controllers/i18n.py:538
 msgid "Yes"
 msgstr "Так"
-
-#: ../plugin/controllers/i18n.py:523
-msgid "Yes, delete it"
-msgstr "Так, видалити його"
 
 #: ../plugin/controllers/i18n.py:320
 msgid "Yes/No"
 msgstr "Так/ні"
 
-#: ../plugin/controllers/i18n.py:526
-msgid "You need to write something!"
-msgstr "Вам потрібно щось написати!"
-
 #: ../plugin/controllers/i18n.py:321
 msgid "Zap"
 msgstr "Переключити"
+
+#: ../plugin/controllers/i18n.py:479
+msgid "Zap & Record"
+msgstr "Запис+Переключення"
 
 #: ../plugin/controllers/i18n.py:323
 msgid "Zap to"
@@ -2521,19 +2513,19 @@ msgstr "Переключити на"
 msgid "Zapped to"
 msgstr "Переключено на"
 
-#: ../plugin/controllers/i18n.py:365
+#: ../plugin/controllers/i18n.py:366
 msgid "auto"
 msgstr "авто"
 
-#: ../plugin/controllers/i18n.py:348
-msgid "case-insensitive search"
+#: ../plugin/controllers/i18n.py:349
+msgid "case-insensitive"
 msgstr "пошук без урахування регістру"
 
-#: ../plugin/controllers/i18n.py:347
-msgid "case-sensitive search"
+#: ../plugin/controllers/i18n.py:348
+msgid "case-sensitive"
 msgstr "пошук з урахуванням регістру"
 
-#: ../plugin/controllers/i18n.py:338
+#: ../plugin/controllers/i18n.py:339
 msgid "description match"
 msgstr "збіг опису"
 
@@ -2541,19 +2533,19 @@ msgstr "збіг опису"
 msgid "disabled"
 msgstr "вимкнено"
 
-#: ../plugin/controllers/i18n.py:366
+#: ../plugin/controllers/i18n.py:367
 msgid "do nothing"
 msgstr "нічого не робити"
 
-#: ../plugin/controllers/i18n.py:491
+#: ../plugin/controllers/i18n.py:490
 msgid "error! Loading Page"
 msgstr "помилка! Сторінка завантажується"
 
-#: ../plugin/controllers/i18n.py:337
+#: ../plugin/controllers/i18n.py:338
 msgid "exact title match"
 msgstr "повний збіг"
 
-#: ../plugin/controllers/i18n.py:344
+#: ../plugin/controllers/i18n.py:345
 #, fuzzy
 msgid "favourite desc match"
 msgstr "збіг короткого опису"
@@ -2562,11 +2554,11 @@ msgstr "збіг короткого опису"
 msgid "finished"
 msgstr "закінчено"
 
-#: ../plugin/controllers/i18n.py:368
+#: ../plugin/controllers/i18n.py:369
 msgid "go to deep standby"
 msgstr "вимкнути ресивер"
 
-#: ../plugin/controllers/i18n.py:367
+#: ../plugin/controllers/i18n.py:368
 msgid "go to standby"
 msgstr "перейти у сплячий режим"
 
@@ -2575,15 +2567,15 @@ msgid "hour"
 msgstr "година"
 
 #: ../plugin/controllers/i18n.py:395
-msgid "in Description"
+msgid "in description"
 msgstr "в описі"
 
 #: ../plugin/controllers/i18n.py:394
-msgid "in Shortdescription"
+msgid "in short description"
 msgstr "в короткому описі"
 
 #: ../plugin/controllers/i18n.py:393
-msgid "in Title"
+msgid "in title"
 msgstr "в заголовку"
 
 #: ../plugin/controllers/models/movies.py:228
@@ -2620,14 +2612,14 @@ msgid "none/IPv4-only network"
 msgstr "нема/мережа тільки IPv4"
 
 #: ../plugin/controllers/i18n.py:396
-msgid "on Weekday"
+msgid "on weekday"
 msgstr "у будні"
 
 #: ../plugin/controllers/BouquetEditor.py:88
 msgid "one two three four unknown command"
 msgstr "одна, дві, три невідомі команди"
 
-#: ../plugin/controllers/i18n.py:336
+#: ../plugin/controllers/i18n.py:337
 msgid "partial title match"
 msgstr "частковий збіг"
 
@@ -2639,11 +2631,11 @@ msgstr ""
 msgid "r/w"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:350
+#: ../plugin/controllers/i18n.py:351
 msgid "record"
 msgstr "запис"
 
-#: ../plugin/controllers/i18n.py:345
+#: ../plugin/controllers/i18n.py:346
 msgid "regex match (experimental)"
 msgstr ""
 
@@ -2660,22 +2652,22 @@ msgid "seconds"
 msgstr "секунди"
 
 #: ../plugin/controllers/i18n.py:389
-msgid "select Bouquets"
+msgid "select bouquets"
 msgstr "вибрати фаворити"
 
 #: ../plugin/controllers/i18n.py:388
-msgid "select Channels"
+msgid "select channels"
 msgstr "вибрати канали"
 
 #: ../plugin/controllers/i18n.py:386
-msgid "select Tags"
+msgid "select tags"
 msgstr "вибір тегів"
 
-#: ../plugin/controllers/i18n.py:341
+#: ../plugin/controllers/i18n.py:342
 msgid "short description match"
 msgstr "збіг короткого опису"
 
-#: ../plugin/controllers/i18n.py:364
+#: ../plugin/controllers/i18n.py:365
 msgid "standard"
 msgstr "стандарт"
 
@@ -2689,20 +2681,20 @@ msgstr "статичний"
 msgid "this service is protected by a parental control pin"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:343
+#: ../plugin/controllers/i18n.py:344
 #, fuzzy
 msgid "title ends with"
 msgstr "збіг початку"
 
-#: ../plugin/controllers/i18n.py:339
+#: ../plugin/controllers/i18n.py:340
 msgid "title or description match"
 msgstr "збіг назви або опису"
 
-#: ../plugin/controllers/i18n.py:340
+#: ../plugin/controllers/i18n.py:341
 msgid "title or short description match"
 msgstr "збіг назви або короткого опису"
 
-#: ../plugin/controllers/i18n.py:342
+#: ../plugin/controllers/i18n.py:343
 msgid "title starts with"
 msgstr "збіг початку"
 
@@ -2720,11 +2712,11 @@ msgstr "тип %s не чисельний"
 msgid "unknown"
 msgstr "невідомо"
 
-#: ../plugin/controllers/i18n.py:511
+#: ../plugin/controllers/i18n.py:510
 msgid "using"
 msgstr "використовується"
 
-#: ../plugin/controllers/i18n.py:479
+#: ../plugin/controllers/i18n.py:478
 msgid "via"
 msgstr "через"
 
@@ -2732,14 +2724,22 @@ msgstr "через"
 msgid "waiting"
 msgstr "чекайте"
 
+#: ../plugin/controllers/i18n.py:398
+msgid "weekday"
+msgstr "Будні"
+
+#: ../plugin/controllers/i18n.py:397
+msgid "weekend"
+msgstr "Вихідні"
+
 #: ../plugin/controllers/opkg.py:296
 msgid "wrong filetype"
 msgstr "невірний тип файлу"
 
-#: ../plugin/controllers/i18n.py:351
+#: ../plugin/controllers/i18n.py:352
 msgid "zap"
 msgstr "переключити"
 
 #: ../plugin/controllers/i18n.py:322
-msgid "zap before Stream"
+msgid "zap before streaming"
 msgstr "перемикати перед стримом"

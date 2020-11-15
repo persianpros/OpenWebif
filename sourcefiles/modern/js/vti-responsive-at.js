@@ -17,7 +17,7 @@ function AddFilter(a,b,c)
 		</select> \
 	</td> \
 	<td class='nopadding'> \
-		<select class='FM form-control' id='fm" + i.toString() + "' > \
+		<select class='FM form-control' id='fm" + i + "' > \
 			<option value='title' selected=''>" + tstr_at_filter_title + "</option> \
 			<option value='shortdescription'>" + tstr_at_filter_short_desc + "</option> \
 			<option value='description'>" + tstr_at_filter_desc + "</option> \
@@ -29,7 +29,7 @@ function AddFilter(a,b,c)
 			<input type='text' class='FI form-control' size='20' value='' style='display: block;' id='fi" + i + "'> \
 		</div> \
 		<div id='fsline" + i +"'> \
-			<select class='FS' style='display: none;' id='fs" + i + "' > \
+			<select class='FS' id='fs" + i + "' > \
 				<option value='0' selected=''>" + tstr_monday + "</option> \
 				<option value='1'>" + tstr_tuesday + "</option> \
 				<option value='2'>" + tstr_wednesday + "</option> \
@@ -47,6 +47,8 @@ function AddFilter(a,b,c)
 		<label for='fr" + i + "'>" + tstr_at_del + "</label> \
 	</td> \
 </tr>");
+
+	$('#fsline' + i).hide();
 
 	if(a!="")
 		$('#ft' + i).val(a);
@@ -73,6 +75,16 @@ function AddFilter(a,b,c)
 	if ( a === "" && b === "")
 		$.AdminBSB.select.activate();
 	$('#f' + i).show();
+
+	$('#fm' + i).change(function() {
+		if ($(this).val()=="dayofweek") {
+			$('#fsline' + i).show();
+			$('#filine' + i).hide();
+		} else {
+			$('#fsline' + i).hide();
+			$('#filine' + i).show();
+		}
+  });
 }
 
 
@@ -865,22 +877,10 @@ function test_simulateAT(simulate)
 				line += '<td>' + $(this).find('e2autotimername').text() + '</td>';
 				line += '<td>' + $(this).find('e2name').text() + '</td>';
 				line += '<td>' + $(this).find('e2servicename').text() + '</td>';
-				var s = $(this).find('e2timebegin').text();
-				var d = new Date(Math.round(s) * 1000);
-				var h = d.getHours();
-				var m = d.getMinutes();
-				var _h = ((h>9) ? '':'0') + h.toString();
-				var _m = ((m>9) ? '':'0') + m.toString();
-				s = (d.getMonth()+1) + '/' + d.getDate() + '/' + d.getFullYear() + ' ' + _h + ':' + _m;
-				line += '<td>' + s + '</td>';
-				s = $(this).find('e2timeend').text();
-				d = new Date(Math.round(s) * 1000);
-				h = d.getHours();
-				m = d.getMinutes();
-				var _h = ((h>9) ? '':'0') + h.toString();
-				var _m = ((m>9) ? '':'0') + m.toString();
-				s = (d.getMonth()+1) + '/' + d.getDate() + '/' + d.getFullYear() + ' ' + _h + ':' + _m;
-				line += '<td>' + s + '</td>';
+				var startTime = $(this).find('e2timebegin').text();
+				line += '<td style="text-align: right">' + owif.utils.getStrftime(startTime) + '</td>';
+        var endTime = $(this).find('e2timeend').text();
+				line += '<td style="text-align: right">' + owif.utils.getToTimeText(startTime, endTime) + '</td>';
 				line += '</tr>';
 				console.debug(line);
 				lines.push(line);
@@ -922,20 +922,6 @@ function InitPage() {
 
 	autoTimerOptions = owif.gui.populateAutoTimerOptions();
 	// window.autoTimerOptions['channels'].setChoiceByValue(['1:0:19:1B1F:802:2:11A0000:0:0:0:', 'BBC One NI HD']);
-	
-	$( ".FM" ).change(function() {
-
-		var nf = $(this).parent().parent();
-		if($(this).val()=="dayofweek") {
-			nf.find(".FS").show();
-			nf.find(".FI").hide();
-		}
-		else
-		{
-			nf.find(".FS").hide();
-			nf.find(".FI").show();
-		}
-  });
 }
 
 function delAT()
@@ -943,13 +929,13 @@ function delAT()
 	if(CurrentAT && !CurrentAT.isNew)
 	{
 		swal({
-			title: tstr_del_autotimer + " ?",
+			title: tstr_del_autotimer,
 			text: CurrentAT.name,
 			type: "warning",
 			showCancelButton: true,
 			confirmButtonColor: "#DD6B55",
-			confirmButtonText: tstrings_yes_delete + ' !',
-			cancelButtonText: tstrings_no_cancel + ' !',
+			confirmButtonText: tstrings_yes_delete,
+			cancelButtonText: tstrings_no_cancel,
 			closeOnConfirm: false,
 			closeOnCancel: false
 		}, function (isConfirm) {

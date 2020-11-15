@@ -38,7 +38,7 @@
 	<script>initJsTranslation($dumps($tstrings))</script>
 </head>
 
-<body class="themed--$themeMode theme-$skinColor"  data-thememode="$themeMode" data-skincolor="$skinColor">
+<body class="themed--$themeMode theme-$skinColor" data-thememode="$themeMode" data-skincolor="$skinColor">
 	<!-- Overlay For Sidebars -->
 	<div class="overlay"></div>
 	<div class="search-bar search-bar-epg">
@@ -47,7 +47,10 @@
 				<i class="material-icons">search</i>
 			</div>
 		</div>
-		<input type="text" id="epgsearchtext" placeholder="$tstrings['start_typing'] ( $tstrings['epgsearch'] ) ...">
+		<form action="#ajax/srch" method="get" onsubmit="window.location='#epgdialog?sstr=click&bouquetsonly=1';return false;">
+		<input type="text" name="sstr" id="xepgsearchtext" placeholder="$tstrings['start_typing'] ( $tstrings['epgsearch'] ) ...">
+<button type=submit">go</button>
+		</form>
 		<div class="close-search">
 			<span class="start-search">
 				<i class="material-icons">search</i>
@@ -62,7 +65,7 @@
 				<i class="material-icons">search</i>
 			</div>
 		</div>
-		<input type="text" id="moviesearchtext" placeholder="$tstrings['start_typing'] ( $tstrings['moviesearch'] ) ...">
+		<input type="text" name="moviesearchtext" id="moviesearchtext" placeholder="$tstrings['start_typing'] ( $tstrings['moviesearch'] ) ...">
 		<div class="close-search">
 			<span class="start-search">
 				<i class="material-icons">search</i>
@@ -77,7 +80,7 @@
 				<div class="navbar-header">
 					<a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
 					<a href="javascript:void(0);" class="bars" id="leftsidebarin"></a>
-					<span class="navbar-brand">OpenWebif</span>
+					<a href="/" class="navbar-brand">OpenWebif</a>
 				</div>
 				<div class="collapse navbar-collapse pull-right align-right" id="navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
@@ -126,7 +129,7 @@
 							</a>
 							<ul class="ml-menu noselect">
 								<li class="collapse">
-									<a href='#' title=$tstrings['showfullremote'].replace(" ","&nbsp;") onclick="toggleFullRemote();return false;">Full</a>
+									<a href="#" title="$tstrings['showfullremote'].replace(' ', '&nbsp;')" onclick="toggleFullRemote();return false;">Full</a>
 								</li>
 									#if $RemoteControlView == 'checked'
 									<span style="display:None;" id="symbolRemoteView">
@@ -214,18 +217,22 @@
 											</td>
 										</tr>
 										<tr>
-											<td>
-												<span style="cursor:pointer;" title="Enable/Disable Screenhot on key press or $tstrings['grabscreenshot']" onclick="load_maincontent('ajax/screenshot');return false;">$tstrings['grabscreenshot']</span>
+											<td><!-- TODO: i10n -->
+												<span style="cursor:pointer;" title="Enable/Disable Screenshot on key press or $tstrings['grabscreenshot']" onclick="load_maincontent('ajax/screenshot');return false;">$tstrings['grabscreenshot']</span>
 											</td>
 											<td>
-												<div class='switch'>
-													<span class='m-r-10 font-12'></span>
-													<label><input $ScreenshotOnRCU type='checkbox' class="remotegrabscreen" id='remotegrabscreen1' name="remotegrabscreen1" ><span class='lever theme-switch-col switch-col-$skinColor'></span></label>
+												<div class="switch">
+													<span class="m-r-10 font-12"></span>
+													<label>
+														<input type="checkbox" name="remotegrabscreen1" id="remotegrabscreen1" $ScreenshotOnRCU class="remotegrabscreen">
+														<span class="lever theme-switch-col switch-col-$skinColor"></span>
+													</label>
 												</div>
 											</td>
 										</tr>
 										<tr>
-											<td colspan="2"><p></p>
+											<td colspan="2">
+												<p></p>
 											</td>
 										</tr>
 									</table>
@@ -245,7 +252,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#myepg&epgmode=tv" data-close="true" accesskey="e" title="Shortcut: e">
+							<a href="#myepg?epgmode=tv" data-close="true" accesskey="e" title="Shortcut: e">
 								<i class="material-icons">view_list</i>
 								<span>$tstrings['epg']</span>
 							</a>
@@ -266,7 +273,7 @@
 							#if $extra["key"] in ("ajax/at",)
 								<li>
 									<a href="#at" data-close="true" accesskey="a" title="Shortcut: a">
-										<i class="material-icons">history</i>
+										<i class="material-icons">av_timer</i>
 										<span>$extra["description"]</span>
 									</a>
 								</li>
@@ -356,7 +363,7 @@
 									<span>$tstrings['epgsearchextended']</span>
 									<div class="switch">
 										<label>
-											<input type="checkbox" id="myepgbtn0" $EPGSearchFull>
+											<input type="checkbox" name="myepgbtn0" id="myepgbtn0" $EPGSearchFull>
 											<span class="lever theme-switch-col switch-col-$skinColor vtiwebconfig"></span>
 										</label>
 									</div>
@@ -365,7 +372,7 @@
 									<span>$tstrings['epgsearchbouquetsonly']</span>
 									<div class="switch">
 										<label>
-											<input type="checkbox" id="myepgbtn1" $EPGSearchBQonly>
+											<input type="checkbox" name="myepgbtn1" id="myepgbtn1" $EPGSearchBQonly>
 											<span class="lever theme-switch-col switch-col-$skinColor vtiwebconfig"></span>
 										</label>
 									</div>
@@ -377,7 +384,7 @@
 									<span>$tstrings['inc_shortdesc']</span>
 									<div class="switch">
 										<label>
-											<input type="checkbox" id="mymoviesearchbtn0" $MovieSearchShort>
+											<input type="checkbox" name="mymoviesearchbtn0" id="mymoviesearchbtn0" $MovieSearchShort>
 											<span class="lever theme-switch-col switch-col-$skinColor vtiwebconfig"></span>
 										</label>
 									</div>
@@ -386,7 +393,7 @@
 									<span>$tstrings['inc_extdesc']</span>
 									<div class="switch">
 										<label>
-											<input type="checkbox" id="mymoviesearchbtn1" $MovieSearchExtended>
+											<input type="checkbox" name="mymoviesearchbtn1" id="mymoviesearchbtn1" $MovieSearchExtended>
 											<span class="lever theme-switch-col switch-col-$skinColor vtiwebconfig"></span>
 										</label>
 									</div>
@@ -399,7 +406,7 @@
 									<span>$tstrings['showfullremoteshort']</span>
 									<div class="switch">
 										<label>
-											<input type="checkbox" id="remotecontrolview" $RemoteControlView>
+											<input type="checkbox" name="remotecontrolview" id="remotecontrolview" $RemoteControlView>
 											<span class="lever theme-switch-col switch-col-$skinColor vtiwebconfig"></span>
 										</label>
 									</div>
@@ -408,7 +415,7 @@
 									<span>$tstrings['min_movie_list']</span>
 									<div class="switch">
 										<label>
-											<input type="checkbox" id="minmovielist" $MinMovieList>
+											<input type="checkbox" name="minmovielist" id="minmovielist" $MinMovieList>
 											<span class="lever theme-switch-col switch-col-$skinColor vtiwebconfig"></span>
 										</label>
 									</div>
@@ -417,7 +424,7 @@
 									<span>$tstrings['min_timer_list']</span>
 									<div class="switch">
 										<label>
-											<input type="checkbox" id="mintimerlist" $MinTimerList>
+											<input type="checkbox" name="mintimerlist" id="mintimerlist" $MinTimerList>
 											<span class="lever theme-switch-col switch-col-$skinColor vtiwebconfig"></span>
 										</label>
 									</div>
@@ -425,14 +432,17 @@
 								<li>
 									<span>$tstrings['min_epg_list']</span>
 									<div class="switch">
-										<label><input type="checkbox" id="minepglist" $MinEPGList ><span class="lever theme-switch-col switch-col-$skinColor vtiwebconfig"></span></label>
+										<label>
+											<input type="checkbox" name="minepglist" id="minepglist" $MinEPGList>
+											<span class="lever theme-switch-col switch-col-$skinColor vtiwebconfig"></span>
+										</label>
 									</div>
 								</li>
 								<li>
 									<span>XSPF $tstrings['playlistformat']</span>
 									<div class="switch">
 										<label>
-											<input type="checkbox" id="plformat">
+											<input type="checkbox" name="plformat" id="plformat">
 											<span class="lever theme-switch-col switch-col-$skinColor vtiwebconfig"></span>
 										</label>
 									</div>
@@ -441,7 +451,7 @@
 									<span>$tstrings['use_classic_design']</span>
 									<div class="switch">
 										<label>
-											<input type="checkbox" id="noresposive">
+											<input type="checkbox" name="noresposive" id="noresposive">
 											<span class="lever theme-switch-col switch-col-$skinColor vtiwebconfig"></span>
 										</label>
 									</div>
@@ -454,7 +464,7 @@
 									<span>$tstrings['show_picons']</span>
 									<div class="switch">
 										<label>
-											<input type="checkbox" id="showpicons" $showPicons>
+											<input type="checkbox" name="showpicons" id="showpicons" $showPicons>
 											<span class="lever theme-switch-col switch-col-$skinColor vtiwebconfig"></span>
 										</label>
 									</div>
@@ -463,7 +473,7 @@
 									<span>$tstrings['show_picon_background']</span>
 									<div class="switch">
 										<label>
-											<input type="checkbox" id="showpiconbackground" $showPiconBackground>
+											<input type="checkbox" name="showpiconbackground" id="showpiconbackground" $showPiconBackground>
 											<span class="lever theme-switch-col switch-col-$skinColor vtiwebconfig"></span>
 										</label>
 									</div>
@@ -477,7 +487,7 @@
 								<span>$tstrings['gui_theme_mode'] - City Lights</span>
 								<div class="switch">
 									<label>
-										<input type="checkbox" name="themeMode" value="city-lights" id="thememodebtn" checked="$(themeMode != 'supabright')">
+										<input type="checkbox" name="themeMode" id="thememodebtn" value="city-lights" checked="$(themeMode != 'supabright')">
 										<span class="lever theme-switch-col switch-col-$skinColor vtiwebconfig"></span>
 									</label>
 								</div>
@@ -795,7 +805,7 @@
 									</div>
 									<div class="col-xs-12 col-sm-9">
 										<div class="form-line">
-											<input type="text" class="form-control inactive" value="30" id="messageTimeout">
+											<input type="text" name="messageTimeout" id="messageTimeout" value="30" class="form-control inactive">
 										</div>
 									</div>
 								</div>
@@ -865,9 +875,14 @@
 <script>initJsTranslationAddon($dumps($tstrings))</script>
 
 <script>
+	var re = /#(.*)\??(.*)/gi;
+	var str = 'x';
+	var newstr = str.replace(re, '\/ajax/$1?');
+
 	function locationHashChanged(e) { 
-		var hash = e.target.location.hash.replace('#', '').replace('&', '?');
-		hash && load_maincontent_spin('ajax/' + hash);
+		var re = new RegExp(/#(.*)\??(.*)/gi);
+		var hash = e.target.location.hash.replace(re, '\/ajax/$1');
+		hash && load_maincontent_spin(hash);
 	} 
 
 	window.onhashchange = locationHashChanged;

@@ -10,7 +10,7 @@ from Components.config import config as comp_config
 from enigma import eEnv
 from boxbranding import getHaveTranscoding, getHaveMultiTranscoding
 
-OPENWEBIFVER = "OWIF 1.4.18 for Open Vision"
+OPENWEBIFVER = "OWIF 1.4.19 for Open Vision"
 
 PLUGIN_NAME = 'OpenWebif'
 PLUGIN_DESCRIPTION = "OpenWebif Configuration"
