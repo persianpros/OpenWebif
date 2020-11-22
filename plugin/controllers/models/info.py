@@ -204,7 +204,7 @@ def getInfo(session=None, need_fullinfo=False):
 	try:
 		info['procmodel'] = getBoxProc()
 	except:  # noqa: E722
-		info['procmodel'] = None
+		info['procmodel'] = boxbranding.getMachineProcModel()
 
 	try:
 		info['procmodeltype'] = getBoxProcType()
