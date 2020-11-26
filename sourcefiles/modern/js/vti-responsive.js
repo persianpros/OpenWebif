@@ -43,11 +43,9 @@ $(function () {
       } catch (ex) {
         epgEvent = {};
       }
-      console.log(epgEvent, !!epgEvent.sref, !!epgEvent.begin, !!epgEvent.end);
 			if (!!epgEvent.sref && !!epgEvent.id) {
 				addEditTimerEvent(epgEvent.sref, epgEvent.id);
 			} else if (!!epgEvent.sref && !!epgEvent.begin && !!epgEvent.end) {
-        console.log('ed');
 				editTimer(epgEvent.sref, epgEvent.begin, epgEvent.end);
 			} else {
 				addTimer();
@@ -354,10 +352,10 @@ getStatusInfo = function(){
 		var responsive_mute_status = '';
 		if (statusinfo['muted'] == true) {
 			mutestatus = 1;
-			responsive_mute_status = "<a href='#' onClick='toggleMute(); return false;'><i class='material-icons'>volume_off</i></a>";
+			responsive_mute_status = "<a href='#' onclick='toggleMute(); return false;'><i class='material-icons'>volume_off</i></a>";
 		} else {
 			mutestatus = 0;
-			responsive_mute_status = "<a href='#'  onClick='toggleMute(); return false;'><i class='material-icons'>volume_up</i></a>";
+			responsive_mute_status = "<a href='#' onclick='toggleMute(); return false;'><i class='material-icons'>volume_up</i></a>";
 		}
 		$("#responsive_mute_status").html(responsive_mute_status);
 		
@@ -374,7 +372,7 @@ getStatusInfo = function(){
 			for (var rec in rec_array) {
 				if (rec_array[rec] != '') {
 					reclen += 1;
-					tmp += "<li> <a href='#' data-dismiss='modal' onClick='load_maincontent(\"ajax/timers\"); return false;'>" + rec_array[rec] + "</a></li><hr />";
+					tmp += "<li> <a href='/#timers' onclick='load_maincontent(\"ajax/timers\");' data-dismiss='modal'>" + rec_array[rec] + "</a></li><hr />";
 					
 				}
 			}
@@ -412,7 +410,7 @@ getStatusInfo = function(){
 		}
 		/*jshint multistr: true */
 		var power_status = " \
-			<a href='#' onClick='toggleStandby();return false'> \
+			<a href='#' onClick='toggleStandby(); return false'> \
 				<i class='material-icons'>" + icon + "</i> \
 			</a>";
 		$("#osd_power_status").html(power_status);
@@ -439,12 +437,12 @@ function setOSD( statusinfo )
 			}
 			if ((sref.indexOf("1:0:2") !== -1) || (sref.indexOf("1:134:2") !== -1)) {
 				streamtitle = tstr_stream + ": " + station + "'><i class='material-icons'>radio</i></a>";
-				responsive_osd_current = "<a href='#' onClick='load_maincontent(\"ajax/radio\");return false;'><b>" + station + "&nbsp;&nbsp;</b>" + _beginend + "</a>";
+				responsive_osd_current = "<a href='/#radio' onclick='load_maincontent(\"ajax/radio\");'><b>" + station + "&nbsp;&nbsp;</b>" + _beginend + "</a>";
 			} else {
 				streamtitle = tstr_stream + ": " + station + "'><i class='material-icons'>ondemand_video</i></a>";
-				responsive_osd_current = "<a href='#' onClick='load_maincontent(\"ajax/tv\");return false;'><b>" + station + "&nbsp;&nbsp;</b>" + _beginend + "</a>";
+				responsive_osd_current = "<a href='/#tv' onclick='load_maincontent(\"ajax/tv\");'><b>" + station + "&nbsp;&nbsp;</b>" + _beginend + "</a>";
 			}
-			responsive_osd_stream = "<a target='_blank' href='/web/stream.m3u?ref=" + sref + "&name=" + station + "' title='" + streamtitle;
+			responsive_osd_stream = "<a href='/web/stream.m3u?ref=" + sref + "&name=" + station + "' target='_blank' title='" + streamtitle;
 			responsive_osd_cur_event = "<a href=\"#\" onclick=\"open_epg_dialog('" + sref + "', '" + station + "')\" data-toggle=\"modal\" data-target=\"#EPGModal\" title='" + statusinfo['currservice_fulldescription'] + "'><b>" + statusinfo['currservice_name'] + "</b></a>";
 		} else if ( (sref.indexOf("4097:0:0") !== -1) || (sref.indexOf("1:0:0") !== -1)) {
 			if (statusinfo['currservice_filename'] === '') {
@@ -452,8 +450,8 @@ function setOSD( statusinfo )
 				responsive_osd_stream = "<a href='#' title='" + streamtitle;
 			} else {
 				streamtitle = tstr_stream + ": " + station + "'><i class='material-icons'>movie</i></a>";
-				responsive_osd_stream = "<a target='_blank' href='/web/ts.m3u?file=" + statusinfo['currservice_filename'] + "' title='" + streamtitle;
-				responsive_osd_current = "<a href='#' onClick='load_maincontent(\"ajax/movies\");return false;'><b>" + station + "&nbsp;&nbsp;</b></a>";
+				responsive_osd_stream = "<a href='/web/ts.m3u?file=" + statusinfo['currservice_filename'] + "' target='_blank' title='" + streamtitle;
+				responsive_osd_current = "<a href='/#movies' onclick='load_maincontent(\"ajax/movies\");'><b>" + station + "&nbsp;&nbsp;</b></a>";
 				if (statusinfo['transcoding']) {
 					responsive_osd_transcoding = "<a href='#' onclick=\"jumper8003('" + statusinfo['currservice_filename'] + "')\"; title='" + streamtitletrans;
 				}
@@ -530,25 +528,35 @@ function initTimerEditBegin()
 	});
 }
 
-function TimerConflict(conflicts,sRef, eventId, justplay)
+function TimerConflict(conflicts, sRef, eventId, justplay)
 {
-	var SplitText = ""
-	conflicts.forEach(function(entry) {
-		SplitText += "<div class='row clearfix'><div class='col-xs-12'> \
+  var SplitText = '';
+  conflicts.sort( function(a, b) {
+    return (a.begin - b.begin);
+  });
+  conflicts.forEach(function(entry) {
+		SplitText += "<div class='row clearfix conflicting-timer'><div class='col-xs-12'> \
 			<div class='card'> \
-				<div class='header'> \
+				<div class='header' style='padding: 10px 20px;'> \
 					<div class='row clearfix'> \
-						<div class='col-xs-12 col-sm-6'> \
-							<h2><i class='material-icons material-icons-centered'>alarm</i>" +  entry.name + "</h2> \
+						<div class='col-xs-12'> \
+              <h2> \
+                <span role='button'> \
+                  <a href='javascript:void(0);' onclick='toggleTimerStatus(\"" + entry.serviceref + "\", \"" + entry.begin + "\", \"" + entry.end + "\"); this.closest(\".conflicting-timer\").classList.add(\"fade\");' title='Disable Timer'> \
+                    <i class='material-icons material-icons-centered material-icons-mg-right'>alarm_off</i> \
+                  </a> \
+                </span> \
+							  " +  entry.name + " \
+                <span style='opacity: 0.4;'> - " + entry.servicename + "</span> \
+              </h2> \
 						</div> \
 					</div> \
 				</div> \
 				<div class='body'> \
 						<div class='row clearfix'> \
-							<div class='col-xs-12'> \
-								<p>" + entry.servicename + "</p> \
-								<p>" + entry.realbegin + " - " + entry.realend + "</p> \
-							</div> \
+							<div class='col-xs-12' style='margin: 10px 0 0;'> \
+                <p>" + entry.realbegin + " - " + entry.realend + "</p> \
+              </div> \
 						</div> \
 					</div> \
 				</div> \
@@ -691,7 +699,6 @@ function addTimer(evt,chsref,chname,top) {
 
 function editTimer(serviceref, begin, end) {
 	serviceref = decodeURIComponent(serviceref);
-	console.log(serviceref);
 	current_serviceref = serviceref;
 	current_begin = begin;
 	current_end = end;
@@ -1245,6 +1252,10 @@ function VTiWebConfig() {
 	$('#minepglist').change(function () {
 		var val = $(this).is(":checked") ? '1' : '0'
 		$.get('api/setvtiwebconfig?minepglist=' + val);
+	});
+	$('#zapstream').change(function () {
+		var val = $(this).is(":checked") ? '1' : '0'
+		$.get('api/setvtiwebconfig?zapstream=' + val);
 	});
 	$('#showpicons').change(function () {
 		var val = $(this).is(":checked") ? '1' : '0'
