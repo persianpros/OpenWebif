@@ -57,9 +57,9 @@
 		var date;
 
 		return {
-      getTextWithIcon: function (iconName, text) {
-        return '<span class="icon"><i class="material-icons material-icons-centered">' + iconName + '</i></span>' + text;
-      },
+			getTextWithIcon: function (iconName, text) {
+				return '<span class="icon"><i class="material-icons material-icons-centered">' + iconName + '</i></span>' + text;
+			},
 
 			// Callback for display left panel providers list
 			// Triggers fetching and displaying dependent services list
@@ -70,18 +70,18 @@
 					.show()
 					.prop( 'disabled', (self.cType !==1 ) );
 				$('#provider').empty();
-        $('#count-sat-prov').html('(' + options.length + ')');
+				$('#count-sat-prov').html('(' + options.length + ')');
 				$.each(options, function(k,v) {
-          $('#provider').append(v);
-        });
-        self.getChannels(self.showChannels);
+					$('#provider').append(v);
+				});
+				self.getChannels(self.showChannels);
 				self.setHover('#provider');
 			},
 		
 			// Callback for display left panel services list
 			showChannels: function (options) {
 				$('#channels').empty();
-        $('#count-sat-prov-channels').html('(' + options.length + ')');
+				$('#count-sat-prov-channels').html('(' + options.length + ')');
 				$.each(options, function(k,v) {
 					$('#channels').append(v);
 				});
@@ -94,7 +94,7 @@
 			// for selected bouquet
 			showBouquets: function (options) {
 				$('#bql').empty();
-        $('#count-bouquets').html('(' + options.length + ')');
+				$('#count-bouquets').html('(' + options.length + ')');
 				$.each(options, function(k,v) {
 					$('#bql').append(v);
 				});
@@ -109,7 +109,7 @@
 			// Callback for display right panel services list
 			showBouquetChannels: function (options) {
 				$('#bqs').empty();
-        $('#count-bouquet-channels').html('(' + options.length + ')');
+				$('#count-bouquet-channels').html('(' + options.length + ')');
 				$.each(options, function(k,v) {
 					$('#bqs').append(v);
 				});
@@ -144,7 +144,7 @@
 
 			// Callback function for TV/Radio button
 			// @param nmode int 
-			//        0: TV, 1: Radio, 2: Option, 3: initial setup, triggers reload
+			//				0: TV, 1: Radio, 2: Option, 3: initial setup, triggers reload
 			setTvRadioMode: function (nmode) {
 				var reload = false;
 				if (nmode !== self.Mode || nmode === 3) {
@@ -162,7 +162,7 @@
 				} else if (self.cType === 1) {
 					self.getProviders(self.showProviders);
 				} else if (self.cType === 2) {
-          $('#sel0').hide();
+					$('#sel0').hide();
 					self.getChannels(self.showChannels);
 				}
 			
@@ -248,13 +248,13 @@
 					cache: true,
 					data: { date: self.date, picon: 1 },
 					success: function ( data ) {
-            var s = data['services'] || [];
-            var services = s.map(function(val) {
-              var sref = val['servicereference'];
-              var ns = sref.split(':')[6];
-              val['_ns'] = self.getNS(ns);
-              return val;
-            });
+						var s = data['services'] || [];
+						var services = s.map(function(val) {
+							var sref = val['servicereference'];
+							var ns = sref.split(':')[6];
+							val['_ns'] = self.getNS(ns);
+							return val;
+						});
 
 						self.allChannelsCache = services;
 						self.filterChannelsCache = services;
@@ -271,10 +271,11 @@
 					var prov = val['provider'];
 					var stype = sref.split(':')[2];
 					var _ns = val['_ns'];
-          var picon = val['picon'];
-					name = '<span class="bqe__picon"><img src="' + picon + '"></span>' + name;
+					var picon = val['picon'];
+					name = '<span class="bqe__picon"><img src="' + picon + '" loading="lazy"></span>' + name;
 					var m = '<span class="pull-right"><span title="' + prov + '">' + ' ' + (self.sType[stype] || '') + ' &bull; ' + _ns + '</span>&nbsp;<span class="dd-icon-selected pull-left"><i class="material-icons material-icons-centered">done</i></span></span>';
 					options.push( $('<li/>', {
+						onDblClick: 'zapChannel("' + sref + '", "' + val['servicename'] + '"); return false;',
 						data: { stype: stype, sref: sref }
 					}).html(name+m) );
 				});
@@ -324,13 +325,13 @@
 					cache: true,
 					data: { sRef: sref, date: self.date, provider:"1", picon: 1},
 					success: function ( data ) {
-            var s = data['services'] || [];
-            var services = s.map(function(val) {
-              var sref = val['servicereference'];
-              var ns = sref.split(':')[6];
-              val['_ns'] = self.getNS(ns);
-              return val;
-            });
+						var s = data['services'] || [];
+						var services = s.map(function(val) {
+							var sref = val['servicereference'];
+							var ns = sref.split(':')[6];
+							val['_ns'] = self.getNS(ns);
+							return val;
+						});
 
 						self.allChannelsCache = services;
 						self.filterChannelsCache = services;
@@ -355,7 +356,7 @@
 					data: { sRef: bref, picon: 1 },
 					success: function ( data ) {
 						var options = [];
-            var s = data['services'] || [];
+						var s = data['services'] || [];
 
 						$('#count-bouquet-channels').html('(' + s.length + ')');
 						$.each( s, function ( key, val ) {
@@ -369,11 +370,12 @@
 							name = pos.toString() + ' - ' + name;
 							if(name!='')
 								options.push( $('<li/>', {
+									onDblClick: 'zapChannel("' + sref + '", "' + val['servicename'] + '"); return false;',
 									data: { 
 										ismarker: val['ismarker'],
 										sref: sref
 									}
-								}).html('<span class="handle dd-icon"><i class="material-icons material-icons-centered">list</i>&nbsp;</span><span class="bqe__picon"><img src="'+picon+'"></span>'+name+m+'<span class="dd-icon-selected pull-right"><i class="material-icons material-icons-centered">done</i></span></li>') );
+								}).html('<span class="handle dd-icon"><i class="material-icons material-icons-centered">list</i>&nbsp;</span><span class="bqe__picon"><img src="'+picon+'" loading="lazy"></span>'+name+m+'<span class="dd-icon-selected pull-right"><i class="material-icons material-icons-centered">done</i></span></li>') );
 						});
 						$('#bqs').removeClass('loading');
 						if (callback) {
@@ -463,7 +465,6 @@
 						type: "input",
 						showCancelButton: true,
 						closeOnConfirm: true,
-						animation: "slide-from-top",
 						inputValue: cleanname,
 						input: "text",
 					}, function (newname) {
@@ -552,15 +553,14 @@
 					data: { 
 						sBouquetRef: obj.sBouquetRef, 
 						sRef: obj.sRef, 
-						mode: obj.mode,  
+						mode: obj.mode,	
 						position: obj.position 
 					}, 
 					success:self.renumberChannel
 				});
 			},
 
-			renumberChannel: function ()
-			{
+			renumberChannel: function () {
 				//TODO
 			},
 
@@ -653,12 +653,66 @@
 				});
 
 			},
+			
+			addUrl: function () {
+				self._addUrl();
+			},
+
 			addMarker: function () {
 				self._addMarker(false);
 			},
+
 			addSpacer: function () {
 				self._addMarker(true);
 			},
+
+			// Callback function for bouquet channels pane `add iptv/url` button
+			// Prompts for url and name, to be added before the selected channel
+			_addUrl: function () {
+				var newUrl = '';
+				var newName = '';
+				swal({
+					title: tstr_bqe_add_url,
+					text: '',
+					type: "input",
+					showCancelButton: true,
+					closeOnConfirm: false,
+					animation: "fade",
+					inputValue: '',
+					input: "text",
+				}, function (newUrl) {
+					if (!newUrl) return false;
+					swal({
+							title: tstr_bqe_name_url,
+							text: '',
+							type: "input",
+							showCancelButton: true,
+							closeOnConfirm: true,
+							inputValue: '',
+							input: "text",
+						}, function (newName) {
+							if (!newUrl) return false;
+							var bref = $('#bql li.ui-selected').data('sref');
+							var dstref = $('#bqs li.ui-selected').data('sref') || '';
+							var params = { sBouquetRef: bref, Name: newName, sRefBefore: dstref, sRefUrl: newUrl };
+							$.ajax({
+								url: '/bouqueteditor/api/addservicetobouquet',
+								dataType: 'json',
+								cache: false,
+								data: params, 
+								success: function ( data ) {
+									var r = data.Result;
+									if (r.length == 2) {
+										self.showError(r[1],r[0]);
+									}
+									self.changeBouquet(bref, self.showBouquetChannels);
+								}
+							});
+						});
+					}
+				);
+			},
+			
 			// Callback function for right pane add marker button
 			// Prompts for marker name, marker will be added before selected service
 			_addMarker: function (sp) {
@@ -670,7 +724,6 @@
 							type: "input",
 							showCancelButton: true,
 							closeOnConfirm: true,
-							animation: "slide-from-top",
 							inputValue: '',
 							input: "text",
 						}, function (newname) {
@@ -725,7 +778,6 @@
 						type: "input",
 						showCancelButton: true,
 						closeOnConfirm: true,
-						animation: "slide-from-top",
 						inputValue: '',
 						input: "text",
 					}, function (newname) {
@@ -816,7 +868,7 @@
 							if (r[0] === false) {
 								self.showError(r[1],r[0]);
 							} else {
-								var url =  "/bouqueteditor/tmp/" + r[1];
+								var url =	"/bouqueteditor/tmp/" + r[1];
 								window.open(url,'Download');
 							}
 						}
@@ -848,7 +900,7 @@
 					$.ajax({
 						url: '/bouqueteditor/uploadrestore',
 						type: 'POST',
-						data:  formData,
+						data:	formData,
 						mimeType:"multipart/form-data",
 						contentType: false,
 						cache: false,
@@ -919,6 +971,7 @@
 				$('#btn-bouquet-delete').click(self.deleteBouquet);
 
 				$('#btn-channel-delete').click(self.deleteChannel);
+				$('#btn-url-add').click(self.addUrl);
 				$('#btn-marker-add').click(self.addMarker);
 				$('#btn-spacer-add').click(self.addSpacer);
 				$('#btn-marker-group-rename').click(self.renameMarkerGroup);
@@ -929,16 +982,18 @@
 					selected: function ( event, ui ) {
 						$(ui.selected).addClass('ui-selected').siblings().removeClass('ui-selected');
 						self.changeProvider($(ui.selected).data('sref'), self.showChannels);
-					},classes: {
-						"ui-selected": self.activecls 
+					},
+					classes: {
+						'ui-selected': self.activecls 
 					}
 				});
 
 				// Setup selection callback function for left pane channels list
 				$('#channels').selectable({
+					filter: 'li',
 					stop: self.setChannelButtons,
 					classes: {
-						"ui-selected": self.activecls 
+						'ui-selected': self.activecls 
 					}
 				});
 
@@ -958,8 +1013,9 @@
 					selected: function ( event, ui ) {
 						$(ui.selected).addClass('ui-selected').siblings().removeClass('ui-selected');
 						self.changeBouquet($(ui.selected).data('sref'), self.showBouquetChannels);
-					},classes: {
-						"ui-selected": self.activecls 
+					},
+					classes: {
+						'ui-selected': self.activecls 
 					}
 				});
 
@@ -978,7 +1034,7 @@
 					cancel: '.handle',
 					stop: self.setBouquetChannelButtons,
 					classes: {
-						"ui-selected": self.activecls 
+						'ui-selected': self.activecls 
 					}
 				});
 
@@ -990,9 +1046,9 @@
 				$('#toolbar-choose-providers').click(function () { self.getProviders(self.showProviders); });
 				$('#toolbar-choose-channels').click(function () { 
 					$('#sel0').hide();
-          $('#btn-provider-add').hide();
+					$('#btn-provider-add').hide();
 					self.getChannels(self.showChannels);
-          $('#provider .ui-selected').removeClass('ui-selected');
+					$('#provider .ui-selected').removeClass('ui-selected');
 				});
 
 				// Setup callback functions for right pane toolbar buttons
@@ -1013,14 +1069,16 @@
 
 				// Initially build all lists.
 				self.setTvRadioMode(3);
-			},setHover : function(obj)
-			{
+			},
+
+			setHover : function(obj) {
 				$(obj + ' li').hover(
 					function(){ $(this).addClass(self.hovercls); },
 					function(){ $(this).removeClass(self.hovercls); }
 				);
-			},getNS : function(ns)
-			{
+			},
+
+			getNS : function(ns) {
 				var _ns = ns.toLowerCase();
 				if (_ns.startsWith("ffff",0))
 				{
