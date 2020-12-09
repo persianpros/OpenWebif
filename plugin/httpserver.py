@@ -103,7 +103,7 @@ def buildRootTree(session):
 		shutil.rmtree(origwebifpath)
 
 	# import modules
-	# print("[OpenWebif] loading external plugins...")
+	print("[OpenWebif] loading external plugins...")
 	from Plugins.Extensions.OpenWebif.WebChilds.Toplevel import loaded_plugins
 	openwebifpath = enigma.eEnv.resolve('${libdir}/enigma2/python/Plugins/Extensions/OpenWebif')
 	if len(loaded_plugins) == 0:
@@ -133,7 +133,7 @@ def buildRootTree(session):
 	if len(loaded_plugins) > 0:
 		for plugin in loaded_plugins:
 			root.putChild2(plugin[0], plugin[1])
-			# print("[OpenWebif] plugin '%s' loaded on path '/%s'" % (plugin[2], plugin[0]))
+			print("[OpenWebif] plugin '%s' loaded on path '/%s'" % (plugin[2], plugin[0]))
 	else:
 		print("[OpenWebif] no plugins to load")
 	return root

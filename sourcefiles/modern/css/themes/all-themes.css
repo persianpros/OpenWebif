@@ -691,7 +691,8 @@
   background-color: rgba(0, 0, 0, 0.08);
 }
 
-.theme-red .navbar {
+.theme-red .navbar,
+.theme-red .timetable-now {
   background-color: #f44336;
 }
 
@@ -778,11 +779,12 @@
 
 .theme-red .navtab-active,
 .theme-red .epg__event.event--has-timer::after,
-.theme-red .form-group .form-line::after {
+.theme-red .form-group .form-line.focused::after {
   border-color: #f44336;
 }
 
-.theme-pink .navbar {
+.theme-pink .navbar,
+.theme-pink .timetable-now {
   background-color: #e91e63;
 }
 
@@ -869,11 +871,12 @@
 
 .theme-pink .navtab-active,
 .theme-pink .epg__event.event--has-timer::after,
-.theme-pink .form-group .form-line::after {
+.theme-pink .form-group .form-line.focused::after {
   border-color: #e91e63;
 }
 
-.theme-purple .navbar {
+.theme-purple .navbar,
+.theme-purple .timetable-now {
   background-color: #9c27b0;
 }
 
@@ -960,11 +963,12 @@
 
 .theme-purple .navtab-active,
 .theme-purple .epg__event.event--has-timer::after,
-.theme-purple .form-group .form-line::after {
+.theme-purple .form-group .form-line.focused::after {
   border-color: #9c27b0;
 }
 
-.theme-deep-purple .navbar {
+.theme-deep-purple .navbar,
+.theme-deep-purple .timetable-now {
   background-color: #673ab7;
 }
 
@@ -1051,11 +1055,12 @@
 
 .theme-deep-purple .navtab-active,
 .theme-deep-purple .epg__event.event--has-timer::after,
-.theme-deep-purple .form-group .form-line::after {
+.theme-deep-purple .form-group .form-line.focused::after {
   border-color: #673ab7;
 }
 
-.theme-indigo .navbar {
+.theme-indigo .navbar,
+.theme-indigo .timetable-now {
   background-color: #3f51b5;
 }
 
@@ -1142,11 +1147,12 @@
 
 .theme-indigo .navtab-active,
 .theme-indigo .epg__event.event--has-timer::after,
-.theme-indigo .form-group .form-line::after {
+.theme-indigo .form-group .form-line.focused::after {
   border-color: #3f51b5;
 }
 
-.theme-blue .navbar {
+.theme-blue .navbar,
+.theme-blue .timetable-now {
   background-color: #2196f3;
 }
 
@@ -1233,11 +1239,12 @@
 
 .theme-blue .navtab-active,
 .theme-blue .epg__event.event--has-timer::after,
-.theme-blue .form-group .form-line::after {
+.theme-blue .form-group .form-line.focused::after {
   border-color: #2196f3;
 }
 
-.theme-light-blue .navbar {
+.theme-light-blue .navbar,
+.theme-light-blue .timetable-now {
   background-color: #03a9f4;
 }
 
@@ -1324,11 +1331,12 @@
 
 .theme-light-blue .navtab-active,
 .theme-light-blue .epg__event.event--has-timer::after,
-.theme-light-blue .form-group .form-line::after {
+.theme-light-blue .form-group .form-line.focused::after {
   border-color: #03a9f4;
 }
 
-.theme-cyan .navbar {
+.theme-cyan .navbar,
+.theme-cyan .timetable-now {
   background-color: #00bcd4;
 }
 
@@ -1415,11 +1423,12 @@
 
 .theme-cyan .navtab-active,
 .theme-cyan .epg__event.event--has-timer::after,
-.theme-cyan .form-group .form-line::after {
+.theme-cyan .form-group .form-line.focused::after {
   border-color: #00bcd4;
 }
 
-.theme-teal .navbar {
+.theme-teal .navbar,
+.theme-teal .timetable-now {
   background-color: #009688;
 }
 
@@ -1506,11 +1515,12 @@
 
 .theme-teal .navtab-active,
 .theme-teal .epg__event.event--has-timer::after,
-.theme-teal .form-group .form-line::after {
+.theme-teal .form-group .form-line.focused::after {
   border-color: #009688;
 }
 
-.theme-green .navbar {
+.theme-green .navbar,
+.theme-green .timetable-now {
   background-color: #4caf50;
 }
 
@@ -1597,11 +1607,12 @@
 
 .theme-green .navtab-active,
 .theme-green .epg__event.event--has-timer::after,
-.theme-green .form-group .form-line::after {
+.theme-green .form-group .form-line.focused::after {
   border-color: #4caf50;
 }
 
-.theme-light-green .navbar {
+.theme-light-green .navbar,
+.theme-light-green .timetable-now {
   background-color: #8bc34a;
 }
 
@@ -1688,11 +1699,12 @@
 
 .theme-light-green .navtab-active,
 .theme-light-green .epg__event.event--has-timer::after,
-.theme-light-green .form-group .form-line::after {
+.theme-light-green .form-group .form-line.focused::after {
   border-color: #8bc34a;
 }
 
-.theme-lime .navbar {
+.theme-lime .navbar,
+.theme-lime .timetable-now {
   background-color: #cddc39;
 }
 
@@ -1780,11 +1792,12 @@
 
 .theme-lime .navtab-active,
 .theme-lime .epg__event.event--has-timer::after,
-.theme-lime .form-group .form-line::after {
+.theme-lime .form-group .form-line.focused::after {
   border-color: #cddc39;
 }
 
-.theme-yellow .navbar {
+.theme-yellow .navbar,
+.theme-yellow .timetable-now {
   background-color: #ffeb3b;
 }
 
@@ -1871,11 +1884,12 @@
 
 .theme-yellow .navtab-active,
 .theme-yellow .epg__event.event--has-timer::after,
-.theme-yellow .form-group .form-line::after {
+.theme-yellow .form-group .form-line.focused::after {
   border-color: #ffe821;
 }
 
-.theme-amber .navbar {
+.theme-amber .navbar,
+.theme-amber .timetable-now {
   background-color: #ffc107;
 }
 
@@ -1962,11 +1976,12 @@
 
 .theme-amber .navtab-active,
 .theme-amber .epg__event.event--has-timer::after,
-.theme-amber .form-group .form-line::after {
+.theme-amber .form-group .form-line.focused::after {
   border-color: #ffc107;
 }
 
-.theme-orange .navbar {
+.theme-orange .navbar,
+.theme-orange .timetable-now {
   background-color: #ff9800;
 }
 
@@ -2053,11 +2068,12 @@
 
 .theme-orange .navtab-active,
 .theme-orange .epg__event.event--has-timer::after,
-.theme-orange .form-group .form-line::after {
+.theme-orange .form-group .form-line.focused::after {
   border-color: #ff9800;
 }
 
-.theme-deep-orange .navbar {
+.theme-deep-orange .navbar,
+.theme-deep-orange .timetable-now {
   background-color: #ff5722;
 }
 
@@ -2144,11 +2160,12 @@
 
 .theme-deep-orange .navtab-active,
 .theme-deep-orange .epg__event.event--has-timer::after,
-.theme-deep-orange .form-group .form-line::after {
+.theme-deep-orange .form-group .form-line.focused::after {
   border-color: #ff5722;
 }
 
-.theme-brown .navbar {
+.theme-brown .navbar,
+.theme-brown .timetable-now {
   background-color: #795548;
 }
 
@@ -2235,11 +2252,12 @@
 
 .theme-brown .navtab-active,
 .theme-brown .epg__event.event--has-timer::after,
-.theme-brown .form-group .form-line::after {
+.theme-brown .form-group .form-line.focused::after {
   border-color: #795548;
 }
 
-.theme-grey .navbar {
+.theme-grey .navbar,
+.theme-grey .timetable-now {
   background-color: #9e9e9e;
 }
 
@@ -2326,11 +2344,12 @@
 
 .theme-grey .navtab-active,
 .theme-grey .epg__event.event--has-timer::after,
-.theme-grey .form-group .form-line::after {
+.theme-grey .form-group .form-line.focused::after {
   border-color: #9e9e9e;
 }
 
-.theme-blue-grey .navbar {
+.theme-blue-grey .navbar,
+.theme-blue-grey .timetable-now {
   background-color: #607d8b;
 }
 
@@ -2417,11 +2436,12 @@
 
 .theme-blue-grey .navtab-active,
 .theme-blue-grey .epg__event.event--has-timer::after,
-.theme-blue-grey .form-group .form-line::after {
+.theme-blue-grey .form-group .form-line.focused::after {
   border-color: #607d8b;
 }
 
-.theme-grey-darken-4 .navbar {
+.theme-grey-darken-4 .navbar,
+.theme-grey-darken-4 .timetable-now {
   background-color: #212121;
 }
 
@@ -2513,11 +2533,12 @@
 
 .theme-grey-darken-4 .navtab-active,
 .theme-grey-darken-4 .epg__event.event--has-timer::after,
-.theme-grey-darken-4 .form-group .form-line::after {
+.theme-grey-darken-4 .form-group .form-line.focused::after {
   border-color: #b2b2b2;
 }
 
-.theme-black .navbar {
+.theme-black .navbar,
+.theme-black .timetable-now {
   background-color: #000;
 }
 
@@ -2604,7 +2625,7 @@
 
 .theme-black .navtab-active,
 .theme-black .epg__event.event--has-timer::after,
-.theme-black .form-group .form-line::after {
+.theme-black .form-group .form-line.focused::after {
   border-color: #000;
 }
 

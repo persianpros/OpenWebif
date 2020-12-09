@@ -206,7 +206,7 @@ class OpenWebifConfig(Screen, ConfigListScreen):
 
 
 def confplug(session, **kwargs):
-		session.open(OpenWebifConfig)
+	session.open(OpenWebifConfig)
 
 
 def IfUpIfDown(reason, **kwargs):
@@ -230,10 +230,12 @@ def main_menu(menuid, **kwargs):
 
 
 def Plugins(**kwargs):
+	p = PluginDescriptor(where=[PluginDescriptor.WHERE_SESSIONSTART], fnc=startSession)
+	p.weight = 100 #webif should start as last plugin
 	result = [
-			PluginDescriptor(where=[PluginDescriptor.WHERE_SESSIONSTART], fnc=startSession),
-			PluginDescriptor(where=[PluginDescriptor.WHERE_NETWORKCONFIG_READ], fnc=IfUpIfDown),
-			]
+		p,
+		PluginDescriptor(where=[PluginDescriptor.WHERE_NETWORKCONFIG_READ], fnc=IfUpIfDown),
+		]
 	screenwidth = getDesktop(0).size().width()
 	if screenwidth and screenwidth == 1920:
 		result.append(PluginDescriptor(name="OpenWebif", description=_("OpenWebif Configuration"), icon="openwebifhd.png", where=[PluginDescriptor.WHERE_PLUGINMENU], fnc=confplug))
