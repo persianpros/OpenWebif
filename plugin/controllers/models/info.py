@@ -252,6 +252,15 @@ def getInfo(session=None, need_fullinfo=False):
 	info['visionrevision'] = boxbranding.getVisionRevision()
 	info['visionmodule'] = about.getVisionModule()
 
+	if fileExists("/proc/openvision/multiboot"):
+		multibootflag = open("/proc/openvision/multiboot", "r").read().strip()
+		if multibootflag == "1":
+			info['multiboot'] = _("Yes")
+		else:
+			info['multiboot'] = _("No")
+	else:
+		info['multiboot'] = _("Yes")
+
 	info['enigmaver'] = getEnigmaVersionString()
 	info['driverdate'] = about.getDriverInstalledDate()
 	info['kernelver'] = boxbranding.getKernelVersion()
