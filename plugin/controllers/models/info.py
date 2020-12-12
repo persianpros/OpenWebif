@@ -252,8 +252,8 @@ def getInfo(session=None, need_fullinfo=False):
 	info['visionrevision'] = boxbranding.getVisionRevision()
 	info['visionmodule'] = about.getVisionModule()
 
-	if fileExists("/proc/openvision/multiboot"):
-		multibootflag = open("/proc/openvision/multiboot", "r").read().strip()
+	if fileExists("/etc/openvision/multiboot"):
+		multibootflag = open("/etc/openvision/multiboot", "r").read().strip()
 		if multibootflag == "1":
 			info['multiboot'] = _("Yes")
 		else:
