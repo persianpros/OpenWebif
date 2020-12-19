@@ -193,7 +193,7 @@ tstrings = {
 	'movielist': _("Movielist"),
 	'movies': _("Movies"),
 	'multi_epg': _("MultiEPG"),
-	'multiboot': _("Multiboot"),
+	'multiboot': _("Soft multiboot"),
 	'multitranscoding': _("MultiTranscoding"),
 	'name': _("Name"),
 	'namespace': _("Namespace"),
