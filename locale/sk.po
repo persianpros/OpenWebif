@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-14 20:13+0330\n"
+"POT-Creation-Date: 2021-01-07 08:39+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Dominik Paľo <dominik@palo.sk>\n"
 "Language-Team: \n"
@@ -230,7 +230,7 @@ msgstr "Auto"
 msgid "AutoPoll"
 msgstr "AutoPoll"
 
-#: ../plugin/controllers/base.py:319
+#: ../plugin/controllers/base.py:349
 msgid "AutoTimer"
 msgstr "Automatický časovač"
 
@@ -345,7 +345,7 @@ msgstr "Prehľad úspešne premenovaný."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Obnovenie nastavení prehľadu bolo úspešné"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:354
 msgid "BouquetEditor"
 msgstr "Editor prehľadov"
 
@@ -645,7 +645,7 @@ msgstr "Hľadanie v EPG"
 msgid "EPG encoding"
 msgstr "Znaková sada EPG"
 
-#: ../plugin/controllers/base.py:328
+#: ../plugin/controllers/base.py:358
 msgid "EPGRefresh"
 msgstr "Obnovovanie EPG"
 
@@ -1090,7 +1090,7 @@ msgstr "Verzia jadra"
 msgid "LCD"
 msgstr ""
 
-#: ../plugin/controllers/base.py:291
+#: ../plugin/controllers/base.py:321
 msgid "LCD4Linux Setup"
 msgstr "Nastavenie LCD4Linux"
 
@@ -1199,7 +1199,7 @@ msgstr "Zmenšený zoznam časovačov"
 msgid "Minute"
 msgstr "Minúta"
 
-#: ../plugin/controllers/web.py:82
+#: ../plugin/controllers/web.py:83
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "Chýba povinný parameter '%s'"
@@ -1273,12 +1273,7 @@ msgstr "MultiEPG"
 msgid "MultiTranscoding"
 msgstr "Transkódovanie"
 
-#: ../plugin/controllers/i18n.py:196
-#, fuzzy
-msgid "Multiboot"
-msgstr "MultiEPG"
-
-#: ../plugin/controllers/base.py:315
+#: ../plugin/controllers/base.py:345
 #, fuzzy
 msgid "NCam Webinterface"
 msgstr "OSCam webrozhranie"
@@ -1443,7 +1438,7 @@ msgstr "Teraz"
 msgid "OE"
 msgstr "V"
 
-#: ../plugin/controllers/base.py:313
+#: ../plugin/controllers/base.py:343
 msgid "OSCam Webinterface"
 msgstr "OSCam webrozhranie"
 
@@ -1913,7 +1908,7 @@ msgstr "Stanice"
 msgid "Set maximum duration"
 msgstr "Nastaviť maximálnu dĺžku"
 
-#: ../plugin/controllers/base.py:281 ../plugin/controllers/i18n.py:256
+#: ../plugin/controllers/base.py:311 ../plugin/controllers/i18n.py:256
 #: ../plugin/controllers/i18n.py:408
 msgid "Settings"
 msgstr "Nastavenia"
@@ -2022,6 +2017,11 @@ msgstr "Časovač uspania nastavený na %d minút"
 #: ../plugin/controllers/i18n.py:265
 msgid "SoC family"
 msgstr ""
+
+#: ../plugin/controllers/i18n.py:196
+#, fuzzy
+msgid "Soft multiboot"
+msgstr "MultiEPG"
 
 #: ../plugin/controllers/i18n.py:266
 msgid "Software"
@@ -2134,7 +2134,7 @@ msgstr "Televízia"
 msgid "Template Engine"
 msgstr "Engine šablóny"
 
-#: ../plugin/controllers/base.py:365
+#: ../plugin/controllers/base.py:395
 msgid "Terminal"
 msgstr "Terminál"
 
@@ -2150,12 +2150,12 @@ msgstr "Text"
 msgid "Th"
 msgstr "Št"
 
-#: ../plugin/controllers/web.py:88 ../plugin/controllers/web.py:1546
+#: ../plugin/controllers/web.py:89 ../plugin/controllers/web.py:1547
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Parameter '%s' nemôže byť prázdny"
 
-#: ../plugin/controllers/web.py:337
+#: ../plugin/controllers/web.py:338
 msgid "The parameter 'command' must be a number"
 msgstr "Parameter \"príkaz\" musí byť číslo"
 
@@ -2338,7 +2338,7 @@ msgstr "Tunery"
 msgid "Type"
 msgstr "Typ"
 
-#: ../plugin/controllers/web.py:244
+#: ../plugin/controllers/web.py:245
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr "Neznámy príkaz hlasitosti %s"
@@ -2514,7 +2514,7 @@ msgstr "Bez autorizácie je povolený iba lokálny prístup!"
 msgid "Wizard"
 msgstr "Sprievodca"
 
-#: ../plugin/controllers/web.py:239
+#: ../plugin/controllers/web.py:240
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Chybný formát parametra 'set=%s'. Použite set=set15 "
@@ -2739,7 +2739,7 @@ msgstr "zhoda v čase začiatku"
 msgid "transcoded"
 msgstr "transkódované"
 
-#: ../plugin/controllers/web.py:703
+#: ../plugin/controllers/web.py:704
 #, python-format
 msgid "type %s is not a number"
 msgstr "typ %s nie je číslo"

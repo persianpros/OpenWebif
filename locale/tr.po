@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-14 20:13+0330\n"
+"POT-Creation-Date: 2021-01-07 08:39+0330\n"
 "PO-Revision-Date: 2020-08-18 02:59+0300\n"
 "Last-Translator: audi06_19 <info@dreamosat-forum.com>\n"
 "Language-Team: Turkish\n"
@@ -234,7 +234,7 @@ msgstr "Otomatik"
 msgid "AutoPoll"
 msgstr "AutoPoll"
 
-#: ../plugin/controllers/base.py:319
+#: ../plugin/controllers/base.py:349
 msgid "AutoTimer"
 msgstr "Otomatik Zamanlayıcı"
 
@@ -348,7 +348,7 @@ msgstr "Buket başarıyla yeniden adlandırıldı."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Buket ayarları başarıyla geri yüklendi"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:354
 msgid "BouquetEditor"
 msgstr "BuketDüzenleyici"
 
@@ -646,7 +646,7 @@ msgstr "Epg Araması"
 msgid "EPG encoding"
 msgstr "EPG kodlaması"
 
-#: ../plugin/controllers/base.py:328
+#: ../plugin/controllers/base.py:358
 msgid "EPGRefresh"
 msgstr "EPGRefresh"
 
@@ -1087,7 +1087,7 @@ msgstr "Kernel"
 msgid "LCD"
 msgstr "LCD"
 
-#: ../plugin/controllers/base.py:291
+#: ../plugin/controllers/base.py:321
 msgid "LCD4Linux Setup"
 msgstr "LCD4Linux Kurulumu"
 
@@ -1195,7 +1195,7 @@ msgstr "Minimal zamanlayıcı listesi"
 msgid "Minute"
 msgstr "Dakika"
 
-#: ../plugin/controllers/web.py:82
+#: ../plugin/controllers/web.py:83
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "Zorunlu '%s' parametresi eksik"
@@ -1268,12 +1268,7 @@ msgstr "MultiEPG"
 msgid "MultiTranscoding"
 msgstr "Kod dönüştürme"
 
-#: ../plugin/controllers/i18n.py:196
-#, fuzzy
-msgid "Multiboot"
-msgstr "MultiEPG"
-
-#: ../plugin/controllers/base.py:315
+#: ../plugin/controllers/base.py:345
 msgid "NCam Webinterface"
 msgstr "NCam Webinterface"
 
@@ -1436,7 +1431,7 @@ msgstr "Şimdi"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:313
+#: ../plugin/controllers/base.py:343
 msgid "OSCam Webinterface"
 msgstr "OSCam Webinterface"
 
@@ -1905,7 +1900,7 @@ msgstr "Hizmetler"
 msgid "Set maximum duration"
 msgstr "Maksimum süreyi ayarla"
 
-#: ../plugin/controllers/base.py:281 ../plugin/controllers/i18n.py:256
+#: ../plugin/controllers/base.py:311 ../plugin/controllers/i18n.py:256
 #: ../plugin/controllers/i18n.py:408
 msgid "Settings"
 msgstr "Ayarlar"
@@ -2013,6 +2008,11 @@ msgstr "Uyku zamanlayıcısı %d dakikaya ayarlandı"
 #: ../plugin/controllers/i18n.py:265
 msgid "SoC family"
 msgstr ""
+
+#: ../plugin/controllers/i18n.py:196
+#, fuzzy
+msgid "Soft multiboot"
+msgstr "MultiEPG"
 
 #: ../plugin/controllers/i18n.py:266
 msgid "Software"
@@ -2124,7 +2124,7 @@ msgstr "Televizyon"
 msgid "Template Engine"
 msgstr "Şablon Motoru"
 
-#: ../plugin/controllers/base.py:365
+#: ../plugin/controllers/base.py:395
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -2140,12 +2140,12 @@ msgstr "Metin"
 msgid "Th"
 msgstr "Th"
 
-#: ../plugin/controllers/web.py:88 ../plugin/controllers/web.py:1546
+#: ../plugin/controllers/web.py:89 ../plugin/controllers/web.py:1547
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "'%s' parametresi boş olamaz"
 
-#: ../plugin/controllers/web.py:337
+#: ../plugin/controllers/web.py:338
 msgid "The parameter 'command' must be a number"
 msgstr "'command' parametresi bir sayı olmalıdır"
 
@@ -2328,7 +2328,7 @@ msgstr "Tarayıcılar"
 msgid "Type"
 msgstr "Tür"
 
-#: ../plugin/controllers/web.py:244
+#: ../plugin/controllers/web.py:245
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr "Bilinmeyen Ses komutu %s"
@@ -2501,7 +2501,7 @@ msgstr "Yetkilendirme olmadan yalnızca yerel erişime izin verilir!"
 msgid "Wizard"
 msgstr "Sihirbaz"
 
-#: ../plugin/controllers/web.py:239
+#: ../plugin/controllers/web.py:240
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Yanlış parametre biçimi 'set =%s'. set = set15 kullanın "
@@ -2725,7 +2725,7 @@ msgstr "eşleşmeye başla"
 msgid "transcoded"
 msgstr "kod dönüştürüldü"
 
-#: ../plugin/controllers/web.py:703
+#: ../plugin/controllers/web.py:704
 #, python-format
 msgid "type %s is not a number"
 msgstr "%s türü bir sayı değil"

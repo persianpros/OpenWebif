@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-14 20:13+0330\n"
+"POT-Creation-Date: 2021-01-07 08:39+0330\n"
 "PO-Revision-Date: 2020-08-01 10:55+0300\n"
 "Last-Translator: rimas <rimas@domeen.ee>\n"
 "Language-Team: Estonian\n"
@@ -229,7 +229,7 @@ msgstr "Auto"
 msgid "AutoPoll"
 msgstr "Automaatne päring"
 
-#: ../plugin/controllers/base.py:319
+#: ../plugin/controllers/base.py:349
 msgid "AutoTimer"
 msgstr "Autotaimer"
 
@@ -343,7 +343,7 @@ msgstr "Lemmiknimekiri nimetati ümber."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Lemmiknimekirjad taastati edukalt"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:354
 msgid "BouquetEditor"
 msgstr "Lemmiknimekirjad"
 
@@ -641,7 +641,7 @@ msgstr "Epg otsing"
 msgid "EPG encoding"
 msgstr "EPG tähemärgistik"
 
-#: ../plugin/controllers/base.py:328
+#: ../plugin/controllers/base.py:358
 msgid "EPGRefresh"
 msgstr "EPG värskendus"
 
@@ -1082,7 +1082,7 @@ msgstr "Kernel"
 msgid "LCD"
 msgstr "LCD"
 
-#: ../plugin/controllers/base.py:291
+#: ../plugin/controllers/base.py:321
 msgid "LCD4Linux Setup"
 msgstr "LCD4Linux seaded"
 
@@ -1190,7 +1190,7 @@ msgstr "Tihe taimeriloend"
 msgid "Minute"
 msgstr "Minut"
 
-#: ../plugin/controllers/web.py:82
+#: ../plugin/controllers/web.py:83
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "Puudub kohustuslik parameeter '%s'"
@@ -1263,12 +1263,7 @@ msgstr "MultiEPG"
 msgid "MultiTranscoding"
 msgstr "Transkodeeri"
 
-#: ../plugin/controllers/i18n.py:196
-#, fuzzy
-msgid "Multiboot"
-msgstr "MultiEPG"
-
-#: ../plugin/controllers/base.py:315
+#: ../plugin/controllers/base.py:345
 msgid "NCam Webinterface"
 msgstr "NCam veebiliides"
 
@@ -1431,7 +1426,7 @@ msgstr "Hetkel"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:313
+#: ../plugin/controllers/base.py:343
 msgid "OSCam Webinterface"
 msgstr "OSCam veebiliides"
 
@@ -1900,7 +1895,7 @@ msgstr "Kanalid"
 msgid "Set maximum duration"
 msgstr "Määra suurim kestus"
 
-#: ../plugin/controllers/base.py:281 ../plugin/controllers/i18n.py:256
+#: ../plugin/controllers/base.py:311 ../plugin/controllers/i18n.py:256
 #: ../plugin/controllers/i18n.py:408
 msgid "Settings"
 msgstr "Seaded"
@@ -2008,6 +2003,11 @@ msgstr "Unetaimer määratud %d minutile"
 #: ../plugin/controllers/i18n.py:265
 msgid "SoC family"
 msgstr ""
+
+#: ../plugin/controllers/i18n.py:196
+#, fuzzy
+msgid "Soft multiboot"
+msgstr "MultiEPG"
 
 #: ../plugin/controllers/i18n.py:266
 msgid "Software"
@@ -2119,7 +2119,7 @@ msgstr "Televisioon"
 msgid "Template Engine"
 msgstr "Malli mootor"
 
-#: ../plugin/controllers/base.py:365
+#: ../plugin/controllers/base.py:395
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -2135,12 +2135,12 @@ msgstr "Tekst"
 msgid "Th"
 msgstr "N"
 
-#: ../plugin/controllers/web.py:88 ../plugin/controllers/web.py:1546
+#: ../plugin/controllers/web.py:89 ../plugin/controllers/web.py:1547
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Parameeter '%s' ei tohi olla tühi"
 
-#: ../plugin/controllers/web.py:337
+#: ../plugin/controllers/web.py:338
 msgid "The parameter 'command' must be a number"
 msgstr "Parameeter 'käsk' peab olema number"
 
@@ -2323,7 +2323,7 @@ msgstr "Tuunerid"
 msgid "Type"
 msgstr "Tüüp"
 
-#: ../plugin/controllers/web.py:244
+#: ../plugin/controllers/web.py:245
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr "Tundmatu helitugevuse käsk %s"
@@ -2497,7 +2497,7 @@ msgstr "Autentimata on lubatud ainult kohalik aadress!"
 msgid "Wizard"
 msgstr "Abiline"
 
-#: ../plugin/controllers/web.py:239
+#: ../plugin/controllers/web.py:240
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Vale parameetri vorming 'set=%s'. Kasuta set=set15 "
@@ -2721,7 +2721,7 @@ msgstr "vaste algus"
 msgid "transcoded"
 msgstr "transkodeeritud"
 
-#: ../plugin/controllers/web.py:703
+#: ../plugin/controllers/web.py:704
 #, python-format
 msgid "type %s is not a number"
 msgstr "tüüp %s ei ole number"

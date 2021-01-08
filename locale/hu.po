@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-14 20:13+0330\n"
+"POT-Creation-Date: 2021-01-07 08:39+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: cp-teamhun <https://github.com/cp-teamhun>\n"
 "Language-Team: cp-teamhun\n"
@@ -230,7 +230,7 @@ msgstr "Auto"
 msgid "AutoPoll"
 msgstr "Automatikus szavazás"
 
-#: ../plugin/controllers/base.py:319
+#: ../plugin/controllers/base.py:349
 msgid "AutoTimer"
 msgstr "Automatikus időzítő"
 
@@ -344,7 +344,7 @@ msgstr "Bouquet sikeresen átnevezve."
 msgid "Bouquet-settings were restored successfully"
 msgstr "A Bouquet-beállítások sikeresen helyreálltak"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:354
 msgid "BouquetEditor"
 msgstr "Bouquet szerkesztő"
 
@@ -642,7 +642,7 @@ msgstr "Epg keresés"
 msgid "EPG encoding"
 msgstr "EPG kódolás"
 
-#: ../plugin/controllers/base.py:328
+#: ../plugin/controllers/base.py:358
 msgid "EPGRefresh"
 msgstr "EPG frissítés"
 
@@ -1083,7 +1083,7 @@ msgstr "Kernel"
 msgid "LCD"
 msgstr "LCD"
 
-#: ../plugin/controllers/base.py:291
+#: ../plugin/controllers/base.py:321
 msgid "LCD4Linux Setup"
 msgstr "LCD4Linux Beállítás"
 
@@ -1191,7 +1191,7 @@ msgstr "Minimális időzítő lista"
 msgid "Minute"
 msgstr "Perc"
 
-#: ../plugin/controllers/web.py:82
+#: ../plugin/controllers/web.py:83
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "Hiányzó kötelező paraméter '%s'"
@@ -1264,12 +1264,7 @@ msgstr "MultiEPG"
 msgid "MultiTranscoding"
 msgstr "Átkódolás"
 
-#: ../plugin/controllers/i18n.py:196
-#, fuzzy
-msgid "Multiboot"
-msgstr "MultiEPG"
-
-#: ../plugin/controllers/base.py:315
+#: ../plugin/controllers/base.py:345
 msgid "NCam Webinterface"
 msgstr "NCam Webinterface"
 
@@ -1432,7 +1427,7 @@ msgstr "Most"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:313
+#: ../plugin/controllers/base.py:343
 msgid "OSCam Webinterface"
 msgstr "OSCam Webinterface"
 
@@ -1901,7 +1896,7 @@ msgstr "Szolgáltatások"
 msgid "Set maximum duration"
 msgstr "Állítsa be a maximális időt"
 
-#: ../plugin/controllers/base.py:281 ../plugin/controllers/i18n.py:256
+#: ../plugin/controllers/base.py:311 ../plugin/controllers/i18n.py:256
 #: ../plugin/controllers/i18n.py:408
 msgid "Settings"
 msgstr "Beállítások"
@@ -2009,6 +2004,11 @@ msgstr "Az elalvás időzítő beállítása %d percben"
 #: ../plugin/controllers/i18n.py:265
 msgid "SoC family"
 msgstr ""
+
+#: ../plugin/controllers/i18n.py:196
+#, fuzzy
+msgid "Soft multiboot"
+msgstr "MultiEPG"
 
 #: ../plugin/controllers/i18n.py:266
 msgid "Software"
@@ -2120,7 +2120,7 @@ msgstr "Televízió"
 msgid "Template Engine"
 msgstr "Sablon motor"
 
-#: ../plugin/controllers/base.py:365
+#: ../plugin/controllers/base.py:395
 msgid "Terminal"
 msgstr "Terminál"
 
@@ -2136,12 +2136,12 @@ msgstr "Szöveg"
 msgid "Th"
 msgstr "Csütörtök"
 
-#: ../plugin/controllers/web.py:88 ../plugin/controllers/web.py:1546
+#: ../plugin/controllers/web.py:89 ../plugin/controllers/web.py:1547
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "A paraméter '%s' nem lehet üres"
 
-#: ../plugin/controllers/web.py:337
+#: ../plugin/controllers/web.py:338
 msgid "The parameter 'command' must be a number"
 msgstr "A 'parancs' paraméternek számnak kell lennie"
 
@@ -2324,7 +2324,7 @@ msgstr "Tunerek"
 msgid "Type"
 msgstr "Típus"
 
-#: ../plugin/controllers/web.py:244
+#: ../plugin/controllers/web.py:245
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr "Ismeretlen Hangerő parancs %s"
@@ -2498,7 +2498,7 @@ msgstr "Hitelesítés nélkül csak helyi hozzáférés engedélyezett!"
 msgid "Wizard"
 msgstr "Varázsló"
 
-#: ../plugin/controllers/web.py:239
+#: ../plugin/controllers/web.py:240
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Helytelen paraméter formátum 'set=%s'. Use set=set15 "
@@ -2722,7 +2722,7 @@ msgstr "start egyezés"
 msgid "transcoded"
 msgstr "átkódolt"
 
-#: ../plugin/controllers/web.py:703
+#: ../plugin/controllers/web.py:704
 #, python-format
 msgid "type %s is not a number"
 msgstr "a %s típus nem számjegy"

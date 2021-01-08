@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-14 20:13+0330\n"
+"POT-Creation-Date: 2021-01-07 08:39+0330\n"
 "PO-Revision-Date: 2020-11-08 16:22+0100\n"
 "Last-Translator: pololoko111 <pololoko111@o2.pl>\n"
 "Language-Team: \n"
@@ -230,7 +230,7 @@ msgstr ""
 msgid "AutoPoll"
 msgstr ""
 
-#: ../plugin/controllers/base.py:319
+#: ../plugin/controllers/base.py:349
 msgid "AutoTimer"
 msgstr ""
 
@@ -344,7 +344,7 @@ msgstr "Nazwa bukietu została zmieniona."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Ustawienia bukietów zostały pomyślnie przywrócone"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:354
 msgid "BouquetEditor"
 msgstr "EdytorBukietów"
 
@@ -642,7 +642,7 @@ msgstr "Wyszukiwanie EPG"
 msgid "EPG encoding"
 msgstr "Kodowanie EPG"
 
-#: ../plugin/controllers/base.py:328
+#: ../plugin/controllers/base.py:358
 msgid "EPGRefresh"
 msgstr "Odśwież EPG"
 
@@ -1083,7 +1083,7 @@ msgstr "Jądro"
 msgid "LCD"
 msgstr ""
 
-#: ../plugin/controllers/base.py:291
+#: ../plugin/controllers/base.py:321
 msgid "LCD4Linux Setup"
 msgstr "Konfiguracja LCD4Linux"
 
@@ -1191,7 +1191,7 @@ msgstr "Minimalna lista timerów"
 msgid "Minute"
 msgstr "Minuta"
 
-#: ../plugin/controllers/web.py:82
+#: ../plugin/controllers/web.py:83
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "Brak parametru obowiązkowego '%s'"
@@ -1264,12 +1264,7 @@ msgstr "Multi EPG"
 msgid "MultiTranscoding"
 msgstr "Transkoduj"
 
-#: ../plugin/controllers/i18n.py:196
-#, fuzzy
-msgid "Multiboot"
-msgstr "Multi EPG"
-
-#: ../plugin/controllers/base.py:315
+#: ../plugin/controllers/base.py:345
 msgid "NCam Webinterface"
 msgstr "Interfejs sieciowy NCam"
 
@@ -1431,7 +1426,7 @@ msgstr "Teraz"
 msgid "OE"
 msgstr ""
 
-#: ../plugin/controllers/base.py:313
+#: ../plugin/controllers/base.py:343
 msgid "OSCam Webinterface"
 msgstr "Interfejs sieciowy OSCam"
 
@@ -1899,7 +1894,7 @@ msgstr "Usługi"
 msgid "Set maximum duration"
 msgstr "Ustaw maksymalny czas trwania"
 
-#: ../plugin/controllers/base.py:281 ../plugin/controllers/i18n.py:256
+#: ../plugin/controllers/base.py:311 ../plugin/controllers/i18n.py:256
 #: ../plugin/controllers/i18n.py:408
 msgid "Settings"
 msgstr "Ustawienia"
@@ -2007,6 +2002,11 @@ msgstr "Wyłącznik czasowy ustawiony na %d minut"
 #: ../plugin/controllers/i18n.py:265
 msgid "SoC family"
 msgstr ""
+
+#: ../plugin/controllers/i18n.py:196
+#, fuzzy
+msgid "Soft multiboot"
+msgstr "Multi EPG"
 
 #: ../plugin/controllers/i18n.py:266
 msgid "Software"
@@ -2118,7 +2118,7 @@ msgstr "Telewizja"
 msgid "Template Engine"
 msgstr "Silnik szablonów"
 
-#: ../plugin/controllers/base.py:365
+#: ../plugin/controllers/base.py:395
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -2134,12 +2134,12 @@ msgstr "Tekst"
 msgid "Th"
 msgstr "Czw."
 
-#: ../plugin/controllers/web.py:88 ../plugin/controllers/web.py:1546
+#: ../plugin/controllers/web.py:89 ../plugin/controllers/web.py:1547
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Parametr  '%s'  nie może być pusty"
 
-#: ../plugin/controllers/web.py:337
+#: ../plugin/controllers/web.py:338
 msgid "The parameter 'command' must be a number"
 msgstr "Parametr  'command'  musi być liczbą"
 
@@ -2322,7 +2322,7 @@ msgstr "Tunery"
 msgid "Type"
 msgstr "Typ"
 
-#: ../plugin/controllers/web.py:244
+#: ../plugin/controllers/web.py:245
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr "Nieznane polecenie głośności %s"
@@ -2495,7 +2495,7 @@ msgstr "Bez autoryzacji dozwolony jest tylko dostęp lokalny!"
 msgid "Wizard"
 msgstr "Przewodnik"
 
-#: ../plugin/controllers/web.py:239
+#: ../plugin/controllers/web.py:240
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Niewłaściwy format parametru 'set=%s'. Użyj set=set15 "
@@ -2719,7 +2719,7 @@ msgstr "tytuł zaczyna się od"
 msgid "transcoded"
 msgstr "transkodowany"
 
-#: ../plugin/controllers/web.py:703
+#: ../plugin/controllers/web.py:704
 #, python-format
 msgid "type %s is not a number"
 msgstr "typ %s nie jest liczbą"

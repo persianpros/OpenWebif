@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-14 20:13+0330\n"
+"POT-Creation-Date: 2021-01-07 08:39+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: neoatomic <neoatomic@users.noreply.github.com>\n"
 "Language-Team: satfan <satfan@163.com>\n"
@@ -234,7 +234,7 @@ msgstr "自动"
 msgid "AutoPoll"
 msgstr "自动轮巡"
 
-#: ../plugin/controllers/base.py:319
+#: ../plugin/controllers/base.py:349
 msgid "AutoTimer"
 msgstr "自动定时器"
 
@@ -348,7 +348,7 @@ msgstr "节目分组改名完成."
 msgid "Bouquet-settings were restored successfully"
 msgstr "节目分组设置已成功恢复"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:354
 msgid "BouquetEditor"
 msgstr "编辑节目分组"
 
@@ -650,7 +650,7 @@ msgstr "EPG 搜索"
 msgid "EPG encoding"
 msgstr "EPG 编码"
 
-#: ../plugin/controllers/base.py:328
+#: ../plugin/controllers/base.py:358
 msgid "EPGRefresh"
 msgstr "EPG 刷新"
 
@@ -1095,7 +1095,7 @@ msgstr "内核版本"
 msgid "LCD"
 msgstr "LCD"
 
-#: ../plugin/controllers/base.py:291
+#: ../plugin/controllers/base.py:321
 msgid "LCD4Linux Setup"
 msgstr "LCD设置"
 
@@ -1204,7 +1204,7 @@ msgstr "最小计时器列表"
 msgid "Minute"
 msgstr "分钟"
 
-#: ../plugin/controllers/web.py:82
+#: ../plugin/controllers/web.py:83
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "缺少强制参数 '%s'"
@@ -1278,12 +1278,7 @@ msgstr "多路EPG"
 msgid "MultiTranscoding"
 msgstr "转码"
 
-#: ../plugin/controllers/i18n.py:196
-#, fuzzy
-msgid "Multiboot"
-msgstr "多路EPG"
-
-#: ../plugin/controllers/base.py:315
+#: ../plugin/controllers/base.py:345
 msgid "NCam Webinterface"
 msgstr ""
 
@@ -1447,7 +1442,7 @@ msgstr "现在"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:313
+#: ../plugin/controllers/base.py:343
 msgid "OSCam Webinterface"
 msgstr "OSCam网络接口"
 
@@ -1916,7 +1911,7 @@ msgstr "频道"
 msgid "Set maximum duration"
 msgstr "设置最大持续时间"
 
-#: ../plugin/controllers/base.py:281 ../plugin/controllers/i18n.py:256
+#: ../plugin/controllers/base.py:311 ../plugin/controllers/i18n.py:256
 #: ../plugin/controllers/i18n.py:408
 msgid "Settings"
 msgstr "设置"
@@ -2024,6 +2019,11 @@ msgstr "定时休眠设置为%d分钟"
 #: ../plugin/controllers/i18n.py:265
 msgid "SoC family"
 msgstr ""
+
+#: ../plugin/controllers/i18n.py:196
+#, fuzzy
+msgid "Soft multiboot"
+msgstr "多路EPG"
 
 #: ../plugin/controllers/i18n.py:266
 msgid "Software"
@@ -2137,7 +2137,7 @@ msgstr "电视节目"
 msgid "Template Engine"
 msgstr "模板引擎"
 
-#: ../plugin/controllers/base.py:365
+#: ../plugin/controllers/base.py:395
 msgid "Terminal"
 msgstr "终端设备"
 
@@ -2153,12 +2153,12 @@ msgstr "文本"
 msgid "Th"
 msgstr "星期四"
 
-#: ../plugin/controllers/web.py:88 ../plugin/controllers/web.py:1546
+#: ../plugin/controllers/web.py:89 ../plugin/controllers/web.py:1547
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "参数 “%s” 不能为空"
 
-#: ../plugin/controllers/web.py:337
+#: ../plugin/controllers/web.py:338
 msgid "The parameter 'command' must be a number"
 msgstr "命令参数必须是数字"
 
@@ -2341,7 +2341,7 @@ msgstr "调谐器"
 msgid "Type"
 msgstr "类型"
 
-#: ../plugin/controllers/web.py:244
+#: ../plugin/controllers/web.py:245
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr "未知音量命令 %s"
@@ -2515,7 +2515,7 @@ msgstr "没有认证只有本地访问是允许的！"
 msgid "Wizard"
 msgstr "向导"
 
-#: ../plugin/controllers/web.py:239
+#: ../plugin/controllers/web.py:240
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "错误的参数格式设置'set=%s', 使用 set=set15"
@@ -2741,7 +2741,7 @@ msgstr "开始匹配"
 msgid "transcoded"
 msgstr "转码"
 
-#: ../plugin/controllers/web.py:703
+#: ../plugin/controllers/web.py:704
 #, python-format
 msgid "type %s is not a number"
 msgstr "类型 %s 的不是数字"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-14 20:13+0330\n"
+"POT-Creation-Date: 2021-01-07 08:39+0330\n"
 "PO-Revision-Date: 2017-11-10 22:14+0100\n"
 "Last-Translator: JR <openspateam@gmail.com>\n"
 "Language-Team: OpenSPA\n"
@@ -234,7 +234,7 @@ msgstr "Automàtic"
 msgid "AutoPoll"
 msgstr ""
 
-#: ../plugin/controllers/base.py:319
+#: ../plugin/controllers/base.py:349
 msgid "AutoTimer"
 msgstr "AutoProgramació"
 
@@ -349,7 +349,7 @@ msgstr "Llista renombrada correctament."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Configuració de llistes s'ha restaurat amb èxit"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:354
 msgid "BouquetEditor"
 msgstr "Editor de llistes"
 
@@ -649,7 +649,7 @@ msgstr "Buscar EPG"
 msgid "EPG encoding"
 msgstr "Codificació EPG"
 
-#: ../plugin/controllers/base.py:328
+#: ../plugin/controllers/base.py:358
 msgid "EPGRefresh"
 msgstr ""
 
@@ -1094,7 +1094,7 @@ msgstr "Versió Kernel"
 msgid "LCD"
 msgstr ""
 
-#: ../plugin/controllers/base.py:291
+#: ../plugin/controllers/base.py:321
 msgid "LCD4Linux Setup"
 msgstr "Configurar LCD4Linux"
 
@@ -1202,7 +1202,7 @@ msgstr ""
 msgid "Minute"
 msgstr "Minut"
 
-#: ../plugin/controllers/web.py:82
+#: ../plugin/controllers/web.py:83
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "Falta paràmetre obligatori '%s'"
@@ -1275,12 +1275,7 @@ msgstr "MultiEPG"
 msgid "MultiTranscoding"
 msgstr "Transcodificar"
 
-#: ../plugin/controllers/i18n.py:196
-#, fuzzy
-msgid "Multiboot"
-msgstr "MultiEPG"
-
-#: ../plugin/controllers/base.py:315
+#: ../plugin/controllers/base.py:345
 msgid "NCam Webinterface"
 msgstr ""
 
@@ -1444,7 +1439,7 @@ msgstr "Ara"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:313
+#: ../plugin/controllers/base.py:343
 msgid "OSCam Webinterface"
 msgstr ""
 
@@ -1914,7 +1909,7 @@ msgstr "Serveis"
 msgid "Set maximum duration"
 msgstr "Configurar duració màxima"
 
-#: ../plugin/controllers/base.py:281 ../plugin/controllers/i18n.py:256
+#: ../plugin/controllers/base.py:311 ../plugin/controllers/i18n.py:256
 #: ../plugin/controllers/i18n.py:408
 msgid "Settings"
 msgstr "Configuració"
@@ -2022,6 +2017,11 @@ msgstr "Temporitzador d'apagat configurat a %d minuts"
 #: ../plugin/controllers/i18n.py:265
 msgid "SoC family"
 msgstr ""
+
+#: ../plugin/controllers/i18n.py:196
+#, fuzzy
+msgid "Soft multiboot"
+msgstr "MultiEPG"
 
 #: ../plugin/controllers/i18n.py:266
 msgid "Software"
@@ -2134,7 +2134,7 @@ msgstr "Televisió"
 msgid "Template Engine"
 msgstr "Motor de la Plantilla"
 
-#: ../plugin/controllers/base.py:365
+#: ../plugin/controllers/base.py:395
 msgid "Terminal"
 msgstr ""
 
@@ -2150,12 +2150,12 @@ msgstr "Text"
 msgid "Th"
 msgstr "Dij"
 
-#: ../plugin/controllers/web.py:88 ../plugin/controllers/web.py:1546
+#: ../plugin/controllers/web.py:89 ../plugin/controllers/web.py:1547
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "El paràmetre '%s' no pot estar buit"
 
-#: ../plugin/controllers/web.py:337
+#: ../plugin/controllers/web.py:338
 msgid "The parameter 'command' must be a number"
 msgstr "El paràmetre 'ordre' ha de ser un número"
 
@@ -2338,7 +2338,7 @@ msgstr "Sintonitzadors"
 msgid "Type"
 msgstr "Tipus"
 
-#: ../plugin/controllers/web.py:244
+#: ../plugin/controllers/web.py:245
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr "Ordre %s de Volum Desconeguda"
@@ -2514,7 +2514,7 @@ msgstr "Sense autorització, només es permet l'accès local!"
 msgid "Wizard"
 msgstr "Assistent"
 
-#: ../plugin/controllers/web.py:239
+#: ../plugin/controllers/web.py:240
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Format de paràmetres incorrecte 'set=%s'. Utilitza set=set15"
@@ -2739,7 +2739,7 @@ msgstr "coincidència inicial"
 msgid "transcoded"
 msgstr "transcodificat"
 
-#: ../plugin/controllers/web.py:703
+#: ../plugin/controllers/web.py:704
 #, python-format
 msgid "type %s is not a number"
 msgstr "El tipus %s no és un número"

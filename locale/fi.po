@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-14 20:13+0330\n"
+"POT-Creation-Date: 2021-01-07 08:39+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Samzam <http://www.opena.tv>\n"
 "Language-Team: \n"
@@ -231,7 +231,7 @@ msgstr "Automaattinen"
 msgid "AutoPoll"
 msgstr "Automaattinen haku"
 
-#: ../plugin/controllers/base.py:319
+#: ../plugin/controllers/base.py:349
 msgid "AutoTimer"
 msgstr "Automaattiajastus"
 
@@ -346,7 +346,7 @@ msgstr "Suosikkilistan uudelleen nimeäminen onnistui."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Suosikkilistojen asetuksien palautus onnistui"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:354
 msgid "BouquetEditor"
 msgstr "Suosikkien järjestely"
 
@@ -646,7 +646,7 @@ msgstr "Ohjelmaopashaku"
 msgid "EPG encoding"
 msgstr "EPG:n enkoodaaus"
 
-#: ../plugin/controllers/base.py:328
+#: ../plugin/controllers/base.py:358
 msgid "EPGRefresh"
 msgstr "EPGRefresh"
 
@@ -1091,7 +1091,7 @@ msgstr "Kernel"
 msgid "LCD"
 msgstr ""
 
-#: ../plugin/controllers/base.py:291
+#: ../plugin/controllers/base.py:321
 msgid "LCD4Linux Setup"
 msgstr "LCD4Linux-asetukset"
 
@@ -1200,7 +1200,7 @@ msgstr ""
 msgid "Minute"
 msgstr "Minuutti"
 
-#: ../plugin/controllers/web.py:82
+#: ../plugin/controllers/web.py:83
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "Puuttuva pakollinen asetus '%s'"
@@ -1273,12 +1273,7 @@ msgstr "MultiEPG"
 msgid "MultiTranscoding"
 msgstr "Transkoodaus"
 
-#: ../plugin/controllers/i18n.py:196
-#, fuzzy
-msgid "Multiboot"
-msgstr "MultiEPG"
-
-#: ../plugin/controllers/base.py:315
+#: ../plugin/controllers/base.py:345
 #, fuzzy
 msgid "NCam Webinterface"
 msgstr "OSCam Webinterface"
@@ -1443,7 +1438,7 @@ msgstr "Nyt"
 msgid "OE"
 msgstr "O"
 
-#: ../plugin/controllers/base.py:313
+#: ../plugin/controllers/base.py:343
 msgid "OSCam Webinterface"
 msgstr "OSCam Webinterface"
 
@@ -1914,7 +1909,7 @@ msgstr "Kanavat"
 msgid "Set maximum duration"
 msgstr "Aseta maksimikesto"
 
-#: ../plugin/controllers/base.py:281 ../plugin/controllers/i18n.py:256
+#: ../plugin/controllers/base.py:311 ../plugin/controllers/i18n.py:256
 #: ../plugin/controllers/i18n.py:408
 msgid "Settings"
 msgstr "Asetukset"
@@ -2022,6 +2017,11 @@ msgstr "Uniajastus asetettu %d minuuttiin"
 #: ../plugin/controllers/i18n.py:265
 msgid "SoC family"
 msgstr ""
+
+#: ../plugin/controllers/i18n.py:196
+#, fuzzy
+msgid "Soft multiboot"
+msgstr "MultiEPG"
 
 #: ../plugin/controllers/i18n.py:266
 msgid "Software"
@@ -2134,7 +2134,7 @@ msgstr "Televisio"
 msgid "Template Engine"
 msgstr "Teema"
 
-#: ../plugin/controllers/base.py:365
+#: ../plugin/controllers/base.py:395
 msgid "Terminal"
 msgstr ""
 
@@ -2150,12 +2150,12 @@ msgstr "Teksti"
 msgid "Th"
 msgstr "To"
 
-#: ../plugin/controllers/web.py:88 ../plugin/controllers/web.py:1546
+#: ../plugin/controllers/web.py:89 ../plugin/controllers/web.py:1547
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Asetus '%s' ei voi olla tyhjä"
 
-#: ../plugin/controllers/web.py:337
+#: ../plugin/controllers/web.py:338
 msgid "The parameter 'command' must be a number"
 msgstr "Asetus 'komento' pitää olla numero"
 
@@ -2338,7 +2338,7 @@ msgstr "Virittimet"
 msgid "Type"
 msgstr "Tyyppi"
 
-#: ../plugin/controllers/web.py:244
+#: ../plugin/controllers/web.py:245
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr "Tuntematon äänenvoimakkuuskomento %s"
@@ -2512,7 +2512,7 @@ msgstr "Vain lähiverkko-osoitteet sallittu!"
 msgid "Wizard"
 msgstr "Avustaja"
 
-#: ../plugin/controllers/web.py:239
+#: ../plugin/controllers/web.py:240
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Väärä asetusmuoto 'set=%s'. Käytä set=set15 "
@@ -2737,7 +2737,7 @@ msgstr "hae alku"
 msgid "transcoded"
 msgstr "transkoodaus"
 
-#: ../plugin/controllers/web.py:703
+#: ../plugin/controllers/web.py:704
 #, python-format
 msgid "type %s is not a number"
 msgstr "tyyppi %s ei ole numero"

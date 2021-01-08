@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-14 20:13+0330\n"
+"POT-Creation-Date: 2021-01-07 08:39+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: neoatomic <neoatomic@users.noreply.github.com>\n"
 "Language-Team: \n"
@@ -17,7 +17,7 @@ msgstr ""
 #: ../plugin/controllers/BouquetEditor.py:550
 #, python-format
 msgid "%s %s is locked."
-msgstr "%s %s is gesperrt"
+msgstr "%s %s ist gesperrt"
 
 #: ../plugin/controllers/models/info.py:244
 #: ../plugin/controllers/models/info.py:393
@@ -35,7 +35,7 @@ msgstr "Bitte den Dateinamen angeben"
 
 #: ../plugin/controllers/i18n.py:533
 msgid "A value is required"
-msgstr "Du must etwas schreiben!"
+msgstr "Sie müssen etwas schreiben!"
 
 #: ../plugin/controllers/i18n.py:80
 msgid "AGC"
@@ -51,7 +51,7 @@ msgstr "Hinzufügen"
 
 #: ../plugin/controllers/i18n.py:426
 msgid "Add  AutoTimer  to tags"
-msgstr "\"Autotimer\" als Markierung zufügen"
+msgstr "\"AutoTimer\" als Markierung zufügen"
 
 #: ../plugin/controllers/i18n.py:427
 msgid "Add AutoTimer name to tags"
@@ -125,7 +125,7 @@ msgstr "Alle Sender"
 
 #: ../plugin/controllers/i18n.py:327
 msgid "All Files of this Software are open source software; you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation."
-msgstr "Alle Dateien dieser Software sind Open-Source; Du darfst sie weiterbenutzen oder modifizieren unter der Beachtung der GNU General Public License Version 3 die bei der Free Software Foundation veröffentlicht wurde."
+msgstr "Alle Dateien dieser Software sind Open-Source. Sie dürfen sie weiterbenutzen oder modifizieren unter der Beachtung der GNU General Public License Version 3, die bei der Free Software Foundation veröffentlicht wurde."
 
 #: ../plugin/controllers/BouquetEditor.py:506
 msgid "All alternative services deleted."
@@ -175,32 +175,32 @@ msgstr "April"
 
 #: ../plugin/controllers/i18n.py:474
 msgid "Are you sure you want to delete the selected bouquet?"
-msgstr "Wollen Sie folgendes Bouquet wirklich löschen"
+msgstr "Wollen Sie folgendes Bouquet wirklich löschen?"
 
 #: ../plugin/controllers/i18n.py:473
 msgid "Are you sure you want to delete the selected item(s)?"
-msgstr "Wollen Sie nachfolgende(n) Sender wirklich löschen"
+msgstr "Wollen Sie nachfolgende(n) Sender wirklich löschen?"
 
 #: ../plugin/controllers/i18n.py:409
 #, fuzzy
 msgid "Are you sure you want to delete this AutoTimer?"
-msgstr "Soll der Timer gelöscht werden"
+msgstr "Soll der Timer gelöscht werden?"
 
 #: ../plugin/controllers/i18n.py:115
 msgid "Are you sure you want to delete this recording?"
-msgstr "Soll die Aufnahme gelöscht werden"
+msgstr "Soll die Aufnahme gelöscht werden?"
 
 #: ../plugin/controllers/i18n.py:117
 msgid "Are you sure you want to delete this timer?"
-msgstr "Soll der Timer gelöscht werden"
+msgstr "Soll der Timer gelöscht werden?"
 
 #: ../plugin/controllers/i18n.py:237
 msgid "Are you sure you want to rename this recording?"
-msgstr "Wirklich Aufname umbenennen?"
+msgstr "Wirklich Aufnahme umbenennen?"
 
 #: ../plugin/controllers/i18n.py:481
 msgid "Are you sure you want to restore from file?"
-msgstr "Wollen Sie diese Datei wirklich importieren"
+msgstr "Wollen Sie diese Datei wirklich importieren?"
 
 #: ../plugin/controllers/i18n.py:178
 #, fuzzy
@@ -231,7 +231,7 @@ msgstr "Automatisch"
 msgid "AutoPoll"
 msgstr "AutoPoll"
 
-#: ../plugin/controllers/base.py:319
+#: ../plugin/controllers/base.py:349
 msgid "AutoTimer"
 msgstr "AutoTimer"
 
@@ -242,7 +242,7 @@ msgstr "AutoTimer bearbeiten"
 # New Autotimer Setting Windows name (not enabled to transfer atm)
 #: ../plugin/controllers/i18n.py:415
 msgid "AutoTimer Settings"
-msgstr "Autotimer-Einstellungen"
+msgstr "AutoTimer-Einstellungen"
 
 #: ../plugin/controllers/i18n.py:332
 msgid "AutoTimers"
@@ -344,16 +344,16 @@ msgstr "Bouquet erfolgreich umbenannt."
 
 #: ../plugin/controllers/BouquetEditor.py:650
 msgid "Bouquet-settings were restored successfully"
-msgstr "Bouquet-settings erfolgreich wiederhergestellt"
+msgstr "Bouquet-Settings erfolgreich wiederhergestellt"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:354
 msgid "BouquetEditor"
 msgstr "Bouquet-Editor"
 
 #: ../plugin/controllers/BouquetEditor.py:131
 #: ../plugin/controllers/BouquetEditor.py:455
 msgid "Bouquetlist is not editable!"
-msgstr "Bouquetlist nicht editierbar!"
+msgstr "Bouquetliste nicht editierbar!"
 
 #: ../plugin/controllers/i18n.py:88
 msgid "Bouquets"
@@ -558,8 +558,8 @@ msgid ""
 "Delete failed, because there is no movie trash !\n"
 "Disable movie trash in configuration to delete this item"
 msgstr ""
-"Löschen fehlgeschlagen, weil kein Movie-Papierkorb vorhanden !\n"
-"Deaktiviere den Movie-Papierkorb in der Konfiguration um dennoch zu löschen"
+"Löschen fehlgeschlagen weil kein Movie-Papierkorb vorhanden ist!\n"
+"Deaktivieren Sie den Movie-Papierkorb in der Konfiguration um dennoch zu löschen."
 
 #: ../plugin/controllers/i18n.py:532
 #, fuzzy
@@ -576,7 +576,7 @@ msgstr "Timer deaktivieren"
 
 #: ../plugin/plugin.py:156
 msgid "Disable remote access for user root"
-msgstr "Externen Zugriff als Benutzer root verbieten"
+msgstr "Externen Zugriff als Benutzer 'root' verbieten"
 
 #: ../plugin/controllers/models/info.py:232
 #, fuzzy
@@ -648,9 +648,9 @@ msgstr "EPG-Suche"
 msgid "EPG encoding"
 msgstr "Zeichensatz des EPG"
 
-#: ../plugin/controllers/base.py:328
+#: ../plugin/controllers/base.py:358
 msgid "EPGRefresh"
-msgstr "EPG-Refresh"
+msgstr "EPGRefresh"
 
 #: ../plugin/controllers/models/timers.py:825
 msgid "ERROR: Cannot set SleepTimer while device is in Standby-Mode"
@@ -762,7 +762,7 @@ msgstr "Fehler"
 
 #: ../plugin/controllers/models/timers.py:952
 msgid "Error parsing vps.xml"
-msgstr "Fehler beim parsen von vps.xml"
+msgstr "Fehler beim Parsen von 'vps.xml'"
 
 #: ../plugin/controllers/opkg.py:293
 msgid "Error upload File"
@@ -784,17 +784,17 @@ msgstr "Fehler beim Schreiben"
 #: ../plugin/controllers/BouquetEditor.py:654
 #, python-format
 msgid "Error, %s does not exists, restore is not possible..."
-msgstr "Fehler: %s existiert nicht, wiederherstellung nicht möglich."
+msgstr "Fehler: %s existiert nicht. Wiederherstellung nicht möglich."
 
 #: ../plugin/controllers/BouquetEditor.py:652
 #, python-format
 msgid "Error, %s was not created with WebBouquetEditor..."
-msgstr "Fehler: %s wurde nicht erstellt mit WebBouquetEditor."
+msgstr "Fehler: %s wurde nicht mit WebBouquetEditor erstellt."
 
 #: ../plugin/controllers/BouquetEditor.py:195
 #, python-format
 msgid "Error: Bouquet %s could not deleted, OSError."
-msgstr "Fehler: Bouquet %s kann nicht gelöschtwerden, OSError."
+msgstr "Fehler: Bouquet %s kann nicht gelöscht werden, OSError."
 
 #: ../plugin/controllers/i18n.py:498
 msgid "Event not found"
@@ -802,7 +802,7 @@ msgstr "Event nicht gefunden"
 
 #: ../plugin/controllers/models/timers.py:285
 msgid "EventId not found"
-msgstr "EventId nicht gefunden"
+msgstr "EventID nicht gefunden"
 
 #: ../plugin/controllers/i18n.py:147
 msgid "Every"
@@ -1092,7 +1092,7 @@ msgstr "Kernel"
 msgid "LCD"
 msgstr ""
 
-#: ../plugin/controllers/base.py:291
+#: ../plugin/controllers/base.py:321
 msgid "LCD4Linux Setup"
 msgstr "LCD4Linux-Einstellungen"
 
@@ -1201,7 +1201,7 @@ msgstr "Minimale Timer Liste"
 msgid "Minute"
 msgstr "Minute"
 
-#: ../plugin/controllers/web.py:82
+#: ../plugin/controllers/web.py:83
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "Der benötigte Parameter '%s' fehlt"
@@ -1275,12 +1275,7 @@ msgstr "Multi-EPG"
 msgid "MultiTranscoding"
 msgstr "Transcodieren"
 
-#: ../plugin/controllers/i18n.py:196
-#, fuzzy
-msgid "Multiboot"
-msgstr "Multi-EPG"
-
-#: ../plugin/controllers/base.py:315
+#: ../plugin/controllers/base.py:345
 #, fuzzy
 msgid "NCam Webinterface"
 msgstr "OSCam-Webinterface"
@@ -1445,7 +1440,7 @@ msgstr "Jetzt"
 msgid "OE"
 msgstr "O"
 
-#: ../plugin/controllers/base.py:313
+#: ../plugin/controllers/base.py:343
 msgid "OSCam Webinterface"
 msgstr "OSCam-Webinterface"
 
@@ -1577,15 +1572,15 @@ msgstr "PCR-PID"
 
 #: ../plugin/controllers/i18n.py:219
 msgid "PiP"
-msgstr "BiB"
+msgstr "PiP"
 
 #: ../plugin/controllers/i18n.py:455
 msgid "Picture in Picture"
-msgstr "Bild in Bild (BiB)"
+msgstr "Bild im Bild (PiP)"
 
 #: ../plugin/controllers/i18n.py:456
 msgid "Picture in Picture (hidden)"
-msgstr "Bild in Bild (versteckt)"
+msgstr "Bild im Bild (versteckt)"
 
 #: ../plugin/controllers/i18n.py:433
 msgid "Plain"
@@ -1834,7 +1829,7 @@ msgstr "Suchtyp"
 
 #: ../plugin/controllers/i18n.py:551
 msgid "Select IPK file for upload"
-msgstr "Wähle IPK Datei zum Hochladen"
+msgstr "Wählen Sie die 'IPK' Datei zum Hochladen"
 
 #: ../plugin/controllers/i18n.py:252
 msgid "Send Message"
@@ -1916,7 +1911,7 @@ msgstr "Service"
 msgid "Set maximum duration"
 msgstr "Finde maximale Länge"
 
-#: ../plugin/controllers/base.py:281 ../plugin/controllers/i18n.py:256
+#: ../plugin/controllers/base.py:311 ../plugin/controllers/i18n.py:256
 #: ../plugin/controllers/i18n.py:408
 msgid "Settings"
 msgstr "Einstellungen"
@@ -1997,7 +1992,7 @@ msgstr ""
 #: ../plugin/controllers/models/timers.py:841
 #: ../plugin/controllers/models/timers.py:923
 msgid "SleepTimer error"
-msgstr "Schlaftimer Fehler"
+msgstr "SleepTimer Fehler"
 
 #: ../plugin/controllers/models/timers.py:830
 #: ../plugin/controllers/models/timers.py:899
@@ -2020,10 +2015,14 @@ msgstr "SleepTimer aktiviert"
 #: ../plugin/controllers/models/timers.py:913
 #, python-format
 msgid "Sleeptimer set to %d minutes"
-msgstr "SchlafTimer eingestellt auf %d Minuten"
+msgstr "SleepTimer eingestellt auf %d Minuten"
 
 #: ../plugin/controllers/i18n.py:265
 msgid "SoC family"
+msgstr ""
+
+#: ../plugin/controllers/i18n.py:196
+msgid "Soft multiboot"
 msgstr ""
 
 #: ../plugin/controllers/i18n.py:266
@@ -2137,7 +2136,7 @@ msgstr "Fernsehen"
 msgid "Template Engine"
 msgstr "Vorlagenart"
 
-#: ../plugin/controllers/base.py:365
+#: ../plugin/controllers/base.py:395
 msgid "Terminal"
 msgstr ""
 
@@ -2153,12 +2152,12 @@ msgstr "Text"
 msgid "Th"
 msgstr "Do"
 
-#: ../plugin/controllers/web.py:88 ../plugin/controllers/web.py:1546
+#: ../plugin/controllers/web.py:89 ../plugin/controllers/web.py:1547
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Der Parameter '%s' darf nicht leer sein"
 
-#: ../plugin/controllers/web.py:337
+#: ../plugin/controllers/web.py:338
 msgid "The parameter 'command' must be a number"
 msgstr "Der Parameter 'command' muss eine Zahl sein"
 
@@ -2242,7 +2241,7 @@ msgstr "Timer '%s' wegen Konflikt nicht gespeichert"
 
 #: ../plugin/controllers/i18n.py:497
 msgid "Timer Added"
-msgstr "Timer Hinzugefügt"
+msgstr "Timer hinzugefügt"
 
 #: ../plugin/controllers/i18n.py:283
 msgid "Timer added"
@@ -2341,7 +2340,7 @@ msgstr "Tuner"
 msgid "Type"
 msgstr "Typ"
 
-#: ../plugin/controllers/web.py:244
+#: ../plugin/controllers/web.py:245
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr "Unbekannter Befehl %s für die Lautstärkesteuerung"
@@ -2516,7 +2515,7 @@ msgstr "Ohne Anmeldung ist nur lokaler Zugriff möglich!"
 msgid "Wizard"
 msgstr "Assistent"
 
-#: ../plugin/controllers/web.py:239
+#: ../plugin/controllers/web.py:240
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Falsches Parameter-Format 'set=%s'. Korrekt: set=set15 "
@@ -2577,7 +2576,7 @@ msgstr "Nichts"
 
 #: ../plugin/controllers/i18n.py:496
 msgid "error! Loading Page"
-msgstr "Fehler! beim Laden der Seite"
+msgstr "Fehler beim Laden der Seite"
 
 #: ../plugin/controllers/i18n.py:339
 msgid "exact title match"
@@ -2741,7 +2740,7 @@ msgstr "Beginnt mit..."
 msgid "transcoded"
 msgstr "transkodiert"
 
-#: ../plugin/controllers/web.py:703
+#: ../plugin/controllers/web.py:704
 #, python-format
 msgid "type %s is not a number"
 msgstr "der Typ %s ist keine Zahl"
@@ -2757,7 +2756,7 @@ msgstr "mittels"
 
 #: ../plugin/controllers/i18n.py:484
 msgid "via"
-msgstr ""
+msgstr "über"
 
 #: ../plugin/controllers/i18n.py:319
 msgid "waiting"

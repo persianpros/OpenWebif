@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-14 20:13+0330\n"
+"POT-Creation-Date: 2021-01-07 08:39+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: andy1 <dummy@dummy.com>\n"
 "Language-Team: GeirJ\n"
@@ -232,7 +232,7 @@ msgstr "Auto"
 msgid "AutoPoll"
 msgstr "Auto overvåk"
 
-#: ../plugin/controllers/base.py:319
+#: ../plugin/controllers/base.py:349
 msgid "AutoTimer"
 msgstr "Auto timer"
 
@@ -346,7 +346,7 @@ msgstr "Kanallisten er navngitt på nytt."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Kanalliste-valgene ble gjenopprettet"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:354
 msgid "BouquetEditor"
 msgstr "Kanalliste redigerer"
 
@@ -644,7 +644,7 @@ msgstr "EPG søk"
 msgid "EPG encoding"
 msgstr "EPG koding"
 
-#: ../plugin/controllers/base.py:328
+#: ../plugin/controllers/base.py:358
 msgid "EPGRefresh"
 msgstr "Oppdater EPG"
 
@@ -1085,7 +1085,7 @@ msgstr "Kjerne"
 msgid "LCD"
 msgstr "LCD"
 
-#: ../plugin/controllers/base.py:291
+#: ../plugin/controllers/base.py:321
 msgid "LCD4Linux Setup"
 msgstr "LCD4Linux innstilling"
 
@@ -1193,7 +1193,7 @@ msgstr "Minimert timer-liste"
 msgid "Minute"
 msgstr "Minutt"
 
-#: ../plugin/controllers/web.py:82
+#: ../plugin/controllers/web.py:83
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "Savner obligatorisk parameter '%s'"
@@ -1266,12 +1266,7 @@ msgstr "MultiEPG"
 msgid "MultiTranscoding"
 msgstr "Transkode"
 
-#: ../plugin/controllers/i18n.py:196
-#, fuzzy
-msgid "Multiboot"
-msgstr "MultiEPG"
-
-#: ../plugin/controllers/base.py:315
+#: ../plugin/controllers/base.py:345
 msgid "NCam Webinterface"
 msgstr "NCam webinterface"
 
@@ -1434,7 +1429,7 @@ msgstr "Nå"
 msgid "OE"
 msgstr "Ø"
 
-#: ../plugin/controllers/base.py:313
+#: ../plugin/controllers/base.py:343
 msgid "OSCam Webinterface"
 msgstr "OSCam Webutseende"
 
@@ -1904,7 +1899,7 @@ msgstr "Kanaler"
 msgid "Set maximum duration"
 msgstr "Still inn maksimal varighet (i min)"
 
-#: ../plugin/controllers/base.py:281 ../plugin/controllers/i18n.py:256
+#: ../plugin/controllers/base.py:311 ../plugin/controllers/i18n.py:256
 #: ../plugin/controllers/i18n.py:408
 msgid "Settings"
 msgstr "Innstillinger"
@@ -2012,6 +2007,11 @@ msgstr "Vekkerklokke er stilt på %d minutter"
 #: ../plugin/controllers/i18n.py:265
 msgid "SoC family"
 msgstr ""
+
+#: ../plugin/controllers/i18n.py:196
+#, fuzzy
+msgid "Soft multiboot"
+msgstr "MultiEPG"
 
 #: ../plugin/controllers/i18n.py:266
 msgid "Software"
@@ -2124,7 +2124,7 @@ msgstr "TV"
 msgid "Template Engine"
 msgstr "Mal"
 
-#: ../plugin/controllers/base.py:365
+#: ../plugin/controllers/base.py:395
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -2140,12 +2140,12 @@ msgstr "Tekst"
 msgid "Th"
 msgstr "To"
 
-#: ../plugin/controllers/web.py:88 ../plugin/controllers/web.py:1546
+#: ../plugin/controllers/web.py:89 ../plugin/controllers/web.py:1547
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Parameter '%s' kan ikke stå tomt"
 
-#: ../plugin/controllers/web.py:337
+#: ../plugin/controllers/web.py:338
 msgid "The parameter 'command' must be a number"
 msgstr "Parameter 'kommando' må være et tall"
 
@@ -2328,7 +2328,7 @@ msgstr "Tunere"
 msgid "Type"
 msgstr "Type"
 
-#: ../plugin/controllers/web.py:244
+#: ../plugin/controllers/web.py:245
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr "Ukjent volum instruktion %s"
@@ -2502,7 +2502,7 @@ msgstr "Kun lokal adgang er tillat uten godkjenning!"
 msgid "Wizard"
 msgstr "Veiviser"
 
-#: ../plugin/controllers/web.py:239
+#: ../plugin/controllers/web.py:240
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Feil parameter format 'set=%s'. Bruk set=set15 "
@@ -2726,7 +2726,7 @@ msgstr "start samsvarssøk"
 msgid "transcoded"
 msgstr "nedskalert"
 
-#: ../plugin/controllers/web.py:703
+#: ../plugin/controllers/web.py:704
 #, python-format
 msgid "type %s is not a number"
 msgstr "type %s er ikke et tall"

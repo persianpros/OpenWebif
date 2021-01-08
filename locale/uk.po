@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-14 20:13+0330\n"
+"POT-Creation-Date: 2021-01-07 08:39+0330\n"
 "PO-Revision-Date: 2018-03-30 13:04+0200\n"
 "Last-Translator: kvinto <badsystem@ukr.net>\n"
 "Language-Team: \n"
@@ -232,7 +232,7 @@ msgstr "Авто"
 msgid "AutoPoll"
 msgstr "Автоопитування"
 
-#: ../plugin/controllers/base.py:319
+#: ../plugin/controllers/base.py:349
 msgid "AutoTimer"
 msgstr "Автотаймер"
 
@@ -347,7 +347,7 @@ msgstr "Фаворит успішно перейменовано."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Налаштування фаворитів успішно відновлено"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:354
 msgid "BouquetEditor"
 msgstr "Редактор Фаворитів"
 
@@ -648,7 +648,7 @@ msgstr "Пошук EPG"
 msgid "EPG encoding"
 msgstr "Декодування EPG"
 
-#: ../plugin/controllers/base.py:328
+#: ../plugin/controllers/base.py:358
 msgid "EPGRefresh"
 msgstr "Оновлення EPG"
 
@@ -1089,7 +1089,7 @@ msgstr "Ядро"
 msgid "LCD"
 msgstr ""
 
-#: ../plugin/controllers/base.py:291
+#: ../plugin/controllers/base.py:321
 msgid "LCD4Linux Setup"
 msgstr "Налаштування LCD4Linux"
 
@@ -1197,7 +1197,7 @@ msgstr "Мінімальний список таймерів"
 msgid "Minute"
 msgstr "Хвилина"
 
-#: ../plugin/controllers/web.py:82
+#: ../plugin/controllers/web.py:83
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "Відсутній обов'язковий параметр '%s'"
@@ -1270,12 +1270,7 @@ msgstr "Мульти EPG"
 msgid "MultiTranscoding"
 msgstr "Транскодування"
 
-#: ../plugin/controllers/i18n.py:196
-#, fuzzy
-msgid "Multiboot"
-msgstr "Мульти EPG"
-
-#: ../plugin/controllers/base.py:315
+#: ../plugin/controllers/base.py:345
 #, fuzzy
 msgid "NCam Webinterface"
 msgstr "Веб-інтерфейс OSCam"
@@ -1439,7 +1434,7 @@ msgstr "Зараз"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:313
+#: ../plugin/controllers/base.py:343
 msgid "OSCam Webinterface"
 msgstr "Веб-інтерфейс OSCam"
 
@@ -1909,7 +1904,7 @@ msgstr "Канали"
 msgid "Set maximum duration"
 msgstr "Встановіть максимальну тривалість"
 
-#: ../plugin/controllers/base.py:281 ../plugin/controllers/i18n.py:256
+#: ../plugin/controllers/base.py:311 ../plugin/controllers/i18n.py:256
 #: ../plugin/controllers/i18n.py:408
 msgid "Settings"
 msgstr "Налаштування"
@@ -2017,6 +2012,11 @@ msgstr "Таймер сну встановлений на %d хвилин"
 #: ../plugin/controllers/i18n.py:265
 msgid "SoC family"
 msgstr ""
+
+#: ../plugin/controllers/i18n.py:196
+#, fuzzy
+msgid "Soft multiboot"
+msgstr "Мульти EPG"
 
 #: ../plugin/controllers/i18n.py:266
 msgid "Software"
@@ -2129,7 +2129,7 @@ msgstr "ТВ канали"
 msgid "Template Engine"
 msgstr "Шаблон"
 
-#: ../plugin/controllers/base.py:365
+#: ../plugin/controllers/base.py:395
 msgid "Terminal"
 msgstr "Термінал"
 
@@ -2145,12 +2145,12 @@ msgstr "Текст"
 msgid "Th"
 msgstr "Чт"
 
-#: ../plugin/controllers/web.py:88 ../plugin/controllers/web.py:1546
+#: ../plugin/controllers/web.py:89 ../plugin/controllers/web.py:1547
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Параметр '%s' не може бути порожнім"
 
-#: ../plugin/controllers/web.py:337
+#: ../plugin/controllers/web.py:338
 msgid "The parameter 'command' must be a number"
 msgstr "Параметр 'command' повинен бути чисельним"
 
@@ -2333,7 +2333,7 @@ msgstr "Тюнери"
 msgid "Type"
 msgstr "Тип"
 
-#: ../plugin/controllers/web.py:244
+#: ../plugin/controllers/web.py:245
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr "Невідома команда гучності %s"
@@ -2507,7 +2507,7 @@ msgstr "Без аутентифікації дозволяється тільк�
 msgid "Wizard"
 msgstr "Помічник"
 
-#: ../plugin/controllers/web.py:239
+#: ../plugin/controllers/web.py:240
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Невірний формат параметру 'set=%s'. Використовуйте set=set15 "
@@ -2731,7 +2731,7 @@ msgstr "збіг початку"
 msgid "transcoded"
 msgstr "транскодування"
 
-#: ../plugin/controllers/web.py:703
+#: ../plugin/controllers/web.py:704
 #, python-format
 msgid "type %s is not a number"
 msgstr "тип %s не чисельний"

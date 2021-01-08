@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-14 20:13+0330\n"
+"POT-Creation-Date: 2021-01-07 08:39+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Frenske <voorzitter@openpli.org>\n"
 "Language-Team: \n"
@@ -230,7 +230,7 @@ msgstr "Auto"
 msgid "AutoPoll"
 msgstr "AutoPoll"
 
-#: ../plugin/controllers/base.py:319
+#: ../plugin/controllers/base.py:349
 msgid "AutoTimer"
 msgstr "Autotimer"
 
@@ -345,7 +345,7 @@ msgstr "Bouquet met succes hernoemd."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Bouquet-instellingen werden hersteld"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:354
 msgid "BouquetEditor"
 msgstr "Bouquet Editor"
 
@@ -643,7 +643,7 @@ msgstr "EPG zoeken"
 msgid "EPG encoding"
 msgstr "EPG codering"
 
-#: ../plugin/controllers/base.py:328
+#: ../plugin/controllers/base.py:358
 msgid "EPGRefresh"
 msgstr "EPGRefresh"
 
@@ -1084,7 +1084,7 @@ msgstr "Kernel versie"
 msgid "LCD"
 msgstr "LCD"
 
-#: ../plugin/controllers/base.py:291
+#: ../plugin/controllers/base.py:321
 msgid "LCD4Linux Setup"
 msgstr "LCD4Linux instellingen"
 
@@ -1192,7 +1192,7 @@ msgstr "Minimale timerlijst"
 msgid "Minute"
 msgstr "Minuut"
 
-#: ../plugin/controllers/web.py:82
+#: ../plugin/controllers/web.py:83
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "De verplichte parameter '%s' ontbreekt"
@@ -1265,12 +1265,7 @@ msgstr "Multi-EPG"
 msgid "MultiTranscoding"
 msgstr "Transcoderen"
 
-#: ../plugin/controllers/i18n.py:196
-#, fuzzy
-msgid "Multiboot"
-msgstr "Multi-EPG"
-
-#: ../plugin/controllers/base.py:315
+#: ../plugin/controllers/base.py:345
 msgid "NCam Webinterface"
 msgstr "NCam Webinterface"
 
@@ -1433,7 +1428,7 @@ msgstr "Nu"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:313
+#: ../plugin/controllers/base.py:343
 msgid "OSCam Webinterface"
 msgstr "OSCam Webinterface"
 
@@ -1902,7 +1897,7 @@ msgstr "Zenders"
 msgid "Set maximum duration"
 msgstr "Stel de maximale duur in"
 
-#: ../plugin/controllers/base.py:281 ../plugin/controllers/i18n.py:256
+#: ../plugin/controllers/base.py:311 ../plugin/controllers/i18n.py:256
 #: ../plugin/controllers/i18n.py:408
 msgid "Settings"
 msgstr "Instellingen"
@@ -2010,6 +2005,11 @@ msgstr "Slaaptimer ingesteld op %d minuten"
 #: ../plugin/controllers/i18n.py:265
 msgid "SoC family"
 msgstr ""
+
+#: ../plugin/controllers/i18n.py:196
+#, fuzzy
+msgid "Soft multiboot"
+msgstr "Multi-EPG"
 
 #: ../plugin/controllers/i18n.py:266
 msgid "Software"
@@ -2121,7 +2121,7 @@ msgstr "Televisie"
 msgid "Template Engine"
 msgstr "Template-Engine"
 
-#: ../plugin/controllers/base.py:365
+#: ../plugin/controllers/base.py:395
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -2137,12 +2137,12 @@ msgstr "Tekst"
 msgid "Th"
 msgstr "do"
 
-#: ../plugin/controllers/web.py:88 ../plugin/controllers/web.py:1546
+#: ../plugin/controllers/web.py:89 ../plugin/controllers/web.py:1547
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "De parameter '%s' kan niet leeg zijn"
 
-#: ../plugin/controllers/web.py:337
+#: ../plugin/controllers/web.py:338
 msgid "The parameter 'command' must be a number"
 msgstr "De parameter 'commando' moet een getal zijn"
 
@@ -2325,7 +2325,7 @@ msgstr "Tuners"
 msgid "Type"
 msgstr "Type"
 
-#: ../plugin/controllers/web.py:244
+#: ../plugin/controllers/web.py:245
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr "Onbekend volumecommando %s"
@@ -2499,7 +2499,7 @@ msgstr "Zonder authentificatie is alléén lokale toegang mogelijk!"
 msgid "Wizard"
 msgstr "Wizard"
 
-#: ../plugin/controllers/web.py:239
+#: ../plugin/controllers/web.py:240
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Verkeerd parameterformaat 'set=%s'. Gebruik set=set15 "
@@ -2723,7 +2723,7 @@ msgstr "aanvangen met vergelijken"
 msgid "transcoded"
 msgstr "Getranscodeerd"
 
-#: ../plugin/controllers/web.py:703
+#: ../plugin/controllers/web.py:704
 #, python-format
 msgid "type %s is not a number"
 msgstr "type %s is geen getal"

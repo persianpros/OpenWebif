@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-14 20:13+0330\n"
+"POT-Creation-Date: 2021-01-07 08:39+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: ims <ims21@users.sourceforge.net>\n"
 "Language-Team: PLi\n"
@@ -231,7 +231,7 @@ msgstr ""
 msgid "AutoPoll"
 msgstr "Automatická kontrola"
 
-#: ../plugin/controllers/base.py:319
+#: ../plugin/controllers/base.py:349
 msgid "AutoTimer"
 msgstr ""
 
@@ -346,7 +346,7 @@ msgstr "Přehled úspěšně přejmenován."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Nastavení přehledu byla úspěšně obnovena"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:354
 msgid "BouquetEditor"
 msgstr "Editor přehledů"
 
@@ -642,7 +642,7 @@ msgstr "Hledat v EPG"
 msgid "EPG encoding"
 msgstr "Kódování EPG"
 
-#: ../plugin/controllers/base.py:328
+#: ../plugin/controllers/base.py:358
 msgid "EPGRefresh"
 msgstr ""
 
@@ -1083,7 +1083,7 @@ msgstr "Verze jádra"
 msgid "LCD"
 msgstr ""
 
-#: ../plugin/controllers/base.py:291
+#: ../plugin/controllers/base.py:321
 msgid "LCD4Linux Setup"
 msgstr "Nastavení LCD4Linux"
 
@@ -1191,7 +1191,7 @@ msgstr ""
 msgid "Minute"
 msgstr "Minuty"
 
-#: ../plugin/controllers/web.py:82
+#: ../plugin/controllers/web.py:83
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "Chybí povinný parametr '%s'"
@@ -1261,11 +1261,7 @@ msgstr ""
 msgid "MultiTranscoding"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:196
-msgid "Multiboot"
-msgstr ""
-
-#: ../plugin/controllers/base.py:315
+#: ../plugin/controllers/base.py:345
 msgid "NCam Webinterface"
 msgstr ""
 
@@ -1428,7 +1424,7 @@ msgstr "Nyní"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:313
+#: ../plugin/controllers/base.py:343
 msgid "OSCam Webinterface"
 msgstr ""
 
@@ -1896,7 +1892,7 @@ msgstr "Programy"
 msgid "Set maximum duration"
 msgstr "Nastavit maximální délku trvání"
 
-#: ../plugin/controllers/base.py:281 ../plugin/controllers/i18n.py:256
+#: ../plugin/controllers/base.py:311 ../plugin/controllers/i18n.py:256
 #: ../plugin/controllers/i18n.py:408
 msgid "Settings"
 msgstr "Nastavení"
@@ -2002,6 +1998,10 @@ msgstr "Časovač usínání nastaven na %d minut"
 
 #: ../plugin/controllers/i18n.py:265
 msgid "SoC family"
+msgstr ""
+
+#: ../plugin/controllers/i18n.py:196
+msgid "Soft multiboot"
 msgstr ""
 
 #: ../plugin/controllers/i18n.py:266
@@ -2114,7 +2114,7 @@ msgstr "Televize"
 msgid "Template Engine"
 msgstr ""
 
-#: ../plugin/controllers/base.py:365
+#: ../plugin/controllers/base.py:395
 msgid "Terminal"
 msgstr ""
 
@@ -2130,12 +2130,12 @@ msgstr ""
 msgid "Th"
 msgstr "Čt"
 
-#: ../plugin/controllers/web.py:88 ../plugin/controllers/web.py:1546
+#: ../plugin/controllers/web.py:89 ../plugin/controllers/web.py:1547
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Parametr '%s' nemůže být prázdný"
 
-#: ../plugin/controllers/web.py:337
+#: ../plugin/controllers/web.py:338
 msgid "The parameter 'command' must be a number"
 msgstr "Parametr 'command' musí být číslo"
 
@@ -2318,7 +2318,7 @@ msgstr "Tunery"
 msgid "Type"
 msgstr "Typ"
 
-#: ../plugin/controllers/web.py:244
+#: ../plugin/controllers/web.py:245
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr ""
@@ -2492,7 +2492,7 @@ msgstr "Bez ověřování je povolen pouze lokální přístup"
 msgid "Wizard"
 msgstr "Průvodce"
 
-#: ../plugin/controllers/web.py:239
+#: ../plugin/controllers/web.py:240
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Špatný formát parametru 'set=%s'. Použijte set=set15 "
@@ -2716,7 +2716,7 @@ msgstr "začátek odpovídá"
 msgid "transcoded"
 msgstr ""
 
-#: ../plugin/controllers/web.py:703
+#: ../plugin/controllers/web.py:704
 #, python-format
 msgid "type %s is not a number"
 msgstr "%s není číslo"

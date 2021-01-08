@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-14 20:13+0330\n"
+"POT-Creation-Date: 2021-01-07 08:39+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: mosad - مساعد الجعيد <abo-mishal@hotmail.com>\n"
 "Language-Team: mosad - مساعد الجعيد\n"
@@ -232,7 +232,7 @@ msgstr "تلقائي"
 msgid "AutoPoll"
 msgstr "الاستطلاع التلقائي"
 
-#: ../plugin/controllers/base.py:319
+#: ../plugin/controllers/base.py:349
 msgid "AutoTimer"
 msgstr "المؤقت التلقائي"
 
@@ -346,7 +346,7 @@ msgstr "تمت أعاده تسمية الباقة بنجاح."
 msgid "Bouquet-settings were restored successfully"
 msgstr "تمت استعاده إعدادات الباقة بنجاح"
 
-#: ../plugin/controllers/base.py:324
+#: ../plugin/controllers/base.py:354
 msgid "BouquetEditor"
 msgstr "محرر الباقة"
 
@@ -645,7 +645,7 @@ msgstr "بحث في دليل البرامج"
 msgid "EPG encoding"
 msgstr "ترميز دليل البرامج اليومي"
 
-#: ../plugin/controllers/base.py:328
+#: ../plugin/controllers/base.py:358
 msgid "EPGRefresh"
 msgstr "تحديث دليل البرامج الإلكترونية"
 
@@ -1086,7 +1086,7 @@ msgstr "وحدة النواة"
 msgid "LCD"
 msgstr "شاشة العرض المصغرة"
 
-#: ../plugin/controllers/base.py:291
+#: ../plugin/controllers/base.py:321
 msgid "LCD4Linux Setup"
 msgstr "ضبط شاشة عرض لينكس"
 
@@ -1194,7 +1194,7 @@ msgstr "الحد الأدنى لقائمة المؤقتات"
 msgid "Minute"
 msgstr "دقيقة"
 
-#: ../plugin/controllers/web.py:82
+#: ../plugin/controllers/web.py:83
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "العلامة الإلزامية مفقودة '%s'"
@@ -1267,12 +1267,7 @@ msgstr "دليل البرامج الإلكتروينة المتعدد"
 msgid "MultiTranscoding"
 msgstr "تحويل الترميز"
 
-#: ../plugin/controllers/i18n.py:196
-#, fuzzy
-msgid "Multiboot"
-msgstr "دليل البرامج الإلكتروينة المتعدد"
-
-#: ../plugin/controllers/base.py:315
+#: ../plugin/controllers/base.py:345
 #, fuzzy
 msgid "NCam Webinterface"
 msgstr "واجهة إنترنت الاوسكام"
@@ -1436,7 +1431,7 @@ msgstr "الان"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:313
+#: ../plugin/controllers/base.py:343
 msgid "OSCam Webinterface"
 msgstr "واجهة إنترنت الاوسكام"
 
@@ -1906,7 +1901,7 @@ msgstr "القنوات"
 msgid "Set maximum duration"
 msgstr "حدد أقصى مده"
 
-#: ../plugin/controllers/base.py:281 ../plugin/controllers/i18n.py:256
+#: ../plugin/controllers/base.py:311 ../plugin/controllers/i18n.py:256
 #: ../plugin/controllers/i18n.py:408
 msgid "Settings"
 msgstr "إعدادات"
@@ -2014,6 +2009,11 @@ msgstr "ضبط مؤقت النوم %d بالدقائق"
 #: ../plugin/controllers/i18n.py:265
 msgid "SoC family"
 msgstr ""
+
+#: ../plugin/controllers/i18n.py:196
+#, fuzzy
+msgid "Soft multiboot"
+msgstr "دليل البرامج الإلكتروينة المتعدد"
 
 #: ../plugin/controllers/i18n.py:266
 msgid "Software"
@@ -2126,7 +2126,7 @@ msgstr "التلفزيون"
 msgid "Template Engine"
 msgstr "قالب الانجما"
 
-#: ../plugin/controllers/base.py:365
+#: ../plugin/controllers/base.py:395
 msgid "Terminal"
 msgstr "محطة"
 
@@ -2142,12 +2142,12 @@ msgstr "النصوص"
 msgid "Th"
 msgstr "خميس"
 
-#: ../plugin/controllers/web.py:88 ../plugin/controllers/web.py:1546
+#: ../plugin/controllers/web.py:89 ../plugin/controllers/web.py:1547
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "المؤشر '%s' لا يمكن أن يكون فارغا"
 
-#: ../plugin/controllers/web.py:337
+#: ../plugin/controllers/web.py:338
 msgid "The parameter 'command' must be a number"
 msgstr "مؤشر 'الأمر' يجب أن يكون رقما"
 
@@ -2330,7 +2330,7 @@ msgstr "مؤالفات"
 msgid "Type"
 msgstr "النوع"
 
-#: ../plugin/controllers/web.py:244
+#: ../plugin/controllers/web.py:245
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr "أمر الصوت مجهول %s"
@@ -2504,7 +2504,7 @@ msgstr "دون المصادقة يسمح فقط الوصول المحلي!"
 msgid "Wizard"
 msgstr "النافذة"
 
-#: ../plugin/controllers/web.py:239
+#: ../plugin/controllers/web.py:240
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "تنسيق المعلمة الخاطئ ' ضبط = %s '. استخدام مجموعه = ضبط15 "
@@ -2728,7 +2728,7 @@ msgstr "بدء التطابق"
 msgid "transcoded"
 msgstr "المحولة"
 
-#: ../plugin/controllers/web.py:703
+#: ../plugin/controllers/web.py:704
 #, python-format
 msgid "type %s is not a number"
 msgstr "النوع %s ليس رقما"
