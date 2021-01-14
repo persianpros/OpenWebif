@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-07 08:39+0330\n"
+"POT-Creation-Date: 2021-01-14 12:20+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: mosad - مساعد الجعيد <abo-mishal@hotmail.com>\n"
 "Language-Team: mosad - مساعد الجعيد\n"
@@ -94,7 +94,7 @@ msgstr "إضافة قناة (قنوات) كبديل"
 msgid "Add selection to bouquet"
 msgstr "إضافة قناة (قنوات) إلى الباقة"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:162
 msgid "Add service name to stream information"
 msgstr "إضافة اسم الخدمة إلى معلومات قنوات البث"
 
@@ -132,7 +132,7 @@ msgstr "جميع ملفات هذا البرنامج هي برامج مفتوحة
 msgid "All alternative services deleted."
 msgstr "تم حذف كافة القنوات البديلة."
 
-#: ../plugin/plugin.py:162
+#: ../plugin/plugin.py:163
 msgid "Allow IPK Upload"
 msgstr "السماح برفع الملفات المحمية"
 
@@ -509,7 +509,7 @@ msgstr ""
 msgid "Date (oldest)"
 msgstr ""
 
-#: ../plugin/plugin.py:164
+#: ../plugin/plugin.py:165
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -899,7 +899,7 @@ msgstr "جهاز تحكم عن بعد كامل"
 #: ../plugin/controllers/models/info.py:383
 #: ../plugin/controllers/models/movies.py:224
 #: ../plugin/controllers/models/movies.py:343
-#: ../plugin/controllers/models/movies.py:751
+#: ../plugin/controllers/models/movies.py:755
 msgid "GB"
 msgstr "جيجابايت"
 
@@ -1138,7 +1138,7 @@ msgstr "إعدادات شبكة تحكم وصول الوسائط"
 #: ../plugin/controllers/models/info.py:385
 #: ../plugin/controllers/models/movies.py:226
 #: ../plugin/controllers/models/movies.py:345
-#: ../plugin/controllers/models/movies.py:753
+#: ../plugin/controllers/models/movies.py:757
 msgid "MB"
 msgstr "ميجابايت"
 
@@ -1519,7 +1519,7 @@ msgstr "تميكن فتح واجهة المستخدم"
 msgid "OpenWebif Browser Settings"
 msgstr "إعدادات متصفح الإنترنت المفتوح"
 
-#: ../plugin/plugin.py:173 ../plugin/plugin.py:241 ../plugin/plugin.py:243
+#: ../plugin/plugin.py:174 ../plugin/plugin.py:242 ../plugin/plugin.py:244
 msgid "OpenWebif Configuration"
 msgstr "تكوين فتح واجهة إستخدام الويب"
 
@@ -1586,7 +1586,7 @@ msgstr "قائمة التشغيل"
 msgid "Playback"
 msgstr "تشغيل"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:164
 msgid "Playback IPTV Streams in browser"
 msgstr ""
 
@@ -2066,6 +2066,11 @@ msgstr "‫Stream"
 #: ../plugin/controllers/i18n.py:575
 #, fuzzy
 msgid "Stream Clients"
+msgstr "‫Stream"
+
+#: ../plugin/plugin.py:161
+#, fuzzy
+msgid "Streaming port"
 msgstr "‫Stream"
 
 #: ../plugin/controllers/i18n.py:44
@@ -2608,7 +2613,7 @@ msgstr "فى عنوان"
 #: ../plugin/controllers/models/info.py:243
 #: ../plugin/controllers/models/movies.py:228
 #: ../plugin/controllers/models/movies.py:347
-#: ../plugin/controllers/models/movies.py:755
+#: ../plugin/controllers/models/movies.py:759
 msgid "kB"
 msgstr "كيلوبايت"
 

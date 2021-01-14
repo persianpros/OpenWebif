@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-07 08:39+0330\n"
+"POT-Creation-Date: 2021-01-14 12:20+0330\n"
 "PO-Revision-Date: 2020-09-17 20:39+0300\n"
 "Last-Translator: Vytenis P. <vyteniui@gmail.com>\n"
 "Language-Team: Vytenis Pulokas <vyteniui@gmail.com>\n"
@@ -94,7 +94,7 @@ msgstr "Įtraukti kanalą(us), kaip atsarginį"
 msgid "Add selection to bouquet"
 msgstr "Įtraukti kanalą(us) į bukietą"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:162
 msgid "Add service name to stream information"
 msgstr "Į transliacijos informaciją įtraukti kanalo pavadinimą"
 
@@ -132,7 +132,7 @@ msgstr "Visi šios programinės įrangos failai yra atviro kodo; jūs galite pla
 msgid "All alternative services deleted."
 msgstr "Visi alternatyvūs kanalai ištrinti."
 
-#: ../plugin/plugin.py:162
+#: ../plugin/plugin.py:163
 msgid "Allow IPK Upload"
 msgstr "Leisti IPK įkėlimą"
 
@@ -508,7 +508,7 @@ msgstr ""
 msgid "Date (oldest)"
 msgstr ""
 
-#: ../plugin/plugin.py:164
+#: ../plugin/plugin.py:165
 msgid "Debug - Display Tracebacks in browser"
 msgstr "Derinti – rodyti klaidų trasuotės ataskaitas naršyklėje"
 
@@ -897,7 +897,7 @@ msgstr "Visas nuotolinis"
 #: ../plugin/controllers/models/info.py:383
 #: ../plugin/controllers/models/movies.py:224
 #: ../plugin/controllers/models/movies.py:343
-#: ../plugin/controllers/models/movies.py:751
+#: ../plugin/controllers/models/movies.py:755
 msgid "GB"
 msgstr "GB"
 
@@ -1136,7 +1136,7 @@ msgstr "MAC adresas"
 #: ../plugin/controllers/models/info.py:385
 #: ../plugin/controllers/models/movies.py:226
 #: ../plugin/controllers/models/movies.py:345
-#: ../plugin/controllers/models/movies.py:753
+#: ../plugin/controllers/models/movies.py:757
 msgid "MB"
 msgstr "MB"
 
@@ -1516,7 +1516,7 @@ msgstr "OpenWeb sąsaja įjungta"
 msgid "OpenWebif Browser Settings"
 msgstr "OpenWebif naršyklės nuostatos"
 
-#: ../plugin/plugin.py:173 ../plugin/plugin.py:241 ../plugin/plugin.py:243
+#: ../plugin/plugin.py:174 ../plugin/plugin.py:242 ../plugin/plugin.py:244
 msgid "OpenWebif Configuration"
 msgstr "OpenWebif konfigūravimas"
 
@@ -1583,7 +1583,7 @@ msgstr "Grojaraščio formatas"
 msgid "Playback"
 msgstr "Atkūrimas"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:164
 msgid "Playback IPTV Streams in browser"
 msgstr ""
 
@@ -2061,6 +2061,11 @@ msgstr "Srautas"
 
 #: ../plugin/controllers/i18n.py:575
 msgid "Stream Clients"
+msgstr "Transliacijų klientai"
+
+#: ../plugin/plugin.py:161
+#, fuzzy
+msgid "Streaming port"
 msgstr "Transliacijų klientai"
 
 #: ../plugin/controllers/i18n.py:44
@@ -2602,7 +2607,7 @@ msgstr "pavadinime"
 #: ../plugin/controllers/models/info.py:243
 #: ../plugin/controllers/models/movies.py:228
 #: ../plugin/controllers/models/movies.py:347
-#: ../plugin/controllers/models/movies.py:755
+#: ../plugin/controllers/models/movies.py:759
 msgid "kB"
 msgstr "kB"
 

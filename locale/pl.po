@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-07 08:39+0330\n"
+"POT-Creation-Date: 2021-01-14 12:20+0330\n"
 "PO-Revision-Date: 2020-11-08 16:22+0100\n"
 "Last-Translator: pololoko111 <pololoko111@o2.pl>\n"
 "Language-Team: \n"
@@ -93,7 +93,7 @@ msgstr "Dodaj kanały jako alternatywne"
 msgid "Add selection to bouquet"
 msgstr "Dodaj wybór do bukietu"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:162
 msgid "Add service name to stream information"
 msgstr "Dodaj nazwę usługi, aby przesyłać informacje strumieniowo"
 
@@ -131,7 +131,7 @@ msgstr "Wszystkie pliki tego oprogramowania są oprogramowaniem typu open source
 msgid "All alternative services deleted."
 msgstr "Wszystkie usługi alternatywne zostały usunięte."
 
-#: ../plugin/plugin.py:162
+#: ../plugin/plugin.py:163
 msgid "Allow IPK Upload"
 msgstr "Zezwalaj na przesyłanie IPK"
 
@@ -507,7 +507,7 @@ msgstr ""
 msgid "Date (oldest)"
 msgstr ""
 
-#: ../plugin/plugin.py:164
+#: ../plugin/plugin.py:165
 msgid "Debug - Display Tracebacks in browser"
 msgstr "Debuguj - Wyświetlaj Tracebacki w przeglądarce"
 
@@ -896,7 +896,7 @@ msgstr "Pełny pilot"
 #: ../plugin/controllers/models/info.py:383
 #: ../plugin/controllers/models/movies.py:224
 #: ../plugin/controllers/models/movies.py:343
-#: ../plugin/controllers/models/movies.py:751
+#: ../plugin/controllers/models/movies.py:755
 msgid "GB"
 msgstr ""
 
@@ -1135,7 +1135,7 @@ msgstr "Adres MAC"
 #: ../plugin/controllers/models/info.py:385
 #: ../plugin/controllers/models/movies.py:226
 #: ../plugin/controllers/models/movies.py:345
-#: ../plugin/controllers/models/movies.py:753
+#: ../plugin/controllers/models/movies.py:757
 msgid "MB"
 msgstr ""
 
@@ -1514,7 +1514,7 @@ msgstr "Włączony otwarty interfejs sieciowy"
 msgid "OpenWebif Browser Settings"
 msgstr "Ustawienia przeglądarki OpenWebif"
 
-#: ../plugin/plugin.py:173 ../plugin/plugin.py:241 ../plugin/plugin.py:243
+#: ../plugin/plugin.py:174 ../plugin/plugin.py:242 ../plugin/plugin.py:244
 msgid "OpenWebif Configuration"
 msgstr "Konfiguracja OpenWebif"
 
@@ -1581,7 +1581,7 @@ msgstr "Format listy odtwarzania"
 msgid "Playback"
 msgstr "Odtwarzanie nagranego dźwięku"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:164
 msgid "Playback IPTV Streams in browser"
 msgstr ""
 
@@ -2058,6 +2058,11 @@ msgstr "Strumień"
 
 #: ../plugin/controllers/i18n.py:575
 msgid "Stream Clients"
+msgstr "Klienci strumieniowania"
+
+#: ../plugin/plugin.py:161
+#, fuzzy
+msgid "Streaming port"
 msgstr "Klienci strumieniowania"
 
 #: ../plugin/controllers/i18n.py:44
@@ -2599,7 +2604,7 @@ msgstr "W Tytule"
 #: ../plugin/controllers/models/info.py:243
 #: ../plugin/controllers/models/movies.py:228
 #: ../plugin/controllers/models/movies.py:347
-#: ../plugin/controllers/models/movies.py:755
+#: ../plugin/controllers/models/movies.py:759
 msgid "kB"
 msgstr ""
 

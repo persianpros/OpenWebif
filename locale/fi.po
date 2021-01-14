@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-07 08:39+0330\n"
+"POT-Creation-Date: 2021-01-14 12:20+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Samzam <http://www.opena.tv>\n"
 "Language-Team: \n"
@@ -93,7 +93,7 @@ msgstr "Lisää vaihtoehtoisia kanavia"
 msgid "Add selection to bouquet"
 msgstr "Lisää kanavia suosikkilistaan"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:162
 msgid "Add service name to stream information"
 msgstr "Lisää kanavannimi suoratoistotietoihin"
 
@@ -131,7 +131,7 @@ msgstr "Kaikki tämän ohjelma tiedostot ovat avointa lähdekoodia; Voit jakaa j
 msgid "All alternative services deleted."
 msgstr "Kaikki vaihtoehtoiset kanavat poistettu."
 
-#: ../plugin/plugin.py:162
+#: ../plugin/plugin.py:163
 msgid "Allow IPK Upload"
 msgstr ""
 
@@ -511,7 +511,7 @@ msgstr ""
 msgid "Date (oldest)"
 msgstr ""
 
-#: ../plugin/plugin.py:164
+#: ../plugin/plugin.py:165
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -901,7 +901,7 @@ msgstr "Piilota koko kaukosäädin"
 #: ../plugin/controllers/models/info.py:383
 #: ../plugin/controllers/models/movies.py:224
 #: ../plugin/controllers/models/movies.py:343
-#: ../plugin/controllers/models/movies.py:751
+#: ../plugin/controllers/models/movies.py:755
 msgid "GB"
 msgstr "GB"
 
@@ -1143,7 +1143,7 @@ msgstr "MAC-osoite"
 #: ../plugin/controllers/models/info.py:385
 #: ../plugin/controllers/models/movies.py:226
 #: ../plugin/controllers/models/movies.py:345
-#: ../plugin/controllers/models/movies.py:753
+#: ../plugin/controllers/models/movies.py:757
 msgid "MB"
 msgstr "MB"
 
@@ -1526,7 +1526,7 @@ msgstr "OpenWeb-käyttöliittymä sallittu"
 msgid "OpenWebif Browser Settings"
 msgstr "OpenWebif selaimen asetukset"
 
-#: ../plugin/plugin.py:173 ../plugin/plugin.py:241 ../plugin/plugin.py:243
+#: ../plugin/plugin.py:174 ../plugin/plugin.py:242 ../plugin/plugin.py:244
 msgid "OpenWebif Configuration"
 msgstr "OpenWebif-asetukset"
 
@@ -1593,7 +1593,7 @@ msgstr "Toistolista"
 msgid "Playback"
 msgstr "Toista"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:164
 msgid "Playback IPTV Streams in browser"
 msgstr ""
 
@@ -2074,6 +2074,11 @@ msgstr "Suoratoisto"
 #: ../plugin/controllers/i18n.py:575
 #, fuzzy
 msgid "Stream Clients"
+msgstr "Suoratoisto"
+
+#: ../plugin/plugin.py:161
+#, fuzzy
+msgid "Streaming port"
 msgstr "Suoratoisto"
 
 #: ../plugin/controllers/i18n.py:44
@@ -2616,7 +2621,7 @@ msgstr "nimessä"
 #: ../plugin/controllers/models/info.py:243
 #: ../plugin/controllers/models/movies.py:228
 #: ../plugin/controllers/models/movies.py:347
-#: ../plugin/controllers/models/movies.py:755
+#: ../plugin/controllers/models/movies.py:759
 msgid "kB"
 msgstr "kB"
 
