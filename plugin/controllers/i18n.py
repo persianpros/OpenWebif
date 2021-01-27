@@ -138,6 +138,7 @@ tstrings = {
 	'encrypted': _("Encrypted"),
 	'enigmadebuglvl': _("Enigma2 debug level"),
 	'enigmaver': _("Enigma2"),
+	'enigmarev': _("Enigma2 revision"),
 	'epg': _("EPG"),
 	'epgsearch': _("EPG Search"),
 	'epgsearchextended': _("Include description"),

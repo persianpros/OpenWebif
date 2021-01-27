@@ -40,7 +40,7 @@ from RecordTimer import parseEvent, RecordTimerEntry
 from timer import TimerEntry
 from Screens.InfoBar import InfoBar
 from Tools.Directories import fileExists
-from enigma import eDVBVolumecontrol, eServiceCenter, eServiceReference, getEnigmaVersionString, eEPGCache, getBoxType, getBoxBrand, eGetEnigmaDebugLvl
+from enigma import eDVBVolumecontrol, eServiceCenter, eServiceReference, getEnigmaVersionString, eEPGCache, getBoxType, getBoxBrand, eGetEnigmaDebugLvl, getE2Rev
 from Tools.StbHardware import getFPVersion, getBoxProc, getBoxProcType, getHWSerial, getBoxRCType
 from Plugins.Extensions.OpenWebif.controllers.i18n import _
 from Plugins.Extensions.OpenWebif.controllers.defaults import OPENWEBIFVER, TRANSCODING
@@ -262,6 +262,7 @@ def getInfo(session=None, need_fullinfo=False):
 		info['multiboot'] = _("Yes")
 
 	info['enigmaver'] = getEnigmaVersionString()
+	info['enigmarev'] = getE2Rev()
 	info['driverdate'] = about.getDriverInstalledDate()
 	info['kernelver'] = boxbranding.getKernelVersion()
 	info['dvbapitype'] = about.getDVBAPI()
