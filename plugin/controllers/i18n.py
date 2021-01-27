@@ -180,6 +180,7 @@ tstrings = {
 	'javalib': _("Javascript Libraries"),
 	'just_play': _("Just play"),
 	'kernel_version': _("Kernel"),
+	'modulelayout': _("Kernel module layout"),
 	'lcd': _("LCD"),
 	'license': _("LICENSE"),
 	'loading': _("loading"),

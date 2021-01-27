@@ -265,6 +265,10 @@ def getInfo(session=None, need_fullinfo=False):
 	info['enigmarev'] = getE2Rev()
 	info['driverdate'] = about.getDriverInstalledDate()
 	info['kernelver'] = boxbranding.getKernelVersion()
+
+	modulelayoutcommand = os.popen('find /lib/modules/ -type f -name "openvision.ko" -exec modprobe --dump-modversions {} \; | grep "module_layout" | cut -c-11').read().strip()
+
+	info['modulelayout'] = modulelayoutcommand
 	info['dvbapitype'] = about.getDVBAPI()
 	info['gstreamerversion'] = about.getGStreamerVersionString(cpu)
 	info['ffmpegversion'] = about.getFFmpegVersionString()
