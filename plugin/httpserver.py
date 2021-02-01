@@ -149,6 +149,9 @@ def HttpdStart(session):
 	if config.OpenWebif.enabled.value is True:
 		global listener, site, sslsite
 		port = config.OpenWebif.port.value
+		if listener != None and len(listener) > 0:
+			print("[OpenWebif] httpserver already started")
+			return
 
 		temproot = buildRootTree(session)
 		root = AuthResource(session, temproot)
