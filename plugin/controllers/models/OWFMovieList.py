@@ -99,7 +99,7 @@ class MovieList():
 			ref.flags = eServiceReference.flagDirectory
 			self.list.append((ref, None, 0, -1))
 			numberOfDirs += 1
-		while 1:
+		while True:
 			serviceref = reflist.getNext()
 			if not serviceref.valid():
 				break
