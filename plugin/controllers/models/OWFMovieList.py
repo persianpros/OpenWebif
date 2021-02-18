@@ -123,7 +123,7 @@ class MovieList():
 
 			if this_tags == ['']:
 				# No tags? Auto tag!
-				this_tags = name.replace(',',' ').replace('.',' ').replace('_',' ').replace(':',' ').split()
+				this_tags = name.replace(',', ' ').replace('.', ' ').replace('_', ' ').replace(':', ' ').split()
 			else:
 				realtags.update(this_tags)
 			for tag in this_tags:
