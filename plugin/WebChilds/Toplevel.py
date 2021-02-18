@@ -34,12 +34,12 @@ from __future__ import print_function
 #	for file in listdir(dir):
 #		module_name, ext = splitext(file) # Handles no-extension files, etc.
 #
-#		if ext == '.pyo' and module_name != "__init__":				
+#		if ext == '.pyo' and module_name != "__init__":
 #			try:
 #				exec "import " + module_name
 #				print('[importExternalModules] Imported external module: %s' % (module_name))
-#		
-#			except ImportError, e:				
+#
+#			except ImportError, e:
 #				print('[importExternalModules] Could not import external module: %s' % (module_name))
 #				print('[importExternalModules] Exception Caught\n%s' %e)
 #

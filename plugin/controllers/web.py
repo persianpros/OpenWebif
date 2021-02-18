@@ -1067,7 +1067,7 @@ class WebController(BaseController):
 		autoadjust = -1
 		if _autoadjust != None:
 			autoadjust = _autoadjust == "1"
-		
+
 		# TODO: merge function addTimer+editTimer+addTimerByEventId in timers.py
 		if mode == 1:
 			return addTimerByEventId(
@@ -1092,7 +1092,7 @@ class WebController(BaseController):
 					"result": False,
 					"message": "The parameter 'beginOld' must be a number"
 				}
-	
+
 			try:
 				endOld = int(request.args[b"endOld"][0])
 			except Exception:  # noqa: E722
@@ -1162,7 +1162,7 @@ class WebController(BaseController):
 		res = self.testMandatoryArguments(request, ["sRef", "begin", "end", "name"])
 		if res:
 			return res
-		
+
 		return self._AddEditTimer(request, 0)
 
 	def P_timeraddbyeventid(self, request):
@@ -1450,7 +1450,7 @@ class WebController(BaseController):
 			except ValueError:
 				pass
 		return getBouquetEpg(getUrlArg(request, "bRef"), begintime, endtime, self.isJson)
-	
+
 	def P_epgxmltv(self, request):
 		"""
 		Request handler for the `epgxmltv` endpoint.
