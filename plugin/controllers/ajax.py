@@ -42,10 +42,12 @@ from boxbranding import getMachineBuild
 
 type = getBoxType()
 
+
 class AjaxController(BaseController):
 	"""
 	Ajax Web Controller
 	"""
+
 	def __init__(self, session, path=""):
 		BaseController.__init__(self, path=path, session=session)
 
@@ -123,7 +125,6 @@ class AjaxController(BaseController):
 		else:
 			info["boximage"] = "unknown.png"
 		return info
-
 
 	def P_epgpop(self, request):
 		events = []

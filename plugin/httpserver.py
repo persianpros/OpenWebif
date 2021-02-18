@@ -396,6 +396,7 @@ class AuthResource(resource.Resource):
 			return crypt(passwd, cpass) == cpass
 		return False
 
+
 class StopServer:
 	"""
 	Helper class to stop running web servers; we use a class here to reduce use
@@ -434,6 +435,8 @@ class StopServer:
 #
 # create a self signed SSL certificate if necessary
 #
+
+
 def installCertificates(session):
 	certGenerator = SSLCertificateGenerator()
 	try:
@@ -445,6 +448,8 @@ def installCertificates(session):
 		# Inform the user
 		session.open(MessageBox, "Cannot install generated SSL-Certifactes for https access\nHttps access is disabled!", MessageBox.TYPE_ERROR)
 # BJ
+
+
 def BJregisterService(protocol, port):
 	try:
 		from Plugins.Extensions.Bonjour.Bonjour import bonjour

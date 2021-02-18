@@ -56,6 +56,7 @@ from __future__ import print_function
 
 loaded_plugins = []
 
+
 def addExternalChild(plugin_args):
 	if len(plugin_args) > 2:
 		# ignore internal extensions

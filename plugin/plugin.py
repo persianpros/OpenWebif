@@ -99,6 +99,7 @@ config.OpenWebif.playiptvdirect = ConfigYesNo(default=True)
 from Plugins.Extensions.OpenWebif import vtiaddon
 vtiaddon.expandConfig()
 
+
 class OpenWebifConfig(Screen, ConfigListScreen):
 	skin = """
 	<screen position="center,center" size="700,340" title="OpenWebif Configuration">

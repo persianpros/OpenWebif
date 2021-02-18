@@ -157,7 +157,6 @@ class EvilEvalTestCase(unittest.TestCase):
 #			"\nc__builtin__\nobject\np2\nNtp3\nRp4\n(dp5\nS'_value'\np6\nS'Und"
 #			" der Haifisch'\np7\nsb.", mockie_messer.pickle())
 
-
 	def testAtticSanitation(self):
 		# D-OH! EPIC FAIL :)
 		self.assertFalse(is_invalid_key(SOME_BAD_KEY))

@@ -394,6 +394,7 @@ class BQEUploadFile(resource.Resource):
 				result = [True, self.FN]
 		return six.ensure_binary(json.dumps({"Result": result}))
 
+
 class BQEImport(resource.Resource):
 	def __init__(self, session):
 		self.session = session
@@ -414,6 +415,7 @@ class BQEImport(resource.Resource):
 				result = [False, 'BouquetEditor plugin not found']
 
 		return six.ensure_binary(json.dumps({"Result": result}))
+
 
 class BQEApiController(BQEWebController):
 	def __init__(self, session, path=""):

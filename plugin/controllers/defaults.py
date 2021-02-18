@@ -29,10 +29,13 @@ STB_LANG = language.getLanguage()
 MOBILEDEVICE = False
 
 #: get transcoding feature
+
+
 def getTranscoding():
 	if getHaveTranscoding() == "True" or getHaveMultiTranscoding() == "True":
 		return True
 	return False
+
 
 def getExtEventInfoProvider():
 	if STB_LANG[0:2] in ['ru', 'uk', 'lv', 'lt', 'et']:
@@ -45,10 +48,12 @@ def getExtEventInfoProvider():
 		defaultValue = 'IMDb'
 	return defaultValue
 
+
 def setMobile(isMobile=False):
 # TODO: do we need this?
 	global MOBILEDEVICE
 	MOBILEDEVICE = isMobile
+
 
 def getViewsPath(file=""):
 	global MOBILEDEVICE
@@ -105,8 +110,11 @@ def getPiconPath():
 	return None
 
 # TODO : test !!
+
+
 def refreshPiconPath():
 	PICON_PATH = getPiconPath()
+
 
 PICON_PATH = getPiconPath()
 

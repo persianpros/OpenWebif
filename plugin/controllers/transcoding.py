@@ -77,7 +77,6 @@ class TranscodingController(resource.Resource):
 			if not len(encoder_features):
 				return '<?xml version="1.0" encoding="UTF-8" ?><e2simplexmlresult><e2state>false</e2state><e2statetext>choosen encoder is not available</e2statetext></e2simplexmlresult>'
 
-
 			for arg in request.args:
 				a = six.ensure_text(arg)
 				if a in encoder_features:
@@ -113,6 +112,7 @@ class TranscodingController(resource.Resource):
 
 
 # check methode for setting parameter
+
 	def setcheck(self, attr, new_value):
 		if hasattr(attr, "limits"):
 			try:
@@ -131,6 +131,7 @@ class TranscodingController(resource.Resource):
 
 
 # build parameter value and limit or choices
+
 	def getparam(self, attr, arg):
 		value = str(attr.value)
 		str_result = "<e2config>\n<e2configname>%s</e2configname>\n" % arg

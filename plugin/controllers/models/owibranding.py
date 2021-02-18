@@ -32,6 +32,7 @@ from Components.SystemInfo import SystemInfo
 model = getBoxType()
 platform = getMachineBuild()
 
+
 def getAllInfo():
 	info = {}
 
@@ -59,11 +60,14 @@ def getAllInfo():
 
 STATIC_INFO_DIC = getAllInfo()
 
+
 def getLcd():
 	return STATIC_INFO_DIC['lcd']
 
+
 def getGrabPip():
 	return STATIC_INFO_DIC['grabpip']
+
 
 class rc_model:
 	def getRcFolder(self):

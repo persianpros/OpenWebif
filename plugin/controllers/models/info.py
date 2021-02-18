@@ -52,7 +52,9 @@ from Plugins.Extensions.OpenWebif.controllers.models.owibranding import getLcd, 
 def getEnigmaVersionString():
 	return about.getEnigmaVersionString()
 
+
 STATICBOXINFO = None
+
 
 def getIPMethod(iface):
 	# iNetwork.getAdapterAttribute is crap and not portable
@@ -592,6 +594,7 @@ def getOrbitalText(cur_info):
 		return tunerType
 	return ''
 
+
 def getOrb(pos):
 	direction = _("E")
 	if pos > 1800:
@@ -661,6 +664,7 @@ def getStreamEventName(ref):
 		if event:
 			return event.getEventName()
 	return ""
+
 
 def getStatusInfo(self):
 	# Get Current Volume and Mute Status
@@ -779,8 +783,10 @@ def GetWithAlternative(service, onlyFirst=True):
 	else:
 		return None
 
+
 def getPipStatus():
 	return int(getInfo()['grabpip'] and hasattr(InfoBar.instance, 'session') and InfoBar.instance.session.pipshown)
+
 
 def testPipStatus(self):
 	pipinfo = {
