@@ -2329,7 +2329,7 @@ class WebController(BaseController):
 			pp = pp.replace("/picon/", path)
 		if json == 'true':
 			if pp:
-				return {"result": True, "path" : pp, "link" : link}
+				return {"result": True, "path": pp, "link": link}
 			else:
 				return {"result": False}
 		else:
