@@ -187,7 +187,7 @@ class MovieList():
 
 		# reverse the dictionary to see which unique movie each tag now references
 		rtags = {}
-		for tag, movies in tags.items():
+		for tag, movies in list(tags.items()):
 			if (len(movies) > 1) or (tag in realtags):
 				movies = tuple(movies) # a tuple can be hashed, but a list not
 				item = rtags.get(movies, [])
@@ -195,7 +195,7 @@ class MovieList():
 					rtags[movies] = item
 				item.append(tag)
 		self.tags = {}
-		for movies, tags in rtags.items():
+		for movies, tags in list(rtags.items()):
 			movie = movies[0]
 			# format the tag lists so that they are in 'original' order
 			tags.sort(key=movie.find)
