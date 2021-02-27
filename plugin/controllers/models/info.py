@@ -272,7 +272,7 @@ def getInfo(session=None, need_fullinfo=False):
 
 	info['modulelayout'] = modulelayoutcommand
 	info['dvbapitype'] = about.getDVBAPI()
-	info['gstreamerversion'] = about.getGStreamerVersionString(cpu)
+	info['gstreamerversion'] = about.getGStreamerVersionString()
 	info['ffmpegversion'] = about.getFFmpegVersionString()
 	info['pythonversion'] = about.getPythonVersionString()
 
