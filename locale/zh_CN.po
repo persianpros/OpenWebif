@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-22 16:07+0330\n"
+"POT-Creation-Date: 2021-02-28 17:16+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: neoatomic <neoatomic@users.noreply.github.com>\n"
 "Language-Team: satfan <satfan@163.com>\n"
@@ -110,7 +110,7 @@ msgstr "添加频道作为替代"
 msgid "Add selection to bouquet"
 msgstr "添加频道到节目分组"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:165
 msgid "Add service name to stream information"
 msgstr "添加频道名称到数据流信息"
 
@@ -123,7 +123,7 @@ msgstr "添加类似（冲突时）"
 msgid "Added %s to alternative service %s."
 msgstr "添加 %s 到替代频道 %s."
 
-#: ../plugin/controllers/i18n.py:575
+#: ../plugin/controllers/i18n.py:576
 msgid "Adjust recording time to real event time"
 msgstr "将录制时间调整为实际事件时间"
 
@@ -149,11 +149,11 @@ msgstr "本软件的所有文件都是开源软件；您可以在遵循GPL V2协
 msgid "All alternative services deleted."
 msgstr "删除所有的替代频道."
 
-#: ../plugin/plugin.py:164
+#: ../plugin/plugin.py:166
 msgid "Allow IPK Upload"
 msgstr "允许IPK上传"
 
-#: ../plugin/controllers/i18n.py:574
+#: ../plugin/controllers/i18n.py:575
 msgid "Allow duplicates"
 msgstr "允许重复"
 
@@ -405,7 +405,7 @@ msgstr "有线"
 msgid "Calendar Week"
 msgstr "本周"
 
-#: ../plugin/controllers/i18n.py:97 ../plugin/plugin.py:120
+#: ../plugin/controllers/i18n.py:97 ../plugin/plugin.py:122
 msgid "Cancel"
 msgstr "取消"
 
@@ -451,7 +451,7 @@ msgstr "设置"
 msgid "Compiled by"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:579
+#: ../plugin/controllers/i18n.py:580
 msgid "Config"
 msgstr ""
 
@@ -495,7 +495,7 @@ msgstr "当前事件"
 msgid "Custom STB name"
 msgstr "自定义名称"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:149
 msgid "Custom box name"
 msgstr "自定义名称"
 
@@ -520,15 +520,15 @@ msgstr ""
 msgid "Date"
 msgstr "日期"
 
-#: ../plugin/controllers/i18n.py:569
+#: ../plugin/controllers/i18n.py:570
 msgid "Date (newest)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:568
+#: ../plugin/controllers/i18n.py:569
 msgid "Date (oldest)"
 msgstr ""
 
-#: ../plugin/plugin.py:166
+#: ../plugin/plugin.py:168
 msgid "Debug - Display Tracebacks in browser"
 msgstr "调试-在浏览器中显示错误信息和回跟踪"
 
@@ -570,7 +570,7 @@ msgstr "删除录制"
 msgid "Delete Timer"
 msgstr "删除定时器"
 
-#: ../plugin/controllers/models/movies.py:448
+#: ../plugin/controllers/models/movies.py:477
 msgid ""
 "Delete failed, because there is no movie trash !\n"
 "Disable movie trash in configuration to delete this item"
@@ -591,7 +591,7 @@ msgstr "描述"
 msgid "Disable Timer"
 msgstr "禁用计时器"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:159
 msgid "Disable remote access for user root"
 msgstr "禁用root用户接入"
 
@@ -625,7 +625,7 @@ msgstr "发行版本"
 msgid "Dolby"
 msgstr "杜比"
 
-#: ../plugin/controllers/i18n.py:576
+#: ../plugin/controllers/i18n.py:577
 msgid "Don't create timer when movie exists in database"
 msgstr ""
 
@@ -681,19 +681,19 @@ msgstr "编辑定时器"
 msgid "Editor"
 msgstr "编辑"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:158
 msgid "Enable Authentication for streaming"
 msgstr "启用串流验证"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:151
 msgid "Enable HTTP Authentication"
 msgstr "启用HTTP认证"
 
-#: ../plugin/plugin.py:150
+#: ../plugin/plugin.py:152
 msgid "Enable HTTPS"
 msgstr "启用 HTTPS"
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:155
 msgid "Enable HTTPS Authentication"
 msgstr "启用HTTPS认证"
 
@@ -701,7 +701,7 @@ msgstr "启用HTTPS认证"
 msgid "Enable Messages"
 msgstr "启用消息"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:163
 msgid "Enable Parental Control"
 msgstr "启用家长控制"
 
@@ -709,7 +709,7 @@ msgstr "启用家长控制"
 msgid "Enable Timer"
 msgstr "启用定时器"
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:162
 msgid "Enable access from VPNs"
 msgstr "启用VPN接入"
 
@@ -838,7 +838,7 @@ msgstr "排除"
 msgid "Execute \"After event\" during timespan"
 msgstr "执行（在事件后的时间跨度内）"
 
-#: ../plugin/controllers/i18n.py:563
+#: ../plugin/controllers/i18n.py:564
 msgid "Export"
 msgstr "导出"
 
@@ -922,9 +922,9 @@ msgstr "隐藏完整的遥控"
 #: ../plugin/controllers/models/info.py:372
 #: ../plugin/controllers/models/info.py:387
 #: ../plugin/controllers/models/info.py:390
-#: ../plugin/controllers/models/movies.py:248
-#: ../plugin/controllers/models/movies.py:367
-#: ../plugin/controllers/models/movies.py:787
+#: ../plugin/controllers/models/movies.py:266
+#: ../plugin/controllers/models/movies.py:396
+#: ../plugin/controllers/models/movies.py:816
 msgid "GB"
 msgstr "GB"
 
@@ -949,11 +949,11 @@ msgstr "创建新的自定义组失败！"
 msgid "Get mutable list for new created bouquet failed!"
 msgstr "创建新的自定义组失败！"
 
-#: ../plugin/plugin.py:148
+#: ../plugin/plugin.py:150
 msgid "HTTP port"
 msgstr "HTTP 端口"
 
-#: ../plugin/plugin.py:152
+#: ../plugin/plugin.py:154
 msgid "HTTPS port"
 msgstr "HTTPS 端口"
 
@@ -1018,7 +1018,7 @@ msgstr ""
 msgid "Image folder"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:564
+#: ../plugin/controllers/i18n.py:565
 msgid "Import"
 msgstr "导入"
 
@@ -1168,9 +1168,9 @@ msgstr "MAC 地址"
 #: ../plugin/controllers/models/info.py:363
 #: ../plugin/controllers/models/info.py:374
 #: ../plugin/controllers/models/info.py:392
-#: ../plugin/controllers/models/movies.py:250
-#: ../plugin/controllers/models/movies.py:369
-#: ../plugin/controllers/models/movies.py:789
+#: ../plugin/controllers/models/movies.py:268
+#: ../plugin/controllers/models/movies.py:398
+#: ../plugin/controllers/models/movies.py:818
 msgid "MB"
 msgstr "MB"
 
@@ -1309,11 +1309,11 @@ msgstr ""
 msgid "Name"
 msgstr "频道名"
 
-#: ../plugin/controllers/i18n.py:566
+#: ../plugin/controllers/i18n.py:567
 msgid "Name (a-z)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:567
+#: ../plugin/controllers/i18n.py:568
 msgid "Name (z-a)"
 msgstr ""
 
@@ -1545,7 +1545,7 @@ msgstr ""
 msgid "Open in new window"
 msgstr "在新窗口中打开"
 
-#: ../plugin/plugin.py:136
+#: ../plugin/plugin.py:138
 msgid "OpenWebInterface Enabled"
 msgstr "启用开放的Web界面"
 
@@ -1553,7 +1553,7 @@ msgstr "启用开放的Web界面"
 msgid "OpenWebif Browser Settings"
 msgstr "Webif浏览器设置"
 
-#: ../plugin/plugin.py:175 ../plugin/plugin.py:243 ../plugin/plugin.py:245
+#: ../plugin/plugin.py:177 ../plugin/plugin.py:245 ../plugin/plugin.py:247
 msgid "OpenWebif Configuration"
 msgstr "网页管理配置"
 
@@ -1561,7 +1561,7 @@ msgstr "网页管理配置"
 msgid "OpenWebif Settings"
 msgstr "OpenWebif设置"
 
-#: ../plugin/plugin.py:122
+#: ../plugin/plugin.py:124
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif 访问: http://您的IP地址:端口"
 
@@ -1620,7 +1620,7 @@ msgstr "播放列表"
 msgid "Playback"
 msgstr "回放"
 
-#: ../plugin/plugin.py:165
+#: ../plugin/plugin.py:167
 msgid "Playback IPTV Streams in browser"
 msgstr "在浏览器中播放IPTV流"
 
@@ -1628,7 +1628,7 @@ msgstr "在浏览器中播放IPTV流"
 msgid "Playlist"
 msgstr "播放列表"
 
-#: ../plugin/controllers/i18n.py:572
+#: ../plugin/controllers/i18n.py:573
 #, fuzzy
 msgid "Playlist format"
 msgstr "播放列表"
@@ -1730,7 +1730,7 @@ msgstr "重命名录制"
 msgid "Repeated"
 msgstr "重复"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:156
 msgid "Require client cert for HTTPS"
 msgstr "HTTPS需要客户端证书"
 
@@ -1809,7 +1809,7 @@ msgid "Saturday"
 msgstr "星期六"
 
 #: ../plugin/controllers/i18n.py:247 ../plugin/controllers/i18n.py:407
-#: ../plugin/controllers/i18n.py:461 ../plugin/plugin.py:121
+#: ../plugin/controllers/i18n.py:461 ../plugin/plugin.py:123
 msgid "Save"
 msgstr "保存"
 
@@ -1947,16 +1947,20 @@ msgstr "显示EPG为"
 msgid "Show Full OpenWebif"
 msgstr "显示完整的OpenWebif"
 
+#: ../plugin/controllers/i18n.py:561
+msgid "Show IPTV channels in selection (eg. Autotimer)"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:217
 #, fuzzy
 msgid "Show STB name in header"
 msgstr "在标题中显示机顶盒名称"
 
-#: ../plugin/plugin.py:138
+#: ../plugin/plugin.py:140
 msgid "Show benchmark in STB information"
 msgstr ""
 
-#: ../plugin/plugin.py:143
+#: ../plugin/plugin.py:145
 msgid "Show box name in header"
 msgstr "在标题中显示机顶盒名称"
 
@@ -1972,11 +1976,11 @@ msgstr "显示完整的遥控"
 msgid "Show in Extensions menu"
 msgstr "在扩展菜单中显示"
 
-#: ../plugin/controllers/i18n.py:562
+#: ../plugin/controllers/i18n.py:563
 msgid "Show picon background"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:561
+#: ../plugin/controllers/i18n.py:562
 #, fuzzy
 msgid "Show picons"
 msgstr "显示详细资料"
@@ -2005,7 +2009,7 @@ msgstr "模拟"
 msgid "Site and sources"
 msgstr "来源站点"
 
-#: ../plugin/controllers/i18n.py:580
+#: ../plugin/controllers/i18n.py:581
 msgid "Skins"
 msgstr ""
 
@@ -2056,7 +2060,7 @@ msgstr "软件开发"
 msgid "Sorry this page is not yet implemented"
 msgstr "对不起，这一页还未完成"
 
-#: ../plugin/controllers/i18n.py:565
+#: ../plugin/controllers/i18n.py:566
 msgid "Sort"
 msgstr ""
 
@@ -2096,12 +2100,12 @@ msgstr ""
 msgid "Stream"
 msgstr "串流服务"
 
-#: ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/i18n.py:579
 #, fuzzy
 msgid "Stream Clients"
 msgstr "串流服务"
 
-#: ../plugin/plugin.py:162
+#: ../plugin/plugin.py:164
 #, fuzzy
 msgid "Streaming port"
 msgstr "串流服务"
@@ -2110,7 +2114,7 @@ msgstr "串流服务"
 msgid "Su"
 msgstr "星期日"
 
-#: ../plugin/controllers/i18n.py:570
+#: ../plugin/controllers/i18n.py:571
 #, fuzzy
 msgid "Subdirectories"
 msgstr "子目录"
@@ -2181,7 +2185,7 @@ msgstr "文本"
 msgid "Th"
 msgstr "星期四"
 
-#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1548
+#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1554
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "参数 “%s” 不能为空"
@@ -2210,7 +2214,7 @@ msgstr "定时器 '%s' 正在录制! 不能禁用!"
 msgid "Theme"
 msgstr "主题"
 
-#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:143
 #, fuzzy
 msgid "Theme mode"
 msgstr "主题"
@@ -2419,16 +2423,16 @@ msgstr "上传文件"
 msgid "Use a custom location"
 msgstr "使用自定义位置"
 
-#: ../plugin/controllers/i18n.py:573
+#: ../plugin/controllers/i18n.py:574
 msgid "Use as PiP if possible"
 msgstr "尽可能用作PiP"
 
-#: ../plugin/controllers/i18n.py:581
+#: ../plugin/controllers/i18n.py:582
 #, fuzzy
 msgid "Use classic interface"
 msgstr "使用新的设计"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:144
 msgid "Use custom Color"
 msgstr "使用自定义颜色"
 
@@ -2437,7 +2441,7 @@ msgstr "使用自定义颜色"
 msgid "Use custom STB name"
 msgstr "使用自定义名称"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:147
 msgid "Use custom box name"
 msgstr "使用自定义名称"
 
@@ -2446,7 +2450,7 @@ msgstr "使用自定义名称"
 msgid "Use modern design"
 msgstr "使用新的设计"
 
-#: ../plugin/controllers/i18n.py:582 ../plugin/plugin.py:139
+#: ../plugin/controllers/i18n.py:583 ../plugin/plugin.py:141
 msgid "Use modern interface"
 msgstr "使用新的设计"
 
@@ -2539,7 +2543,7 @@ msgstr "每周（星期一）"
 msgid "Weekly (Sunday)"
 msgstr "每周（星期日）"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:161
 msgid "Without auth only local access is allowed!"
 msgstr "没有认证只有本地访问是允许的！"
 
@@ -2654,9 +2658,9 @@ msgstr "从标题"
 
 #: ../plugin/controllers/models/info.py:242
 #: ../plugin/controllers/models/info.py:245
-#: ../plugin/controllers/models/movies.py:252
-#: ../plugin/controllers/models/movies.py:371
-#: ../plugin/controllers/models/movies.py:791
+#: ../plugin/controllers/models/movies.py:270
+#: ../plugin/controllers/models/movies.py:400
+#: ../plugin/controllers/models/movies.py:820
 msgid "kB"
 msgstr ""
 
@@ -2714,7 +2718,7 @@ msgstr "录制"
 msgid "regex match (experimental)"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:442
+#: ../plugin/controllers/models/movies.py:471
 msgid "remove"
 msgstr "去掉"
 
@@ -2777,7 +2781,7 @@ msgstr "开始匹配"
 msgid "transcoded"
 msgstr "转码"
 
-#: ../plugin/controllers/web.py:705
+#: ../plugin/controllers/web.py:711
 #, python-format
 msgid "type %s is not a number"
 msgstr "类型 %s 的不是数字"

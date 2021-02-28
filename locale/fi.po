@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-22 16:07+0330\n"
+"POT-Creation-Date: 2021-02-28 17:16+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Samzam <http://www.opena.tv>\n"
 "Language-Team: \n"
@@ -108,7 +108,7 @@ msgstr "Lisää vaihtoehtoisia kanavia"
 msgid "Add selection to bouquet"
 msgstr "Lisää kanavia suosikkilistaan"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:165
 msgid "Add service name to stream information"
 msgstr "Lisää kanavannimi suoratoistotietoihin"
 
@@ -121,7 +121,7 @@ msgstr "Lisää samanlaisiin ristiriidassa"
 msgid "Added %s to alternative service %s."
 msgstr "Lisätty %s vaihtoehdoksi kanavalle %s."
 
-#: ../plugin/controllers/i18n.py:575
+#: ../plugin/controllers/i18n.py:576
 msgid "Adjust recording time to real event time"
 msgstr ""
 
@@ -146,11 +146,11 @@ msgstr "Kaikki tämän ohjelma tiedostot ovat avointa lähdekoodia; Voit jakaa j
 msgid "All alternative services deleted."
 msgstr "Kaikki vaihtoehtoiset kanavat poistettu."
 
-#: ../plugin/plugin.py:164
+#: ../plugin/plugin.py:166
 msgid "Allow IPK Upload"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:574
+#: ../plugin/controllers/i18n.py:575
 msgid "Allow duplicates"
 msgstr ""
 
@@ -403,7 +403,7 @@ msgstr "Kaapeliverkko"
 msgid "Calendar Week"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:97 ../plugin/plugin.py:120
+#: ../plugin/controllers/i18n.py:97 ../plugin/plugin.py:122
 msgid "Cancel"
 msgstr "Peruuta"
 
@@ -449,7 +449,7 @@ msgstr "Asetukset"
 msgid "Compiled by"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:579
+#: ../plugin/controllers/i18n.py:580
 msgid "Config"
 msgstr ""
 
@@ -493,7 +493,7 @@ msgstr "Nykyinen ohjelma"
 msgid "Custom STB name"
 msgstr "Oma vastaanotinnimi"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:149
 msgid "Custom box name"
 msgstr "Oma vastaanotinnimi"
 
@@ -518,15 +518,15 @@ msgstr ""
 msgid "Date"
 msgstr "Päivämäärä"
 
-#: ../plugin/controllers/i18n.py:569
+#: ../plugin/controllers/i18n.py:570
 msgid "Date (newest)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:568
+#: ../plugin/controllers/i18n.py:569
 msgid "Date (oldest)"
 msgstr ""
 
-#: ../plugin/plugin.py:166
+#: ../plugin/plugin.py:168
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -568,7 +568,7 @@ msgstr "Poista tallennus"
 msgid "Delete Timer"
 msgstr "Poista ajastus"
 
-#: ../plugin/controllers/models/movies.py:448
+#: ../plugin/controllers/models/movies.py:477
 msgid ""
 "Delete failed, because there is no movie trash !\n"
 "Disable movie trash in configuration to delete this item"
@@ -587,7 +587,7 @@ msgstr "Kuvaus"
 msgid "Disable Timer"
 msgstr "Poista ajastus käytöstä"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:159
 msgid "Disable remote access for user root"
 msgstr "Poista pääsy käyttäjän juuritiedostoihin"
 
@@ -621,7 +621,7 @@ msgstr "Jakelu"
 msgid "Dolby"
 msgstr "Dolby"
 
-#: ../plugin/controllers/i18n.py:576
+#: ../plugin/controllers/i18n.py:577
 msgid "Don't create timer when movie exists in database"
 msgstr ""
 
@@ -677,19 +677,19 @@ msgstr "Muokkaa ajastusta"
 msgid "Editor"
 msgstr "Muokkaaja"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:158
 msgid "Enable Authentication for streaming"
 msgstr "Vaadi salasana suoratoistolle"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:151
 msgid "Enable HTTP Authentication"
 msgstr "Vaadi HTTP:llä pääsyyn salasana"
 
-#: ../plugin/plugin.py:150
+#: ../plugin/plugin.py:152
 msgid "Enable HTTPS"
 msgstr "Käytä HTTPS:ää"
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:155
 msgid "Enable HTTPS Authentication"
 msgstr "Vaadi HTTPS:llä pääsyyn salasana"
 
@@ -697,7 +697,7 @@ msgstr "Vaadi HTTPS:llä pääsyyn salasana"
 msgid "Enable Messages"
 msgstr "Salli viestit"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:163
 msgid "Enable Parental Control"
 msgstr "Käytä lapsilukkoa"
 
@@ -705,7 +705,7 @@ msgstr "Käytä lapsilukkoa"
 msgid "Enable Timer"
 msgstr "Ota ajastus käyttöön"
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:162
 msgid "Enable access from VPNs"
 msgstr "Salli pääsy VPN-tunnelista"
 
@@ -834,7 +834,7 @@ msgstr "Hylkää"
 msgid "Execute \"After event\" during timespan"
 msgstr "Toteuta \"ajastuksen jälkeen\" aikajaksolla"
 
-#: ../plugin/controllers/i18n.py:563
+#: ../plugin/controllers/i18n.py:564
 msgid "Export"
 msgstr "Vie"
 
@@ -918,9 +918,9 @@ msgstr "Piilota koko kaukosäädin"
 #: ../plugin/controllers/models/info.py:372
 #: ../plugin/controllers/models/info.py:387
 #: ../plugin/controllers/models/info.py:390
-#: ../plugin/controllers/models/movies.py:248
-#: ../plugin/controllers/models/movies.py:367
-#: ../plugin/controllers/models/movies.py:787
+#: ../plugin/controllers/models/movies.py:266
+#: ../plugin/controllers/models/movies.py:396
+#: ../plugin/controllers/models/movies.py:816
 msgid "GB"
 msgstr "GB"
 
@@ -945,11 +945,11 @@ msgstr "Vaihtoehtoisen kanavan muutos suosikkilistaan epäonnistui!"
 msgid "Get mutable list for new created bouquet failed!"
 msgstr "Listanmuutos uudelle suosikkilistalle epäonnistui!"
 
-#: ../plugin/plugin.py:148
+#: ../plugin/plugin.py:150
 msgid "HTTP port"
 msgstr "HTTP-portti"
 
-#: ../plugin/plugin.py:152
+#: ../plugin/plugin.py:154
 msgid "HTTPS port"
 msgstr "HTTPS-portti"
 
@@ -1014,7 +1014,7 @@ msgstr ""
 msgid "Image folder"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:564
+#: ../plugin/controllers/i18n.py:565
 msgid "Import"
 msgstr "Tuo"
 
@@ -1164,9 +1164,9 @@ msgstr "MAC-osoite"
 #: ../plugin/controllers/models/info.py:363
 #: ../plugin/controllers/models/info.py:374
 #: ../plugin/controllers/models/info.py:392
-#: ../plugin/controllers/models/movies.py:250
-#: ../plugin/controllers/models/movies.py:369
-#: ../plugin/controllers/models/movies.py:789
+#: ../plugin/controllers/models/movies.py:268
+#: ../plugin/controllers/models/movies.py:398
+#: ../plugin/controllers/models/movies.py:818
 msgid "MB"
 msgstr "MB"
 
@@ -1305,11 +1305,11 @@ msgstr "OSCam Webinterface"
 msgid "Name"
 msgstr "Nimi"
 
-#: ../plugin/controllers/i18n.py:566
+#: ../plugin/controllers/i18n.py:567
 msgid "Name (a-z)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:567
+#: ../plugin/controllers/i18n.py:568
 msgid "Name (z-a)"
 msgstr ""
 
@@ -1541,7 +1541,7 @@ msgstr ""
 msgid "Open in new window"
 msgstr "Avaa uuteen ikkunaan"
 
-#: ../plugin/plugin.py:136
+#: ../plugin/plugin.py:138
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWeb-käyttöliittymä sallittu"
 
@@ -1549,7 +1549,7 @@ msgstr "OpenWeb-käyttöliittymä sallittu"
 msgid "OpenWebif Browser Settings"
 msgstr "OpenWebif selaimen asetukset"
 
-#: ../plugin/plugin.py:175 ../plugin/plugin.py:243 ../plugin/plugin.py:245
+#: ../plugin/plugin.py:177 ../plugin/plugin.py:245 ../plugin/plugin.py:247
 msgid "OpenWebif Configuration"
 msgstr "OpenWebif-asetukset"
 
@@ -1557,7 +1557,7 @@ msgstr "OpenWebif-asetukset"
 msgid "OpenWebif Settings"
 msgstr "OpenWebif asetukset"
 
-#: ../plugin/plugin.py:122
+#: ../plugin/plugin.py:124
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif-url: http://ip-osoite:portti"
 
@@ -1616,7 +1616,7 @@ msgstr "Toistolista"
 msgid "Playback"
 msgstr "Toista"
 
-#: ../plugin/plugin.py:165
+#: ../plugin/plugin.py:167
 msgid "Playback IPTV Streams in browser"
 msgstr ""
 
@@ -1624,7 +1624,7 @@ msgstr ""
 msgid "Playlist"
 msgstr "Toistolista"
 
-#: ../plugin/controllers/i18n.py:572
+#: ../plugin/controllers/i18n.py:573
 #, fuzzy
 msgid "Playlist format"
 msgstr "Toistolista"
@@ -1726,7 +1726,7 @@ msgstr "Uudelleennimeä tallennus"
 msgid "Repeated"
 msgstr "Toistetaan"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:156
 msgid "Require client cert for HTTPS"
 msgstr "Vaadi asiakkaalta HTTPS-hyväksyntä"
 
@@ -1806,7 +1806,7 @@ msgid "Saturday"
 msgstr "Lauantai"
 
 #: ../plugin/controllers/i18n.py:247 ../plugin/controllers/i18n.py:407
-#: ../plugin/controllers/i18n.py:461 ../plugin/plugin.py:121
+#: ../plugin/controllers/i18n.py:461 ../plugin/plugin.py:123
 msgid "Save"
 msgstr "Tallenna"
 
@@ -1945,16 +1945,20 @@ msgstr "Näytä ohjelmaopas kanavalle"
 msgid "Show Full OpenWebif"
 msgstr "OpenWebif työpöytäversio"
 
+#: ../plugin/controllers/i18n.py:561
+msgid "Show IPTV channels in selection (eg. Autotimer)"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:217
 #, fuzzy
 msgid "Show STB name in header"
 msgstr "Näytä vastaanottimen nimi otsikossa"
 
-#: ../plugin/plugin.py:138
+#: ../plugin/plugin.py:140
 msgid "Show benchmark in STB information"
 msgstr ""
 
-#: ../plugin/plugin.py:143
+#: ../plugin/plugin.py:145
 msgid "Show box name in header"
 msgstr "Näytä vastaanottimen nimi otsikossa"
 
@@ -1970,11 +1974,11 @@ msgstr "Näytä koko kaukosäädin"
 msgid "Show in Extensions menu"
 msgstr "Näytä laajennusvalikossa"
 
-#: ../plugin/controllers/i18n.py:562
+#: ../plugin/controllers/i18n.py:563
 msgid "Show picon background"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:561
+#: ../plugin/controllers/i18n.py:562
 msgid "Show picons"
 msgstr ""
 
@@ -2003,7 +2007,7 @@ msgstr "Simuloi"
 msgid "Site and sources"
 msgstr "Sivut ja lähteet"
 
-#: ../plugin/controllers/i18n.py:580
+#: ../plugin/controllers/i18n.py:581
 msgid "Skins"
 msgstr ""
 
@@ -2054,7 +2058,7 @@ msgstr "Ohjelmisto"
 msgid "Sorry this page is not yet implemented"
 msgstr "Valitettavasti tämä sivu ei ole vielä saatavilla"
 
-#: ../plugin/controllers/i18n.py:565
+#: ../plugin/controllers/i18n.py:566
 msgid "Sort"
 msgstr ""
 
@@ -2094,12 +2098,12 @@ msgstr ""
 msgid "Stream"
 msgstr "Suoratoisto"
 
-#: ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/i18n.py:579
 #, fuzzy
 msgid "Stream Clients"
 msgstr "Suoratoisto"
 
-#: ../plugin/plugin.py:162
+#: ../plugin/plugin.py:164
 #, fuzzy
 msgid "Streaming port"
 msgstr "Suoratoisto"
@@ -2108,7 +2112,7 @@ msgstr "Suoratoisto"
 msgid "Su"
 msgstr "Su"
 
-#: ../plugin/controllers/i18n.py:570
+#: ../plugin/controllers/i18n.py:571
 msgid "Subdirectories"
 msgstr ""
 
@@ -2178,7 +2182,7 @@ msgstr "Teksti"
 msgid "Th"
 msgstr "To"
 
-#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1548
+#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1554
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Asetus '%s' ei voi olla tyhjä"
@@ -2207,7 +2211,7 @@ msgstr "Ajastusta '%s' tallennetaan! Käytössä!"
 msgid "Theme"
 msgstr "Teema"
 
-#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:143
 #, fuzzy
 msgid "Theme mode"
 msgstr "Teema"
@@ -2417,15 +2421,15 @@ msgstr "Virhe tiedoston latauksessa"
 msgid "Use a custom location"
 msgstr "Käytä omaa tiedostosijaintia"
 
-#: ../plugin/controllers/i18n.py:573
+#: ../plugin/controllers/i18n.py:574
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:581
+#: ../plugin/controllers/i18n.py:582
 msgid "Use classic interface"
 msgstr ""
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:144
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Käytä omaa tiedostosijaintia"
@@ -2435,7 +2439,7 @@ msgstr "Käytä omaa tiedostosijaintia"
 msgid "Use custom STB name"
 msgstr "Käytä omaa vastaanotinnimeä"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:147
 msgid "Use custom box name"
 msgstr "Käytä omaa vastaanotinnimeä"
 
@@ -2443,7 +2447,7 @@ msgstr "Käytä omaa vastaanotinnimeä"
 msgid "Use modern design"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:582 ../plugin/plugin.py:139
+#: ../plugin/controllers/i18n.py:583 ../plugin/plugin.py:141
 msgid "Use modern interface"
 msgstr ""
 
@@ -2536,7 +2540,7 @@ msgstr "Viikottain (maanantai)"
 msgid "Weekly (Sunday)"
 msgstr "Viikottain (sunnuntai)"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:161
 msgid "Without auth only local access is allowed!"
 msgstr "Vain lähiverkko-osoitteet sallittu!"
 
@@ -2650,9 +2654,9 @@ msgstr "nimessä"
 
 #: ../plugin/controllers/models/info.py:242
 #: ../plugin/controllers/models/info.py:245
-#: ../plugin/controllers/models/movies.py:252
-#: ../plugin/controllers/models/movies.py:371
-#: ../plugin/controllers/models/movies.py:791
+#: ../plugin/controllers/models/movies.py:270
+#: ../plugin/controllers/models/movies.py:400
+#: ../plugin/controllers/models/movies.py:820
 msgid "kB"
 msgstr "kB"
 
@@ -2710,7 +2714,7 @@ msgstr "Tallennus"
 msgid "regex match (experimental)"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:442
+#: ../plugin/controllers/models/movies.py:471
 msgid "remove"
 msgstr ""
 
@@ -2773,7 +2777,7 @@ msgstr "hae alku"
 msgid "transcoded"
 msgstr "transkoodaus"
 
-#: ../plugin/controllers/web.py:705
+#: ../plugin/controllers/web.py:711
 #, python-format
 msgid "type %s is not a number"
 msgstr "tyyppi %s ei ole numero"

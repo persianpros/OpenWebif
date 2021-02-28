@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-22 16:07+0330\n"
+"POT-Creation-Date: 2021-02-28 17:16+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: cp-teamhun <https://github.com/cp-teamhun>\n"
 "Language-Team: cp-teamhun\n"
@@ -108,7 +108,7 @@ msgstr "Csatornák hozzáadása alternatívákhoz"
 msgid "Add selection to bouquet"
 msgstr "Kijelölés hozzáadása bouquethez "
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:165
 msgid "Add service name to stream information"
 msgstr "Adja hozzá a szolgáltatás nevét az adatfolyam információihoz"
 
@@ -121,7 +121,7 @@ msgstr "Hasonló hozzáadása ütközés esetén"
 msgid "Added %s to alternative service %s."
 msgstr "A %s hozzáadva az %s alternatív szolgáltatáshoz."
 
-#: ../plugin/controllers/i18n.py:575
+#: ../plugin/controllers/i18n.py:576
 msgid "Adjust recording time to real event time"
 msgstr "A felvétel idejének az esemény valós idejéhez igazítása"
 
@@ -146,11 +146,11 @@ msgstr "A szoftver összes fájlja nyílt forráskódú szoftver; továbbadhatja
 msgid "All alternative services deleted."
 msgstr "Minden alternatív szolgáltatás törölve."
 
-#: ../plugin/plugin.py:164
+#: ../plugin/plugin.py:166
 msgid "Allow IPK Upload"
 msgstr "IPK feltöltés engedélyezése"
 
-#: ../plugin/controllers/i18n.py:574
+#: ../plugin/controllers/i18n.py:575
 msgid "Allow duplicates"
 msgstr "Duplikáció engedélyezése"
 
@@ -401,7 +401,7 @@ msgstr "Kábel"
 msgid "Calendar Week"
 msgstr "Naptári hét"
 
-#: ../plugin/controllers/i18n.py:97 ../plugin/plugin.py:120
+#: ../plugin/controllers/i18n.py:97 ../plugin/plugin.py:122
 msgid "Cancel"
 msgstr "Töröl"
 
@@ -445,7 +445,7 @@ msgstr "Közös beállítások"
 msgid "Compiled by"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:579
+#: ../plugin/controllers/i18n.py:580
 msgid "Config"
 msgstr ""
 
@@ -489,7 +489,7 @@ msgstr "Aktuális esemény"
 msgid "Custom STB name"
 msgstr "Egyéni box név"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:149
 msgid "Custom box name"
 msgstr "Egyéni box név"
 
@@ -514,15 +514,15 @@ msgstr ""
 msgid "Date"
 msgstr "Dátum"
 
-#: ../plugin/controllers/i18n.py:569
+#: ../plugin/controllers/i18n.py:570
 msgid "Date (newest)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:568
+#: ../plugin/controllers/i18n.py:569
 msgid "Date (oldest)"
 msgstr ""
 
-#: ../plugin/plugin.py:166
+#: ../plugin/plugin.py:168
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -563,7 +563,7 @@ msgstr "Felvétel törlése"
 msgid "Delete Timer"
 msgstr "Időzítő törlése"
 
-#: ../plugin/controllers/models/movies.py:448
+#: ../plugin/controllers/models/movies.py:477
 msgid ""
 "Delete failed, because there is no movie trash !\n"
 "Disable movie trash in configuration to delete this item"
@@ -583,7 +583,7 @@ msgstr "Leírás"
 msgid "Disable Timer"
 msgstr "Időzítő letiltása"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:159
 msgid "Disable remote access for user root"
 msgstr "Távoli hozzáférés letiltása a root felhasználó számára"
 
@@ -617,7 +617,7 @@ msgstr "Distro"
 msgid "Dolby"
 msgstr "Dolby"
 
-#: ../plugin/controllers/i18n.py:576
+#: ../plugin/controllers/i18n.py:577
 msgid "Don't create timer when movie exists in database"
 msgstr ""
 
@@ -673,19 +673,19 @@ msgstr "Időzítő szerkesztése"
 msgid "Editor"
 msgstr "Szerkesztő"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:158
 msgid "Enable Authentication for streaming"
 msgstr "Engedélyezze a hitelesítést streaminghez"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:151
 msgid "Enable HTTP Authentication"
 msgstr "HTTP hitelesítés engedélyezése"
 
-#: ../plugin/plugin.py:150
+#: ../plugin/plugin.py:152
 msgid "Enable HTTPS"
 msgstr "HTTPS engedélyezése"
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:155
 msgid "Enable HTTPS Authentication"
 msgstr "HTTPS hitelesítés engedélyezése"
 
@@ -693,7 +693,7 @@ msgstr "HTTPS hitelesítés engedélyezése"
 msgid "Enable Messages"
 msgstr "Üzenetek engedélyezése"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:163
 msgid "Enable Parental Control"
 msgstr "Engedélyezze a szülői felügyeletet"
 
@@ -701,7 +701,7 @@ msgstr "Engedélyezze a szülői felügyeletet"
 msgid "Enable Timer"
 msgstr "Időzítő engedélyezése"
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:162
 msgid "Enable access from VPNs"
 msgstr "A VPN-ekről való hozzáférés engedélyezése"
 
@@ -830,7 +830,7 @@ msgstr "Kizárva"
 msgid "Execute \"After event\" during timespan"
 msgstr "Az \"esemény után\" végrehajtása az időszak alatt"
 
-#: ../plugin/controllers/i18n.py:563
+#: ../plugin/controllers/i18n.py:564
 msgid "Export"
 msgstr "Export"
 
@@ -913,9 +913,9 @@ msgstr "Teljes távvezérlő"
 #: ../plugin/controllers/models/info.py:372
 #: ../plugin/controllers/models/info.py:387
 #: ../plugin/controllers/models/info.py:390
-#: ../plugin/controllers/models/movies.py:248
-#: ../plugin/controllers/models/movies.py:367
-#: ../plugin/controllers/models/movies.py:787
+#: ../plugin/controllers/models/movies.py:266
+#: ../plugin/controllers/models/movies.py:396
+#: ../plugin/controllers/models/movies.py:816
 msgid "GB"
 msgstr "GB"
 
@@ -940,11 +940,11 @@ msgstr "A változás lista létrehozása az új alternatívákhoz nem sikerült!
 msgid "Get mutable list for new created bouquet failed!"
 msgstr "A változás lista létrehozása az új bouquethez nem sikerült!"
 
-#: ../plugin/plugin.py:148
+#: ../plugin/plugin.py:150
 msgid "HTTP port"
 msgstr "HTTP port"
 
-#: ../plugin/plugin.py:152
+#: ../plugin/plugin.py:154
 msgid "HTTPS port"
 msgstr "HTTPS port"
 
@@ -1009,7 +1009,7 @@ msgstr ""
 msgid "Image folder"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:564
+#: ../plugin/controllers/i18n.py:565
 msgid "Import"
 msgstr "Importálás"
 
@@ -1156,9 +1156,9 @@ msgstr "MAC cím"
 #: ../plugin/controllers/models/info.py:363
 #: ../plugin/controllers/models/info.py:374
 #: ../plugin/controllers/models/info.py:392
-#: ../plugin/controllers/models/movies.py:250
-#: ../plugin/controllers/models/movies.py:369
-#: ../plugin/controllers/models/movies.py:789
+#: ../plugin/controllers/models/movies.py:268
+#: ../plugin/controllers/models/movies.py:398
+#: ../plugin/controllers/models/movies.py:818
 msgid "MB"
 msgstr "MB"
 
@@ -1295,11 +1295,11 @@ msgstr "NCam Webinterface"
 msgid "Name"
 msgstr "Név"
 
-#: ../plugin/controllers/i18n.py:566
+#: ../plugin/controllers/i18n.py:567
 msgid "Name (a-z)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:567
+#: ../plugin/controllers/i18n.py:568
 msgid "Name (z-a)"
 msgstr ""
 
@@ -1530,7 +1530,7 @@ msgstr ""
 msgid "Open in new window"
 msgstr "Megnyitás új ablakban"
 
-#: ../plugin/plugin.py:136
+#: ../plugin/plugin.py:138
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWebInterface engedélyezve"
 
@@ -1538,7 +1538,7 @@ msgstr "OpenWebInterface engedélyezve"
 msgid "OpenWebif Browser Settings"
 msgstr "OpenWebif Böngésző beállítások"
 
-#: ../plugin/plugin.py:175 ../plugin/plugin.py:243 ../plugin/plugin.py:245
+#: ../plugin/plugin.py:177 ../plugin/plugin.py:245 ../plugin/plugin.py:247
 msgid "OpenWebif Configuration"
 msgstr "OpenWebif konfiguráció"
 
@@ -1546,7 +1546,7 @@ msgstr "OpenWebif konfiguráció"
 msgid "OpenWebif Settings"
 msgstr "OpenWebif beállítások"
 
-#: ../plugin/plugin.py:122
+#: ../plugin/plugin.py:124
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif url: http://yourip:port"
 
@@ -1605,7 +1605,7 @@ msgstr "Lejátszási lista formátum"
 msgid "Playback"
 msgstr "Visszajátszás"
 
-#: ../plugin/plugin.py:165
+#: ../plugin/plugin.py:167
 msgid "Playback IPTV Streams in browser"
 msgstr ""
 
@@ -1613,7 +1613,7 @@ msgstr ""
 msgid "Playlist"
 msgstr "Lejátszási lista"
 
-#: ../plugin/controllers/i18n.py:572
+#: ../plugin/controllers/i18n.py:573
 msgid "Playlist format"
 msgstr "Lejátszási lista formátum"
 
@@ -1714,7 +1714,7 @@ msgstr "A felvétel átnevezése"
 msgid "Repeated"
 msgstr "Megismételt"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:156
 msgid "Require client cert for HTTPS"
 msgstr "A kliens tanúsítvány megkövetelése HTTPS protokollhoz"
 
@@ -1794,7 +1794,7 @@ msgid "Saturday"
 msgstr "Szombat"
 
 #: ../plugin/controllers/i18n.py:247 ../plugin/controllers/i18n.py:407
-#: ../plugin/controllers/i18n.py:461 ../plugin/plugin.py:121
+#: ../plugin/controllers/i18n.py:461 ../plugin/plugin.py:123
 msgid "Save"
 msgstr "Mentés"
 
@@ -1932,16 +1932,20 @@ msgstr "EPG mutatása ehhez"
 msgid "Show Full OpenWebif"
 msgstr "Teljes OpenWebif megjelenítése"
 
+#: ../plugin/controllers/i18n.py:561
+msgid "Show IPTV channels in selection (eg. Autotimer)"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:217
 #, fuzzy
 msgid "Show STB name in header"
 msgstr "A box nevének mutatása a fejlécben"
 
-#: ../plugin/plugin.py:138
+#: ../plugin/plugin.py:140
 msgid "Show benchmark in STB information"
 msgstr ""
 
-#: ../plugin/plugin.py:143
+#: ../plugin/plugin.py:145
 msgid "Show box name in header"
 msgstr "A box nevének mutatása a fejlécben"
 
@@ -1957,11 +1961,11 @@ msgstr "Teljes távirányító megjelenítése"
 msgid "Show in Extensions menu"
 msgstr "Megjelenítés a Bővítmények menüben"
 
-#: ../plugin/controllers/i18n.py:562
+#: ../plugin/controllers/i18n.py:563
 msgid "Show picon background"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:561
+#: ../plugin/controllers/i18n.py:562
 #, fuzzy
 msgid "Show picons"
 msgstr "Részletek mutatása"
@@ -1990,7 +1994,7 @@ msgstr "Szimulálás"
 msgid "Site and sources"
 msgstr "Webhely és források"
 
-#: ../plugin/controllers/i18n.py:580
+#: ../plugin/controllers/i18n.py:581
 msgid "Skins"
 msgstr ""
 
@@ -2041,7 +2045,7 @@ msgstr "Szoftver"
 msgid "Sorry this page is not yet implemented"
 msgstr "Sajnos ez az oldal még nem működik"
 
-#: ../plugin/controllers/i18n.py:565
+#: ../plugin/controllers/i18n.py:566
 msgid "Sort"
 msgstr ""
 
@@ -2081,11 +2085,11 @@ msgstr "GÉPELÉS KEZDÉSE"
 msgid "Stream"
 msgstr "Stream"
 
-#: ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/i18n.py:579
 msgid "Stream Clients"
 msgstr "Streamelő kliensek"
 
-#: ../plugin/plugin.py:162
+#: ../plugin/plugin.py:164
 #, fuzzy
 msgid "Streaming port"
 msgstr "Streamelő kliensek"
@@ -2094,7 +2098,7 @@ msgstr "Streamelő kliensek"
 msgid "Su"
 msgstr "Vasárnap"
 
-#: ../plugin/controllers/i18n.py:570
+#: ../plugin/controllers/i18n.py:571
 msgid "Subdirectories"
 msgstr ""
 
@@ -2164,7 +2168,7 @@ msgstr "Szöveg"
 msgid "Th"
 msgstr "Csütörtök"
 
-#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1548
+#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1554
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "A paraméter '%s' nem lehet üres"
@@ -2193,7 +2197,7 @@ msgstr "Az '%s' időzítő éppen felvételt készít! Nem lehet tiltani!"
 msgid "Theme"
 msgstr "Téma"
 
-#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:143
 #, fuzzy
 msgid "Theme mode"
 msgstr "Téma"
@@ -2402,16 +2406,16 @@ msgstr "Feltöltött fájlok"
 msgid "Use a custom location"
 msgstr "Használjon egyedi helyet"
 
-#: ../plugin/controllers/i18n.py:573
+#: ../plugin/controllers/i18n.py:574
 msgid "Use as PiP if possible"
 msgstr "Használat PiP módban (ha lehetséges)"
 
-#: ../plugin/controllers/i18n.py:581
+#: ../plugin/controllers/i18n.py:582
 #, fuzzy
 msgid "Use classic interface"
 msgstr "Az új kinézet használata"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:144
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Használjon egyedi helyet"
@@ -2421,7 +2425,7 @@ msgstr "Használjon egyedi helyet"
 msgid "Use custom STB name"
 msgstr "Használjon egyedi box nevet"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:147
 msgid "Use custom box name"
 msgstr "Használjon egyedi box nevet"
 
@@ -2430,7 +2434,7 @@ msgstr "Használjon egyedi box nevet"
 msgid "Use modern design"
 msgstr "Az új kinézet használata"
 
-#: ../plugin/controllers/i18n.py:582 ../plugin/plugin.py:139
+#: ../plugin/controllers/i18n.py:583 ../plugin/plugin.py:141
 msgid "Use modern interface"
 msgstr "Az új kinézet használata"
 
@@ -2522,7 +2526,7 @@ msgstr "Hetente (hétfő)"
 msgid "Weekly (Sunday)"
 msgstr "Hetente (vasárnap)"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:161
 msgid "Without auth only local access is allowed!"
 msgstr "Hitelesítés nélkül csak helyi hozzáférés engedélyezett!"
 
@@ -2636,9 +2640,9 @@ msgstr "a címben"
 
 #: ../plugin/controllers/models/info.py:242
 #: ../plugin/controllers/models/info.py:245
-#: ../plugin/controllers/models/movies.py:252
-#: ../plugin/controllers/models/movies.py:371
-#: ../plugin/controllers/models/movies.py:791
+#: ../plugin/controllers/models/movies.py:270
+#: ../plugin/controllers/models/movies.py:400
+#: ../plugin/controllers/models/movies.py:820
 msgid "kB"
 msgstr "kB"
 
@@ -2695,7 +2699,7 @@ msgstr "felvétel"
 msgid "regex match (experimental)"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:442
+#: ../plugin/controllers/models/movies.py:471
 msgid "remove"
 msgstr "eltávolít"
 
@@ -2758,7 +2762,7 @@ msgstr "start egyezés"
 msgid "transcoded"
 msgstr "átkódolt"
 
-#: ../plugin/controllers/web.py:705
+#: ../plugin/controllers/web.py:711
 #, python-format
 msgid "type %s is not a number"
 msgstr "a %s típus nem számjegy"

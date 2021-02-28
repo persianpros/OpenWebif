@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-22 16:07+0330\n"
+"POT-Creation-Date: 2021-02-28 17:16+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Pr2\n"
 "Language-Team: \n"
@@ -108,7 +108,7 @@ msgstr "Ajouter la/les chaîne(s) comme alternatif"
 msgid "Add selection to bouquet"
 msgstr "Ajouter la/les chaîne(s) au Bouquet"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:165
 msgid "Add service name to stream information"
 msgstr "Ajouter le nom du service dans les informations du stream"
 
@@ -121,7 +121,7 @@ msgstr "Ajouter similaire en cas de conflit"
 msgid "Added %s to alternative service %s."
 msgstr "%s a été ajouté au service alternatif %s."
 
-#: ../plugin/controllers/i18n.py:575
+#: ../plugin/controllers/i18n.py:576
 msgid "Adjust recording time to real event time"
 msgstr "Ajuster l'heure de l'enregistrement avec l'heure réelle de l'événement"
 
@@ -146,11 +146,11 @@ msgstr "Tous les fichiers de ce logiciel sont open source; vous pouvez le redist
 msgid "All alternative services deleted."
 msgstr "Un service alternatif effacé."
 
-#: ../plugin/plugin.py:164
+#: ../plugin/plugin.py:166
 msgid "Allow IPK Upload"
 msgstr "Autoriser le chargement d’IPK"
 
-#: ../plugin/controllers/i18n.py:574
+#: ../plugin/controllers/i18n.py:575
 msgid "Allow duplicates"
 msgstr "Autoriser les doublons"
 
@@ -402,7 +402,7 @@ msgstr "Câble"
 msgid "Calendar Week"
 msgstr "Calendrier de la semaine"
 
-#: ../plugin/controllers/i18n.py:97 ../plugin/plugin.py:120
+#: ../plugin/controllers/i18n.py:97 ../plugin/plugin.py:122
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -446,7 +446,7 @@ msgstr "Paramètres communs"
 msgid "Compiled by"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:579
+#: ../plugin/controllers/i18n.py:580
 msgid "Config"
 msgstr ""
 
@@ -490,7 +490,7 @@ msgstr "Évènement en cours"
 msgid "Custom STB name"
 msgstr "Nom personnalisé"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:149
 msgid "Custom box name"
 msgstr "Nom personnalisé"
 
@@ -515,15 +515,15 @@ msgstr ""
 msgid "Date"
 msgstr "Date"
 
-#: ../plugin/controllers/i18n.py:569
+#: ../plugin/controllers/i18n.py:570
 msgid "Date (newest)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:568
+#: ../plugin/controllers/i18n.py:569
 msgid "Date (oldest)"
 msgstr ""
 
-#: ../plugin/plugin.py:166
+#: ../plugin/plugin.py:168
 msgid "Debug - Display Tracebacks in browser"
 msgstr "Debug - Afficher le Traceback dans le navigateur"
 
@@ -564,7 +564,7 @@ msgstr "Effacer enregistrement"
 msgid "Delete Timer"
 msgstr "Effacer Timer"
 
-#: ../plugin/controllers/models/movies.py:448
+#: ../plugin/controllers/models/movies.py:477
 msgid ""
 "Delete failed, because there is no movie trash !\n"
 "Disable movie trash in configuration to delete this item"
@@ -584,7 +584,7 @@ msgstr "Description"
 msgid "Disable Timer"
 msgstr "Désactiver Timer"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:159
 msgid "Disable remote access for user root"
 msgstr "Désactiver l'accès pour l'utilisateur root"
 
@@ -618,7 +618,7 @@ msgstr "Distri"
 msgid "Dolby"
 msgstr "Dolby"
 
-#: ../plugin/controllers/i18n.py:576
+#: ../plugin/controllers/i18n.py:577
 msgid "Don't create timer when movie exists in database"
 msgstr "Ne pas créer un timer quand le film existe dans la base de donnée"
 
@@ -674,19 +674,19 @@ msgstr "Éditer Timer"
 msgid "Editor"
 msgstr "Editeur"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:158
 msgid "Enable Authentication for streaming"
 msgstr "Activer l'authentification pour le streaming"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:151
 msgid "Enable HTTP Authentication"
 msgstr "Activer l'authentification HTTP"
 
-#: ../plugin/plugin.py:150
+#: ../plugin/plugin.py:152
 msgid "Enable HTTPS"
 msgstr "Activer HTTPS"
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:155
 msgid "Enable HTTPS Authentication"
 msgstr "Activer l'authentification HTTPS"
 
@@ -694,7 +694,7 @@ msgstr "Activer l'authentification HTTPS"
 msgid "Enable Messages"
 msgstr "Activer les messages"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:163
 msgid "Enable Parental Control"
 msgstr "Activer le contrôle parental"
 
@@ -702,7 +702,7 @@ msgstr "Activer le contrôle parental"
 msgid "Enable Timer"
 msgstr "Activer Timer"
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:162
 msgid "Enable access from VPNs"
 msgstr "Activer l'accès depuis les VPNs"
 
@@ -831,7 +831,7 @@ msgstr "Exclure"
 msgid "Execute \"After event\" during timespan"
 msgstr "Éxècuter \"après l'évènement\" pendant le laps de temps"
 
-#: ../plugin/controllers/i18n.py:563
+#: ../plugin/controllers/i18n.py:564
 msgid "Export"
 msgstr "Exporter"
 
@@ -914,9 +914,9 @@ msgstr "Télécommande complète"
 #: ../plugin/controllers/models/info.py:372
 #: ../plugin/controllers/models/info.py:387
 #: ../plugin/controllers/models/info.py:390
-#: ../plugin/controllers/models/movies.py:248
-#: ../plugin/controllers/models/movies.py:367
-#: ../plugin/controllers/models/movies.py:787
+#: ../plugin/controllers/models/movies.py:266
+#: ../plugin/controllers/models/movies.py:396
+#: ../plugin/controllers/models/movies.py:816
 msgid "GB"
 msgstr "Go"
 
@@ -941,11 +941,11 @@ msgstr "Echec de l'obtenion d'une liste mutable pour le nouveau alternatif cré�
 msgid "Get mutable list for new created bouquet failed!"
 msgstr "Echec de l'obtenion d'une liste mutable pour le nouveau bouquet créé!"
 
-#: ../plugin/plugin.py:148
+#: ../plugin/plugin.py:150
 msgid "HTTP port"
 msgstr "Port HTTP"
 
-#: ../plugin/plugin.py:152
+#: ../plugin/plugin.py:154
 msgid "HTTPS port"
 msgstr "Port HTTPS"
 
@@ -1010,7 +1010,7 @@ msgstr ""
 msgid "Image folder"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:564
+#: ../plugin/controllers/i18n.py:565
 msgid "Import"
 msgstr "Importer"
 
@@ -1157,9 +1157,9 @@ msgstr "Adresse MAC"
 #: ../plugin/controllers/models/info.py:363
 #: ../plugin/controllers/models/info.py:374
 #: ../plugin/controllers/models/info.py:392
-#: ../plugin/controllers/models/movies.py:250
-#: ../plugin/controllers/models/movies.py:369
-#: ../plugin/controllers/models/movies.py:789
+#: ../plugin/controllers/models/movies.py:268
+#: ../plugin/controllers/models/movies.py:398
+#: ../plugin/controllers/models/movies.py:818
 msgid "MB"
 msgstr "Mo"
 
@@ -1296,11 +1296,11 @@ msgstr "Interface Web de NCam"
 msgid "Name"
 msgstr "Nom"
 
-#: ../plugin/controllers/i18n.py:566
+#: ../plugin/controllers/i18n.py:567
 msgid "Name (a-z)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:567
+#: ../plugin/controllers/i18n.py:568
 msgid "Name (z-a)"
 msgstr ""
 
@@ -1531,7 +1531,7 @@ msgstr ""
 msgid "Open in new window"
 msgstr "Ouvrir dans une nouvelle fenêtre"
 
-#: ../plugin/plugin.py:136
+#: ../plugin/plugin.py:138
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWebInterface activé"
 
@@ -1539,7 +1539,7 @@ msgstr "OpenWebInterface activé"
 msgid "OpenWebif Browser Settings"
 msgstr "Paramètres du navigateur OpenWebif"
 
-#: ../plugin/plugin.py:175 ../plugin/plugin.py:243 ../plugin/plugin.py:245
+#: ../plugin/plugin.py:177 ../plugin/plugin.py:245 ../plugin/plugin.py:247
 msgid "OpenWebif Configuration"
 msgstr "Configuration OpenWebif"
 
@@ -1547,7 +1547,7 @@ msgstr "Configuration OpenWebif"
 msgid "OpenWebif Settings"
 msgstr "Paramètres OpenWebif"
 
-#: ../plugin/plugin.py:122
+#: ../plugin/plugin.py:124
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif url: http://yourip:port"
 
@@ -1606,7 +1606,7 @@ msgstr "Format de la liste de lecture"
 msgid "Playback"
 msgstr "Lecture"
 
-#: ../plugin/plugin.py:165
+#: ../plugin/plugin.py:167
 msgid "Playback IPTV Streams in browser"
 msgstr ""
 
@@ -1614,7 +1614,7 @@ msgstr ""
 msgid "Playlist"
 msgstr "Liste de lecture"
 
-#: ../plugin/controllers/i18n.py:572
+#: ../plugin/controllers/i18n.py:573
 msgid "Playlist format"
 msgstr "Format de la liste de lecture"
 
@@ -1715,7 +1715,7 @@ msgstr "Renommer l'enregistrement"
 msgid "Repeated"
 msgstr "Répété"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:156
 msgid "Require client cert for HTTPS"
 msgstr "Exiger certificat client pour HTTPS"
 
@@ -1795,7 +1795,7 @@ msgid "Saturday"
 msgstr "Samedi"
 
 #: ../plugin/controllers/i18n.py:247 ../plugin/controllers/i18n.py:407
-#: ../plugin/controllers/i18n.py:461 ../plugin/plugin.py:121
+#: ../plugin/controllers/i18n.py:461 ../plugin/plugin.py:123
 msgid "Save"
 msgstr "Sauvegarder"
 
@@ -1933,16 +1933,20 @@ msgstr "Afficher EPG pour"
 msgid "Show Full OpenWebif"
 msgstr "Afficher l'OpenWebif Complet"
 
+#: ../plugin/controllers/i18n.py:561
+msgid "Show IPTV channels in selection (eg. Autotimer)"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:217
 #, fuzzy
 msgid "Show STB name in header"
 msgstr "Afficher le nom du récepteur dans l'entête"
 
-#: ../plugin/plugin.py:138
+#: ../plugin/plugin.py:140
 msgid "Show benchmark in STB information"
 msgstr ""
 
-#: ../plugin/plugin.py:143
+#: ../plugin/plugin.py:145
 msgid "Show box name in header"
 msgstr "Afficher le nom du récepteur dans l'entête"
 
@@ -1958,11 +1962,11 @@ msgstr "Afficher la télécommande entière"
 msgid "Show in Extensions menu"
 msgstr "Afficher dans le menu des extensions"
 
-#: ../plugin/controllers/i18n.py:562
+#: ../plugin/controllers/i18n.py:563
 msgid "Show picon background"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:561
+#: ../plugin/controllers/i18n.py:562
 #, fuzzy
 msgid "Show picons"
 msgstr "Afficher les détails"
@@ -1991,7 +1995,7 @@ msgstr "Simuler"
 msgid "Site and sources"
 msgstr "Site et sources"
 
-#: ../plugin/controllers/i18n.py:580
+#: ../plugin/controllers/i18n.py:581
 msgid "Skins"
 msgstr ""
 
@@ -2042,7 +2046,7 @@ msgstr "Logiciel"
 msgid "Sorry this page is not yet implemented"
 msgstr "Désolé cette page n'est pas encore implémentée"
 
-#: ../plugin/controllers/i18n.py:565
+#: ../plugin/controllers/i18n.py:566
 msgid "Sort"
 msgstr ""
 
@@ -2082,11 +2086,11 @@ msgstr "COMMENCEZ A TAPER"
 msgid "Stream"
 msgstr "Stream"
 
-#: ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/i18n.py:579
 msgid "Stream Clients"
 msgstr "Clients de stream"
 
-#: ../plugin/plugin.py:162
+#: ../plugin/plugin.py:164
 #, fuzzy
 msgid "Streaming port"
 msgstr "Clients de stream"
@@ -2095,7 +2099,7 @@ msgstr "Clients de stream"
 msgid "Su"
 msgstr "Di"
 
-#: ../plugin/controllers/i18n.py:570
+#: ../plugin/controllers/i18n.py:571
 msgid "Subdirectories"
 msgstr ""
 
@@ -2165,7 +2169,7 @@ msgstr "Texte"
 msgid "Th"
 msgstr "Je"
 
-#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1548
+#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1554
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Le paramètre '%s' ne peut pas être vide"
@@ -2194,7 +2198,7 @@ msgstr "Le timer '%s' en cours d'enregistrement! Pas désactivé!"
 msgid "Theme"
 msgstr "Thème"
 
-#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:143
 #, fuzzy
 msgid "Theme mode"
 msgstr "Thème"
@@ -2403,16 +2407,16 @@ msgstr "Fichiers chargés"
 msgid "Use a custom location"
 msgstr "Utiliser une localisation personnalisée"
 
-#: ../plugin/controllers/i18n.py:573
+#: ../plugin/controllers/i18n.py:574
 msgid "Use as PiP if possible"
 msgstr "Utiliser comme PiP si possible"
 
-#: ../plugin/controllers/i18n.py:581
+#: ../plugin/controllers/i18n.py:582
 #, fuzzy
 msgid "Use classic interface"
 msgstr "Utiliser le nouveau design"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:144
 msgid "Use custom Color"
 msgstr "Utiliser une couleur personnalisée"
 
@@ -2421,7 +2425,7 @@ msgstr "Utiliser une couleur personnalisée"
 msgid "Use custom STB name"
 msgstr "Utiliser un nom personnalisé"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:147
 msgid "Use custom box name"
 msgstr "Utiliser un nom personnalisé"
 
@@ -2430,7 +2434,7 @@ msgstr "Utiliser un nom personnalisé"
 msgid "Use modern design"
 msgstr "Utiliser le nouveau design"
 
-#: ../plugin/controllers/i18n.py:582 ../plugin/plugin.py:139
+#: ../plugin/controllers/i18n.py:583 ../plugin/plugin.py:141
 msgid "Use modern interface"
 msgstr "Utiliser le nouveau design"
 
@@ -2522,7 +2526,7 @@ msgstr "Hebdomadaire (Lundi)"
 msgid "Weekly (Sunday)"
 msgstr "Hebdomadaire (Dimanche)"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:161
 msgid "Without auth only local access is allowed!"
 msgstr "Sans authentification seul l'accès local est autorisé!"
 
@@ -2636,9 +2640,9 @@ msgstr "dans titre"
 
 #: ../plugin/controllers/models/info.py:242
 #: ../plugin/controllers/models/info.py:245
-#: ../plugin/controllers/models/movies.py:252
-#: ../plugin/controllers/models/movies.py:371
-#: ../plugin/controllers/models/movies.py:791
+#: ../plugin/controllers/models/movies.py:270
+#: ../plugin/controllers/models/movies.py:400
+#: ../plugin/controllers/models/movies.py:820
 msgid "kB"
 msgstr "ko"
 
@@ -2695,7 +2699,7 @@ msgstr "enregistrement"
 msgid "regex match (experimental)"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:442
+#: ../plugin/controllers/models/movies.py:471
 msgid "remove"
 msgstr "supprimer"
 
@@ -2758,7 +2762,7 @@ msgstr "le début correspond"
 msgid "transcoded"
 msgstr "transcodé"
 
-#: ../plugin/controllers/web.py:705
+#: ../plugin/controllers/web.py:711
 #, python-format
 msgid "type %s is not a number"
 msgstr "le type %s n'est pas un nombre"

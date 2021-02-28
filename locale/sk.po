@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-22 16:07+0330\n"
+"POT-Creation-Date: 2021-02-28 17:16+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Dominik Paľo <dominik@palo.sk>\n"
 "Language-Team: \n"
@@ -107,7 +107,7 @@ msgstr "Pridať stanicu(e) ako alternatívu"
 msgid "Add selection to bouquet"
 msgstr "Pridať stanicu(e) do prehľadu"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:165
 msgid "Add service name to stream information"
 msgstr "Pridať názov služby do informácie o prúde"
 
@@ -120,7 +120,7 @@ msgstr "Pri konflikte pridať rovnaké"
 msgid "Added %s to alternative service %s."
 msgstr "%s pridaná k alternatívam stanice %s."
 
-#: ../plugin/controllers/i18n.py:575
+#: ../plugin/controllers/i18n.py:576
 msgid "Adjust recording time to real event time"
 msgstr ""
 
@@ -145,11 +145,11 @@ msgstr "Všetky súbory v tomto softvéri sú open source; môžete ho šíriť 
 msgid "All alternative services deleted."
 msgstr "Všetky alternatívne stanice odstránené."
 
-#: ../plugin/plugin.py:164
+#: ../plugin/plugin.py:166
 msgid "Allow IPK Upload"
 msgstr "Povoliť nahratie IPK"
 
-#: ../plugin/controllers/i18n.py:574
+#: ../plugin/controllers/i18n.py:575
 msgid "Allow duplicates"
 msgstr ""
 
@@ -402,7 +402,7 @@ msgstr "Káblové"
 msgid "Calendar Week"
 msgstr "Týždenný kalendár"
 
-#: ../plugin/controllers/i18n.py:97 ../plugin/plugin.py:120
+#: ../plugin/controllers/i18n.py:97 ../plugin/plugin.py:122
 msgid "Cancel"
 msgstr "Zrušiť"
 
@@ -448,7 +448,7 @@ msgstr "Všeobecné nastavenia"
 msgid "Compiled by"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:579
+#: ../plugin/controllers/i18n.py:580
 msgid "Config"
 msgstr ""
 
@@ -492,7 +492,7 @@ msgstr "Aktuálna relácia"
 msgid "Custom STB name"
 msgstr "Vlastný názov prijímača"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:149
 msgid "Custom box name"
 msgstr "Vlastný názov prijímača"
 
@@ -517,15 +517,15 @@ msgstr ""
 msgid "Date"
 msgstr "Dátum"
 
-#: ../plugin/controllers/i18n.py:569
+#: ../plugin/controllers/i18n.py:570
 msgid "Date (newest)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:568
+#: ../plugin/controllers/i18n.py:569
 msgid "Date (oldest)"
 msgstr ""
 
-#: ../plugin/plugin.py:166
+#: ../plugin/plugin.py:168
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -567,7 +567,7 @@ msgstr "Zmazať nahrávku"
 msgid "Delete Timer"
 msgstr "Zmazať časovač"
 
-#: ../plugin/controllers/models/movies.py:448
+#: ../plugin/controllers/models/movies.py:477
 msgid ""
 "Delete failed, because there is no movie trash !\n"
 "Disable movie trash in configuration to delete this item"
@@ -586,7 +586,7 @@ msgstr "Popis"
 msgid "Disable Timer"
 msgstr "Vypnúť časovač"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:159
 msgid "Disable remote access for user root"
 msgstr "Zakázať prístup pre užívateľa root"
 
@@ -620,7 +620,7 @@ msgstr "Distribúcia"
 msgid "Dolby"
 msgstr "Dolby"
 
-#: ../plugin/controllers/i18n.py:576
+#: ../plugin/controllers/i18n.py:577
 msgid "Don't create timer when movie exists in database"
 msgstr ""
 
@@ -676,19 +676,19 @@ msgstr "Upraviť časovač"
 msgid "Editor"
 msgstr "Editor"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:158
 msgid "Enable Authentication for streaming"
 msgstr "Zapnúť overovanie pre streaming"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:151
 msgid "Enable HTTP Authentication"
 msgstr "Vyžadovať prihlásenie pre HTTP"
 
-#: ../plugin/plugin.py:150
+#: ../plugin/plugin.py:152
 msgid "Enable HTTPS"
 msgstr "Povoliť HTTPS"
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:155
 msgid "Enable HTTPS Authentication"
 msgstr "Vyžadovať prihlásenie pre HTTPS"
 
@@ -696,7 +696,7 @@ msgstr "Vyžadovať prihlásenie pre HTTPS"
 msgid "Enable Messages"
 msgstr "Povoliť správy"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:163
 msgid "Enable Parental Control"
 msgstr "Zapnúť rodičovskú kontrolu"
 
@@ -704,7 +704,7 @@ msgstr "Zapnúť rodičovskú kontrolu"
 msgid "Enable Timer"
 msgstr "Zapnúť časovač"
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:162
 msgid "Enable access from VPNs"
 msgstr "Povoliť prístup z VPN"
 
@@ -833,7 +833,7 @@ msgstr "Vylúčiť"
 msgid "Execute \"After event\" during timespan"
 msgstr "Spustiť \"po udalosti\" počas časového rozpätie"
 
-#: ../plugin/controllers/i18n.py:563
+#: ../plugin/controllers/i18n.py:564
 msgid "Export"
 msgstr "Exportovať"
 
@@ -917,9 +917,9 @@ msgstr "Skryť úplné diaľkové"
 #: ../plugin/controllers/models/info.py:372
 #: ../plugin/controllers/models/info.py:387
 #: ../plugin/controllers/models/info.py:390
-#: ../plugin/controllers/models/movies.py:248
-#: ../plugin/controllers/models/movies.py:367
-#: ../plugin/controllers/models/movies.py:787
+#: ../plugin/controllers/models/movies.py:266
+#: ../plugin/controllers/models/movies.py:396
+#: ../plugin/controllers/models/movies.py:816
 msgid "GB"
 msgstr ""
 
@@ -944,11 +944,11 @@ msgstr "Získanie premenlivého zoznamu pre novovytvorenú alternatívu zlyhalo!
 msgid "Get mutable list for new created bouquet failed!"
 msgstr "Získanie premenlivého zoznamu pre novovytvorený prehľad zlyhalo!"
 
-#: ../plugin/plugin.py:148
+#: ../plugin/plugin.py:150
 msgid "HTTP port"
 msgstr "HTTP port"
 
-#: ../plugin/plugin.py:152
+#: ../plugin/plugin.py:154
 msgid "HTTPS port"
 msgstr "HTTPS port"
 
@@ -1013,7 +1013,7 @@ msgstr ""
 msgid "Image folder"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:564
+#: ../plugin/controllers/i18n.py:565
 msgid "Import"
 msgstr "Importovať"
 
@@ -1163,9 +1163,9 @@ msgstr "MAC adresa"
 #: ../plugin/controllers/models/info.py:363
 #: ../plugin/controllers/models/info.py:374
 #: ../plugin/controllers/models/info.py:392
-#: ../plugin/controllers/models/movies.py:250
-#: ../plugin/controllers/models/movies.py:369
-#: ../plugin/controllers/models/movies.py:789
+#: ../plugin/controllers/models/movies.py:268
+#: ../plugin/controllers/models/movies.py:398
+#: ../plugin/controllers/models/movies.py:818
 msgid "MB"
 msgstr ""
 
@@ -1305,11 +1305,11 @@ msgstr "OSCam webrozhranie"
 msgid "Name"
 msgstr "Názov"
 
-#: ../plugin/controllers/i18n.py:566
+#: ../plugin/controllers/i18n.py:567
 msgid "Name (a-z)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:567
+#: ../plugin/controllers/i18n.py:568
 msgid "Name (z-a)"
 msgstr ""
 
@@ -1541,7 +1541,7 @@ msgstr ""
 msgid "Open in new window"
 msgstr "Otvoriť v novom okne"
 
-#: ../plugin/plugin.py:136
+#: ../plugin/plugin.py:138
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWebInterface zapnuté"
 
@@ -1549,7 +1549,7 @@ msgstr "OpenWebInterface zapnuté"
 msgid "OpenWebif Browser Settings"
 msgstr "Nastavenia prehliadača OpenWebif"
 
-#: ../plugin/plugin.py:175 ../plugin/plugin.py:243 ../plugin/plugin.py:245
+#: ../plugin/plugin.py:177 ../plugin/plugin.py:245 ../plugin/plugin.py:247
 msgid "OpenWebif Configuration"
 msgstr "Nastavenie OpenWebif"
 
@@ -1557,7 +1557,7 @@ msgstr "Nastavenie OpenWebif"
 msgid "OpenWebif Settings"
 msgstr "Nastavenia OpenWebif"
 
-#: ../plugin/plugin.py:122
+#: ../plugin/plugin.py:124
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif adresa: http://vašaIP:port"
 
@@ -1616,7 +1616,7 @@ msgstr "Zoznam prehrávania"
 msgid "Playback"
 msgstr "Prehrávanie"
 
-#: ../plugin/plugin.py:165
+#: ../plugin/plugin.py:167
 msgid "Playback IPTV Streams in browser"
 msgstr ""
 
@@ -1624,7 +1624,7 @@ msgstr ""
 msgid "Playlist"
 msgstr "Zoznam prehrávania"
 
-#: ../plugin/controllers/i18n.py:572
+#: ../plugin/controllers/i18n.py:573
 #, fuzzy
 msgid "Playlist format"
 msgstr "Zoznam prehrávania"
@@ -1726,7 +1726,7 @@ msgstr "Premenovať nahrávku"
 msgid "Repeated"
 msgstr "Opakované"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:156
 msgid "Require client cert for HTTPS"
 msgstr "Vyžadovať certifikát klienta pre HTTPS"
 
@@ -1805,7 +1805,7 @@ msgid "Saturday"
 msgstr "Sobota"
 
 #: ../plugin/controllers/i18n.py:247 ../plugin/controllers/i18n.py:407
-#: ../plugin/controllers/i18n.py:461 ../plugin/plugin.py:121
+#: ../plugin/controllers/i18n.py:461 ../plugin/plugin.py:123
 msgid "Save"
 msgstr "Uložiť"
 
@@ -1944,16 +1944,20 @@ msgstr "Zobraziť EPG pre"
 msgid "Show Full OpenWebif"
 msgstr "Zobraziť úplný OpenWebif"
 
+#: ../plugin/controllers/i18n.py:561
+msgid "Show IPTV channels in selection (eg. Autotimer)"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:217
 #, fuzzy
 msgid "Show STB name in header"
 msgstr "Zobraziť názov prijímača v záhlaví"
 
-#: ../plugin/plugin.py:138
+#: ../plugin/plugin.py:140
 msgid "Show benchmark in STB information"
 msgstr ""
 
-#: ../plugin/plugin.py:143
+#: ../plugin/plugin.py:145
 msgid "Show box name in header"
 msgstr "Zobraziť názov prijímača v záhlaví"
 
@@ -1969,11 +1973,11 @@ msgstr "Zobraziť úplné diaľkové"
 msgid "Show in Extensions menu"
 msgstr "Zobraziť v ponuke rozšírení"
 
-#: ../plugin/controllers/i18n.py:562
+#: ../plugin/controllers/i18n.py:563
 msgid "Show picon background"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:561
+#: ../plugin/controllers/i18n.py:562
 #, fuzzy
 msgid "Show picons"
 msgstr "Zobraziť podrobnosti"
@@ -2003,7 +2007,7 @@ msgstr "Simulovať"
 msgid "Site and sources"
 msgstr "Stránky a zdroje"
 
-#: ../plugin/controllers/i18n.py:580
+#: ../plugin/controllers/i18n.py:581
 msgid "Skins"
 msgstr ""
 
@@ -2054,7 +2058,7 @@ msgstr "Softvér"
 msgid "Sorry this page is not yet implemented"
 msgstr "Ospravedlňujeme sa táto stránka ešte nie je implementovaná"
 
-#: ../plugin/controllers/i18n.py:565
+#: ../plugin/controllers/i18n.py:566
 msgid "Sort"
 msgstr ""
 
@@ -2094,12 +2098,12 @@ msgstr "ZAČNITE PÍSAŤ"
 msgid "Stream"
 msgstr "Stream"
 
-#: ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/i18n.py:579
 #, fuzzy
 msgid "Stream Clients"
 msgstr "Stream"
 
-#: ../plugin/plugin.py:162
+#: ../plugin/plugin.py:164
 #, fuzzy
 msgid "Streaming port"
 msgstr "Stream"
@@ -2108,7 +2112,7 @@ msgstr "Stream"
 msgid "Su"
 msgstr "Ne"
 
-#: ../plugin/controllers/i18n.py:570
+#: ../plugin/controllers/i18n.py:571
 msgid "Subdirectories"
 msgstr ""
 
@@ -2178,7 +2182,7 @@ msgstr "Text"
 msgid "Th"
 msgstr "Št"
 
-#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1548
+#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1554
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Parameter '%s' nemôže byť prázdny"
@@ -2207,7 +2211,7 @@ msgstr "Časovač '%s' zaznamenaný! Nezakázaný!"
 msgid "Theme"
 msgstr "Vzhľad"
 
-#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:143
 #, fuzzy
 msgid "Theme mode"
 msgstr "Vzhľad"
@@ -2417,16 +2421,16 @@ msgstr "Chyba pri odovzdávaní súboru"
 msgid "Use a custom location"
 msgstr "Použiť vlastné umiestnenie"
 
-#: ../plugin/controllers/i18n.py:573
+#: ../plugin/controllers/i18n.py:574
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:581
+#: ../plugin/controllers/i18n.py:582
 #, fuzzy
 msgid "Use classic interface"
 msgstr "Používať nový dizajn"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:144
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Použiť vlastné umiestnenie"
@@ -2436,7 +2440,7 @@ msgstr "Použiť vlastné umiestnenie"
 msgid "Use custom STB name"
 msgstr "Použiť vlastný názov prijímača"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:147
 msgid "Use custom box name"
 msgstr "Použiť vlastný názov prijímača"
 
@@ -2445,7 +2449,7 @@ msgstr "Použiť vlastný názov prijímača"
 msgid "Use modern design"
 msgstr "Používať nový dizajn"
 
-#: ../plugin/controllers/i18n.py:582 ../plugin/plugin.py:139
+#: ../plugin/controllers/i18n.py:583 ../plugin/plugin.py:141
 msgid "Use modern interface"
 msgstr "Používať nový dizajn"
 
@@ -2538,7 +2542,7 @@ msgstr "Týždenne (pondelok)"
 msgid "Weekly (Sunday)"
 msgstr "Týždenne (nedeľa)"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:161
 msgid "Without auth only local access is allowed!"
 msgstr "Bez autorizácie je povolený iba lokálny prístup!"
 
@@ -2652,9 +2656,9 @@ msgstr "v názve"
 
 #: ../plugin/controllers/models/info.py:242
 #: ../plugin/controllers/models/info.py:245
-#: ../plugin/controllers/models/movies.py:252
-#: ../plugin/controllers/models/movies.py:371
-#: ../plugin/controllers/models/movies.py:791
+#: ../plugin/controllers/models/movies.py:270
+#: ../plugin/controllers/models/movies.py:400
+#: ../plugin/controllers/models/movies.py:820
 msgid "kB"
 msgstr ""
 
@@ -2712,7 +2716,7 @@ msgstr "nahrať"
 msgid "regex match (experimental)"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:442
+#: ../plugin/controllers/models/movies.py:471
 msgid "remove"
 msgstr "odstrániť"
 
@@ -2775,7 +2779,7 @@ msgstr "zhoda v čase začiatku"
 msgid "transcoded"
 msgstr "transkódované"
 
-#: ../plugin/controllers/web.py:705
+#: ../plugin/controllers/web.py:711
 #, python-format
 msgid "type %s is not a number"
 msgstr "typ %s nie je číslo"
