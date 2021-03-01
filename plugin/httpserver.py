@@ -142,7 +142,7 @@ def buildRootTree(session):
 def HttpdStart(session):
 	"""
 	Helper class to start web server
-	
+
 	Args:
 		session: (?) session object
 	"""

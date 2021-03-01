@@ -1460,15 +1460,15 @@ class WebController(BaseController):
 	def P_epgxmltv(self, request):
 		"""
 		Request handler for the `epgxmltv` endpoint.
-	
+
 		.. note::
-	
+
 			Not available in *Enigma2 WebInterface API*.
-	
+
 		Args:
 			request (twisted.web.server.Request): HTTP request object
 			bRef: mandatory, method uses epgmulti
-			lang: mandatory, needed for xmltv and Enigma2 has no parameter for epg language			
+			lang: mandatory, needed for xmltv and Enigma2 has no parameter for epg language
 		Returns:
 			HTTP response with headers
 		"""
