@@ -24,7 +24,10 @@ from __future__ import print_function
 
 from enigma import eConsoleAppContainer
 from boxbranding import getImageArch
-if getImageArch() == "sh4":
+
+architecture = getImageArch()
+
+if architecture == "sh4":
 	from twisted.web import static, resource, http, server
 	import os
 else:
@@ -37,7 +40,7 @@ else:
 GRAB_PATH = '/usr/bin/grab'
 
 
-if getImageArch() == "sh4":
+if architecture == "sh4":
 	class grabScreenshot(resource.Resource):
 		def __init__(self, session, path=""):
 			resource.Resource.__init__(self)
