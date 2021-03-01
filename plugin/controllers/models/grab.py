@@ -201,7 +201,6 @@ else:
 			# Break the chain of ownership
 			del self.request
 
-
 	class grabScreenshot(resource.Resource):
 		def __init__(self, session, path=None):
 			resource.Resource.__init__(self)
