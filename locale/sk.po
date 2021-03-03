@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-28 17:16+0330\n"
+"POT-Creation-Date: 2021-03-04 00:08+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Dominik Paľo <dominik@palo.sk>\n"
 "Language-Team: \n"
@@ -16,6 +16,22 @@ msgstr ""
 #: ../plugin/controllers/models/movies.py:81
 #, python-format
 msgid "%02d:%02d"
+msgstr ""
+
+#: ../plugin/controllers/models/services.py:235
+#: ../plugin/controllers/models/services.py:773
+#: ../plugin/controllers/models/services.py:1004
+#: ../plugin/controllers/models/services.py:1050
+msgid "%d.%m.%Y"
+msgstr ""
+
+#: ../plugin/controllers/models/timers.py:175
+#: ../plugin/controllers/models/timers.py:176
+#: ../plugin/controllers/models/timers.py:234
+#: ../plugin/controllers/models/timers.py:235
+#: ../plugin/controllers/models/timers.py:392
+#: ../plugin/controllers/models/timers.py:393
+msgid "%d.%m.%Y %H:%M"
 msgstr ""
 
 #: ../plugin/controllers/models/movies.py:77
@@ -245,10 +261,6 @@ msgstr "Auto"
 msgid "AutoPoll"
 msgstr "AutoPoll"
 
-#: ../plugin/controllers/base.py:351
-msgid "AutoTimer"
-msgstr "Automatický časovač"
-
 #: ../plugin/controllers/i18n.py:336
 msgid "AutoTimer Edit"
 msgstr "Upraviť autočasovač"
@@ -258,7 +270,7 @@ msgstr "Upraviť autočasovač"
 msgid "AutoTimer Settings"
 msgstr "Nastavenia automatického časovača"
 
-#: ../plugin/controllers/i18n.py:335
+#: ../plugin/controllers/base.py:351 ../plugin/controllers/i18n.py:335
 msgid "AutoTimers"
 msgstr "Zoznam autočasovačov"
 
