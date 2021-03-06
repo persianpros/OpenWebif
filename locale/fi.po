@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-04 00:08+0330\n"
+"POT-Creation-Date: 2021-03-06 15:58+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Samzam <http://www.opena.tv>\n"
 "Language-Team: \n"
@@ -26,12 +26,10 @@ msgstr ""
 msgid "%d.%m.%Y"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:175
-#: ../plugin/controllers/models/timers.py:176
-#: ../plugin/controllers/models/timers.py:234
-#: ../plugin/controllers/models/timers.py:235
-#: ../plugin/controllers/models/timers.py:392
-#: ../plugin/controllers/models/timers.py:393
+#: ../plugin/controllers/models/timers.py:242
+#: ../plugin/controllers/models/timers.py:243
+#: ../plugin/controllers/models/timers.py:400
+#: ../plugin/controllers/models/timers.py:401
 msgid "%d.%m.%Y %H:%M"
 msgstr ""
 
@@ -465,7 +463,7 @@ msgstr ""
 msgid "Config"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:240
+#: ../plugin/controllers/models/timers.py:248
 #, python-format
 msgid "Conflicting Timer(s) detected! %s"
 msgstr "Ajastus ristiriita havaittu! %s"
@@ -478,12 +476,12 @@ msgstr "Avustajat"
 msgid "Control"
 msgstr "Ohjaus"
 
-#: ../plugin/controllers/models/timers.py:271
+#: ../plugin/controllers/models/timers.py:279
 #, python-format
 msgid "Could not add timer '%s'!"
 msgstr "Ei voi lisätä ajastusta '%s'!"
 
-#: ../plugin/controllers/models/timers.py:404
+#: ../plugin/controllers/models/timers.py:412
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Ei löydy ajastusta '%s' annetuilla alku- ja loppuajoilla!"
@@ -677,7 +675,7 @@ msgstr "EPG:n enkoodaaus"
 msgid "EPGRefresh"
 msgstr "EPGRefresh"
 
-#: ../plugin/controllers/models/timers.py:825
+#: ../plugin/controllers/models/timers.py:833
 msgid "ERROR: Cannot set SleepTimer while device is in Standby-Mode"
 msgstr "VIRHE: Uniajastusta ei voi aktivoida valmiustilassa"
 
@@ -789,7 +787,7 @@ msgstr ""
 msgid "Error"
 msgstr "Virhe"
 
-#: ../plugin/controllers/models/timers.py:952
+#: ../plugin/controllers/models/timers.py:960
 msgid "Error parsing vps.xml"
 msgstr "Virhe vps.xml:n käsittelyssä"
 
@@ -829,7 +827,7 @@ msgstr "Virhe: Suosikkilistaa %s ei voi poistaa. Käyttöjärjestelmävirhe."
 msgid "Event not found"
 msgstr "Ohjelmaa ei löydy"
 
-#: ../plugin/controllers/models/timers.py:285
+#: ../plugin/controllers/models/timers.py:293
 msgid "EventId not found"
 msgstr "Ohjelmatunnistetta ei löydy"
 
@@ -1048,7 +1046,7 @@ msgstr "Lisää kuvaus"
 msgid "Include short description"
 msgstr "Lisää kuvaus"
 
-#: ../plugin/controllers/models/timers.py:520
+#: ../plugin/controllers/models/timers.py:528
 msgid "Infinite Instant recording started"
 msgstr "Jatkuva tallennus aloitettu"
 
@@ -1073,7 +1071,7 @@ msgstr "Välitön tallennus"
 msgid "Instant Record"
 msgstr "Välitön tallennus"
 
-#: ../plugin/controllers/models/timers.py:511
+#: ../plugin/controllers/models/timers.py:519
 msgid "Instant record for current Event started"
 msgstr "Nykyisen ohjelman tallennus aloitettu"
 
@@ -1152,7 +1150,7 @@ msgstr ""
 msgid "Link speed"
 msgstr "Verkon nopeus"
 
-#: ../plugin/controllers/models/timers.py:481
+#: ../plugin/controllers/models/timers.py:489
 msgid "List of Timers has been cleaned"
 msgstr "Ajastuslista tyhjennetty"
 
@@ -1240,7 +1238,7 @@ msgstr "Minuutti"
 msgid "Missing mandatory parameter '%s'"
 msgstr "Puuttuva pakollinen asetus '%s'"
 
-#: ../plugin/controllers/models/timers.py:612
+#: ../plugin/controllers/models/timers.py:620
 msgid "Missing requesteter: sRef"
 msgstr "Virheellinen pyyntö: sRef"
 
@@ -1391,7 +1389,7 @@ msgstr "Suosikkilistalla ei ole nimeä!"
 msgid "No current service given!"
 msgstr "Nykyistä kanavaa ei ole annettu!"
 
-#: ../plugin/controllers/models/timers.py:505
+#: ../plugin/controllers/models/timers.py:513
 msgid "No event found! Not recording!"
 msgstr "Ohjelmaa ei löydy! Ei tallennusta!"
 
@@ -1399,8 +1397,8 @@ msgstr "Ohjelmaa ei löydy! Ei tallennusta!"
 msgid "No marker-name given!"
 msgstr "Väliotsikolle ei ole annettu nimeä!"
 
-#: ../plugin/controllers/models/timers.py:428
-#: ../plugin/controllers/models/timers.py:473
+#: ../plugin/controllers/models/timers.py:436
+#: ../plugin/controllers/models/timers.py:481
 msgid "No matching Timer found"
 msgstr "Vastaavaa ajastusta ei löytynyt"
 
@@ -1649,7 +1647,7 @@ msgstr "Pmtpid"
 msgid "Power Control"
 msgstr "Virranhallinta"
 
-#: ../plugin/controllers/models/timers.py:701
+#: ../plugin/controllers/models/timers.py:709
 msgid "PowerTimer feature not available"
 msgstr "Virta-ajastusta ei saatavilla"
 
@@ -2023,32 +2021,32 @@ msgstr "Sivut ja lähteet"
 msgid "Skins"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:785
-#: ../plugin/controllers/models/timers.py:812
-#: ../plugin/controllers/models/timers.py:841
-#: ../plugin/controllers/models/timers.py:923
+#: ../plugin/controllers/models/timers.py:793
+#: ../plugin/controllers/models/timers.py:820
+#: ../plugin/controllers/models/timers.py:849
+#: ../plugin/controllers/models/timers.py:931
 msgid "SleepTimer error"
 msgstr "Uniajastinvirhe"
 
-#: ../plugin/controllers/models/timers.py:830
-#: ../plugin/controllers/models/timers.py:899
-#: ../plugin/controllers/models/timers.py:918
+#: ../plugin/controllers/models/timers.py:838
+#: ../plugin/controllers/models/timers.py:907
+#: ../plugin/controllers/models/timers.py:926
 msgid "Sleeptimer has been disabled"
 msgstr "Uniajastus poistettu"
 
-#: ../plugin/controllers/models/timers.py:780
-#: ../plugin/controllers/models/timers.py:806
+#: ../plugin/controllers/models/timers.py:788
+#: ../plugin/controllers/models/timers.py:814
 msgid "Sleeptimer is disabled"
 msgstr "Uniajastin poistettu"
 
-#: ../plugin/controllers/models/timers.py:780
-#: ../plugin/controllers/models/timers.py:806
+#: ../plugin/controllers/models/timers.py:788
+#: ../plugin/controllers/models/timers.py:814
 msgid "Sleeptimer is enabled"
 msgstr "Uniajastin aktivoitu"
 
-#: ../plugin/controllers/models/timers.py:836
-#: ../plugin/controllers/models/timers.py:899
-#: ../plugin/controllers/models/timers.py:913
+#: ../plugin/controllers/models/timers.py:844
+#: ../plugin/controllers/models/timers.py:907
+#: ../plugin/controllers/models/timers.py:921
 #, python-format
 msgid "Sleeptimer set to %d minutes"
 msgstr "Uniajastus asetettu %d minuuttiin"
@@ -2203,18 +2201,18 @@ msgstr "Asetus '%s' ei voi olla tyhjä"
 msgid "The parameter 'command' must be a number"
 msgstr "Asetus 'komento' pitää olla numero"
 
-#: ../plugin/controllers/models/timers.py:467
+#: ../plugin/controllers/models/timers.py:475
 #, python-format
 msgid "The timer '%s' has been %s successfully"
 msgstr "Ajastuksen '%s' poisto %s onnistui"
 
-#: ../plugin/controllers/models/timers.py:417
-#: ../plugin/controllers/models/timers.py:423
+#: ../plugin/controllers/models/timers.py:425
+#: ../plugin/controllers/models/timers.py:431
 #, python-format
 msgid "The timer '%s' has been deleted successfully"
 msgstr "Ajastuksen '%s' poisto onnistui"
 
-#: ../plugin/controllers/models/timers.py:459
+#: ../plugin/controllers/models/timers.py:467
 #, python-format
 msgid "The timer '%s' now recorded! Not disabled!"
 msgstr "Ajastusta '%s' tallennetaan! Käytössä!"
@@ -2256,27 +2254,27 @@ msgstr "Aikaylitys"
 msgid "Timer"
 msgstr "Ajastus"
 
-#: ../plugin/controllers/models/timers.py:276
+#: ../plugin/controllers/models/timers.py:284
 #, python-format
 msgid "Timer '%s' added"
 msgstr "Ajastus '%s' lisätty"
 
-#: ../plugin/controllers/models/timers.py:453
+#: ../plugin/controllers/models/timers.py:461
 #, python-format
 msgid "Timer '%s' already exists!"
 msgstr "Ajastus '%s' on jo olemassa!"
 
-#: ../plugin/controllers/models/timers.py:379
+#: ../plugin/controllers/models/timers.py:387
 #, python-format
 msgid "Timer '%s' changed"
 msgstr "Ajastus '%s' muutettu"
 
-#: ../plugin/controllers/models/timers.py:447
+#: ../plugin/controllers/models/timers.py:455
 #, python-format
 msgid "Timer '%s' not enabled while Conflict"
 msgstr "Ajastus '%s' ei onnistu ristiriidan takia"
 
-#: ../plugin/controllers/models/timers.py:398
+#: ../plugin/controllers/models/timers.py:406
 #, python-format
 msgid "Timer '%s' not saved while Conflict"
 msgstr "Ajastusta '%s' ei tallennettu ristiriidan takia"
@@ -2289,7 +2287,7 @@ msgstr "Ajastus lisätty"
 msgid "Timer added"
 msgstr "Ajastus lisätty"
 
-#: ../plugin/controllers/models/timers.py:539
+#: ../plugin/controllers/models/timers.py:547
 msgid "Timer conflict detected! Not recording!"
 msgstr "Ajastusristiriita havaittu! Ei tallennusta!"
 
@@ -2297,7 +2295,7 @@ msgstr "Ajastusristiriita havaittu! Ei tallennusta!"
 msgid "Timer type"
 msgstr "Ajastuksen tyyppi"
 
-#: ../plugin/controllers/models/timers.py:489
+#: ../plugin/controllers/models/timers.py:497
 msgid "TimerList has been saved"
 msgstr "Ajastuslista tallennettu"
 
@@ -2391,7 +2389,7 @@ msgstr "Tyyppi"
 msgid "Unknown Volume command %s"
 msgstr "Tuntematon äänenvoimakkuuskomento %s"
 
-#: ../plugin/controllers/models/timers.py:634
+#: ../plugin/controllers/models/timers.py:642
 #, python-format
 msgid "Unknown command: '%s'"
 msgstr "Tuntematon komento: '%s'"
@@ -2467,7 +2465,7 @@ msgstr ""
 msgid "VPS"
 msgstr "VPS"
 
-#: ../plugin/controllers/models/timers.py:957
+#: ../plugin/controllers/models/timers.py:965
 msgid "VPS plugin not found"
 msgstr "VPS pluginia ei löydy"
 

@@ -23,6 +23,7 @@ from __future__ import print_function
 ##########################################################################
 
 from enigma import eConsoleAppContainer
+from ServiceReference import ServiceReference
 from boxbranding import getImageArch
 
 architecture = getImageArch()
@@ -84,7 +85,8 @@ if architecture == "sh4":
 				ref = None
 
 			if ref is not None:
-				self.sref = '_'.join(ref.split(':', 10)[:10])
+				self.sref = ServiceReference(ref).getServiceName()
+				# self.sref = '_'.join(ref.split(':', 10)[:10])
 			else:
 				self.sref = 'screenshot'
 
@@ -174,7 +176,8 @@ else:
 						ref = InfoBar.instance.session.pip.getCurrentService().toString()
 					else:
 						ref = session.nav.getCurrentlyPlayingServiceReference().toString()
-					sref = '_'.join(ref.split(':', 10)[:10])
+					sref = ServiceReference(ref).getServiceName()
+					# sref = '_'.join(ref.split(':', 10)[:10])
 				except:  # noqa: E722
 					sref = 'screenshot'
 			sref = sref + '_' + time.strftime("%Y%m%d%H%M%S", time.localtime(time.time()))
