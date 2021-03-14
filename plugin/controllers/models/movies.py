@@ -49,19 +49,7 @@ except ImportError as e:
 	pass
 
 
-MOVIETAGFILE = "/etc/enigma2/movietags"
-TRASHDIRNAME = "movie_trash"
-
-MOVIE_LIST_SREF_ROOT = '2:0:1:0:0:0:0:0:0:0:'
-MOVIE_LIST_ROOT_FALLBACK = '/media'
-
-#  TODO : optimize move using FileTransferJob if available
-#  TODO : add copy api
-
-cutsParser = struct.Struct('>QI')  # big-endian, 64-bit PTS and 32-bit type
-
-
-def FuzzyTime(t):
+def FuzzyTime2(t):
 	d = localtime(t)
 	n = localtime()
 	dayOfWeek = (_("Mon"), _("Tue"), _("Wed"), _("Thu"), _("Fri"), _("Sat"), _("Sun"))
@@ -74,12 +62,25 @@ def FuzzyTime(t):
 		day = dayOfWeek[d[6]]
 
 	if d[0] == n[0]:
+		# same year
 		date = _("%s %02d.%02d.") % (day, d[2], d[1])
 	else:
 		date = _("%s %02d.%02d.%d") % (day, d[2], d[1], d[0])
 
 	timeres = _("%02d:%02d") % (d[3], d[4])
 	return date + ", " + timeres
+
+
+MOVIETAGFILE = "/etc/enigma2/movietags"
+TRASHDIRNAME = "movie_trash"
+
+MOVIE_LIST_SREF_ROOT = '2:0:1:0:0:0:0:0:0:0:'
+MOVIE_LIST_ROOT_FALLBACK = '/media'
+
+#  TODO : optimize move using FileTransferJob if available
+#  TODO : add copy api
+
+cutsParser = struct.Struct('>QI')  # big-endian, 64-bit PTS and 32-bit type
 
 
 def checkParentalProtection(directory):
@@ -229,7 +230,7 @@ def getMovieList(rargs=None, locations=None):
 				}
 
 				if rtime > 0:
-					movie['begintime'] = FuzzyTime(rtime)
+					movie['begintime'] = FuzzyTime2(rtime)
 
 				try:
 					length_minutes = info.getLength(serviceref)
@@ -360,7 +361,7 @@ def getMovieSearchList(rargs=None, locations=None):
 		}
 
 		if rtime > 0:
-			movie['begintime'] = FuzzyTime(rtime)
+			movie['begintime'] = FuzzyTime2(rtime)
 
 		try:
 			length_minutes = info.getLength(serviceref)
@@ -783,7 +784,7 @@ def getMovieDetails(sRef=None):
 		}
 
 		if rtime > 0:
-			movie['begintime'] = FuzzyTime(rtime)
+			movie['begintime'] = FuzzyTime2(rtime)
 
 		try:
 			length_minutes = info.getLength(serviceref)

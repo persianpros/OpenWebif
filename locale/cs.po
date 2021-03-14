@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-06 15:58+0330\n"
+"POT-Creation-Date: 2021-03-14 17:19+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: ims <ims21@users.sourceforge.net>\n"
 "Language-Team: PLi\n"
@@ -15,7 +15,18 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: ../plugin\n"
 
-#: ../plugin/controllers/models/movies.py:81
+#: ../plugin/controllers/models/timers.py:59
+#, python-format
+msgid "%02d.%02d."
+msgstr ""
+
+#: ../plugin/controllers/models/timers.py:61
+#, python-format
+msgid "%02d.%02d.%d"
+msgstr ""
+
+#: ../plugin/controllers/models/movies.py:70
+#: ../plugin/controllers/models/timers.py:63
 #, python-format
 msgid "%02d:%02d"
 msgstr ""
@@ -27,19 +38,22 @@ msgstr ""
 msgid "%d.%m.%Y"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:242
-#: ../plugin/controllers/models/timers.py:243
-#: ../plugin/controllers/models/timers.py:400
-#: ../plugin/controllers/models/timers.py:401
+#: ../plugin/controllers/models/timers.py:185
+#: ../plugin/controllers/models/timers.py:186
+#: ../plugin/controllers/models/timers.py:274
+#: ../plugin/controllers/models/timers.py:275
+#: ../plugin/controllers/models/timers.py:432
+#: ../plugin/controllers/models/timers.py:433
 msgid "%d.%m.%Y %H:%M"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:77
+#: ../plugin/controllers/models/movies.py:66
+#: ../plugin/controllers/models/timers.py:57
 #, python-format
 msgid "%s %02d.%02d."
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:79
+#: ../plugin/controllers/models/movies.py:68
 #, python-format
 msgid "%s %02d.%02d.%d"
 msgstr ""
@@ -123,7 +137,7 @@ msgstr "Přidat kanál(y) jako alternativu"
 msgid "Add selection to bouquet"
 msgstr "Přidat kanál(y) do přehledu"
 
-#: ../plugin/plugin.py:165
+#: ../plugin/plugin.py:166
 msgid "Add service name to stream information"
 msgstr "Přidat název programu do streamu"
 
@@ -136,7 +150,7 @@ msgstr "Přidat podobné při konfliktu"
 msgid "Added %s to alternative service %s."
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:576
+#: ../plugin/controllers/i18n.py:577
 msgid "Adjust recording time to real event time"
 msgstr ""
 
@@ -161,11 +175,11 @@ msgstr "Všechny soubory tohoto software jsou open source software; můžete je 
 msgid "All alternative services deleted."
 msgstr "Všechny alternativní programy odstraněny."
 
-#: ../plugin/plugin.py:166
+#: ../plugin/plugin.py:167
 msgid "Allow IPK Upload"
 msgstr "Umožnit nahrát IPK"
 
-#: ../plugin/controllers/i18n.py:575
+#: ../plugin/controllers/i18n.py:576
 msgid "Allow duplicates"
 msgstr ""
 
@@ -413,7 +427,7 @@ msgstr "Kabelové"
 msgid "Calendar Week"
 msgstr "Týden"
 
-#: ../plugin/controllers/i18n.py:97 ../plugin/plugin.py:122
+#: ../plugin/controllers/i18n.py:97 ../plugin/plugin.py:123
 msgid "Cancel"
 msgstr "Zavřít"
 
@@ -457,11 +471,11 @@ msgstr "Společná nastavení"
 msgid "Compiled by"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:580
+#: ../plugin/controllers/i18n.py:581
 msgid "Config"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:248
+#: ../plugin/controllers/models/timers.py:280
 #, python-format
 msgid "Conflicting Timer(s) detected! %s"
 msgstr "Detekován(y) konfliktní časovač(e) %s"
@@ -474,12 +488,12 @@ msgstr "Spolupracovníci"
 msgid "Control"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:279
+#: ../plugin/controllers/models/timers.py:311
 #, python-format
 msgid "Could not add timer '%s'!"
 msgstr "Nelze přidat časovač '%s'!"
 
-#: ../plugin/controllers/models/timers.py:412
+#: ../plugin/controllers/models/timers.py:444
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Nebylo možné nalézt  časovač '%s' se zadaným časem začátku a konce!"
@@ -501,7 +515,7 @@ msgstr "Aktuální událost"
 msgid "Custom STB name"
 msgstr "Vlastní název přijímače"
 
-#: ../plugin/plugin.py:149
+#: ../plugin/plugin.py:150
 msgid "Custom box name"
 msgstr "Vlastní název přijímače"
 
@@ -526,15 +540,15 @@ msgstr ""
 msgid "Date"
 msgstr "Datum"
 
-#: ../plugin/controllers/i18n.py:570
+#: ../plugin/controllers/i18n.py:571
 msgid "Date (newest)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:569
+#: ../plugin/controllers/i18n.py:570
 msgid "Date (oldest)"
 msgstr ""
 
-#: ../plugin/plugin.py:168
+#: ../plugin/plugin.py:169
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -575,7 +589,7 @@ msgstr "Odstranit nahrávku"
 msgid "Delete Timer"
 msgstr "Odstranit časovač"
 
-#: ../plugin/controllers/models/movies.py:477
+#: ../plugin/controllers/models/movies.py:478
 msgid ""
 "Delete failed, because there is no movie trash !\n"
 "Disable movie trash in configuration to delete this item"
@@ -593,7 +607,7 @@ msgstr "Popis"
 msgid "Disable Timer"
 msgstr "Zakázat časovač"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:160
 msgid "Disable remote access for user root"
 msgstr "Zakázat přístup pro uživatele root"
 
@@ -627,7 +641,7 @@ msgstr ""
 msgid "Dolby"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:577
+#: ../plugin/controllers/i18n.py:578
 msgid "Don't create timer when movie exists in database"
 msgstr ""
 
@@ -671,7 +685,7 @@ msgstr "Kódování EPG"
 msgid "EPGRefresh"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:833
+#: ../plugin/controllers/models/timers.py:865
 msgid "ERROR: Cannot set SleepTimer while device is in Standby-Mode"
 msgstr "CHYBA: nelze nastavit časovač usínání, jestliže je přijímač ve stanby"
 
@@ -683,19 +697,19 @@ msgstr "Upravit časovač"
 msgid "Editor"
 msgstr ""
 
-#: ../plugin/plugin.py:158
+#: ../plugin/plugin.py:159
 msgid "Enable Authentication for streaming"
 msgstr "Povolit ověřování pro streamování"
 
-#: ../plugin/plugin.py:151
+#: ../plugin/plugin.py:152
 msgid "Enable HTTP Authentication"
 msgstr "Povolit HTTP ověřování"
 
-#: ../plugin/plugin.py:152
+#: ../plugin/plugin.py:153
 msgid "Enable HTTPS"
 msgstr "Povolit HTTPS"
 
-#: ../plugin/plugin.py:155
+#: ../plugin/plugin.py:156
 msgid "Enable HTTPS Authentication"
 msgstr "Povolit HTTPS ověřování"
 
@@ -703,7 +717,7 @@ msgstr "Povolit HTTPS ověřování"
 msgid "Enable Messages"
 msgstr "Povolit zprávy"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:164
 msgid "Enable Parental Control"
 msgstr "Povolit rodičovskou kontrolu"
 
@@ -711,7 +725,7 @@ msgstr "Povolit rodičovskou kontrolu"
 msgid "Enable Timer"
 msgstr "Povolit časovač"
 
-#: ../plugin/plugin.py:162
+#: ../plugin/plugin.py:163
 msgid "Enable access from VPNs"
 msgstr "Povolit přístup z VPN"
 
@@ -783,7 +797,7 @@ msgstr ""
 msgid "Error"
 msgstr "Chyba"
 
-#: ../plugin/controllers/models/timers.py:960
+#: ../plugin/controllers/models/timers.py:992
 msgid "Error parsing vps.xml"
 msgstr "Chyba při analýze vps.xml"
 
@@ -823,7 +837,7 @@ msgstr "Chyba:Přehled %s nemohl být odstraněn, OSError."
 msgid "Event not found"
 msgstr "Událost nenalezena"
 
-#: ../plugin/controllers/models/timers.py:293
+#: ../plugin/controllers/models/timers.py:325
 msgid "EventId not found"
 msgstr "EventId nenalezeno"
 
@@ -840,7 +854,7 @@ msgstr "kromě"
 msgid "Execute \"After event\" during timespan"
 msgstr "Provést \"po události\" v časovém úseku"
 
-#: ../plugin/controllers/i18n.py:564
+#: ../plugin/controllers/i18n.py:565
 msgid "Export"
 msgstr ""
 
@@ -902,7 +916,8 @@ msgstr "Volná paměť"
 msgid "Free/Total memory"
 msgstr "Volná paměť"
 
-#: ../plugin/controllers/models/movies.py:67 ../plugin/controllers/i18n.py:52
+#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:52
 msgid "Fri"
 msgstr "Pá"
 
@@ -923,9 +938,9 @@ msgstr "Úplný ovladač"
 #: ../plugin/controllers/models/info.py:372
 #: ../plugin/controllers/models/info.py:387
 #: ../plugin/controllers/models/info.py:390
-#: ../plugin/controllers/models/movies.py:266
-#: ../plugin/controllers/models/movies.py:396
-#: ../plugin/controllers/models/movies.py:816
+#: ../plugin/controllers/models/movies.py:267
+#: ../plugin/controllers/models/movies.py:397
+#: ../plugin/controllers/models/movies.py:817
 msgid "GB"
 msgstr ""
 
@@ -950,11 +965,11 @@ msgstr ""
 msgid "Get mutable list for new created bouquet failed!"
 msgstr ""
 
-#: ../plugin/plugin.py:150
+#: ../plugin/plugin.py:151
 msgid "HTTP port"
 msgstr "HTTP port"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:155
 msgid "HTTPS port"
 msgstr "HTTPS port"
 
@@ -1019,7 +1034,7 @@ msgstr ""
 msgid "Image folder"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:565
+#: ../plugin/controllers/i18n.py:566
 msgid "Import"
 msgstr ""
 
@@ -1039,7 +1054,7 @@ msgstr "včetně rozšířeného popisu"
 msgid "Include short description"
 msgstr "včetně krátkého popisu"
 
-#: ../plugin/controllers/models/timers.py:528
+#: ../plugin/controllers/models/timers.py:560
 msgid "Infinite Instant recording started"
 msgstr "Začalo neomezené okamžité nahrávání"
 
@@ -1063,7 +1078,7 @@ msgstr "Instalováno:"
 msgid "Instant Record"
 msgstr "Okamžité nahrávání"
 
-#: ../plugin/controllers/models/timers.py:519
+#: ../plugin/controllers/models/timers.py:551
 msgid "Instant record for current Event started"
 msgstr "Začalo okamžité nahrávání pro aktuální událost"
 
@@ -1142,7 +1157,7 @@ msgstr ""
 msgid "Link speed"
 msgstr "Rychlost připojení"
 
-#: ../plugin/controllers/models/timers.py:489
+#: ../plugin/controllers/models/timers.py:521
 msgid "List of Timers has been cleaned"
 msgstr "Seznam časovačů byl vyčištěn"
 
@@ -1166,9 +1181,9 @@ msgstr "MAC adresa"
 #: ../plugin/controllers/models/info.py:363
 #: ../plugin/controllers/models/info.py:374
 #: ../plugin/controllers/models/info.py:392
-#: ../plugin/controllers/models/movies.py:268
-#: ../plugin/controllers/models/movies.py:398
-#: ../plugin/controllers/models/movies.py:818
+#: ../plugin/controllers/models/movies.py:269
+#: ../plugin/controllers/models/movies.py:399
+#: ../plugin/controllers/models/movies.py:819
 msgid "MB"
 msgstr ""
 
@@ -1229,7 +1244,7 @@ msgstr "Minuty"
 msgid "Missing mandatory parameter '%s'"
 msgstr "Chybí povinný parametr '%s'"
 
-#: ../plugin/controllers/models/timers.py:620
+#: ../plugin/controllers/models/timers.py:652
 msgid "Missing requesteter: sRef"
 msgstr "Chybějící požadavek: sRef"
 
@@ -1241,7 +1256,8 @@ msgstr "Po"
 msgid "Model"
 msgstr "Model"
 
-#: ../plugin/controllers/models/movies.py:67 ../plugin/controllers/i18n.py:48
+#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:48
 msgid "Mon"
 msgstr "Po"
 
@@ -1302,11 +1318,11 @@ msgstr ""
 msgid "Name"
 msgstr "Název"
 
-#: ../plugin/controllers/i18n.py:567
+#: ../plugin/controllers/i18n.py:568
 msgid "Name (a-z)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:568
+#: ../plugin/controllers/i18n.py:569
 msgid "Name (z-a)"
 msgstr ""
 
@@ -1376,7 +1392,7 @@ msgstr "Nezadaný název přehledu!"
 msgid "No current service given!"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:513
+#: ../plugin/controllers/models/timers.py:545
 msgid "No event found! Not recording!"
 msgstr "Nenalezena událost! Nenahrává se!"
 
@@ -1384,8 +1400,8 @@ msgstr "Nenalezena událost! Nenahrává se!"
 msgid "No marker-name given!"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:436
-#: ../plugin/controllers/models/timers.py:481
+#: ../plugin/controllers/models/timers.py:468
+#: ../plugin/controllers/models/timers.py:513
 msgid "No matching Timer found"
 msgstr "Nenalezen odpovídající časovač"
 
@@ -1537,7 +1553,7 @@ msgstr ""
 msgid "Open in new window"
 msgstr "Otevřít v novém okně"
 
-#: ../plugin/plugin.py:138
+#: ../plugin/plugin.py:139
 msgid "OpenWebInterface Enabled"
 msgstr "Povolit OpenWebIf"
 
@@ -1545,7 +1561,7 @@ msgstr "Povolit OpenWebIf"
 msgid "OpenWebif Browser Settings"
 msgstr "Nastavení prohlížeče OpenWebif"
 
-#: ../plugin/plugin.py:177 ../plugin/plugin.py:245 ../plugin/plugin.py:247
+#: ../plugin/plugin.py:178 ../plugin/plugin.py:246 ../plugin/plugin.py:248
 msgid "OpenWebif Configuration"
 msgstr "Nastavení OpenWebif"
 
@@ -1553,7 +1569,7 @@ msgstr "Nastavení OpenWebif"
 msgid "OpenWebif Settings"
 msgstr "Nastavení OpenWebif"
 
-#: ../plugin/plugin.py:124
+#: ../plugin/plugin.py:125
 msgid "OpenWebif url: http://yourip:port"
 msgstr "OpenWebif url: http://vašeip:port"
 
@@ -1612,7 +1628,7 @@ msgstr "Formát playlistu"
 msgid "Playback"
 msgstr "Přehrát"
 
-#: ../plugin/plugin.py:167
+#: ../plugin/plugin.py:168
 msgid "Playback IPTV Streams in browser"
 msgstr ""
 
@@ -1620,7 +1636,7 @@ msgstr ""
 msgid "Playlist"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:573
+#: ../plugin/controllers/i18n.py:574
 msgid "Playlist format"
 msgstr "Formát playlistu"
 
@@ -1632,7 +1648,7 @@ msgstr ""
 msgid "Power Control"
 msgstr "Napájení"
 
-#: ../plugin/controllers/models/timers.py:709
+#: ../plugin/controllers/models/timers.py:741
 msgid "PowerTimer feature not available"
 msgstr ""
 
@@ -1721,7 +1737,7 @@ msgstr "Přejmenovat nahrávku"
 msgid "Repeated"
 msgstr "Opakování"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:157
 msgid "Require client cert for HTTPS"
 msgstr "Požadovat klientskou certifikaci pro HTTPS"
 
@@ -1783,7 +1799,8 @@ msgstr "So"
 msgid "Safe mode"
 msgstr "Bezpečný mód"
 
-#: ../plugin/controllers/models/movies.py:67 ../plugin/controllers/i18n.py:53
+#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:53
 msgid "Sat"
 msgstr "So"
 
@@ -1800,7 +1817,7 @@ msgid "Saturday"
 msgstr "Sobota"
 
 #: ../plugin/controllers/i18n.py:247 ../plugin/controllers/i18n.py:407
-#: ../plugin/controllers/i18n.py:461 ../plugin/plugin.py:123
+#: ../plugin/controllers/i18n.py:461 ../plugin/plugin.py:124
 msgid "Save"
 msgstr "Uložit"
 
@@ -1947,11 +1964,11 @@ msgstr ""
 msgid "Show STB name in header"
 msgstr "Zobrazovat v záhlaví název přijímače"
 
-#: ../plugin/plugin.py:140
+#: ../plugin/plugin.py:141
 msgid "Show benchmark in STB information"
 msgstr ""
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:146
 msgid "Show box name in header"
 msgstr "Zobrazovat v záhlaví název přijímače"
 
@@ -1967,11 +1984,11 @@ msgstr "Úplný ovladač"
 msgid "Show in Extensions menu"
 msgstr "Zobrazovat v Extended menu"
 
-#: ../plugin/controllers/i18n.py:563
+#: ../plugin/controllers/i18n.py:564
 msgid "Show picon background"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:562
+#: ../plugin/controllers/i18n.py:563
 msgid "Show picons"
 msgstr ""
 
@@ -1999,36 +2016,36 @@ msgstr "Simulace"
 msgid "Site and sources"
 msgstr "Umístění a zdroje"
 
-#: ../plugin/controllers/i18n.py:581
+#: ../plugin/controllers/i18n.py:582
 msgid "Skins"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:793
-#: ../plugin/controllers/models/timers.py:820
-#: ../plugin/controllers/models/timers.py:849
-#: ../plugin/controllers/models/timers.py:931
+#: ../plugin/controllers/models/timers.py:825
+#: ../plugin/controllers/models/timers.py:852
+#: ../plugin/controllers/models/timers.py:881
+#: ../plugin/controllers/models/timers.py:963
 msgid "SleepTimer error"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:838
-#: ../plugin/controllers/models/timers.py:907
-#: ../plugin/controllers/models/timers.py:926
+#: ../plugin/controllers/models/timers.py:870
+#: ../plugin/controllers/models/timers.py:939
+#: ../plugin/controllers/models/timers.py:958
 msgid "Sleeptimer has been disabled"
 msgstr "Časovač usínání byl zakázán"
 
-#: ../plugin/controllers/models/timers.py:788
-#: ../plugin/controllers/models/timers.py:814
+#: ../plugin/controllers/models/timers.py:820
+#: ../plugin/controllers/models/timers.py:846
 msgid "Sleeptimer is disabled"
 msgstr "Časovač usínání je zakázán"
 
-#: ../plugin/controllers/models/timers.py:788
-#: ../plugin/controllers/models/timers.py:814
+#: ../plugin/controllers/models/timers.py:820
+#: ../plugin/controllers/models/timers.py:846
 msgid "Sleeptimer is enabled"
 msgstr "Časovač usínání je povolen"
 
-#: ../plugin/controllers/models/timers.py:844
-#: ../plugin/controllers/models/timers.py:907
-#: ../plugin/controllers/models/timers.py:921
+#: ../plugin/controllers/models/timers.py:876
+#: ../plugin/controllers/models/timers.py:939
+#: ../plugin/controllers/models/timers.py:953
 #, python-format
 msgid "Sleeptimer set to %d minutes"
 msgstr "Časovač usínání nastaven na %d minut"
@@ -2049,7 +2066,7 @@ msgstr ""
 msgid "Sorry this page is not yet implemented"
 msgstr "Tato stránka není zatím implementována"
 
-#: ../plugin/controllers/i18n.py:566
+#: ../plugin/controllers/i18n.py:567
 msgid "Sort"
 msgstr ""
 
@@ -2089,11 +2106,11 @@ msgstr ""
 msgid "Stream"
 msgstr "Streamovat"
 
-#: ../plugin/controllers/i18n.py:579
+#: ../plugin/controllers/i18n.py:580
 msgid "Stream Clients"
 msgstr "Streamující klienti"
 
-#: ../plugin/plugin.py:164
+#: ../plugin/plugin.py:165
 #, fuzzy
 msgid "Streaming port"
 msgstr "Streamující klienti"
@@ -2102,7 +2119,7 @@ msgstr "Streamující klienti"
 msgid "Su"
 msgstr "Ne"
 
-#: ../plugin/controllers/i18n.py:571
+#: ../plugin/controllers/i18n.py:572
 msgid "Subdirectories"
 msgstr ""
 
@@ -2114,7 +2131,8 @@ msgstr "Maska"
 msgid "Subservices"
 msgstr "Podprogramy"
 
-#: ../plugin/controllers/models/movies.py:67 ../plugin/controllers/i18n.py:47
+#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:47
 msgid "Sun"
 msgstr "Ne"
 
@@ -2181,18 +2199,18 @@ msgstr "Parametr '%s' nemůže být prázdný"
 msgid "The parameter 'command' must be a number"
 msgstr "Parametr 'command' musí být číslo"
 
-#: ../plugin/controllers/models/timers.py:475
+#: ../plugin/controllers/models/timers.py:507
 #, python-format
 msgid "The timer '%s' has been %s successfully"
 msgstr "Časovač '%s' byl úspěšně %s"
 
-#: ../plugin/controllers/models/timers.py:425
-#: ../plugin/controllers/models/timers.py:431
+#: ../plugin/controllers/models/timers.py:457
+#: ../plugin/controllers/models/timers.py:463
 #, python-format
 msgid "The timer '%s' has been deleted successfully"
 msgstr "Časovač '%s' byl úspěšně odstraněn"
 
-#: ../plugin/controllers/models/timers.py:467
+#: ../plugin/controllers/models/timers.py:499
 #, python-format
 msgid "The timer '%s' now recorded! Not disabled!"
 msgstr "Časovač '%s' je právě nahráván! Nelze zakázat!"
@@ -2201,7 +2219,7 @@ msgstr "Časovač '%s' je právě nahráván! Nelze zakázat!"
 msgid "Theme"
 msgstr "Vzhled"
 
-#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:143
+#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:144
 #, fuzzy
 msgid "Theme mode"
 msgstr "Vzhled"
@@ -2210,7 +2228,8 @@ msgstr "Vzhled"
 msgid "This service can not be added."
 msgstr "Tento program nemůže být přidán."
 
-#: ../plugin/controllers/models/movies.py:67 ../plugin/controllers/i18n.py:51
+#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:51
 msgid "Thu"
 msgstr "Čt"
 
@@ -2234,27 +2253,27 @@ msgstr "Trvání"
 msgid "Timer"
 msgstr "Časovač"
 
-#: ../plugin/controllers/models/timers.py:284
+#: ../plugin/controllers/models/timers.py:316
 #, python-format
 msgid "Timer '%s' added"
 msgstr "Přidán časovač '%s'"
 
-#: ../plugin/controllers/models/timers.py:461
+#: ../plugin/controllers/models/timers.py:493
 #, python-format
 msgid "Timer '%s' already exists!"
 msgstr "Časovač '%s' již existuje!"
 
-#: ../plugin/controllers/models/timers.py:387
+#: ../plugin/controllers/models/timers.py:419
 #, python-format
 msgid "Timer '%s' changed"
 msgstr "Časovač '%s' změněn"
 
-#: ../plugin/controllers/models/timers.py:455
+#: ../plugin/controllers/models/timers.py:487
 #, python-format
 msgid "Timer '%s' not enabled while Conflict"
 msgstr "Časovač '%s' není povolen kvůli konfliktu"
 
-#: ../plugin/controllers/models/timers.py:406
+#: ../plugin/controllers/models/timers.py:438
 #, python-format
 msgid "Timer '%s' not saved while Conflict"
 msgstr "Časovač '%s' nebyl kvůli konfliktu uložen"
@@ -2267,7 +2286,7 @@ msgstr "Časovač přidán"
 msgid "Timer added"
 msgstr "Časovač přidán"
 
-#: ../plugin/controllers/models/timers.py:547
+#: ../plugin/controllers/models/timers.py:579
 msgid "Timer conflict detected! Not recording!"
 msgstr "Konflikt časovačů! Nenahrává se!"
 
@@ -2275,7 +2294,7 @@ msgstr "Konflikt časovačů! Nenahrává se!"
 msgid "Timer type"
 msgstr "Typ časovače"
 
-#: ../plugin/controllers/models/timers.py:497
+#: ../plugin/controllers/models/timers.py:529
 msgid "TimerList has been saved"
 msgstr "Seznam časovačů byl uložen"
 
@@ -2291,7 +2310,8 @@ msgstr "Časovače"
 msgid "Title"
 msgstr "Název"
 
-#: ../plugin/controllers/models/movies.py:70
+#: ../plugin/controllers/models/movies.py:58
+#: ../plugin/controllers/models/timers.py:46
 msgid "Today"
 msgstr ""
 
@@ -2320,7 +2340,8 @@ msgstr ""
 msgid "Tu"
 msgstr "Út"
 
-#: ../plugin/controllers/models/movies.py:67 ../plugin/controllers/i18n.py:49
+#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:49
 msgid "Tue"
 msgstr "Út"
 
@@ -2369,7 +2390,7 @@ msgstr "Typ"
 msgid "Unknown Volume command %s"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:642
+#: ../plugin/controllers/models/timers.py:674
 #, python-format
 msgid "Unknown command: '%s'"
 msgstr "Neznámý příkaz: '%s'"
@@ -2406,20 +2427,24 @@ msgstr ""
 msgid "Uploaded Files"
 msgstr ""
 
+#: ../plugin/controllers/i18n.py:562
+msgid "Use Channelname for screenshots"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:391
 msgid "Use a custom location"
 msgstr "Použít vlastní umístění"
 
-#: ../plugin/controllers/i18n.py:574
+#: ../plugin/controllers/i18n.py:575
 msgid "Use as PiP if possible"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:582
+#: ../plugin/controllers/i18n.py:583
 #, fuzzy
 msgid "Use classic interface"
 msgstr "Použít nový vzhled"
 
-#: ../plugin/plugin.py:144
+#: ../plugin/plugin.py:145
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Použít vlastní umístění"
@@ -2429,7 +2454,7 @@ msgstr "Použít vlastní umístění"
 msgid "Use custom STB name"
 msgstr "Použít vlastní název přijímače"
 
-#: ../plugin/plugin.py:147
+#: ../plugin/plugin.py:148
 msgid "Use custom box name"
 msgstr "Použít vlastní název přijímače"
 
@@ -2438,7 +2463,7 @@ msgstr "Použít vlastní název přijímače"
 msgid "Use modern design"
 msgstr "Použít nový vzhled"
 
-#: ../plugin/controllers/i18n.py:583 ../plugin/plugin.py:141
+#: ../plugin/controllers/i18n.py:584 ../plugin/plugin.py:142
 msgid "Use modern interface"
 msgstr "Použít nový vzhled"
 
@@ -2446,7 +2471,7 @@ msgstr "Použít nový vzhled"
 msgid "VPS"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:965
+#: ../plugin/controllers/models/timers.py:997
 msgid "VPS plugin not found"
 msgstr "Nenalezen VPS plugin"
 
@@ -2514,7 +2539,8 @@ msgstr "St"
 msgid "Web TV"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:67 ../plugin/controllers/i18n.py:50
+#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:50
 msgid "Wed"
 msgstr "St"
 
@@ -2530,7 +2556,7 @@ msgstr "týdně (pondělí)"
 msgid "Weekly (Sunday)"
 msgstr "týdně (neděle)"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:162
 msgid "Without auth only local access is allowed!"
 msgstr "Bez ověřování je povolen pouze lokální přístup"
 
@@ -2553,7 +2579,8 @@ msgstr "Ano"
 msgid "Yes/No"
 msgstr "Ano/Ne"
 
-#: ../plugin/controllers/models/movies.py:72
+#: ../plugin/controllers/models/movies.py:60
+#: ../plugin/controllers/models/timers.py:49
 msgid "Yesterday"
 msgstr ""
 
@@ -2644,9 +2671,9 @@ msgstr "v názvu"
 
 #: ../plugin/controllers/models/info.py:242
 #: ../plugin/controllers/models/info.py:245
-#: ../plugin/controllers/models/movies.py:270
-#: ../plugin/controllers/models/movies.py:400
-#: ../plugin/controllers/models/movies.py:820
+#: ../plugin/controllers/models/movies.py:271
+#: ../plugin/controllers/models/movies.py:401
+#: ../plugin/controllers/models/movies.py:821
 msgid "kB"
 msgstr ""
 
@@ -2703,7 +2730,7 @@ msgstr "nahrát"
 msgid "regex match (experimental)"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:471
+#: ../plugin/controllers/models/movies.py:472
 msgid "remove"
 msgstr "smazat"
 
