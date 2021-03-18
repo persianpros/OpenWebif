@@ -12,6 +12,7 @@ matrix:
         - pip install Cheetah
         - pip install -r requirements.txt
         - pip install bandit==1.6.2
+        - pip install --upgrade pip autopep8
       script:
         - python -m compileall -l . -l plugin -l plugin/backport -l plugin/controllers -l plugin/controllers/models
         - cheetah compile -R plugin
@@ -23,7 +24,11 @@ matrix:
       python: 3.8
       before_install:
         - pip install Cheetah3
+        - pip install --upgrade pip autopep8
       script:
         - python -m compileall -l . -r 10 -q
         - cheetah compile -R plugin
         - python testsuite/evil_eval.py
+
+after_success:
+- ./build.sh
