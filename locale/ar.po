@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-14 17:19+0330\n"
+"POT-Creation-Date: 2021-03-23 23:21+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: mosad - مساعد الجعيد <abo-mishal@hotmail.com>\n"
 "Language-Team: mosad - مساعد الجعيد\n"
@@ -15,18 +15,18 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "X-Poedit-SearchPath-0: ../plugin\n"
 
-#: ../plugin/controllers/models/timers.py:59
+#: ../plugin/controllers/models/timers.py:60
 #, python-format
 msgid "%02d.%02d."
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:61
+#: ../plugin/controllers/models/timers.py:62
 #, python-format
 msgid "%02d.%02d.%d"
 msgstr ""
 
 #: ../plugin/controllers/models/movies.py:70
-#: ../plugin/controllers/models/timers.py:63
+#: ../plugin/controllers/models/timers.py:64
 #, python-format
 msgid "%02d:%02d"
 msgstr ""
@@ -38,17 +38,17 @@ msgstr ""
 msgid "%d.%m.%Y"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:185
 #: ../plugin/controllers/models/timers.py:186
-#: ../plugin/controllers/models/timers.py:274
+#: ../plugin/controllers/models/timers.py:187
 #: ../plugin/controllers/models/timers.py:275
-#: ../plugin/controllers/models/timers.py:432
+#: ../plugin/controllers/models/timers.py:276
 #: ../plugin/controllers/models/timers.py:433
+#: ../plugin/controllers/models/timers.py:434
 msgid "%d.%m.%Y %H:%M"
 msgstr ""
 
 #: ../plugin/controllers/models/movies.py:66
-#: ../plugin/controllers/models/timers.py:57
+#: ../plugin/controllers/models/timers.py:58
 #, python-format
 msgid "%s %02d.%02d."
 msgstr ""
@@ -137,7 +137,7 @@ msgstr "إضافة قناة (قنوات) كبديل"
 msgid "Add selection to bouquet"
 msgstr "إضافة قناة (قنوات) إلى الباقة"
 
-#: ../plugin/plugin.py:166
+#: ../plugin/plugin.py:173
 msgid "Add service name to stream information"
 msgstr "إضافة اسم الخدمة إلى معلومات قنوات البث"
 
@@ -175,7 +175,7 @@ msgstr "جميع ملفات هذا البرنامج هي برامج مفتوحة
 msgid "All alternative services deleted."
 msgstr "تم حذف كافة القنوات البديلة."
 
-#: ../plugin/plugin.py:167
+#: ../plugin/plugin.py:174
 msgid "Allow IPK Upload"
 msgstr "السماح برفع الملفات المحمية"
 
@@ -283,7 +283,7 @@ msgstr "تعديل المؤقت التلقائي"
 msgid "AutoTimer Settings"
 msgstr "إعدادات المؤقت الالى"
 
-#: ../plugin/controllers/base.py:351 ../plugin/controllers/i18n.py:335
+#: ../plugin/controllers/base.py:353 ../plugin/controllers/i18n.py:335
 msgid "AutoTimers"
 msgstr "قائمه المؤقت التلقائي"
 
@@ -385,7 +385,7 @@ msgstr "تمت أعاده تسمية الباقة بنجاح."
 msgid "Bouquet-settings were restored successfully"
 msgstr "تمت استعاده إعدادات الباقة بنجاح"
 
-#: ../plugin/controllers/base.py:356
+#: ../plugin/controllers/base.py:358
 msgid "BouquetEditor"
 msgstr "محرر الباقة"
 
@@ -475,7 +475,7 @@ msgstr ""
 msgid "Config"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:280
+#: ../plugin/controllers/models/timers.py:281
 #, python-format
 msgid "Conflicting Timer(s) detected! %s"
 msgstr "الكشف عن المؤقت (المؤقتات) المتعارضة! %s"
@@ -488,12 +488,12 @@ msgstr "المساهمون"
 msgid "Control"
 msgstr "التحكم"
 
-#: ../plugin/controllers/models/timers.py:311
+#: ../plugin/controllers/models/timers.py:312
 #, python-format
 msgid "Could not add timer '%s'!"
 msgstr "لا يمكن إضافة المؤقت '%s'!"
 
-#: ../plugin/controllers/models/timers.py:444
+#: ../plugin/controllers/models/timers.py:445
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "تعذر العثور على المؤقت '%s' مع وقت البدء والانتهاء المعينين!"
@@ -515,7 +515,7 @@ msgstr "الحدث الحالي"
 msgid "Custom STB name"
 msgstr "أسم الجهاز المخصص"
 
-#: ../plugin/plugin.py:150
+#: ../plugin/plugin.py:157
 msgid "Custom box name"
 msgstr "أسم الجهاز المخصص"
 
@@ -548,7 +548,7 @@ msgstr ""
 msgid "Date (oldest)"
 msgstr ""
 
-#: ../plugin/plugin.py:169
+#: ../plugin/plugin.py:176
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -590,7 +590,7 @@ msgstr "حذف التسجيل"
 msgid "Delete Timer"
 msgstr "حذف المؤقت"
 
-#: ../plugin/controllers/models/movies.py:478
+#: ../plugin/controllers/models/movies.py:480
 msgid ""
 "Delete failed, because there is no movie trash !\n"
 "Disable movie trash in configuration to delete this item"
@@ -610,7 +610,7 @@ msgstr "الوصـف"
 msgid "Disable Timer"
 msgstr "تعطيل المؤقت"
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:167
 msgid "Disable remote access for user root"
 msgstr "تعطيل الوصول البعيد لجذر المستخدم"
 
@@ -684,11 +684,11 @@ msgstr "بحث في دليل البرامج"
 msgid "EPG encoding"
 msgstr "ترميز دليل البرامج اليومي"
 
-#: ../plugin/controllers/base.py:360
+#: ../plugin/controllers/base.py:362
 msgid "EPGRefresh"
 msgstr "تحديث دليل البرامج الإلكترونية"
 
-#: ../plugin/controllers/models/timers.py:865
+#: ../plugin/controllers/models/timers.py:866
 msgid "ERROR: Cannot set SleepTimer while device is in Standby-Mode"
 msgstr "خطا: لا يمكن ضبط مؤقت النوم أثناء الجهاز في وضع الاستعداد"
 
@@ -700,19 +700,19 @@ msgstr "تعديل المؤقت"
 msgid "Editor"
 msgstr "المحرر"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:166
 msgid "Enable Authentication for streaming"
 msgstr "تمكين مصادقة للتدفق"
 
-#: ../plugin/plugin.py:152
+#: ../plugin/plugin.py:159
 msgid "Enable HTTP Authentication"
 msgstr "تفعيل توثيق بروتوكول نقل النصوص"
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:160
 msgid "Enable HTTPS"
 msgstr "تمكين بروتوكول نقل الروابط المحمية"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:163
 msgid "Enable HTTPS Authentication"
 msgstr "تفعيل توثيق بروتوكول نقل النصوص المحمي"
 
@@ -720,7 +720,7 @@ msgstr "تفعيل توثيق بروتوكول نقل النصوص المحمي"
 msgid "Enable Messages"
 msgstr "تمكين الرسائل"
 
-#: ../plugin/plugin.py:164
+#: ../plugin/plugin.py:171
 msgid "Enable Parental Control"
 msgstr "تمكين الرقابة الابوية"
 
@@ -728,7 +728,7 @@ msgstr "تمكين الرقابة الابوية"
 msgid "Enable Timer"
 msgstr "تفعيل المؤقت"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:170
 msgid "Enable access from VPNs"
 msgstr "تمكين الدخول من الشبكة الخاصة"
 
@@ -800,7 +800,7 @@ msgstr ""
 msgid "Error"
 msgstr "خطأ"
 
-#: ../plugin/controllers/models/timers.py:992
+#: ../plugin/controllers/models/timers.py:993
 msgid "Error parsing vps.xml"
 msgstr "خطا في تحليل الvps. xml"
 
@@ -840,7 +840,7 @@ msgstr "خطاء: تعذر حذف الباقة %s ,خطاء."
 msgid "Event not found"
 msgstr "لم يتم العثور علي الحدث"
 
-#: ../plugin/controllers/models/timers.py:325
+#: ../plugin/controllers/models/timers.py:326
 msgid "EventId not found"
 msgstr "لم يتم العثور علي الحدث"
 
@@ -920,7 +920,7 @@ msgid "Free/Total memory"
 msgstr "ذاكرة متوفرة"
 
 #: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:52
+#: ../plugin/controllers/models/timers.py:43 ../plugin/controllers/i18n.py:52
 msgid "Fri"
 msgstr "الجمعة"
 
@@ -941,9 +941,9 @@ msgstr "جهاز تحكم عن بعد كامل"
 #: ../plugin/controllers/models/info.py:372
 #: ../plugin/controllers/models/info.py:387
 #: ../plugin/controllers/models/info.py:390
-#: ../plugin/controllers/models/movies.py:267
-#: ../plugin/controllers/models/movies.py:397
-#: ../plugin/controllers/models/movies.py:817
+#: ../plugin/controllers/models/movies.py:269
+#: ../plugin/controllers/models/movies.py:399
+#: ../plugin/controllers/models/movies.py:819
 msgid "GB"
 msgstr "جيجابايت"
 
@@ -968,11 +968,11 @@ msgstr "فشل الحصول على قائمة قابلة للتغيير للبد
 msgid "Get mutable list for new created bouquet failed!"
 msgstr "فشل الحصول على قائمة قابلة للتغيير للباقات الجديدة التي تم إنشاؤها!"
 
-#: ../plugin/plugin.py:151
+#: ../plugin/plugin.py:158
 msgid "HTTP port"
 msgstr "منفذ (بروتوكول محمي التشفير)"
 
-#: ../plugin/plugin.py:155
+#: ../plugin/plugin.py:162
 msgid "HTTPS port"
 msgstr "منفذ بروتوكول نقل النصوص المحمي"
 
@@ -1057,7 +1057,7 @@ msgstr "يشمل الوصف الموسع"
 msgid "Include short description"
 msgstr "يشمل وصف مختصر"
 
-#: ../plugin/controllers/models/timers.py:560
+#: ../plugin/controllers/models/timers.py:561
 msgid "Infinite Instant recording started"
 msgstr "بدأ التسجيل الفوري بلا حدود"
 
@@ -1081,7 +1081,7 @@ msgstr "تنصيب"
 msgid "Instant Record"
 msgstr "تسجيل سريع"
 
-#: ../plugin/controllers/models/timers.py:551
+#: ../plugin/controllers/models/timers.py:552
 msgid "Instant record for current Event started"
 msgstr "بدء تشغيل التسجل الفوري للحدث الحالي"
 
@@ -1134,7 +1134,7 @@ msgstr ""
 msgid "LCD"
 msgstr "شاشة العرض المصغرة"
 
-#: ../plugin/controllers/base.py:323
+#: ../plugin/controllers/base.py:325
 msgid "LCD4Linux Setup"
 msgstr "ضبط شاشة عرض لينكس"
 
@@ -1160,7 +1160,7 @@ msgstr ""
 msgid "Link speed"
 msgstr "سرعه الرابط"
 
-#: ../plugin/controllers/models/timers.py:521
+#: ../plugin/controllers/models/timers.py:522
 msgid "List of Timers has been cleaned"
 msgstr "قائمة الموقتات تم تنظيفها"
 
@@ -1184,9 +1184,9 @@ msgstr "إعدادات شبكة تحكم وصول الوسائط"
 #: ../plugin/controllers/models/info.py:363
 #: ../plugin/controllers/models/info.py:374
 #: ../plugin/controllers/models/info.py:392
-#: ../plugin/controllers/models/movies.py:269
-#: ../plugin/controllers/models/movies.py:399
-#: ../plugin/controllers/models/movies.py:819
+#: ../plugin/controllers/models/movies.py:271
+#: ../plugin/controllers/models/movies.py:401
+#: ../plugin/controllers/models/movies.py:821
 msgid "MB"
 msgstr "ميجابايت"
 
@@ -1247,7 +1247,7 @@ msgstr "دقيقة"
 msgid "Missing mandatory parameter '%s'"
 msgstr "العلامة الإلزامية مفقودة '%s'"
 
-#: ../plugin/controllers/models/timers.py:652
+#: ../plugin/controllers/models/timers.py:653
 msgid "Missing requesteter: sRef"
 msgstr "الطلب مفقود: الرقم التعريفي"
 
@@ -1260,7 +1260,7 @@ msgid "Model"
 msgstr "نموذج"
 
 #: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:48
+#: ../plugin/controllers/models/timers.py:43 ../plugin/controllers/i18n.py:48
 msgid "Mon"
 msgstr "الاثنين"
 
@@ -1316,7 +1316,7 @@ msgstr "دليل البرامج الإلكتروينة المتعدد"
 msgid "MultiTranscoding"
 msgstr "تحويل الترميز"
 
-#: ../plugin/controllers/base.py:347
+#: ../plugin/controllers/base.py:349
 #, fuzzy
 msgid "NCam Webinterface"
 msgstr "واجهة إنترنت الاوسكام"
@@ -1399,7 +1399,7 @@ msgstr "لا يوجد أسم باقة!"
 msgid "No current service given!"
 msgstr "لا يوجد قناة حالية متاحة!"
 
-#: ../plugin/controllers/models/timers.py:545
+#: ../plugin/controllers/models/timers.py:546
 msgid "No event found! Not recording!"
 msgstr "لم يتم العثور على الحدث! لا يوجد تسجيل!"
 
@@ -1407,8 +1407,8 @@ msgstr "لم يتم العثور على الحدث! لا يوجد تسجيل!"
 msgid "No marker-name given!"
 msgstr "لا يوجد أسم علامة معينة!"
 
-#: ../plugin/controllers/models/timers.py:468
-#: ../plugin/controllers/models/timers.py:513
+#: ../plugin/controllers/models/timers.py:469
+#: ../plugin/controllers/models/timers.py:514
 msgid "No matching Timer found"
 msgstr "لم يتم العثور على مؤقت متطابق"
 
@@ -1480,7 +1480,7 @@ msgstr "الان"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:345
+#: ../plugin/controllers/base.py:347
 msgid "OSCam Webinterface"
 msgstr "واجهة إنترنت الاوسكام"
 
@@ -1560,7 +1560,7 @@ msgstr ""
 msgid "Open in new window"
 msgstr "فتح في نافذة جديد"
 
-#: ../plugin/plugin.py:139
+#: ../plugin/plugin.py:146
 msgid "OpenWebInterface Enabled"
 msgstr "تميكن فتح واجهة المستخدم"
 
@@ -1568,7 +1568,7 @@ msgstr "تميكن فتح واجهة المستخدم"
 msgid "OpenWebif Browser Settings"
 msgstr "إعدادات متصفح الإنترنت المفتوح"
 
-#: ../plugin/plugin.py:178 ../plugin/plugin.py:246 ../plugin/plugin.py:248
+#: ../plugin/plugin.py:185 ../plugin/plugin.py:253 ../plugin/plugin.py:255
 msgid "OpenWebif Configuration"
 msgstr "تكوين فتح واجهة إستخدام الويب"
 
@@ -1576,9 +1576,10 @@ msgstr "تكوين فتح واجهة إستخدام الويب"
 msgid "OpenWebif Settings"
 msgstr "إعدادات الإنترنت المفتوح"
 
-#: ../plugin/plugin.py:125
-msgid "OpenWebif url: http://yourip:port"
-msgstr "رابط الإنترنت المفتوح: http://yourip:port"
+#: ../plugin/plugin.py:132
+#, fuzzy
+msgid "OpenWebif url:"
+msgstr "تكوين فتح واجهة إستخدام الويب"
 
 #: ../plugin/controllers/models/services.py:264
 #: ../plugin/controllers/i18n.py:497
@@ -1635,7 +1636,7 @@ msgstr "قائمة التشغيل"
 msgid "Playback"
 msgstr "تشغيل"
 
-#: ../plugin/plugin.py:168
+#: ../plugin/plugin.py:175
 msgid "Playback IPTV Streams in browser"
 msgstr ""
 
@@ -1656,7 +1657,7 @@ msgstr "معرف البي أم تي"
 msgid "Power Control"
 msgstr "التحكم في الطاقة"
 
-#: ../plugin/controllers/models/timers.py:741
+#: ../plugin/controllers/models/timers.py:742
 msgid "PowerTimer feature not available"
 msgstr "ميزة مؤقت الأغلاق غير متوفرة"
 
@@ -1745,7 +1746,7 @@ msgstr "أعاده تسمية التسجيل"
 msgid "Repeated"
 msgstr "مكرر"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:164
 msgid "Require client cert for HTTPS"
 msgstr "يتطلب شهادة العميل لصيغة تشفير الصفحة المحمية"
 
@@ -1809,7 +1810,7 @@ msgid "Safe mode"
 msgstr "الوضع الأمن"
 
 #: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:53
+#: ../plugin/controllers/models/timers.py:43 ../plugin/controllers/i18n.py:53
 msgid "Sat"
 msgstr "السبت"
 
@@ -1951,7 +1952,7 @@ msgstr "القنوات"
 msgid "Set maximum duration"
 msgstr "حدد أقصى مده"
 
-#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:259
+#: ../plugin/controllers/base.py:312 ../plugin/controllers/i18n.py:259
 #: ../plugin/controllers/i18n.py:411
 msgid "Settings"
 msgstr "إعدادات"
@@ -1973,11 +1974,11 @@ msgstr ""
 msgid "Show STB name in header"
 msgstr "عرض أسم الجهاز في العنوان الرئيسي"
 
-#: ../plugin/plugin.py:141
+#: ../plugin/plugin.py:148
 msgid "Show benchmark in STB information"
 msgstr ""
 
-#: ../plugin/plugin.py:146
+#: ../plugin/plugin.py:153
 msgid "Show box name in header"
 msgstr "عرض أسم الجهاز في العنوان الرئيسي"
 
@@ -2030,32 +2031,32 @@ msgstr "الموقع والمصادر"
 msgid "Skins"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:825
-#: ../plugin/controllers/models/timers.py:852
-#: ../plugin/controllers/models/timers.py:881
-#: ../plugin/controllers/models/timers.py:963
+#: ../plugin/controllers/models/timers.py:826
+#: ../plugin/controllers/models/timers.py:853
+#: ../plugin/controllers/models/timers.py:882
+#: ../plugin/controllers/models/timers.py:964
 msgid "SleepTimer error"
 msgstr "خطاء مؤقت النوم"
 
-#: ../plugin/controllers/models/timers.py:870
-#: ../plugin/controllers/models/timers.py:939
-#: ../plugin/controllers/models/timers.py:958
+#: ../plugin/controllers/models/timers.py:871
+#: ../plugin/controllers/models/timers.py:940
+#: ../plugin/controllers/models/timers.py:959
 msgid "Sleeptimer has been disabled"
 msgstr "تم تعطيل مؤقت النوم"
 
-#: ../plugin/controllers/models/timers.py:820
-#: ../plugin/controllers/models/timers.py:846
+#: ../plugin/controllers/models/timers.py:821
+#: ../plugin/controllers/models/timers.py:847
 msgid "Sleeptimer is disabled"
 msgstr "تم تعطيل مؤقت النوم"
 
-#: ../plugin/controllers/models/timers.py:820
-#: ../plugin/controllers/models/timers.py:846
+#: ../plugin/controllers/models/timers.py:821
+#: ../plugin/controllers/models/timers.py:847
 msgid "Sleeptimer is enabled"
 msgstr "تم تفعيل مؤقت النوم"
 
-#: ../plugin/controllers/models/timers.py:876
-#: ../plugin/controllers/models/timers.py:939
-#: ../plugin/controllers/models/timers.py:953
+#: ../plugin/controllers/models/timers.py:877
+#: ../plugin/controllers/models/timers.py:940
+#: ../plugin/controllers/models/timers.py:954
 #, python-format
 msgid "Sleeptimer set to %d minutes"
 msgstr "ضبط مؤقت النوم %d بالدقائق"
@@ -2122,7 +2123,7 @@ msgstr "‫Stream"
 msgid "Stream Clients"
 msgstr "‫Stream"
 
-#: ../plugin/plugin.py:165
+#: ../plugin/plugin.py:172
 #, fuzzy
 msgid "Streaming port"
 msgstr "‫Stream"
@@ -2144,7 +2145,7 @@ msgid "Subservices"
 msgstr "القنوات الفرعية"
 
 #: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:47
+#: ../plugin/controllers/models/timers.py:43 ../plugin/controllers/i18n.py:47
 msgid "Sun"
 msgstr "الاحد"
 
@@ -2186,7 +2187,7 @@ msgstr "التلفزيون"
 msgid "Template Engine"
 msgstr "قالب الانجما"
 
-#: ../plugin/controllers/base.py:397
+#: ../plugin/controllers/base.py:399
 msgid "Terminal"
 msgstr "محطة"
 
@@ -2211,18 +2212,18 @@ msgstr "المؤشر '%s' لا يمكن أن يكون فارغا"
 msgid "The parameter 'command' must be a number"
 msgstr "مؤشر 'الأمر' يجب أن يكون رقما"
 
-#: ../plugin/controllers/models/timers.py:507
+#: ../plugin/controllers/models/timers.py:508
 #, python-format
 msgid "The timer '%s' has been %s successfully"
 msgstr "إكتمال '%s' المؤقت %s بنجاح"
 
-#: ../plugin/controllers/models/timers.py:457
-#: ../plugin/controllers/models/timers.py:463
+#: ../plugin/controllers/models/timers.py:458
+#: ../plugin/controllers/models/timers.py:464
 #, python-format
 msgid "The timer '%s' has been deleted successfully"
 msgstr "تم حذف المؤقت' %s ' بنجاح"
 
-#: ../plugin/controllers/models/timers.py:499
+#: ../plugin/controllers/models/timers.py:500
 #, python-format
 msgid "The timer '%s' now recorded! Not disabled!"
 msgstr "المؤقت '%s' الأن يسجل! ليس معطلا!"
@@ -2231,7 +2232,7 @@ msgstr "المؤقت '%s' الأن يسجل! ليس معطلا!"
 msgid "Theme"
 msgstr "سمة"
 
-#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:144
+#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:151
 #, fuzzy
 msgid "Theme mode"
 msgstr "سمة"
@@ -2241,7 +2242,7 @@ msgid "This service can not be added."
 msgstr "لا يمكن إضافة هذه القناة."
 
 #: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:51
+#: ../plugin/controllers/models/timers.py:43 ../plugin/controllers/i18n.py:51
 msgid "Thu"
 msgstr "الخميس"
 
@@ -2265,27 +2266,27 @@ msgstr "نفذ الوقت"
 msgid "Timer"
 msgstr "المؤقت"
 
-#: ../plugin/controllers/models/timers.py:316
+#: ../plugin/controllers/models/timers.py:317
 #, python-format
 msgid "Timer '%s' added"
 msgstr "تمت إضافة '%s' المؤقت"
 
-#: ../plugin/controllers/models/timers.py:493
+#: ../plugin/controllers/models/timers.py:494
 #, python-format
 msgid "Timer '%s' already exists!"
 msgstr "المؤقت ' %s ' موجود بالفعل!"
 
-#: ../plugin/controllers/models/timers.py:419
+#: ../plugin/controllers/models/timers.py:420
 #, python-format
 msgid "Timer '%s' changed"
 msgstr "تم تغيير '%s' المؤقت"
 
-#: ../plugin/controllers/models/timers.py:487
+#: ../plugin/controllers/models/timers.py:488
 #, python-format
 msgid "Timer '%s' not enabled while Conflict"
 msgstr "لم يتم تمكين المؤقت ' %s ' اثناء التعارض"
 
-#: ../plugin/controllers/models/timers.py:438
+#: ../plugin/controllers/models/timers.py:439
 #, python-format
 msgid "Timer '%s' not saved while Conflict"
 msgstr "لم يتم حفظ المؤقت ' %s ' اثناء التعارض"
@@ -2298,7 +2299,7 @@ msgstr "وأضاف المؤقت"
 msgid "Timer added"
 msgstr "وأضاف المؤقت"
 
-#: ../plugin/controllers/models/timers.py:579
+#: ../plugin/controllers/models/timers.py:580
 msgid "Timer conflict detected! Not recording!"
 msgstr "الكشف عن المؤقت المتعارض! بدون تسجيل!"
 
@@ -2306,7 +2307,7 @@ msgstr "الكشف عن المؤقت المتعارض! بدون تسجيل!"
 msgid "Timer type"
 msgstr "نوع المؤقت"
 
-#: ../plugin/controllers/models/timers.py:529
+#: ../plugin/controllers/models/timers.py:530
 msgid "TimerList has been saved"
 msgstr "تم حفظ قائمة المؤقت"
 
@@ -2323,7 +2324,7 @@ msgid "Title"
 msgstr "عنوان"
 
 #: ../plugin/controllers/models/movies.py:58
-#: ../plugin/controllers/models/timers.py:46
+#: ../plugin/controllers/models/timers.py:47
 msgid "Today"
 msgstr ""
 
@@ -2353,7 +2354,7 @@ msgid "Tu"
 msgstr "الثلاثاء"
 
 #: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:49
+#: ../plugin/controllers/models/timers.py:43 ../plugin/controllers/i18n.py:49
 msgid "Tue"
 msgstr "الثلاثاء"
 
@@ -2402,7 +2403,7 @@ msgstr "النوع"
 msgid "Unknown Volume command %s"
 msgstr "أمر الصوت مجهول %s"
 
-#: ../plugin/controllers/models/timers.py:674
+#: ../plugin/controllers/models/timers.py:675
 #, python-format
 msgid "Unknown command: '%s'"
 msgstr "أمر مجهول: ' %s '"
@@ -2456,7 +2457,7 @@ msgstr ""
 msgid "Use classic interface"
 msgstr "استخدام التصميم الجديد"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:152
 #, fuzzy
 msgid "Use custom Color"
 msgstr "استخدام موقع مخصص"
@@ -2466,7 +2467,7 @@ msgstr "استخدام موقع مخصص"
 msgid "Use custom STB name"
 msgstr "إستخدام مخصص لإسم الجهاز"
 
-#: ../plugin/plugin.py:148
+#: ../plugin/plugin.py:155
 msgid "Use custom box name"
 msgstr "إستخدام مخصص لإسم الجهاز"
 
@@ -2475,7 +2476,7 @@ msgstr "إستخدام مخصص لإسم الجهاز"
 msgid "Use modern design"
 msgstr "استخدام التصميم الجديد"
 
-#: ../plugin/controllers/i18n.py:584 ../plugin/plugin.py:142
+#: ../plugin/controllers/i18n.py:584 ../plugin/plugin.py:149
 msgid "Use modern interface"
 msgstr "استخدام التصميم الجديد"
 
@@ -2483,7 +2484,7 @@ msgstr "استخدام التصميم الجديد"
 msgid "VPS"
 msgstr "الخادم الإفتراضي الخاص"
 
-#: ../plugin/controllers/models/timers.py:997
+#: ../plugin/controllers/models/timers.py:998
 msgid "VPS plugin not found"
 msgstr "لم يتم العثور على بلج أنز الخادم الإفتراضي الخاص"
 
@@ -2552,7 +2553,7 @@ msgid "Web TV"
 msgstr "التلفزيون عبر الانترنت"
 
 #: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:50
+#: ../plugin/controllers/models/timers.py:43 ../plugin/controllers/i18n.py:50
 msgid "Wed"
 msgstr "الاربعاء"
 
@@ -2568,7 +2569,7 @@ msgstr "اسبوعيا (الاثنين)"
 msgid "Weekly (Sunday)"
 msgstr "اسبوعيا (الاحد)"
 
-#: ../plugin/plugin.py:162
+#: ../plugin/plugin.py:169
 msgid "Without auth only local access is allowed!"
 msgstr "دون المصادقة يسمح فقط الوصول المحلي!"
 
@@ -2592,7 +2593,7 @@ msgid "Yes/No"
 msgstr "نعم/لا"
 
 #: ../plugin/controllers/models/movies.py:60
-#: ../plugin/controllers/models/timers.py:49
+#: ../plugin/controllers/models/timers.py:50
 msgid "Yesterday"
 msgstr ""
 
@@ -2619,6 +2620,10 @@ msgstr "الانتقال إلى"
 #: ../plugin/controllers/i18n.py:373
 msgid "auto"
 msgstr "تلقائي"
+
+#: ../plugin/plugin.py:130
+msgid "box_ip"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:356
 msgid "case-insensitive"
@@ -2683,9 +2688,9 @@ msgstr "فى عنوان"
 
 #: ../plugin/controllers/models/info.py:242
 #: ../plugin/controllers/models/info.py:245
-#: ../plugin/controllers/models/movies.py:271
-#: ../plugin/controllers/models/movies.py:401
-#: ../plugin/controllers/models/movies.py:821
+#: ../plugin/controllers/models/movies.py:273
+#: ../plugin/controllers/models/movies.py:403
+#: ../plugin/controllers/models/movies.py:823
 msgid "kB"
 msgstr "كيلوبايت"
 
@@ -2742,7 +2747,7 @@ msgstr "x تسجيل"
 msgid "regex match (experimental)"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:472
+#: ../plugin/controllers/models/movies.py:474
 msgid "remove"
 msgstr "حذف"
 

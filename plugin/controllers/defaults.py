@@ -6,11 +6,12 @@ import sys
 
 from Components.Language import language
 from Components.config import config as comp_config
+from Components.Network import iNetwork
 
 from enigma import eEnv
 from boxbranding import getHaveTranscoding, getHaveMultiTranscoding
 
-OPENWEBIFVER = "OWIF 1.4.29 for Open Vision"
+OPENWEBIFVER = "OWIF 1.4.30 for Open Vision"
 
 PLUGIN_NAME = 'OpenWebif'
 PLUGIN_DESCRIPTION = "OpenWebif Configuration"
@@ -114,6 +115,15 @@ def getPiconPath():
 
 def refreshPiconPath():
 	PICON_PATH = getPiconPath()
+
+
+def getIP():
+	ifaces = iNetwork.getConfiguredAdapters()
+	if len(ifaces):
+		ip_list = iNetwork.getAdapterAttribute(ifaces[0], "ip")  # use only the first configured interface
+		if ip_list:
+			return "%d.%d.%d.%d" % (ip_list[0], ip_list[1], ip_list[2], ip_list[3])
+	return None
 
 
 PICON_PATH = getPiconPath()

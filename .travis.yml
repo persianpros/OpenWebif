@@ -1,6 +1,5 @@
 language: python
 
-
 matrix:
   include:
     - name: "Python 2.7"
@@ -17,9 +16,6 @@ matrix:
         - python -m compileall -l . -l plugin -l plugin/backport -l plugin/controllers -l plugin/controllers/models
         - cheetah compile -R plugin
         - python testsuite/evil_eval.py
-        - futurize --stage1 **/*.py > futurize_stage1.txt
-        - futurize --stage2 **/*.py > futurize_stage2.txt
-        - 2to3 -f all . > 2to3.txt
     - name: "Python 3.8"
       python: 3.8
       before_install:

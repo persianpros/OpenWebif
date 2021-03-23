@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-14 17:19+0330\n"
+"POT-Creation-Date: 2021-03-23 23:21+0430\n"
 "PO-Revision-Date: 2020-11-08 16:22+0100\n"
 "Last-Translator: pololoko111 <pololoko111@o2.pl>\n"
 "Language-Team: \n"
@@ -14,18 +14,18 @@ msgstr ""
 "X-Generator: Poedit 2.4.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 
-#: ../plugin/controllers/models/timers.py:59
+#: ../plugin/controllers/models/timers.py:60
 #, python-format
 msgid "%02d.%02d."
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:61
+#: ../plugin/controllers/models/timers.py:62
 #, python-format
 msgid "%02d.%02d.%d"
 msgstr ""
 
 #: ../plugin/controllers/models/movies.py:70
-#: ../plugin/controllers/models/timers.py:63
+#: ../plugin/controllers/models/timers.py:64
 #, python-format
 msgid "%02d:%02d"
 msgstr ""
@@ -37,17 +37,17 @@ msgstr ""
 msgid "%d.%m.%Y"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:185
 #: ../plugin/controllers/models/timers.py:186
-#: ../plugin/controllers/models/timers.py:274
+#: ../plugin/controllers/models/timers.py:187
 #: ../plugin/controllers/models/timers.py:275
-#: ../plugin/controllers/models/timers.py:432
+#: ../plugin/controllers/models/timers.py:276
 #: ../plugin/controllers/models/timers.py:433
+#: ../plugin/controllers/models/timers.py:434
 msgid "%d.%m.%Y %H:%M"
 msgstr ""
 
 #: ../plugin/controllers/models/movies.py:66
-#: ../plugin/controllers/models/timers.py:57
+#: ../plugin/controllers/models/timers.py:58
 #, python-format
 msgid "%s %02d.%02d."
 msgstr ""
@@ -136,7 +136,7 @@ msgstr "Dodaj kanały jako alternatywne"
 msgid "Add selection to bouquet"
 msgstr "Dodaj wybór do bukietu"
 
-#: ../plugin/plugin.py:166
+#: ../plugin/plugin.py:173
 msgid "Add service name to stream information"
 msgstr "Dodaj nazwę usługi, aby przesyłać informacje strumieniowo"
 
@@ -174,7 +174,7 @@ msgstr "Wszystkie pliki tego oprogramowania są oprogramowaniem typu open source
 msgid "All alternative services deleted."
 msgstr "Wszystkie usługi alternatywne zostały usunięte."
 
-#: ../plugin/plugin.py:167
+#: ../plugin/plugin.py:174
 msgid "Allow IPK Upload"
 msgstr "Zezwalaj na przesyłanie IPK"
 
@@ -281,7 +281,7 @@ msgstr "Edycja AutoTimera"
 msgid "AutoTimer Settings"
 msgstr "Ustawienia AutoTimera"
 
-#: ../plugin/controllers/base.py:351 ../plugin/controllers/i18n.py:335
+#: ../plugin/controllers/base.py:353 ../plugin/controllers/i18n.py:335
 msgid "AutoTimers"
 msgstr "Lista AutoTimera"
 
@@ -383,7 +383,7 @@ msgstr "Nazwa bukietu została zmieniona."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Ustawienia bukietów zostały pomyślnie przywrócone"
 
-#: ../plugin/controllers/base.py:356
+#: ../plugin/controllers/base.py:358
 msgid "BouquetEditor"
 msgstr "EdytorBukietów"
 
@@ -473,7 +473,7 @@ msgstr ""
 msgid "Config"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:280
+#: ../plugin/controllers/models/timers.py:281
 #, python-format
 msgid "Conflicting Timer(s) detected! %s"
 msgstr "Wykryto konflikt(y) Timera(ów)! %s  "
@@ -486,12 +486,12 @@ msgstr "Współtwórcy"
 msgid "Control"
 msgstr "Kontrola"
 
-#: ../plugin/controllers/models/timers.py:311
+#: ../plugin/controllers/models/timers.py:312
 #, python-format
 msgid "Could not add timer '%s'!"
 msgstr "Nie można dodać timera '%s'!"
 
-#: ../plugin/controllers/models/timers.py:444
+#: ../plugin/controllers/models/timers.py:445
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Nie można znaleźć timera  '%s' o podanym czasie rozpoczęcia i zakończenia!"
@@ -513,7 +513,7 @@ msgstr "Obecne Wydarzenie"
 msgid "Custom STB name"
 msgstr "Niestandardowa nazwa odbiornika"
 
-#: ../plugin/plugin.py:150
+#: ../plugin/plugin.py:157
 msgid "Custom box name"
 msgstr "Niestandardowa nazwa odbiornika"
 
@@ -546,7 +546,7 @@ msgstr ""
 msgid "Date (oldest)"
 msgstr ""
 
-#: ../plugin/plugin.py:169
+#: ../plugin/plugin.py:176
 msgid "Debug - Display Tracebacks in browser"
 msgstr "Debuguj - Wyświetlaj Tracebacki w przeglądarce"
 
@@ -587,7 +587,7 @@ msgstr "Usuń Nagrywanie"
 msgid "Delete Timer"
 msgstr "Usuń Timer"
 
-#: ../plugin/controllers/models/movies.py:478
+#: ../plugin/controllers/models/movies.py:480
 msgid ""
 "Delete failed, because there is no movie trash !\n"
 "Disable movie trash in configuration to delete this item"
@@ -607,7 +607,7 @@ msgstr "Opis"
 msgid "Disable Timer"
 msgstr "Wyłącz Timer"
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:167
 msgid "Disable remote access for user root"
 msgstr "Wyłącz dostęp zdalny dla użytkownika root"
 
@@ -681,11 +681,11 @@ msgstr "Wyszukiwanie EPG"
 msgid "EPG encoding"
 msgstr "Kodowanie EPG"
 
-#: ../plugin/controllers/base.py:360
+#: ../plugin/controllers/base.py:362
 msgid "EPGRefresh"
 msgstr "Odśwież EPG"
 
-#: ../plugin/controllers/models/timers.py:865
+#: ../plugin/controllers/models/timers.py:866
 msgid "ERROR: Cannot set SleepTimer while device is in Standby-Mode"
 msgstr "BŁĄD: Nie można ustawić SleepTimera, gdy urządzenie znajduje się w trybie gotowości"
 
@@ -697,19 +697,19 @@ msgstr "Edycja Timera"
 msgid "Editor"
 msgstr "Edytor"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:166
 msgid "Enable Authentication for streaming"
 msgstr "Włącz uwierzytelnianie dla przesyłania strumieniowego"
 
-#: ../plugin/plugin.py:152
+#: ../plugin/plugin.py:159
 msgid "Enable HTTP Authentication"
 msgstr "Włącz uwierzytelnianie HTTP"
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:160
 msgid "Enable HTTPS"
 msgstr "Włącz HTTPS"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:163
 msgid "Enable HTTPS Authentication"
 msgstr "Włącz uwierzytelnianie HTTPS"
 
@@ -717,7 +717,7 @@ msgstr "Włącz uwierzytelnianie HTTPS"
 msgid "Enable Messages"
 msgstr "Włącz Wiadomości"
 
-#: ../plugin/plugin.py:164
+#: ../plugin/plugin.py:171
 msgid "Enable Parental Control"
 msgstr "Włącz Kontrolę Rodzicielską"
 
@@ -725,7 +725,7 @@ msgstr "Włącz Kontrolę Rodzicielską"
 msgid "Enable Timer"
 msgstr "Włącz Timer"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:170
 msgid "Enable access from VPNs"
 msgstr "Włącz dostęp z VPN"
 
@@ -797,7 +797,7 @@ msgstr ""
 msgid "Error"
 msgstr "Błąd"
 
-#: ../plugin/controllers/models/timers.py:992
+#: ../plugin/controllers/models/timers.py:993
 msgid "Error parsing vps.xml"
 msgstr "Błąd podczas analizowania pliku vps.xml"
 
@@ -837,7 +837,7 @@ msgstr "Błąd: Nie można usunąć bukietu %s, błąd OSE."
 msgid "Event not found"
 msgstr "Nie znaleziono wydarzenia"
 
-#: ../plugin/controllers/models/timers.py:325
+#: ../plugin/controllers/models/timers.py:326
 msgid "EventId not found"
 msgstr "Nie znaleziono identyfikatora zdarzenia"
 
@@ -917,7 +917,7 @@ msgid "Free/Total memory"
 msgstr "Wolna Pamięć"
 
 #: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:52
+#: ../plugin/controllers/models/timers.py:43 ../plugin/controllers/i18n.py:52
 msgid "Fri"
 msgstr "Pt"
 
@@ -938,9 +938,9 @@ msgstr "Pełny pilot"
 #: ../plugin/controllers/models/info.py:372
 #: ../plugin/controllers/models/info.py:387
 #: ../plugin/controllers/models/info.py:390
-#: ../plugin/controllers/models/movies.py:267
-#: ../plugin/controllers/models/movies.py:397
-#: ../plugin/controllers/models/movies.py:817
+#: ../plugin/controllers/models/movies.py:269
+#: ../plugin/controllers/models/movies.py:399
+#: ../plugin/controllers/models/movies.py:819
 msgid "GB"
 msgstr ""
 
@@ -965,11 +965,11 @@ msgstr "Nie udało się uzyskać listy zmiennych dla nowo utworzonej alternatywy
 msgid "Get mutable list for new created bouquet failed!"
 msgstr "Nie udało się uzyskać listy zmiennych dla nowo utworzonego bukietu!"
 
-#: ../plugin/plugin.py:151
+#: ../plugin/plugin.py:158
 msgid "HTTP port"
 msgstr "Port HTTP"
 
-#: ../plugin/plugin.py:155
+#: ../plugin/plugin.py:162
 msgid "HTTPS port"
 msgstr "Port HTTPS"
 
@@ -1054,7 +1054,7 @@ msgstr "Dołącz rozszerzony opis"
 msgid "Include short description"
 msgstr "Dołącz krótki opis"
 
-#: ../plugin/controllers/models/timers.py:560
+#: ../plugin/controllers/models/timers.py:561
 msgid "Infinite Instant recording started"
 msgstr "Rozpoczęto nieskończone natychmiastowe nagrywanie"
 
@@ -1078,7 +1078,7 @@ msgstr "Zainstalowano"
 msgid "Instant Record"
 msgstr "Natychmiastowy Zapis"
 
-#: ../plugin/controllers/models/timers.py:551
+#: ../plugin/controllers/models/timers.py:552
 msgid "Instant record for current Event started"
 msgstr "Rozpoczęto natychmiastowy zapis bieżącego wydarzenia"
 
@@ -1131,7 +1131,7 @@ msgstr ""
 msgid "LCD"
 msgstr ""
 
-#: ../plugin/controllers/base.py:323
+#: ../plugin/controllers/base.py:325
 msgid "LCD4Linux Setup"
 msgstr "Konfiguracja LCD4Linux"
 
@@ -1157,7 +1157,7 @@ msgstr ""
 msgid "Link speed"
 msgstr "Szybkość łącza"
 
-#: ../plugin/controllers/models/timers.py:521
+#: ../plugin/controllers/models/timers.py:522
 msgid "List of Timers has been cleaned"
 msgstr "Lista Timerów została wyczyszczona"
 
@@ -1181,9 +1181,9 @@ msgstr "Adres MAC"
 #: ../plugin/controllers/models/info.py:363
 #: ../plugin/controllers/models/info.py:374
 #: ../plugin/controllers/models/info.py:392
-#: ../plugin/controllers/models/movies.py:269
-#: ../plugin/controllers/models/movies.py:399
-#: ../plugin/controllers/models/movies.py:819
+#: ../plugin/controllers/models/movies.py:271
+#: ../plugin/controllers/models/movies.py:401
+#: ../plugin/controllers/models/movies.py:821
 msgid "MB"
 msgstr ""
 
@@ -1244,7 +1244,7 @@ msgstr "Minuta"
 msgid "Missing mandatory parameter '%s'"
 msgstr "Brak parametru obowiązkowego '%s'"
 
-#: ../plugin/controllers/models/timers.py:652
+#: ../plugin/controllers/models/timers.py:653
 msgid "Missing requesteter: sRef"
 msgstr "Brak wnioskodawcy: sRef"
 
@@ -1257,7 +1257,7 @@ msgid "Model"
 msgstr ""
 
 #: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:48
+#: ../plugin/controllers/models/timers.py:43 ../plugin/controllers/i18n.py:48
 msgid "Mon"
 msgstr "Pon"
 
@@ -1313,7 +1313,7 @@ msgstr "Multi EPG"
 msgid "MultiTranscoding"
 msgstr "Transkoduj"
 
-#: ../plugin/controllers/base.py:347
+#: ../plugin/controllers/base.py:349
 msgid "NCam Webinterface"
 msgstr "Interfejs sieciowy NCam"
 
@@ -1395,7 +1395,7 @@ msgstr "Nie podano nazwy bukietu!"
 msgid "No current service given!"
 msgstr "Brak bieżącej usługi!"
 
-#: ../plugin/controllers/models/timers.py:545
+#: ../plugin/controllers/models/timers.py:546
 msgid "No event found! Not recording!"
 msgstr "Nie znaleziono wydarzenia! Nie nagrywam!"
 
@@ -1403,8 +1403,8 @@ msgstr "Nie znaleziono wydarzenia! Nie nagrywam!"
 msgid "No marker-name given!"
 msgstr "Nie podano nazwy znacznika!"
 
-#: ../plugin/controllers/models/timers.py:468
-#: ../plugin/controllers/models/timers.py:513
+#: ../plugin/controllers/models/timers.py:469
+#: ../plugin/controllers/models/timers.py:514
 msgid "No matching Timer found"
 msgstr "Nie znaleziono pasującego timera"
 
@@ -1475,7 +1475,7 @@ msgstr "Teraz"
 msgid "OE"
 msgstr ""
 
-#: ../plugin/controllers/base.py:345
+#: ../plugin/controllers/base.py:347
 msgid "OSCam Webinterface"
 msgstr "Interfejs sieciowy OSCam"
 
@@ -1555,7 +1555,7 @@ msgstr ""
 msgid "Open in new window"
 msgstr "Otworzyć w nowym oknie"
 
-#: ../plugin/plugin.py:139
+#: ../plugin/plugin.py:146
 msgid "OpenWebInterface Enabled"
 msgstr "Włączony otwarty interfejs sieciowy"
 
@@ -1563,7 +1563,7 @@ msgstr "Włączony otwarty interfejs sieciowy"
 msgid "OpenWebif Browser Settings"
 msgstr "Ustawienia przeglądarki OpenWebif"
 
-#: ../plugin/plugin.py:178 ../plugin/plugin.py:246 ../plugin/plugin.py:248
+#: ../plugin/plugin.py:185 ../plugin/plugin.py:253 ../plugin/plugin.py:255
 msgid "OpenWebif Configuration"
 msgstr "Konfiguracja OpenWebif"
 
@@ -1571,9 +1571,10 @@ msgstr "Konfiguracja OpenWebif"
 msgid "OpenWebif Settings"
 msgstr "Ustawienia OpenWebif"
 
-#: ../plugin/plugin.py:125
-msgid "OpenWebif url: http://yourip:port"
-msgstr "OpenWebif url: http: // twój ip: port"
+#: ../plugin/plugin.py:132
+#, fuzzy
+msgid "OpenWebif url:"
+msgstr "Konfiguracja OpenWebif"
 
 #: ../plugin/controllers/models/services.py:264
 #: ../plugin/controllers/i18n.py:497
@@ -1630,7 +1631,7 @@ msgstr "Format listy odtwarzania"
 msgid "Playback"
 msgstr "Odtwarzanie nagranego dźwięku"
 
-#: ../plugin/plugin.py:168
+#: ../plugin/plugin.py:175
 msgid "Playback IPTV Streams in browser"
 msgstr ""
 
@@ -1650,7 +1651,7 @@ msgstr ""
 msgid "Power Control"
 msgstr "Opcje Zasilania"
 
-#: ../plugin/controllers/models/timers.py:741
+#: ../plugin/controllers/models/timers.py:742
 msgid "PowerTimer feature not available"
 msgstr "Funkcja PowerTimer jest niedostępna"
 
@@ -1739,7 +1740,7 @@ msgstr "Zmień nazwę nagrania"
 msgid "Repeated"
 msgstr "Powtarzający się"
 
-#: ../plugin/plugin.py:157
+#: ../plugin/plugin.py:164
 msgid "Require client cert for HTTPS"
 msgstr "Wymagaj certyfikatu klienta dla protokołu HTTPS"
 
@@ -1802,7 +1803,7 @@ msgid "Safe mode"
 msgstr "Tryb bezpieczeństwa"
 
 #: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:53
+#: ../plugin/controllers/models/timers.py:43 ../plugin/controllers/i18n.py:53
 msgid "Sat"
 msgstr "Sob"
 
@@ -1944,7 +1945,7 @@ msgstr "Usługi"
 msgid "Set maximum duration"
 msgstr "Ustaw maksymalny czas trwania"
 
-#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:259
+#: ../plugin/controllers/base.py:312 ../plugin/controllers/i18n.py:259
 #: ../plugin/controllers/i18n.py:411
 msgid "Settings"
 msgstr "Ustawienia"
@@ -1966,11 +1967,11 @@ msgstr ""
 msgid "Show STB name in header"
 msgstr "Pokaż nazwę Odbiornika w nagłówku"
 
-#: ../plugin/plugin.py:141
+#: ../plugin/plugin.py:148
 msgid "Show benchmark in STB information"
 msgstr ""
 
-#: ../plugin/plugin.py:146
+#: ../plugin/plugin.py:153
 msgid "Show box name in header"
 msgstr "Pokaż nazwę Odbiornika w nagłówku"
 
@@ -2023,32 +2024,32 @@ msgstr "Witryna i źródła"
 msgid "Skins"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:825
-#: ../plugin/controllers/models/timers.py:852
-#: ../plugin/controllers/models/timers.py:881
-#: ../plugin/controllers/models/timers.py:963
+#: ../plugin/controllers/models/timers.py:826
+#: ../plugin/controllers/models/timers.py:853
+#: ../plugin/controllers/models/timers.py:882
+#: ../plugin/controllers/models/timers.py:964
 msgid "SleepTimer error"
 msgstr "Błąd Wyłącznika czasowego"
 
-#: ../plugin/controllers/models/timers.py:870
-#: ../plugin/controllers/models/timers.py:939
-#: ../plugin/controllers/models/timers.py:958
+#: ../plugin/controllers/models/timers.py:871
+#: ../plugin/controllers/models/timers.py:940
+#: ../plugin/controllers/models/timers.py:959
 msgid "Sleeptimer has been disabled"
 msgstr "Wyłącznik czasowy został wyłączony"
 
-#: ../plugin/controllers/models/timers.py:820
-#: ../plugin/controllers/models/timers.py:846
+#: ../plugin/controllers/models/timers.py:821
+#: ../plugin/controllers/models/timers.py:847
 msgid "Sleeptimer is disabled"
 msgstr "Wyłącznik czasowy jest wyłączony"
 
-#: ../plugin/controllers/models/timers.py:820
-#: ../plugin/controllers/models/timers.py:846
+#: ../plugin/controllers/models/timers.py:821
+#: ../plugin/controllers/models/timers.py:847
 msgid "Sleeptimer is enabled"
 msgstr "Wyłącznik czasowy jest włączony"
 
-#: ../plugin/controllers/models/timers.py:876
-#: ../plugin/controllers/models/timers.py:939
-#: ../plugin/controllers/models/timers.py:953
+#: ../plugin/controllers/models/timers.py:877
+#: ../plugin/controllers/models/timers.py:940
+#: ../plugin/controllers/models/timers.py:954
 #, python-format
 msgid "Sleeptimer set to %d minutes"
 msgstr "Wyłącznik czasowy ustawiony na %d minut"
@@ -2114,7 +2115,7 @@ msgstr "Strumień"
 msgid "Stream Clients"
 msgstr "Klienci strumieniowania"
 
-#: ../plugin/plugin.py:165
+#: ../plugin/plugin.py:172
 #, fuzzy
 msgid "Streaming port"
 msgstr "Klienci strumieniowania"
@@ -2136,7 +2137,7 @@ msgid "Subservices"
 msgstr "Usługi dodatkowe"
 
 #: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:47
+#: ../plugin/controllers/models/timers.py:43 ../plugin/controllers/i18n.py:47
 msgid "Sun"
 msgstr "Nie"
 
@@ -2178,7 +2179,7 @@ msgstr "Telewizja"
 msgid "Template Engine"
 msgstr "Silnik szablonów"
 
-#: ../plugin/controllers/base.py:397
+#: ../plugin/controllers/base.py:399
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -2203,18 +2204,18 @@ msgstr "Parametr  '%s'  nie może być pusty"
 msgid "The parameter 'command' must be a number"
 msgstr "Parametr  'command'  musi być liczbą"
 
-#: ../plugin/controllers/models/timers.py:507
+#: ../plugin/controllers/models/timers.py:508
 #, python-format
 msgid "The timer '%s' has been %s successfully"
 msgstr "Timer '%s' został pomyślnie %s "
 
-#: ../plugin/controllers/models/timers.py:457
-#: ../plugin/controllers/models/timers.py:463
+#: ../plugin/controllers/models/timers.py:458
+#: ../plugin/controllers/models/timers.py:464
 #, python-format
 msgid "The timer '%s' has been deleted successfully"
 msgstr "Licznik czasu '%s' został pomyślnie usunięty"
 
-#: ../plugin/controllers/models/timers.py:499
+#: ../plugin/controllers/models/timers.py:500
 #, python-format
 msgid "The timer '%s' now recorded! Not disabled!"
 msgstr "Licznik czasu  '%s'  został nagrany! Nie wyłączone!"
@@ -2223,7 +2224,7 @@ msgstr "Licznik czasu  '%s'  został nagrany! Nie wyłączone!"
 msgid "Theme"
 msgstr "Motyw"
 
-#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:144
+#: ../plugin/controllers/i18n.py:308 ../plugin/plugin.py:151
 #, fuzzy
 msgid "Theme mode"
 msgstr "Motyw"
@@ -2233,7 +2234,7 @@ msgid "This service can not be added."
 msgstr "Nie można dodać tej usługi."
 
 #: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:51
+#: ../plugin/controllers/models/timers.py:43 ../plugin/controllers/i18n.py:51
 msgid "Thu"
 msgstr "Czw"
 
@@ -2257,27 +2258,27 @@ msgstr "Koniec czasu"
 msgid "Timer"
 msgstr "Timer"
 
-#: ../plugin/controllers/models/timers.py:316
+#: ../plugin/controllers/models/timers.py:317
 #, python-format
 msgid "Timer '%s' added"
 msgstr "Dodano Timer '%s' "
 
-#: ../plugin/controllers/models/timers.py:493
+#: ../plugin/controllers/models/timers.py:494
 #, python-format
 msgid "Timer '%s' already exists!"
 msgstr "Timer '%s' już istnieje!"
 
-#: ../plugin/controllers/models/timers.py:419
+#: ../plugin/controllers/models/timers.py:420
 #, python-format
 msgid "Timer '%s' changed"
 msgstr "Zmieniono Timer '%s' "
 
-#: ../plugin/controllers/models/timers.py:487
+#: ../plugin/controllers/models/timers.py:488
 #, python-format
 msgid "Timer '%s' not enabled while Conflict"
 msgstr "Timer  '%s' nie jest włączony podczas konfliktu"
 
-#: ../plugin/controllers/models/timers.py:438
+#: ../plugin/controllers/models/timers.py:439
 #, python-format
 msgid "Timer '%s' not saved while Conflict"
 msgstr "Timer  '%s' nie jest zapisany podczas konfliktu"
@@ -2290,7 +2291,7 @@ msgstr "Dodano Timer"
 msgid "Timer added"
 msgstr "Dodano timer"
 
-#: ../plugin/controllers/models/timers.py:579
+#: ../plugin/controllers/models/timers.py:580
 msgid "Timer conflict detected! Not recording!"
 msgstr "Wykryto konflikt timera! Nie nagrywam!"
 
@@ -2298,7 +2299,7 @@ msgstr "Wykryto konflikt timera! Nie nagrywam!"
 msgid "Timer type"
 msgstr "Typ Timera"
 
-#: ../plugin/controllers/models/timers.py:529
+#: ../plugin/controllers/models/timers.py:530
 msgid "TimerList has been saved"
 msgstr "Lista timerów została sapisana"
 
@@ -2315,7 +2316,7 @@ msgid "Title"
 msgstr "Tytuł"
 
 #: ../plugin/controllers/models/movies.py:58
-#: ../plugin/controllers/models/timers.py:46
+#: ../plugin/controllers/models/timers.py:47
 msgid "Today"
 msgstr ""
 
@@ -2345,7 +2346,7 @@ msgid "Tu"
 msgstr ""
 
 #: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:49
+#: ../plugin/controllers/models/timers.py:43 ../plugin/controllers/i18n.py:49
 msgid "Tue"
 msgstr "Wto"
 
@@ -2394,7 +2395,7 @@ msgstr "Typ"
 msgid "Unknown Volume command %s"
 msgstr "Nieznane polecenie głośności %s"
 
-#: ../plugin/controllers/models/timers.py:674
+#: ../plugin/controllers/models/timers.py:675
 #, python-format
 msgid "Unknown command: '%s'"
 msgstr "Nieznane polecenie: '%s'"
@@ -2448,7 +2449,7 @@ msgstr "Jeśli to możliwe, używaj jako PiP"
 msgid "Use classic interface"
 msgstr "Użyj nowoczesnego interfejsu"
 
-#: ../plugin/plugin.py:145
+#: ../plugin/plugin.py:152
 msgid "Use custom Color"
 msgstr "Użyj koloru niestandardowego"
 
@@ -2457,7 +2458,7 @@ msgstr "Użyj koloru niestandardowego"
 msgid "Use custom STB name"
 msgstr "Użyj niestandardowej nazwy odbiornika"
 
-#: ../plugin/plugin.py:148
+#: ../plugin/plugin.py:155
 msgid "Use custom box name"
 msgstr "Użyj niestandardowej nazwy odbiornika"
 
@@ -2466,7 +2467,7 @@ msgstr "Użyj niestandardowej nazwy odbiornika"
 msgid "Use modern design"
 msgstr "Użyj nowoczesnego interfejsu"
 
-#: ../plugin/controllers/i18n.py:584 ../plugin/plugin.py:142
+#: ../plugin/controllers/i18n.py:584 ../plugin/plugin.py:149
 msgid "Use modern interface"
 msgstr "Użyj nowoczesnego interfejsu"
 
@@ -2474,7 +2475,7 @@ msgstr "Użyj nowoczesnego interfejsu"
 msgid "VPS"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:997
+#: ../plugin/controllers/models/timers.py:998
 msgid "VPS plugin not found"
 msgstr "Nie znaleziono wtyczki VPS"
 
@@ -2543,7 +2544,7 @@ msgid "Web TV"
 msgstr ""
 
 #: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:42 ../plugin/controllers/i18n.py:50
+#: ../plugin/controllers/models/timers.py:43 ../plugin/controllers/i18n.py:50
 msgid "Wed"
 msgstr "Śro"
 
@@ -2559,7 +2560,7 @@ msgstr "Co tydzień (poniedziałek)"
 msgid "Weekly (Sunday)"
 msgstr "Co tydzień (niedziela)"
 
-#: ../plugin/plugin.py:162
+#: ../plugin/plugin.py:169
 msgid "Without auth only local access is allowed!"
 msgstr "Bez autoryzacji dozwolony jest tylko dostęp lokalny!"
 
@@ -2583,7 +2584,7 @@ msgid "Yes/No"
 msgstr "Tak.Nie"
 
 #: ../plugin/controllers/models/movies.py:60
-#: ../plugin/controllers/models/timers.py:49
+#: ../plugin/controllers/models/timers.py:50
 msgid "Yesterday"
 msgstr ""
 
@@ -2609,6 +2610,10 @@ msgstr "Przełączony na"
 
 #: ../plugin/controllers/i18n.py:373
 msgid "auto"
+msgstr ""
+
+#: ../plugin/plugin.py:130
+msgid "box_ip"
 msgstr ""
 
 #: ../plugin/controllers/i18n.py:356
@@ -2674,9 +2679,9 @@ msgstr "W Tytule"
 
 #: ../plugin/controllers/models/info.py:242
 #: ../plugin/controllers/models/info.py:245
-#: ../plugin/controllers/models/movies.py:271
-#: ../plugin/controllers/models/movies.py:401
-#: ../plugin/controllers/models/movies.py:821
+#: ../plugin/controllers/models/movies.py:273
+#: ../plugin/controllers/models/movies.py:403
+#: ../plugin/controllers/models/movies.py:823
 msgid "kB"
 msgstr ""
 
@@ -2733,7 +2738,7 @@ msgstr "nagraj"
 msgid "regex match (experimental)"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:472
+#: ../plugin/controllers/models/movies.py:474
 msgid "remove"
 msgstr "usuń"
 
