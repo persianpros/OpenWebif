@@ -291,6 +291,7 @@ tstrings = {
 	'timers': _("Timers"),
 	'title': _("Title"),
 	'main_memory': _("Free/Total memory"),
+	'ram_benchmark': _("RAM benchmark"),
 	'transcoded': _("transcoded"),
 	'transcode': _("Transcode"),
 	'transcoding': _("Transcoding"),

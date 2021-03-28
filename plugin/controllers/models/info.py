@@ -244,6 +244,10 @@ def getInfo(session=None, need_fullinfo=False):
 			memFree += int(parts[1].strip().split(' ', 1)[0])
 	info['mem2'] = "%s %s" % (memFree, _("kB"))
 	info['mem3'] = _("%s free / %s total") % (info['mem2'], info['mem1'])
+	if config.OpenWebif.about_benchmarkram.value is True:
+		info['rambenchmark'] = about.getRAMBenchmark()
+	else:
+		info['rambenchmark'] = _("Disabled in configuration")
 
 	info['uptime'] = about.getBoxUptime()
 
