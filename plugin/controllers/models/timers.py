@@ -908,7 +908,7 @@ def setSleepTimer(session, time, action, enabled):
 			config.usage.sleep_timer_action.save()
 			active = enabled
 			if enabled:
-				InfoBar.instance.setSleepTimer(time*60)
+				InfoBar.instance.setSleepTimer(time * 60)
 			else:
 				InfoBar.instance.setSleepTimer(0)
 			return {
