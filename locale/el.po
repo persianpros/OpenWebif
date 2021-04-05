@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebIf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-29 18:21+0430\n"
+"POT-Creation-Date: 2021-04-05 14:01+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: MCelliot_g <mcelliot_g@hotmail.com>\n"
 "Language-Team: satdreamgr\n"
@@ -689,7 +689,7 @@ msgstr "Κωδικοποίηση EPG"
 msgid "EPGRefresh"
 msgstr "Ανανέωση EPG"
 
-#: ../plugin/controllers/models/timers.py:887
+#: ../plugin/controllers/models/timers.py:892
 msgid "ERROR: Cannot set SleepTimer while device is in Standby-Mode"
 msgstr "ΣΦΑΛΜΑ: Αδυναμία ορισμού του Χρονοδιακόπτη Ύπνου όταν η συσκευή βρίσκεται σε αναμονή"
 
@@ -801,7 +801,7 @@ msgstr ""
 msgid "Error"
 msgstr "Σφάλμα"
 
-#: ../plugin/controllers/models/timers.py:1034
+#: ../plugin/controllers/models/timers.py:1046
 msgid "Error parsing vps.xml"
 msgstr "Σφάλμα ανάλυσης του vps.xml"
 
@@ -2041,37 +2041,37 @@ msgid "Skins"
 msgstr ""
 
 #: ../plugin/controllers/models/timers.py:827
-#: ../plugin/controllers/models/timers.py:848
-#: ../plugin/controllers/models/timers.py:874
-#: ../plugin/controllers/models/timers.py:903
-#: ../plugin/controllers/models/timers.py:923
-#: ../plugin/controllers/models/timers.py:1005
+#: ../plugin/controllers/models/timers.py:853
+#: ../plugin/controllers/models/timers.py:879
+#: ../plugin/controllers/models/timers.py:908
+#: ../plugin/controllers/models/timers.py:935
+#: ../plugin/controllers/models/timers.py:1017
 msgid "SleepTimer error"
 msgstr "Σφάλμα Χρονοδιακόπτη Ύπνου"
 
-#: ../plugin/controllers/models/timers.py:892
-#: ../plugin/controllers/models/timers.py:981
-#: ../plugin/controllers/models/timers.py:1000
+#: ../plugin/controllers/models/timers.py:897
+#: ../plugin/controllers/models/timers.py:993
+#: ../plugin/controllers/models/timers.py:1012
 msgid "Sleeptimer has been disabled"
 msgstr "Ο χρονοδιακόπτης ύπνου απενεργοποιήθηκε"
 
 #: ../plugin/controllers/models/timers.py:822
-#: ../plugin/controllers/models/timers.py:843
-#: ../plugin/controllers/models/timers.py:869
-#: ../plugin/controllers/models/timers.py:918
+#: ../plugin/controllers/models/timers.py:847
+#: ../plugin/controllers/models/timers.py:874
+#: ../plugin/controllers/models/timers.py:929
 msgid "Sleeptimer is disabled"
 msgstr "Ο χρονοδιακόπτης ύπνου είναι ανενεργός"
 
 #: ../plugin/controllers/models/timers.py:822
-#: ../plugin/controllers/models/timers.py:843
-#: ../plugin/controllers/models/timers.py:869
-#: ../plugin/controllers/models/timers.py:918
+#: ../plugin/controllers/models/timers.py:847
+#: ../plugin/controllers/models/timers.py:874
+#: ../plugin/controllers/models/timers.py:929
 msgid "Sleeptimer is enabled"
 msgstr "Ο χρονοδιακόπτης ύπνου είναι ενεργός"
 
-#: ../plugin/controllers/models/timers.py:898
-#: ../plugin/controllers/models/timers.py:981
-#: ../plugin/controllers/models/timers.py:995
+#: ../plugin/controllers/models/timers.py:903
+#: ../plugin/controllers/models/timers.py:993
+#: ../plugin/controllers/models/timers.py:1007
 #, python-format
 msgid "Sleeptimer set to %d minutes"
 msgstr "Ο χρονοδιακόπτης ύπνου έχει οριστεί σε %d λεπτά"
@@ -2499,7 +2499,7 @@ msgstr "Χρήση νέας σχεδίασης"
 msgid "VPS"
 msgstr "VPS"
 
-#: ../plugin/controllers/models/timers.py:1039
+#: ../plugin/controllers/models/timers.py:1051
 msgid "VPS plugin not found"
 msgstr "Το πρόσθετο VPS δεν βρέθηκε"
 

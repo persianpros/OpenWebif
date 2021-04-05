@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import print_function
 
 ##########################################################################
 # OpenWebif: timers
@@ -22,6 +21,7 @@ from __future__ import print_function
 # Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
 ##########################################################################
 
+from __future__ import print_function
 import six
 from enigma import eEPGCache, eServiceReference
 from Components.UsageConfig import preferredTimerPath, preferredInstantRecordPath
@@ -830,19 +830,24 @@ def getSleepTimer(session):
 		try:
 			active = InfoBar.instance.sleepTimer.isActive()
 			time = config.usage.sleep_timer.value
-			action = config.usage.sleep_timer_action.value
-			if time and time > 0:
+			action = "shutdown"
+			if time != None and int(time) > 0:
 				try:
-					time = time / 60
+					time = int(int(time) / 60)
 				except:
 					time = 60
+			remaining = 0
+			if active:
+				remaining = int(InfoBar.instance.sleepTimerState())
 			return {
 				"enabled": active,
 				"minutes": time,
 				"action": action,
+				"remaining": remaining,
 				"message": _("Sleeptimer is enabled") if active else _("Sleeptimer is disabled")
 			}
-		except Exception:
+		except Exception as e:
+			print(e)
 			return {
 				"result": False,
 				"message": _("SleepTimer error")
@@ -904,20 +909,27 @@ def setSleepTimer(session, time, action, enabled):
 			}
 	elif InfoBar.instance is not None and hasattr(InfoBar.instance, 'sleepTimer'):
 		try:
-			config.usage.sleep_timer_action.value = action
-			config.usage.sleep_timer_action.save()
+			if time == None:
+				time = 60
 			active = enabled
+			time = int(time)
+			config.usage.sleep_timer.value = str(time * 60)
+			if config.usage.sleep_timer.value == '0':
+				time = 60
+				config.usage.sleep_timer.value = str(time * 60)
+			config.usage.sleep_timer.save()
 			if enabled:
-				InfoBar.instance.setSleepTimer(time * 60)
+				InfoBar.instance.setSleepTimer(time * 60, False)
 			else:
-				InfoBar.instance.setSleepTimer(0)
+				InfoBar.instance.setSleepTimer(0, False)
 			return {
 				"enabled": active,
 				"minutes": time,
 				"action": action,
 				"message": _("Sleeptimer is enabled") if active else _("Sleeptimer is disabled")
 			}
-		except Exception:
+		except Exception as e:
+			print(e)
 			return {
 				"result": False,
 				"message": _("SleepTimer error")

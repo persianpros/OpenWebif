@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-29 18:21+0430\n"
+"POT-Creation-Date: 2021-04-05 14:01+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Мартин Петков <marto74bg@yahoo.co.uk>\n"
 "Language-Team: \n"
@@ -689,7 +689,7 @@ msgstr "EPG Кодировка"
 msgid "EPGRefresh"
 msgstr "EPG Обновяване"
 
-#: ../plugin/controllers/models/timers.py:887
+#: ../plugin/controllers/models/timers.py:892
 msgid "ERROR: Cannot set SleepTimer while device is in Standby-Mode"
 msgstr "ГРЕШКА: не може да се настрои таймера за сън, приемника е в режим готовност"
 
@@ -801,7 +801,7 @@ msgstr ""
 msgid "Error"
 msgstr "Грешка"
 
-#: ../plugin/controllers/models/timers.py:1034
+#: ../plugin/controllers/models/timers.py:1046
 msgid "Error parsing vps.xml"
 msgstr "Грешка при четене на vps.xml"
 
@@ -2043,37 +2043,37 @@ msgid "Skins"
 msgstr ""
 
 #: ../plugin/controllers/models/timers.py:827
-#: ../plugin/controllers/models/timers.py:848
-#: ../plugin/controllers/models/timers.py:874
-#: ../plugin/controllers/models/timers.py:903
-#: ../plugin/controllers/models/timers.py:923
-#: ../plugin/controllers/models/timers.py:1005
+#: ../plugin/controllers/models/timers.py:853
+#: ../plugin/controllers/models/timers.py:879
+#: ../plugin/controllers/models/timers.py:908
+#: ../plugin/controllers/models/timers.py:935
+#: ../plugin/controllers/models/timers.py:1017
 msgid "SleepTimer error"
 msgstr "Грешка в таймера за сън"
 
-#: ../plugin/controllers/models/timers.py:892
-#: ../plugin/controllers/models/timers.py:981
-#: ../plugin/controllers/models/timers.py:1000
+#: ../plugin/controllers/models/timers.py:897
+#: ../plugin/controllers/models/timers.py:993
+#: ../plugin/controllers/models/timers.py:1012
 msgid "Sleeptimer has been disabled"
 msgstr "Таймера за сън беше спрян"
 
 #: ../plugin/controllers/models/timers.py:822
-#: ../plugin/controllers/models/timers.py:843
-#: ../plugin/controllers/models/timers.py:869
-#: ../plugin/controllers/models/timers.py:918
+#: ../plugin/controllers/models/timers.py:847
+#: ../plugin/controllers/models/timers.py:874
+#: ../plugin/controllers/models/timers.py:929
 msgid "Sleeptimer is disabled"
 msgstr "Таймера за сън е спрян"
 
 #: ../plugin/controllers/models/timers.py:822
-#: ../plugin/controllers/models/timers.py:843
-#: ../plugin/controllers/models/timers.py:869
-#: ../plugin/controllers/models/timers.py:918
+#: ../plugin/controllers/models/timers.py:847
+#: ../plugin/controllers/models/timers.py:874
+#: ../plugin/controllers/models/timers.py:929
 msgid "Sleeptimer is enabled"
 msgstr "Таймера за сън е включен"
 
-#: ../plugin/controllers/models/timers.py:898
-#: ../plugin/controllers/models/timers.py:981
-#: ../plugin/controllers/models/timers.py:995
+#: ../plugin/controllers/models/timers.py:903
+#: ../plugin/controllers/models/timers.py:993
+#: ../plugin/controllers/models/timers.py:1007
 #, python-format
 msgid "Sleeptimer set to %d minutes"
 msgstr "Таймера за сън е настроен на %d минути"
@@ -2501,7 +2501,7 @@ msgstr "Използвай новия дизайн"
 msgid "VPS"
 msgstr "VPS"
 
-#: ../plugin/controllers/models/timers.py:1039
+#: ../plugin/controllers/models/timers.py:1051
 msgid "VPS plugin not found"
 msgstr "VPS плъгина не е открит"
 
