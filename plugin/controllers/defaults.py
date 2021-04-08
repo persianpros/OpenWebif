@@ -11,7 +11,7 @@ from Components.Network import iNetwork
 from enigma import eEnv
 from boxbranding import getHaveTranscoding, getHaveMultiTranscoding
 
-OPENWEBIFVER = "OWIF 1.4.5.1 for Open Vision"
+OPENWEBIFVER = "OWIF 1.4.5.2 for Open Vision"
 
 PLUGIN_NAME = 'OpenWebif'
 PLUGIN_DESCRIPTION = "OpenWebif Configuration"
