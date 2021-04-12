@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-08 23:56+0430\n"
+"POT-Creation-Date: 2021-04-12 11:07+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: ims <ims21@users.sourceforge.net>\n"
 "Language-Team: PLi\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "%02d.%02d.%d"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:70
+#: ../plugin/controllers/models/movies.py:69
 #: ../plugin/controllers/models/timers.py:65
 #, python-format
 msgid "%02d:%02d"
@@ -47,13 +47,13 @@ msgstr ""
 msgid "%d.%m.%Y %H:%M"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:66
+#: ../plugin/controllers/models/movies.py:65
 #: ../plugin/controllers/models/timers.py:59
 #, python-format
 msgid "%s %02d.%02d."
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:68
+#: ../plugin/controllers/models/movies.py:67
 #, python-format
 msgid "%s %02d.%02d.%d"
 msgstr ""
@@ -612,7 +612,7 @@ msgstr "Odstranit nahrávku"
 msgid "Delete Timer"
 msgstr "Odstranit časovač"
 
-#: ../plugin/controllers/models/movies.py:480
+#: ../plugin/controllers/models/movies.py:489
 msgid ""
 "Delete failed, because there is no movie trash !\n"
 "Disable movie trash in configuration to delete this item"
@@ -954,7 +954,7 @@ msgstr "Volná paměť"
 msgid "Free/Total memory"
 msgstr "Volná paměť"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:52
 msgid "Fri"
 msgstr "Pá"
@@ -980,9 +980,9 @@ msgstr "Úplný ovladač"
 #: ../plugin/controllers/models/info.py:376
 #: ../plugin/controllers/models/info.py:391
 #: ../plugin/controllers/models/info.py:394
-#: ../plugin/controllers/models/movies.py:269
-#: ../plugin/controllers/models/movies.py:399
-#: ../plugin/controllers/models/movies.py:819
+#: ../plugin/controllers/models/movies.py:278
+#: ../plugin/controllers/models/movies.py:408
+#: ../plugin/controllers/models/movies.py:828
 msgid "GB"
 msgstr ""
 
@@ -1227,9 +1227,9 @@ msgstr "MAC adresa"
 #: ../plugin/controllers/models/info.py:367
 #: ../plugin/controllers/models/info.py:378
 #: ../plugin/controllers/models/info.py:396
-#: ../plugin/controllers/models/movies.py:271
-#: ../plugin/controllers/models/movies.py:401
-#: ../plugin/controllers/models/movies.py:821
+#: ../plugin/controllers/models/movies.py:280
+#: ../plugin/controllers/models/movies.py:410
+#: ../plugin/controllers/models/movies.py:830
 msgid "MB"
 msgstr ""
 
@@ -1302,7 +1302,7 @@ msgstr "Po"
 msgid "Model"
 msgstr "Model"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:48
 msgid "Mon"
 msgstr "Po"
@@ -1870,7 +1870,7 @@ msgstr "So"
 msgid "Safe mode"
 msgstr "Bezpečný mód"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:53
 msgid "Sat"
 msgstr "So"
@@ -2221,7 +2221,7 @@ msgstr "Maska"
 msgid "Subservices"
 msgstr "Podprogramy"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:47
 msgid "Sun"
 msgstr "Ne"
@@ -2318,7 +2318,7 @@ msgstr "Vzhled"
 msgid "This service can not be added."
 msgstr "Tento program nemůže být přidán."
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:51
 msgid "Thu"
 msgstr "Čt"
@@ -2404,7 +2404,7 @@ msgstr "Název"
 msgid "To date"
 msgstr "Ne před"
 
-#: ../plugin/controllers/models/movies.py:58
+#: ../plugin/controllers/models/movies.py:57
 #: ../plugin/controllers/models/timers.py:48
 msgid "Today"
 msgstr ""
@@ -2434,7 +2434,7 @@ msgstr ""
 msgid "Tu"
 msgstr "Út"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:49
 msgid "Tue"
 msgstr "Út"
@@ -2633,7 +2633,7 @@ msgstr "St"
 msgid "Web TV"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:50
 msgid "Wed"
 msgstr "St"
@@ -2681,7 +2681,7 @@ msgstr "Ano"
 msgid "Yes/No"
 msgstr "Ano/Ne"
 
-#: ../plugin/controllers/models/movies.py:60
+#: ../plugin/controllers/models/movies.py:59
 #: ../plugin/controllers/models/timers.py:51
 msgid "Yesterday"
 msgstr ""
@@ -2776,9 +2776,9 @@ msgstr ""
 
 #: ../plugin/controllers/models/info.py:242
 #: ../plugin/controllers/models/info.py:245
-#: ../plugin/controllers/models/movies.py:273
-#: ../plugin/controllers/models/movies.py:403
-#: ../plugin/controllers/models/movies.py:823
+#: ../plugin/controllers/models/movies.py:282
+#: ../plugin/controllers/models/movies.py:412
+#: ../plugin/controllers/models/movies.py:832
 msgid "kB"
 msgstr ""
 
@@ -2839,7 +2839,7 @@ msgstr "nahrát"
 msgid "regex match (experimental)"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:474
+#: ../plugin/controllers/models/movies.py:483
 msgid "remove"
 msgstr "smazat"
 

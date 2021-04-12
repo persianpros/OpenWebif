@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-08 23:56+0430\n"
+"POT-Creation-Date: 2021-04-12 11:07+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: neoatomic <neoatomic@users.noreply.github.com>\n"
 "Language-Team: satfan <satfan@163.com>\n"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "%02d.%02d.%d"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:70
+#: ../plugin/controllers/models/movies.py:69
 #: ../plugin/controllers/models/timers.py:65
 #, python-format
 msgid "%02d:%02d"
@@ -48,13 +48,13 @@ msgstr ""
 msgid "%d.%m.%Y %H:%M"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:66
+#: ../plugin/controllers/models/movies.py:65
 #: ../plugin/controllers/models/timers.py:59
 #, python-format
 msgid "%s %02d.%02d."
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:68
+#: ../plugin/controllers/models/movies.py:67
 #, python-format
 msgid "%s %02d.%02d.%d"
 msgstr ""
@@ -617,7 +617,7 @@ msgstr "删除录制"
 msgid "Delete Timer"
 msgstr "删除定时器"
 
-#: ../plugin/controllers/models/movies.py:480
+#: ../plugin/controllers/models/movies.py:489
 msgid ""
 "Delete failed, because there is no movie trash !\n"
 "Disable movie trash in configuration to delete this item"
@@ -963,7 +963,7 @@ msgstr "空闲内存"
 msgid "Free/Total memory"
 msgstr "总内存"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:52
 msgid "Fri"
 msgstr "星期五"
@@ -990,9 +990,9 @@ msgstr "隐藏完整的遥控"
 #: ../plugin/controllers/models/info.py:376
 #: ../plugin/controllers/models/info.py:391
 #: ../plugin/controllers/models/info.py:394
-#: ../plugin/controllers/models/movies.py:269
-#: ../plugin/controllers/models/movies.py:399
-#: ../plugin/controllers/models/movies.py:819
+#: ../plugin/controllers/models/movies.py:278
+#: ../plugin/controllers/models/movies.py:408
+#: ../plugin/controllers/models/movies.py:828
 msgid "GB"
 msgstr "GB"
 
@@ -1240,9 +1240,9 @@ msgstr "MAC 地址"
 #: ../plugin/controllers/models/info.py:367
 #: ../plugin/controllers/models/info.py:378
 #: ../plugin/controllers/models/info.py:396
-#: ../plugin/controllers/models/movies.py:271
-#: ../plugin/controllers/models/movies.py:401
-#: ../plugin/controllers/models/movies.py:821
+#: ../plugin/controllers/models/movies.py:280
+#: ../plugin/controllers/models/movies.py:410
+#: ../plugin/controllers/models/movies.py:830
 msgid "MB"
 msgstr "MB"
 
@@ -1316,7 +1316,7 @@ msgstr "星期一"
 msgid "Model"
 msgstr "型号"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:48
 msgid "Mon"
 msgstr "星期一"
@@ -1890,7 +1890,7 @@ msgstr "星期六"
 msgid "Safe mode"
 msgstr "安全模式"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:53
 msgid "Sat"
 msgstr "星期六"
@@ -2245,7 +2245,7 @@ msgstr "子网掩码"
 msgid "Subservices"
 msgstr "子服务"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:47
 msgid "Sun"
 msgstr "星期日"
@@ -2342,7 +2342,7 @@ msgstr "主题"
 msgid "This service can not be added."
 msgstr "频道不能被添加."
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:51
 msgid "Thu"
 msgstr "星期四"
@@ -2428,7 +2428,7 @@ msgstr "标题"
 msgid "To date"
 msgstr "不在这之前"
 
-#: ../plugin/controllers/models/movies.py:58
+#: ../plugin/controllers/models/movies.py:57
 #: ../plugin/controllers/models/timers.py:48
 msgid "Today"
 msgstr ""
@@ -2458,7 +2458,7 @@ msgstr ""
 msgid "Tu"
 msgstr "星期二"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:49
 msgid "Tue"
 msgstr "星期二"
@@ -2657,7 +2657,7 @@ msgstr "星期三"
 msgid "Web TV"
 msgstr "网络电视"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:50
 msgid "Wed"
 msgstr "星期三"
@@ -2706,7 +2706,7 @@ msgstr "是"
 msgid "Yes/No"
 msgstr "是/否"
 
-#: ../plugin/controllers/models/movies.py:60
+#: ../plugin/controllers/models/movies.py:59
 #: ../plugin/controllers/models/timers.py:51
 msgid "Yesterday"
 msgstr ""
@@ -2801,9 +2801,9 @@ msgstr "小时"
 
 #: ../plugin/controllers/models/info.py:242
 #: ../plugin/controllers/models/info.py:245
-#: ../plugin/controllers/models/movies.py:273
-#: ../plugin/controllers/models/movies.py:403
-#: ../plugin/controllers/models/movies.py:823
+#: ../plugin/controllers/models/movies.py:282
+#: ../plugin/controllers/models/movies.py:412
+#: ../plugin/controllers/models/movies.py:832
 msgid "kB"
 msgstr ""
 
@@ -2865,7 +2865,7 @@ msgstr "录制"
 msgid "regex match (experimental)"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:474
+#: ../plugin/controllers/models/movies.py:483
 msgid "remove"
 msgstr "去掉"
 

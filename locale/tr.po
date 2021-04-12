@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-08 23:56+0430\n"
+"POT-Creation-Date: 2021-04-12 11:07+0430\n"
 "PO-Revision-Date: 2020-08-18 02:59+0300\n"
 "Last-Translator: audi06_19 <info@dreamosat-forum.com>\n"
 "Language-Team: Turkish\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "%02d.%02d.%d"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:70
+#: ../plugin/controllers/models/movies.py:69
 #: ../plugin/controllers/models/timers.py:65
 #, python-format
 msgid "%02d:%02d"
@@ -50,13 +50,13 @@ msgstr ""
 msgid "%d.%m.%Y %H:%M"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:66
+#: ../plugin/controllers/models/movies.py:65
 #: ../plugin/controllers/models/timers.py:59
 #, python-format
 msgid "%s %02d.%02d."
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:68
+#: ../plugin/controllers/models/movies.py:67
 #, python-format
 msgid "%s %02d.%02d.%d"
 msgstr ""
@@ -614,7 +614,7 @@ msgstr "Kaydı Sil"
 msgid "Delete Timer"
 msgstr "Zamanlayıcıyı Sil"
 
-#: ../plugin/controllers/models/movies.py:480
+#: ../plugin/controllers/models/movies.py:489
 msgid ""
 "Delete failed, because there is no movie trash !\n"
 "Disable movie trash in configuration to delete this item"
@@ -959,7 +959,7 @@ msgstr "Boş Bellek"
 msgid "Free/Total memory"
 msgstr "Boş Bellek"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:52
 msgid "Fri"
 msgstr "Cum"
@@ -985,9 +985,9 @@ msgstr "Tam uzak"
 #: ../plugin/controllers/models/info.py:376
 #: ../plugin/controllers/models/info.py:391
 #: ../plugin/controllers/models/info.py:394
-#: ../plugin/controllers/models/movies.py:269
-#: ../plugin/controllers/models/movies.py:399
-#: ../plugin/controllers/models/movies.py:819
+#: ../plugin/controllers/models/movies.py:278
+#: ../plugin/controllers/models/movies.py:408
+#: ../plugin/controllers/models/movies.py:828
 msgid "GB"
 msgstr "GB"
 
@@ -1232,9 +1232,9 @@ msgstr "MAC adresi"
 #: ../plugin/controllers/models/info.py:367
 #: ../plugin/controllers/models/info.py:378
 #: ../plugin/controllers/models/info.py:396
-#: ../plugin/controllers/models/movies.py:271
-#: ../plugin/controllers/models/movies.py:401
-#: ../plugin/controllers/models/movies.py:821
+#: ../plugin/controllers/models/movies.py:280
+#: ../plugin/controllers/models/movies.py:410
+#: ../plugin/controllers/models/movies.py:830
 msgid "MB"
 msgstr "MB"
 
@@ -1307,7 +1307,7 @@ msgstr "Mo"
 msgid "Model"
 msgstr "Model"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:48
 msgid "Mon"
 msgstr "Pzt"
@@ -1879,7 +1879,7 @@ msgstr "Sa"
 msgid "Safe mode"
 msgstr "Güvenli mod"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:53
 msgid "Sat"
 msgstr "Sat"
@@ -2232,7 +2232,7 @@ msgstr "Alt ağ maskesi"
 msgid "Subservices"
 msgstr "Alt Hizmetler"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:47
 msgid "Sun"
 msgstr "Güneş"
@@ -2329,7 +2329,7 @@ msgstr "Tema"
 msgid "This service can not be added."
 msgstr "Bu hizmet eklenemez."
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:51
 msgid "Thu"
 msgstr "Per"
@@ -2415,7 +2415,7 @@ msgstr "Başlık"
 msgid "To date"
 msgstr "Daha önce değil"
 
-#: ../plugin/controllers/models/movies.py:58
+#: ../plugin/controllers/models/movies.py:57
 #: ../plugin/controllers/models/timers.py:48
 msgid "Today"
 msgstr ""
@@ -2445,7 +2445,7 @@ msgstr "Tsid"
 msgid "Tu"
 msgstr "Tu"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:49
 msgid "Tue"
 msgstr "Sal"
@@ -2643,7 +2643,7 @@ msgstr "Biz"
 msgid "Web TV"
 msgstr "Web TV"
 
-#: ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/movies.py:54
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:50
 msgid "Wed"
 msgstr "Çar"
@@ -2691,7 +2691,7 @@ msgstr "Evet"
 msgid "Yes/No"
 msgstr "Evet/Hayır"
 
-#: ../plugin/controllers/models/movies.py:60
+#: ../plugin/controllers/models/movies.py:59
 #: ../plugin/controllers/models/timers.py:51
 msgid "Yesterday"
 msgstr ""
@@ -2786,9 +2786,9 @@ msgstr "saat"
 
 #: ../plugin/controllers/models/info.py:242
 #: ../plugin/controllers/models/info.py:245
-#: ../plugin/controllers/models/movies.py:273
-#: ../plugin/controllers/models/movies.py:403
-#: ../plugin/controllers/models/movies.py:823
+#: ../plugin/controllers/models/movies.py:282
+#: ../plugin/controllers/models/movies.py:412
+#: ../plugin/controllers/models/movies.py:832
 msgid "kB"
 msgstr "kB"
 
@@ -2849,7 +2849,7 @@ msgstr "kayıt"
 msgid "regex match (experimental)"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:474
+#: ../plugin/controllers/models/movies.py:483
 msgid "remove"
 msgstr "kaldır"
 
