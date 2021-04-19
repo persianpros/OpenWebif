@@ -5,7 +5,7 @@ from __future__ import print_function
 ##########################################################################
 # OpenWebif: info
 ##########################################################################
-# Copyright (C) 2011 - 2020 E2OpenPlugins
+# Copyright (C) 2011 - 2021 E2OpenPlugins
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -24,7 +24,6 @@ from __future__ import print_function
 
 import os
 import six
-import sys
 import time
 from twisted import version
 from socket import has_ipv6, AF_INET6, AF_INET, inet_ntop, inet_pton, getaddrinfo
@@ -97,11 +96,11 @@ def getLinkSpeed(iface):
 	try:
 		with open('/sys/class/net/' + iface + '/speed', 'r') as f:
 			speed = f.read().strip()
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		if os.path.isdir('/sys/class/net/' + iface + '/wireless'):
 			try:
 				speed = os.popen('iwconfig ' + iface + ' | grep "Bit Rate"').read().split(':')[1].split(' ')[0]
-			except:
+			except: # nosec # noqa: E722
 				pass
 	speed = str(speed) + " MBit/s"
 	speed = speed.replace("10000 MBit/s", "10 GBit/s")
@@ -114,7 +113,7 @@ def getNICChipSet(iface):
 	try:
 		nic = os.path.realpath('/sys/class/net/' + iface + '/device/driver').split('/')[-1]
 		nic = str(nic)
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		pass
 	return nic
 
@@ -205,22 +204,22 @@ def getInfo(session=None, need_fullinfo=False):
 
 	try:
 		info['procmodel'] = getBoxProc()
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		info['procmodel'] = boxbranding.getMachineProcModel()
 
 	try:
 		info['procmodeltype'] = getBoxProcType()
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		info['procmodeltype'] = None
 
 	try:
 		info['lcd'] = getLcd()
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		info['lcd'] = 0
 
 	try:
 		info['grabpip'] = getGrabPip()
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		info['grabpip'] = 0
 
 	cpu = about.getCPUInfoString()
@@ -282,7 +281,7 @@ def getInfo(session=None, need_fullinfo=False):
 
 	try:
 		info['hwserial'] = getHWSerial()
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		info['hwserial'] = None
 
 	if (info['hwserial'] is None or info['hwserial'] == "unknown"):
@@ -290,7 +289,7 @@ def getInfo(session=None, need_fullinfo=False):
 
 	try:
 		info['boxrctype'] = getBoxRCType()
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		info['boxrctype'] = None
 
 	if (info['boxrctype'] is None or info['boxrctype'] == "unknown"):
@@ -322,7 +321,7 @@ def getInfo(session=None, need_fullinfo=False):
 
 	try:
 		info['fp_version'] = getFPVersion()
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		info['fp_version'] = None
 
 	info['tuners'] = []
@@ -461,7 +460,7 @@ def getInfo(session=None, need_fullinfo=False):
 								tmpaddress = getaddrinfo(server, 0, AF_INET)
 								if tmpaddress:
 									ipaddress = list(tmpaddress)[0][4][0]
-						except:  # noqa: E722
+						except:  # nosec # noqa: E722
 							pass
 
 					friendlyaddress = server
@@ -484,55 +483,18 @@ def getInfo(session=None, need_fullinfo=False):
 	if session:
 		try:
 			#  gets all current stream clients for images using eStreamServer
-			#  TODO: merge eStreamServer and streamList
 			#  TODO: get tuner info for streams
 			#  TODO: get recoding/timer info if more than one
-			info['streams'] = []
-			try:
-				from enigma import eStreamServer
-				streamServer = eStreamServer.getInstance()
-				if streamServer is not None:
-					for x in streamServer.getConnectedClients():
-						servicename = ServiceReference(x[1]).getServiceName() or "(unknown service)"
-						if int(x[2]) == 0:
-							strtype = "S"
-						else:
-							strtype = "T"
-						info['streams'].append({
-							"ref": x[1],
-							"name": servicename,
-							"ip": x[0],
-							"type": strtype
-						})
-			except Exception as error:
-				print("[OpenWebif] -D- no eStreamServer %s" % error)
+			info['streams'] = GetStreamInfo()
+
 			recs = NavigationInstance.instance.getRecordings()
 			if recs:
-				#  only one stream and only TV
-				from Plugins.Extensions.OpenWebif.controllers.stream import streamList
+				#  only one stream
 				s_name = ''
-				# s_cip = ''
-
-				print("[OpenWebif] -D- streamList count '%d'" % len(streamList))
-				if len(streamList) == 1:
-					from Screens.ChannelSelection import service_types_tv
-					# from enigma import eEPGCache
-					# epgcache = eEPGCache.getInstance()
-					serviceHandler = eServiceCenter.getInstance()
-					services = serviceHandler.list(eServiceReference('%s ORDER BY name' % (service_types_tv)))
-					channels = services and services.getContent("SN", True)
-					s = streamList[0]
-					srefs = s.ref.toString()
-					for channel in channels:
-						if srefs == channel[0]:
-							s_name = channel[1] + ' (' + s.clientIP + ')'
-							break
-				print("[OpenWebif] -D- s_name '%s'" % s_name)
-
-# only for debug
-				for stream in streamList:
-					srefs = stream.ref.toString()
-					print("[OpenWebif] -D- srefs '%s'" % srefs)
+				if len(info['streams']) == 1:
+					sinfo = info['streams'][0]
+					s_name = sinfo["name"] + ' (' + sinfo["ip"] + ')'
+					print("[OpenWebif] -D- s_name '%s'" % s_name)
 
 				sname = ''
 				timers = []
@@ -585,6 +547,62 @@ def getInfo(session=None, need_fullinfo=False):
 
 	STATICBOXINFO = info
 	return info
+
+
+def getStreamServiceAndEvent(ref):
+	sname = "(unknown service)"
+	eventname = ""
+	if not isinstance(ref, eServiceReference):
+		ref = eServiceReference(ref)
+	servicereference = ServiceReference(ref)
+	if servicereference:
+		sname = removeBad(servicereference.getServiceName())
+	epg = eEPGCache.getInstance()
+	event = epg and epg.lookupEventTime(ref, -1, 0)
+	if event:
+		eventname = event.getEventName()
+	return sname, eventname
+
+
+def GetStreamInfo():
+	streams = []
+	nostreamServer = True
+	try:
+		from enigma import eStreamServer
+		streamServer = eStreamServer.getInstance()
+		if streamServer is not None:
+			nostreamServer = False
+			for x in streamServer.getConnectedClients():
+				servicename, eventname = getStreamServiceAndEvent(x[1])
+				if int(x[2]) == 0:
+					strtype = "S"
+				else:
+					strtype = "T"
+				streams.append({
+					"ref": x[1],
+					"name": servicename,
+					"eventname": eventname,
+					"ip": x[0],  # TODO: ip Address format
+					"type": strtype
+				})
+	except Exception as error:  # nosec # noqa: E722
+#		print("[OpenWebif] -D- no eStreamServer %s" % error)
+		pass
+
+	if nostreamServer:
+		from Plugins.Extensions.OpenWebif.controllers.stream import streamList
+		if len(streamList) > 0:
+			for stream in streamList:
+				servicename, eventname = getStreamServiceAndEvent(stream.ref)
+				streams.append({
+					"ref": stream.ref.toString(),
+					"name": servicename,
+					"eventname": eventname,
+					"ip": stream.clientIP,
+					"type": "S" # TODO : Transcoding
+				})
+
+	return streams
 
 
 def getOrbitalText(cur_info):
@@ -657,23 +675,6 @@ def getCurrentTime():
 		"status": True,
 		"time": "%2d:%02d:%02d" % (t.tm_hour, t.tm_min, t.tm_sec)
 	}
-
-
-def getStreamServiceName(ref):
-	if isinstance(ref, eServiceReference):
-		servicereference = ServiceReference(ref)
-		if servicereference:
-			return removeBad(servicereference.getServiceName())
-	return ""
-
-
-def getStreamEventName(ref):
-	if isinstance(ref, eServiceReference):
-		epg = eEPGCache.getInstance()
-		event = epg and epg.lookupEventTime(ref, -1, 0)
-		if event:
-			return event.getEventName()
-	return ""
 
 
 def getStatusInfo(self):
@@ -771,6 +772,35 @@ def getStatusInfo(self):
 			statusinfo['isRecording'] = "false"
 	else:
 		statusinfo['isRecording'] = "false"
+
+	# Get streaminfo
+	streams = GetStreamInfo()
+	Streaming_list = []
+	try:
+
+		# TODO move this code to javascript getStatusinfo
+		for stream in streams:
+			st = ''
+			s = stream["name"]
+			e = stream["eventname"]
+			i = stream["ip"]
+			del stream
+			if i is not None:
+				st += i + ": "
+			st += s + ' - ' + e
+			if st != '':
+				Streaming_list.append(st)
+
+	except Exception as error:  # nosec # noqa: E722
+#		print("[OpenWebif] -D- build Streaming_list %s" % error)
+		pass
+
+	if len(streams) > 0:
+		statusinfo['Streaming_list'] = '\n'.join(Streaming_list)
+		statusinfo['isStreaming'] = 'true'
+	else:
+		statusinfo['Streaming_list'] = ''
+		statusinfo['isStreaming'] = 'false'
 
 	return statusinfo
 

@@ -172,7 +172,7 @@ def remoteControl(key, type="", rcu=""):
 		try:
 			remotetype = "dreambox advanced remote control (native)"
 			print("[OpenWebIf] wrong hw detection?")
-		except:  # noqa: E722
+		except:  # nosec # noqa: E722
 			remotetype = "dreambox remote control (native)"
 			print("[OpenWebIf] wrong hw detection?")
 

@@ -1,8 +1,9 @@
 #!/bin/bash
 
-D=$(pushd $(dirname $0) &> /dev/null; pwd; popd &> /dev/null)
-P=${D}/opkg.tmp.$$
-B=${D}/opkg.build.$$
+# D=$(pushd $(dirname $0) &> /dev/null; pwd; popd &> /dev/null)
+D=$(pwd) &> /dev/null
+P=${D}/ipkg.tmp.$$
+B=${D}/ipkg.build.$$
 
 pushd ${D} &> /dev/null
 VER=$(head -n 1 CHANGES.md | grep -i '## Version' | sed 's/^## Version \([[:digit:]]\+\.[[:digit:]]\+\.[[:digit:]]\+\)/\1/')
@@ -35,7 +36,7 @@ Description: Control your receiver with a browser
 Architecture: all
 Section: extra
 Priority: optional
-Maintainer: E2OpenPlugins members
+Maintainer: Open Vision developers
 Homepage: https://github.com/OpenVisionE2/OpenWebif
 Depends: python-json, python-cheetah, python-pyopenssl, python-unixadmin, python-misc, python-twisted-web, python-pprint, python-compression, python-ipaddress, python-six (>= 1.14)
 Source: https://github.com/OpenVisionE2/OpenWebif
@@ -117,16 +118,18 @@ if [ "$1" == "novxg" ]; then
 	rm -rf ${P}/usr/lib/enigma2/python/Plugins/Extensions/OpenWebif/public/vxg/
 fi
 
-tar -C ${P} -czf ${B}/data.tar.gz . --exclude=CONTROL
-tar -C ${P}/CONTROL -czf ${B}/control.tar.gz .
+if [ "$1" != "deb" ]; then
+	tar -C ${P}/CONTROL -czf ${B}/control.tar.gz .
+	rm -rf ${P}/CONTROL
+	tar -C ${P} -czf ${B}/data.tar.gz .
 
-echo "2.0" > ${B}/debian-binary
+	echo "2.0" > ${B}/debian-binary
 
-cd ${B}
-ls -la
-ar -r ${PKG} ./debian-binary ./data.tar.gz ./control.tar.gz 
+	cd ${B}
+	ls -la
+	ar -r ${PKG} ./debian-binary ./data.tar.gz ./control.tar.gz 
 
-cd -
+fi
 
 if [ "$1" == "deb" ]; then
 	rm -rf ${PKG}

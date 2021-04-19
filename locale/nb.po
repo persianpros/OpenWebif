@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-12 11:07+0430\n"
+"POT-Creation-Date: 2021-04-19 12:45+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: andy1 <dummy@dummy.com>\n"
 "Language-Team: GeirJ\n"
@@ -32,10 +32,10 @@ msgstr ""
 msgid "%02d:%02d"
 msgstr ""
 
-#: ../plugin/controllers/models/services.py:235
-#: ../plugin/controllers/models/services.py:773
-#: ../plugin/controllers/models/services.py:1004
-#: ../plugin/controllers/models/services.py:1050
+#: ../plugin/controllers/models/services.py:247
+#: ../plugin/controllers/models/services.py:789
+#: ../plugin/controllers/models/services.py:1020
+#: ../plugin/controllers/models/services.py:1066
 msgid "%d.%m.%Y"
 msgstr ""
 
@@ -69,8 +69,8 @@ msgstr "%s %s er låst."
 msgid "%s / %s"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:246
-#: ../plugin/controllers/models/info.py:404
+#: ../plugin/controllers/models/info.py:245
+#: ../plugin/controllers/models/info.py:403
 #, python-format
 msgid "%s free / %s total"
 msgstr "%s ledig / %s total"
@@ -212,7 +212,7 @@ msgstr "Alternativ %s opprettet feilet."
 msgid "Always"
 msgstr "Alltid"
 
-#: ../plugin/controllers/models/info.py:298
+#: ../plugin/controllers/models/info.py:297
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "Full fjernkontroll"
@@ -442,7 +442,7 @@ msgstr ""
 msgid "CPU brand"
 msgstr ""
 
-#: ../plugin/controllers/models/services.py:377
+#: ../plugin/controllers/models/services.py:389
 msgid "Cable"
 msgstr "Kabel-TV"
 
@@ -546,8 +546,8 @@ msgstr "Egendefinert mottakernavn"
 msgid "Custom offset"
 msgstr "Tilpass ekstra tidsrom"
 
-#: ../plugin/controllers/models/info.py:70
-#: ../plugin/controllers/models/info.py:89 ../plugin/controllers/i18n.py:121
+#: ../plugin/controllers/models/info.py:69
+#: ../plugin/controllers/models/info.py:88 ../plugin/controllers/i18n.py:121
 msgid "DHCP"
 msgstr "DHCP"
 
@@ -641,8 +641,8 @@ msgstr "Deaktiver timer"
 msgid "Disable remote access for user root"
 msgstr "Koble fra fjerntilgang for bruker root"
 
-#: ../plugin/controllers/models/info.py:234
-#: ../plugin/controllers/models/info.py:250
+#: ../plugin/controllers/models/info.py:233
+#: ../plugin/controllers/models/info.py:249
 #, fuzzy
 msgid "Disabled in configuration"
 msgstr "Frakoblet ved konflikt"
@@ -696,7 +696,7 @@ msgstr "Drivere"
 msgid "Duration"
 msgstr "Varighet"
 
-#: ../plugin/controllers/models/info.py:603
+#: ../plugin/controllers/models/info.py:621
 msgid "E"
 msgstr "Ø"
 
@@ -933,8 +933,9 @@ msgid "Feed URL"
 msgstr ""
 
 #: ../plugin/controllers/i18n.py:157
+#, fuzzy
 msgid "Flash type"
-msgstr ""
+msgstr "Søk"
 
 #: ../plugin/controllers/i18n.py:465
 msgid "Force"
@@ -979,10 +980,10 @@ msgstr "Frontprosessor versjon"
 msgid "Full remote"
 msgstr "Full fjernkontroll"
 
-#: ../plugin/controllers/models/info.py:370
-#: ../plugin/controllers/models/info.py:376
-#: ../plugin/controllers/models/info.py:391
-#: ../plugin/controllers/models/info.py:394
+#: ../plugin/controllers/models/info.py:369
+#: ../plugin/controllers/models/info.py:375
+#: ../plugin/controllers/models/info.py:390
+#: ../plugin/controllers/models/info.py:393
 #: ../plugin/controllers/models/movies.py:278
 #: ../plugin/controllers/models/movies.py:408
 #: ../plugin/controllers/models/movies.py:828
@@ -1055,11 +1056,11 @@ msgstr ""
 msgid "IPv4 address"
 msgstr "IPv4 adresse"
 
-#: ../plugin/controllers/models/info.py:154 ../plugin/controllers/i18n.py:178
+#: ../plugin/controllers/models/info.py:153 ../plugin/controllers/i18n.py:178
 msgid "IPv4-only Python/Twisted"
 msgstr "IPv4 Python/Vridd"
 
-#: ../plugin/controllers/models/info.py:150 ../plugin/controllers/i18n.py:176
+#: ../plugin/controllers/models/info.py:149 ../plugin/controllers/i18n.py:176
 msgid "IPv4-only kernel"
 msgstr "IPv4 kjerne"
 
@@ -1188,7 +1189,7 @@ msgstr "LCD4Linux innstilling"
 msgid "LICENSE"
 msgstr "LISENS"
 
-#: ../plugin/controllers/models/info.py:300
+#: ../plugin/controllers/models/info.py:299
 #, fuzzy
 msgid "LIRC remote"
 msgstr "Fjernkontroll"
@@ -1227,9 +1228,9 @@ msgstr "Låst"
 msgid "MAC address"
 msgstr "MAC adresse"
 
-#: ../plugin/controllers/models/info.py:367
-#: ../plugin/controllers/models/info.py:378
-#: ../plugin/controllers/models/info.py:396
+#: ../plugin/controllers/models/info.py:366
+#: ../plugin/controllers/models/info.py:377
+#: ../plugin/controllers/models/info.py:395
 #: ../plugin/controllers/models/movies.py:280
 #: ../plugin/controllers/models/movies.py:410
 #: ../plugin/controllers/models/movies.py:830
@@ -1395,7 +1396,7 @@ msgstr "Nettverkskort"
 msgid "Never"
 msgstr "Aldri"
 
-#: ../plugin/controllers/models/services.py:370
+#: ../plugin/controllers/models/services.py:382
 #: ../plugin/controllers/i18n.py:424
 msgid "New"
 msgstr "Ny"
@@ -1409,7 +1410,7 @@ msgstr "Bokmerke"
 msgid "New Name"
 msgstr "Nytt navn"
 
-#: ../plugin/controllers/models/info.py:266 ../plugin/controllers/i18n.py:390
+#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:390
 msgid "No"
 msgstr "Nei"
 
@@ -1631,7 +1632,7 @@ msgstr "OpenWebif innstilling"
 msgid "OpenWebif url:"
 msgstr "OpenWebif URL:"
 
-#: ../plugin/controllers/models/services.py:264
+#: ../plugin/controllers/models/services.py:276
 #: ../plugin/controllers/i18n.py:515
 msgid "Orbital Position"
 msgstr "Satellittposisjon"
@@ -1843,7 +1844,7 @@ msgstr "Velg kanallister"
 msgid "Root"
 msgstr "Root"
 
-#: ../plugin/controllers/models/info.py:61
+#: ../plugin/controllers/models/info.py:60
 msgid "SLAAC"
 msgstr "SLAAC"
 
@@ -2019,7 +2020,7 @@ msgstr "Kanalen er ikke et alternativ."
 msgid "Service renamed successfully."
 msgstr "Kanalen er navngitt på nytt."
 
-#: ../plugin/controllers/models/services.py:372
+#: ../plugin/controllers/models/services.py:384
 msgid "Services"
 msgstr "Kanaler"
 
@@ -2241,9 +2242,9 @@ msgstr "Søn"
 msgid "Sunday"
 msgstr "Søndag"
 
-#: ../plugin/controllers/models/info.py:374
-#: ../plugin/controllers/models/info.py:386
-#: ../plugin/controllers/models/info.py:388
+#: ../plugin/controllers/models/info.py:373
+#: ../plugin/controllers/models/info.py:385
+#: ../plugin/controllers/models/info.py:387
 msgid "TB"
 msgstr "TB"
 
@@ -2279,7 +2280,7 @@ msgstr "Mal"
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugin/controllers/models/services.py:379
+#: ../plugin/controllers/models/services.py:391
 msgid "Terrestrial"
 msgstr "Bakkenett"
 
@@ -2616,7 +2617,7 @@ msgstr "Volumkontroll"
 msgid "Vpid"
 msgstr "Vpid"
 
-#: ../plugin/controllers/models/info.py:606
+#: ../plugin/controllers/models/info.py:624
 msgid "W"
 msgstr "V"
 
@@ -2682,8 +2683,8 @@ msgstr "Feil parameter format 'set=%s'. Bruk set=set15 "
 msgid "YYYY-MM-DD"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:264
-#: ../plugin/controllers/models/info.py:268 ../plugin/controllers/i18n.py:554
+#: ../plugin/controllers/models/info.py:263
+#: ../plugin/controllers/models/info.py:267 ../plugin/controllers/i18n.py:554
 #: ../plugin/controllers/i18n.py:570
 msgid "Yes"
 msgstr "Ja"
@@ -2785,8 +2786,8 @@ msgstr "gå til avslått"
 msgid "hour"
 msgstr "time"
 
-#: ../plugin/controllers/models/info.py:242
-#: ../plugin/controllers/models/info.py:245
+#: ../plugin/controllers/models/info.py:241
+#: ../plugin/controllers/models/info.py:244
 #: ../plugin/controllers/models/movies.py:282
 #: ../plugin/controllers/models/movies.py:412
 #: ../plugin/controllers/models/movies.py:832
@@ -2797,8 +2798,8 @@ msgstr "kB"
 msgid "loading"
 msgstr "laster"
 
-#: ../plugin/controllers/models/info.py:72
-#: ../plugin/controllers/models/info.py:91
+#: ../plugin/controllers/models/info.py:71
+#: ../plugin/controllers/models/info.py:90
 msgid "manual/disabled"
 msgstr "manuell/frakoblet"
 
@@ -2814,7 +2815,7 @@ msgstr "minutt"
 msgid "no description available"
 msgstr "beskrivelse savnes"
 
-#: ../plugin/controllers/models/info.py:183 ../plugin/controllers/i18n.py:177
+#: ../plugin/controllers/models/info.py:182 ../plugin/controllers/i18n.py:177
 msgid "none/IPv4-only network"
 msgstr "ingen/IPv4 nettverk"
 
@@ -2834,11 +2835,11 @@ msgstr "en to tre fire ukjent kommando"
 msgid "partial title match"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:437
+#: ../plugin/controllers/models/info.py:436
 msgid "r/o"
 msgstr "r/o"
 
-#: ../plugin/controllers/models/info.py:433
+#: ../plugin/controllers/models/info.py:432
 msgid "r/w"
 msgstr "r/w"
 
@@ -2887,9 +2888,9 @@ msgstr "samsvarersøk på kort beskrivelse"
 msgid "standard"
 msgstr "standard"
 
-#: ../plugin/controllers/models/info.py:68
-#: ../plugin/controllers/models/info.py:80
-#: ../plugin/controllers/models/info.py:87
+#: ../plugin/controllers/models/info.py:67
+#: ../plugin/controllers/models/info.py:79
+#: ../plugin/controllers/models/info.py:86
 msgid "static"
 msgstr "statisk"
 
@@ -2928,8 +2929,8 @@ msgstr "nedskalert"
 msgid "type %s is not a number"
 msgstr "type %s er ikke et tall"
 
-#: ../plugin/controllers/models/info.py:96
-#: ../plugin/controllers/models/info.py:113
+#: ../plugin/controllers/models/info.py:95
+#: ../plugin/controllers/models/info.py:112
 msgid "unknown"
 msgstr "ukjent"
 

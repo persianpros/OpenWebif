@@ -22,7 +22,7 @@ Description: Control your receiver with a browser
 Architecture: sh4
 Section: extra
 Priority: optional
-Maintainer: E2OpenPlugins members
+Maintainer: Open Vision developers
 Homepage: https://github.com/OpenVisionE2/OpenWebif
 Depends: rcs
 Source: https://github.com/OpenVisionE2/OpenWebif

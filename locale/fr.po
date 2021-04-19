@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-12 11:07+0430\n"
+"POT-Creation-Date: 2021-04-19 12:45+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Pr2\n"
 "Language-Team: \n"
@@ -30,10 +30,10 @@ msgstr ""
 msgid "%02d:%02d"
 msgstr ""
 
-#: ../plugin/controllers/models/services.py:235
-#: ../plugin/controllers/models/services.py:773
-#: ../plugin/controllers/models/services.py:1004
-#: ../plugin/controllers/models/services.py:1050
+#: ../plugin/controllers/models/services.py:247
+#: ../plugin/controllers/models/services.py:789
+#: ../plugin/controllers/models/services.py:1020
+#: ../plugin/controllers/models/services.py:1066
 msgid "%d.%m.%Y"
 msgstr ""
 
@@ -67,8 +67,8 @@ msgstr "%s %s est verrouillé."
 msgid "%s / %s"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:246
-#: ../plugin/controllers/models/info.py:404
+#: ../plugin/controllers/models/info.py:245
+#: ../plugin/controllers/models/info.py:403
 #, python-format
 msgid "%s free / %s total"
 msgstr "%s de libre / %s au total"
@@ -210,7 +210,7 @@ msgstr "Echec de la création de l'alternatif %s."
 msgid "Always"
 msgstr "Toujours"
 
-#: ../plugin/controllers/models/info.py:298
+#: ../plugin/controllers/models/info.py:297
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "Télécommande complète"
@@ -441,7 +441,7 @@ msgstr ""
 msgid "CPU brand"
 msgstr ""
 
-#: ../plugin/controllers/models/services.py:377
+#: ../plugin/controllers/models/services.py:389
 msgid "Cable"
 msgstr "Câble"
 
@@ -545,8 +545,8 @@ msgstr "Nom personnalisé"
 msgid "Custom offset"
 msgstr "Compensation personnalisée"
 
-#: ../plugin/controllers/models/info.py:70
-#: ../plugin/controllers/models/info.py:89 ../plugin/controllers/i18n.py:121
+#: ../plugin/controllers/models/info.py:69
+#: ../plugin/controllers/models/info.py:88 ../plugin/controllers/i18n.py:121
 msgid "DHCP"
 msgstr "DHCP"
 
@@ -640,8 +640,8 @@ msgstr "Désactiver Timer"
 msgid "Disable remote access for user root"
 msgstr "Désactiver l'accès pour l'utilisateur root"
 
-#: ../plugin/controllers/models/info.py:234
-#: ../plugin/controllers/models/info.py:250
+#: ../plugin/controllers/models/info.py:233
+#: ../plugin/controllers/models/info.py:249
 #, fuzzy
 msgid "Disabled in configuration"
 msgstr "Désactivé en cas de conflit"
@@ -695,7 +695,7 @@ msgstr "Pilotes"
 msgid "Duration"
 msgstr "Longueur"
 
-#: ../plugin/controllers/models/info.py:603
+#: ../plugin/controllers/models/info.py:621
 msgid "E"
 msgstr "E"
 
@@ -932,8 +932,9 @@ msgid "Feed URL"
 msgstr ""
 
 #: ../plugin/controllers/i18n.py:157
+#, fuzzy
 msgid "Flash type"
-msgstr ""
+msgstr "Recherche"
 
 #: ../plugin/controllers/i18n.py:465
 msgid "Force"
@@ -978,10 +979,10 @@ msgstr "Version du frontprocesseur"
 msgid "Full remote"
 msgstr "Télécommande complète"
 
-#: ../plugin/controllers/models/info.py:370
-#: ../plugin/controllers/models/info.py:376
-#: ../plugin/controllers/models/info.py:391
-#: ../plugin/controllers/models/info.py:394
+#: ../plugin/controllers/models/info.py:369
+#: ../plugin/controllers/models/info.py:375
+#: ../plugin/controllers/models/info.py:390
+#: ../plugin/controllers/models/info.py:393
 #: ../plugin/controllers/models/movies.py:278
 #: ../plugin/controllers/models/movies.py:408
 #: ../plugin/controllers/models/movies.py:828
@@ -1054,11 +1055,11 @@ msgstr ""
 msgid "IPv4 address"
 msgstr "Adresse IPv4"
 
-#: ../plugin/controllers/models/info.py:154 ../plugin/controllers/i18n.py:178
+#: ../plugin/controllers/models/info.py:153 ../plugin/controllers/i18n.py:178
 msgid "IPv4-only Python/Twisted"
 msgstr "Python/Twisted seulement en IPv4"
 
-#: ../plugin/controllers/models/info.py:150 ../plugin/controllers/i18n.py:176
+#: ../plugin/controllers/models/info.py:149 ../plugin/controllers/i18n.py:176
 msgid "IPv4-only kernel"
 msgstr "Noyau seulement en IPv4"
 
@@ -1187,7 +1188,7 @@ msgstr "Configuration de LCD4Linux"
 msgid "LICENSE"
 msgstr "LICENCE"
 
-#: ../plugin/controllers/models/info.py:300
+#: ../plugin/controllers/models/info.py:299
 #, fuzzy
 msgid "LIRC remote"
 msgstr "Télécommande"
@@ -1226,9 +1227,9 @@ msgstr "Vérouillé"
 msgid "MAC address"
 msgstr "Adresse MAC"
 
-#: ../plugin/controllers/models/info.py:367
-#: ../plugin/controllers/models/info.py:378
-#: ../plugin/controllers/models/info.py:396
+#: ../plugin/controllers/models/info.py:366
+#: ../plugin/controllers/models/info.py:377
+#: ../plugin/controllers/models/info.py:395
 #: ../plugin/controllers/models/movies.py:280
 #: ../plugin/controllers/models/movies.py:410
 #: ../plugin/controllers/models/movies.py:830
@@ -1394,7 +1395,7 @@ msgstr "Interface réseau"
 msgid "Never"
 msgstr "Jamais"
 
-#: ../plugin/controllers/models/services.py:370
+#: ../plugin/controllers/models/services.py:382
 #: ../plugin/controllers/i18n.py:424
 msgid "New"
 msgstr "Nouveau"
@@ -1408,7 +1409,7 @@ msgstr "Favori"
 msgid "New Name"
 msgstr "Nouveau nom"
 
-#: ../plugin/controllers/models/info.py:266 ../plugin/controllers/i18n.py:390
+#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:390
 msgid "No"
 msgstr "Non"
 
@@ -1630,7 +1631,7 @@ msgstr "Paramètres OpenWebif"
 msgid "OpenWebif url:"
 msgstr "OpenWebif URL:"
 
-#: ../plugin/controllers/models/services.py:264
+#: ../plugin/controllers/models/services.py:276
 #: ../plugin/controllers/i18n.py:515
 msgid "Orbital Position"
 msgstr "Position orbitale"
@@ -1841,7 +1842,7 @@ msgstr "Limiter aux Bouquets"
 msgid "Root"
 msgstr "Racine"
 
-#: ../plugin/controllers/models/info.py:61
+#: ../plugin/controllers/models/info.py:60
 msgid "SLAAC"
 msgstr "SLAAC"
 
@@ -2017,7 +2018,7 @@ msgstr "Service n'est pas une alternative."
 msgid "Service renamed successfully."
 msgstr "Service renommé avec succès."
 
-#: ../plugin/controllers/models/services.py:372
+#: ../plugin/controllers/models/services.py:384
 msgid "Services"
 msgstr "Services"
 
@@ -2238,9 +2239,9 @@ msgstr "Dim"
 msgid "Sunday"
 msgstr "Dimanche"
 
-#: ../plugin/controllers/models/info.py:374
-#: ../plugin/controllers/models/info.py:386
-#: ../plugin/controllers/models/info.py:388
+#: ../plugin/controllers/models/info.py:373
+#: ../plugin/controllers/models/info.py:385
+#: ../plugin/controllers/models/info.py:387
 msgid "TB"
 msgstr "To"
 
@@ -2276,7 +2277,7 @@ msgstr "Template Engine"
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugin/controllers/models/services.py:379
+#: ../plugin/controllers/models/services.py:391
 msgid "Terrestrial"
 msgstr "Terrestre"
 
@@ -2612,7 +2613,7 @@ msgstr "Ctrl Volume"
 msgid "Vpid"
 msgstr "Vpid"
 
-#: ../plugin/controllers/models/info.py:606
+#: ../plugin/controllers/models/info.py:624
 msgid "W"
 msgstr "O"
 
@@ -2678,8 +2679,8 @@ msgstr "Mauvais format du paramètre 'set=%s'. Utilisation de set=set15 "
 msgid "YYYY-MM-DD"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:264
-#: ../plugin/controllers/models/info.py:268 ../plugin/controllers/i18n.py:554
+#: ../plugin/controllers/models/info.py:263
+#: ../plugin/controllers/models/info.py:267 ../plugin/controllers/i18n.py:554
 #: ../plugin/controllers/i18n.py:570
 msgid "Yes"
 msgstr "Oui"
@@ -2781,8 +2782,8 @@ msgstr "mettre en veille"
 msgid "hour"
 msgstr "heure"
 
-#: ../plugin/controllers/models/info.py:242
-#: ../plugin/controllers/models/info.py:245
+#: ../plugin/controllers/models/info.py:241
+#: ../plugin/controllers/models/info.py:244
 #: ../plugin/controllers/models/movies.py:282
 #: ../plugin/controllers/models/movies.py:412
 #: ../plugin/controllers/models/movies.py:832
@@ -2793,8 +2794,8 @@ msgstr "ko"
 msgid "loading"
 msgstr "chargement"
 
-#: ../plugin/controllers/models/info.py:72
-#: ../plugin/controllers/models/info.py:91
+#: ../plugin/controllers/models/info.py:71
+#: ../plugin/controllers/models/info.py:90
 msgid "manual/disabled"
 msgstr "manuel/désactivé"
 
@@ -2810,7 +2811,7 @@ msgstr "minute"
 msgid "no description available"
 msgstr "pas de description disponible"
 
-#: ../plugin/controllers/models/info.py:183 ../plugin/controllers/i18n.py:177
+#: ../plugin/controllers/models/info.py:182 ../plugin/controllers/i18n.py:177
 msgid "none/IPv4-only network"
 msgstr "aucun/réseau seulement en IPv4"
 
@@ -2830,11 +2831,11 @@ msgstr "un deux trois quatre commande inconnue"
 msgid "partial title match"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:437
+#: ../plugin/controllers/models/info.py:436
 msgid "r/o"
 msgstr "r/o"
 
-#: ../plugin/controllers/models/info.py:433
+#: ../plugin/controllers/models/info.py:432
 msgid "r/w"
 msgstr "r/w"
 
@@ -2883,9 +2884,9 @@ msgstr "description courte correspond"
 msgid "standard"
 msgstr "standard"
 
-#: ../plugin/controllers/models/info.py:68
-#: ../plugin/controllers/models/info.py:80
-#: ../plugin/controllers/models/info.py:87
+#: ../plugin/controllers/models/info.py:67
+#: ../plugin/controllers/models/info.py:79
+#: ../plugin/controllers/models/info.py:86
 msgid "static"
 msgstr "statique"
 
@@ -2924,8 +2925,8 @@ msgstr "transcodé"
 msgid "type %s is not a number"
 msgstr "le type %s n'est pas un nombre"
 
-#: ../plugin/controllers/models/info.py:96
-#: ../plugin/controllers/models/info.py:113
+#: ../plugin/controllers/models/info.py:95
+#: ../plugin/controllers/models/info.py:112
 msgid "unknown"
 msgstr "inconnu"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-12 11:07+0430\n"
+"POT-Creation-Date: 2021-04-19 12:45+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Мартин Петков <marto74bg@yahoo.co.uk>\n"
 "Language-Team: \n"
@@ -31,10 +31,10 @@ msgstr ""
 msgid "%02d:%02d"
 msgstr ""
 
-#: ../plugin/controllers/models/services.py:235
-#: ../plugin/controllers/models/services.py:773
-#: ../plugin/controllers/models/services.py:1004
-#: ../plugin/controllers/models/services.py:1050
+#: ../plugin/controllers/models/services.py:247
+#: ../plugin/controllers/models/services.py:789
+#: ../plugin/controllers/models/services.py:1020
+#: ../plugin/controllers/models/services.py:1066
 msgid "%d.%m.%Y"
 msgstr ""
 
@@ -68,8 +68,8 @@ msgstr "%s %s е заключен."
 msgid "%s / %s"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:246
-#: ../plugin/controllers/models/info.py:404
+#: ../plugin/controllers/models/info.py:245
+#: ../plugin/controllers/models/info.py:403
 #, python-format
 msgid "%s free / %s total"
 msgstr "%s свободни / %s общо"
@@ -211,7 +211,7 @@ msgstr "Грешка при създаване на %s алтернативи."
 msgid "Always"
 msgstr "Винаги"
 
-#: ../plugin/controllers/models/info.py:298
+#: ../plugin/controllers/models/info.py:297
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "Пълно дистанционно"
@@ -441,7 +441,7 @@ msgstr ""
 msgid "CPU brand"
 msgstr ""
 
-#: ../plugin/controllers/models/services.py:377
+#: ../plugin/controllers/models/services.py:389
 msgid "Cable"
 msgstr "Кабелен"
 
@@ -547,8 +547,8 @@ msgstr "Потребителско име на приемника"
 msgid "Custom offset"
 msgstr "Потребителско преместване"
 
-#: ../plugin/controllers/models/info.py:70
-#: ../plugin/controllers/models/info.py:89 ../plugin/controllers/i18n.py:121
+#: ../plugin/controllers/models/info.py:69
+#: ../plugin/controllers/models/info.py:88 ../plugin/controllers/i18n.py:121
 msgid "DHCP"
 msgstr "DHCP"
 
@@ -642,8 +642,8 @@ msgstr "Спри Таймер"
 msgid "Disable remote access for user root"
 msgstr "Спри достъпа за потребител root"
 
-#: ../plugin/controllers/models/info.py:234
-#: ../plugin/controllers/models/info.py:250
+#: ../plugin/controllers/models/info.py:233
+#: ../plugin/controllers/models/info.py:249
 #, fuzzy
 msgid "Disabled in configuration"
 msgstr "Спрян при конфликт"
@@ -697,7 +697,7 @@ msgstr "Драйвери"
 msgid "Duration"
 msgstr "Продължителност"
 
-#: ../plugin/controllers/models/info.py:603
+#: ../plugin/controllers/models/info.py:621
 msgid "E"
 msgstr "E"
 
@@ -934,8 +934,9 @@ msgid "Feed URL"
 msgstr ""
 
 #: ../plugin/controllers/i18n.py:157
+#, fuzzy
 msgid "Flash type"
-msgstr ""
+msgstr "Търсене"
 
 #: ../plugin/controllers/i18n.py:465
 msgid "Force"
@@ -980,10 +981,10 @@ msgstr "Версия на фронтпроцесора"
 msgid "Full remote"
 msgstr "Пълно дистанционно"
 
-#: ../plugin/controllers/models/info.py:370
-#: ../plugin/controllers/models/info.py:376
-#: ../plugin/controllers/models/info.py:391
-#: ../plugin/controllers/models/info.py:394
+#: ../plugin/controllers/models/info.py:369
+#: ../plugin/controllers/models/info.py:375
+#: ../plugin/controllers/models/info.py:390
+#: ../plugin/controllers/models/info.py:393
 #: ../plugin/controllers/models/movies.py:278
 #: ../plugin/controllers/models/movies.py:408
 #: ../plugin/controllers/models/movies.py:828
@@ -1056,11 +1057,11 @@ msgstr ""
 msgid "IPv4 address"
 msgstr "IPv4 адрес"
 
-#: ../plugin/controllers/models/info.py:154 ../plugin/controllers/i18n.py:178
+#: ../plugin/controllers/models/info.py:153 ../plugin/controllers/i18n.py:178
 msgid "IPv4-only Python/Twisted"
 msgstr "IPv4-само Python/Twisted"
 
-#: ../plugin/controllers/models/info.py:150 ../plugin/controllers/i18n.py:176
+#: ../plugin/controllers/models/info.py:149 ../plugin/controllers/i18n.py:176
 msgid "IPv4-only kernel"
 msgstr "IPv4-само ядро"
 
@@ -1191,7 +1192,7 @@ msgstr "LCD4Linux Настройки"
 msgid "LICENSE"
 msgstr "ЛИЦЕНЗ"
 
-#: ../plugin/controllers/models/info.py:300
+#: ../plugin/controllers/models/info.py:299
 #, fuzzy
 msgid "LIRC remote"
 msgstr "Дистанционно"
@@ -1230,9 +1231,9 @@ msgstr "Заключен"
 msgid "MAC address"
 msgstr "MAC адрес"
 
-#: ../plugin/controllers/models/info.py:367
-#: ../plugin/controllers/models/info.py:378
-#: ../plugin/controllers/models/info.py:396
+#: ../plugin/controllers/models/info.py:366
+#: ../plugin/controllers/models/info.py:377
+#: ../plugin/controllers/models/info.py:395
 #: ../plugin/controllers/models/movies.py:280
 #: ../plugin/controllers/models/movies.py:410
 #: ../plugin/controllers/models/movies.py:830
@@ -1398,7 +1399,7 @@ msgstr "Мрежов Интерфейс"
 msgid "Never"
 msgstr "Никога"
 
-#: ../plugin/controllers/models/services.py:370
+#: ../plugin/controllers/models/services.py:382
 #: ../plugin/controllers/i18n.py:424
 msgid "New"
 msgstr "Нов"
@@ -1412,7 +1413,7 @@ msgstr "Отметка"
 msgid "New Name"
 msgstr "Ново Име"
 
-#: ../plugin/controllers/models/info.py:266 ../plugin/controllers/i18n.py:390
+#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:390
 msgid "No"
 msgstr "Не"
 
@@ -1634,7 +1635,7 @@ msgstr "OpenWebif Настройки"
 msgid "OpenWebif url:"
 msgstr "OpenWebif URL:"
 
-#: ../plugin/controllers/models/services.py:264
+#: ../plugin/controllers/models/services.py:276
 #: ../plugin/controllers/i18n.py:515
 msgid "Orbital Position"
 msgstr "Орбитална Позиция"
@@ -1845,7 +1846,7 @@ msgstr "Ограничение на букети"
 msgid "Root"
 msgstr "Главна"
 
-#: ../plugin/controllers/models/info.py:61
+#: ../plugin/controllers/models/info.py:60
 msgid "SLAAC"
 msgstr "SLAAC"
 
@@ -2022,7 +2023,7 @@ msgstr "Канала не е алтернативен."
 msgid "Service renamed successfully."
 msgstr "Канала бе переименуван успешно."
 
-#: ../plugin/controllers/models/services.py:372
+#: ../plugin/controllers/models/services.py:384
 msgid "Services"
 msgstr "Канали"
 
@@ -2245,9 +2246,9 @@ msgstr "Нед"
 msgid "Sunday"
 msgstr "Неделя"
 
-#: ../plugin/controllers/models/info.py:374
-#: ../plugin/controllers/models/info.py:386
-#: ../plugin/controllers/models/info.py:388
+#: ../plugin/controllers/models/info.py:373
+#: ../plugin/controllers/models/info.py:385
+#: ../plugin/controllers/models/info.py:387
 msgid "TB"
 msgstr "ТБ"
 
@@ -2283,7 +2284,7 @@ msgstr "Шаблон на Двигателя"
 msgid "Terminal"
 msgstr "Терминал"
 
-#: ../plugin/controllers/models/services.py:379
+#: ../plugin/controllers/models/services.py:391
 msgid "Terrestrial"
 msgstr "Наземна"
 
@@ -2620,7 +2621,7 @@ msgstr "Контрол на Усилването"
 msgid "Vpid"
 msgstr "Vpid"
 
-#: ../plugin/controllers/models/info.py:606
+#: ../plugin/controllers/models/info.py:624
 msgid "W"
 msgstr "W"
 
@@ -2687,8 +2688,8 @@ msgstr "Неправилен формат на параметъра 'set=%s'. И
 msgid "YYYY-MM-DD"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:264
-#: ../plugin/controllers/models/info.py:268 ../plugin/controllers/i18n.py:554
+#: ../plugin/controllers/models/info.py:263
+#: ../plugin/controllers/models/info.py:267 ../plugin/controllers/i18n.py:554
 #: ../plugin/controllers/i18n.py:570
 msgid "Yes"
 msgstr "Да"
@@ -2790,8 +2791,8 @@ msgstr "към режим готовност"
 msgid "hour"
 msgstr "час"
 
-#: ../plugin/controllers/models/info.py:242
-#: ../plugin/controllers/models/info.py:245
+#: ../plugin/controllers/models/info.py:241
+#: ../plugin/controllers/models/info.py:244
 #: ../plugin/controllers/models/movies.py:282
 #: ../plugin/controllers/models/movies.py:412
 #: ../plugin/controllers/models/movies.py:832
@@ -2802,8 +2803,8 @@ msgstr "КБ"
 msgid "loading"
 msgstr "зареждане"
 
-#: ../plugin/controllers/models/info.py:72
-#: ../plugin/controllers/models/info.py:91
+#: ../plugin/controllers/models/info.py:71
+#: ../plugin/controllers/models/info.py:90
 msgid "manual/disabled"
 msgstr "ръчно/спрян"
 
@@ -2819,7 +2820,7 @@ msgstr "минута"
 msgid "no description available"
 msgstr "няма достъпно описание"
 
-#: ../plugin/controllers/models/info.py:183 ../plugin/controllers/i18n.py:177
+#: ../plugin/controllers/models/info.py:182 ../plugin/controllers/i18n.py:177
 msgid "none/IPv4-only network"
 msgstr "нищо/IPv4-само мрежа"
 
@@ -2839,11 +2840,11 @@ msgstr "една /две / три / четири неизвестни коман
 msgid "partial title match"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:437
+#: ../plugin/controllers/models/info.py:436
 msgid "r/o"
 msgstr "r/o"
 
-#: ../plugin/controllers/models/info.py:433
+#: ../plugin/controllers/models/info.py:432
 msgid "r/w"
 msgstr "r/w"
 
@@ -2892,9 +2893,9 @@ msgstr "краткото описание съвпада"
 msgid "standard"
 msgstr "стандарт"
 
-#: ../plugin/controllers/models/info.py:68
-#: ../plugin/controllers/models/info.py:80
-#: ../plugin/controllers/models/info.py:87
+#: ../plugin/controllers/models/info.py:67
+#: ../plugin/controllers/models/info.py:79
+#: ../plugin/controllers/models/info.py:86
 msgid "static"
 msgstr "статичен"
 
@@ -2933,8 +2934,8 @@ msgstr "транскодиран"
 msgid "type %s is not a number"
 msgstr "тип %s не е число"
 
-#: ../plugin/controllers/models/info.py:96
-#: ../plugin/controllers/models/info.py:113
+#: ../plugin/controllers/models/info.py:95
+#: ../plugin/controllers/models/info.py:112
 msgid "unknown"
 msgstr "неизвестно"
 

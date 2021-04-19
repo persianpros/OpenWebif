@@ -63,6 +63,18 @@ else:
 	from cgi import escape as html_escape
 
 
+def getIPTVLink(ref):
+	first = ref.split(":")[0]
+	if first in ['4097', '5003', '5002', '5001'] or "%3A" in ref or "%3a" in ref:
+		if 'http' in ref:
+			if ref.index('http') < ref.rindex(':'):
+				ref = ref[:ref.rindex(':')]
+			ref = ref[ref.index('http'):]
+			ref = ref.replace('%3a', ':').replace('%3A', ':').replace('http://127.0.0.1:8088/', '')
+			return ref
+	return ''
+
+
 def filterName(name, encode=True):
 	if name is not None:
 		name = six.ensure_str(removeBadChars(six.ensure_binary(name)))
@@ -142,7 +154,7 @@ def getCurrentService(session):
 			if epg_bouquet:
 				bqname = ServiceReference(epg_bouquet).getServiceName()
 				bqref = ServiceReference(epg_bouquet).ref.toString()
-		except:  # noqa: E722
+		except:  # nosec # noqa: E722
 			pass
 
 		return {
@@ -198,22 +210,22 @@ def getCurrentFullInfo(session):
 
 	try:
 		info = session.nav.getCurrentService().info()
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		info = None
 
 	try:
 		subservices = session.nav.getCurrentService().subServices()
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		subservices = None
 
 	try:
 		audio = session.nav.getCurrentService().audioTracks()
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		audio = None
 
 	try:
 		ref = session.nav.getCurrentlyPlayingServiceReference().toString()
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		ref = None
 
 	if ref is not None:
@@ -246,7 +258,7 @@ def getCurrentFullInfo(session):
 			idx += 1
 	try:
 		feinfo = session.nav.getCurrentService().frontendInfo()
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		feinfo = None
 
 	frontendData = feinfo and feinfo.getAll(True)
@@ -268,7 +280,7 @@ def getCurrentFullInfo(session):
 
 	try:
 		frontendStatus = feinfo and feinfo.getFrontendStatus()
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		frontendStatus = None
 
 	if frontendStatus is not None:
@@ -293,7 +305,7 @@ def getCurrentFullInfo(session):
 
 	try:
 		recordings = session.nav.getRecordings()
-	except:  # noqa: E722
+	except:  # nosec # noqa: E722
 		recordings = None
 
 	inf['rec_state'] = False
@@ -372,7 +384,7 @@ def getSatellites(stype):
 				service_type = _("Services")
 			try:
 				service_name = str(nimmanager.getSatDescription(orbpos))
-			except:  # noqa: E722
+			except:  # nosec # noqa: E722
 				if unsigned_orbpos == 0xFFFF:  # Cable
 					service_name = _("Cable")
 				elif unsigned_orbpos == 0xEEEE:  # Terrestrial
@@ -456,6 +468,9 @@ def getChannels(idbouquet, stype):
 		chan['name'] = filterName(channel[1])
 		if chan['ref'].split(":")[0] == '5002':  # BAD fix !!! this needs to fix in enigma2 !!!
 			chan['name'] = chan['ref'].split(":")[-1]
+		# IPTV
+		chan['link'] = getIPTVLink(chan['ref'])
+
 		if not int(channel[0].split(":")[1]) & 64:
 			psref = parse_servicereference(channel[0])
 			chan['service_type'] = SERVICE_TYPE_LOOKUP.get(psref.get('service_type'), "UNKNOWN")
@@ -744,6 +759,7 @@ def getEvent(ref, idev, encode=True):
 		info['genre'], info['genreid'] = convertGenre(event[8])
 		info['picon'] = getPicon(event[7])
 		info['timer'] = getTimerEventStatus(event, eventLookupTable, None)
+		info['link'] = getIPTVLink(event[7])
 		break
 	return {'event': info}
 
