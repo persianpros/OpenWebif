@@ -253,6 +253,8 @@ def getInfo(session=None, need_fullinfo=False):
 	info["webifver"] = OPENWEBIFVER
 	info['imagedistro'] = boxbranding.getImageDistro()
 	info['oever'] = boxbranding.getImageBuild()
+	info['gccver'] = about.getGccVersion()
+	info['glibcver'] = about.getGlibcVersion()
 	info['visionversion'] = boxbranding.getVisionVersion()
 	info['visionrevision'] = boxbranding.getVisionRevision()
 	info['visionmodule'] = about.getVisionModule()

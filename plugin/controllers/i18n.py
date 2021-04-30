@@ -210,6 +210,8 @@ tstrings = {
 	'nothing_play': _("Nothing playing."),
 	'now': _("Now"),
 	'oe_version': _("OE"),
+	'gcc_version': _("GCC"),
+	'glibc_version': _("Glibc"),
 	'on': _("On"),
 	'openwebif_header': _("Open Source Web Interface for Linux set-top box"),
 	'openvision': _("Open Vision"),
