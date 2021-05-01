@@ -34,6 +34,7 @@ from Components.config import config
 from Components.NimManager import nimmanager
 from Components.Harddisk import harddiskmanager
 from Components.Network import iNetwork
+from Components.SystemInfo import SystemInfo
 from ServiceReference import ServiceReference
 from RecordTimer import parseEvent, RecordTimerEntry
 from timer import TimerEntry
@@ -272,10 +273,7 @@ def getInfo(session=None, need_fullinfo=False):
 	info['enigmarev'] = getE2Rev()
 	info['driverdate'] = about.getDriverInstalledDate()
 	info['kernelver'] = boxbranding.getKernelVersion()
-
-	modulelayoutcommand = os.popen('find /lib/modules/ -type f -name "openvision.ko" -exec modprobe --dump-modversions {} \; | grep "module_layout" | cut -c-11').read().strip()
-
-	info['modulelayout'] = modulelayoutcommand
+	info['modulelayout'] = SystemInfo["ModuleLayout"]
 	info['dvbapitype'] = about.getDVBAPI()
 	info['gstreamerversion'] = about.getGStreamerVersionString()
 	info['ffmpegversion'] = about.getFFmpegVersionString()
