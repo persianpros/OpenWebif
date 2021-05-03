@@ -9,9 +9,9 @@ from Components.config import config as comp_config
 from Components.Network import iNetwork
 
 from enigma import eEnv
-from boxbranding import getHaveTranscoding, getHaveMultiTranscoding
+from Components.SystemInfo import BoxInfo
 
-OPENWEBIFVER = "OWIF 1.4.6.3 for Open Vision"
+OPENWEBIFVER = "OWIF 1.4.6.4 for Open Vision"
 
 PLUGIN_NAME = 'OpenWebif'
 PLUGIN_DESCRIPTION = "OpenWebif Configuration"
@@ -33,7 +33,7 @@ MOBILEDEVICE = False
 
 
 def getTranscoding():
-	if getHaveTranscoding() == "True" or getHaveMultiTranscoding() == "True":
+	if BoxInfo.getItem("transcoding") or BoxInfo.getItem("multitranscoding") or os.path.isfile("/proc/stb/encoder/0/bitrate"):
 		return True
 	return False
 

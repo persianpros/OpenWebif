@@ -25,9 +25,9 @@ from __future__ import print_function
 from enigma import eConsoleAppContainer
 from ServiceReference import ServiceReference
 from Components.config import config
-from boxbranding import getImageArch
+from Components.SystemInfo import BoxInfo
 
-architecture = getImageArch()
+architecture = BoxInfo.getItem("architecture")
 
 if architecture == "sh4":
 	from twisted.web import static, resource, http, server

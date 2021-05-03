@@ -37,10 +37,9 @@ from Plugins.Extensions.OpenWebif.controllers.base import BaseController
 from Plugins.Extensions.OpenWebif.controllers.models.locations import getLocations
 from Plugins.Extensions.OpenWebif.controllers.defaults import OPENWEBIFVER, getPublicPath, VIEWS_PATH, TRANSCODING, EXT_EVENT_INFO_SOURCE
 from Plugins.Extensions.OpenWebif.controllers.utilities import getUrlArg, getEventInfoProvider
-from enigma import getBoxType, getBoxBrand
-from boxbranding import getMachineBuild
+from Components.SystemInfo import BoxInfo
 
-type = getBoxType()
+type = BoxInfo.getItem("model")
 
 
 class AjaxController(BaseController):
@@ -167,7 +166,7 @@ class AjaxController(BaseController):
 
 	def P_screenshot(self, request):
 		box = {}
-		box['brand'] = getBoxBrand()
+		box['brand'] = BoxInfo.getItem("brand")
 		return {"box": box}
 
 	def P_movies(self, request):
@@ -378,7 +377,7 @@ class AjaxController(BaseController):
 		if transcoding:
 			try:
 				transcoder_port = int(config.plugins.transcodingsetup.port.value)
-				if getMachineBuild() in ("inihdp", "8100s") or type in ("hd2400", "et10000", "et13000", "beyonwizu4", "sf5008", "x2plus", "formuler1", "tiviaraplus"):
+				if BoxInfo.getItem("platform") in ("inihdp", "8100s") or type in ("hd2400", "et10000", "et13000", "beyonwizu4", "sf5008", "x2plus", "formuler1", "tiviaraplus"):
 					transcoder_port = int(config.OpenWebif.streamport.value)
 			except Exception:
 				transcoder_port = 0

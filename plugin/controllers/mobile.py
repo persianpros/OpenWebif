@@ -28,7 +28,7 @@ from Plugins.Extensions.OpenWebif.controllers.base import BaseController
 from Plugins.Extensions.OpenWebif.controllers.models.movies import getMovieList
 from Plugins.Extensions.OpenWebif.controllers.models.timers import getTimers
 from Plugins.Extensions.OpenWebif.controllers.models.services import getBouquets, getChannels, getChannelEpg, getEvent, getPicon
-from boxbranding import getHaveTranscoding
+from Plugins.Extensions.OpenWebif.controllers.defaults import TRANSCODING
 from Plugins.Extensions.OpenWebif.controllers.utilities import getUrlArg
 
 
@@ -54,7 +54,7 @@ class MobileController(BaseController):
 		stype = getUrlArg(request, "stype", "tv")
 		idbouquet = getUrlArg(request, "id", "ALL")
 		channels = getChannels(idbouquet, stype)
-		channels['transcoding'] = getHaveTranscoding()
+		channels['transcoding'] = TRANSCODING
 		return channels
 
 	def P_channelinfo(self, request):
@@ -123,7 +123,7 @@ class MobileController(BaseController):
 
 	def P_movies(self, request):
 		movies = getMovieList(request.args)
-		movies['transcoding'] = getHaveTranscoding()
+		movies['transcoding'] = TRANSCODING
 		return movies
 
 	def P_remote(self, request):

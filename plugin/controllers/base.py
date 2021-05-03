@@ -36,12 +36,13 @@ from twisted.protocols.basic import FileSender
 from Plugins.Extensions.OpenWebif.controllers.i18n import _
 from Tools.Directories import fileExists, resolveFilename, SCOPE_PLUGINS
 from Cheetah.Template import Template
-from enigma import eEPGCache, getBoxType
+from enigma import eEPGCache
 from Components.config import config
 
 from Plugins.Extensions.OpenWebif.controllers.models.info import getInfo
 from Plugins.Extensions.OpenWebif.controllers.models.config import getCollapsedMenus, getConfigsSections, getShowName, getCustomName, getBoxName
 from Plugins.Extensions.OpenWebif.controllers.defaults import getPublicPath, getViewsPath, EXT_EVENT_INFO_SOURCE, STB_LANG, getIP
+from Components.SystemInfo import BoxInfo
 
 
 def new_getRequestHostname(self):
@@ -303,7 +304,7 @@ class BaseController(resource.Resource):
 		ret['boxname'] = getBoxName()['boxname']
 		if not ret['boxname'] or not ret['customname']:
 			ret['boxname'] = getInfo()['brand'] + " " + getInfo()['model']
-		ret['box'] = getBoxType()
+		ret['box'] = BoxInfo.getItem("model")
 		ret["remote"] = REMOTE
 		if hasattr(eEPGCache, 'FULL_DESCRIPTION_SEARCH'):
 			ret['epgsearchcaps'] = True

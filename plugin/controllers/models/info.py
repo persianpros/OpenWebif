@@ -34,18 +34,17 @@ from Components.config import config
 from Components.NimManager import nimmanager
 from Components.Harddisk import harddiskmanager
 from Components.Network import iNetwork
-from Components.SystemInfo import SystemInfo
+from Components.SystemInfo import BoxInfo, SystemInfo
 from ServiceReference import ServiceReference
 from RecordTimer import parseEvent, RecordTimerEntry
 from timer import TimerEntry
 from Screens.InfoBar import InfoBar
 from Tools.Directories import fileExists
-from enigma import eDVBVolumecontrol, eServiceCenter, eServiceReference, getEnigmaVersionString, eEPGCache, getBoxType, getBoxBrand, eGetEnigmaDebugLvl, getE2Rev
+from enigma import eDVBVolumecontrol, eServiceCenter, eServiceReference, getEnigmaVersionString, eEPGCache, eGetEnigmaDebugLvl, getE2Rev
 from Tools.StbHardware import getFPVersion, getBoxProc, getBoxProcType, getHWSerial, getBoxRCType
 from Plugins.Extensions.OpenWebif.controllers.i18n import _
 from Plugins.Extensions.OpenWebif.controllers.defaults import OPENWEBIFVER, TRANSCODING
 from Plugins.Extensions.OpenWebif.controllers.utilities import removeBad, removeBad2
-import boxbranding
 from Plugins.Extensions.OpenWebif.controllers.models.owibranding import getLcd, getGrabPip
 
 
@@ -199,14 +198,14 @@ def getInfo(session=None, need_fullinfo=False):
 	if not (STATICBOXINFO is None or need_fullinfo):
 		return STATICBOXINFO
 
-	info['brand'] = getBoxBrand()
-	info['model'] = getBoxType()
-	info['platform'] = boxbranding.getMachineBuild()
+	info['brand'] = BoxInfo.getItem("brand")
+	info['model'] = BoxInfo.getItem("model")
+	info['platform'] = BoxInfo.getItem("platform")
 
 	try:
 		info['procmodel'] = getBoxProc()
 	except:  # nosec # noqa: E722
-		info['procmodel'] = boxbranding.getMachineProcModel()
+		info['procmodel'] = None
 
 	try:
 		info['procmodeltype'] = getBoxProcType()
@@ -226,7 +225,7 @@ def getInfo(session=None, need_fullinfo=False):
 	cpu = about.getCPUInfoString()
 	info['chipset'] = cpu
 	info['cpubrand'] = about.getCPUBrand()
-	info['socfamily'] = boxbranding.getSoCFamily()
+	info['socfamily'] = BoxInfo.getItem("socfamily")
 	info['cpuarch'] = about.getCPUArch()
 	if config.OpenWebif.about_benchmark.value is True:
 		info['cpubenchmark'] = about.getCPUBenchmark()
@@ -252,12 +251,12 @@ def getInfo(session=None, need_fullinfo=False):
 	info['uptime'] = about.getBoxUptime()
 
 	info["webifver"] = OPENWEBIFVER
-	info['imagedistro'] = boxbranding.getImageDistro()
-	info['oever'] = boxbranding.getImageBuild()
+	info['imagedistro'] = BoxInfo.getItem("distro")
+	info['oever'] = BoxInfo.getItem("oe")
 	info['gccver'] = about.getGccVersion()
 	info['glibcver'] = about.getGlibcVersion()
-	info['visionversion'] = boxbranding.getVisionVersion()
-	info['visionrevision'] = boxbranding.getVisionRevision()
+	info['visionversion'] = BoxInfo.getItem("visionversion")
+	info['visionrevision'] = BoxInfo.getItem("visionrevision")
 	info['visionmodule'] = about.getVisionModule()
 
 	if fileExists("/etc/openvision/multiboot"):
@@ -272,7 +271,7 @@ def getInfo(session=None, need_fullinfo=False):
 	info['enigmaver'] = getEnigmaVersionString()
 	info['enigmarev'] = getE2Rev()
 	info['driverdate'] = about.getDriverInstalledDate()
-	info['kernelver'] = boxbranding.getKernelVersion()
+	info['kernelver'] = BoxInfo.getItem("kernel")
 	info['modulelayout'] = SystemInfo["ModuleLayout"]
 	info['dvbapitype'] = about.getDVBAPI()
 	info['gstreamerversion'] = about.getGStreamerVersionString()
@@ -298,26 +297,26 @@ def getInfo(session=None, need_fullinfo=False):
 		elif fileExists("/usr/sbin/lircd"):
 			info['boxrctype'] = _("LIRC remote")
 
-	info['ovrctype'] = boxbranding.getRCType()
-	info['ovrcname'] = boxbranding.getRCName()
-	info['ovrcidnum'] = boxbranding.getRCIDNum()
+	info['ovrctype'] = BoxInfo.getItem("rctype")
+	info['ovrcname'] = BoxInfo.getItem("rcname")
+	info['ovrcidnum'] = BoxInfo.getItem("rcidnum")
 
-	info['transcoding'] = boxbranding.getHaveTranscoding()
-	info['multitranscoding'] = boxbranding.getHaveMultiTranscoding()
+	info['transcoding'] = BoxInfo.getItem("transcoding")
+	info['multitranscoding'] = BoxInfo.getItem("multitranscoding")
 
-	info['displaytype'] = boxbranding.getDisplayType()
+	info['displaytype'] = BoxInfo.getItem("displaytype")
 
-	info['updatedatestring'] = about.getUpdateDateString()
+	info['updatedatestring'] = BoxInfo.getItem("compiledate")
 	info['enigmadebuglvl'] = eGetEnigmaDebugLvl()
 
-	info['imagearch'] = boxbranding.getImageArch()
-	info['imagefolder'] = boxbranding.getImageFolder()
-	info['imagefilesystem'] = boxbranding.getImageFileSystem()
-	info['feedsurl'] = boxbranding.getFeedsUrl()
-	info['developername'] = boxbranding.getDeveloperName()
+	info['imagearch'] = BoxInfo.getItem("architecture")
+	info['imagefolder'] = BoxInfo.getItem("imagedir")
+	info['imagefilesystem'] = BoxInfo.getItem("imagefs")
+	info['feedsurl'] = BoxInfo.getItem("feedsurl")
+	info['developername'] = BoxInfo.getItem("developername")
 	info['builddatestring'] = about.getBuildDateString()
-	info['imagefpu'] = boxbranding.getImageFPU()
-	info['havemultilib'] = boxbranding.getHaveMultiLib()
+	info['imagefpu'] = BoxInfo.getItem("fpu")
+	info['havemultilib'] = BoxInfo.getItem("multilib")
 
 	try:
 		info['fp_version'] = getFPVersion()
