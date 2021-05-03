@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-01 10:45+0430\n"
+"POT-Creation-Date: 2021-05-03 20:31+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Dominik Paľo <dominik@palo.sk>\n"
 "Language-Team: \n"
@@ -66,8 +66,8 @@ msgstr "%s %s je zamknutý."
 msgid "%s / %s"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:246
-#: ../plugin/controllers/models/info.py:403
+#: ../plugin/controllers/models/info.py:245
+#: ../plugin/controllers/models/info.py:402
 #, python-format
 msgid "%s free / %s total"
 msgstr "%s voľné / %s celkom"
@@ -209,7 +209,7 @@ msgstr "Vytváranie alternatívy %s zlyhalo."
 msgid "Always"
 msgstr "Vždy"
 
-#: ../plugin/controllers/models/info.py:297
+#: ../plugin/controllers/models/info.py:296
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "Skryť úplné diaľkové"
@@ -305,7 +305,7 @@ msgstr "Upraviť autočasovač"
 msgid "AutoTimer Settings"
 msgstr "Nastavenia automatického časovača"
 
-#: ../plugin/controllers/base.py:353 ../plugin/controllers/i18n.py:340
+#: ../plugin/controllers/base.py:348 ../plugin/controllers/i18n.py:340
 msgid "AutoTimers"
 msgstr "Zoznam autočasovačov"
 
@@ -407,7 +407,7 @@ msgstr "Prehľad úspešne premenovaný."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Obnovenie nastavení prehľadu bolo úspešné"
 
-#: ../plugin/controllers/base.py:358
+#: ../plugin/controllers/base.py:353
 msgid "BouquetEditor"
 msgstr "Editor prehľadov"
 
@@ -547,8 +547,8 @@ msgstr "Vlastný názov prijímača"
 msgid "Custom offset"
 msgstr "Vlastná rezerva"
 
-#: ../plugin/controllers/models/info.py:70
-#: ../plugin/controllers/models/info.py:89 ../plugin/controllers/i18n.py:121
+#: ../plugin/controllers/models/info.py:69
+#: ../plugin/controllers/models/info.py:88 ../plugin/controllers/i18n.py:121
 msgid "DHCP"
 msgstr "DHCP"
 
@@ -642,8 +642,8 @@ msgstr "Vypnúť časovač"
 msgid "Disable remote access for user root"
 msgstr "Zakázať prístup pre užívateľa root"
 
-#: ../plugin/controllers/models/info.py:234
-#: ../plugin/controllers/models/info.py:250
+#: ../plugin/controllers/models/info.py:233
+#: ../plugin/controllers/models/info.py:249
 #, fuzzy
 msgid "Disabled in configuration"
 msgstr "Pri konflikte vypnuté"
@@ -697,7 +697,7 @@ msgstr "Dátum ovládačov"
 msgid "Duration"
 msgstr "Trvanie"
 
-#: ../plugin/controllers/models/info.py:621
+#: ../plugin/controllers/models/info.py:620
 msgid "E"
 msgstr "V"
 
@@ -713,7 +713,7 @@ msgstr "Hľadanie v EPG"
 msgid "EPG encoding"
 msgstr "Znaková sada EPG"
 
-#: ../plugin/controllers/base.py:362
+#: ../plugin/controllers/base.py:357
 msgid "EPGRefresh"
 msgstr "Obnovovanie EPG"
 
@@ -982,10 +982,10 @@ msgstr "Verzia frontprocesora"
 msgid "Full remote"
 msgstr "Skryť úplné diaľkové"
 
-#: ../plugin/controllers/models/info.py:369
-#: ../plugin/controllers/models/info.py:375
-#: ../plugin/controllers/models/info.py:390
-#: ../plugin/controllers/models/info.py:393
+#: ../plugin/controllers/models/info.py:368
+#: ../plugin/controllers/models/info.py:374
+#: ../plugin/controllers/models/info.py:389
+#: ../plugin/controllers/models/info.py:392
 #: ../plugin/controllers/models/movies.py:278
 #: ../plugin/controllers/models/movies.py:408
 #: ../plugin/controllers/models/movies.py:828
@@ -1067,11 +1067,11 @@ msgstr ""
 msgid "IPv4 address"
 msgstr "IPv4 adresa"
 
-#: ../plugin/controllers/models/info.py:154 ../plugin/controllers/i18n.py:178
+#: ../plugin/controllers/models/info.py:153 ../plugin/controllers/i18n.py:178
 msgid "IPv4-only Python/Twisted"
 msgstr "Python/Twisted len IPv4"
 
-#: ../plugin/controllers/models/info.py:150 ../plugin/controllers/i18n.py:176
+#: ../plugin/controllers/models/info.py:149 ../plugin/controllers/i18n.py:176
 msgid "IPv4-only kernel"
 msgstr "Jadro len IPv4"
 
@@ -1195,7 +1195,7 @@ msgstr ""
 msgid "LCD"
 msgstr ""
 
-#: ../plugin/controllers/base.py:325
+#: ../plugin/controllers/base.py:320
 msgid "LCD4Linux Setup"
 msgstr "Nastavenie LCD4Linux"
 
@@ -1203,7 +1203,7 @@ msgstr "Nastavenie LCD4Linux"
 msgid "LICENSE"
 msgstr "Licencia"
 
-#: ../plugin/controllers/models/info.py:299
+#: ../plugin/controllers/models/info.py:298
 #, fuzzy
 msgid "LIRC remote"
 msgstr "Diaľkové"
@@ -1242,9 +1242,9 @@ msgstr "Uzamknutý"
 msgid "MAC address"
 msgstr "MAC adresa"
 
-#: ../plugin/controllers/models/info.py:366
-#: ../plugin/controllers/models/info.py:377
-#: ../plugin/controllers/models/info.py:395
+#: ../plugin/controllers/models/info.py:365
+#: ../plugin/controllers/models/info.py:376
+#: ../plugin/controllers/models/info.py:394
 #: ../plugin/controllers/models/movies.py:280
 #: ../plugin/controllers/models/movies.py:410
 #: ../plugin/controllers/models/movies.py:830
@@ -1379,7 +1379,7 @@ msgstr "MultiEPG"
 msgid "MultiTranscoding"
 msgstr "Transkódovanie"
 
-#: ../plugin/controllers/base.py:349
+#: ../plugin/controllers/base.py:344
 #, fuzzy
 msgid "NCam Webinterface"
 msgstr "OSCam webrozhranie"
@@ -1427,7 +1427,7 @@ msgstr "Záložka"
 msgid "New Name"
 msgstr "Nový názov"
 
-#: ../plugin/controllers/models/info.py:268 ../plugin/controllers/i18n.py:392
+#: ../plugin/controllers/models/info.py:267 ../plugin/controllers/i18n.py:392
 msgid "No"
 msgstr "Nie"
 
@@ -1541,7 +1541,7 @@ msgstr "Teraz"
 msgid "OE"
 msgstr "V"
 
-#: ../plugin/controllers/base.py:347
+#: ../plugin/controllers/base.py:342
 msgid "OSCam Webinterface"
 msgstr "OSCam webrozhranie"
 
@@ -1862,7 +1862,7 @@ msgstr "Obmedziť na prehľady"
 msgid "Root"
 msgstr "Koreňový adresár"
 
-#: ../plugin/controllers/models/info.py:61
+#: ../plugin/controllers/models/info.py:60
 msgid "SLAAC"
 msgstr ""
 
@@ -2046,7 +2046,7 @@ msgstr "Stanice"
 msgid "Set maximum duration"
 msgstr "Nastaviť maximálnu dĺžku"
 
-#: ../plugin/controllers/base.py:312 ../plugin/controllers/i18n.py:263
+#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:263
 #: ../plugin/controllers/i18n.py:423
 msgid "Settings"
 msgstr "Nastavenia"
@@ -2261,9 +2261,9 @@ msgstr "Ned"
 msgid "Sunday"
 msgstr "Nedeľa"
 
-#: ../plugin/controllers/models/info.py:373
-#: ../plugin/controllers/models/info.py:385
-#: ../plugin/controllers/models/info.py:387
+#: ../plugin/controllers/models/info.py:372
+#: ../plugin/controllers/models/info.py:384
+#: ../plugin/controllers/models/info.py:386
 msgid "TB"
 msgstr ""
 
@@ -2295,7 +2295,7 @@ msgstr "Televízia"
 msgid "Template Engine"
 msgstr "Engine šablóny"
 
-#: ../plugin/controllers/base.py:403
+#: ../plugin/controllers/base.py:398
 msgid "Terminal"
 msgstr "Terminál"
 
@@ -2637,7 +2637,7 @@ msgstr "Ovládanie hlasitosti"
 msgid "Vpid"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:624
+#: ../plugin/controllers/models/info.py:623
 msgid "W"
 msgstr "Z"
 
@@ -2704,8 +2704,8 @@ msgstr "Chybný formát parametra 'set=%s'. Použite set=set15 "
 msgid "YYYY-MM-DD"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:266
-#: ../plugin/controllers/models/info.py:270 ../plugin/controllers/i18n.py:556
+#: ../plugin/controllers/models/info.py:265
+#: ../plugin/controllers/models/info.py:269 ../plugin/controllers/i18n.py:556
 #: ../plugin/controllers/i18n.py:572
 msgid "Yes"
 msgstr "Áno"
@@ -2807,8 +2807,8 @@ msgstr "prejsť do pohotovostného režimu"
 msgid "hour"
 msgstr "hod."
 
-#: ../plugin/controllers/models/info.py:242
-#: ../plugin/controllers/models/info.py:245
+#: ../plugin/controllers/models/info.py:241
+#: ../plugin/controllers/models/info.py:244
 #: ../plugin/controllers/models/movies.py:282
 #: ../plugin/controllers/models/movies.py:412
 #: ../plugin/controllers/models/movies.py:832
@@ -2819,8 +2819,8 @@ msgstr ""
 msgid "loading"
 msgstr "načítava sa"
 
-#: ../plugin/controllers/models/info.py:72
-#: ../plugin/controllers/models/info.py:91
+#: ../plugin/controllers/models/info.py:71
+#: ../plugin/controllers/models/info.py:90
 msgid "manual/disabled"
 msgstr "manuálne/zakázané"
 
@@ -2837,7 +2837,7 @@ msgstr "min."
 msgid "no description available"
 msgstr "popis nie je k dispozícii"
 
-#: ../plugin/controllers/models/info.py:183 ../plugin/controllers/i18n.py:177
+#: ../plugin/controllers/models/info.py:182 ../plugin/controllers/i18n.py:177
 msgid "none/IPv4-only network"
 msgstr "žiadna/len IPv4 sieť"
 
@@ -2857,11 +2857,11 @@ msgstr "jeden dva tri štyri neznámy príkaz"
 msgid "partial title match"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:436
+#: ../plugin/controllers/models/info.py:435
 msgid "r/o"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:432
+#: ../plugin/controllers/models/info.py:431
 msgid "r/w"
 msgstr ""
 
@@ -2910,9 +2910,9 @@ msgstr "zhoda v krátkom popise"
 msgid "standard"
 msgstr "štandardné"
 
-#: ../plugin/controllers/models/info.py:68
-#: ../plugin/controllers/models/info.py:80
-#: ../plugin/controllers/models/info.py:87
+#: ../plugin/controllers/models/info.py:67
+#: ../plugin/controllers/models/info.py:79
+#: ../plugin/controllers/models/info.py:86
 msgid "static"
 msgstr "statická"
 
@@ -2951,8 +2951,8 @@ msgstr "transkódované"
 msgid "type %s is not a number"
 msgstr "typ %s nie je číslo"
 
-#: ../plugin/controllers/models/info.py:96
-#: ../plugin/controllers/models/info.py:113
+#: ../plugin/controllers/models/info.py:95
+#: ../plugin/controllers/models/info.py:112
 msgid "unknown"
 msgstr "neznáme"
 

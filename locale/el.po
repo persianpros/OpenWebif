@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebIf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-01 10:45+0430\n"
+"POT-Creation-Date: 2021-05-03 20:31+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: MCelliot_g <mcelliot_g@hotmail.com>\n"
 "Language-Team: satdreamgr\n"
@@ -67,8 +67,8 @@ msgstr "Το %s %s είναι κλειδωμένο."
 msgid "%s / %s"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:246
-#: ../plugin/controllers/models/info.py:403
+#: ../plugin/controllers/models/info.py:245
+#: ../plugin/controllers/models/info.py:402
 #, python-format
 msgid "%s free / %s total"
 msgstr "%s ελεύθερα / %s συνολικά"
@@ -210,7 +210,7 @@ msgstr "Αποτυχία δημιουργίας εναλλακτικού %s."
 msgid "Always"
 msgstr "Πάντα"
 
-#: ../plugin/controllers/models/info.py:297
+#: ../plugin/controllers/models/info.py:296
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "Πλήρες τηλεχειριστήριο"
@@ -306,7 +306,7 @@ msgstr "Επεξεργασία Αυτόματου Χρονοδιακόπτη"
 msgid "AutoTimer Settings"
 msgstr "Ρυθμίσεις Αυτ. Χρ/κόπτη"
 
-#: ../plugin/controllers/base.py:353 ../plugin/controllers/i18n.py:340
+#: ../plugin/controllers/base.py:348 ../plugin/controllers/i18n.py:340
 msgid "AutoTimers"
 msgstr "Λίστα Αυτόματων Χρονοδιακοπτών"
 
@@ -408,7 +408,7 @@ msgstr "Επιτυχία μετονομασίας Μπουκέτου."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Επιτυχία επαναφοράς ρυθμίσεων μπουκέτου"
 
-#: ../plugin/controllers/base.py:358
+#: ../plugin/controllers/base.py:353
 msgid "BouquetEditor"
 msgstr "Επεξεργασία Μπουκέτων"
 
@@ -546,8 +546,8 @@ msgstr "Όνομα χρήστη για το δέκτη"
 msgid "Custom offset"
 msgstr "Μετατόπιση χρόνου από το χρήστη"
 
-#: ../plugin/controllers/models/info.py:70
-#: ../plugin/controllers/models/info.py:89 ../plugin/controllers/i18n.py:121
+#: ../plugin/controllers/models/info.py:69
+#: ../plugin/controllers/models/info.py:88 ../plugin/controllers/i18n.py:121
 msgid "DHCP"
 msgstr "DHCP"
 
@@ -642,8 +642,8 @@ msgstr "Απενεργοποίηση Χρονοδιακόπτη"
 msgid "Disable remote access for user root"
 msgstr "Απενεργοποίηση πρόσβασης για το χρήστη root"
 
-#: ../plugin/controllers/models/info.py:234
-#: ../plugin/controllers/models/info.py:250
+#: ../plugin/controllers/models/info.py:233
+#: ../plugin/controllers/models/info.py:249
 #, fuzzy
 msgid "Disabled in configuration"
 msgstr "Ανενεργό κατά τη διένεξη"
@@ -697,7 +697,7 @@ msgstr "Οδηγοί"
 msgid "Duration"
 msgstr "Διάρκεια"
 
-#: ../plugin/controllers/models/info.py:621
+#: ../plugin/controllers/models/info.py:620
 msgid "E"
 msgstr "Α"
 
@@ -713,7 +713,7 @@ msgstr "Αναζήτηση Epg"
 msgid "EPG encoding"
 msgstr "Κωδικοποίηση EPG"
 
-#: ../plugin/controllers/base.py:362
+#: ../plugin/controllers/base.py:357
 msgid "EPGRefresh"
 msgstr "Ανανέωση EPG"
 
@@ -981,10 +981,10 @@ msgstr "Έκδοση Frontprocessor"
 msgid "Full remote"
 msgstr "Πλήρες τηλεχειριστήριο"
 
-#: ../plugin/controllers/models/info.py:369
-#: ../plugin/controllers/models/info.py:375
-#: ../plugin/controllers/models/info.py:390
-#: ../plugin/controllers/models/info.py:393
+#: ../plugin/controllers/models/info.py:368
+#: ../plugin/controllers/models/info.py:374
+#: ../plugin/controllers/models/info.py:389
+#: ../plugin/controllers/models/info.py:392
 #: ../plugin/controllers/models/movies.py:278
 #: ../plugin/controllers/models/movies.py:408
 #: ../plugin/controllers/models/movies.py:828
@@ -1066,11 +1066,11 @@ msgstr ""
 msgid "IPv4 address"
 msgstr "Διεύθυνση IPv4"
 
-#: ../plugin/controllers/models/info.py:154 ../plugin/controllers/i18n.py:178
+#: ../plugin/controllers/models/info.py:153 ../plugin/controllers/i18n.py:178
 msgid "IPv4-only Python/Twisted"
 msgstr "Python/Twisted IPv4 μόνο"
 
-#: ../plugin/controllers/models/info.py:150 ../plugin/controllers/i18n.py:176
+#: ../plugin/controllers/models/info.py:149 ../plugin/controllers/i18n.py:176
 msgid "IPv4-only kernel"
 msgstr "Kernel IPv4 μόνο"
 
@@ -1191,7 +1191,7 @@ msgstr ""
 msgid "LCD"
 msgstr ""
 
-#: ../plugin/controllers/base.py:325
+#: ../plugin/controllers/base.py:320
 msgid "LCD4Linux Setup"
 msgstr "Ρυθμίσεις LCD4Linux"
 
@@ -1199,7 +1199,7 @@ msgstr "Ρυθμίσεις LCD4Linux"
 msgid "LICENSE"
 msgstr "ΑΔΕΙΑ"
 
-#: ../plugin/controllers/models/info.py:299
+#: ../plugin/controllers/models/info.py:298
 #, fuzzy
 msgid "LIRC remote"
 msgstr "Τηλεχειριστήριο"
@@ -1238,9 +1238,9 @@ msgstr "Κλειδωμένο"
 msgid "MAC address"
 msgstr "Διεύθυνση MAC"
 
-#: ../plugin/controllers/models/info.py:366
-#: ../plugin/controllers/models/info.py:377
-#: ../plugin/controllers/models/info.py:395
+#: ../plugin/controllers/models/info.py:365
+#: ../plugin/controllers/models/info.py:376
+#: ../plugin/controllers/models/info.py:394
 #: ../plugin/controllers/models/movies.py:280
 #: ../plugin/controllers/models/movies.py:410
 #: ../plugin/controllers/models/movies.py:830
@@ -1372,7 +1372,7 @@ msgstr "Πολλαπλός EPG"
 msgid "MultiTranscoding"
 msgstr "Διακωδικοποίηση"
 
-#: ../plugin/controllers/base.py:349
+#: ../plugin/controllers/base.py:344
 #, fuzzy
 msgid "NCam Webinterface"
 msgstr "Διεπαφή Δικτύου OSCam"
@@ -1420,7 +1420,7 @@ msgstr "Σελιδοδείκτης"
 msgid "New Name"
 msgstr "Νέο Όνομα"
 
-#: ../plugin/controllers/models/info.py:268 ../plugin/controllers/i18n.py:392
+#: ../plugin/controllers/models/info.py:267 ../plugin/controllers/i18n.py:392
 msgid "No"
 msgstr "Όχι"
 
@@ -1533,7 +1533,7 @@ msgstr "Τώρα"
 msgid "OE"
 msgstr "Α"
 
-#: ../plugin/controllers/base.py:347
+#: ../plugin/controllers/base.py:342
 msgid "OSCam Webinterface"
 msgstr "Διεπαφή Δικτύου OSCam"
 
@@ -1854,7 +1854,7 @@ msgstr "Περιορισμός στα Μπουκέτα"
 msgid "Root"
 msgstr "Ρίζα"
 
-#: ../plugin/controllers/models/info.py:61
+#: ../plugin/controllers/models/info.py:60
 msgid "SLAAC"
 msgstr "SLAAC"
 
@@ -2039,7 +2039,7 @@ msgstr "Υπηρεσίες"
 msgid "Set maximum duration"
 msgstr "Ορισμός μέγιστης διάρκειας"
 
-#: ../plugin/controllers/base.py:312 ../plugin/controllers/i18n.py:263
+#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:263
 #: ../plugin/controllers/i18n.py:423
 msgid "Settings"
 msgstr "Ρυθμίσεις"
@@ -2253,9 +2253,9 @@ msgstr "Κυρ"
 msgid "Sunday"
 msgstr "Κυριακή"
 
-#: ../plugin/controllers/models/info.py:373
-#: ../plugin/controllers/models/info.py:385
-#: ../plugin/controllers/models/info.py:387
+#: ../plugin/controllers/models/info.py:372
+#: ../plugin/controllers/models/info.py:384
+#: ../plugin/controllers/models/info.py:386
 msgid "TB"
 msgstr "TB"
 
@@ -2287,7 +2287,7 @@ msgstr "Τηλεόραση"
 msgid "Template Engine"
 msgstr "Μηχανή Προτύπου"
 
-#: ../plugin/controllers/base.py:403
+#: ../plugin/controllers/base.py:398
 msgid "Terminal"
 msgstr "Τερματικό"
 
@@ -2628,7 +2628,7 @@ msgstr "Έλεγχος Έντασης"
 msgid "Vpid"
 msgstr "Vpid"
 
-#: ../plugin/controllers/models/info.py:624
+#: ../plugin/controllers/models/info.py:623
 msgid "W"
 msgstr "Δ"
 
@@ -2694,8 +2694,8 @@ msgstr "Λανθασμένη μορφή παραμέτρου 'set=%s'. Χρήσ�
 msgid "YYYY-MM-DD"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:266
-#: ../plugin/controllers/models/info.py:270 ../plugin/controllers/i18n.py:556
+#: ../plugin/controllers/models/info.py:265
+#: ../plugin/controllers/models/info.py:269 ../plugin/controllers/i18n.py:556
 #: ../plugin/controllers/i18n.py:572
 msgid "Yes"
 msgstr "Ναι"
@@ -2797,8 +2797,8 @@ msgstr "μετάβαση σε αναμονή"
 msgid "hour"
 msgstr "ώρα"
 
-#: ../plugin/controllers/models/info.py:242
-#: ../plugin/controllers/models/info.py:245
+#: ../plugin/controllers/models/info.py:241
+#: ../plugin/controllers/models/info.py:244
 #: ../plugin/controllers/models/movies.py:282
 #: ../plugin/controllers/models/movies.py:412
 #: ../plugin/controllers/models/movies.py:832
@@ -2809,8 +2809,8 @@ msgstr "kB"
 msgid "loading"
 msgstr "φόρτωση"
 
-#: ../plugin/controllers/models/info.py:72
-#: ../plugin/controllers/models/info.py:91
+#: ../plugin/controllers/models/info.py:71
+#: ../plugin/controllers/models/info.py:90
 msgid "manual/disabled"
 msgstr "χειροκίνητο/ανενεργό"
 
@@ -2826,7 +2826,7 @@ msgstr "λεπτό"
 msgid "no description available"
 msgstr "μη διαθέσιμη περιγραφή"
 
-#: ../plugin/controllers/models/info.py:183 ../plugin/controllers/i18n.py:177
+#: ../plugin/controllers/models/info.py:182 ../plugin/controllers/i18n.py:177
 msgid "none/IPv4-only network"
 msgstr "Δίκτυο κανένα/IPv4 μόνο"
 
@@ -2846,11 +2846,11 @@ msgstr "ένα δύο τρία τέσσερα άγνωστη εντολή"
 msgid "partial title match"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:436
+#: ../plugin/controllers/models/info.py:435
 msgid "r/o"
 msgstr "r/o"
 
-#: ../plugin/controllers/models/info.py:432
+#: ../plugin/controllers/models/info.py:431
 msgid "r/w"
 msgstr "r/w"
 
@@ -2899,9 +2899,9 @@ msgstr "συσχέτιση σύντομης περιγραφής"
 msgid "standard"
 msgstr "στάνταρ"
 
-#: ../plugin/controllers/models/info.py:68
-#: ../plugin/controllers/models/info.py:80
-#: ../plugin/controllers/models/info.py:87
+#: ../plugin/controllers/models/info.py:67
+#: ../plugin/controllers/models/info.py:79
+#: ../plugin/controllers/models/info.py:86
 msgid "static"
 msgstr "στατική"
 
@@ -2940,8 +2940,8 @@ msgstr "διαδικοποιημένο"
 msgid "type %s is not a number"
 msgstr "ο τύπος %s δεν είναι αριθμός"
 
-#: ../plugin/controllers/models/info.py:96
-#: ../plugin/controllers/models/info.py:113
+#: ../plugin/controllers/models/info.py:95
+#: ../plugin/controllers/models/info.py:112
 msgid "unknown"
 msgstr "άγνωστο"
 

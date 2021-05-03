@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-01 10:45+0430\n"
+"POT-Creation-Date: 2021-05-03 20:31+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: neoatomic <neoatomic@users.noreply.github.com>\n"
 "Language-Team: satfan <satfan@163.com>\n"
@@ -69,8 +69,8 @@ msgstr "%s %s 已加锁."
 msgid "%s / %s"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:246
-#: ../plugin/controllers/models/info.py:403
+#: ../plugin/controllers/models/info.py:245
+#: ../plugin/controllers/models/info.py:402
 #, python-format
 msgid "%s free / %s total"
 msgstr "%s 可用 / %s 总容量"
@@ -213,7 +213,7 @@ msgstr "替代%s创建失败."
 msgid "Always"
 msgstr "始终"
 
-#: ../plugin/controllers/models/info.py:297
+#: ../plugin/controllers/models/info.py:296
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "隐藏完整的遥控"
@@ -308,7 +308,7 @@ msgstr "自动计时器编辑"
 msgid "AutoTimer Settings"
 msgstr "自动定时设置"
 
-#: ../plugin/controllers/base.py:353 ../plugin/controllers/i18n.py:340
+#: ../plugin/controllers/base.py:348 ../plugin/controllers/i18n.py:340
 msgid "AutoTimers"
 msgstr "自动定时器列表"
 
@@ -410,7 +410,7 @@ msgstr "节目分组改名完成."
 msgid "Bouquet-settings were restored successfully"
 msgstr "节目分组设置已成功恢复"
 
-#: ../plugin/controllers/base.py:358
+#: ../plugin/controllers/base.py:353
 msgid "BouquetEditor"
 msgstr "编辑节目分组"
 
@@ -550,8 +550,8 @@ msgstr "自定义名称"
 msgid "Custom offset"
 msgstr "自定义偏移"
 
-#: ../plugin/controllers/models/info.py:70
-#: ../plugin/controllers/models/info.py:89 ../plugin/controllers/i18n.py:121
+#: ../plugin/controllers/models/info.py:69
+#: ../plugin/controllers/models/info.py:88 ../plugin/controllers/i18n.py:121
 msgid "DHCP"
 msgstr "DHCP服务器"
 
@@ -647,8 +647,8 @@ msgstr "禁用计时器"
 msgid "Disable remote access for user root"
 msgstr "禁用root用户接入"
 
-#: ../plugin/controllers/models/info.py:234
-#: ../plugin/controllers/models/info.py:250
+#: ../plugin/controllers/models/info.py:233
+#: ../plugin/controllers/models/info.py:249
 #, fuzzy
 msgid "Disabled in configuration"
 msgstr "禁用（冲突时）"
@@ -702,7 +702,7 @@ msgstr "驱动日期"
 msgid "Duration"
 msgstr "持续时间"
 
-#: ../plugin/controllers/models/info.py:621
+#: ../plugin/controllers/models/info.py:620
 msgid "E"
 msgstr "E"
 
@@ -718,7 +718,7 @@ msgstr "EPG 搜索"
 msgid "EPG encoding"
 msgstr "EPG 编码"
 
-#: ../plugin/controllers/base.py:362
+#: ../plugin/controllers/base.py:357
 msgid "EPGRefresh"
 msgstr "EPG 刷新"
 
@@ -987,10 +987,10 @@ msgstr "前端版本"
 msgid "Full remote"
 msgstr "隐藏完整的遥控"
 
-#: ../plugin/controllers/models/info.py:369
-#: ../plugin/controllers/models/info.py:375
-#: ../plugin/controllers/models/info.py:390
-#: ../plugin/controllers/models/info.py:393
+#: ../plugin/controllers/models/info.py:368
+#: ../plugin/controllers/models/info.py:374
+#: ../plugin/controllers/models/info.py:389
+#: ../plugin/controllers/models/info.py:392
 #: ../plugin/controllers/models/movies.py:278
 #: ../plugin/controllers/models/movies.py:408
 #: ../plugin/controllers/models/movies.py:828
@@ -1072,11 +1072,11 @@ msgstr ""
 msgid "IPv4 address"
 msgstr "IPv4地址"
 
-#: ../plugin/controllers/models/info.py:154 ../plugin/controllers/i18n.py:178
+#: ../plugin/controllers/models/info.py:153 ../plugin/controllers/i18n.py:178
 msgid "IPv4-only Python/Twisted"
 msgstr "IPv4-only Python/Twisted"
 
-#: ../plugin/controllers/models/info.py:150 ../plugin/controllers/i18n.py:176
+#: ../plugin/controllers/models/info.py:149 ../plugin/controllers/i18n.py:176
 msgid "IPv4-only kernel"
 msgstr "IPv4内核"
 
@@ -1200,7 +1200,7 @@ msgstr ""
 msgid "LCD"
 msgstr "LCD"
 
-#: ../plugin/controllers/base.py:325
+#: ../plugin/controllers/base.py:320
 msgid "LCD4Linux Setup"
 msgstr "LCD设置"
 
@@ -1208,7 +1208,7 @@ msgstr "LCD设置"
 msgid "LICENSE"
 msgstr "许可证"
 
-#: ../plugin/controllers/models/info.py:299
+#: ../plugin/controllers/models/info.py:298
 #, fuzzy
 msgid "LIRC remote"
 msgstr "远程遥控"
@@ -1247,9 +1247,9 @@ msgstr "锁定"
 msgid "MAC address"
 msgstr "MAC 地址"
 
-#: ../plugin/controllers/models/info.py:366
-#: ../plugin/controllers/models/info.py:377
-#: ../plugin/controllers/models/info.py:395
+#: ../plugin/controllers/models/info.py:365
+#: ../plugin/controllers/models/info.py:376
+#: ../plugin/controllers/models/info.py:394
 #: ../plugin/controllers/models/movies.py:280
 #: ../plugin/controllers/models/movies.py:410
 #: ../plugin/controllers/models/movies.py:830
@@ -1384,7 +1384,7 @@ msgstr "多路EPG"
 msgid "MultiTranscoding"
 msgstr "转码"
 
-#: ../plugin/controllers/base.py:349
+#: ../plugin/controllers/base.py:344
 msgid "NCam Webinterface"
 msgstr ""
 
@@ -1431,7 +1431,7 @@ msgstr "书签"
 msgid "New Name"
 msgstr "新的名称"
 
-#: ../plugin/controllers/models/info.py:268 ../plugin/controllers/i18n.py:392
+#: ../plugin/controllers/models/info.py:267 ../plugin/controllers/i18n.py:392
 msgid "No"
 msgstr "否"
 
@@ -1545,7 +1545,7 @@ msgstr "现在"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:347
+#: ../plugin/controllers/base.py:342
 msgid "OSCam Webinterface"
 msgstr "OSCam网络接口"
 
@@ -1866,7 +1866,7 @@ msgstr "仅限分组"
 msgid "Root"
 msgstr "Root"
 
-#: ../plugin/controllers/models/info.py:61
+#: ../plugin/controllers/models/info.py:60
 msgid "SLAAC"
 msgstr ""
 
@@ -2049,7 +2049,7 @@ msgstr "频道"
 msgid "Set maximum duration"
 msgstr "设置最大持续时间"
 
-#: ../plugin/controllers/base.py:312 ../plugin/controllers/i18n.py:263
+#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:263
 #: ../plugin/controllers/i18n.py:423
 msgid "Settings"
 msgstr "设置"
@@ -2264,9 +2264,9 @@ msgstr "星期日"
 msgid "Sunday"
 msgstr "星期日"
 
-#: ../plugin/controllers/models/info.py:373
-#: ../plugin/controllers/models/info.py:385
-#: ../plugin/controllers/models/info.py:387
+#: ../plugin/controllers/models/info.py:372
+#: ../plugin/controllers/models/info.py:384
+#: ../plugin/controllers/models/info.py:386
 msgid "TB"
 msgstr ""
 
@@ -2298,7 +2298,7 @@ msgstr "电视节目"
 msgid "Template Engine"
 msgstr "模板引擎"
 
-#: ../plugin/controllers/base.py:403
+#: ../plugin/controllers/base.py:398
 msgid "Terminal"
 msgstr "终端设备"
 
@@ -2638,7 +2638,7 @@ msgstr "音量控制"
 msgid "Vpid"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:624
+#: ../plugin/controllers/models/info.py:623
 msgid "W"
 msgstr "W"
 
@@ -2705,8 +2705,8 @@ msgstr "错误的参数格式设置'set=%s', 使用 set=set15"
 msgid "YYYY-MM-DD"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:266
-#: ../plugin/controllers/models/info.py:270 ../plugin/controllers/i18n.py:556
+#: ../plugin/controllers/models/info.py:265
+#: ../plugin/controllers/models/info.py:269 ../plugin/controllers/i18n.py:556
 #: ../plugin/controllers/i18n.py:572
 #, fuzzy
 msgid "Yes"
@@ -2809,8 +2809,8 @@ msgstr "进入待机状态"
 msgid "hour"
 msgstr "小时"
 
-#: ../plugin/controllers/models/info.py:242
-#: ../plugin/controllers/models/info.py:245
+#: ../plugin/controllers/models/info.py:241
+#: ../plugin/controllers/models/info.py:244
 #: ../plugin/controllers/models/movies.py:282
 #: ../plugin/controllers/models/movies.py:412
 #: ../plugin/controllers/models/movies.py:832
@@ -2821,8 +2821,8 @@ msgstr ""
 msgid "loading"
 msgstr "加载中"
 
-#: ../plugin/controllers/models/info.py:72
-#: ../plugin/controllers/models/info.py:91
+#: ../plugin/controllers/models/info.py:71
+#: ../plugin/controllers/models/info.py:90
 msgid "manual/disabled"
 msgstr "手动/禁用"
 
@@ -2839,7 +2839,7 @@ msgstr "分钟"
 msgid "no description available"
 msgstr "无可用说明"
 
-#: ../plugin/controllers/models/info.py:183 ../plugin/controllers/i18n.py:177
+#: ../plugin/controllers/models/info.py:182 ../plugin/controllers/i18n.py:177
 msgid "none/IPv4-only network"
 msgstr "仅IPv4网络"
 
@@ -2859,11 +2859,11 @@ msgstr "1 2 3 4 未知的命令"
 msgid "partial title match"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:436
+#: ../plugin/controllers/models/info.py:435
 msgid "r/o"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:432
+#: ../plugin/controllers/models/info.py:431
 msgid "r/w"
 msgstr ""
 
@@ -2912,9 +2912,9 @@ msgstr "简介匹配"
 msgid "standard"
 msgstr "标准"
 
-#: ../plugin/controllers/models/info.py:68
-#: ../plugin/controllers/models/info.py:80
-#: ../plugin/controllers/models/info.py:87
+#: ../plugin/controllers/models/info.py:67
+#: ../plugin/controllers/models/info.py:79
+#: ../plugin/controllers/models/info.py:86
 msgid "static"
 msgstr "静态"
 
@@ -2953,8 +2953,8 @@ msgstr "转码"
 msgid "type %s is not a number"
 msgstr "类型 %s 的不是数字"
 
-#: ../plugin/controllers/models/info.py:96
-#: ../plugin/controllers/models/info.py:113
+#: ../plugin/controllers/models/info.py:95
+#: ../plugin/controllers/models/info.py:112
 msgid "unknown"
 msgstr "未知"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-01 10:45+0430\n"
+"POT-Creation-Date: 2021-05-03 20:31+0430\n"
 "PO-Revision-Date: 2020-08-01 10:55+0300\n"
 "Last-Translator: rimas <rimas@domeen.ee>\n"
 "Language-Team: Estonian\n"
@@ -66,8 +66,8 @@ msgstr "%s %s on lukustatud."
 msgid "%s / %s"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:246
-#: ../plugin/controllers/models/info.py:403
+#: ../plugin/controllers/models/info.py:245
+#: ../plugin/controllers/models/info.py:402
 #, python-format
 msgid "%s free / %s total"
 msgstr "Vaba %s / kokku %s"
@@ -209,7 +209,7 @@ msgstr "Asenduskanali %s loomine nurjus."
 msgid "Always"
 msgstr "Alati"
 
-#: ../plugin/controllers/models/info.py:297
+#: ../plugin/controllers/models/info.py:296
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "Täielik pult"
@@ -303,7 +303,7 @@ msgstr "Autotaimeri muutmine"
 msgid "AutoTimer Settings"
 msgstr "Autotaimeri sätted"
 
-#: ../plugin/controllers/base.py:353 ../plugin/controllers/i18n.py:340
+#: ../plugin/controllers/base.py:348 ../plugin/controllers/i18n.py:340
 msgid "AutoTimers"
 msgstr "Autotaimerite nimekiri"
 
@@ -405,7 +405,7 @@ msgstr "Lemmiknimekiri nimetati ümber."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Lemmiknimekirjad taastati edukalt"
 
-#: ../plugin/controllers/base.py:358
+#: ../plugin/controllers/base.py:353
 msgid "BouquetEditor"
 msgstr "Lemmiknimekirjad"
 
@@ -543,8 +543,8 @@ msgstr "Kohandatud vastuvõtja nimi"
 msgid "Custom offset"
 msgstr "Kohandatud nihe"
 
-#: ../plugin/controllers/models/info.py:70
-#: ../plugin/controllers/models/info.py:89 ../plugin/controllers/i18n.py:121
+#: ../plugin/controllers/models/info.py:69
+#: ../plugin/controllers/models/info.py:88 ../plugin/controllers/i18n.py:121
 msgid "DHCP"
 msgstr "DHCP"
 
@@ -638,8 +638,8 @@ msgstr "Keela taimer"
 msgid "Disable remote access for user root"
 msgstr "Keela kaugligipääs kasutaja juurkataloogile"
 
-#: ../plugin/controllers/models/info.py:234
-#: ../plugin/controllers/models/info.py:250
+#: ../plugin/controllers/models/info.py:233
+#: ../plugin/controllers/models/info.py:249
 #, fuzzy
 msgid "Disabled in configuration"
 msgstr "Vastuolu korral keelatud"
@@ -693,7 +693,7 @@ msgstr "ajurid"
 msgid "Duration"
 msgstr "Kestus"
 
-#: ../plugin/controllers/models/info.py:621
+#: ../plugin/controllers/models/info.py:620
 msgid "E"
 msgstr "E"
 
@@ -709,7 +709,7 @@ msgstr "Epg otsing"
 msgid "EPG encoding"
 msgstr "EPG tähemärgistik"
 
-#: ../plugin/controllers/base.py:362
+#: ../plugin/controllers/base.py:357
 msgid "EPGRefresh"
 msgstr "EPG värskendus"
 
@@ -977,10 +977,10 @@ msgstr "Esiprotsessori versioon"
 msgid "Full remote"
 msgstr "Täielik pult"
 
-#: ../plugin/controllers/models/info.py:369
-#: ../plugin/controllers/models/info.py:375
-#: ../plugin/controllers/models/info.py:390
-#: ../plugin/controllers/models/info.py:393
+#: ../plugin/controllers/models/info.py:368
+#: ../plugin/controllers/models/info.py:374
+#: ../plugin/controllers/models/info.py:389
+#: ../plugin/controllers/models/info.py:392
 #: ../plugin/controllers/models/movies.py:278
 #: ../plugin/controllers/models/movies.py:408
 #: ../plugin/controllers/models/movies.py:828
@@ -1062,11 +1062,11 @@ msgstr ""
 msgid "IPv4 address"
 msgstr "IPv4 aadress"
 
-#: ../plugin/controllers/models/info.py:154 ../plugin/controllers/i18n.py:178
+#: ../plugin/controllers/models/info.py:153 ../plugin/controllers/i18n.py:178
 msgid "IPv4-only Python/Twisted"
 msgstr "IPv4-ainult Python/Twisted"
 
-#: ../plugin/controllers/models/info.py:150 ../plugin/controllers/i18n.py:176
+#: ../plugin/controllers/models/info.py:149 ../plugin/controllers/i18n.py:176
 msgid "IPv4-only kernel"
 msgstr "IPv4-ainult kernel"
 
@@ -1187,7 +1187,7 @@ msgstr ""
 msgid "LCD"
 msgstr "LCD"
 
-#: ../plugin/controllers/base.py:325
+#: ../plugin/controllers/base.py:320
 msgid "LCD4Linux Setup"
 msgstr "LCD4Linux seaded"
 
@@ -1195,7 +1195,7 @@ msgstr "LCD4Linux seaded"
 msgid "LICENSE"
 msgstr "LITSENTS"
 
-#: ../plugin/controllers/models/info.py:299
+#: ../plugin/controllers/models/info.py:298
 #, fuzzy
 msgid "LIRC remote"
 msgstr "Pult"
@@ -1234,9 +1234,9 @@ msgstr "Lukustatud"
 msgid "MAC address"
 msgstr "MAC aadress"
 
-#: ../plugin/controllers/models/info.py:366
-#: ../plugin/controllers/models/info.py:377
-#: ../plugin/controllers/models/info.py:395
+#: ../plugin/controllers/models/info.py:365
+#: ../plugin/controllers/models/info.py:376
+#: ../plugin/controllers/models/info.py:394
 #: ../plugin/controllers/models/movies.py:280
 #: ../plugin/controllers/models/movies.py:410
 #: ../plugin/controllers/models/movies.py:830
@@ -1369,7 +1369,7 @@ msgstr "MultiEPG"
 msgid "MultiTranscoding"
 msgstr "Transkodeeri"
 
-#: ../plugin/controllers/base.py:349
+#: ../plugin/controllers/base.py:344
 msgid "NCam Webinterface"
 msgstr "NCam veebiliides"
 
@@ -1416,7 +1416,7 @@ msgstr "Järjehoidja"
 msgid "New Name"
 msgstr "Uus nimi"
 
-#: ../plugin/controllers/models/info.py:268 ../plugin/controllers/i18n.py:392
+#: ../plugin/controllers/models/info.py:267 ../plugin/controllers/i18n.py:392
 msgid "No"
 msgstr "Ei"
 
@@ -1529,7 +1529,7 @@ msgstr "Hetkel"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:347
+#: ../plugin/controllers/base.py:342
 msgid "OSCam Webinterface"
 msgstr "OSCam veebiliides"
 
@@ -1849,7 +1849,7 @@ msgstr "Ainult kindlas nimekirjas"
 msgid "Root"
 msgstr "Juur"
 
-#: ../plugin/controllers/models/info.py:61
+#: ../plugin/controllers/models/info.py:60
 msgid "SLAAC"
 msgstr "SLAAC"
 
@@ -2033,7 +2033,7 @@ msgstr "Kanalid"
 msgid "Set maximum duration"
 msgstr "Määra suurim kestus"
 
-#: ../plugin/controllers/base.py:312 ../plugin/controllers/i18n.py:263
+#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:263
 #: ../plugin/controllers/i18n.py:423
 msgid "Settings"
 msgstr "Seaded"
@@ -2246,9 +2246,9 @@ msgstr "P"
 msgid "Sunday"
 msgstr "Pühapäev"
 
-#: ../plugin/controllers/models/info.py:373
-#: ../plugin/controllers/models/info.py:385
-#: ../plugin/controllers/models/info.py:387
+#: ../plugin/controllers/models/info.py:372
+#: ../plugin/controllers/models/info.py:384
+#: ../plugin/controllers/models/info.py:386
 msgid "TB"
 msgstr "TB"
 
@@ -2280,7 +2280,7 @@ msgstr "Televisioon"
 msgid "Template Engine"
 msgstr "Malli mootor"
 
-#: ../plugin/controllers/base.py:403
+#: ../plugin/controllers/base.py:398
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -2621,7 +2621,7 @@ msgstr "Helitugevus"
 msgid "Vpid"
 msgstr "Vpid"
 
-#: ../plugin/controllers/models/info.py:624
+#: ../plugin/controllers/models/info.py:623
 msgid "W"
 msgstr "W"
 
@@ -2687,8 +2687,8 @@ msgstr "Vale parameetri vorming 'set=%s'. Kasuta set=set15 "
 msgid "YYYY-MM-DD"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:266
-#: ../plugin/controllers/models/info.py:270 ../plugin/controllers/i18n.py:556
+#: ../plugin/controllers/models/info.py:265
+#: ../plugin/controllers/models/info.py:269 ../plugin/controllers/i18n.py:556
 #: ../plugin/controllers/i18n.py:572
 msgid "Yes"
 msgstr "Jah"
@@ -2790,8 +2790,8 @@ msgstr "mine ooteseisundisse"
 msgid "hour"
 msgstr "tund"
 
-#: ../plugin/controllers/models/info.py:242
-#: ../plugin/controllers/models/info.py:245
+#: ../plugin/controllers/models/info.py:241
+#: ../plugin/controllers/models/info.py:244
 #: ../plugin/controllers/models/movies.py:282
 #: ../plugin/controllers/models/movies.py:412
 #: ../plugin/controllers/models/movies.py:832
@@ -2802,8 +2802,8 @@ msgstr "kB"
 msgid "loading"
 msgstr "laadimine"
 
-#: ../plugin/controllers/models/info.py:72
-#: ../plugin/controllers/models/info.py:91
+#: ../plugin/controllers/models/info.py:71
+#: ../plugin/controllers/models/info.py:90
 msgid "manual/disabled"
 msgstr "käsitsi/keelatud"
 
@@ -2819,7 +2819,7 @@ msgstr "minut"
 msgid "no description available"
 msgstr "sisututvustus puudub"
 
-#: ../plugin/controllers/models/info.py:183 ../plugin/controllers/i18n.py:177
+#: ../plugin/controllers/models/info.py:182 ../plugin/controllers/i18n.py:177
 msgid "none/IPv4-only network"
 msgstr "Pole/ainult IPv4 võrk"
 
@@ -2839,11 +2839,11 @@ msgstr "üks kaks kolm neli tundmatu käsk"
 msgid "partial title match"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:436
+#: ../plugin/controllers/models/info.py:435
 msgid "r/o"
 msgstr "r/o"
 
-#: ../plugin/controllers/models/info.py:432
+#: ../plugin/controllers/models/info.py:431
 msgid "r/w"
 msgstr "r/w"
 
@@ -2892,9 +2892,9 @@ msgstr "lühitutvustuse vaste"
 msgid "standard"
 msgstr "tavaline"
 
-#: ../plugin/controllers/models/info.py:68
-#: ../plugin/controllers/models/info.py:80
-#: ../plugin/controllers/models/info.py:87
+#: ../plugin/controllers/models/info.py:67
+#: ../plugin/controllers/models/info.py:79
+#: ../plugin/controllers/models/info.py:86
 msgid "static"
 msgstr "staatiline"
 
@@ -2933,8 +2933,8 @@ msgstr "transkodeeritud"
 msgid "type %s is not a number"
 msgstr "tüüp %s ei ole number"
 
-#: ../plugin/controllers/models/info.py:96
-#: ../plugin/controllers/models/info.py:113
+#: ../plugin/controllers/models/info.py:95
+#: ../plugin/controllers/models/info.py:112
 msgid "unknown"
 msgstr "tundmatu"
 

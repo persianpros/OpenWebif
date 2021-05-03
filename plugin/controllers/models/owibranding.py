@@ -24,7 +24,7 @@
 from Tools.Directories import fileExists, pathExists
 from time import time
 import os
-import hashlibe
+import hashlib
 from Tools.StbHardware import getFPVersion, getBoxProc
 from Components.SystemInfo import BoxInfo, SystemInfo
 
