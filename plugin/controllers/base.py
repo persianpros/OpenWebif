@@ -34,7 +34,7 @@ from twisted.internet import defer
 from twisted.protocols.basic import FileSender
 
 from Plugins.Extensions.OpenWebif.controllers.i18n import _
-from Tools.Directories import fileExists, resolveFilename, SCOPE_PLUGINS
+from Tools.Directories import fileExists, resolveFilename, SCOPE_PLUGINS, isPluginExtensionInstalled
 from Cheetah.Template import Template
 from enigma import eEPGCache
 from Components.config import config
@@ -314,14 +314,8 @@ class BaseController(resource.Resource):
 
 		ip = getIP()
 		if ip != None:
-			if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/LCD4linux/WebSite.pyo")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/LCD4linux/WebSite.py")):
+			if isPluginExtensionInstalled("LCD4linux", "WebSite"):
 				lcd4linux_key = "lcd4linux/config"
-				if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/WebInterface/plugin.pyo")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/WebInterface/plugin.py")):
-					try:
-						lcd4linux_port = "http://" + ip + ":" + str(config.plugins.Webinterface.http.port.value) + "/"
-						lcd4linux_key = lcd4linux_port + 'lcd4linux/config'
-					except:  # nosec # noqa: E722
-						lcd4linux_key = None
 				if lcd4linux_key:
 					extras.append({'key': lcd4linux_key, 'description': _("LCD4Linux Setup"), 'nw': '1'})
 
