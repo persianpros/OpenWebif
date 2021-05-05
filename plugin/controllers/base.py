@@ -34,7 +34,7 @@ from twisted.internet import defer
 from twisted.protocols.basic import FileSender
 
 from Plugins.Extensions.OpenWebif.controllers.i18n import _
-from Tools.Directories import fileExists, resolveFilename, SCOPE_PLUGINS, isPluginExtensionInstalled
+from Tools.Directories import fileExists, resolveFilename, SCOPE_PLUGINS, isPluginInstalled
 from Cheetah.Template import Template
 from enigma import eEPGCache
 from Components.config import config
@@ -314,7 +314,7 @@ class BaseController(resource.Resource):
 
 		ip = getIP()
 		if ip != None:
-			if isPluginExtensionInstalled("LCD4linux", "WebSite"):
+			if isPluginInstalled("LCD4linux", "WebSite"):
 				lcd4linux_key = "lcd4linux/config"
 				if lcd4linux_key:
 					extras.append({'key': lcd4linux_key, 'description': _("LCD4Linux Setup"), 'nw': '1'})
