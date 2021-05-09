@@ -272,7 +272,7 @@ def getInfo(session=None, need_fullinfo=False):
 	info['enigmarev'] = getE2Rev()
 	info['driverdate'] = about.getDriverInstalledDate()
 	info['kernelver'] = BoxInfo.getItem("kernel")
-	info['modulelayout'] = SystemInfo["ModuleLayout"]
+	info['modulelayout'] = BoxInfo.getItem("ModuleLayout")
 	info['dvbapitype'] = about.getDVBAPI()
 	info['gstreamerversion'] = about.getGStreamerVersionString()
 	info['ffmpegversion'] = about.getFFmpegVersionString()
