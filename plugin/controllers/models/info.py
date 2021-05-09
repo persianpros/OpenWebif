@@ -34,7 +34,7 @@ from Components.config import config
 from Components.NimManager import nimmanager
 from Components.Harddisk import harddiskmanager
 from Components.Network import iNetwork
-from Components.SystemInfo import BoxInfo, SystemInfo
+from Components.SystemInfo import BoxInfo
 from ServiceReference import ServiceReference
 from RecordTimer import parseEvent, RecordTimerEntry
 from timer import TimerEntry
