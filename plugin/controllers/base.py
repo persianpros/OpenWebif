@@ -314,7 +314,7 @@ class BaseController(resource.Resource):
 
 		ip = getIP()
 		if ip != None:
-			if isPluginInstalled("LCD4linux", "WebSite"):
+			if isPluginInstalled("LCD4linux"):
 				lcd4linux_key = "lcd4linux/config"
 				if lcd4linux_key:
 					extras.append({'key': lcd4linux_key, 'description': _("LCD4Linux Setup"), 'nw': '1'})
