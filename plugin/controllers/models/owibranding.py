@@ -26,7 +26,7 @@ from time import time
 import os
 import hashlib
 from Tools.StbHardware import getFPVersion, getBoxProc
-from Components.SystemInfo import BoxInfo, SystemInfo
+from Components.SystemInfo import BoxInfo
 
 model = BoxInfo.getItem("model")
 platform = BoxInfo.getItem("platform")
@@ -38,7 +38,7 @@ def getAllInfo():
 	info = {}
 
 	grabpip = 0
-	if "4k" or "uhd" or "ultra" in model or SystemInfo["HiSilicon"] or platform == "dm4kgen":
+	if "4k" or "uhd" or "ultra" in model or BoxInfo.getItem("HiSilicon") or platform == "dm4kgen":
 		grabpip = 1
 
 	info['grabpip'] = grabpip or 0

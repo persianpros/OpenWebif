@@ -23,7 +23,7 @@ from __future__ import print_function
 ##########################################################################
 
 from enigma import eEnv
-from Components.SystemInfo import SystemInfo
+from Components.SystemInfo import BoxInfo
 from Components.config import config
 from os import path, listdir
 import xml.etree.cElementTree  # nosec
@@ -319,7 +319,7 @@ class ConfigFiles:
 			for section in xmldata.findall("setup"):
 				configs = []
 				requires = section.get("requires")
-				if requires and not SystemInfo.get(requires, False):
+				if requires and not BoxInfo.getItem(requires, False):
 					continue
 				key = section.get("key")
 				if key not in self.allowedsections:
@@ -332,7 +332,7 @@ class ConfigFiles:
 				for entry in section:
 					if entry.tag == "item":
 						requires = entry.get("requires")
-						if requires and not SystemInfo.get(requires, False):
+						if requires and not BoxInfo.getItem(requires, False):
 							continue
 
 						if int(entry.get("level", 0)) > config.usage.setup_level.index:
