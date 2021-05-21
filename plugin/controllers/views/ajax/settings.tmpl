@@ -446,7 +446,7 @@ function ShowPackages(mode)
 	}
 
 	$.ajax({
-		url: '/ipkg?command=listall' + reqfilter,
+		url: '/opkg?command=listall' + reqfilter,
 		dataType: 'json',
 		success: function ( data ) {
 			var sdata = JSON.stringify(data);

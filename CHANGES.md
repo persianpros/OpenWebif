@@ -1,6 +1,6 @@
 ## Version 1.4.7
 ## (in development)
-* add filter paramter to ipkg api
+* add filter paramter to opkg api
 
 ## Version 1.4.6
 * fix memory leak in movielist by using internal code #751
@@ -13,7 +13,7 @@
 * improve api movielist recursive #1241
 
 ## Version 1.4.3
-* improve ipkg
+* improve opkg
 * use responsive UI for mobile devices
 
 ## Version 1.4.2

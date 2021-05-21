@@ -188,5 +188,5 @@ class ATController(resource.Resource):
 					return six.ensure_binary(''.join(autotimer.getXml()))
 			except Exception:
 				return b'<?xml version="1.0" encoding="UTF-8" ?><e2simplexmlresult><e2state>false</e2state><e2statetext>AutoTimer Config not found</e2statetext></e2simplexmlresult>'
-		except ImportError as e:
+		except ImportError:
 			return b'<?xml version="1.0" encoding="UTF-8" ?><e2simplexmlresult><e2state>false</e2state><e2statetext>AutoTimer Plugin not found</e2statetext></e2simplexmlresult>'

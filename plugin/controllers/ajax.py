@@ -101,10 +101,9 @@ class AjaxController(BaseController):
 		try:
 			from Plugins.Extensions.AutoTimer.AutoTimer import AutoTimer  # noqa: F401
 			at = True
-		except ImportError as e:
+		except ImportError:
 			pass
 		event['at'] = at
-		event['transcoding'] = TRANSCODING
 		event['transcoding'] = TRANSCODING
 		event['moviedb'] = config.OpenWebif.webcache.moviedb.value if config.OpenWebif.webcache.moviedb.value else EXT_EVENT_INFO_SOURCE
 		event['extEventInfoProvider'] = extEventInfoProvider = getEventInfoProvider(event['moviedb'])
@@ -150,7 +149,7 @@ class AjaxController(BaseController):
 			try:
 				from Plugins.Extensions.AutoTimer.AutoTimer import AutoTimer  # noqa: F401
 				at = True
-			except ImportError as e:
+			except ImportError:
 				pass
 		if config.OpenWebif.webcache.theme.value:
 			theme = config.OpenWebif.webcache.theme.value
@@ -333,7 +332,7 @@ class AjaxController(BaseController):
 		try:
 			from Plugins.Extensions.AutoTimer.AutoTimer import typeMap
 			ret['searchTypes'] = typeMap
-		except ImportError as e:
+		except ImportError:
 			pass
 		if config.OpenWebif.autotimer_regex_searchtype.value:
 			ret['searchTypes']['regex'] = 0
@@ -344,17 +343,17 @@ class AjaxController(BaseController):
 		try:
 			from Plugins.SystemPlugins.vps import Vps  # noqa: F401
 			ret['hasVPS'] = 1
-		except ImportError as e:
+		except ImportError:
 			pass
 		try:
 			from Plugins.Extensions.SeriesPlugin.plugin import Plugins  # noqa: F401
 			ret['hasSeriesPlugin'] = 1
-		except ImportError as e:
+		except ImportError:
 			pass
 		try:
 			from Plugins.Extensions.AutoTimer.AutoTimerResource import AutoTimerTestResource  # noqa: F401
 			ret['test'] = 1
-		except ImportError as e:
+		except ImportError:
 			pass
 		ret['showiptvchannelsinselection'] = config.OpenWebif.webcache.showiptvchannelsinselection.value
 

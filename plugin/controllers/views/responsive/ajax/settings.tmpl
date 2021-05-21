@@ -256,7 +256,7 @@
 					{
 						var formData = new FormData(this);
 						jQuery.ajax({
-							url: '/ipkg/upload',
+							url: '/opkg/upload',
 							type: 'POST',
 							data: formData,
 							mimeType:"multipart/form-data",
@@ -374,7 +374,7 @@
 				closeOnCancel: true
 			}, function (isConfirm) {
 				if (isConfirm) {
-					Action('/ipkg?command='+cmd,'true');
+					Action('/opkg?command='+cmd,'true');
 					jQuery("#tblpackages").hide();
 					jQuery("#pkgmore").show();
 					jQuery('#pkgbtn4').prop('checked', true); 
@@ -412,7 +412,7 @@
 			jQuery("#pkgmore").show();
 			jQuery('#tmpfiles').empty();
 			jQuery.ajax({
-				url: '/ipkg?command=tmp',
+				url: '/opkg?command=tmp',
 				dataType: 'json',
 				success: function (data) {
 					var files = '';
@@ -451,7 +451,7 @@
 		}
 
 		jQuery.ajax({
-			url: '/ipkg?command=listall',
+			url: '/opkg?command=listall',
 			dataType: 'json',
 			success: function ( data ) {
 				var sdata = JSON.stringify(data);
@@ -498,9 +498,9 @@
 		jQuery('#selectfile').click(function () {jQuery("#rfile").trigger('click'); });
 		jQuery('#rfile').change(prepareUpload);
 		jQuery('#updatefeed').click(function () {
-			Action('/ipkg?command=update',true); });
+			Action('/opkg?command=update',true); });
 		jQuery('#upgrade').click(function () {
-			Action('/ipkg?command=upgrade','true'); });
+			Action('/opkg?command=upgrade','true'); });
 		
 		jQuery('#searchpk').focus(function () { 
 			if (jQuery(this).val() === '...') {

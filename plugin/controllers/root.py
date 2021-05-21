@@ -68,7 +68,7 @@ class RootController(BaseController):
 				self.putChild2(static_val, static.File(six.ensure_binary(getPublicPath() + '/' + static_val)))
 
 		if os.path.exists('/usr/bin/shellinaboxd'):
-			self.putChild2("terminal", proxy.ReverseProxyResource(b'::1', 4200, b'/'))
+			self.putChild2("terminal", proxy.ReverseProxyResource('::1', 4200, b'/'))
 		self.putGZChild("opkg", OpkgController(session))
 		self.putChild2("autotimer", ATController(session))
 		self.putChild2("epgrefresh", ERController(session))

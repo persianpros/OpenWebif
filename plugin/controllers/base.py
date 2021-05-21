@@ -346,7 +346,7 @@ class BaseController(resource.Resource):
 		try:
 			from Plugins.Extensions.AutoTimer.AutoTimer import AutoTimer  # noqa: F401
 			extras.append({'key': 'ajax/at', 'description': _('AutoTimers')})
-		except ImportError as e:
+		except ImportError:
 			pass
 
 		if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/bqe.tmpl")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/bqe.pyo")):
@@ -355,7 +355,7 @@ class BaseController(resource.Resource):
 		try:
 			from Plugins.Extensions.EPGRefresh.EPGRefresh import epgrefresh  # noqa: F401
 			extras.append({'key': 'ajax/epgr', 'description': _('EPGRefresh')})
-		except ImportError as e:
+		except ImportError:
 			pass
 
 		try:
@@ -391,7 +391,7 @@ class BaseController(resource.Resource):
 								extras.append({'key': plugins[0], 'description': plugins[2], 'nw': '1'})
 						except KeyError:
 							pass
-		except ImportError as e:
+		except ImportError:
 			pass
 
 		if os.path.exists('/usr/bin/shellinaboxd') and (fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/terminal.tmpl")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/terminal.pyo"))):
