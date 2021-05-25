@@ -255,8 +255,8 @@ def getInfo(session=None, need_fullinfo=False):
 	info['oever'] = BoxInfo.getItem("oe")
 	info['gccver'] = about.getGccVersion()
 	info['glibcver'] = about.getGlibcVersion()
-	info['visionversion'] = BoxInfo.getItem("visionversion")
-	info['visionrevision'] = BoxInfo.getItem("visionrevision")
+	info['visionversion'] = BoxInfo.getItem("imgversion")
+	info['visionrevision'] = BoxInfo.getItem("imgrevision")
 	info['visionmodule'] = about.getVisionModule()
 
 	if fileExists("/etc/openvision/multiboot"):
