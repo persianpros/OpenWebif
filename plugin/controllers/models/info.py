@@ -199,7 +199,9 @@ def getInfo(session=None, need_fullinfo=False):
 		return STATICBOXINFO
 
 	info['brand'] = BoxInfo.getItem("brand")
+	info['displaybrand'] = BoxInfo.getItem("displaybrand")
 	info['model'] = BoxInfo.getItem("model")
+	info['displaymodel'] = BoxInfo.getItem("displaymodel")
 	info['platform'] = BoxInfo.getItem("platform")
 
 	try:
