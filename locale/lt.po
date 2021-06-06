@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-27 23:12+0430\n"
+"POT-Creation-Date: 2021-06-06 12:34+0430\n"
 "PO-Revision-Date: 2020-09-17 20:39+0300\n"
 "Last-Translator: Vytenis P. <vyteniui@gmail.com>\n"
 "Language-Team: Vytenis Pulokas <vyteniui@gmail.com>\n"
@@ -38,12 +38,12 @@ msgstr ""
 msgid "%d.%m.%Y"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:187
-#: ../plugin/controllers/models/timers.py:188
-#: ../plugin/controllers/models/timers.py:276
-#: ../plugin/controllers/models/timers.py:277
-#: ../plugin/controllers/models/timers.py:434
-#: ../plugin/controllers/models/timers.py:435
+#: ../plugin/controllers/models/timers.py:194
+#: ../plugin/controllers/models/timers.py:195
+#: ../plugin/controllers/models/timers.py:284
+#: ../plugin/controllers/models/timers.py:285
+#: ../plugin/controllers/models/timers.py:467
+#: ../plugin/controllers/models/timers.py:468
 msgid "%d.%m.%Y %H:%M"
 msgstr ""
 
@@ -497,7 +497,7 @@ msgstr ""
 msgid "Config"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:282
+#: ../plugin/controllers/models/timers.py:290
 #, python-format
 msgid "Conflicting Timer(s) detected! %s"
 msgstr "Laikmačių konfliktas! %s"
@@ -510,12 +510,12 @@ msgstr "Bendraautoriai"
 msgid "Control"
 msgstr "Valdymas"
 
-#: ../plugin/controllers/models/timers.py:313
+#: ../plugin/controllers/models/timers.py:333
 #, python-format
 msgid "Could not add timer '%s'!"
 msgstr "Laikmačio '%s' pridėti nepavyko!"
 
-#: ../plugin/controllers/models/timers.py:446
+#: ../plugin/controllers/models/timers.py:479
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Nepavyko rasti laikmačio '%s' su nurodytu pradžios ir pabaigos laiku!"
@@ -715,7 +715,7 @@ msgstr "EPG koduotė"
 msgid "EPGRefresh"
 msgstr "EPG atnaujinimas"
 
-#: ../plugin/controllers/models/timers.py:892
+#: ../plugin/controllers/models/timers.py:925
 msgid "ERROR: Cannot set SleepTimer while device is in Standby-Mode"
 msgstr "KLAIDA: Negalima nustatyti budėjimo laikmačio, kai įrenginys budėjimo būsenoje"
 
@@ -838,7 +838,7 @@ msgstr ""
 msgid "Error"
 msgstr "Klaida"
 
-#: ../plugin/controllers/models/timers.py:1046
+#: ../plugin/controllers/models/timers.py:1079
 msgid "Error parsing vps.xml"
 msgstr "Klaida, apdorojant vps.xml"
 
@@ -878,7 +878,7 @@ msgstr "Klaida: Bukietas %s negali būti ištrintas, OS klaida."
 msgid "Event not found"
 msgstr "Įvykio nerasta"
 
-#: ../plugin/controllers/models/timers.py:327
+#: ../plugin/controllers/models/timers.py:347
 msgid "EventId not found"
 msgstr "Įvykio ID nerastas"
 
@@ -1112,7 +1112,7 @@ msgstr "Įtraukti trumpą aprašymą"
 msgid "Include when"
 msgstr "Įskaitant"
 
-#: ../plugin/controllers/models/timers.py:562
+#: ../plugin/controllers/models/timers.py:595
 msgid "Infinite Instant recording started"
 msgstr "Pradėtas neribotas neplaninis įrašymas"
 
@@ -1136,7 +1136,7 @@ msgstr "Įdiegta"
 msgid "Instant Record"
 msgstr "Neplaninis įrašymas"
 
-#: ../plugin/controllers/models/timers.py:553
+#: ../plugin/controllers/models/timers.py:586
 msgid "Instant record for current Event started"
 msgstr "Pradėtas šio įvykio neplaninis įrašymas"
 
@@ -1215,7 +1215,7 @@ msgstr ""
 msgid "Link speed"
 msgstr "Ryšio sparta"
 
-#: ../plugin/controllers/models/timers.py:523
+#: ../plugin/controllers/models/timers.py:556
 msgid "List of Timers has been cleaned"
 msgstr "Laikmačių sąrašas išvalytas"
 
@@ -1302,7 +1302,7 @@ msgstr "Minutė"
 msgid "Missing mandatory parameter '%s'"
 msgstr "Trūksta būtino parametro '%s'"
 
-#: ../plugin/controllers/models/timers.py:654
+#: ../plugin/controllers/models/timers.py:687
 msgid "Missing requesteter: sRef"
 msgstr "Trūksta užklausos: sRef"
 
@@ -1453,7 +1453,7 @@ msgstr "Bukietui nesuteiktas pavadinimas!"
 msgid "No current service given!"
 msgstr "Nenurodytas konkrečiai šis kanalas!"
 
-#: ../plugin/controllers/models/timers.py:547
+#: ../plugin/controllers/models/timers.py:580
 msgid "No event found! Not recording!"
 msgstr "Įvykių nerasta! Nebus įrašoma!"
 
@@ -1466,8 +1466,8 @@ msgstr "Žymekliui nesuteiktas pavadinimas!"
 msgid "No matches were found in the EPG"
 msgstr "Kriterijus atitinkančio laikmačio nerasta"
 
-#: ../plugin/controllers/models/timers.py:470
-#: ../plugin/controllers/models/timers.py:515
+#: ../plugin/controllers/models/timers.py:503
+#: ../plugin/controllers/models/timers.py:548
 msgid "No matching Timer found"
 msgstr "Kriterijus atitinkančio laikmačio nerasta"
 
@@ -1715,7 +1715,7 @@ msgstr "Pmtpid"
 msgid "Power Control"
 msgstr "Maitinimo valdymas"
 
-#: ../plugin/controllers/models/timers.py:743
+#: ../plugin/controllers/models/timers.py:776
 msgid "PowerTimer feature not available"
 msgstr "Išjungimo laikmačio funkcija negalima"
 
@@ -1766,6 +1766,11 @@ msgstr "Įrašas daugiausiai x kartų"
 
 #: ../plugin/controllers/i18n.py:240
 msgid "Recording Status"
+msgstr "Įrašymo būsena"
+
+#: ../plugin/controllers/i18n.py:616
+#, fuzzy
+msgid "Recording Type"
 msgstr "Įrašymo būsena"
 
 #: ../plugin/controllers/i18n.py:241 ../plugin/controllers/i18n.py:453
@@ -2123,38 +2128,38 @@ msgstr "Svetainė ir šaltiniai"
 msgid "Skins"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:827
-#: ../plugin/controllers/models/timers.py:853
-#: ../plugin/controllers/models/timers.py:879
-#: ../plugin/controllers/models/timers.py:908
-#: ../plugin/controllers/models/timers.py:935
-#: ../plugin/controllers/models/timers.py:1017
+#: ../plugin/controllers/models/timers.py:860
+#: ../plugin/controllers/models/timers.py:886
+#: ../plugin/controllers/models/timers.py:912
+#: ../plugin/controllers/models/timers.py:941
+#: ../plugin/controllers/models/timers.py:968
+#: ../plugin/controllers/models/timers.py:1050
 msgid "SleepTimer error"
 msgstr "Budėjimo laikmačio klaida"
 
-#: ../plugin/controllers/models/timers.py:897
-#: ../plugin/controllers/models/timers.py:993
-#: ../plugin/controllers/models/timers.py:1012
+#: ../plugin/controllers/models/timers.py:930
+#: ../plugin/controllers/models/timers.py:1026
+#: ../plugin/controllers/models/timers.py:1045
 msgid "Sleeptimer has been disabled"
 msgstr "Budėjimo laikmatis išjungtas"
 
-#: ../plugin/controllers/models/timers.py:822
-#: ../plugin/controllers/models/timers.py:847
-#: ../plugin/controllers/models/timers.py:874
-#: ../plugin/controllers/models/timers.py:929
+#: ../plugin/controllers/models/timers.py:855
+#: ../plugin/controllers/models/timers.py:880
+#: ../plugin/controllers/models/timers.py:907
+#: ../plugin/controllers/models/timers.py:962
 msgid "Sleeptimer is disabled"
 msgstr "Budėjimo laikmatis išjungtas"
 
-#: ../plugin/controllers/models/timers.py:822
-#: ../plugin/controllers/models/timers.py:847
-#: ../plugin/controllers/models/timers.py:874
-#: ../plugin/controllers/models/timers.py:929
+#: ../plugin/controllers/models/timers.py:855
+#: ../plugin/controllers/models/timers.py:880
+#: ../plugin/controllers/models/timers.py:907
+#: ../plugin/controllers/models/timers.py:962
 msgid "Sleeptimer is enabled"
 msgstr "Budėjimo laikmatis įjungtas"
 
-#: ../plugin/controllers/models/timers.py:903
-#: ../plugin/controllers/models/timers.py:993
-#: ../plugin/controllers/models/timers.py:1007
+#: ../plugin/controllers/models/timers.py:936
+#: ../plugin/controllers/models/timers.py:1026
+#: ../plugin/controllers/models/timers.py:1040
 #, python-format
 msgid "Sleeptimer set to %d minutes"
 msgstr "Budėjimo laikmatis nustatytas %d minučių"
@@ -2311,7 +2316,7 @@ msgstr "Tekstas"
 msgid "Th"
 msgstr "Kt"
 
-#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1554
+#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1562
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Parametras '%s' negali būti tuščias"
@@ -2320,18 +2325,18 @@ msgstr "Parametras '%s' negali būti tuščias"
 msgid "The parameter 'command' must be a number"
 msgstr "Parametras 'komanda' turi būti skaitmuo"
 
-#: ../plugin/controllers/models/timers.py:509
+#: ../plugin/controllers/models/timers.py:542
 #, python-format
 msgid "The timer '%s' has been %s successfully"
 msgstr "Laikmatis '%s' sėkmingai %s"
 
-#: ../plugin/controllers/models/timers.py:459
-#: ../plugin/controllers/models/timers.py:465
+#: ../plugin/controllers/models/timers.py:492
+#: ../plugin/controllers/models/timers.py:498
 #, python-format
 msgid "The timer '%s' has been deleted successfully"
 msgstr "Laikmatis '%s' pašalintas sėkmingai"
 
-#: ../plugin/controllers/models/timers.py:501
+#: ../plugin/controllers/models/timers.py:534
 #, python-format
 msgid "The timer '%s' now recorded! Not disabled!"
 msgstr "Laikmatis '%s' įrašytas dabar! Neišjungtas!"
@@ -2374,27 +2379,27 @@ msgstr "Intervalas"
 msgid "Timer"
 msgstr "Laikmatis"
 
-#: ../plugin/controllers/models/timers.py:318
+#: ../plugin/controllers/models/timers.py:338
 #, python-format
 msgid "Timer '%s' added"
 msgstr "Laikmatis '%s' pridėtas"
 
-#: ../plugin/controllers/models/timers.py:495
+#: ../plugin/controllers/models/timers.py:528
 #, python-format
 msgid "Timer '%s' already exists!"
 msgstr "Laikmatis '%s' jau yra!"
 
-#: ../plugin/controllers/models/timers.py:421
+#: ../plugin/controllers/models/timers.py:454
 #, python-format
 msgid "Timer '%s' changed"
 msgstr "Laikmatis '%s' pakeistas"
 
-#: ../plugin/controllers/models/timers.py:489
+#: ../plugin/controllers/models/timers.py:522
 #, python-format
 msgid "Timer '%s' not enabled while Conflict"
 msgstr "Laikmatis '%s' neįtrauktas dėl konflikto"
 
-#: ../plugin/controllers/models/timers.py:440
+#: ../plugin/controllers/models/timers.py:473
 #, python-format
 msgid "Timer '%s' not saved while Conflict"
 msgstr "Laikmatis '%s' neįtrauktas dėl konflikto"
@@ -2407,7 +2412,7 @@ msgstr "Laikmatis įtrauktas"
 msgid "Timer added"
 msgstr "Laikmatis įtrauktas"
 
-#: ../plugin/controllers/models/timers.py:581
+#: ../plugin/controllers/models/timers.py:614
 msgid "Timer conflict detected! Not recording!"
 msgstr "Laikmačių konfliktas! Nebus įrašoma!"
 
@@ -2415,7 +2420,7 @@ msgstr "Laikmačių konfliktas! Nebus įrašoma!"
 msgid "Timer type"
 msgstr "Laikmačio tipas"
 
-#: ../plugin/controllers/models/timers.py:531
+#: ../plugin/controllers/models/timers.py:564
 msgid "TimerList has been saved"
 msgstr "Laikmačių sąrašas išsaugotas"
 
@@ -2515,7 +2520,7 @@ msgstr "Tipas"
 msgid "Unknown Volume command %s"
 msgstr "Nežinoma komanda %s"
 
-#: ../plugin/controllers/models/timers.py:676
+#: ../plugin/controllers/models/timers.py:709
 #, python-format
 msgid "Unknown command: '%s'"
 msgstr "Nežinoma komanda: '%s'"
@@ -2595,7 +2600,7 @@ msgstr "Naudoti naują išvaizdą"
 msgid "VPS"
 msgstr "VPS"
 
-#: ../plugin/controllers/models/timers.py:1051
+#: ../plugin/controllers/models/timers.py:1084
 msgid "VPS plugin not found"
 msgstr "VPS įskiepio nerasta"
 
@@ -2759,6 +2764,10 @@ msgstr "Paieškos tikslumas"
 msgid "case-sensitive"
 msgstr "Paieškos tikslumas"
 
+#: ../plugin/controllers/i18n.py:618
+msgid "descramble and record ecm"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:413
 msgid "description contains"
 msgstr "aprašyme"
@@ -2775,6 +2784,10 @@ msgstr "išjungtas"
 #: ../plugin/controllers/i18n.py:381
 msgid "do nothing"
 msgstr "nieko nedaryti"
+
+#: ../plugin/controllers/i18n.py:619
+msgid "don't descramble, record ecm"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:521
 msgid "error! Loading Page"
@@ -2836,6 +2849,10 @@ msgstr "aprašymo nėra"
 #: ../plugin/controllers/models/info.py:182 ../plugin/controllers/i18n.py:178
 msgid "none/IPv4-only network"
 msgstr "nėra / tik IPv4 tinklas"
+
+#: ../plugin/controllers/i18n.py:617
+msgid "normal"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:415
 msgid "on day"

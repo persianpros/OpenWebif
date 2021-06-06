@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-27 23:12+0430\n"
+"POT-Creation-Date: 2021-06-06 12:34+0430\n"
 "PO-Revision-Date: 2021-02-14 22:24+0100\n"
 "Last-Translator: JC 2021 <dk-translation@protonmail.com>\n"
 "Language-Team: Danskholdet <dk-translation@pm.me>\n"
@@ -38,12 +38,12 @@ msgstr ""
 msgid "%d.%m.%Y"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:187
-#: ../plugin/controllers/models/timers.py:188
-#: ../plugin/controllers/models/timers.py:276
-#: ../plugin/controllers/models/timers.py:277
-#: ../plugin/controllers/models/timers.py:434
-#: ../plugin/controllers/models/timers.py:435
+#: ../plugin/controllers/models/timers.py:194
+#: ../plugin/controllers/models/timers.py:195
+#: ../plugin/controllers/models/timers.py:284
+#: ../plugin/controllers/models/timers.py:285
+#: ../plugin/controllers/models/timers.py:467
+#: ../plugin/controllers/models/timers.py:468
 msgid "%d.%m.%Y %H:%M"
 msgstr ""
 
@@ -497,7 +497,7 @@ msgstr ""
 msgid "Config"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:282
+#: ../plugin/controllers/models/timers.py:290
 #, python-format
 msgid "Conflicting Timer(s) detected! %s"
 msgstr "Timerkonflikt(er) opdaget! %s"
@@ -510,12 +510,12 @@ msgstr "Bidragsydere"
 msgid "Control"
 msgstr "Kontrol"
 
-#: ../plugin/controllers/models/timers.py:313
+#: ../plugin/controllers/models/timers.py:333
 #, python-format
 msgid "Could not add timer '%s'!"
 msgstr "Kunne ikke tilføje timer '%s'!"
 
-#: ../plugin/controllers/models/timers.py:446
+#: ../plugin/controllers/models/timers.py:479
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Kunne ikke finde Timer '%s' med valgte start- og sluttid!"
@@ -715,7 +715,7 @@ msgstr "EPG indkodning"
 msgid "EPGRefresh"
 msgstr "EPGRefresh"
 
-#: ../plugin/controllers/models/timers.py:892
+#: ../plugin/controllers/models/timers.py:925
 msgid "ERROR: Cannot set SleepTimer while device is in Standby-Mode"
 msgstr "FEJL: Kan ikke indstille DvaleTimer mens enheden er i Standby-tilstand."
 
@@ -838,7 +838,7 @@ msgstr ""
 msgid "Error"
 msgstr "Fejl"
 
-#: ../plugin/controllers/models/timers.py:1046
+#: ../plugin/controllers/models/timers.py:1079
 msgid "Error parsing vps.xml"
 msgstr "Fejl ved analyse af vps.xml"
 
@@ -878,7 +878,7 @@ msgstr "Fejl: Buket %s kunne ikke slettes, OSFejl."
 msgid "Event not found"
 msgstr "Fandt ikke Begivenhed"
 
-#: ../plugin/controllers/models/timers.py:327
+#: ../plugin/controllers/models/timers.py:347
 msgid "EventId not found"
 msgstr "Fandt ikke BegivenhedsID"
 
@@ -1112,7 +1112,7 @@ msgstr "Medtag kort beskrivelse"
 msgid "Include when"
 msgstr "Medtag"
 
-#: ../plugin/controllers/models/timers.py:562
+#: ../plugin/controllers/models/timers.py:595
 msgid "Infinite Instant recording started"
 msgstr "Straksoptagelse med uendelig varighed er startet"
 
@@ -1136,7 +1136,7 @@ msgstr "Installeret"
 msgid "Instant Record"
 msgstr "Staksoptagelse"
 
-#: ../plugin/controllers/models/timers.py:553
+#: ../plugin/controllers/models/timers.py:586
 msgid "Instant record for current Event started"
 msgstr "En Straksoptagelse af den aktuelle begivenhed er startet"
 
@@ -1215,7 +1215,7 @@ msgstr ""
 msgid "Link speed"
 msgstr "Forbindelseshastighed"
 
-#: ../plugin/controllers/models/timers.py:523
+#: ../plugin/controllers/models/timers.py:556
 msgid "List of Timers has been cleaned"
 msgstr "Listen af Timere er blevet ryddet"
 
@@ -1302,7 +1302,7 @@ msgstr "Minut"
 msgid "Missing mandatory parameter '%s'"
 msgstr "Mangler obligatorisk parameter '%s'"
 
-#: ../plugin/controllers/models/timers.py:654
+#: ../plugin/controllers/models/timers.py:687
 msgid "Missing requesteter: sRef"
 msgstr "Manglende efterspørgsel: sRef"
 
@@ -1453,7 +1453,7 @@ msgstr "Buketnavn ikke angivet!"
 msgid "No current service given!"
 msgstr "Aktuel kanal ikke angivet!"
 
-#: ../plugin/controllers/models/timers.py:547
+#: ../plugin/controllers/models/timers.py:580
 msgid "No event found! Not recording!"
 msgstr "Ingen begivenhed fundet. Optager ikke!"
 
@@ -1466,8 +1466,8 @@ msgstr "Mærke-navn ikke angivet!"
 msgid "No matches were found in the EPG"
 msgstr "Ingen identisk Timer fundet"
 
-#: ../plugin/controllers/models/timers.py:470
-#: ../plugin/controllers/models/timers.py:515
+#: ../plugin/controllers/models/timers.py:503
+#: ../plugin/controllers/models/timers.py:548
 msgid "No matching Timer found"
 msgstr "Ingen identisk Timer fundet"
 
@@ -1715,7 +1715,7 @@ msgstr "PMTPID"
 msgid "Power Control"
 msgstr "Strømstyring"
 
-#: ../plugin/controllers/models/timers.py:743
+#: ../plugin/controllers/models/timers.py:776
 msgid "PowerTimer feature not available"
 msgstr "StrømTimer funktion ikke tilgængelig"
 
@@ -1766,6 +1766,11 @@ msgstr "Optag maksimalt X gange"
 
 #: ../plugin/controllers/i18n.py:240
 msgid "Recording Status"
+msgstr "Optagelsesstatus"
+
+#: ../plugin/controllers/i18n.py:616
+#, fuzzy
+msgid "Recording Type"
 msgstr "Optagelsesstatus"
 
 #: ../plugin/controllers/i18n.py:241 ../plugin/controllers/i18n.py:453
@@ -2122,38 +2127,38 @@ msgstr "Hjemmeside og kilder"
 msgid "Skins"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:827
-#: ../plugin/controllers/models/timers.py:853
-#: ../plugin/controllers/models/timers.py:879
-#: ../plugin/controllers/models/timers.py:908
-#: ../plugin/controllers/models/timers.py:935
-#: ../plugin/controllers/models/timers.py:1017
+#: ../plugin/controllers/models/timers.py:860
+#: ../plugin/controllers/models/timers.py:886
+#: ../plugin/controllers/models/timers.py:912
+#: ../plugin/controllers/models/timers.py:941
+#: ../plugin/controllers/models/timers.py:968
+#: ../plugin/controllers/models/timers.py:1050
 msgid "SleepTimer error"
 msgstr "DvaleTimer fejl"
 
-#: ../plugin/controllers/models/timers.py:897
-#: ../plugin/controllers/models/timers.py:993
-#: ../plugin/controllers/models/timers.py:1012
+#: ../plugin/controllers/models/timers.py:930
+#: ../plugin/controllers/models/timers.py:1026
+#: ../plugin/controllers/models/timers.py:1045
 msgid "Sleeptimer has been disabled"
 msgstr "DvaleTimeren er blevet deaktiveret"
 
-#: ../plugin/controllers/models/timers.py:822
-#: ../plugin/controllers/models/timers.py:847
-#: ../plugin/controllers/models/timers.py:874
-#: ../plugin/controllers/models/timers.py:929
+#: ../plugin/controllers/models/timers.py:855
+#: ../plugin/controllers/models/timers.py:880
+#: ../plugin/controllers/models/timers.py:907
+#: ../plugin/controllers/models/timers.py:962
 msgid "Sleeptimer is disabled"
 msgstr "DvaleTimer er deaktiveret"
 
-#: ../plugin/controllers/models/timers.py:822
-#: ../plugin/controllers/models/timers.py:847
-#: ../plugin/controllers/models/timers.py:874
-#: ../plugin/controllers/models/timers.py:929
+#: ../plugin/controllers/models/timers.py:855
+#: ../plugin/controllers/models/timers.py:880
+#: ../plugin/controllers/models/timers.py:907
+#: ../plugin/controllers/models/timers.py:962
 msgid "Sleeptimer is enabled"
 msgstr "DvaleTimer er aktiveret"
 
-#: ../plugin/controllers/models/timers.py:903
-#: ../plugin/controllers/models/timers.py:993
-#: ../plugin/controllers/models/timers.py:1007
+#: ../plugin/controllers/models/timers.py:936
+#: ../plugin/controllers/models/timers.py:1026
+#: ../plugin/controllers/models/timers.py:1040
 #, python-format
 msgid "Sleeptimer set to %d minutes"
 msgstr "DvaleTimeren er sat til %d minutter"
@@ -2309,7 +2314,7 @@ msgstr "Tekst"
 msgid "Th"
 msgstr "To"
 
-#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1554
+#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1562
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Parameteren '%s' kan ikke være tom"
@@ -2318,18 +2323,18 @@ msgstr "Parameteren '%s' kan ikke være tom"
 msgid "The parameter 'command' must be a number"
 msgstr "Parameteren 'command' skal være numerisk"
 
-#: ../plugin/controllers/models/timers.py:509
+#: ../plugin/controllers/models/timers.py:542
 #, python-format
 msgid "The timer '%s' has been %s successfully"
 msgstr "Timeren '%s' er blevet %s med succes"
 
-#: ../plugin/controllers/models/timers.py:459
-#: ../plugin/controllers/models/timers.py:465
+#: ../plugin/controllers/models/timers.py:492
+#: ../plugin/controllers/models/timers.py:498
 #, python-format
 msgid "The timer '%s' has been deleted successfully"
 msgstr "Timeren '%s' er blevet slettet med succes"
 
-#: ../plugin/controllers/models/timers.py:501
+#: ../plugin/controllers/models/timers.py:534
 #, python-format
 msgid "The timer '%s' now recorded! Not disabled!"
 msgstr "Timeren '%s' er nu optaget! Ikke deaktiveret!"
@@ -2372,27 +2377,27 @@ msgstr "Tidsudløb"
 msgid "Timer"
 msgstr "Timer"
 
-#: ../plugin/controllers/models/timers.py:318
+#: ../plugin/controllers/models/timers.py:338
 #, python-format
 msgid "Timer '%s' added"
 msgstr "Timer '%s' tilføjet"
 
-#: ../plugin/controllers/models/timers.py:495
+#: ../plugin/controllers/models/timers.py:528
 #, python-format
 msgid "Timer '%s' already exists!"
 msgstr "Timer '%s' findes allerede!"
 
-#: ../plugin/controllers/models/timers.py:421
+#: ../plugin/controllers/models/timers.py:454
 #, python-format
 msgid "Timer '%s' changed"
 msgstr "Timer '%s' ændret"
 
-#: ../plugin/controllers/models/timers.py:489
+#: ../plugin/controllers/models/timers.py:522
 #, python-format
 msgid "Timer '%s' not enabled while Conflict"
 msgstr "Timer '%s' ikke aktiveret pga. en konflikt"
 
-#: ../plugin/controllers/models/timers.py:440
+#: ../plugin/controllers/models/timers.py:473
 #, python-format
 msgid "Timer '%s' not saved while Conflict"
 msgstr "Timer '%s' ikke gemt pga. en konflikt"
@@ -2405,7 +2410,7 @@ msgstr "Timer tilføjet"
 msgid "Timer added"
 msgstr "Timer tilføjet"
 
-#: ../plugin/controllers/models/timers.py:581
+#: ../plugin/controllers/models/timers.py:614
 msgid "Timer conflict detected! Not recording!"
 msgstr "Timerkonflikt opdaget. Optager ikke!"
 
@@ -2413,7 +2418,7 @@ msgstr "Timerkonflikt opdaget. Optager ikke!"
 msgid "Timer type"
 msgstr "Timertype"
 
-#: ../plugin/controllers/models/timers.py:531
+#: ../plugin/controllers/models/timers.py:564
 msgid "TimerList has been saved"
 msgstr "Timerlisten er gemt"
 
@@ -2513,7 +2518,7 @@ msgstr "Type"
 msgid "Unknown Volume command %s"
 msgstr "Ukendt Lydstyrke-kommando %s"
 
-#: ../plugin/controllers/models/timers.py:676
+#: ../plugin/controllers/models/timers.py:709
 #, python-format
 msgid "Unknown command: '%s'"
 msgstr "Ukendt kommando: '%s'"
@@ -2592,7 +2597,7 @@ msgstr "Brug moderne grænseflade"
 msgid "VPS"
 msgstr "VPS"
 
-#: ../plugin/controllers/models/timers.py:1051
+#: ../plugin/controllers/models/timers.py:1084
 msgid "VPS plugin not found"
 msgstr "VPS Plugin ikke fundet"
 
@@ -2756,6 +2761,10 @@ msgstr "Søgestrenghed"
 msgid "case-sensitive"
 msgstr "Søgestrenghed"
 
+#: ../plugin/controllers/i18n.py:618
+msgid "descramble and record ecm"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:413
 msgid "description contains"
 msgstr "i beskrivelse"
@@ -2772,6 +2781,10 @@ msgstr "deaktiveret"
 #: ../plugin/controllers/i18n.py:381
 msgid "do nothing"
 msgstr "Gør ingenting"
+
+#: ../plugin/controllers/i18n.py:619
+msgid "don't descramble, record ecm"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:521
 msgid "error! Loading Page"
@@ -2833,6 +2846,10 @@ msgstr "ingen beskrivelse"
 #: ../plugin/controllers/models/info.py:182 ../plugin/controllers/i18n.py:178
 msgid "none/IPv4-only network"
 msgstr "Ingen/Kun IPv4 netværk"
+
+#: ../plugin/controllers/i18n.py:617
+msgid "normal"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:415
 msgid "on day"
