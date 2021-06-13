@@ -115,6 +115,12 @@ def useSreenshotChannelName():
 	return ''
 
 
+def useNowNextColumns():
+	if config.OpenWebif.responsive_nownext_columns_enabled.value:
+		return 'checked'
+	return ''
+
+
 def setVTiWebConfig(self, request):
 	if b"moviesearchextended" in list(request.args.keys()):
 		val = int(getUrlArg(request, "moviesearchextended"))
@@ -186,6 +192,11 @@ def setVTiWebConfig(self, request):
 		print("save screenshotchannelname:", val)
 		config.OpenWebif.webcache.screenshotchannelname.value = val == 1 and True or False
 		config.OpenWebif.webcache.screenshotchannelname.save()
+	if b"nownext_columns" in list(request.args.keys()):
+		val = int(getUrlArg(request, "nownext_columns"))
+		print("save nownext_columns_enabled:", val)
+		config.OpenWebif.responsive_nownext_columns_enabled.value = val == 1 and True or False
+		config.OpenWebif.responsive_nownext_columns_enabled.save()
 	return ''
 
 

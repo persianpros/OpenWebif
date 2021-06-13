@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-06 12:34+0430\n"
+"POT-Creation-Date: 2021-06-13 09:47+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: neoatomic <neoatomic@users.noreply.github.com>\n"
 "Language-Team: satfan <satfan@163.com>\n"
@@ -170,7 +170,7 @@ msgstr ""
 msgid "Added %s to alternative service %s."
 msgstr "添加 %s 到替代频道 %s."
 
-#: ../plugin/controllers/i18n.py:606
+#: ../plugin/controllers/i18n.py:607
 msgid "Adjust recording time to real event time"
 msgstr "将录制时间调整为实际事件时间"
 
@@ -200,7 +200,7 @@ msgstr "删除所有的替代频道."
 msgid "Allow IPK Upload"
 msgstr "允许IPK上传"
 
-#: ../plugin/controllers/i18n.py:605
+#: ../plugin/controllers/i18n.py:606
 msgid "Allow duplicates"
 msgstr "允许重复"
 
@@ -498,7 +498,7 @@ msgstr "设置"
 msgid "Compiled by"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:610
+#: ../plugin/controllers/i18n.py:611
 msgid "Config"
 msgstr ""
 
@@ -567,11 +567,11 @@ msgstr ""
 msgid "Date"
 msgstr "日期"
 
-#: ../plugin/controllers/i18n.py:596
+#: ../plugin/controllers/i18n.py:597
 msgid "Date (newest)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:595
+#: ../plugin/controllers/i18n.py:596
 msgid "Date (oldest)"
 msgstr ""
 
@@ -678,7 +678,7 @@ msgstr "发行版本"
 msgid "Dolby"
 msgstr "杜比"
 
-#: ../plugin/controllers/i18n.py:607
+#: ../plugin/controllers/i18n.py:608
 msgid "Don't create timer when movie exists in database"
 msgstr ""
 
@@ -902,7 +902,7 @@ msgstr "排除"
 msgid "Execute \"After event\" during timespan"
 msgstr "执行（在事件后的时间跨度内）"
 
-#: ../plugin/controllers/i18n.py:590
+#: ../plugin/controllers/i18n.py:591
 msgid "Export"
 msgstr "导出"
 
@@ -982,7 +982,7 @@ msgstr "不在这之后"
 msgid "Front processor"
 msgstr "前端版本"
 
-#: ../plugin/controllers/i18n.py:583
+#: ../plugin/controllers/i18n.py:584
 #, fuzzy
 msgid "Full remote"
 msgstr "隐藏完整的遥控"
@@ -1027,7 +1027,7 @@ msgstr "创建新的自定义组失败！"
 msgid "Glibc"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:600
+#: ../plugin/controllers/i18n.py:601
 msgid "HH:MM"
 msgstr ""
 
@@ -1100,7 +1100,7 @@ msgstr ""
 msgid "Image folder"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:591
+#: ../plugin/controllers/i18n.py:592
 msgid "Import"
 msgstr "导入"
 
@@ -1108,12 +1108,12 @@ msgstr "导入"
 msgid "Include description"
 msgstr "包含描述"
 
-#: ../plugin/controllers/i18n.py:576
+#: ../plugin/controllers/i18n.py:577
 #, fuzzy
 msgid "Include extended description"
 msgstr "包含描述"
 
-#: ../plugin/controllers/i18n.py:575
+#: ../plugin/controllers/i18n.py:576
 #, fuzzy
 msgid "Include short description"
 msgstr "包含描述"
@@ -1134,11 +1134,11 @@ msgstr "信息"
 msgid "Inherit AutoTimer"
 msgstr "沿用自动计时器"
 
-#: ../plugin/controllers/i18n.py:568
+#: ../plugin/controllers/i18n.py:569
 msgid "Install Package"
 msgstr "安装套件"
 
-#: ../plugin/controllers/i18n.py:570
+#: ../plugin/controllers/i18n.py:571
 #, fuzzy
 msgid "Installed"
 msgstr "已安装"
@@ -1339,7 +1339,7 @@ msgstr "星期一"
 msgid "Monthly"
 msgstr "月"
 
-#: ../plugin/controllers/i18n.py:571
+#: ../plugin/controllers/i18n.py:572
 msgid "More"
 msgstr "更多"
 
@@ -1352,7 +1352,7 @@ msgstr "显示详细资料"
 msgid "Movie database for EPG"
 msgstr "EPG电影数据库"
 
-#: ../plugin/controllers/i18n.py:577
+#: ../plugin/controllers/i18n.py:578
 #, fuzzy
 msgid "Movie search"
 msgstr "影音"
@@ -1392,11 +1392,11 @@ msgstr ""
 msgid "Name"
 msgstr "频道名"
 
-#: ../plugin/controllers/i18n.py:593
+#: ../plugin/controllers/i18n.py:594
 msgid "Name (a-z)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:594
+#: ../plugin/controllers/i18n.py:595
 msgid "Name (z-a)"
 msgstr ""
 
@@ -1539,6 +1539,10 @@ msgstr "十一月"
 #: ../plugin/controllers/i18n.py:213
 msgid "Now"
 msgstr "现在"
+
+#: ../plugin/controllers/i18n.py:566
+msgid "Now/Next Columns"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:214
 #, fuzzy
@@ -1717,7 +1721,7 @@ msgstr "在浏览器中播放IPTV流"
 msgid "Playlist"
 msgstr "播放列表"
 
-#: ../plugin/controllers/i18n.py:603
+#: ../plugin/controllers/i18n.py:604
 #, fuzzy
 msgid "Playlist format"
 msgstr "播放列表"
@@ -1783,7 +1787,7 @@ msgstr "最大录制次数"
 msgid "Recording Status"
 msgstr "录制信息"
 
-#: ../plugin/controllers/i18n.py:616
+#: ../plugin/controllers/i18n.py:617
 #, fuzzy
 msgid "Recording Type"
 msgstr "录制信息"
@@ -1812,7 +1816,7 @@ msgstr "重新载入"
 msgid "Remote"
 msgstr "远程遥控"
 
-#: ../plugin/controllers/i18n.py:566
+#: ../plugin/controllers/i18n.py:567
 msgid "Remove Package"
 msgstr "删除软件包"
 
@@ -1845,7 +1849,7 @@ msgstr "HTTPS需要客户端证书"
 msgid "Require description to be unique"
 msgstr "需要独特的描述"
 
-#: ../plugin/controllers/i18n.py:599
+#: ../plugin/controllers/i18n.py:600
 #, fuzzy
 msgid "Reset"
 msgstr "复位计数"
@@ -1966,11 +1970,11 @@ msgstr "搜索 KinoPoisk"
 msgid "Search type"
 msgstr "搜索"
 
-#: ../plugin/controllers/i18n.py:579
+#: ../plugin/controllers/i18n.py:580
 msgid "Select IPK file for upload"
 msgstr "选择要上传的IPK文件"
 
-#: ../plugin/controllers/i18n.py:598
+#: ../plugin/controllers/i18n.py:599
 msgid "Select..."
 msgstr ""
 
@@ -2071,7 +2075,7 @@ msgstr "显示EPG为"
 msgid "Show Full OpenWebif"
 msgstr "显示完整的OpenWebif"
 
-#: ../plugin/controllers/i18n.py:586
+#: ../plugin/controllers/i18n.py:587
 msgid "Show IPTV channels in selection (eg. Autotimer)"
 msgstr ""
 
@@ -2084,7 +2088,7 @@ msgstr ""
 msgid "Show STB name in header"
 msgstr "在标题中显示机顶盒名称"
 
-#: ../plugin/controllers/i18n.py:614
+#: ../plugin/controllers/i18n.py:615
 #, fuzzy
 msgid "Show all packages"
 msgstr "所有升级包"
@@ -2093,7 +2097,7 @@ msgstr "所有升级包"
 msgid "Show box name in header"
 msgstr "在标题中显示机顶盒名称"
 
-#: ../plugin/controllers/i18n.py:584
+#: ../plugin/controllers/i18n.py:585
 msgid "Show details"
 msgstr "显示详细资料"
 
@@ -2105,11 +2109,11 @@ msgstr "显示完整的遥控"
 msgid "Show in Extensions menu"
 msgstr "在扩展菜单中显示"
 
-#: ../plugin/controllers/i18n.py:589
+#: ../plugin/controllers/i18n.py:590
 msgid "Show picon background"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:588
+#: ../plugin/controllers/i18n.py:589
 #, fuzzy
 msgid "Show picons"
 msgstr "显示详细资料"
@@ -2118,7 +2122,7 @@ msgstr "显示详细资料"
 msgid "Show picons in channel list"
 msgstr "在频道列表中显示picon"
 
-#: ../plugin/controllers/i18n.py:585
+#: ../plugin/controllers/i18n.py:586
 msgid "Show service type in channel list"
 msgstr "在频道列表中显示服务类型"
 
@@ -2138,7 +2142,7 @@ msgstr "模拟"
 msgid "Site and sources"
 msgstr "来源站点"
 
-#: ../plugin/controllers/i18n.py:611
+#: ../plugin/controllers/i18n.py:612
 msgid "Skins"
 msgstr ""
 
@@ -2194,7 +2198,7 @@ msgstr "软件开发"
 msgid "Sorry this page is not yet implemented"
 msgstr "对不起，这一页还未完成"
 
-#: ../plugin/controllers/i18n.py:592
+#: ../plugin/controllers/i18n.py:593
 msgid "Sort"
 msgstr ""
 
@@ -2234,7 +2238,7 @@ msgstr "开始录制"
 msgid "Start time is after end time"
 msgstr "开始时间为结束时间后"
 
-#: ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/i18n.py:579
 msgid "Start typing..."
 msgstr ""
 
@@ -2246,7 +2250,7 @@ msgstr ""
 msgid "Stream"
 msgstr "串流服务"
 
-#: ../plugin/controllers/i18n.py:609
+#: ../plugin/controllers/i18n.py:610
 #, fuzzy
 msgid "Stream Clients"
 msgstr "串流服务"
@@ -2260,7 +2264,7 @@ msgstr "串流服务"
 msgid "Su"
 msgstr "星期日"
 
-#: ../plugin/controllers/i18n.py:597
+#: ../plugin/controllers/i18n.py:598
 #, fuzzy
 msgid "Subdirectories"
 msgstr "子目录"
@@ -2545,35 +2549,35 @@ msgstr "未知命令： '%s'"
 msgid "Upcoming Events"
 msgstr "节目预告"
 
-#: ../plugin/controllers/i18n.py:569
+#: ../plugin/controllers/i18n.py:570
 msgid "Update"
 msgstr "更新"
 
-#: ../plugin/controllers/i18n.py:567
+#: ../plugin/controllers/i18n.py:568
 msgid "Update Package"
 msgstr "从软件包更新"
 
-#: ../plugin/controllers/i18n.py:572
+#: ../plugin/controllers/i18n.py:573
 msgid "Update from feed"
 msgstr "从Feed更新"
 
-#: ../plugin/controllers/i18n.py:573
+#: ../plugin/controllers/i18n.py:574
 msgid "Upgrade all packages"
 msgstr "所有升级包"
 
-#: ../plugin/controllers/i18n.py:582
+#: ../plugin/controllers/i18n.py:583
 msgid "Upload File Error"
 msgstr "上传文件错误"
 
-#: ../plugin/controllers/i18n.py:581
+#: ../plugin/controllers/i18n.py:582
 msgid "Upload package"
 msgstr "上传软件包"
 
-#: ../plugin/controllers/i18n.py:580
+#: ../plugin/controllers/i18n.py:581
 msgid "Uploaded Files"
 msgstr "上传文件"
 
-#: ../plugin/controllers/i18n.py:587
+#: ../plugin/controllers/i18n.py:588
 msgid "Use Channelname for screenshots"
 msgstr ""
 
@@ -2581,11 +2585,11 @@ msgstr ""
 msgid "Use a custom location"
 msgstr "使用自定义位置"
 
-#: ../plugin/controllers/i18n.py:604
+#: ../plugin/controllers/i18n.py:605
 msgid "Use as PiP if possible"
 msgstr "尽可能用作PiP"
 
-#: ../plugin/controllers/i18n.py:612
+#: ../plugin/controllers/i18n.py:613
 #, fuzzy
 msgid "Use classic interface"
 msgstr "使用新的设计"
@@ -2608,7 +2612,7 @@ msgstr "使用自定义名称"
 msgid "Use modern design"
 msgstr "使用新的设计"
 
-#: ../plugin/controllers/i18n.py:613 ../plugin/plugin.py:156
+#: ../plugin/controllers/i18n.py:614 ../plugin/plugin.py:156
 msgid "Use modern interface"
 msgstr "使用新的设计"
 
@@ -2719,13 +2723,13 @@ msgstr ""
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "错误的参数格式设置'set=%s', 使用 set=set15"
 
-#: ../plugin/controllers/i18n.py:601
+#: ../plugin/controllers/i18n.py:602
 msgid "YYYY-MM-DD"
 msgstr ""
 
 #: ../plugin/controllers/models/info.py:267
 #: ../plugin/controllers/models/info.py:271 ../plugin/controllers/i18n.py:558
-#: ../plugin/controllers/i18n.py:574
+#: ../plugin/controllers/i18n.py:575
 #, fuzzy
 msgid "Yes"
 msgstr "是"
@@ -2782,7 +2786,7 @@ msgstr "搜索（严格）"
 msgid "case-sensitive"
 msgstr "搜索（严格）"
 
-#: ../plugin/controllers/i18n.py:618
+#: ../plugin/controllers/i18n.py:619
 msgid "descramble and record ecm"
 msgstr ""
 
@@ -2803,7 +2807,7 @@ msgstr "禁用"
 msgid "do nothing"
 msgstr "什么也不做"
 
-#: ../plugin/controllers/i18n.py:619
+#: ../plugin/controllers/i18n.py:620
 msgid "don't descramble, record ecm"
 msgstr ""
 
@@ -2869,7 +2873,7 @@ msgstr "无可用说明"
 msgid "none/IPv4-only network"
 msgstr "仅IPv4网络"
 
-#: ../plugin/controllers/i18n.py:617
+#: ../plugin/controllers/i18n.py:618
 msgid "normal"
 msgstr ""
 
