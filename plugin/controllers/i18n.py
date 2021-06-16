@@ -385,6 +385,7 @@ tstrings = {
 	'at_event_timespan_begin': _('Begin of "After event" timespan'),
 	'at_event_timespan_end': _('End of "After event" timespan'),
 	'at_max_counter': _("Record a maximum of # times"),
+	'at_left': _("Number of recordings remaining"),
 	'at_never': _("Never"),
 	'at_monthly': _("Monthly"),
 	'at_weekly_sun': _("Weekly (Sunday)"),
