@@ -1,4 +1,4 @@
-OpenWebif [![Build Status](https://travis-ci.org/OpenVisionE2/OpenWebif.svg?branch=master)](https://travis-ci.org/OpenVisionE2/OpenWebif) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+OpenWebif [![Build Status](https://travis-ci.com/OpenVisionE2/OpenWebif.svg?branch=master)](https://travis-ci.com/OpenVisionE2/OpenWebif) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 =========
 OpenWebif is an open source web interface for Enigma2-based set-top boxes (STBs).
 
