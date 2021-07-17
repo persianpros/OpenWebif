@@ -23,6 +23,6 @@ jobs:
       - name: Build python 2.7
         run: |
           sudo apt-get -q update
-          sudo apt-get install dos2unix
+          sudo apt-get install dos2unix npm
           pip install --upgrade pip autopep8 future
           ./CI/build.sh
