@@ -68,8 +68,6 @@ def getAllInfo():
 		remote = "ini1"
 	elif model == "ventonhdx" or procmodel == "ini-3000" and not fp_version.startswith('1'):
 		remote = "ini2"
-	elif BoxInfo.getItem("architecture") == "sh4" and remote not in ("nbox", "hl101"):
-		remote = "spark"
 
 	info['remote'] = remote
 
