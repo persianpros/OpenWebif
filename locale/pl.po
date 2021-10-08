@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-24 23:15+0330\n"
+"POT-Creation-Date: 2021-10-08 21:56+0330\n"
 "PO-Revision-Date: 2021-04-16 00:45+0200\n"
 "Last-Translator: tinola <tinola@poczta.onet.pl>\n"
 "Language-Team: \n"
@@ -24,8 +24,8 @@ msgstr ""
 msgid "%02d.%02d.%d"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:69
 #: ../plugin/controllers/models/timers.py:65
+#: ../plugin/controllers/models/movies.py:69
 #, python-format
 msgid "%02d:%02d"
 msgstr ""
@@ -46,8 +46,8 @@ msgstr ""
 msgid "%d.%m.%Y %H:%M"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:65
 #: ../plugin/controllers/models/timers.py:59
+#: ../plugin/controllers/models/movies.py:65
 #, python-format
 msgid "%s %02d.%02d."
 msgstr ""
@@ -304,7 +304,7 @@ msgstr "Edycja AutoTimera"
 msgid "AutoTimer Settings"
 msgstr "Ustawienia AutoTimera"
 
-#: ../plugin/controllers/base.py:348 ../plugin/controllers/i18n.py:342
+#: ../plugin/controllers/i18n.py:342 ../plugin/controllers/base.py:347
 msgid "AutoTimers"
 msgstr "Lista AutoTimerów"
 
@@ -406,7 +406,7 @@ msgstr "Nazwa bukietu została zmieniona."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Ustawienia bukietów zostały pomyślnie przywrócone"
 
-#: ../plugin/controllers/base.py:353
+#: ../plugin/controllers/base.py:350
 msgid "BouquetEditor"
 msgstr "Edytor bukietów"
 
@@ -718,7 +718,7 @@ msgstr "Wyszukiwanie w EPG"
 msgid "EPG encoding"
 msgstr "Kodowanie EPG"
 
-#: ../plugin/controllers/base.py:357
+#: ../plugin/controllers/base.py:354
 msgid "EPGRefresh"
 msgstr "Odśwież EPG"
 
@@ -963,8 +963,8 @@ msgstr "Wolna pamięć"
 msgid "Free/Total Memory"
 msgstr "Wolna pamięć"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:52
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:52
 msgid "Fri"
 msgstr "Pią"
 
@@ -985,13 +985,13 @@ msgstr "Wersja front-processora"
 msgid "Full remote"
 msgstr "Pełny pilot"
 
+#: ../plugin/controllers/models/movies.py:278
+#: ../plugin/controllers/models/movies.py:408
+#: ../plugin/controllers/models/movies.py:828
 #: ../plugin/controllers/models/info.py:370
 #: ../plugin/controllers/models/info.py:376
 #: ../plugin/controllers/models/info.py:391
 #: ../plugin/controllers/models/info.py:394
-#: ../plugin/controllers/models/movies.py:278
-#: ../plugin/controllers/models/movies.py:408
-#: ../plugin/controllers/models/movies.py:828
 msgid "GB"
 msgstr ""
 
@@ -1240,12 +1240,12 @@ msgstr "Zablokowany"
 msgid "MAC address"
 msgstr "Adres MAC"
 
-#: ../plugin/controllers/models/info.py:367
-#: ../plugin/controllers/models/info.py:378
-#: ../plugin/controllers/models/info.py:396
 #: ../plugin/controllers/models/movies.py:280
 #: ../plugin/controllers/models/movies.py:410
 #: ../plugin/controllers/models/movies.py:830
+#: ../plugin/controllers/models/info.py:367
+#: ../plugin/controllers/models/info.py:378
+#: ../plugin/controllers/models/info.py:396
 msgid "MB"
 msgstr ""
 
@@ -1318,8 +1318,8 @@ msgstr "Pn"
 msgid "Model"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:48
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:48
 msgid "Mon"
 msgstr "Pon"
 
@@ -1904,8 +1904,8 @@ msgstr "So"
 msgid "Safe mode"
 msgstr "Tryb awaryjny"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:53
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:53
 msgid "Sat"
 msgstr "Sob"
 
@@ -2053,8 +2053,8 @@ msgstr "Usługi"
 msgid "Set maximum duration"
 msgstr "Ustaw maksymalny czas trwania"
 
-#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:265
-#: ../plugin/controllers/i18n.py:426
+#: ../plugin/controllers/i18n.py:265 ../plugin/controllers/i18n.py:426
+#: ../plugin/controllers/base.py:313
 msgid "Settings"
 msgstr "Ustawienia"
 
@@ -2262,8 +2262,8 @@ msgstr "Maska podsieci"
 msgid "Subservices"
 msgstr "Usługi dodatkowe"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:47
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:47
 msgid "Sun"
 msgstr "Nie"
 
@@ -2305,7 +2305,7 @@ msgstr "Telewizja"
 msgid "Template Engine"
 msgstr "Silnik szablonów"
 
-#: ../plugin/controllers/base.py:393
+#: ../plugin/controllers/base.py:390
 msgid "Terminal"
 msgstr "Terminal"
 
@@ -2359,8 +2359,8 @@ msgstr "Tryb motywu"
 msgid "This service can not be added."
 msgstr "Nie można dodać tej usługi."
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:51
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:51
 msgid "Thu"
 msgstr "Czw"
 
@@ -2445,8 +2445,8 @@ msgstr "Tytuł"
 msgid "To date"
 msgstr "Do daty"
 
-#: ../plugin/controllers/models/movies.py:57
 #: ../plugin/controllers/models/timers.py:48
+#: ../plugin/controllers/models/movies.py:57
 msgid "Today"
 msgstr "Dzisiaj"
 
@@ -2475,8 +2475,8 @@ msgstr ""
 msgid "Tu"
 msgstr "Wt"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:49
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:49
 msgid "Tue"
 msgstr "Wto"
 
@@ -2673,8 +2673,8 @@ msgstr "Śr"
 msgid "Web TV"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:50
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:50
 msgid "Wed"
 msgstr "Śro"
 
@@ -2721,8 +2721,8 @@ msgstr "Tak"
 msgid "Yes/No"
 msgstr "Tak/Nie"
 
-#: ../plugin/controllers/models/movies.py:59
 #: ../plugin/controllers/models/timers.py:51
+#: ../plugin/controllers/models/movies.py:59
 msgid "Yesterday"
 msgstr "Wczoraj"
 
@@ -2822,11 +2822,11 @@ msgstr "przejdź do trybu czuwania"
 msgid "hour"
 msgstr "godzina"
 
-#: ../plugin/controllers/models/info.py:243
-#: ../plugin/controllers/models/info.py:246
 #: ../plugin/controllers/models/movies.py:282
 #: ../plugin/controllers/models/movies.py:412
 #: ../plugin/controllers/models/movies.py:832
+#: ../plugin/controllers/models/info.py:243
+#: ../plugin/controllers/models/info.py:246
 msgid "kB"
 msgstr ""
 

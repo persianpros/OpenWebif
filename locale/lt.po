@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-24 23:15+0330\n"
+"POT-Creation-Date: 2021-10-08 21:56+0330\n"
 "PO-Revision-Date: 2021-09-05 20:39+0300\n"
 "Last-Translator: Vytenis P. <vyteniui@gmail.com>\n"
 "Language-Team: Vytenis Pulokas <vyteniui@gmail.com>\n"
@@ -25,8 +25,8 @@ msgstr "%02d.%02d."
 msgid "%02d.%02d.%d"
 msgstr "%02d.%02d.%d"
 
-#: ../plugin/controllers/models/movies.py:69
 #: ../plugin/controllers/models/timers.py:65
+#: ../plugin/controllers/models/movies.py:69
 #, python-format
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
@@ -47,8 +47,8 @@ msgstr "%Y.%m.%d"
 msgid "%d.%m.%Y %H:%M"
 msgstr "%Y.%m.%d %H:%M"
 
-#: ../plugin/controllers/models/movies.py:65
 #: ../plugin/controllers/models/timers.py:59
+#: ../plugin/controllers/models/movies.py:65
 #, python-format
 msgid "%s %02d.%02d."
 msgstr "%s %02d.%02d."
@@ -302,7 +302,7 @@ msgstr "Autolaikmačio redagavimas"
 msgid "AutoTimer Settings"
 msgstr "Autolaikmačio nustatymai"
 
-#: ../plugin/controllers/base.py:348 ../plugin/controllers/i18n.py:342
+#: ../plugin/controllers/i18n.py:342 ../plugin/controllers/base.py:347
 msgid "AutoTimers"
 msgstr "Autolaikmačiai"
 
@@ -403,7 +403,7 @@ msgstr "Bukietas pervadintas sėkmingai."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Bukieto nustatymai atkurti sėkmingai"
 
-#: ../plugin/controllers/base.py:353
+#: ../plugin/controllers/base.py:350
 msgid "BouquetEditor"
 msgstr "Bukietų redaktorius"
 
@@ -714,7 +714,7 @@ msgstr "EPG paieška"
 msgid "EPG encoding"
 msgstr "EPG koduotė"
 
-#: ../plugin/controllers/base.py:357
+#: ../plugin/controllers/base.py:354
 msgid "EPGRefresh"
 msgstr "EPG atnaujinimas"
 
@@ -954,8 +954,8 @@ msgstr "Laisva atmintis"
 msgid "Free/Total Memory"
 msgstr "Laisva atmintis"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:52
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:52
 msgid "Fri"
 msgstr "Pen"
 
@@ -976,13 +976,13 @@ msgstr "Sąsajos procesoriaus versija"
 msgid "Full remote"
 msgstr "Visas nuotolinis"
 
+#: ../plugin/controllers/models/movies.py:278
+#: ../plugin/controllers/models/movies.py:408
+#: ../plugin/controllers/models/movies.py:828
 #: ../plugin/controllers/models/info.py:370
 #: ../plugin/controllers/models/info.py:376
 #: ../plugin/controllers/models/info.py:391
 #: ../plugin/controllers/models/info.py:394
-#: ../plugin/controllers/models/movies.py:278
-#: ../plugin/controllers/models/movies.py:408
-#: ../plugin/controllers/models/movies.py:828
 msgid "GB"
 msgstr "GB"
 
@@ -1231,12 +1231,12 @@ msgstr "Užrakinta"
 msgid "MAC address"
 msgstr "MAC adresas"
 
-#: ../plugin/controllers/models/info.py:367
-#: ../plugin/controllers/models/info.py:378
-#: ../plugin/controllers/models/info.py:396
 #: ../plugin/controllers/models/movies.py:280
 #: ../plugin/controllers/models/movies.py:410
 #: ../plugin/controllers/models/movies.py:830
+#: ../plugin/controllers/models/info.py:367
+#: ../plugin/controllers/models/info.py:378
+#: ../plugin/controllers/models/info.py:396
 msgid "MB"
 msgstr "MB"
 
@@ -1309,8 +1309,8 @@ msgstr "Pr"
 msgid "Model"
 msgstr "Modelis"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:48
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:48
 msgid "Mon"
 msgstr "Pir"
 
@@ -1890,8 +1890,8 @@ msgstr "Št"
 msgid "Safe mode"
 msgstr "Saugusis režimas"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:53
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:53
 msgid "Sat"
 msgstr "Šeš"
 
@@ -2036,8 +2036,8 @@ msgstr "Kanalai"
 msgid "Set maximum duration"
 msgstr "Nustatyti didžiausią trukmę"
 
-#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:265
-#: ../plugin/controllers/i18n.py:426
+#: ../plugin/controllers/i18n.py:265 ../plugin/controllers/i18n.py:426
+#: ../plugin/controllers/base.py:313
 msgid "Settings"
 msgstr "Visos nuostatos"
 
@@ -2243,8 +2243,8 @@ msgstr "Potinklio kaukė"
 msgid "Subservices"
 msgstr "Subkanalai"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:47
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:47
 msgid "Sun"
 msgstr "Sek"
 
@@ -2286,7 +2286,7 @@ msgstr "Televizija"
 msgid "Template Engine"
 msgstr "Šablono variklis"
 
-#: ../plugin/controllers/base.py:393
+#: ../plugin/controllers/base.py:390
 msgid "Terminal"
 msgstr "Terminalas"
 
@@ -2339,8 +2339,8 @@ msgstr "Temos režimas"
 msgid "This service can not be added."
 msgstr "Kanalas negali būti įtrauktas."
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:51
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:51
 msgid "Thu"
 msgstr "Ket"
 
@@ -2425,8 +2425,8 @@ msgstr "Antraštė"
 msgid "To date"
 msgstr "Ne anksčiau"
 
-#: ../plugin/controllers/models/movies.py:57
 #: ../plugin/controllers/models/timers.py:48
+#: ../plugin/controllers/models/movies.py:57
 msgid "Today"
 msgstr "Šiandien"
 
@@ -2455,8 +2455,8 @@ msgstr "TSID"
 msgid "Tu"
 msgstr "An"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:49
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:49
 msgid "Tue"
 msgstr "Ant"
 
@@ -2651,8 +2651,8 @@ msgstr "Tr"
 msgid "Web TV"
 msgstr "Interneto TV"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:50
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:50
 msgid "Wed"
 msgstr "Tre"
 
@@ -2699,8 +2699,8 @@ msgstr "Taip"
 msgid "Yes/No"
 msgstr "Taip / Ne"
 
-#: ../plugin/controllers/models/movies.py:59
 #: ../plugin/controllers/models/timers.py:51
+#: ../plugin/controllers/models/movies.py:59
 msgid "Yesterday"
 msgstr "Vakar"
 
@@ -2796,11 +2796,11 @@ msgstr "į budėjimo režimą"
 msgid "hour"
 msgstr "valanda"
 
-#: ../plugin/controllers/models/info.py:243
-#: ../plugin/controllers/models/info.py:246
 #: ../plugin/controllers/models/movies.py:282
 #: ../plugin/controllers/models/movies.py:412
 #: ../plugin/controllers/models/movies.py:832
+#: ../plugin/controllers/models/info.py:243
+#: ../plugin/controllers/models/info.py:246
 msgid "kB"
 msgstr "kB"
 

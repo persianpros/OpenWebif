@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-24 23:15+0330\n"
+"POT-Creation-Date: 2021-10-08 21:56+0330\n"
 "PO-Revision-Date: 2021-07-23 00:40+0800\n"
 "Last-Translator: 孤独之剑 <haotzyy1970@163.com>\n"
 "Language-Team: 孤独之剑 <haotzyy1970@163.com>\n"
@@ -26,8 +26,8 @@ msgstr "%02d.%02d."
 msgid "%02d.%02d.%d"
 msgstr "%02d.%02d.%d"
 
-#: ../plugin/controllers/models/movies.py:69
 #: ../plugin/controllers/models/timers.py:65
+#: ../plugin/controllers/models/movies.py:69
 #, python-format
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
@@ -48,8 +48,8 @@ msgstr "%d.%m.%Y"
 msgid "%d.%m.%Y %H:%M"
 msgstr "%d.%m.%Y %H:%M"
 
-#: ../plugin/controllers/models/movies.py:65
 #: ../plugin/controllers/models/timers.py:59
+#: ../plugin/controllers/models/movies.py:65
 #, python-format
 msgid "%s %02d.%02d."
 msgstr "%s %02d.%02d."
@@ -303,7 +303,7 @@ msgstr "自动定时器编辑"
 msgid "AutoTimer Settings"
 msgstr "自动定时器设置"
 
-#: ../plugin/controllers/base.py:348 ../plugin/controllers/i18n.py:342
+#: ../plugin/controllers/i18n.py:342 ../plugin/controllers/base.py:347
 msgid "AutoTimers"
 msgstr "自动定时器"
 
@@ -404,7 +404,7 @@ msgstr "节目分组改名完成."
 msgid "Bouquet-settings were restored successfully"
 msgstr "节目分组设置已成功恢复"
 
-#: ../plugin/controllers/base.py:353
+#: ../plugin/controllers/base.py:350
 msgid "BouquetEditor"
 msgstr "编辑节目分组"
 
@@ -715,7 +715,7 @@ msgstr "EPG搜索"
 msgid "EPG encoding"
 msgstr "EPG编码"
 
-#: ../plugin/controllers/base.py:357
+#: ../plugin/controllers/base.py:354
 msgid "EPGRefresh"
 msgstr "EPG刷新"
 
@@ -955,8 +955,8 @@ msgstr "可用内存"
 msgid "Free/Total Memory"
 msgstr "可用内存"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:52
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:52
 msgid "Fri"
 msgstr "星期五"
 
@@ -977,13 +977,13 @@ msgstr "前处理器版本"
 msgid "Full remote"
 msgstr "全遥"
 
+#: ../plugin/controllers/models/movies.py:278
+#: ../plugin/controllers/models/movies.py:408
+#: ../plugin/controllers/models/movies.py:828
 #: ../plugin/controllers/models/info.py:370
 #: ../plugin/controllers/models/info.py:376
 #: ../plugin/controllers/models/info.py:391
 #: ../plugin/controllers/models/info.py:394
-#: ../plugin/controllers/models/movies.py:278
-#: ../plugin/controllers/models/movies.py:408
-#: ../plugin/controllers/models/movies.py:828
 msgid "GB"
 msgstr "GB"
 
@@ -1232,12 +1232,12 @@ msgstr "锁定"
 msgid "MAC address"
 msgstr "MAC地址"
 
-#: ../plugin/controllers/models/info.py:367
-#: ../plugin/controllers/models/info.py:378
-#: ../plugin/controllers/models/info.py:396
 #: ../plugin/controllers/models/movies.py:280
 #: ../plugin/controllers/models/movies.py:410
 #: ../plugin/controllers/models/movies.py:830
+#: ../plugin/controllers/models/info.py:367
+#: ../plugin/controllers/models/info.py:378
+#: ../plugin/controllers/models/info.py:396
 msgid "MB"
 msgstr "MB"
 
@@ -1310,8 +1310,8 @@ msgstr "星期一"
 msgid "Model"
 msgstr "型号"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:48
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:48
 msgid "Mon"
 msgstr "星期一"
 
@@ -1891,8 +1891,8 @@ msgstr "星期六"
 msgid "Safe mode"
 msgstr "安全模式"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:53
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:53
 msgid "Sat"
 msgstr "星期六"
 
@@ -2037,8 +2037,8 @@ msgstr "频道"
 msgid "Set maximum duration"
 msgstr "设置最大持续时间"
 
-#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:265
-#: ../plugin/controllers/i18n.py:426
+#: ../plugin/controllers/i18n.py:265 ../plugin/controllers/i18n.py:426
+#: ../plugin/controllers/base.py:313
 msgid "Settings"
 msgstr "设置"
 
@@ -2244,8 +2244,8 @@ msgstr "子网掩码"
 msgid "Subservices"
 msgstr "子频道"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:47
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:47
 msgid "Sun"
 msgstr "星期日"
 
@@ -2287,7 +2287,7 @@ msgstr "电视"
 msgid "Template Engine"
 msgstr "模板引擎"
 
-#: ../plugin/controllers/base.py:393
+#: ../plugin/controllers/base.py:390
 msgid "Terminal"
 msgstr "终端设备"
 
@@ -2340,8 +2340,8 @@ msgstr "主题模式"
 msgid "This service can not be added."
 msgstr "无法添加此频道."
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:51
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:51
 msgid "Thu"
 msgstr "星期四"
 
@@ -2426,8 +2426,8 @@ msgstr "标题"
 msgid "To date"
 msgstr "迄今为止"
 
-#: ../plugin/controllers/models/movies.py:57
 #: ../plugin/controllers/models/timers.py:48
+#: ../plugin/controllers/models/movies.py:57
 msgid "Today"
 msgstr "今天"
 
@@ -2456,8 +2456,8 @@ msgstr "Tsid"
 msgid "Tu"
 msgstr "星期二"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:49
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:49
 msgid "Tue"
 msgstr "星期二"
 
@@ -2652,8 +2652,8 @@ msgstr "星期三"
 msgid "Web TV"
 msgstr "网络电视"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:50
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:50
 msgid "Wed"
 msgstr "星期三"
 
@@ -2700,8 +2700,8 @@ msgstr "是"
 msgid "Yes/No"
 msgstr "是/否"
 
-#: ../plugin/controllers/models/movies.py:59
 #: ../plugin/controllers/models/timers.py:51
+#: ../plugin/controllers/models/movies.py:59
 msgid "Yesterday"
 msgstr "昨天"
 
@@ -2797,11 +2797,11 @@ msgstr "转到待机状态"
 msgid "hour"
 msgstr "小时"
 
-#: ../plugin/controllers/models/info.py:243
-#: ../plugin/controllers/models/info.py:246
 #: ../plugin/controllers/models/movies.py:282
 #: ../plugin/controllers/models/movies.py:412
 #: ../plugin/controllers/models/movies.py:832
+#: ../plugin/controllers/models/info.py:243
+#: ../plugin/controllers/models/info.py:246
 msgid "kB"
 msgstr "kB"
 

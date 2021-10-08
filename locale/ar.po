@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-24 23:15+0330\n"
+"POT-Creation-Date: 2021-10-08 21:56+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: mosad - مساعد الجعيد <abo-mishal@hotmail.com>\n"
 "Language-Team: mosad - مساعد الجعيد\n"
@@ -25,8 +25,8 @@ msgstr ""
 msgid "%02d.%02d.%d"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:69
 #: ../plugin/controllers/models/timers.py:65
+#: ../plugin/controllers/models/movies.py:69
 #, python-format
 msgid "%02d:%02d"
 msgstr ""
@@ -47,8 +47,8 @@ msgstr ""
 msgid "%d.%m.%Y %H:%M"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:65
 #: ../plugin/controllers/models/timers.py:59
+#: ../plugin/controllers/models/movies.py:65
 #, python-format
 msgid "%s %02d.%02d."
 msgstr ""
@@ -306,7 +306,7 @@ msgstr "تعديل المؤقت التلقائي"
 msgid "AutoTimer Settings"
 msgstr "إعدادات المؤقت الالى"
 
-#: ../plugin/controllers/base.py:348 ../plugin/controllers/i18n.py:342
+#: ../plugin/controllers/i18n.py:342 ../plugin/controllers/base.py:347
 msgid "AutoTimers"
 msgstr "قائمه المؤقت التلقائي"
 
@@ -408,7 +408,7 @@ msgstr "تمت أعاده تسمية الباقة بنجاح."
 msgid "Bouquet-settings were restored successfully"
 msgstr "تمت استعاده إعدادات الباقة بنجاح"
 
-#: ../plugin/controllers/base.py:353
+#: ../plugin/controllers/base.py:350
 msgid "BouquetEditor"
 msgstr "محرر الباقة"
 
@@ -721,7 +721,7 @@ msgstr "بحث في دليل البرامج"
 msgid "EPG encoding"
 msgstr "ترميز دليل البرامج اليومي"
 
-#: ../plugin/controllers/base.py:357
+#: ../plugin/controllers/base.py:354
 msgid "EPGRefresh"
 msgstr "تحديث دليل البرامج الإلكترونية"
 
@@ -966,8 +966,8 @@ msgstr "ذاكرة متوفرة"
 msgid "Free/Total Memory"
 msgstr "ذاكرة متوفرة"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:52
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:52
 msgid "Fri"
 msgstr "الجمعة"
 
@@ -988,13 +988,13 @@ msgstr "إصدار المعالج الامامي"
 msgid "Full remote"
 msgstr "جهاز تحكم عن بعد كامل"
 
+#: ../plugin/controllers/models/movies.py:278
+#: ../plugin/controllers/models/movies.py:408
+#: ../plugin/controllers/models/movies.py:828
 #: ../plugin/controllers/models/info.py:370
 #: ../plugin/controllers/models/info.py:376
 #: ../plugin/controllers/models/info.py:391
 #: ../plugin/controllers/models/info.py:394
-#: ../plugin/controllers/models/movies.py:278
-#: ../plugin/controllers/models/movies.py:408
-#: ../plugin/controllers/models/movies.py:828
 msgid "GB"
 msgstr "جيجابايت"
 
@@ -1244,12 +1244,12 @@ msgstr "مقفل"
 msgid "MAC address"
 msgstr "إعدادات شبكة تحكم وصول الوسائط"
 
-#: ../plugin/controllers/models/info.py:367
-#: ../plugin/controllers/models/info.py:378
-#: ../plugin/controllers/models/info.py:396
 #: ../plugin/controllers/models/movies.py:280
 #: ../plugin/controllers/models/movies.py:410
 #: ../plugin/controllers/models/movies.py:830
+#: ../plugin/controllers/models/info.py:367
+#: ../plugin/controllers/models/info.py:378
+#: ../plugin/controllers/models/info.py:396
 msgid "MB"
 msgstr "ميجابايت"
 
@@ -1322,8 +1322,8 @@ msgstr "الإثنين"
 msgid "Model"
 msgstr "نموذج"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:48
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:48
 msgid "Mon"
 msgstr "الاثنين"
 
@@ -1913,8 +1913,8 @@ msgstr "سبت"
 msgid "Safe mode"
 msgstr "الوضع الأمن"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:53
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:53
 msgid "Sat"
 msgstr "السبت"
 
@@ -2062,8 +2062,8 @@ msgstr "القنوات"
 msgid "Set maximum duration"
 msgstr "حدد أقصى مده"
 
-#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:265
-#: ../plugin/controllers/i18n.py:426
+#: ../plugin/controllers/i18n.py:265 ../plugin/controllers/i18n.py:426
+#: ../plugin/controllers/base.py:313
 msgid "Settings"
 msgstr "إعدادات"
 
@@ -2272,8 +2272,8 @@ msgstr "قناع الشبكة الفرعية"
 msgid "Subservices"
 msgstr "القنوات الفرعية"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:47
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:47
 msgid "Sun"
 msgstr "الاحد"
 
@@ -2315,7 +2315,7 @@ msgstr "التلفزيون"
 msgid "Template Engine"
 msgstr "قالب الانجما"
 
-#: ../plugin/controllers/base.py:393
+#: ../plugin/controllers/base.py:390
 msgid "Terminal"
 msgstr "محطة"
 
@@ -2369,8 +2369,8 @@ msgstr "سمة"
 msgid "This service can not be added."
 msgstr "لا يمكن إضافة هذه القناة."
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:51
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:51
 msgid "Thu"
 msgstr "الخميس"
 
@@ -2455,8 +2455,8 @@ msgstr "عنوان"
 msgid "To date"
 msgstr "ليس قبل"
 
-#: ../plugin/controllers/models/movies.py:57
 #: ../plugin/controllers/models/timers.py:48
+#: ../plugin/controllers/models/movies.py:57
 msgid "Today"
 msgstr ""
 
@@ -2485,8 +2485,8 @@ msgstr "إرسال معرف المحطة"
 msgid "Tu"
 msgstr "الثلاثاء"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:49
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:49
 msgid "Tue"
 msgstr "الثلاثاء"
 
@@ -2684,8 +2684,8 @@ msgstr "الأربعاء"
 msgid "Web TV"
 msgstr "التلفزيون عبر الانترنت"
 
-#: ../plugin/controllers/models/movies.py:54
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:50
+#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:50
 msgid "Wed"
 msgstr "الاربعاء"
 
@@ -2732,8 +2732,8 @@ msgstr "نعم"
 msgid "Yes/No"
 msgstr "نعم/لا"
 
-#: ../plugin/controllers/models/movies.py:59
 #: ../plugin/controllers/models/timers.py:51
+#: ../plugin/controllers/models/movies.py:59
 msgid "Yesterday"
 msgstr ""
 
@@ -2833,11 +2833,11 @@ msgstr "الذهاب لوضع الاستعداد"
 msgid "hour"
 msgstr "ساعه"
 
-#: ../plugin/controllers/models/info.py:243
-#: ../plugin/controllers/models/info.py:246
 #: ../plugin/controllers/models/movies.py:282
 #: ../plugin/controllers/models/movies.py:412
 #: ../plugin/controllers/models/movies.py:832
+#: ../plugin/controllers/models/info.py:243
+#: ../plugin/controllers/models/info.py:246
 msgid "kB"
 msgstr "كيلوبايت"
 
