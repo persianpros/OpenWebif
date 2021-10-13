@@ -261,14 +261,7 @@ def getInfo(session=None, need_fullinfo=False):
 	info['visionrevision'] = BoxInfo.getItem("imgrevision")
 	info['visionmodule'] = about.getVisionModule()
 
-	if fileExists("/etc/openvision/multiboot"):
-		multibootflag = open("/etc/openvision/multiboot", "r").read().strip()
-		if multibootflag == "1":
-			info['multiboot'] = _("Yes")
-		else:
-			info['multiboot'] = _("No")
-	else:
-		info['multiboot'] = _("Yes")
+	info['multiboot'] = _("Yes") if BoxInfo.getItem("multiboot", False) else _("No")
 
 	info['enigmaver'] = getEnigmaVersionString()
 	info['enigmarev'] = getE2Rev()
