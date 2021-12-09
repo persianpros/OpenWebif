@@ -68,11 +68,12 @@ config.OpenWebif.webcache.showchanneldetails = ConfigYesNo(default=False)
 config.OpenWebif.webcache.showiptvchannelsinselection = ConfigYesNo(default=True)
 config.OpenWebif.webcache.screenshotchannelname = ConfigYesNo(default=False)
 config.OpenWebif.webcache.showallpackages = ConfigYesNo(default=False)
+config.OpenWebif.webcache.oldremote = ConfigYesNo(default=False)
 
 # HTTPS
 config.OpenWebif.https_enabled = ConfigYesNo(default=False)
 config.OpenWebif.https_port = ConfigInteger(default=443, limits=(1, 65535))
-config.OpenWebif.https_auth = ConfigYesNo(default=True)
+config.OpenWebif.https_auth = ConfigYesNo(default=False)
 config.OpenWebif.https_clientcert = ConfigYesNo(default=False)
 config.OpenWebif.parentalenabled = ConfigYesNo(default=False)
 # Use service name for stream

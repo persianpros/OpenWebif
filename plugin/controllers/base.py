@@ -41,7 +41,7 @@ from Components.config import config
 
 from Plugins.Extensions.OpenWebif.controllers.models.info import getInfo
 from Plugins.Extensions.OpenWebif.controllers.models.config import getCollapsedMenus, getConfigsSections, getShowName, getCustomName, getBoxName
-from Plugins.Extensions.OpenWebif.controllers.defaults import getPublicPath, getViewsPath, EXT_EVENT_INFO_SOURCE, STB_LANG, getIP, HASAUTOTIMER
+from Plugins.Extensions.OpenWebif.controllers.defaults import getPublicPath, getViewsPath, EXT_EVENT_INFO_SOURCE, STB_LANG, getIP, HASAUTOTIMER, TEXTINPUTSUPPORT
 from Components.SystemInfo import BoxInfo
 
 
@@ -407,4 +407,6 @@ class BaseController(resource.Resource):
 		ret['vti'] = "0"
 		ret['webtv'] = os.path.exists(getPublicPath('webtv'))
 		ret['stbLang'] = STB_LANG
+		ret['oldremote'] = config.OpenWebif.webcache.oldremote.value
+		ret['textinputsupport'] = TEXTINPUTSUPPORT
 		return ret

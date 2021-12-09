@@ -613,12 +613,14 @@ tstrings = {
 	'skins': _("Skins"),
 	'use_classic_design': _("Use classic interface"),
 	'use_modern_design': _("Use modern interface"),
+	'use_oldremote': _("Use old remote"),
 	'showallpackages': _("Show all packages"),
 
 	'recordingtype': _("Recording Type"),
 	'normal': _("normal"),
 	'descrambledecm': _("descramble and record ecm"),
 	'scrambledecm': _("don't descramble, record ecm"),
-	'REC': _("REC")
+	'REC': _("REC"),
+	'enter_text': _("Enter Text")
 
 }

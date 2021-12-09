@@ -2,17 +2,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-08 21:56+0330\n"
-"PO-Revision-Date: 2021-09-05 20:39+0300\n"
-"Last-Translator: Vytenis P. <vyteniui@gmail.com>\n"
-"Language-Team: Vytenis Pulokas <vyteniui@gmail.com>\n"
-"Language: lt_LT\n"
+"POT-Creation-Date: 2021-12-08 13:00+0330\n"
+"PO-Revision-Date: 2021-12-02 19:57+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Lithuanian <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/lt/>\n"
+"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? 1 : 2);\n"
+"X-Generator: Weblate 4.10-dev\n"
 "X-Poedit-Basepath: .\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: ../plugin/controllers/models/timers.py:61
@@ -25,8 +25,8 @@ msgstr "%02d.%02d."
 msgid "%02d.%02d.%d"
 msgstr "%02d.%02d.%d"
 
-#: ../plugin/controllers/models/timers.py:65
 #: ../plugin/controllers/models/movies.py:69
+#: ../plugin/controllers/models/timers.py:65
 #, python-format
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
@@ -38,17 +38,17 @@ msgstr "%02d:%02d"
 msgid "%d.%m.%Y"
 msgstr "%Y.%m.%d"
 
-#: ../plugin/controllers/models/timers.py:194
-#: ../plugin/controllers/models/timers.py:195
-#: ../plugin/controllers/models/timers.py:284
-#: ../plugin/controllers/models/timers.py:285
-#: ../plugin/controllers/models/timers.py:467
-#: ../plugin/controllers/models/timers.py:468
+#: ../plugin/controllers/models/timers.py:199
+#: ../plugin/controllers/models/timers.py:200
+#: ../plugin/controllers/models/timers.py:290
+#: ../plugin/controllers/models/timers.py:291
+#: ../plugin/controllers/models/timers.py:473
+#: ../plugin/controllers/models/timers.py:474
 msgid "%d.%m.%Y %H:%M"
 msgstr "%Y.%m.%d %H:%M"
 
-#: ../plugin/controllers/models/timers.py:59
 #: ../plugin/controllers/models/movies.py:65
+#: ../plugin/controllers/models/timers.py:59
 #, python-format
 msgid "%s %02d.%02d."
 msgstr "%s %02d.%02d."
@@ -69,7 +69,7 @@ msgid "%s / %s"
 msgstr "%s / %s"
 
 #: ../plugin/controllers/models/info.py:247
-#: ../plugin/controllers/models/info.py:404
+#: ../plugin/controllers/models/info.py:397
 #, python-format
 msgid "%s free / %s total"
 msgstr "%s laisvų / %s iš viso"
@@ -150,7 +150,7 @@ msgstr "Pridėti filtrus"
 msgid "Add selection to bouquet"
 msgstr "Įtraukti kanalą(us) į bukietą"
 
-#: ../plugin/plugin.py:180
+#: ../plugin/plugin.py:181
 msgid "Add service name to stream information"
 msgstr "Į transliacijos informaciją įtraukti kanalo pavadinimą"
 
@@ -192,7 +192,7 @@ msgstr "Visi šios programinės įrangos failai yra atviro kodo; jūs galite pla
 msgid "All alternative services deleted."
 msgstr "Visi alternatyvūs kanalai ištrinti."
 
-#: ../plugin/plugin.py:181
+#: ../plugin/plugin.py:182
 msgid "Allow IPK Upload"
 msgstr "Leisti IPK įkėlimą"
 
@@ -209,7 +209,7 @@ msgstr "Alternatyvos %s sukurti nepavyko."
 msgid "Always"
 msgstr "Visada"
 
-#: ../plugin/controllers/models/info.py:298
+#: ../plugin/controllers/models/info.py:291
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "Visas nuotolinis"
@@ -302,7 +302,7 @@ msgstr "Autolaikmačio redagavimas"
 msgid "AutoTimer Settings"
 msgstr "Autolaikmačio nustatymai"
 
-#: ../plugin/controllers/i18n.py:342 ../plugin/controllers/base.py:347
+#: ../plugin/controllers/base.py:347 ../plugin/controllers/i18n.py:342
 msgid "AutoTimers"
 msgstr "Autolaikmačiai"
 
@@ -454,7 +454,7 @@ msgstr "Kabelinė"
 msgid "Calendar Week"
 msgstr "Kalendorinė savaitė"
 
-#: ../plugin/controllers/i18n.py:98 ../plugin/plugin.py:125
+#: ../plugin/controllers/i18n.py:98 ../plugin/plugin.py:126
 msgid "Cancel"
 msgstr "Atšaukti"
 
@@ -502,7 +502,7 @@ msgstr ""
 msgid "Config"
 msgstr "Nustatymas"
 
-#: ../plugin/controllers/models/timers.py:290
+#: ../plugin/controllers/models/timers.py:296
 #, python-format
 msgid "Conflicting Timer(s) detected! %s"
 msgstr "Laikmačių konfliktas! %s"
@@ -515,12 +515,12 @@ msgstr "Bendraautoriai"
 msgid "Control"
 msgstr "Valdymas"
 
-#: ../plugin/controllers/models/timers.py:333
+#: ../plugin/controllers/models/timers.py:339
 #, python-format
 msgid "Could not add timer '%s'!"
 msgstr "Laikmačio '%s' pridėti nepavyko!"
 
-#: ../plugin/controllers/models/timers.py:479
+#: ../plugin/controllers/models/timers.py:485
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Nepavyko rasti laikmačio '%s' su nurodytu pradžios ir pabaigos laiku!"
@@ -542,7 +542,7 @@ msgstr "Dabar rodoma"
 msgid "Custom STB name"
 msgstr "Savas aparato pavadinimas"
 
-#: ../plugin/plugin.py:164
+#: ../plugin/plugin.py:165
 msgid "Custom box name"
 msgstr "Savas aparato pavadinimas"
 
@@ -575,7 +575,7 @@ msgstr "pagal datą (naujausi)"
 msgid "Date (oldest)"
 msgstr "pagal datą (seniausi)"
 
-#: ../plugin/plugin.py:183
+#: ../plugin/plugin.py:184
 msgid "Debug - Display Tracebacks in browser"
 msgstr "Derinti – rodyti klaidų ataskaitas naršyklėje"
 
@@ -639,7 +639,7 @@ msgstr "Išjungti"
 msgid "Disable Timer"
 msgstr "Išjungti laikmatį"
 
-#: ../plugin/plugin.py:174
+#: ../plugin/plugin.py:175
 msgid "Disable remote access for user root"
 msgstr "Uždrausti 'root' vartotojo prieigą"
 
@@ -698,7 +698,7 @@ msgstr "Tvarkyklės"
 msgid "Duration"
 msgstr "Trukmė"
 
-#: ../plugin/controllers/models/info.py:622
+#: ../plugin/controllers/models/info.py:616
 msgid "E"
 msgstr "R"
 
@@ -718,7 +718,7 @@ msgstr "EPG koduotė"
 msgid "EPGRefresh"
 msgstr "EPG atnaujinimas"
 
-#: ../plugin/controllers/models/timers.py:925
+#: ../plugin/controllers/models/timers.py:931
 msgid "ERROR: Cannot set SleepTimer while device is in Standby-Mode"
 msgstr "KLAIDA: Negalima nustatyti budėjimo laikmačio, kai įrenginys budėjimo būsenoje"
 
@@ -738,19 +738,19 @@ msgstr "Redaktorius"
 msgid "Enable"
 msgstr "Įjungti"
 
-#: ../plugin/plugin.py:173
+#: ../plugin/plugin.py:174
 msgid "Enable Authentication for streaming"
 msgstr "Transliacijoms įjungti autentikavimą"
 
-#: ../plugin/plugin.py:166
+#: ../plugin/plugin.py:167
 msgid "Enable HTTP Authentication"
 msgstr "Įjungti HTTP autentikavimą"
 
-#: ../plugin/plugin.py:167
+#: ../plugin/plugin.py:168
 msgid "Enable HTTPS"
 msgstr "Įjungti HTTPS"
 
-#: ../plugin/plugin.py:170
+#: ../plugin/plugin.py:171
 msgid "Enable HTTPS Authentication"
 msgstr "Įjungti HTTPS autentikavimą"
 
@@ -758,7 +758,7 @@ msgstr "Įjungti HTTPS autentikavimą"
 msgid "Enable Messages"
 msgstr "Įjungti žinutes"
 
-#: ../plugin/plugin.py:178
+#: ../plugin/plugin.py:179
 msgid "Enable Parental Control"
 msgstr "Įjungti tėvų kontrolę"
 
@@ -766,7 +766,7 @@ msgstr "Įjungti tėvų kontrolę"
 msgid "Enable Timer"
 msgstr "Įjungti laikmatį"
 
-#: ../plugin/plugin.py:177
+#: ../plugin/plugin.py:178
 msgid "Enable access from VPNs"
 msgstr "Leisti VPN prieigą"
 
@@ -812,6 +812,11 @@ msgstr ""
 msgid "Enigma2 revision"
 msgstr "Mikroprogramos versija"
 
+#: ../plugin/controllers/i18n.py:624
+#, fuzzy
+msgid "Enter Text"
+msgstr "Nurodykite kelią"
+
 #: ../plugin/controllers/i18n.py:504
 msgid "Enter a name for the new bouquet"
 msgstr "Įrašykite naują bukieto pavadinimą"
@@ -836,7 +841,7 @@ msgstr "Įrašykite paieškos EPG tekstą"
 msgid "Error"
 msgstr "Klaida"
 
-#: ../plugin/controllers/models/timers.py:1079
+#: ../plugin/controllers/models/timers.py:1085
 msgid "Error parsing vps.xml"
 msgstr "Klaida, apdorojant vps.xml"
 
@@ -876,7 +881,7 @@ msgstr "Klaida: bukietas %s negali būti ištrintas, OS klaida."
 msgid "Event not found"
 msgstr "Įvykio nerasta"
 
-#: ../plugin/controllers/models/timers.py:347
+#: ../plugin/controllers/models/timers.py:353
 msgid "EventId not found"
 msgstr "Įvykio ID nerasta"
 
@@ -954,8 +959,8 @@ msgstr "Laisva atmintis"
 msgid "Free/Total Memory"
 msgstr "Laisva atmintis"
 
-#: ../plugin/controllers/models/timers.py:44
-#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:52
+#: ../plugin/controllers/models/movies.py:54
+#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:52
 msgid "Fri"
 msgstr "Pen"
 
@@ -976,13 +981,13 @@ msgstr "Sąsajos procesoriaus versija"
 msgid "Full remote"
 msgstr "Visas nuotolinis"
 
+#: ../plugin/controllers/models/info.py:363
+#: ../plugin/controllers/models/info.py:369
+#: ../plugin/controllers/models/info.py:384
+#: ../plugin/controllers/models/info.py:387
 #: ../plugin/controllers/models/movies.py:278
 #: ../plugin/controllers/models/movies.py:408
 #: ../plugin/controllers/models/movies.py:828
-#: ../plugin/controllers/models/info.py:370
-#: ../plugin/controllers/models/info.py:376
-#: ../plugin/controllers/models/info.py:391
-#: ../plugin/controllers/models/info.py:394
 msgid "GB"
 msgstr "GB"
 
@@ -1020,11 +1025,11 @@ msgstr ""
 msgid "HH:MM"
 msgstr "HH:MM"
 
-#: ../plugin/plugin.py:165
+#: ../plugin/plugin.py:166
 msgid "HTTP port"
 msgstr "HTTP prievadas"
 
-#: ../plugin/plugin.py:169
+#: ../plugin/plugin.py:170
 msgid "HTTPS port"
 msgstr "HTTPS prievadas"
 
@@ -1109,7 +1114,7 @@ msgstr "Įtraukti trumpą aprašymą"
 msgid "Include when"
 msgstr "Įskaitant"
 
-#: ../plugin/controllers/models/timers.py:595
+#: ../plugin/controllers/models/timers.py:601
 msgid "Infinite Instant recording started"
 msgstr "Pradėtas neribotas neplaninis įrašymas"
 
@@ -1133,7 +1138,7 @@ msgstr "Įdiegta"
 msgid "Instant Record"
 msgstr "Neplaninis įrašymas"
 
-#: ../plugin/controllers/models/timers.py:586
+#: ../plugin/controllers/models/timers.py:592
 msgid "Instant record for current Event started"
 msgstr "Pradėtas šio įvykio neplaninis įrašymas"
 
@@ -1194,7 +1199,7 @@ msgstr "LCD4Linux sąranka"
 msgid "LICENSE"
 msgstr "LICENCIJA"
 
-#: ../plugin/controllers/models/info.py:300
+#: ../plugin/controllers/models/info.py:293
 #, fuzzy
 msgid "LIRC remote"
 msgstr "Nuotolinis"
@@ -1211,7 +1216,7 @@ msgstr ""
 msgid "Link Speed"
 msgstr "Ryšio sparta"
 
-#: ../plugin/controllers/models/timers.py:556
+#: ../plugin/controllers/models/timers.py:562
 msgid "List of Timers has been cleaned"
 msgstr "Laikmačių sąrašas išvalytas"
 
@@ -1231,12 +1236,12 @@ msgstr "Užrakinta"
 msgid "MAC address"
 msgstr "MAC adresas"
 
+#: ../plugin/controllers/models/info.py:360
+#: ../plugin/controllers/models/info.py:371
+#: ../plugin/controllers/models/info.py:389
 #: ../plugin/controllers/models/movies.py:280
 #: ../plugin/controllers/models/movies.py:410
 #: ../plugin/controllers/models/movies.py:830
-#: ../plugin/controllers/models/info.py:367
-#: ../plugin/controllers/models/info.py:378
-#: ../plugin/controllers/models/info.py:396
 msgid "MB"
 msgstr "MB"
 
@@ -1297,7 +1302,7 @@ msgstr "Minutė"
 msgid "Missing mandatory parameter '%s'"
 msgstr "Trūksta būtino parametro '%s'"
 
-#: ../plugin/controllers/models/timers.py:687
+#: ../plugin/controllers/models/timers.py:693
 msgid "Missing requesteter: sRef"
 msgstr "Trūksta užklausos: sRef"
 
@@ -1309,8 +1314,8 @@ msgstr "Pr"
 msgid "Model"
 msgstr "Modelis"
 
-#: ../plugin/controllers/models/timers.py:44
-#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:48
+#: ../plugin/controllers/models/movies.py:54
+#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:48
 msgid "Mon"
 msgstr "Pir"
 
@@ -1410,7 +1415,7 @@ msgstr "Nauja žymelė:"
 msgid "New Name"
 msgstr "Naujas pavadinimas"
 
-#: ../plugin/controllers/models/info.py:269 ../plugin/controllers/i18n.py:395
+#: ../plugin/controllers/models/info.py:264 ../plugin/controllers/i18n.py:395
 msgid "No"
 msgstr "Ne"
 
@@ -1444,7 +1449,7 @@ msgstr "Bukietui nesuteiktas pavadinimas!"
 msgid "No current service given!"
 msgstr "Nenurodytas konkrečiai šis kanalas!"
 
-#: ../plugin/controllers/models/timers.py:580
+#: ../plugin/controllers/models/timers.py:586
 msgid "No event found! Not recording!"
 msgstr "Įvykių nerasta! Nebus įrašoma!"
 
@@ -1456,8 +1461,8 @@ msgstr "Žymekliui nesuteiktas pavadinimas!"
 msgid "No matches were found in the EPG"
 msgstr "EPG atitikmenų nerasta"
 
-#: ../plugin/controllers/models/timers.py:503
-#: ../plugin/controllers/models/timers.py:548
+#: ../plugin/controllers/models/timers.py:509
+#: ../plugin/controllers/models/timers.py:554
 msgid "No matching Timer found"
 msgstr "Kriterijus atitinkančio laikmačio nerasta"
 
@@ -1617,7 +1622,7 @@ msgstr ""
 msgid "Open in new window"
 msgstr "Atverti naujame lange"
 
-#: ../plugin/plugin.py:152
+#: ../plugin/plugin.py:153
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWeb sąsaja įjungta"
 
@@ -1625,7 +1630,7 @@ msgstr "OpenWeb sąsaja įjungta"
 msgid "OpenWebif Browser Settings"
 msgstr "OpenWebif naršyklės nuostatos"
 
-#: ../plugin/plugin.py:192 ../plugin/plugin.py:260 ../plugin/plugin.py:262
+#: ../plugin/plugin.py:193 ../plugin/plugin.py:261 ../plugin/plugin.py:263
 msgid "OpenWebif Configuration"
 msgstr "OpenWebif konfigūravimas"
 
@@ -1633,7 +1638,7 @@ msgstr "OpenWebif konfigūravimas"
 msgid "OpenWebif Settings"
 msgstr "OpenWebif nuostatos"
 
-#: ../plugin/plugin.py:138
+#: ../plugin/plugin.py:139
 msgid "OpenWebif url:"
 msgstr "OpenWebif nuoroda: http://imtuvo_IP:prievadas"
 
@@ -1692,7 +1697,7 @@ msgstr "Grojaraščio formatas"
 msgid "Playback"
 msgstr "Atkūrimas"
 
-#: ../plugin/plugin.py:182
+#: ../plugin/plugin.py:183
 msgid "Playback IPTV Streams in browser"
 msgstr "Atkurti IPTV transliaciją naršyklėje"
 
@@ -1712,7 +1717,7 @@ msgstr "Pmtpid"
 msgid "Power Control"
 msgstr "Maitinimo valdymas"
 
-#: ../plugin/controllers/models/timers.py:776
+#: ../plugin/controllers/models/timers.py:782
 msgid "PowerTimer feature not available"
 msgstr "Išjungimo laikmačio funkcija negalima"
 
@@ -1748,7 +1753,7 @@ msgstr ""
 msgid "RAM benchmark"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:622
+#: ../plugin/controllers/i18n.py:623
 msgid "REC"
 msgstr ""
 
@@ -1769,7 +1774,7 @@ msgstr "Įrašas daugiausiai x kartų"
 msgid "Recording Status"
 msgstr "Įrašymo būsena"
 
-#: ../plugin/controllers/i18n.py:618
+#: ../plugin/controllers/i18n.py:619
 #, fuzzy
 msgid "Recording Type"
 msgstr "Įrašymo būsena"
@@ -1822,7 +1827,7 @@ msgstr "Pervadinti įrašą"
 msgid "Repeated"
 msgstr "Pakartotinas"
 
-#: ../plugin/plugin.py:171
+#: ../plugin/plugin.py:172
 msgid "Require client cert for HTTPS"
 msgstr "Reikalauti HTTPS kliento sertifikato"
 
@@ -1890,8 +1895,8 @@ msgstr "Št"
 msgid "Safe mode"
 msgstr "Saugusis režimas"
 
-#: ../plugin/controllers/models/timers.py:44
-#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:53
+#: ../plugin/controllers/models/movies.py:54
+#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:53
 msgid "Sat"
 msgstr "Šeš"
 
@@ -1908,7 +1913,7 @@ msgid "Saturday"
 msgstr "šeštadienis"
 
 #: ../plugin/controllers/i18n.py:253 ../plugin/controllers/i18n.py:422
-#: ../plugin/controllers/i18n.py:484 ../plugin/plugin.py:126
+#: ../plugin/controllers/i18n.py:484 ../plugin/plugin.py:127
 msgid "Save"
 msgstr "Išsaugoti"
 
@@ -2036,12 +2041,12 @@ msgstr "Kanalai"
 msgid "Set maximum duration"
 msgstr "Nustatyti didžiausią trukmę"
 
-#: ../plugin/controllers/i18n.py:265 ../plugin/controllers/i18n.py:426
-#: ../plugin/controllers/base.py:313
+#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:265
+#: ../plugin/controllers/i18n.py:426
 msgid "Settings"
 msgstr "Visos nuostatos"
 
-#: ../plugin/plugin.py:154
+#: ../plugin/plugin.py:155
 msgid "Show CPU benchmark in STB information"
 msgstr ""
 
@@ -2057,7 +2062,7 @@ msgstr "Rodyti visą OpenWebif"
 msgid "Show IPTV channels in selection (eg. Autotimer)"
 msgstr "Renkantis, rodyti IPTV kanalus (pvz. Autolaikmatis)"
 
-#: ../plugin/plugin.py:155
+#: ../plugin/plugin.py:156
 msgid "Show RAM benchmark in STB information"
 msgstr ""
 
@@ -2066,12 +2071,12 @@ msgstr ""
 msgid "Show STB name in header"
 msgstr "Antraštėje rodyti aparato pavadinimą"
 
-#: ../plugin/controllers/i18n.py:616
+#: ../plugin/controllers/i18n.py:617
 #, fuzzy
 msgid "Show all packages"
 msgstr "Atnaujinti visus paketus"
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:161
 msgid "Show box name in header"
 msgstr "Antraštėje rodyti aparato pavadinimą"
 
@@ -2123,38 +2128,38 @@ msgstr "Svetainė ir šaltiniai"
 msgid "Skins"
 msgstr "Aplinkos temos"
 
-#: ../plugin/controllers/models/timers.py:860
-#: ../plugin/controllers/models/timers.py:886
-#: ../plugin/controllers/models/timers.py:912
-#: ../plugin/controllers/models/timers.py:941
-#: ../plugin/controllers/models/timers.py:968
-#: ../plugin/controllers/models/timers.py:1050
+#: ../plugin/controllers/models/timers.py:866
+#: ../plugin/controllers/models/timers.py:892
+#: ../plugin/controllers/models/timers.py:918
+#: ../plugin/controllers/models/timers.py:947
+#: ../plugin/controllers/models/timers.py:974
+#: ../plugin/controllers/models/timers.py:1056
 msgid "SleepTimer error"
 msgstr "Budėjimo laikmačio klaida"
 
-#: ../plugin/controllers/models/timers.py:930
-#: ../plugin/controllers/models/timers.py:1026
-#: ../plugin/controllers/models/timers.py:1045
+#: ../plugin/controllers/models/timers.py:936
+#: ../plugin/controllers/models/timers.py:1032
+#: ../plugin/controllers/models/timers.py:1051
 msgid "Sleeptimer has been disabled"
 msgstr "Budėjimo laikmatis išjungtas"
 
-#: ../plugin/controllers/models/timers.py:855
-#: ../plugin/controllers/models/timers.py:880
-#: ../plugin/controllers/models/timers.py:907
-#: ../plugin/controllers/models/timers.py:962
+#: ../plugin/controllers/models/timers.py:861
+#: ../plugin/controllers/models/timers.py:886
+#: ../plugin/controllers/models/timers.py:913
+#: ../plugin/controllers/models/timers.py:968
 msgid "Sleeptimer is disabled"
 msgstr "Budėjimo laikmatis išjungtas"
 
-#: ../plugin/controllers/models/timers.py:855
-#: ../plugin/controllers/models/timers.py:880
-#: ../plugin/controllers/models/timers.py:907
-#: ../plugin/controllers/models/timers.py:962
+#: ../plugin/controllers/models/timers.py:861
+#: ../plugin/controllers/models/timers.py:886
+#: ../plugin/controllers/models/timers.py:913
+#: ../plugin/controllers/models/timers.py:968
 msgid "Sleeptimer is enabled"
 msgstr "Budėjimo laikmatis įjungtas"
 
-#: ../plugin/controllers/models/timers.py:936
-#: ../plugin/controllers/models/timers.py:1026
-#: ../plugin/controllers/models/timers.py:1040
+#: ../plugin/controllers/models/timers.py:942
+#: ../plugin/controllers/models/timers.py:1032
+#: ../plugin/controllers/models/timers.py:1046
 #, python-format
 msgid "Sleeptimer set to %d minutes"
 msgstr "Budėjimo laikmatis nustatytas %d minučių"
@@ -2223,7 +2228,7 @@ msgstr "Srautas"
 msgid "Stream Clients"
 msgstr "Transliacijų klientai"
 
-#: ../plugin/plugin.py:179
+#: ../plugin/plugin.py:180
 msgid "Streaming port"
 msgstr "Transliacijos prievadas"
 
@@ -2243,8 +2248,8 @@ msgstr "Potinklio kaukė"
 msgid "Subservices"
 msgstr "Subkanalai"
 
-#: ../plugin/controllers/models/timers.py:44
-#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:47
+#: ../plugin/controllers/models/movies.py:54
+#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:47
 msgid "Sun"
 msgstr "Sek"
 
@@ -2252,9 +2257,9 @@ msgstr "Sek"
 msgid "Sunday"
 msgstr "sekmadienis"
 
-#: ../plugin/controllers/models/info.py:374
-#: ../plugin/controllers/models/info.py:386
-#: ../plugin/controllers/models/info.py:388
+#: ../plugin/controllers/models/info.py:367
+#: ../plugin/controllers/models/info.py:379
+#: ../plugin/controllers/models/info.py:381
 msgid "TB"
 msgstr "TB"
 
@@ -2302,27 +2307,27 @@ msgstr "Tekstas"
 msgid "Th"
 msgstr "Kt"
 
-#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1562
+#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1567
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Parametras '%s' negali būti tuščias"
 
-#: ../plugin/controllers/web.py:340
+#: ../plugin/controllers/web.py:345
 msgid "The parameter 'command' must be a number"
 msgstr "Parametras 'komanda' turi būti skaitmuo"
 
-#: ../plugin/controllers/models/timers.py:542
+#: ../plugin/controllers/models/timers.py:548
 #, python-format
 msgid "The timer '%s' has been %s successfully"
 msgstr "Laikmatis '%s' sėkmingai %s"
 
-#: ../plugin/controllers/models/timers.py:492
 #: ../plugin/controllers/models/timers.py:498
+#: ../plugin/controllers/models/timers.py:504
 #, python-format
 msgid "The timer '%s' has been deleted successfully"
 msgstr "Laikmatis '%s' pašalintas sėkmingai"
 
-#: ../plugin/controllers/models/timers.py:534
+#: ../plugin/controllers/models/timers.py:540
 #, python-format
 msgid "The timer '%s' now recorded! Not disabled!"
 msgstr "Laikmatis '%s' dabar įrašomas! Neišjungtas!"
@@ -2331,7 +2336,7 @@ msgstr "Laikmatis '%s' dabar įrašomas! Neišjungtas!"
 msgid "Theme"
 msgstr "Aplinkos tema"
 
-#: ../plugin/controllers/i18n.py:315 ../plugin/plugin.py:158
+#: ../plugin/controllers/i18n.py:315 ../plugin/plugin.py:159
 msgid "Theme mode"
 msgstr "Temos režimas"
 
@@ -2339,8 +2344,8 @@ msgstr "Temos režimas"
 msgid "This service can not be added."
 msgstr "Kanalas negali būti įtrauktas."
 
-#: ../plugin/controllers/models/timers.py:44
-#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:51
+#: ../plugin/controllers/models/movies.py:54
+#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:51
 msgid "Thu"
 msgstr "Ket"
 
@@ -2364,27 +2369,27 @@ msgstr "Intervalas"
 msgid "Timer"
 msgstr "Laikmatis"
 
-#: ../plugin/controllers/models/timers.py:338
+#: ../plugin/controllers/models/timers.py:344
 #, python-format
 msgid "Timer '%s' added"
 msgstr "Laikmatis '%s' pridėtas"
 
-#: ../plugin/controllers/models/timers.py:528
+#: ../plugin/controllers/models/timers.py:534
 #, python-format
 msgid "Timer '%s' already exists!"
 msgstr "Laikmatis '%s' jau yra!"
 
-#: ../plugin/controllers/models/timers.py:454
+#: ../plugin/controllers/models/timers.py:460
 #, python-format
 msgid "Timer '%s' changed"
 msgstr "Laikmatis '%s' pakeistas"
 
-#: ../plugin/controllers/models/timers.py:522
+#: ../plugin/controllers/models/timers.py:528
 #, python-format
 msgid "Timer '%s' not enabled while Conflict"
 msgstr "Laikmatis '%s' neįtrauktas dėl konflikto"
 
-#: ../plugin/controllers/models/timers.py:473
+#: ../plugin/controllers/models/timers.py:479
 #, python-format
 msgid "Timer '%s' not saved while Conflict"
 msgstr "Laikmatis '%s' neišsaugotas dėl konflikto"
@@ -2397,7 +2402,7 @@ msgstr "Laikmatis įtrauktas"
 msgid "Timer added"
 msgstr "Laikmatis įtrauktas"
 
-#: ../plugin/controllers/models/timers.py:614
+#: ../plugin/controllers/models/timers.py:620
 msgid "Timer conflict detected! Not recording!"
 msgstr "Laikmačių konfliktas! Nebus įrašoma!"
 
@@ -2405,7 +2410,7 @@ msgstr "Laikmačių konfliktas! Nebus įrašoma!"
 msgid "Timer type"
 msgstr "Laikmačio tipas"
 
-#: ../plugin/controllers/models/timers.py:564
+#: ../plugin/controllers/models/timers.py:570
 msgid "TimerList has been saved"
 msgstr "Laikmačių sąrašas išsaugotas"
 
@@ -2425,8 +2430,8 @@ msgstr "Antraštė"
 msgid "To date"
 msgstr "Ne anksčiau"
 
-#: ../plugin/controllers/models/timers.py:48
 #: ../plugin/controllers/models/movies.py:57
+#: ../plugin/controllers/models/timers.py:48
 msgid "Today"
 msgstr "Šiandien"
 
@@ -2455,8 +2460,8 @@ msgstr "TSID"
 msgid "Tu"
 msgstr "An"
 
-#: ../plugin/controllers/models/timers.py:44
-#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:49
+#: ../plugin/controllers/models/movies.py:54
+#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:49
 msgid "Tue"
 msgstr "Ant"
 
@@ -2505,7 +2510,7 @@ msgstr "Tipas"
 msgid "Unknown Volume command %s"
 msgstr "Nežinoma komanda %s"
 
-#: ../plugin/controllers/models/timers.py:709
+#: ../plugin/controllers/models/timers.py:715
 #, python-format
 msgid "Unknown command: '%s'"
 msgstr "Nežinoma komanda: '%s'"
@@ -2558,7 +2563,7 @@ msgstr "Naudoti, kaip PiP, jei įmanoma"
 msgid "Use classic interface"
 msgstr "Naudoti klasikinę sąsają"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:160
 msgid "Use custom Color"
 msgstr "Naudoti pasirinktinę spalvą"
 
@@ -2567,7 +2572,7 @@ msgstr "Naudoti pasirinktinę spalvą"
 msgid "Use custom STB name"
 msgstr "Naudoti savą aparato pavadinimą"
 
-#: ../plugin/plugin.py:162
+#: ../plugin/plugin.py:163
 msgid "Use custom box name"
 msgstr "Naudoti savą aparato pavadinimą"
 
@@ -2575,15 +2580,20 @@ msgstr "Naudoti savą aparato pavadinimą"
 msgid "Use modern design"
 msgstr "Naudoti naują išvaizdą"
 
-#: ../plugin/controllers/i18n.py:615 ../plugin/plugin.py:156
+#: ../plugin/controllers/i18n.py:615 ../plugin/plugin.py:157
 msgid "Use modern interface"
 msgstr "Naudoti naują išvaizdą"
+
+#: ../plugin/controllers/i18n.py:616
+#, fuzzy
+msgid "Use old remote"
+msgstr "Slėpti nuotolinį pultą"
 
 #: ../plugin/controllers/i18n.py:326
 msgid "VPS"
 msgstr "VPS"
 
-#: ../plugin/controllers/models/timers.py:1084
+#: ../plugin/controllers/models/timers.py:1090
 msgid "VPS plugin not found"
 msgstr "VPS įskiepio nerasta"
 
@@ -2623,7 +2633,7 @@ msgstr "Garso valdymas"
 msgid "Vpid"
 msgstr "VPId"
 
-#: ../plugin/controllers/models/info.py:625
+#: ../plugin/controllers/models/info.py:619
 msgid "W"
 msgstr "V"
 
@@ -2651,8 +2661,8 @@ msgstr "Tr"
 msgid "Web TV"
 msgstr "Interneto TV"
 
-#: ../plugin/controllers/models/timers.py:44
-#: ../plugin/controllers/models/movies.py:54 ../plugin/controllers/i18n.py:50
+#: ../plugin/controllers/models/movies.py:54
+#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:50
 msgid "Wed"
 msgstr "Tre"
 
@@ -2668,7 +2678,7 @@ msgstr "Kas savaitę (pirmadienis)"
 msgid "Weekly (Sunday)"
 msgstr "Kas savaitę (sekmadienis)"
 
-#: ../plugin/plugin.py:176
+#: ../plugin/plugin.py:177
 msgid "Without auth only local access is allowed!"
 msgstr "Be autentikavimo leidžiamas tik vietinis prisijungimas!"
 
@@ -2689,8 +2699,7 @@ msgstr "Neteisingas parametro formatas 'set=%s'. Naudokite set=set15 "
 msgid "YYYY-MM-DD"
 msgstr "YYYY-MM-DD"
 
-#: ../plugin/controllers/models/info.py:267
-#: ../plugin/controllers/models/info.py:271 ../plugin/controllers/i18n.py:559
+#: ../plugin/controllers/models/info.py:264 ../plugin/controllers/i18n.py:559
 #: ../plugin/controllers/i18n.py:576
 msgid "Yes"
 msgstr "Taip"
@@ -2699,8 +2708,8 @@ msgstr "Taip"
 msgid "Yes/No"
 msgstr "Taip / Ne"
 
-#: ../plugin/controllers/models/timers.py:51
 #: ../plugin/controllers/models/movies.py:59
+#: ../plugin/controllers/models/timers.py:51
 msgid "Yesterday"
 msgstr "Vakar"
 
@@ -2732,7 +2741,7 @@ msgstr "bet kada"
 msgid "auto"
 msgstr "auto"
 
-#: ../plugin/plugin.py:132
+#: ../plugin/plugin.py:133
 msgid "box_ip"
 msgstr "aparato IP"
 
@@ -2744,7 +2753,7 @@ msgstr "neatsižvelgiant į DIDŽIĄSIAS-mažąsias raides"
 msgid "case-sensitive"
 msgstr "atsižvelgiant į DIDŽIĄSIAS-mažąsias raides"
 
-#: ../plugin/controllers/i18n.py:620
+#: ../plugin/controllers/i18n.py:621
 msgid "descramble and record ecm"
 msgstr ""
 
@@ -2764,7 +2773,7 @@ msgstr "išjungtas"
 msgid "do nothing"
 msgstr "nieko nedaryti"
 
-#: ../plugin/controllers/i18n.py:621
+#: ../plugin/controllers/i18n.py:622
 msgid "don't descramble, record ecm"
 msgstr ""
 
@@ -2796,11 +2805,11 @@ msgstr "į budėjimo režimą"
 msgid "hour"
 msgstr "valanda"
 
+#: ../plugin/controllers/models/info.py:243
+#: ../plugin/controllers/models/info.py:246
 #: ../plugin/controllers/models/movies.py:282
 #: ../plugin/controllers/models/movies.py:412
 #: ../plugin/controllers/models/movies.py:832
-#: ../plugin/controllers/models/info.py:243
-#: ../plugin/controllers/models/info.py:246
 msgid "kB"
 msgstr "kB"
 
@@ -2829,7 +2838,7 @@ msgstr "aprašymo nėra"
 msgid "none/IPv4-only network"
 msgstr "nėra / tik IPv4 tinklas"
 
-#: ../plugin/controllers/i18n.py:619
+#: ../plugin/controllers/i18n.py:620
 msgid "normal"
 msgstr ""
 
@@ -2849,11 +2858,11 @@ msgstr "vienas du trys keturi nežinoma komanda"
 msgid "partial title match"
 msgstr "dalinis pavadinimo atitikimas"
 
-#: ../plugin/controllers/models/info.py:437
+#: ../plugin/controllers/models/info.py:430
 msgid "r/o"
 msgstr "tik skaityti"
 
-#: ../plugin/controllers/models/info.py:433
+#: ../plugin/controllers/models/info.py:426
 msgid "r/w"
 msgstr "skaityti/rašyti"
 
@@ -2935,7 +2944,7 @@ msgstr "pavadinimas prasideda"
 msgid "transcoded"
 msgstr "perkoduota"
 
-#: ../plugin/controllers/web.py:711
+#: ../plugin/controllers/web.py:716
 #, python-format
 msgid "type %s is not a number"
 msgstr "tipas %s nėra skaičius"
