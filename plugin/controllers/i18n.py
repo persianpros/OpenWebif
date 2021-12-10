@@ -216,6 +216,7 @@ tstrings = {
 	'glibc_version': _("Glibc"),
 	'on': _("On"),
 	'openwebif_header': _("Open Source Web Interface for Linux set-top box"),
+	'openssl': _("OpenSSL"),
 	'openvision': _("Open Vision"),
 	'ovrctype': _("Open Vision RC type"),
 	'ovrcname': _("Open Vision RC name"),

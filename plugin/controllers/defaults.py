@@ -13,7 +13,7 @@ from Components.Network import iNetwork
 from enigma import eEnv
 from Components.SystemInfo import BoxInfo
 
-OPENWEBIFVER = "OWIF 1.5.0.1 for Open Vision"
+OPENWEBIFVER = "OWIF 1.5.0.2 for Open Vision"
 
 PLUGIN_NAME = 'OpenWebif'
 PLUGIN_DESCRIPTION = "OpenWebif Configuration"
