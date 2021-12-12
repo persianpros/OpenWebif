@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-08 13:00+0330\n"
+"POT-Creation-Date: 2021-12-12 22:55+0330\n"
 "PO-Revision-Date: 2021-12-02 19:57+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/hu/>\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "%02d.%02d.%d"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:69
+#: ../plugin/controllers/models/movies.py:70
 #: ../plugin/controllers/models/timers.py:65
 #, python-format
 msgid "%02d:%02d"
@@ -38,22 +38,22 @@ msgstr ""
 msgid "%d.%m.%Y"
 msgstr ""
 
+#: ../plugin/controllers/models/timers.py:198
 #: ../plugin/controllers/models/timers.py:199
-#: ../plugin/controllers/models/timers.py:200
+#: ../plugin/controllers/models/timers.py:289
 #: ../plugin/controllers/models/timers.py:290
-#: ../plugin/controllers/models/timers.py:291
+#: ../plugin/controllers/models/timers.py:472
 #: ../plugin/controllers/models/timers.py:473
-#: ../plugin/controllers/models/timers.py:474
 msgid "%d.%m.%Y %H:%M"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:65
+#: ../plugin/controllers/models/movies.py:66
 #: ../plugin/controllers/models/timers.py:59
 #, python-format
 msgid "%s %02d.%02d."
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:67
+#: ../plugin/controllers/models/movies.py:68
 #, python-format
 msgid "%s %02d.%02d.%d"
 msgstr ""
@@ -69,25 +69,25 @@ msgid "%s / %s"
 msgstr ""
 
 #: ../plugin/controllers/models/info.py:247
-#: ../plugin/controllers/models/info.py:397
+#: ../plugin/controllers/models/info.py:398
 #, python-format
 msgid "%s free / %s total"
 msgstr "%s szabad /%s összesen"
 
-#: ../plugin/controllers/i18n.py:267
+#: ../plugin/controllers/i18n.py:268
 msgid "(Press 'shift' and click to 'hold')"
 msgstr "(Shift + Nyomja meg a Long Press gombot)"
 
-#: ../plugin/controllers/i18n.py:439
+#: ../plugin/controllers/i18n.py:440
 #, fuzzy
 msgid "(in minutes)"
 msgstr "perc"
 
-#: ../plugin/controllers/i18n.py:506
+#: ../plugin/controllers/i18n.py:507
 msgid "A filename is required"
 msgstr "Adja meg a fájlnevet"
 
-#: ../plugin/controllers/i18n.py:562
+#: ../plugin/controllers/i18n.py:563
 msgid "A value is required"
 msgstr "Valamit írnia kell!"
 
@@ -99,31 +99,31 @@ msgstr "AGC"
 msgid "About"
 msgstr "Névjegy"
 
-#: ../plugin/controllers/i18n.py:340
+#: ../plugin/controllers/i18n.py:341
 msgid "Add"
 msgstr "Hozzáad"
 
-#: ../plugin/controllers/i18n.py:452
+#: ../plugin/controllers/i18n.py:453
 msgid "Add  AutoTimer  to tags"
 msgstr "Az automata időzítő hozzáadása címkékhez"
 
-#: ../plugin/controllers/i18n.py:453
+#: ../plugin/controllers/i18n.py:454
 msgid "Add AutoTimer name to tags"
 msgstr "Név hozzáadása címkékhez"
 
-#: ../plugin/controllers/i18n.py:492
+#: ../plugin/controllers/i18n.py:493
 msgid "Add Bouquet"
 msgstr "Lista hozzáadása"
 
-#: ../plugin/controllers/i18n.py:495
+#: ../plugin/controllers/i18n.py:496
 msgid "Add IPTV/URL"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:496
+#: ../plugin/controllers/i18n.py:497
 msgid "Add Marker"
 msgstr "Marker hozzáadása"
 
-#: ../plugin/controllers/i18n.py:497
+#: ../plugin/controllers/i18n.py:498
 msgid "Add Spacer"
 msgstr "Spacer hozzáadása"
 
@@ -139,16 +139,16 @@ msgstr "Ugrási időzítő hozzáadása"
 msgid "Add an AutoTimer"
 msgstr "Automatikus időzítő hozzáadása"
 
-#: ../plugin/controllers/i18n.py:489
+#: ../plugin/controllers/i18n.py:490
 msgid "Add channel(s) as alternate"
 msgstr "Csatornák hozzáadása alternatívákhoz"
 
-#: ../plugin/controllers/i18n.py:432
+#: ../plugin/controllers/i18n.py:433
 #, fuzzy
 msgid "Add filters"
 msgstr "Időzítő hozzáadása"
 
-#: ../plugin/controllers/i18n.py:488
+#: ../plugin/controllers/i18n.py:489
 msgid "Add selection to bouquet"
 msgstr "Kijelölés hozzáadása bouquethez "
 
@@ -156,11 +156,11 @@ msgstr "Kijelölés hozzáadása bouquethez "
 msgid "Add service name to stream information"
 msgstr "Adja hozzá a szolgáltatás nevét az adatfolyam információihoz"
 
-#: ../plugin/controllers/i18n.py:449
+#: ../plugin/controllers/i18n.py:450
 msgid "Add similar on conflict"
 msgstr "Hasonló hozzáadása ütközés esetén"
 
-#: ../plugin/controllers/i18n.py:405
+#: ../plugin/controllers/i18n.py:406
 msgid "Add tags to recordings"
 msgstr ""
 
@@ -169,16 +169,16 @@ msgstr ""
 msgid "Added %s to alternative service %s."
 msgstr "A %s hozzáadva az %s alternatív szolgáltatáshoz."
 
-#: ../plugin/controllers/i18n.py:608
+#: ../plugin/controllers/i18n.py:609
 msgid "Adjust recording time to real event time"
 msgstr "A felvétel idejének az esemény valós idejéhez igazítása"
 
-#: ../plugin/controllers/i18n.py:80 ../plugin/controllers/i18n.py:378
-#: ../plugin/controllers/i18n.py:469
+#: ../plugin/controllers/i18n.py:80 ../plugin/controllers/i18n.py:379
+#: ../plugin/controllers/i18n.py:470
 msgid "After event"
 msgstr "Esemény után"
 
-#: ../plugin/controllers/i18n.py:82 ../plugin/controllers/i18n.py:457
+#: ../plugin/controllers/i18n.py:82 ../plugin/controllers/i18n.py:458
 msgid "All"
 msgstr "Minden"
 
@@ -186,7 +186,7 @@ msgstr "Minden"
 msgid "All Channels"
 msgstr "Minden csatorna"
 
-#: ../plugin/controllers/i18n.py:337
+#: ../plugin/controllers/i18n.py:338
 msgid "All Files of this Software are open source software; you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation."
 msgstr "A szoftver összes fájlja nyílt forráskódú szoftver; továbbadhatja és/vagy módosíthatja azokat a Free Software Foundation által kiadott GNU General Public License 3. verziójának megfelelően."
 
@@ -198,7 +198,7 @@ msgstr "Minden alternatív szolgáltatás törölve."
 msgid "Allow IPK Upload"
 msgstr "IPK feltöltés engedélyezése"
 
-#: ../plugin/controllers/i18n.py:607
+#: ../plugin/controllers/i18n.py:608
 msgid "Allow duplicates"
 msgstr "Duplikáció engedélyezése"
 
@@ -207,11 +207,11 @@ msgstr "Duplikáció engedélyezése"
 msgid "Alternative %s created failed."
 msgstr "A %s alternatíva létrehozása sikertelen."
 
-#: ../plugin/controllers/i18n.py:474
+#: ../plugin/controllers/i18n.py:475
 msgid "Always"
 msgstr "Mindig"
 
-#: ../plugin/controllers/models/info.py:291
+#: ../plugin/controllers/models/info.py:292
 #, fuzzy
 msgid "Amlogic remote"
 msgstr "Teljes távvezérlő"
@@ -224,15 +224,15 @@ msgstr "A válasz NEM!"
 msgid "Answer is YES!"
 msgstr "A válasz IGEN!"
 
-#: ../plugin/controllers/i18n.py:436
+#: ../plugin/controllers/i18n.py:437
 msgid "Any day"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:398
+#: ../plugin/controllers/i18n.py:399
 msgid "Any service/recording"
 msgstr "Bármely szolgáltatás/felvétel"
 
-#: ../plugin/controllers/i18n.py:513
+#: ../plugin/controllers/i18n.py:514
 msgid "Apid"
 msgstr "Apid"
 
@@ -240,15 +240,15 @@ msgstr "Apid"
 msgid "April"
 msgstr "Április"
 
-#: ../plugin/controllers/i18n.py:500
+#: ../plugin/controllers/i18n.py:501
 msgid "Are you sure you want to delete the selected bouquet?"
 msgstr "Valóban szeretné törölni a listát"
 
-#: ../plugin/controllers/i18n.py:499
+#: ../plugin/controllers/i18n.py:500
 msgid "Are you sure you want to delete the selected item(s)?"
 msgstr "Valóban szeretné törölni a kiválasztott elem(ek)et"
 
-#: ../plugin/controllers/i18n.py:427
+#: ../plugin/controllers/i18n.py:428
 #, fuzzy
 msgid "Are you sure you want to delete this AutoTimer?"
 msgstr "Tényleg törli az időzítőt"
@@ -261,11 +261,11 @@ msgstr "Tényleg törli a felvételt"
 msgid "Are you sure you want to delete this timer?"
 msgstr "Tényleg törli az időzítőt"
 
-#: ../plugin/controllers/i18n.py:246
+#: ../plugin/controllers/i18n.py:247
 msgid "Are you sure you want to rename this recording?"
 msgstr "Tényleg átnevezi a felvételt"
 
-#: ../plugin/controllers/i18n.py:507
+#: ../plugin/controllers/i18n.py:508
 msgid "Are you sure you want to restore from file?"
 msgstr "Valóban vissza szeretné állítani egy fájlból"
 
@@ -273,11 +273,11 @@ msgstr "Valóban vissza szeretné állítani egy fájlból"
 msgid "Are you sure you want to start recording instantly?"
 msgstr "Valóban elindítja az azonnali felvételt most?"
 
-#: ../plugin/controllers/i18n.py:478
+#: ../plugin/controllers/i18n.py:479
 msgid "Ask, default No"
 msgstr "Kérdezze, alapértelmezetten Nem"
 
-#: ../plugin/controllers/i18n.py:477
+#: ../plugin/controllers/i18n.py:478
 msgid "Ask, default Yes"
 msgstr "Kérdezze, alapértelmezetten Igen"
 
@@ -289,27 +289,27 @@ msgstr "Augusztus"
 msgid "Authors"
 msgstr "Szerző"
 
-#: ../plugin/controllers/i18n.py:85 ../plugin/controllers/i18n.py:456
+#: ../plugin/controllers/i18n.py:85 ../plugin/controllers/i18n.py:457
 msgid "Auto"
 msgstr "Auto"
 
-#: ../plugin/controllers/i18n.py:442
+#: ../plugin/controllers/i18n.py:443
 msgid "AutoPoll"
 msgstr "Automatikus szavazás"
 
-#: ../plugin/controllers/i18n.py:343
+#: ../plugin/controllers/i18n.py:344
 msgid "AutoTimer Edit"
 msgstr "Automatikus időzítő szerkesztése"
 
-#: ../plugin/controllers/i18n.py:441
+#: ../plugin/controllers/i18n.py:442
 msgid "AutoTimer Settings"
 msgstr "Automatikus időzítő beállítások"
 
-#: ../plugin/controllers/base.py:347 ../plugin/controllers/i18n.py:342
+#: ../plugin/controllers/base.py:347 ../plugin/controllers/i18n.py:343
 msgid "AutoTimers"
 msgstr "Automatikus időzítő lista"
 
-#: ../plugin/controllers/i18n.py:295
+#: ../plugin/controllers/i18n.py:296
 msgid "Autotimer Preview"
 msgstr "Automatikus időzítő előnézet"
 
@@ -321,28 +321,28 @@ msgstr "BER"
 msgid "Back"
 msgstr "Vissza"
 
-#: ../plugin/controllers/i18n.py:476
+#: ../plugin/controllers/i18n.py:477
 msgid "Background only"
 msgstr "Csak háttér"
 
-#: ../plugin/controllers/i18n.py:87 ../plugin/controllers/i18n.py:464
+#: ../plugin/controllers/i18n.py:87 ../plugin/controllers/i18n.py:465
 msgid "Begin"
 msgstr "Kezdet"
 
-#: ../plugin/controllers/i18n.py:385
+#: ../plugin/controllers/i18n.py:386
 #, fuzzy
 msgid "Begin of \"After event\" timespan"
 msgstr "Az \"esemény után\" időszak kezdete"
 
-#: ../plugin/controllers/i18n.py:369
+#: ../plugin/controllers/i18n.py:370
 msgid "Beginning of timespan"
 msgstr "Az időszak kezdete"
 
-#: ../plugin/controllers/i18n.py:547
+#: ../plugin/controllers/i18n.py:548
 msgid "Bookmark"
 msgstr "Könyvjelző"
 
-#: ../plugin/controllers/i18n.py:546
+#: ../plugin/controllers/i18n.py:547
 msgid "Bookmarks"
 msgstr "Könyvjelzők"
 
@@ -391,11 +391,11 @@ msgstr "A Bouquet %s eltávolítva nem sikerült,A sürgősségi vagy módosíth
 msgid "Bouquet %s removed failed."
 msgstr "Bouquet %s eltávolítva nem sikerült."
 
-#: ../plugin/controllers/i18n.py:266
+#: ../plugin/controllers/i18n.py:267
 msgid "Bouquet Editor"
 msgstr "Bouquet szerkesztő"
 
-#: ../plugin/controllers/i18n.py:502
+#: ../plugin/controllers/i18n.py:503
 msgid "Bouquet name"
 msgstr "A lista neve"
 
@@ -454,7 +454,7 @@ msgstr ""
 msgid "Cable"
 msgstr "Kábel"
 
-#: ../plugin/controllers/i18n.py:538
+#: ../plugin/controllers/i18n.py:539
 msgid "Calendar Week"
 msgstr "Naptári hét"
 
@@ -462,7 +462,7 @@ msgstr "Naptári hét"
 msgid "Cancel"
 msgstr "Töröl"
 
-#: ../plugin/controllers/i18n.py:560
+#: ../plugin/controllers/i18n.py:561
 msgid "Cancelled"
 msgstr "Törölve"
 
@@ -478,7 +478,7 @@ msgstr "Pillanatkép rögzítése"
 msgid "Channel"
 msgstr "Csatorna"
 
-#: ../plugin/controllers/i18n.py:101 ../plugin/controllers/i18n.py:402
+#: ../plugin/controllers/i18n.py:101 ../plugin/controllers/i18n.py:403
 msgid "Channels"
 msgstr "Csatornák"
 
@@ -494,7 +494,7 @@ msgstr "Időzítők tisztítáa"
 msgid "Close"
 msgstr "Bezár"
 
-#: ../plugin/controllers/i18n.py:563
+#: ../plugin/controllers/i18n.py:564
 msgid "Common Settings"
 msgstr "Közös beállítások"
 
@@ -502,11 +502,11 @@ msgstr "Közös beállítások"
 msgid "Compiled by"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:612
+#: ../plugin/controllers/i18n.py:613
 msgid "Config"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:296
+#: ../plugin/controllers/models/timers.py:295
 #, python-format
 msgid "Conflicting Timer(s) detected! %s"
 msgstr "Időzítő(k) ütközése észlelve! %s"
@@ -519,17 +519,17 @@ msgstr "Közreműködők"
 msgid "Control"
 msgstr "Ellenőrzés"
 
-#: ../plugin/controllers/models/timers.py:339
+#: ../plugin/controllers/models/timers.py:338
 #, python-format
 msgid "Could not add timer '%s'!"
 msgstr "Nem lehet hozzáadni az '%s' időzítőt!"
 
-#: ../plugin/controllers/models/timers.py:485
+#: ../plugin/controllers/models/timers.py:484
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "Az '%s' időzítő nem található az adott kezdő és befejező időpontban!"
 
-#: ../plugin/controllers/i18n.py:487
+#: ../plugin/controllers/i18n.py:488
 msgid "Create bouquet from selection"
 msgstr "Bouquet létrehozása a kijelölésből"
 
@@ -541,7 +541,7 @@ msgstr "Jelenlegi"
 msgid "Current Event"
 msgstr "Aktuális esemény"
 
-#: ../plugin/controllers/i18n.py:225
+#: ../plugin/controllers/i18n.py:226
 #, fuzzy
 msgid "Custom STB name"
 msgstr "Egyéni box név"
@@ -550,7 +550,7 @@ msgstr "Egyéni box név"
 msgid "Custom box name"
 msgstr "Egyéni box név"
 
-#: ../plugin/controllers/i18n.py:374
+#: ../plugin/controllers/i18n.py:375
 msgid "Custom offset"
 msgstr "Egyéni eltolás"
 
@@ -571,11 +571,11 @@ msgstr ""
 msgid "Date"
 msgstr "Dátum"
 
-#: ../plugin/controllers/i18n.py:598
+#: ../plugin/controllers/i18n.py:599
 msgid "Date (newest)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:597
+#: ../plugin/controllers/i18n.py:598
 msgid "Date (oldest)"
 msgstr ""
 
@@ -595,19 +595,19 @@ msgstr "Mély készenlét"
 msgid "Default"
 msgstr "Alapértelmezett"
 
-#: ../plugin/controllers/i18n.py:466
+#: ../plugin/controllers/i18n.py:467
 msgid "Delay Standby"
 msgstr "Készenlét késleltetése"
 
-#: ../plugin/controllers/i18n.py:115 ../plugin/controllers/i18n.py:421
+#: ../plugin/controllers/i18n.py:115 ../plugin/controllers/i18n.py:422
 msgid "Delete"
 msgstr "Törlés"
 
-#: ../plugin/controllers/i18n.py:549
+#: ../plugin/controllers/i18n.py:550
 msgid "Delete Bookmark"
 msgstr "Könyvjelző törlése"
 
-#: ../plugin/controllers/i18n.py:494
+#: ../plugin/controllers/i18n.py:495
 msgid "Delete Bouquet"
 msgstr "Lista törlése"
 
@@ -619,7 +619,7 @@ msgstr "Felvétel törlése"
 msgid "Delete Timer"
 msgstr "Időzítő törlése"
 
-#: ../plugin/controllers/models/movies.py:489
+#: ../plugin/controllers/models/movies.py:490
 msgid ""
 "Delete failed, because there is no movie trash !\n"
 "Disable movie trash in configuration to delete this item"
@@ -627,7 +627,7 @@ msgstr ""
 "A törlés sikertelen volt, mert nincs Kuka a filmekhez!\n"
 "Tiltsa le a Kukát a beállításoknál, hogy törölhesse ezt a filmet"
 
-#: ../plugin/controllers/i18n.py:561
+#: ../plugin/controllers/i18n.py:562
 msgid "Deleted"
 msgstr "Törölve"
 
@@ -635,7 +635,7 @@ msgstr "Törölve"
 msgid "Description"
 msgstr "Leírás"
 
-#: ../plugin/controllers/i18n.py:140 ../plugin/controllers/i18n.py:420
+#: ../plugin/controllers/i18n.py:140 ../plugin/controllers/i18n.py:421
 #, fuzzy
 msgid "Disable"
 msgstr "leiltva"
@@ -654,15 +654,15 @@ msgstr "Távoli hozzáférés letiltása a root felhasználó számára"
 msgid "Disabled in configuration"
 msgstr "Letiltva ütközés esetén"
 
-#: ../plugin/controllers/i18n.py:448
+#: ../plugin/controllers/i18n.py:449
 msgid "Disabled on conflict"
 msgstr "Letiltva ütközés esetén"
 
-#: ../plugin/controllers/i18n.py:534
+#: ../plugin/controllers/i18n.py:535
 msgid "Display Mode"
 msgstr "Megjelenítési mód"
 
-#: ../plugin/controllers/i18n.py:532
+#: ../plugin/controllers/i18n.py:533
 msgid "Display duration (s)"
 msgstr "Az időtartam megjelenítése (másodperc)"
 
@@ -679,7 +679,7 @@ msgstr "Distro"
 msgid "Dolby"
 msgstr "Dolby"
 
-#: ../plugin/controllers/i18n.py:609
+#: ../plugin/controllers/i18n.py:610
 msgid "Don't create timer when movie exists in database"
 msgstr ""
 
@@ -703,7 +703,7 @@ msgstr "Driverek"
 msgid "Duration"
 msgstr "Időtartam"
 
-#: ../plugin/controllers/models/info.py:616
+#: ../plugin/controllers/models/info.py:617
 msgid "E"
 msgstr "E"
 
@@ -715,7 +715,7 @@ msgstr "EPG"
 msgid "EPG Search"
 msgstr "Epg keresés"
 
-#: ../plugin/controllers/i18n.py:346
+#: ../plugin/controllers/i18n.py:347
 msgid "EPG encoding"
 msgstr "EPG kódolás"
 
@@ -723,20 +723,25 @@ msgstr "EPG kódolás"
 msgid "EPGRefresh"
 msgstr "EPG frissítés"
 
-#: ../plugin/controllers/models/timers.py:931
+#: ../plugin/controllers/models/timers.py:930
 msgid "ERROR: Cannot set SleepTimer while device is in Standby-Mode"
 msgstr "HIBA: Nem állítható be az elalvás időzítő, amíg az eszköz készenléti állapotban van"
 
-#: ../plugin/controllers/i18n.py:419
+#: ../plugin/controllers/i18n.py:420
 #, fuzzy
 msgid "Edit"
 msgstr "Szerkesztő"
+
+#: ../plugin/controllers/i18n.py:626
+#, fuzzy
+msgid "Edit Recording"
+msgstr "Felvétel törlése"
 
 #: ../plugin/controllers/i18n.py:135
 msgid "Edit Timer"
 msgstr "Időzítő szerkesztése"
 
-#: ../plugin/controllers/i18n.py:458
+#: ../plugin/controllers/i18n.py:459
 msgid "Editor"
 msgstr "Szerkesztő"
 
@@ -761,7 +766,7 @@ msgstr "HTTPS engedélyezése"
 msgid "Enable HTTPS Authentication"
 msgstr "HTTPS hitelesítés engedélyezése"
 
-#: ../plugin/controllers/i18n.py:463
+#: ../plugin/controllers/i18n.py:464
 msgid "Enable Messages"
 msgstr "Üzenetek engedélyezése"
 
@@ -777,16 +782,16 @@ msgstr "Időzítő engedélyezése"
 msgid "Enable access from VPNs"
 msgstr "A VPN-ekről való hozzáférés engedélyezése"
 
-#: ../plugin/controllers/i18n.py:409
+#: ../plugin/controllers/i18n.py:410
 msgid "Enable filtering"
 msgstr "Szűrés engedélyezése"
 
-#: ../plugin/controllers/i18n.py:544
+#: ../plugin/controllers/i18n.py:545
 msgid "Enable/Disable Screenshot on key press or"
 msgstr "Képernyőkép engedélyezése/letiltása gomb megnyomásával"
 
-#: ../plugin/controllers/i18n.py:141 ../plugin/controllers/i18n.py:344
-#: ../plugin/controllers/i18n.py:462
+#: ../plugin/controllers/i18n.py:141 ../plugin/controllers/i18n.py:345
+#: ../plugin/controllers/i18n.py:463
 msgid "Enabled"
 msgstr "Engedélyezve"
 
@@ -794,16 +799,16 @@ msgstr "Engedélyezve"
 msgid "Encrypted"
 msgstr "Titkosított"
 
-#: ../plugin/controllers/i18n.py:138 ../plugin/controllers/i18n.py:465
+#: ../plugin/controllers/i18n.py:138 ../plugin/controllers/i18n.py:466
 msgid "End"
 msgstr "Befejezés"
 
-#: ../plugin/controllers/i18n.py:386
+#: ../plugin/controllers/i18n.py:387
 #, fuzzy
 msgid "End of \"After event\" timespan"
 msgstr "Az \"esemény utáni\" időszak vége"
 
-#: ../plugin/controllers/i18n.py:370
+#: ../plugin/controllers/i18n.py:371
 msgid "End of timespan"
 msgstr "Időszak vége"
 
@@ -820,29 +825,29 @@ msgstr ""
 msgid "Enigma2 revision"
 msgstr "Firmware verzió"
 
-#: ../plugin/controllers/i18n.py:624
+#: ../plugin/controllers/i18n.py:625
 #, fuzzy
 msgid "Enter Text"
 msgstr "Tuner típusa"
 
-#: ../plugin/controllers/i18n.py:504
+#: ../plugin/controllers/i18n.py:505
 msgid "Enter a name for the new bouquet"
 msgstr "Új név beírása a listához"
 
-#: ../plugin/controllers/i18n.py:505
+#: ../plugin/controllers/i18n.py:506
 msgid "Enter a name for the new marker"
 msgstr "Új név beírása a markerhez"
 
-#: ../plugin/controllers/i18n.py:430
+#: ../plugin/controllers/i18n.py:431
 #, fuzzy
 msgid "Enter a name for this AutoTimer"
 msgstr "Új név beírása a markerhez"
 
-#: ../plugin/controllers/i18n.py:550
+#: ../plugin/controllers/i18n.py:551
 msgid "Enter path"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:431
+#: ../plugin/controllers/i18n.py:432
 msgid "Enter the text to find in the EPG"
 msgstr ""
 
@@ -850,7 +855,7 @@ msgstr ""
 msgid "Error"
 msgstr "Hiba"
 
-#: ../plugin/controllers/models/timers.py:1085
+#: ../plugin/controllers/models/timers.py:1084
 msgid "Error parsing vps.xml"
 msgstr "Hiba történt a vps.xml elemzésében"
 
@@ -886,11 +891,11 @@ msgstr "Hiba, %s nem jött létre a WebBouquetEditor segítségével..."
 msgid "Error: Bouquet %s could not deleted, OSError."
 msgstr "Hiba: %s lista nem törölhető, OSError."
 
-#: ../plugin/controllers/i18n.py:524
+#: ../plugin/controllers/i18n.py:525
 msgid "Event not found"
 msgstr "Esemény nem található"
 
-#: ../plugin/controllers/models/timers.py:353
+#: ../plugin/controllers/models/timers.py:352
 msgid "EventId not found"
 msgstr "Esemény Id nem található"
 
@@ -898,16 +903,16 @@ msgstr "Esemény Id nem található"
 msgid "Every"
 msgstr "Minden"
 
-#: ../plugin/controllers/i18n.py:411
+#: ../plugin/controllers/i18n.py:412
 msgid "Exclude when"
 msgstr "Kizárva"
 
-#: ../plugin/controllers/i18n.py:384
+#: ../plugin/controllers/i18n.py:385
 #, fuzzy
 msgid "Execute \"After event\" during timespan"
 msgstr "Az \"esemény után\" végrehajtása az időszak alatt"
 
-#: ../plugin/controllers/i18n.py:592
+#: ../plugin/controllers/i18n.py:593
 msgid "Export"
 msgstr "Export"
 
@@ -927,11 +932,11 @@ msgstr ""
 msgid "Factory RC type"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:483
+#: ../plugin/controllers/i18n.py:484
 msgid "Fake Recording"
 msgstr "Hamis felvétel"
 
-#: ../plugin/controllers/i18n.py:446
+#: ../plugin/controllers/i18n.py:447
 msgid "Fastscan"
 msgstr "Gyors szkennelés"
 
@@ -948,7 +953,7 @@ msgstr ""
 msgid "Flash type"
 msgstr "Keresés"
 
-#: ../plugin/controllers/i18n.py:470
+#: ../plugin/controllers/i18n.py:471
 msgid "Force"
 msgstr "Kényszerítve"
 
@@ -964,12 +969,12 @@ msgstr "Szabad"
 msgid "Free Memory"
 msgstr "Szabad memoria"
 
-#: ../plugin/controllers/i18n.py:299
+#: ../plugin/controllers/i18n.py:300
 #, fuzzy
 msgid "Free/Total Memory"
 msgstr "Szabad memoria"
 
-#: ../plugin/controllers/models/movies.py:54
+#: ../plugin/controllers/models/movies.py:55
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:52
 msgid "Fri"
 msgstr "Péntek"
@@ -978,7 +983,7 @@ msgstr "Péntek"
 msgid "Friday"
 msgstr "Péntek"
 
-#: ../plugin/controllers/i18n.py:372
+#: ../plugin/controllers/i18n.py:373
 msgid "From date"
 msgstr "Nem később, mint"
 
@@ -987,17 +992,17 @@ msgstr "Nem később, mint"
 msgid "Front processor"
 msgstr "Frontprocesszor verzió"
 
-#: ../plugin/controllers/i18n.py:585
+#: ../plugin/controllers/i18n.py:586
 msgid "Full remote"
 msgstr "Teljes távvezérlő"
 
-#: ../plugin/controllers/models/info.py:363
-#: ../plugin/controllers/models/info.py:369
-#: ../plugin/controllers/models/info.py:384
-#: ../plugin/controllers/models/info.py:387
-#: ../plugin/controllers/models/movies.py:278
-#: ../plugin/controllers/models/movies.py:408
-#: ../plugin/controllers/models/movies.py:828
+#: ../plugin/controllers/models/info.py:364
+#: ../plugin/controllers/models/info.py:370
+#: ../plugin/controllers/models/info.py:385
+#: ../plugin/controllers/models/info.py:388
+#: ../plugin/controllers/models/movies.py:279
+#: ../plugin/controllers/models/movies.py:409
+#: ../plugin/controllers/models/movies.py:837
 msgid "GB"
 msgstr "GB"
 
@@ -1031,7 +1036,7 @@ msgstr "A változás lista létrehozása az új bouquethez nem sikerült!"
 msgid "Glibc"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:602
+#: ../plugin/controllers/i18n.py:603
 msgid "HH:MM"
 msgstr ""
 
@@ -1052,7 +1057,7 @@ msgstr "Merevlemez modell"
 msgid "Hardware serial"
 msgstr "Földi"
 
-#: ../plugin/controllers/i18n.py:234
+#: ../plugin/controllers/i18n.py:235
 msgid "Hardware type"
 msgstr ""
 
@@ -1068,7 +1073,7 @@ msgstr "Nagy felbontású"
 msgid "Hour"
 msgstr "Óra"
 
-#: ../plugin/controllers/i18n.py:501
+#: ../plugin/controllers/i18n.py:502
 msgid "IPTV / URL name"
 msgstr ""
 
@@ -1104,7 +1109,7 @@ msgstr ""
 msgid "Image folder"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:593
+#: ../plugin/controllers/i18n.py:594
 msgid "Import"
 msgstr "Importálás"
 
@@ -1112,19 +1117,19 @@ msgstr "Importálás"
 msgid "Include description"
 msgstr "Leírással"
 
-#: ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/i18n.py:579
 msgid "Include extended description"
 msgstr "Bővített leírással"
 
-#: ../plugin/controllers/i18n.py:577
+#: ../plugin/controllers/i18n.py:578
 msgid "Include short description"
 msgstr "Rövid leírással"
 
-#: ../plugin/controllers/i18n.py:410
+#: ../plugin/controllers/i18n.py:411
 msgid "Include when"
 msgstr "Beleértve"
 
-#: ../plugin/controllers/models/timers.py:601
+#: ../plugin/controllers/models/timers.py:600
 msgid "Infinite Instant recording started"
 msgstr "Végtelen azonnali felvétel elkezdődött"
 
@@ -1132,15 +1137,15 @@ msgstr "Végtelen azonnali felvétel elkezdődött"
 msgid "Info"
 msgstr "Infó"
 
-#: ../plugin/controllers/i18n.py:472
+#: ../plugin/controllers/i18n.py:473
 msgid "Inherit AutoTimer"
 msgstr "Örökölt Automata időzítő"
 
-#: ../plugin/controllers/i18n.py:570
+#: ../plugin/controllers/i18n.py:571
 msgid "Install Package"
 msgstr "Csomag telepítése"
 
-#: ../plugin/controllers/i18n.py:572
+#: ../plugin/controllers/i18n.py:573
 msgid "Installed"
 msgstr "Telepített"
 
@@ -1148,7 +1153,7 @@ msgstr "Telepített"
 msgid "Instant Record"
 msgstr "Azonnali felvétel"
 
-#: ../plugin/controllers/models/timers.py:592
+#: ../plugin/controllers/models/timers.py:591
 msgid "Instant record for current Event started"
 msgstr "Az aktuális esemény azonnali felvétele megkezdődött"
 
@@ -1156,16 +1161,16 @@ msgstr "Az aktuális esemény azonnali felvétele megkezdődött"
 msgid "Internal error!"
 msgstr "Belső hiba!"
 
-#: ../plugin/controllers/i18n.py:443
+#: ../plugin/controllers/i18n.py:444
 #, python-format
 msgid "Interval (in %s)"
 msgstr "Intervallum (in %s)"
 
-#: ../plugin/controllers/i18n.py:467
+#: ../plugin/controllers/i18n.py:468
 msgid "Interval (min.)"
 msgstr "Intervallum (perc.)"
 
-#: ../plugin/controllers/i18n.py:468
+#: ../plugin/controllers/i18n.py:469
 msgid "Interval (sec.)"
 msgstr "Intervallum (másodperc)"
 
@@ -1209,28 +1214,28 @@ msgstr "LCD4Linux Beállítás"
 msgid "LICENSE"
 msgstr "ENGEDÉLY"
 
-#: ../plugin/controllers/models/info.py:293
+#: ../plugin/controllers/models/info.py:294
 #, fuzzy
 msgid "LIRC remote"
 msgstr "Távirányító"
 
-#: ../plugin/controllers/i18n.py:428
+#: ../plugin/controllers/i18n.py:429
 msgid "Label series"
 msgstr "Címke sorozat"
 
-#: ../plugin/controllers/i18n.py:317
+#: ../plugin/controllers/i18n.py:318
 msgid "Last update"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:540
+#: ../plugin/controllers/i18n.py:541
 msgid "Link Speed"
 msgstr "Link sebesség"
 
-#: ../plugin/controllers/models/timers.py:562
+#: ../plugin/controllers/models/timers.py:561
 msgid "List of Timers has been cleaned"
 msgstr "Az időzítők listája kiürítve"
 
-#: ../plugin/controllers/i18n.py:508
+#: ../plugin/controllers/i18n.py:509
 #, fuzzy
 msgid "Loading..."
 msgstr "töltés"
@@ -1247,12 +1252,12 @@ msgstr "Zárolt"
 msgid "MAC address"
 msgstr "MAC cím"
 
-#: ../plugin/controllers/models/info.py:360
-#: ../plugin/controllers/models/info.py:371
-#: ../plugin/controllers/models/info.py:389
-#: ../plugin/controllers/models/movies.py:280
-#: ../plugin/controllers/models/movies.py:410
-#: ../plugin/controllers/models/movies.py:830
+#: ../plugin/controllers/models/info.py:361
+#: ../plugin/controllers/models/info.py:372
+#: ../plugin/controllers/models/info.py:390
+#: ../plugin/controllers/models/movies.py:281
+#: ../plugin/controllers/models/movies.py:411
+#: ../plugin/controllers/models/movies.py:839
 msgid "MB"
 msgstr "MB"
 
@@ -1268,15 +1273,15 @@ msgstr "Március"
 msgid "Marker added."
 msgstr "Marker hozzáadva."
 
-#: ../plugin/controllers/i18n.py:503
+#: ../plugin/controllers/i18n.py:504
 msgid "Marker name"
 msgstr "A marker neve"
 
-#: ../plugin/controllers/i18n.py:345
+#: ../plugin/controllers/i18n.py:346
 msgid "Match text"
 msgstr "Cím egyezés"
 
-#: ../plugin/controllers/i18n.py:444
+#: ../plugin/controllers/i18n.py:445
 msgid "Max Days"
 msgstr "Max napok"
 
@@ -1288,19 +1293,19 @@ msgstr "Május"
 msgid "Message sent successfully!"
 msgstr "Az üzenet sikeresen elküldve!"
 
-#: ../plugin/controllers/i18n.py:479
+#: ../plugin/controllers/i18n.py:480
 msgid "Method"
 msgstr "Módszer"
 
-#: ../plugin/controllers/i18n.py:566
+#: ../plugin/controllers/i18n.py:567
 msgid "Minimal EPG list"
 msgstr "Minimális EPG lista"
 
-#: ../plugin/controllers/i18n.py:564
+#: ../plugin/controllers/i18n.py:565
 msgid "Minimal movie list"
 msgstr "Minimális filmlista"
 
-#: ../plugin/controllers/i18n.py:565
+#: ../plugin/controllers/i18n.py:566
 msgid "Minimal timer list"
 msgstr "Minimális időzítő lista"
 
@@ -1313,7 +1318,7 @@ msgstr "Perc"
 msgid "Missing mandatory parameter '%s'"
 msgstr "Hiányzó kötelező paraméter '%s'"
 
-#: ../plugin/controllers/models/timers.py:693
+#: ../plugin/controllers/models/timers.py:692
 msgid "Missing requesteter: sRef"
 msgstr "Hiányzó kérelem: sRef"
 
@@ -1325,7 +1330,7 @@ msgstr "Hétfő"
 msgid "Model"
 msgstr "Modell"
 
-#: ../plugin/controllers/models/movies.py:54
+#: ../plugin/controllers/models/movies.py:55
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:48
 msgid "Mon"
 msgstr "Hétfő"
@@ -1334,11 +1339,11 @@ msgstr "Hétfő"
 msgid "Monday"
 msgstr "Hétfő"
 
-#: ../plugin/controllers/i18n.py:390
+#: ../plugin/controllers/i18n.py:391
 msgid "Monthly"
 msgstr "Havi"
 
-#: ../plugin/controllers/i18n.py:573
+#: ../plugin/controllers/i18n.py:574
 msgid "More"
 msgstr "Több"
 
@@ -1347,11 +1352,11 @@ msgstr "Több"
 msgid "More details"
 msgstr "Részletek mutatása"
 
-#: ../plugin/controllers/i18n.py:526
+#: ../plugin/controllers/i18n.py:527
 msgid "Movie database for EPG"
 msgstr "EPG filmes adatbázis"
 
-#: ../plugin/controllers/i18n.py:579
+#: ../plugin/controllers/i18n.py:580
 msgid "Movie search"
 msgstr "Filmkeresés"
 
@@ -1390,11 +1395,11 @@ msgstr "NCam Webinterface"
 msgid "Name"
 msgstr "Név"
 
-#: ../plugin/controllers/i18n.py:595
+#: ../plugin/controllers/i18n.py:596
 msgid "Name (a-z)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:596
+#: ../plugin/controllers/i18n.py:597
 msgid "Name (z-a)"
 msgstr ""
 
@@ -1406,29 +1411,29 @@ msgstr "Namespace"
 msgid "Network Interface"
 msgstr "Hálózati felület"
 
-#: ../plugin/controllers/i18n.py:541
+#: ../plugin/controllers/i18n.py:542
 msgid "Network Shares"
 msgstr "Hálózati megosztások"
 
-#: ../plugin/controllers/i18n.py:389 ../plugin/controllers/i18n.py:475
+#: ../plugin/controllers/i18n.py:390 ../plugin/controllers/i18n.py:476
 msgid "Never"
 msgstr "Soha"
 
 #: ../plugin/controllers/models/services.py:382
-#: ../plugin/controllers/i18n.py:429
+#: ../plugin/controllers/i18n.py:430
 msgid "New"
 msgstr "Új"
 
-#: ../plugin/controllers/i18n.py:548
+#: ../plugin/controllers/i18n.py:549
 #, fuzzy
 msgid "New Bookmark:"
 msgstr "Könyvjelző"
 
-#: ../plugin/controllers/i18n.py:294
+#: ../plugin/controllers/i18n.py:295
 msgid "New Name"
 msgstr "Új név"
 
-#: ../plugin/controllers/models/info.py:264 ../plugin/controllers/i18n.py:395
+#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:396
 msgid "No"
 msgstr "Nem"
 
@@ -1463,7 +1468,7 @@ msgstr "Nem adott nevet a listának!"
 msgid "No current service given!"
 msgstr "Nincs aktuális szolgáltatás!"
 
-#: ../plugin/controllers/models/timers.py:586
+#: ../plugin/controllers/models/timers.py:585
 msgid "No event found! Not recording!"
 msgstr "Esemény nem található! Nincs felvétel!"
 
@@ -1471,13 +1476,13 @@ msgstr "Esemény nem található! Nincs felvétel!"
 msgid "No marker-name given!"
 msgstr "Nincs megadva marker-név!"
 
-#: ../plugin/controllers/i18n.py:438
+#: ../plugin/controllers/i18n.py:439
 #, fuzzy
 msgid "No matches were found in the EPG"
 msgstr "Nincs megfelelő időzítő"
 
-#: ../plugin/controllers/models/timers.py:509
-#: ../plugin/controllers/models/timers.py:554
+#: ../plugin/controllers/models/timers.py:508
+#: ../plugin/controllers/models/timers.py:553
 msgid "No matching Timer found"
 msgstr "Nincs megfelelő időzítő"
 
@@ -1504,11 +1509,11 @@ msgstr "Nincs megadva szolgáltató!"
 msgid "No service given!"
 msgstr "Nincs szolgáltatás!"
 
-#: ../plugin/controllers/i18n.py:558
+#: ../plugin/controllers/i18n.py:559
 msgid "No, cancel"
 msgstr "Nem, mégsem"
 
-#: ../plugin/controllers/i18n.py:455
+#: ../plugin/controllers/i18n.py:456
 msgid "None"
 msgstr "Egyik sem"
 
@@ -1520,11 +1525,11 @@ msgstr "Semmi"
 msgid "Nothing playing."
 msgstr "Nincs lejátszás."
 
-#: ../plugin/controllers/i18n.py:450
+#: ../plugin/controllers/i18n.py:451
 msgid "Notify if Conflict"
 msgstr "Értesítés ütközés esetén"
 
-#: ../plugin/controllers/i18n.py:451
+#: ../plugin/controllers/i18n.py:452
 msgid "Notify if Similar"
 msgstr "Értesítés egyezés esetén"
 
@@ -1536,11 +1541,11 @@ msgstr "November"
 msgid "Now"
 msgstr "Most"
 
-#: ../plugin/controllers/i18n.py:567
+#: ../plugin/controllers/i18n.py:568
 msgid "Now/Next Columns"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:388
+#: ../plugin/controllers/i18n.py:389
 msgid "Number of recordings remaining"
 msgstr "A hátramaradó felvételek száma"
 
@@ -1553,7 +1558,7 @@ msgstr "E"
 msgid "OSCam Webinterface"
 msgstr "OSCam Webinterface"
 
-#: ../plugin/controllers/i18n.py:226
+#: ../plugin/controllers/i18n.py:227
 msgid "OSD"
 msgstr "OSD"
 
@@ -1561,11 +1566,11 @@ msgstr "OSD"
 msgid "October"
 msgstr "Október"
 
-#: ../plugin/controllers/i18n.py:376
+#: ../plugin/controllers/i18n.py:377
 msgid "Offset after recording (mins)"
 msgstr "Eltolás felvétel után (percben)"
 
-#: ../plugin/controllers/i18n.py:375
+#: ../plugin/controllers/i18n.py:376
 msgid "Offset before recording (mins)"
 msgstr "Eltolás felvétel előtt (percben)"
 
@@ -1573,23 +1578,23 @@ msgstr "Eltolás felvétel előtt (percben)"
 msgid "On"
 msgstr "On"
 
-#: ../plugin/controllers/i18n.py:397
+#: ../plugin/controllers/i18n.py:398
 msgid "On any service"
 msgstr "Minden szolgáltatásnál"
 
-#: ../plugin/controllers/i18n.py:396
+#: ../plugin/controllers/i18n.py:397
 msgid "On same service"
 msgstr "Ugyanazon a szolgáltatáson"
 
-#: ../plugin/controllers/i18n.py:517
+#: ../plugin/controllers/i18n.py:518
 msgid "Onid"
 msgstr "Onid"
 
-#: ../plugin/controllers/i18n.py:371
+#: ../plugin/controllers/i18n.py:372
 msgid "Only match between dates"
 msgstr "Korlátozza az eseményeket bizonyos időpontokban"
 
-#: ../plugin/controllers/i18n.py:368
+#: ../plugin/controllers/i18n.py:369
 msgid "Only match during timespan"
 msgstr "Egyezés csak az időszak alatt"
 
@@ -1597,7 +1602,7 @@ msgstr "Egyezés csak az időszak alatt"
 msgid "Oops, no results matched your search"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:555
+#: ../plugin/controllers/i18n.py:556
 msgid "Oops..."
 msgstr ""
 
@@ -1605,43 +1610,47 @@ msgstr ""
 msgid "Open Source Web Interface for Linux set-top box"
 msgstr "Nyílt forráskódú Webes felület Linux set-top boxhoz"
 
-#: ../plugin/controllers/i18n.py:219
+#: ../plugin/controllers/i18n.py:220
 msgid "Open Vision"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:222
+#: ../plugin/controllers/i18n.py:223
 msgid "Open Vision RC ID number"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:221
+#: ../plugin/controllers/i18n.py:222
 msgid "Open Vision RC name"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:220
+#: ../plugin/controllers/i18n.py:221
 msgid "Open Vision RC type"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:323
+#: ../plugin/controllers/i18n.py:324
 msgid "Open Vision module"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:324
+#: ../plugin/controllers/i18n.py:325
 msgid "Open Vision revision"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:325
+#: ../plugin/controllers/i18n.py:326
 msgid "Open Vision version"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:227
+#: ../plugin/controllers/i18n.py:228
 msgid "Open in new window"
 msgstr "Megnyitás új ablakban"
+
+#: ../plugin/controllers/i18n.py:219
+msgid "OpenSSL"
+msgstr ""
 
 #: ../plugin/plugin.py:153
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWebInterface engedélyezve"
 
-#: ../plugin/controllers/i18n.py:528
+#: ../plugin/controllers/i18n.py:529
 msgid "OpenWebif Browser Settings"
 msgstr "OpenWebif Böngésző beállítások"
 
@@ -1649,7 +1658,7 @@ msgstr "OpenWebif Böngésző beállítások"
 msgid "OpenWebif Configuration"
 msgstr "OpenWebif konfiguráció"
 
-#: ../plugin/controllers/i18n.py:529
+#: ../plugin/controllers/i18n.py:530
 msgid "OpenWebif Settings"
 msgstr "OpenWebif beállítások"
 
@@ -1659,15 +1668,15 @@ msgid "OpenWebif url:"
 msgstr "OpenWebif URL:"
 
 #: ../plugin/controllers/models/services.py:276
-#: ../plugin/controllers/i18n.py:520
+#: ../plugin/controllers/i18n.py:521
 msgid "Orbital Position"
 msgstr "Orbitális pozíció"
 
-#: ../plugin/controllers/i18n.py:367
+#: ../plugin/controllers/i18n.py:368
 msgid "Override found with alternative service"
 msgstr "A megtalált felülbírálata alternatív szolgáltatással"
 
-#: ../plugin/controllers/i18n.py:552
+#: ../plugin/controllers/i18n.py:553
 msgid "Packages"
 msgstr "Csomagok"
 
@@ -1680,36 +1689,36 @@ msgstr "A szülői felügyelet PIN hibás!"
 msgid "Parent Control is not activated."
 msgstr "A szülői felügyelet nincs aktiválva."
 
-#: ../plugin/controllers/i18n.py:473
+#: ../plugin/controllers/i18n.py:474
 msgid "Parse AutoTimer"
 msgstr "Automatikus időzítő elemzése"
 
-#: ../plugin/controllers/i18n.py:515
+#: ../plugin/controllers/i18n.py:516
 msgid "Pcrpid"
 msgstr "Pcrpid"
 
-#: ../plugin/controllers/i18n.py:228
+#: ../plugin/controllers/i18n.py:229
 msgid "PiP"
 msgstr "PiP"
 
-#: ../plugin/controllers/i18n.py:481
+#: ../plugin/controllers/i18n.py:482
 msgid "Picture in Picture"
 msgstr "Kép a képben"
 
-#: ../plugin/controllers/i18n.py:482
+#: ../plugin/controllers/i18n.py:483
 msgid "Picture in Picture (hidden)"
 msgstr "Kép a képben (rejtett)"
 
-#: ../plugin/controllers/i18n.py:459
+#: ../plugin/controllers/i18n.py:460
 msgid "Plain"
 msgstr "Egyszerű"
 
-#: ../plugin/controllers/i18n.py:229
+#: ../plugin/controllers/i18n.py:230
 #, fuzzy
 msgid "Platform"
 msgstr "Lejátszási lista formátum"
 
-#: ../plugin/controllers/i18n.py:230
+#: ../plugin/controllers/i18n.py:231
 msgid "Playback"
 msgstr "Visszajátszás"
 
@@ -1717,130 +1726,130 @@ msgstr "Visszajátszás"
 msgid "Playback IPTV Streams in browser"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:231
+#: ../plugin/controllers/i18n.py:232
 msgid "Playlist"
 msgstr "Lejátszási lista"
 
-#: ../plugin/controllers/i18n.py:605
+#: ../plugin/controllers/i18n.py:606
 msgid "Playlist format"
 msgstr "Lejátszási lista formátum"
 
-#: ../plugin/controllers/i18n.py:512
+#: ../plugin/controllers/i18n.py:513
 msgid "Pmtpid"
 msgstr "Pmtpid"
 
-#: ../plugin/controllers/i18n.py:232
+#: ../plugin/controllers/i18n.py:233
 msgid "Power Control"
 msgstr "Kikapcsolás"
 
-#: ../plugin/controllers/models/timers.py:782
+#: ../plugin/controllers/models/timers.py:781
 msgid "PowerTimer feature not available"
 msgstr "PowerTimer funkció nem áll rendelkezésre"
 
-#: ../plugin/controllers/i18n.py:434
+#: ../plugin/controllers/i18n.py:435
 msgid "Preview"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:543
+#: ../plugin/controllers/i18n.py:544
 msgid "Primetimes"
 msgstr "Főműsoridő"
 
-#: ../plugin/controllers/i18n.py:233
+#: ../plugin/controllers/i18n.py:234
 msgid "Proc model"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:423
+#: ../plugin/controllers/i18n.py:424
 msgid "Process"
 msgstr "Elemez"
 
-#: ../plugin/controllers/i18n.py:235
+#: ../plugin/controllers/i18n.py:236
 msgid "Provider"
 msgstr "Szolgáltató"
 
-#: ../plugin/controllers/i18n.py:236
+#: ../plugin/controllers/i18n.py:237
 msgid "Providers"
 msgstr "Szolgáltatók"
 
-#: ../plugin/controllers/i18n.py:237
+#: ../plugin/controllers/i18n.py:238
 msgid "Python"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:300
+#: ../plugin/controllers/i18n.py:301
 msgid "RAM benchmark"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:623
+#: ../plugin/controllers/i18n.py:624
 msgid "REC"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:238
+#: ../plugin/controllers/i18n.py:239
 msgid "Radio"
 msgstr "Rádió"
 
-#: ../plugin/controllers/i18n.py:239
+#: ../plugin/controllers/i18n.py:240
 #, fuzzy
 msgid "Reboot STB"
 msgstr "Box újraindítása"
 
-#: ../plugin/controllers/i18n.py:387
+#: ../plugin/controllers/i18n.py:388
 msgid "Record a maximum of # times"
 msgstr "Legfeljebb x alkalommal rögzítsen"
 
-#: ../plugin/controllers/i18n.py:240
+#: ../plugin/controllers/i18n.py:241
 msgid "Recording Status"
 msgstr "Felvétel állapota"
 
-#: ../plugin/controllers/i18n.py:619
+#: ../plugin/controllers/i18n.py:620
 #, fuzzy
 msgid "Recording Type"
 msgstr "Felvétel állapota"
 
-#: ../plugin/controllers/i18n.py:241 ../plugin/controllers/i18n.py:454
+#: ../plugin/controllers/i18n.py:242 ../plugin/controllers/i18n.py:455
 msgid "Refresh"
 msgstr "Frissítés"
 
-#: ../plugin/controllers/i18n.py:243
+#: ../plugin/controllers/i18n.py:244
 msgid "Refresh Timer"
 msgstr "Időzítő frissítése"
 
-#: ../plugin/controllers/i18n.py:242
+#: ../plugin/controllers/i18n.py:243
 msgid "Refresh automatically every"
 msgstr "Automatikus frissítés minden"
 
-#: ../plugin/controllers/i18n.py:485
+#: ../plugin/controllers/i18n.py:486
 msgid "Refresh now"
 msgstr "Frissítse most"
 
-#: ../plugin/controllers/i18n.py:339
+#: ../plugin/controllers/i18n.py:340
 msgid "Reload"
 msgstr "Újratölt"
 
-#: ../plugin/controllers/i18n.py:244
+#: ../plugin/controllers/i18n.py:245
 msgid "Remote"
 msgstr "Távirányító"
 
-#: ../plugin/controllers/i18n.py:568
+#: ../plugin/controllers/i18n.py:569
 msgid "Remove Package"
 msgstr "Csomag eltávolítása"
 
-#: ../plugin/controllers/i18n.py:433
+#: ../plugin/controllers/i18n.py:434
 #, fuzzy
 msgid "Remove filter"
 msgstr "Távirányító"
 
-#: ../plugin/controllers/i18n.py:498 ../plugin/controllers/i18n.py:557
+#: ../plugin/controllers/i18n.py:499 ../plugin/controllers/i18n.py:558
 msgid "Rename"
 msgstr "Átnevezés"
 
-#: ../plugin/controllers/i18n.py:493
+#: ../plugin/controllers/i18n.py:494
 msgid "Rename Bouquet"
 msgstr "Lista átnevezése"
 
-#: ../plugin/controllers/i18n.py:245
+#: ../plugin/controllers/i18n.py:246
 msgid "Rename Recording"
 msgstr "A felvétel átnevezése"
 
-#: ../plugin/controllers/i18n.py:247
+#: ../plugin/controllers/i18n.py:248
 msgid "Repeated"
 msgstr "Megismételt"
 
@@ -1848,33 +1857,33 @@ msgstr "Megismételt"
 msgid "Require client cert for HTTPS"
 msgstr "A kliens tanúsítvány megkövetelése HTTPS protokollhoz"
 
-#: ../plugin/controllers/i18n.py:394
+#: ../plugin/controllers/i18n.py:395
 msgid "Require description to be unique"
 msgstr "A leírás leírása egyedi legyen"
 
-#: ../plugin/controllers/i18n.py:601
+#: ../plugin/controllers/i18n.py:602
 #, fuzzy
 msgid "Reset"
 msgstr "Számlálás visszaállítása"
 
-#: ../plugin/controllers/i18n.py:393
+#: ../plugin/controllers/i18n.py:394
 msgid "Reset count"
 msgstr "Számlálás visszaállítása"
 
-#: ../plugin/controllers/i18n.py:248
+#: ../plugin/controllers/i18n.py:249
 msgid "Restart GUI"
 msgstr "Kezelőfelület újraindítása"
 
-#: ../plugin/controllers/i18n.py:149 ../plugin/controllers/i18n.py:406
+#: ../plugin/controllers/i18n.py:149 ../plugin/controllers/i18n.py:407
 msgid "Restrict to bouquets"
 msgstr "Korlátozza a Bouquets"
 
-#: ../plugin/controllers/i18n.py:407
+#: ../plugin/controllers/i18n.py:408
 #, fuzzy
 msgid "Restrict to channels"
 msgstr "Korlátozza a Bouquets"
 
-#: ../plugin/controllers/i18n.py:338
+#: ../plugin/controllers/i18n.py:339
 msgid "Root"
 msgstr "Root"
 
@@ -1882,7 +1891,7 @@ msgstr "Root"
 msgid "SLAAC"
 msgstr "SLAAC"
 
-#: ../plugin/controllers/i18n.py:273
+#: ../plugin/controllers/i18n.py:274
 msgid "SNR"
 msgstr "SNR"
 
@@ -1910,20 +1919,20 @@ msgstr "Box üzemidő"
 msgid "Sa"
 msgstr "Szombat"
 
-#: ../plugin/controllers/i18n.py:250
+#: ../plugin/controllers/i18n.py:251
 msgid "Safe mode"
 msgstr "Biztonságos mód"
 
-#: ../plugin/controllers/models/movies.py:54
+#: ../plugin/controllers/models/movies.py:55
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:53
 msgid "Sat"
 msgstr "Szombat"
 
-#: ../plugin/controllers/i18n.py:251
+#: ../plugin/controllers/i18n.py:252
 msgid "Satellites"
 msgstr "Műholdak"
 
-#: ../plugin/controllers/i18n.py:252
+#: ../plugin/controllers/i18n.py:253
 msgid "Satfinder"
 msgstr "Műholdkereső"
 
@@ -1931,63 +1940,63 @@ msgstr "Műholdkereső"
 msgid "Saturday"
 msgstr "Szombat"
 
-#: ../plugin/controllers/i18n.py:253 ../plugin/controllers/i18n.py:422
-#: ../plugin/controllers/i18n.py:484 ../plugin/plugin.py:127
+#: ../plugin/controllers/i18n.py:254 ../plugin/controllers/i18n.py:423
+#: ../plugin/controllers/i18n.py:485 ../plugin/plugin.py:127
 msgid "Save"
 msgstr "Mentés"
 
-#: ../plugin/controllers/i18n.py:254
+#: ../plugin/controllers/i18n.py:255
 msgid "Screenshot"
 msgstr "Pillanatkép"
 
-#: ../plugin/controllers/i18n.py:255 ../plugin/controllers/i18n.py:490
+#: ../plugin/controllers/i18n.py:256 ../plugin/controllers/i18n.py:491
 msgid "Search"
 msgstr "Keresés"
 
-#: ../plugin/controllers/i18n.py:256
+#: ../plugin/controllers/i18n.py:257
 msgid "Search CSFD"
 msgstr "Keresés CSFD"
 
-#: ../plugin/controllers/i18n.py:257
+#: ../plugin/controllers/i18n.py:258
 msgid "Search IMDb"
 msgstr "Keresés IMDb"
 
-#: ../plugin/controllers/i18n.py:258
+#: ../plugin/controllers/i18n.py:259
 msgid "Search KinoPoisk"
 msgstr "Keresés KinoPoisk"
 
-#: ../plugin/controllers/i18n.py:259
+#: ../plugin/controllers/i18n.py:260
 #, fuzzy
 msgid "Search TV Guide UK"
 msgstr "Műsorújság"
 
-#: ../plugin/controllers/i18n.py:491
+#: ../plugin/controllers/i18n.py:492
 msgid "Search by name, sd / hd / uhd, or provider"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:361
+#: ../plugin/controllers/i18n.py:362
 #, fuzzy
 msgid "Search strictness"
 msgstr "Keresés KinoPoisk"
 
-#: ../plugin/controllers/i18n.py:347
+#: ../plugin/controllers/i18n.py:348
 #, fuzzy
 msgid "Search type"
 msgstr "Keresés"
 
-#: ../plugin/controllers/i18n.py:581
+#: ../plugin/controllers/i18n.py:582
 msgid "Select IPK file for upload"
 msgstr "Jelölje ki az IPK fájl a feltöltéséhez"
 
-#: ../plugin/controllers/i18n.py:600
+#: ../plugin/controllers/i18n.py:601
 msgid "Select..."
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:261
+#: ../plugin/controllers/i18n.py:262
 msgid "Send Message"
 msgstr "Üzenet küldése"
 
-#: ../plugin/controllers/i18n.py:263
+#: ../plugin/controllers/i18n.py:264
 msgid "Send a Message"
 msgstr "Egy üzenet küldése"
 
@@ -1995,7 +2004,7 @@ msgstr "Egy üzenet küldése"
 msgid "September"
 msgstr "Szeptember"
 
-#: ../plugin/controllers/i18n.py:264
+#: ../plugin/controllers/i18n.py:265
 msgid "Service"
 msgstr "Szolgáltatás"
 
@@ -2059,12 +2068,12 @@ msgstr "A szolgáltatás átnevezése sikeres."
 msgid "Services"
 msgstr "Szolgáltatások"
 
-#: ../plugin/controllers/i18n.py:377
+#: ../plugin/controllers/i18n.py:378
 msgid "Set maximum duration"
 msgstr "Állítsa be a maximális időt"
 
-#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:265
-#: ../plugin/controllers/i18n.py:426
+#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:266
+#: ../plugin/controllers/i18n.py:427
 msgid "Settings"
 msgstr "Beállítások"
 
@@ -2072,15 +2081,15 @@ msgstr "Beállítások"
 msgid "Show CPU benchmark in STB information"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:270
+#: ../plugin/controllers/i18n.py:271
 msgid "Show EPG for"
 msgstr "EPG mutatása ehhez"
 
-#: ../plugin/controllers/i18n.py:268
+#: ../plugin/controllers/i18n.py:269
 msgid "Show Full OpenWebif"
 msgstr "Teljes OpenWebif megjelenítése"
 
-#: ../plugin/controllers/i18n.py:588
+#: ../plugin/controllers/i18n.py:589
 msgid "Show IPTV channels in selection (eg. Autotimer)"
 msgstr ""
 
@@ -2088,12 +2097,12 @@ msgstr ""
 msgid "Show RAM benchmark in STB information"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:223
+#: ../plugin/controllers/i18n.py:224
 #, fuzzy
 msgid "Show STB name in header"
 msgstr "A box nevének mutatása a fejlécben"
 
-#: ../plugin/controllers/i18n.py:617
+#: ../plugin/controllers/i18n.py:618
 #, fuzzy
 msgid "Show all packages"
 msgstr "Frissítse az összes csomagot"
@@ -2102,92 +2111,92 @@ msgstr "Frissítse az összes csomagot"
 msgid "Show box name in header"
 msgstr "A box nevének mutatása a fejlécben"
 
-#: ../plugin/controllers/i18n.py:586
+#: ../plugin/controllers/i18n.py:587
 msgid "Show details"
 msgstr "Részletek mutatása"
 
-#: ../plugin/controllers/i18n.py:269
+#: ../plugin/controllers/i18n.py:270
 msgid "Show full remote"
 msgstr "Teljes távirányító megjelenítése"
 
-#: ../plugin/controllers/i18n.py:447
+#: ../plugin/controllers/i18n.py:448
 msgid "Show in Extensions menu"
 msgstr "Megjelenítés a Bővítmények menüben"
 
-#: ../plugin/controllers/i18n.py:591
+#: ../plugin/controllers/i18n.py:592
 msgid "Show picon background"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:590
+#: ../plugin/controllers/i18n.py:591
 #, fuzzy
 msgid "Show picons"
 msgstr "Részletek mutatása"
 
-#: ../plugin/controllers/i18n.py:525
+#: ../plugin/controllers/i18n.py:526
 msgid "Show picons in channel list"
 msgstr "A Picon megjelenítése a csatorna listában"
 
-#: ../plugin/controllers/i18n.py:587
+#: ../plugin/controllers/i18n.py:588
 msgid "Show service type in channel list"
 msgstr "A csatorna típus megjelenítése a csatornalistában"
 
-#: ../plugin/controllers/i18n.py:271
+#: ../plugin/controllers/i18n.py:272
 msgid "Shutdown"
 msgstr "Kikapcsolás"
 
-#: ../plugin/controllers/i18n.py:518
+#: ../plugin/controllers/i18n.py:519
 msgid "Sid"
 msgstr "Sid"
 
-#: ../plugin/controllers/i18n.py:424
+#: ../plugin/controllers/i18n.py:425
 msgid "Simulate"
 msgstr "Szimulálás"
 
-#: ../plugin/controllers/i18n.py:272
+#: ../plugin/controllers/i18n.py:273
 msgid "Site and sources"
 msgstr "Webhely és források"
 
-#: ../plugin/controllers/i18n.py:613
+#: ../plugin/controllers/i18n.py:614
 msgid "Skins"
 msgstr ""
 
-#: ../plugin/controllers/models/timers.py:866
-#: ../plugin/controllers/models/timers.py:892
-#: ../plugin/controllers/models/timers.py:918
-#: ../plugin/controllers/models/timers.py:947
-#: ../plugin/controllers/models/timers.py:974
-#: ../plugin/controllers/models/timers.py:1056
+#: ../plugin/controllers/models/timers.py:865
+#: ../plugin/controllers/models/timers.py:891
+#: ../plugin/controllers/models/timers.py:917
+#: ../plugin/controllers/models/timers.py:946
+#: ../plugin/controllers/models/timers.py:973
+#: ../plugin/controllers/models/timers.py:1055
 msgid "SleepTimer error"
 msgstr "Elalvás időzítő hiba"
 
-#: ../plugin/controllers/models/timers.py:936
-#: ../plugin/controllers/models/timers.py:1032
-#: ../plugin/controllers/models/timers.py:1051
+#: ../plugin/controllers/models/timers.py:935
+#: ../plugin/controllers/models/timers.py:1031
+#: ../plugin/controllers/models/timers.py:1050
 msgid "Sleeptimer has been disabled"
 msgstr "Az elalvás időzítő le lett tiltva"
 
-#: ../plugin/controllers/models/timers.py:861
-#: ../plugin/controllers/models/timers.py:886
-#: ../plugin/controllers/models/timers.py:913
-#: ../plugin/controllers/models/timers.py:968
+#: ../plugin/controllers/models/timers.py:860
+#: ../plugin/controllers/models/timers.py:885
+#: ../plugin/controllers/models/timers.py:912
+#: ../plugin/controllers/models/timers.py:967
 msgid "Sleeptimer is disabled"
 msgstr "Az elalvás időzítő le van tiltva"
 
-#: ../plugin/controllers/models/timers.py:861
-#: ../plugin/controllers/models/timers.py:886
-#: ../plugin/controllers/models/timers.py:913
-#: ../plugin/controllers/models/timers.py:968
+#: ../plugin/controllers/models/timers.py:860
+#: ../plugin/controllers/models/timers.py:885
+#: ../plugin/controllers/models/timers.py:912
+#: ../plugin/controllers/models/timers.py:967
 msgid "Sleeptimer is enabled"
 msgstr "Az elalvás időzítő engedélyezve van"
 
-#: ../plugin/controllers/models/timers.py:942
-#: ../plugin/controllers/models/timers.py:1032
-#: ../plugin/controllers/models/timers.py:1046
+#: ../plugin/controllers/models/timers.py:941
+#: ../plugin/controllers/models/timers.py:1031
+#: ../plugin/controllers/models/timers.py:1045
 #, python-format
 msgid "Sleeptimer set to %d minutes"
 msgstr "Az elalvás időzítő beállítása %d percben"
 
-#: ../plugin/controllers/i18n.py:274
+#: ../plugin/controllers/i18n.py:275
 msgid "SoC family"
 msgstr ""
 
@@ -2195,7 +2204,7 @@ msgstr ""
 msgid "Soft multiboot"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:275
+#: ../plugin/controllers/i18n.py:276
 msgid "Software"
 msgstr "Szoftver"
 
@@ -2203,23 +2212,23 @@ msgstr "Szoftver"
 msgid "Sorry this page is not yet implemented"
 msgstr "Sajnos ez az oldal még nem működik"
 
-#: ../plugin/controllers/i18n.py:594
+#: ../plugin/controllers/i18n.py:595
 msgid "Sort"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:531
+#: ../plugin/controllers/i18n.py:532
 msgid "Spinner"
 msgstr "Spinner"
 
-#: ../plugin/controllers/i18n.py:519
+#: ../plugin/controllers/i18n.py:520
 msgid "Sref"
 msgstr "Sref"
 
-#: ../plugin/controllers/i18n.py:276
+#: ../plugin/controllers/i18n.py:277
 msgid "Standby"
 msgstr "Készenlét"
 
-#: ../plugin/controllers/i18n.py:277
+#: ../plugin/controllers/i18n.py:278
 msgid "Standby Toggle"
 msgstr "Készenléti módba váltás"
 
@@ -2227,27 +2236,27 @@ msgstr "Készenléti módba váltás"
 msgid "Start"
 msgstr "Start"
 
-#: ../plugin/controllers/i18n.py:280
+#: ../plugin/controllers/i18n.py:281
 msgid "Start Instant Record"
 msgstr "Azonnali felvétel indítása"
 
-#: ../plugin/controllers/i18n.py:279
+#: ../plugin/controllers/i18n.py:280
 msgid "Start time is after end time"
 msgstr "A kezdési idő a befejező idő után van"
 
-#: ../plugin/controllers/i18n.py:580
+#: ../plugin/controllers/i18n.py:581
 msgid "Start typing..."
 msgstr "GÉPELÉS KEZDÉSE"
 
-#: ../plugin/controllers/i18n.py:435
+#: ../plugin/controllers/i18n.py:436
 msgid "State"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:281
+#: ../plugin/controllers/i18n.py:282
 msgid "Stream"
 msgstr "Stream"
 
-#: ../plugin/controllers/i18n.py:611
+#: ../plugin/controllers/i18n.py:612
 msgid "Stream Clients"
 msgstr "Streamelő kliensek"
 
@@ -2260,19 +2269,19 @@ msgstr "Streamelő kliensek"
 msgid "Su"
 msgstr "Vasárnap"
 
-#: ../plugin/controllers/i18n.py:599
+#: ../plugin/controllers/i18n.py:600
 msgid "Subdirectories"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:282
+#: ../plugin/controllers/i18n.py:283
 msgid "Subnet mask"
 msgstr "Alhálózati maszk"
 
-#: ../plugin/controllers/i18n.py:283
+#: ../plugin/controllers/i18n.py:284
 msgid "Subservices"
 msgstr "Részszolgáltatásokat"
 
-#: ../plugin/controllers/models/movies.py:54
+#: ../plugin/controllers/models/movies.py:55
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:47
 msgid "Sun"
 msgstr "Vasárnap"
@@ -2281,37 +2290,37 @@ msgstr "Vasárnap"
 msgid "Sunday"
 msgstr "Vasárnap"
 
-#: ../plugin/controllers/models/info.py:367
-#: ../plugin/controllers/models/info.py:379
-#: ../plugin/controllers/models/info.py:381
+#: ../plugin/controllers/models/info.py:368
+#: ../plugin/controllers/models/info.py:380
+#: ../plugin/controllers/models/info.py:382
 msgid "TB"
 msgstr "TB"
 
-#: ../plugin/controllers/i18n.py:312
+#: ../plugin/controllers/i18n.py:313
 msgid "TV"
 msgstr "TV"
 
-#: ../plugin/controllers/i18n.py:535
+#: ../plugin/controllers/i18n.py:536
 msgid "TV Guide"
 msgstr "Műsorújság"
 
-#: ../plugin/controllers/i18n.py:313
+#: ../plugin/controllers/i18n.py:314
 msgid "TV Multi EPG"
 msgstr "TV Több EPG"
 
-#: ../plugin/controllers/i18n.py:284 ../plugin/controllers/i18n.py:400
+#: ../plugin/controllers/i18n.py:285 ../plugin/controllers/i18n.py:401
 msgid "Tags"
 msgstr "Címkék"
 
-#: ../plugin/controllers/i18n.py:285
+#: ../plugin/controllers/i18n.py:286
 msgid "Teletext"
 msgstr "Teletext"
 
-#: ../plugin/controllers/i18n.py:286
+#: ../plugin/controllers/i18n.py:287
 msgid "Television"
 msgstr "Televízió"
 
-#: ../plugin/controllers/i18n.py:287
+#: ../plugin/controllers/i18n.py:288
 msgid "Template Engine"
 msgstr "Sablon motor"
 
@@ -2323,7 +2332,7 @@ msgstr "Terminál"
 msgid "Terrestrial"
 msgstr "Földi"
 
-#: ../plugin/controllers/i18n.py:288
+#: ../plugin/controllers/i18n.py:289
 msgid "Text"
 msgstr "Szöveg"
 
@@ -2331,7 +2340,7 @@ msgstr "Szöveg"
 msgid "Th"
 msgstr "Csütörtök"
 
-#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1567
+#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1568
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "A paraméter '%s' nem lehet üres"
@@ -2340,27 +2349,27 @@ msgstr "A paraméter '%s' nem lehet üres"
 msgid "The parameter 'command' must be a number"
 msgstr "A 'parancs' paraméternek számnak kell lennie"
 
-#: ../plugin/controllers/models/timers.py:548
+#: ../plugin/controllers/models/timers.py:547
 #, python-format
 msgid "The timer '%s' has been %s successfully"
 msgstr "Az időzítő '%s' sikeres %s volt"
 
-#: ../plugin/controllers/models/timers.py:498
-#: ../plugin/controllers/models/timers.py:504
+#: ../plugin/controllers/models/timers.py:497
+#: ../plugin/controllers/models/timers.py:503
 #, python-format
 msgid "The timer '%s' has been deleted successfully"
 msgstr "Az '%s' időzítő sikeresen törölve lett"
 
-#: ../plugin/controllers/models/timers.py:540
+#: ../plugin/controllers/models/timers.py:539
 #, python-format
 msgid "The timer '%s' now recorded! Not disabled!"
 msgstr "Az '%s' időzítő éppen felvételt készít! Nem lehet tiltani!"
 
-#: ../plugin/controllers/i18n.py:530
+#: ../plugin/controllers/i18n.py:531
 msgid "Theme"
 msgstr "Téma"
 
-#: ../plugin/controllers/i18n.py:315 ../plugin/plugin.py:159
+#: ../plugin/controllers/i18n.py:316 ../plugin/plugin.py:159
 #, fuzzy
 msgid "Theme mode"
 msgstr "Téma"
@@ -2369,7 +2378,7 @@ msgstr "Téma"
 msgid "This service can not be added."
 msgstr "Szolgáltatást nem lehet hozzáadni."
 
-#: ../plugin/controllers/models/movies.py:54
+#: ../plugin/controllers/models/movies.py:55
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:51
 msgid "Thu"
 msgstr "Csütörtök"
@@ -2378,106 +2387,106 @@ msgstr "Csütörtök"
 msgid "Thursday"
 msgstr "Csütörtök"
 
-#: ../plugin/controllers/i18n.py:290
+#: ../plugin/controllers/i18n.py:291
 msgid "Time"
 msgstr "Idő"
 
-#: ../plugin/controllers/i18n.py:536
+#: ../plugin/controllers/i18n.py:537
 msgid "Timeline"
 msgstr "Idővonal"
 
-#: ../plugin/controllers/i18n.py:291
+#: ../plugin/controllers/i18n.py:292
 msgid "Timeout"
 msgstr "Időtúllépés"
 
-#: ../plugin/controllers/i18n.py:296
+#: ../plugin/controllers/i18n.py:297
 msgid "Timer"
 msgstr "Időzítő"
 
-#: ../plugin/controllers/models/timers.py:344
+#: ../plugin/controllers/models/timers.py:343
 #, python-format
 msgid "Timer '%s' added"
 msgstr "Időzítő '%s' hozzáadva"
 
-#: ../plugin/controllers/models/timers.py:534
+#: ../plugin/controllers/models/timers.py:533
 #, python-format
 msgid "Timer '%s' already exists!"
 msgstr "Az időzítő '%s' már létezik!"
 
-#: ../plugin/controllers/models/timers.py:460
+#: ../plugin/controllers/models/timers.py:459
 #, python-format
 msgid "Timer '%s' changed"
 msgstr "Időzítő '%s' megváltozott"
 
-#: ../plugin/controllers/models/timers.py:528
+#: ../plugin/controllers/models/timers.py:527
 #, python-format
 msgid "Timer '%s' not enabled while Conflict"
 msgstr "A '%s' időzítő nem engedélyezett ütközés miatt"
 
-#: ../plugin/controllers/models/timers.py:479
+#: ../plugin/controllers/models/timers.py:478
 #, python-format
 msgid "Timer '%s' not saved while Conflict"
 msgstr "Az '%s' időzítő nem menthető ütközés miatt"
 
-#: ../plugin/controllers/i18n.py:523
+#: ../plugin/controllers/i18n.py:524
 msgid "Timer Added"
 msgstr "Időzítés hozzáadva"
 
-#: ../plugin/controllers/i18n.py:292
+#: ../plugin/controllers/i18n.py:293
 msgid "Timer added"
 msgstr "Időzítés hozzáadva"
 
-#: ../plugin/controllers/models/timers.py:620
+#: ../plugin/controllers/models/timers.py:619
 msgid "Timer conflict detected! Not recording!"
 msgstr "Időzítő ütközés észlelhető! Nem lesz felvétel!"
 
-#: ../plugin/controllers/i18n.py:364
+#: ../plugin/controllers/i18n.py:365
 msgid "Timer type"
 msgstr "Időzítő típusa"
 
-#: ../plugin/controllers/models/timers.py:570
+#: ../plugin/controllers/models/timers.py:569
 msgid "TimerList has been saved"
 msgstr "Az időzítő lista mentésre került"
 
-#: ../plugin/controllers/i18n.py:293
+#: ../plugin/controllers/i18n.py:294
 msgid "Timerlist"
 msgstr "Idõzítõ lista"
 
-#: ../plugin/controllers/i18n.py:297 ../plugin/controllers/i18n.py:425
+#: ../plugin/controllers/i18n.py:298 ../plugin/controllers/i18n.py:426
 msgid "Timers"
 msgstr "Időzítők"
 
-#: ../plugin/controllers/i18n.py:298
+#: ../plugin/controllers/i18n.py:299
 msgid "Title"
 msgstr "Cím"
 
-#: ../plugin/controllers/i18n.py:373
+#: ../plugin/controllers/i18n.py:374
 msgid "To date"
 msgstr "Nem hamarabb, mint"
 
-#: ../plugin/controllers/models/movies.py:57
+#: ../plugin/controllers/models/movies.py:58
 #: ../plugin/controllers/models/timers.py:48
 msgid "Today"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:302
+#: ../plugin/controllers/i18n.py:303
 msgid "Transcode"
 msgstr "Átkódolás"
 
-#: ../plugin/controllers/i18n.py:303
+#: ../plugin/controllers/i18n.py:304
 #, fuzzy
 msgid "Transcoding"
 msgstr "Átkódolás"
 
-#: ../plugin/controllers/i18n.py:336
+#: ../plugin/controllers/i18n.py:337
 msgid "Translation to Spanish"
 msgstr "Fordítás spanyolra"
 
-#: ../plugin/controllers/i18n.py:445
+#: ../plugin/controllers/i18n.py:446
 msgid "Try guessing"
 msgstr "Próbálja kitalálni"
 
-#: ../plugin/controllers/i18n.py:516
+#: ../plugin/controllers/i18n.py:517
 msgid "Tsid"
 msgstr "Tsid"
 
@@ -2485,7 +2494,7 @@ msgstr "Tsid"
 msgid "Tu"
 msgstr "Kedd"
 
-#: ../plugin/controllers/models/movies.py:54
+#: ../plugin/controllers/models/movies.py:55
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:49
 msgid "Tue"
 msgstr "Kedd"
@@ -2494,39 +2503,39 @@ msgstr "Kedd"
 msgid "Tuesday"
 msgstr "Kedd"
 
-#: ../plugin/controllers/i18n.py:304
+#: ../plugin/controllers/i18n.py:305
 msgid "Tuner Bit Error Rate BER"
 msgstr "Tuner bithibaarány BER"
 
-#: ../plugin/controllers/i18n.py:305
+#: ../plugin/controllers/i18n.py:306
 msgid "Tuner Number"
 msgstr "Tuner száma"
 
-#: ../plugin/controllers/i18n.py:306
+#: ../plugin/controllers/i18n.py:307
 msgid "Tuner Signal"
 msgstr "Tuner jel"
 
-#: ../plugin/controllers/i18n.py:309
+#: ../plugin/controllers/i18n.py:310
 msgid "Tuner Signal Power AGC"
 msgstr "Tuner jelerősség AGC"
 
-#: ../plugin/controllers/i18n.py:307
+#: ../plugin/controllers/i18n.py:308
 msgid "Tuner Signal Quality SNR"
 msgstr "Tuner jel minősége SNR"
 
-#: ../plugin/controllers/i18n.py:308
+#: ../plugin/controllers/i18n.py:309
 msgid "Tuner Signal Quality SNR_DB"
 msgstr "Tuner jel minősége SNR_DB"
 
-#: ../plugin/controllers/i18n.py:310
+#: ../plugin/controllers/i18n.py:311
 msgid "Tuner Type"
 msgstr "Tuner típusa"
 
-#: ../plugin/controllers/i18n.py:311
+#: ../plugin/controllers/i18n.py:312
 msgid "Tuners"
 msgstr "Tunerek"
 
-#: ../plugin/controllers/i18n.py:314
+#: ../plugin/controllers/i18n.py:315
 msgid "Type"
 msgstr "Típus"
 
@@ -2535,56 +2544,56 @@ msgstr "Típus"
 msgid "Unknown Volume command %s"
 msgstr "Ismeretlen Hangerő parancs %s"
 
-#: ../plugin/controllers/models/timers.py:715
+#: ../plugin/controllers/models/timers.py:714
 #, python-format
 msgid "Unknown command: '%s'"
 msgstr "Ismeretlen parancs: '%s'"
 
-#: ../plugin/controllers/i18n.py:316
+#: ../plugin/controllers/i18n.py:317
 msgid "Upcoming Events"
 msgstr "Közelgő események"
 
-#: ../plugin/controllers/i18n.py:571
+#: ../plugin/controllers/i18n.py:572
 msgid "Update"
 msgstr "Frissítés"
 
-#: ../plugin/controllers/i18n.py:569
+#: ../plugin/controllers/i18n.py:570
 msgid "Update Package"
 msgstr "Csomag frissítése"
 
-#: ../plugin/controllers/i18n.py:574
+#: ../plugin/controllers/i18n.py:575
 msgid "Update from feed"
 msgstr "Frissítés a feedből"
 
-#: ../plugin/controllers/i18n.py:575
+#: ../plugin/controllers/i18n.py:576
 msgid "Upgrade all packages"
 msgstr "Frissítse az összes csomagot"
 
-#: ../plugin/controllers/i18n.py:584
+#: ../plugin/controllers/i18n.py:585
 msgid "Upload File Error"
 msgstr "Hiba a fájl feltöltésekor"
 
-#: ../plugin/controllers/i18n.py:583
+#: ../plugin/controllers/i18n.py:584
 msgid "Upload package"
 msgstr "Csomag feltöltése"
 
-#: ../plugin/controllers/i18n.py:582
+#: ../plugin/controllers/i18n.py:583
 msgid "Uploaded Files"
 msgstr "Feltöltött fájlok"
 
-#: ../plugin/controllers/i18n.py:589
+#: ../plugin/controllers/i18n.py:590
 msgid "Use Channelname for screenshots"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:399
+#: ../plugin/controllers/i18n.py:400
 msgid "Use a custom location"
 msgstr "Használjon egyedi helyet"
 
-#: ../plugin/controllers/i18n.py:606
+#: ../plugin/controllers/i18n.py:607
 msgid "Use as PiP if possible"
 msgstr "Használat PiP módban (ha lehetséges)"
 
-#: ../plugin/controllers/i18n.py:614
+#: ../plugin/controllers/i18n.py:615
 #, fuzzy
 msgid "Use classic interface"
 msgstr "Az új kinézet használata"
@@ -2594,7 +2603,7 @@ msgstr "Az új kinézet használata"
 msgid "Use custom Color"
 msgstr "Használjon egyedi helyet"
 
-#: ../plugin/controllers/i18n.py:224
+#: ../plugin/controllers/i18n.py:225
 #, fuzzy
 msgid "Use custom STB name"
 msgstr "Használjon egyedi box nevet"
@@ -2603,81 +2612,81 @@ msgstr "Használjon egyedi box nevet"
 msgid "Use custom box name"
 msgstr "Használjon egyedi box nevet"
 
-#: ../plugin/controllers/i18n.py:554
+#: ../plugin/controllers/i18n.py:555
 #, fuzzy
 msgid "Use modern design"
 msgstr "Az új kinézet használata"
 
-#: ../plugin/controllers/i18n.py:615 ../plugin/plugin.py:157
+#: ../plugin/controllers/i18n.py:616 ../plugin/plugin.py:157
 msgid "Use modern interface"
 msgstr "Az új kinézet használata"
 
-#: ../plugin/controllers/i18n.py:616
+#: ../plugin/controllers/i18n.py:617
 #, fuzzy
 msgid "Use old remote"
 msgstr "Teljes táviránytó elrejtése"
 
-#: ../plugin/controllers/i18n.py:326
+#: ../plugin/controllers/i18n.py:327
 msgid "VPS"
 msgstr "VPS"
 
-#: ../plugin/controllers/models/timers.py:1090
+#: ../plugin/controllers/models/timers.py:1089
 msgid "VPS plugin not found"
 msgstr "A VPS bővítmény nem található"
 
-#: ../plugin/controllers/i18n.py:318
+#: ../plugin/controllers/i18n.py:319
 msgid "Version"
 msgstr "Verzió"
 
-#: ../plugin/controllers/i18n.py:319
+#: ../plugin/controllers/i18n.py:320
 msgid "Video"
 msgstr "Videó"
 
-#: ../plugin/controllers/i18n.py:320
+#: ../plugin/controllers/i18n.py:321
 msgid "Video Height"
 msgstr "Video magassága"
 
-#: ../plugin/controllers/i18n.py:321
+#: ../plugin/controllers/i18n.py:322
 msgid "Video Wide"
 msgstr "Videó széles"
 
-#: ../plugin/controllers/i18n.py:322
+#: ../plugin/controllers/i18n.py:323
 msgid "Video Width"
 msgstr "Videó szélessége"
 
-#: ../plugin/controllers/i18n.py:480
+#: ../plugin/controllers/i18n.py:481
 msgid "Visibly"
 msgstr "Láthatóan"
 
-#: ../plugin/controllers/i18n.py:327
+#: ../plugin/controllers/i18n.py:328
 msgid "Volume"
 msgstr "Hangerő"
 
-#: ../plugin/controllers/i18n.py:328
+#: ../plugin/controllers/i18n.py:329
 msgid "Volume Control"
 msgstr "Hangerőszabályozó"
 
-#: ../plugin/controllers/i18n.py:514
+#: ../plugin/controllers/i18n.py:515
 msgid "Vpid"
 msgstr "Vpid"
 
-#: ../plugin/controllers/models/info.py:619
+#: ../plugin/controllers/models/info.py:620
 msgid "W"
 msgstr "W"
 
-#: ../plugin/controllers/i18n.py:262
+#: ../plugin/controllers/i18n.py:263
 msgid "Waiting for answer ..."
 msgstr "Várakozás a válaszra ..."
 
-#: ../plugin/controllers/i18n.py:278
+#: ../plugin/controllers/i18n.py:279
 msgid "Wake Up"
 msgstr "Ébresztés"
 
-#: ../plugin/controllers/i18n.py:471
+#: ../plugin/controllers/i18n.py:472
 msgid "Wakeup"
 msgstr "Ébresztés"
 
-#: ../plugin/controllers/i18n.py:330
+#: ../plugin/controllers/i18n.py:331
 msgid "Warning"
 msgstr "Figyelmeztetés"
 
@@ -2685,11 +2694,11 @@ msgstr "Figyelmeztetés"
 msgid "We"
 msgstr "Szerda"
 
-#: ../plugin/controllers/i18n.py:537
+#: ../plugin/controllers/i18n.py:538
 msgid "Web TV"
 msgstr "Web TV"
 
-#: ../plugin/controllers/models/movies.py:54
+#: ../plugin/controllers/models/movies.py:55
 #: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:50
 msgid "Wed"
 msgstr "Szerda"
@@ -2698,11 +2707,11 @@ msgstr "Szerda"
 msgid "Wednesday"
 msgstr "Szerda"
 
-#: ../plugin/controllers/i18n.py:392
+#: ../plugin/controllers/i18n.py:393
 msgid "Weekly (Monday)"
 msgstr "Hetente (hétfő)"
 
-#: ../plugin/controllers/i18n.py:391
+#: ../plugin/controllers/i18n.py:392
 msgid "Weekly (Sunday)"
 msgstr "Hetente (vasárnap)"
 
@@ -2710,11 +2719,11 @@ msgstr "Hetente (vasárnap)"
 msgid "Without auth only local access is allowed!"
 msgstr "Hitelesítés nélkül csak helyi hozzáférés engedélyezett!"
 
-#: ../plugin/controllers/i18n.py:460
+#: ../plugin/controllers/i18n.py:461
 msgid "Wizard"
 msgstr "Varázsló"
 
-#: ../plugin/controllers/i18n.py:556
+#: ../plugin/controllers/i18n.py:557
 msgid "Would you like to save your changes?"
 msgstr ""
 
@@ -2723,50 +2732,50 @@ msgstr ""
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Helytelen paraméter formátum 'set=%s'. Use set=set15 "
 
-#: ../plugin/controllers/i18n.py:603
+#: ../plugin/controllers/i18n.py:604
 msgid "YYYY-MM-DD"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:264 ../plugin/controllers/i18n.py:559
-#: ../plugin/controllers/i18n.py:576
+#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:560
+#: ../plugin/controllers/i18n.py:577
 msgid "Yes"
 msgstr "Igen"
 
-#: ../plugin/controllers/i18n.py:331
+#: ../plugin/controllers/i18n.py:332
 msgid "Yes/No"
 msgstr "Igen/nem"
 
-#: ../plugin/controllers/models/movies.py:59
+#: ../plugin/controllers/models/movies.py:60
 #: ../plugin/controllers/models/timers.py:51
 msgid "Yesterday"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:332
+#: ../plugin/controllers/i18n.py:333
 msgid "Zap"
 msgstr "Ugrás"
 
-#: ../plugin/controllers/i18n.py:511
+#: ../plugin/controllers/i18n.py:512
 msgid "Zap & Record"
 msgstr "Felvétel+ugrás"
 
-#: ../plugin/controllers/i18n.py:333
+#: ../plugin/controllers/i18n.py:334
 msgid "Zap before streaming"
 msgstr "ugrás stream előtt"
 
-#: ../plugin/controllers/i18n.py:334
+#: ../plugin/controllers/i18n.py:335
 msgid "Zap to"
 msgstr "Ugrás ide"
 
-#: ../plugin/controllers/i18n.py:335
+#: ../plugin/controllers/i18n.py:336
 msgid "Zapped to"
 msgstr "Ugrás megtörtént"
 
-#: ../plugin/controllers/i18n.py:437
+#: ../plugin/controllers/i18n.py:438
 #, fuzzy
 msgid "any time"
 msgstr "Időzítő hozzáadása"
 
-#: ../plugin/controllers/i18n.py:380
+#: ../plugin/controllers/i18n.py:381
 msgid "auto"
 msgstr "auto"
 
@@ -2774,25 +2783,25 @@ msgstr "auto"
 msgid "box_ip"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:363
+#: ../plugin/controllers/i18n.py:364
 #, fuzzy
 msgid "case-insensitive"
 msgstr "Szigorúság keresése"
 
-#: ../plugin/controllers/i18n.py:362
+#: ../plugin/controllers/i18n.py:363
 #, fuzzy
 msgid "case-sensitive"
 msgstr "Szigorúság keresése"
 
-#: ../plugin/controllers/i18n.py:621
+#: ../plugin/controllers/i18n.py:622
 msgid "descramble and record ecm"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:414
+#: ../plugin/controllers/i18n.py:415
 msgid "description contains"
 msgstr "a leírásban"
 
-#: ../plugin/controllers/i18n.py:350
+#: ../plugin/controllers/i18n.py:351
 #, fuzzy
 msgid "description match"
 msgstr "Leírás"
@@ -2801,23 +2810,23 @@ msgstr "Leírás"
 msgid "disabled"
 msgstr "leiltva"
 
-#: ../plugin/controllers/i18n.py:381
+#: ../plugin/controllers/i18n.py:382
 msgid "do nothing"
 msgstr "ne csináljon semmit"
 
-#: ../plugin/controllers/i18n.py:622
+#: ../plugin/controllers/i18n.py:623
 msgid "don't descramble, record ecm"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:522
+#: ../plugin/controllers/i18n.py:523
 msgid "error! Loading Page"
 msgstr "hiba! Oldal betöltése"
 
-#: ../plugin/controllers/i18n.py:349
+#: ../plugin/controllers/i18n.py:350
 msgid "exact title match"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:359
+#: ../plugin/controllers/i18n.py:360
 msgid "favourite desc match"
 msgstr ""
 
@@ -2825,11 +2834,11 @@ msgstr ""
 msgid "finished"
 msgstr "befejezett"
 
-#: ../plugin/controllers/i18n.py:383
+#: ../plugin/controllers/i18n.py:384
 msgid "go to deep standby"
 msgstr "mély készenlétbe kapcsolás"
 
-#: ../plugin/controllers/i18n.py:382
+#: ../plugin/controllers/i18n.py:383
 msgid "go to standby"
 msgstr "készenléti állapotba kapcsolás"
 
@@ -2839,9 +2848,9 @@ msgstr "óra"
 
 #: ../plugin/controllers/models/info.py:243
 #: ../plugin/controllers/models/info.py:246
-#: ../plugin/controllers/models/movies.py:282
-#: ../plugin/controllers/models/movies.py:412
-#: ../plugin/controllers/models/movies.py:832
+#: ../plugin/controllers/models/movies.py:283
+#: ../plugin/controllers/models/movies.py:413
+#: ../plugin/controllers/models/movies.py:841
 msgid "kB"
 msgstr "kB"
 
@@ -2870,15 +2879,15 @@ msgstr "nincs elérhető leírás"
 msgid "none/IPv4-only network"
 msgstr "egyik sem/Csak IPv4-alapú hálózat"
 
-#: ../plugin/controllers/i18n.py:620
+#: ../plugin/controllers/i18n.py:621
 msgid "normal"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:416
+#: ../plugin/controllers/i18n.py:417
 msgid "on day"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:415
+#: ../plugin/controllers/i18n.py:416
 msgid "on weekday"
 msgstr "hétköznap"
 
@@ -2886,60 +2895,60 @@ msgstr "hétköznap"
 msgid "one two three four unknown command"
 msgstr "egy kettő három négy ismeretlen parancs"
 
-#: ../plugin/controllers/i18n.py:348
+#: ../plugin/controllers/i18n.py:349
 msgid "partial title match"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:430
+#: ../plugin/controllers/models/info.py:431
 msgid "r/o"
 msgstr "r/o"
 
-#: ../plugin/controllers/models/info.py:426
+#: ../plugin/controllers/models/info.py:427
 msgid "r/w"
 msgstr "r/w"
 
-#: ../plugin/controllers/i18n.py:365
+#: ../plugin/controllers/i18n.py:366
 msgid "record"
 msgstr "felvétel"
 
-#: ../plugin/controllers/i18n.py:360
+#: ../plugin/controllers/i18n.py:361
 msgid "regex match (experimental)"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:483
+#: ../plugin/controllers/models/movies.py:484
 msgid "remove"
 msgstr "eltávolít"
 
-#: ../plugin/controllers/i18n.py:249
+#: ../plugin/controllers/i18n.py:250
 msgid "running"
 msgstr "futtatás"
 
-#: ../plugin/controllers/i18n.py:260
+#: ../plugin/controllers/i18n.py:261
 msgid "seconds"
 msgstr "másodperc"
 
-#: ../plugin/controllers/i18n.py:404
+#: ../plugin/controllers/i18n.py:405
 msgid "select bouquets"
 msgstr "válasszon listát"
 
-#: ../plugin/controllers/i18n.py:403
+#: ../plugin/controllers/i18n.py:404
 msgid "select channels"
 msgstr "válasszon csatornát"
 
-#: ../plugin/controllers/i18n.py:401
+#: ../plugin/controllers/i18n.py:402
 msgid "select tags"
 msgstr "válasszon Címkét"
 
-#: ../plugin/controllers/i18n.py:413
+#: ../plugin/controllers/i18n.py:414
 msgid "short description contains"
 msgstr "a rövid leírásban"
 
-#: ../plugin/controllers/i18n.py:355 ../plugin/controllers/i18n.py:356
+#: ../plugin/controllers/i18n.py:356 ../plugin/controllers/i18n.py:357
 #, fuzzy
 msgid "short description match"
 msgstr "rövid leírás egyezés"
 
-#: ../plugin/controllers/i18n.py:379
+#: ../plugin/controllers/i18n.py:380
 msgid "standard"
 msgstr "alapértelmezett"
 
@@ -2949,33 +2958,33 @@ msgstr "alapértelmezett"
 msgid "static"
 msgstr "statikus"
 
-#: ../plugin/controllers/i18n.py:289
+#: ../plugin/controllers/i18n.py:290
 msgid "this service is protected by a parental control pin"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:412
+#: ../plugin/controllers/i18n.py:413
 msgid "title contains"
 msgstr "a címben"
 
-#: ../plugin/controllers/i18n.py:358
+#: ../plugin/controllers/i18n.py:359
 msgid "title ends with"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:351 ../plugin/controllers/i18n.py:352
+#: ../plugin/controllers/i18n.py:352 ../plugin/controllers/i18n.py:353
 #, fuzzy
 msgid "title or description match"
 msgstr "cím vagy leírás egyezés"
 
-#: ../plugin/controllers/i18n.py:353 ../plugin/controllers/i18n.py:354
+#: ../plugin/controllers/i18n.py:354 ../plugin/controllers/i18n.py:355
 #, fuzzy
 msgid "title or short description match"
 msgstr "cím vagy rövid leírás egyezés"
 
-#: ../plugin/controllers/i18n.py:357
+#: ../plugin/controllers/i18n.py:358
 msgid "title starts with"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:301
+#: ../plugin/controllers/i18n.py:302
 msgid "transcoded"
 msgstr "átkódolt"
 
@@ -2989,23 +2998,23 @@ msgstr "a %s típus nem számjegy"
 msgid "unknown"
 msgstr "ismeretlen"
 
-#: ../plugin/controllers/i18n.py:542
+#: ../plugin/controllers/i18n.py:543
 msgid "using"
 msgstr "használva"
 
-#: ../plugin/controllers/i18n.py:510
+#: ../plugin/controllers/i18n.py:511
 msgid "via"
 msgstr "által"
 
-#: ../plugin/controllers/i18n.py:329
+#: ../plugin/controllers/i18n.py:330
 msgid "waiting"
 msgstr "várakozás"
 
-#: ../plugin/controllers/i18n.py:418
+#: ../plugin/controllers/i18n.py:419
 msgid "weekday"
 msgstr "Hétköznap"
 
-#: ../plugin/controllers/i18n.py:417
+#: ../plugin/controllers/i18n.py:418
 msgid "weekend"
 msgstr "Hétvége"
 
@@ -3013,6 +3022,6 @@ msgstr "Hétvége"
 msgid "wrong filetype"
 msgstr "rossz fájltípus"
 
-#: ../plugin/controllers/i18n.py:366
+#: ../plugin/controllers/i18n.py:367
 msgid "zap"
 msgstr "ugrás"
