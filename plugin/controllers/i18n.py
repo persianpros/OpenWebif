@@ -530,6 +530,7 @@ tstrings = {
 	'tstr_ow_settings': _("OpenWebif Settings"),
 	'tstr_theme': _("Theme"),
 	'tstr_spinner': _("Spinner"),
+	'tstr_smallremote': _("Small remote layout"),
 	'display_duration_s': _("Display duration (s)"),
 
 	'display_mode': _("Display Mode"),
@@ -614,7 +615,6 @@ tstrings = {
 	'skins': _("Skins"),
 	'use_classic_design': _("Use classic interface"),
 	'use_modern_design': _("Use modern interface"),
-	'use_oldremote': _("Use old remote"),
 	'showallpackages': _("Show all packages"),
 
 	'recordingtype': _("Recording Type"),

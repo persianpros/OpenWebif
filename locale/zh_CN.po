@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-12 22:55+0330\n"
+"POT-Creation-Date: 2021-12-19 12:16+0330\n"
 "PO-Revision-Date: 2021-12-02 19:58+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/zh_Hans/>\n"
@@ -69,6 +69,11 @@ msgstr "%s %s 已加锁."
 msgid "%s / %s"
 msgstr "%s / %s"
 
+#: ../plugin/controllers/ajax.py:258
+#, python-format
+msgid "%s Style"
+msgstr ""
+
 #: ../plugin/controllers/models/info.py:247
 #: ../plugin/controllers/models/info.py:398
 #, python-format
@@ -87,7 +92,7 @@ msgstr "（在几分钟后）"
 msgid "A filename is required"
 msgstr "必须有文件名"
 
-#: ../plugin/controllers/i18n.py:563
+#: ../plugin/controllers/i18n.py:564
 msgid "A value is required"
 msgstr "必须填写"
 
@@ -168,7 +173,7 @@ msgstr "向录制添加标记"
 msgid "Added %s to alternative service %s."
 msgstr "已将 %s 添加到备用频道 %s."
 
-#: ../plugin/controllers/i18n.py:609
+#: ../plugin/controllers/i18n.py:610
 msgid "Adjust recording time to real event time"
 msgstr "将录制时间调整为实时事件时间"
 
@@ -197,7 +202,7 @@ msgstr "已删除所有替代频道."
 msgid "Allow IPK Upload"
 msgstr "允许IPK上传"
 
-#: ../plugin/controllers/i18n.py:608
+#: ../plugin/controllers/i18n.py:609
 msgid "Allow duplicates"
 msgstr "允许重复"
 
@@ -335,11 +340,11 @@ msgstr "\"事件后\" 时间跨度开始"
 msgid "Beginning of timespan"
 msgstr "开始时间"
 
-#: ../plugin/controllers/i18n.py:548
+#: ../plugin/controllers/i18n.py:549
 msgid "Bookmark"
 msgstr "书签"
 
-#: ../plugin/controllers/i18n.py:547
+#: ../plugin/controllers/i18n.py:548
 msgid "Bookmarks"
 msgstr "书签"
 
@@ -451,7 +456,7 @@ msgstr ""
 msgid "Cable"
 msgstr "有线"
 
-#: ../plugin/controllers/i18n.py:539
+#: ../plugin/controllers/i18n.py:540
 msgid "Calendar Week"
 msgstr "本周"
 
@@ -459,7 +464,7 @@ msgstr "本周"
 msgid "Cancel"
 msgstr "取消"
 
-#: ../plugin/controllers/i18n.py:561
+#: ../plugin/controllers/i18n.py:562
 msgid "Cancelled"
 msgstr "取消"
 
@@ -491,7 +496,7 @@ msgstr "清除定时器"
 msgid "Close"
 msgstr "关闭"
 
-#: ../plugin/controllers/i18n.py:564
+#: ../plugin/controllers/i18n.py:565
 msgid "Common Settings"
 msgstr "常用设置"
 
@@ -499,7 +504,7 @@ msgstr "常用设置"
 msgid "Compiled by"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:613
+#: ../plugin/controllers/i18n.py:614
 msgid "Config"
 msgstr "配置"
 
@@ -568,11 +573,11 @@ msgstr ""
 msgid "Date"
 msgstr "日期"
 
-#: ../plugin/controllers/i18n.py:599
+#: ../plugin/controllers/i18n.py:600
 msgid "Date (newest)"
 msgstr "日期(最新)"
 
-#: ../plugin/controllers/i18n.py:598
+#: ../plugin/controllers/i18n.py:599
 msgid "Date (oldest)"
 msgstr "日期(最旧）"
 
@@ -600,7 +605,7 @@ msgstr "延迟待机"
 msgid "Delete"
 msgstr "删除"
 
-#: ../plugin/controllers/i18n.py:550
+#: ../plugin/controllers/i18n.py:551
 msgid "Delete Bookmark"
 msgstr "删除书签"
 
@@ -624,7 +629,7 @@ msgstr ""
 "删除失败,因为没有影片垃圾!\n"
 "在配置中禁用影片垃圾桶以删除此项目"
 
-#: ../plugin/controllers/i18n.py:562
+#: ../plugin/controllers/i18n.py:563
 msgid "Deleted"
 msgstr "删除"
 
@@ -654,11 +659,11 @@ msgstr "冲突时禁用"
 msgid "Disabled on conflict"
 msgstr "冲突时禁用"
 
-#: ../plugin/controllers/i18n.py:535
+#: ../plugin/controllers/i18n.py:536
 msgid "Display Mode"
 msgstr "显示模式"
 
-#: ../plugin/controllers/i18n.py:533
+#: ../plugin/controllers/i18n.py:534
 msgid "Display duration (s)"
 msgstr "显示持续时间(秒)"
 
@@ -675,7 +680,7 @@ msgstr "发行版本"
 msgid "Dolby"
 msgstr "杜比"
 
-#: ../plugin/controllers/i18n.py:610
+#: ../plugin/controllers/i18n.py:611
 msgid "Don't create timer when movie exists in database"
 msgstr "当数据库中存在电影时不要创建定时器"
 
@@ -699,7 +704,7 @@ msgstr "驱动程序"
 msgid "Duration"
 msgstr "持续时间"
 
-#: ../plugin/controllers/models/info.py:617
+#: ../plugin/controllers/models/info.py:620
 msgid "E"
 msgstr "E"
 
@@ -780,7 +785,7 @@ msgstr "启用VPN接入"
 msgid "Enable filtering"
 msgstr "启用筛选"
 
-#: ../plugin/controllers/i18n.py:545
+#: ../plugin/controllers/i18n.py:546
 msgid "Enable/Disable Screenshot on key press or"
 msgstr "启用/禁用键或"
 
@@ -835,7 +840,7 @@ msgstr "为标记输入新的名称"
 msgid "Enter a name for this AutoTimer"
 msgstr "输入此自动定时器的名称"
 
-#: ../plugin/controllers/i18n.py:551
+#: ../plugin/controllers/i18n.py:552
 msgid "Enter path"
 msgstr "输入路径"
 
@@ -903,7 +908,7 @@ msgstr "排除时间"
 msgid "Execute \"After event\" during timespan"
 msgstr "在时间跨度内执行 \"事件后\""
 
-#: ../plugin/controllers/i18n.py:593
+#: ../plugin/controllers/i18n.py:594
 msgid "Export"
 msgstr "导出"
 
@@ -983,7 +988,7 @@ msgstr "起始日期"
 msgid "Front processor"
 msgstr "前处理器版本"
 
-#: ../plugin/controllers/i18n.py:586
+#: ../plugin/controllers/i18n.py:587
 msgid "Full remote"
 msgstr "全遥"
 
@@ -1027,7 +1032,7 @@ msgstr "获取新创建的自定义组可变列表失败！"
 msgid "Glibc"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:603
+#: ../plugin/controllers/i18n.py:604
 msgid "HH:MM"
 msgstr "小时:分钟"
 
@@ -1100,7 +1105,7 @@ msgstr ""
 msgid "Image folder"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:594
+#: ../plugin/controllers/i18n.py:595
 msgid "Import"
 msgstr "导入"
 
@@ -1108,11 +1113,11 @@ msgstr "导入"
 msgid "Include description"
 msgstr "包含描述"
 
-#: ../plugin/controllers/i18n.py:579
+#: ../plugin/controllers/i18n.py:580
 msgid "Include extended description"
 msgstr "包含扩展描述"
 
-#: ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/i18n.py:579
 msgid "Include short description"
 msgstr "包含简短描述"
 
@@ -1132,11 +1137,11 @@ msgstr "信息"
 msgid "Inherit AutoTimer"
 msgstr "沿用自动计时器"
 
-#: ../plugin/controllers/i18n.py:571
+#: ../plugin/controllers/i18n.py:572
 msgid "Install Package"
 msgstr "安装软件包"
 
-#: ../plugin/controllers/i18n.py:573
+#: ../plugin/controllers/i18n.py:574
 msgid "Installed"
 msgstr "安装"
 
@@ -1218,7 +1223,7 @@ msgstr "标签系列"
 msgid "Last update"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:541
+#: ../plugin/controllers/i18n.py:542
 msgid "Link Speed"
 msgstr "链路速度"
 
@@ -1287,15 +1292,15 @@ msgstr "消息发送成功！"
 msgid "Method"
 msgstr "模式"
 
-#: ../plugin/controllers/i18n.py:567
+#: ../plugin/controllers/i18n.py:568
 msgid "Minimal EPG list"
 msgstr "最小EPG列表"
 
-#: ../plugin/controllers/i18n.py:565
+#: ../plugin/controllers/i18n.py:566
 msgid "Minimal movie list"
 msgstr "最小电影列表"
 
-#: ../plugin/controllers/i18n.py:566
+#: ../plugin/controllers/i18n.py:567
 msgid "Minimal timer list"
 msgstr "最小定时器列表"
 
@@ -1333,7 +1338,7 @@ msgstr "星期一"
 msgid "Monthly"
 msgstr "每月"
 
-#: ../plugin/controllers/i18n.py:574
+#: ../plugin/controllers/i18n.py:575
 msgid "More"
 msgstr "更多"
 
@@ -1345,7 +1350,7 @@ msgstr "更多细节"
 msgid "Movie database for EPG"
 msgstr "EPG电影数据库"
 
-#: ../plugin/controllers/i18n.py:580
+#: ../plugin/controllers/i18n.py:581
 msgid "Movie search"
 msgstr "电影搜索"
 
@@ -1384,11 +1389,11 @@ msgstr "NCam网络接口"
 msgid "Name"
 msgstr "频道名称"
 
-#: ../plugin/controllers/i18n.py:596
+#: ../plugin/controllers/i18n.py:597
 msgid "Name (a-z)"
 msgstr "名称 (a-z)"
 
-#: ../plugin/controllers/i18n.py:597
+#: ../plugin/controllers/i18n.py:598
 msgid "Name (z-a)"
 msgstr "名称 (z-a)"
 
@@ -1400,7 +1405,7 @@ msgstr "命名空间"
 msgid "Network Interface"
 msgstr "网络接口"
 
-#: ../plugin/controllers/i18n.py:542
+#: ../plugin/controllers/i18n.py:543
 msgid "Network Shares"
 msgstr "网络共享"
 
@@ -1413,7 +1418,7 @@ msgstr "从不"
 msgid "New"
 msgstr "新发现"
 
-#: ../plugin/controllers/i18n.py:549
+#: ../plugin/controllers/i18n.py:550
 msgid "New Bookmark:"
 msgstr "新书签:"
 
@@ -1495,7 +1500,7 @@ msgstr "没有指定服务商!"
 msgid "No service given!"
 msgstr "没有指定频道!"
 
-#: ../plugin/controllers/i18n.py:559
+#: ../plugin/controllers/i18n.py:560
 msgid "No, cancel"
 msgstr "不,取消"
 
@@ -1527,7 +1532,7 @@ msgstr "十一月"
 msgid "Now"
 msgstr "现在"
 
-#: ../plugin/controllers/i18n.py:568
+#: ../plugin/controllers/i18n.py:569
 msgid "Now/Next Columns"
 msgstr ""
 
@@ -1588,7 +1593,7 @@ msgstr "仅在时间跨度内匹配"
 msgid "Oops, no results matched your search"
 msgstr "糟糕,没有搜索到与你匹配的结果"
 
-#: ../plugin/controllers/i18n.py:556
+#: ../plugin/controllers/i18n.py:557
 msgid "Oops..."
 msgstr "糟糕.."
 
@@ -1661,7 +1666,7 @@ msgstr "轨道位置"
 msgid "Override found with alternative service"
 msgstr "覆盖替代频道"
 
-#: ../plugin/controllers/i18n.py:553
+#: ../plugin/controllers/i18n.py:554
 msgid "Packages"
 msgstr "软件包"
 
@@ -1715,7 +1720,7 @@ msgstr "在浏览器中播放IPTV流"
 msgid "Playlist"
 msgstr "播放列表"
 
-#: ../plugin/controllers/i18n.py:606
+#: ../plugin/controllers/i18n.py:607
 msgid "Playlist format"
 msgstr "播放列表格式"
 
@@ -1735,7 +1740,7 @@ msgstr "电源定时器功能不可用"
 msgid "Preview"
 msgstr "预览"
 
-#: ../plugin/controllers/i18n.py:544
+#: ../plugin/controllers/i18n.py:545
 msgid "Primetimes"
 msgstr "黄金时段"
 
@@ -1813,7 +1818,7 @@ msgstr "重新载入"
 msgid "Remote"
 msgstr "远程遥控"
 
-#: ../plugin/controllers/i18n.py:569
+#: ../plugin/controllers/i18n.py:570
 msgid "Remove Package"
 msgstr "删除软件包"
 
@@ -1821,7 +1826,7 @@ msgstr "删除软件包"
 msgid "Remove filter"
 msgstr "移除筛选"
 
-#: ../plugin/controllers/i18n.py:499 ../plugin/controllers/i18n.py:558
+#: ../plugin/controllers/i18n.py:499 ../plugin/controllers/i18n.py:559
 msgid "Rename"
 msgstr "重命名"
 
@@ -1845,7 +1850,7 @@ msgstr "HTTPS需要客户端证书"
 msgid "Require description to be unique"
 msgstr "要求描述是唯一的"
 
-#: ../plugin/controllers/i18n.py:602
+#: ../plugin/controllers/i18n.py:603
 msgid "Reset"
 msgstr "重置"
 
@@ -1963,11 +1968,11 @@ msgstr "搜索精度 "
 msgid "Search type"
 msgstr "搜索类型"
 
-#: ../plugin/controllers/i18n.py:582
+#: ../plugin/controllers/i18n.py:583
 msgid "Select IPK file for upload"
 msgstr "选择要上传的IPK文件"
 
-#: ../plugin/controllers/i18n.py:601
+#: ../plugin/controllers/i18n.py:602
 msgid "Select..."
 msgstr "选择..."
 
@@ -2068,7 +2073,7 @@ msgstr "显示EPG为"
 msgid "Show Full OpenWebif"
 msgstr "显示完整的OpenWebif"
 
-#: ../plugin/controllers/i18n.py:589
+#: ../plugin/controllers/i18n.py:590
 msgid "Show IPTV channels in selection (eg. Autotimer)"
 msgstr "在选择中显示IPTV频道(如自动定时器)"
 
@@ -2090,7 +2095,7 @@ msgstr "升级全部软件包"
 msgid "Show box name in header"
 msgstr "在标题中显示机顶盒名称"
 
-#: ../plugin/controllers/i18n.py:587
+#: ../plugin/controllers/i18n.py:588
 msgid "Show details"
 msgstr "显示详细信息"
 
@@ -2102,11 +2107,11 @@ msgstr "显示完整的遥控"
 msgid "Show in Extensions menu"
 msgstr "在扩展菜单中显示"
 
-#: ../plugin/controllers/i18n.py:592
+#: ../plugin/controllers/i18n.py:593
 msgid "Show picon background"
 msgstr "显示picon背景"
 
-#: ../plugin/controllers/i18n.py:591
+#: ../plugin/controllers/i18n.py:592
 msgid "Show picons"
 msgstr "显示picon"
 
@@ -2114,7 +2119,7 @@ msgstr "显示picon"
 msgid "Show picons in channel list"
 msgstr "在频道列表中显示picon"
 
-#: ../plugin/controllers/i18n.py:588
+#: ../plugin/controllers/i18n.py:589
 msgid "Show service type in channel list"
 msgstr "在频道列表中显示频道类型"
 
@@ -2134,7 +2139,7 @@ msgstr "模拟"
 msgid "Site and sources"
 msgstr "来源站点"
 
-#: ../plugin/controllers/i18n.py:614
+#: ../plugin/controllers/i18n.py:615
 msgid "Skins"
 msgstr "皮肤"
 
@@ -2174,6 +2179,11 @@ msgstr "睡眠计时器已启用"
 msgid "Sleeptimer set to %d minutes"
 msgstr "睡眠计时器设置为%d分钟"
 
+#: ../plugin/controllers/i18n.py:533
+#, fuzzy
+msgid "Small remote layout"
+msgstr "全遥"
+
 #: ../plugin/controllers/i18n.py:275
 msgid "SoC family"
 msgstr ""
@@ -2190,7 +2200,7 @@ msgstr "软件"
 msgid "Sorry this page is not yet implemented"
 msgstr "抱歉,此页面尚未实现"
 
-#: ../plugin/controllers/i18n.py:595
+#: ../plugin/controllers/i18n.py:596
 msgid "Sort"
 msgstr "排序"
 
@@ -2222,7 +2232,7 @@ msgstr "开始即时录制"
 msgid "Start time is after end time"
 msgstr "开始时间为结束时间后"
 
-#: ../plugin/controllers/i18n.py:581
+#: ../plugin/controllers/i18n.py:582
 msgid "Start typing..."
 msgstr "开始输入..."
 
@@ -2234,7 +2244,7 @@ msgstr "国家"
 msgid "Stream"
 msgstr "串流"
 
-#: ../plugin/controllers/i18n.py:612
+#: ../plugin/controllers/i18n.py:613
 msgid "Stream Clients"
 msgstr "流客户端"
 
@@ -2246,7 +2256,7 @@ msgstr "流媒体端口"
 msgid "Su"
 msgstr "星期日"
 
-#: ../plugin/controllers/i18n.py:600
+#: ../plugin/controllers/i18n.py:601
 msgid "Subdirectories"
 msgstr "子目录"
 
@@ -2277,7 +2287,7 @@ msgstr "TB"
 msgid "TV"
 msgstr "电视"
 
-#: ../plugin/controllers/i18n.py:536
+#: ../plugin/controllers/i18n.py:537
 msgid "TV Guide"
 msgstr "电视指南"
 
@@ -2367,7 +2377,7 @@ msgstr "星期四"
 msgid "Time"
 msgstr "时间"
 
-#: ../plugin/controllers/i18n.py:537
+#: ../plugin/controllers/i18n.py:538
 msgid "Timeline"
 msgstr "时间表"
 
@@ -2529,35 +2539,35 @@ msgstr "未知命令: '%s'"
 msgid "Upcoming Events"
 msgstr "节目预告"
 
-#: ../plugin/controllers/i18n.py:572
+#: ../plugin/controllers/i18n.py:573
 msgid "Update"
 msgstr "更新"
 
-#: ../plugin/controllers/i18n.py:570
+#: ../plugin/controllers/i18n.py:571
 msgid "Update Package"
 msgstr "更新软件包"
 
-#: ../plugin/controllers/i18n.py:575
+#: ../plugin/controllers/i18n.py:576
 msgid "Update from feed"
 msgstr "从Feed更新"
 
-#: ../plugin/controllers/i18n.py:576
+#: ../plugin/controllers/i18n.py:577
 msgid "Upgrade all packages"
 msgstr "升级全部软件包"
 
-#: ../plugin/controllers/i18n.py:585
+#: ../plugin/controllers/i18n.py:586
 msgid "Upload File Error"
 msgstr "上传文件错误"
 
-#: ../plugin/controllers/i18n.py:584
+#: ../plugin/controllers/i18n.py:585
 msgid "Upload package"
 msgstr "上传程序包"
 
-#: ../plugin/controllers/i18n.py:583
+#: ../plugin/controllers/i18n.py:584
 msgid "Uploaded Files"
 msgstr "上传文件"
 
-#: ../plugin/controllers/i18n.py:590
+#: ../plugin/controllers/i18n.py:591
 msgid "Use Channelname for screenshots"
 msgstr "使用频道名称进行屏幕截图"
 
@@ -2565,11 +2575,11 @@ msgstr "使用频道名称进行屏幕截图"
 msgid "Use a custom location"
 msgstr "使用自定义位置"
 
-#: ../plugin/controllers/i18n.py:607
+#: ../plugin/controllers/i18n.py:608
 msgid "Use as PiP if possible"
 msgstr "如果可能,可用作画中画"
 
-#: ../plugin/controllers/i18n.py:615
+#: ../plugin/controllers/i18n.py:616
 msgid "Use classic interface"
 msgstr "使用经典界面"
 
@@ -2586,18 +2596,13 @@ msgstr "使用自定义机顶盒名称"
 msgid "Use custom box name"
 msgstr "使用自定义机顶盒名称"
 
-#: ../plugin/controllers/i18n.py:555
+#: ../plugin/controllers/i18n.py:556
 msgid "Use modern design"
 msgstr "使用现代设计"
 
-#: ../plugin/controllers/i18n.py:616 ../plugin/plugin.py:157
+#: ../plugin/controllers/i18n.py:617 ../plugin/plugin.py:157
 msgid "Use modern interface"
 msgstr "使用现代界面"
-
-#: ../plugin/controllers/i18n.py:617
-#, fuzzy
-msgid "Use old remote"
-msgstr "隐藏全远程"
 
 #: ../plugin/controllers/i18n.py:327
 msgid "VPS"
@@ -2643,7 +2648,7 @@ msgstr "音量控制"
 msgid "Vpid"
 msgstr "Vpid"
 
-#: ../plugin/controllers/models/info.py:620
+#: ../plugin/controllers/models/info.py:623
 msgid "W"
 msgstr "W"
 
@@ -2667,7 +2672,7 @@ msgstr "警告"
 msgid "We"
 msgstr "星期三"
 
-#: ../plugin/controllers/i18n.py:538
+#: ../plugin/controllers/i18n.py:539
 msgid "Web TV"
 msgstr "网络电视"
 
@@ -2696,7 +2701,7 @@ msgstr "没有认证只有本地访问是允许的！"
 msgid "Wizard"
 msgstr "向导"
 
-#: ../plugin/controllers/i18n.py:557
+#: ../plugin/controllers/i18n.py:558
 msgid "Would you like to save your changes?"
 msgstr "是否保存更改?"
 
@@ -2705,12 +2710,12 @@ msgstr "是否保存更改?"
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "错误的参数格式设置'set=%s', 使用 set=set15"
 
-#: ../plugin/controllers/i18n.py:604
+#: ../plugin/controllers/i18n.py:605
 msgid "YYYY-MM-DD"
 msgstr "YYYY-MM-DD"
 
-#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:560
-#: ../plugin/controllers/i18n.py:577
+#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:561
+#: ../plugin/controllers/i18n.py:578
 msgid "Yes"
 msgstr "是"
 
@@ -2964,7 +2969,7 @@ msgstr "类型 %s 的不是数字"
 msgid "unknown"
 msgstr "未知"
 
-#: ../plugin/controllers/i18n.py:543
+#: ../plugin/controllers/i18n.py:544
 msgid "using"
 msgstr "使用"
 

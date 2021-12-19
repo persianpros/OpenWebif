@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-12 22:55+0330\n"
+"POT-Creation-Date: 2021-12-19 12:16+0330\n"
 "PO-Revision-Date: 2021-12-02 19:57+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/hu/>\n"
@@ -68,6 +68,11 @@ msgstr "%s %s zárolva van."
 msgid "%s / %s"
 msgstr ""
 
+#: ../plugin/controllers/ajax.py:258
+#, python-format
+msgid "%s Style"
+msgstr ""
+
 #: ../plugin/controllers/models/info.py:247
 #: ../plugin/controllers/models/info.py:398
 #, python-format
@@ -87,7 +92,7 @@ msgstr "perc"
 msgid "A filename is required"
 msgstr "Adja meg a fájlnevet"
 
-#: ../plugin/controllers/i18n.py:563
+#: ../plugin/controllers/i18n.py:564
 msgid "A value is required"
 msgstr "Valamit írnia kell!"
 
@@ -169,7 +174,7 @@ msgstr ""
 msgid "Added %s to alternative service %s."
 msgstr "A %s hozzáadva az %s alternatív szolgáltatáshoz."
 
-#: ../plugin/controllers/i18n.py:609
+#: ../plugin/controllers/i18n.py:610
 msgid "Adjust recording time to real event time"
 msgstr "A felvétel idejének az esemény valós idejéhez igazítása"
 
@@ -198,7 +203,7 @@ msgstr "Minden alternatív szolgáltatás törölve."
 msgid "Allow IPK Upload"
 msgstr "IPK feltöltés engedélyezése"
 
-#: ../plugin/controllers/i18n.py:608
+#: ../plugin/controllers/i18n.py:609
 msgid "Allow duplicates"
 msgstr "Duplikáció engedélyezése"
 
@@ -338,11 +343,11 @@ msgstr "Az \"esemény után\" időszak kezdete"
 msgid "Beginning of timespan"
 msgstr "Az időszak kezdete"
 
-#: ../plugin/controllers/i18n.py:548
+#: ../plugin/controllers/i18n.py:549
 msgid "Bookmark"
 msgstr "Könyvjelző"
 
-#: ../plugin/controllers/i18n.py:547
+#: ../plugin/controllers/i18n.py:548
 msgid "Bookmarks"
 msgstr "Könyvjelzők"
 
@@ -454,7 +459,7 @@ msgstr ""
 msgid "Cable"
 msgstr "Kábel"
 
-#: ../plugin/controllers/i18n.py:539
+#: ../plugin/controllers/i18n.py:540
 msgid "Calendar Week"
 msgstr "Naptári hét"
 
@@ -462,7 +467,7 @@ msgstr "Naptári hét"
 msgid "Cancel"
 msgstr "Töröl"
 
-#: ../plugin/controllers/i18n.py:561
+#: ../plugin/controllers/i18n.py:562
 msgid "Cancelled"
 msgstr "Törölve"
 
@@ -494,7 +499,7 @@ msgstr "Időzítők tisztítáa"
 msgid "Close"
 msgstr "Bezár"
 
-#: ../plugin/controllers/i18n.py:564
+#: ../plugin/controllers/i18n.py:565
 msgid "Common Settings"
 msgstr "Közös beállítások"
 
@@ -502,7 +507,7 @@ msgstr "Közös beállítások"
 msgid "Compiled by"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:613
+#: ../plugin/controllers/i18n.py:614
 msgid "Config"
 msgstr ""
 
@@ -571,11 +576,11 @@ msgstr ""
 msgid "Date"
 msgstr "Dátum"
 
-#: ../plugin/controllers/i18n.py:599
+#: ../plugin/controllers/i18n.py:600
 msgid "Date (newest)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:598
+#: ../plugin/controllers/i18n.py:599
 msgid "Date (oldest)"
 msgstr ""
 
@@ -603,7 +608,7 @@ msgstr "Készenlét késleltetése"
 msgid "Delete"
 msgstr "Törlés"
 
-#: ../plugin/controllers/i18n.py:550
+#: ../plugin/controllers/i18n.py:551
 msgid "Delete Bookmark"
 msgstr "Könyvjelző törlése"
 
@@ -627,7 +632,7 @@ msgstr ""
 "A törlés sikertelen volt, mert nincs Kuka a filmekhez!\n"
 "Tiltsa le a Kukát a beállításoknál, hogy törölhesse ezt a filmet"
 
-#: ../plugin/controllers/i18n.py:562
+#: ../plugin/controllers/i18n.py:563
 msgid "Deleted"
 msgstr "Törölve"
 
@@ -658,11 +663,11 @@ msgstr "Letiltva ütközés esetén"
 msgid "Disabled on conflict"
 msgstr "Letiltva ütközés esetén"
 
-#: ../plugin/controllers/i18n.py:535
+#: ../plugin/controllers/i18n.py:536
 msgid "Display Mode"
 msgstr "Megjelenítési mód"
 
-#: ../plugin/controllers/i18n.py:533
+#: ../plugin/controllers/i18n.py:534
 msgid "Display duration (s)"
 msgstr "Az időtartam megjelenítése (másodperc)"
 
@@ -679,7 +684,7 @@ msgstr "Distro"
 msgid "Dolby"
 msgstr "Dolby"
 
-#: ../plugin/controllers/i18n.py:610
+#: ../plugin/controllers/i18n.py:611
 msgid "Don't create timer when movie exists in database"
 msgstr ""
 
@@ -703,7 +708,7 @@ msgstr "Driverek"
 msgid "Duration"
 msgstr "Időtartam"
 
-#: ../plugin/controllers/models/info.py:617
+#: ../plugin/controllers/models/info.py:620
 msgid "E"
 msgstr "E"
 
@@ -786,7 +791,7 @@ msgstr "A VPN-ekről való hozzáférés engedélyezése"
 msgid "Enable filtering"
 msgstr "Szűrés engedélyezése"
 
-#: ../plugin/controllers/i18n.py:545
+#: ../plugin/controllers/i18n.py:546
 msgid "Enable/Disable Screenshot on key press or"
 msgstr "Képernyőkép engedélyezése/letiltása gomb megnyomásával"
 
@@ -843,7 +848,7 @@ msgstr "Új név beírása a markerhez"
 msgid "Enter a name for this AutoTimer"
 msgstr "Új név beírása a markerhez"
 
-#: ../plugin/controllers/i18n.py:551
+#: ../plugin/controllers/i18n.py:552
 msgid "Enter path"
 msgstr ""
 
@@ -912,7 +917,7 @@ msgstr "Kizárva"
 msgid "Execute \"After event\" during timespan"
 msgstr "Az \"esemény után\" végrehajtása az időszak alatt"
 
-#: ../plugin/controllers/i18n.py:593
+#: ../plugin/controllers/i18n.py:594
 msgid "Export"
 msgstr "Export"
 
@@ -992,7 +997,7 @@ msgstr "Nem később, mint"
 msgid "Front processor"
 msgstr "Frontprocesszor verzió"
 
-#: ../plugin/controllers/i18n.py:586
+#: ../plugin/controllers/i18n.py:587
 msgid "Full remote"
 msgstr "Teljes távvezérlő"
 
@@ -1036,7 +1041,7 @@ msgstr "A változás lista létrehozása az új bouquethez nem sikerült!"
 msgid "Glibc"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:603
+#: ../plugin/controllers/i18n.py:604
 msgid "HH:MM"
 msgstr ""
 
@@ -1109,7 +1114,7 @@ msgstr ""
 msgid "Image folder"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:594
+#: ../plugin/controllers/i18n.py:595
 msgid "Import"
 msgstr "Importálás"
 
@@ -1117,11 +1122,11 @@ msgstr "Importálás"
 msgid "Include description"
 msgstr "Leírással"
 
-#: ../plugin/controllers/i18n.py:579
+#: ../plugin/controllers/i18n.py:580
 msgid "Include extended description"
 msgstr "Bővített leírással"
 
-#: ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/i18n.py:579
 msgid "Include short description"
 msgstr "Rövid leírással"
 
@@ -1141,11 +1146,11 @@ msgstr "Infó"
 msgid "Inherit AutoTimer"
 msgstr "Örökölt Automata időzítő"
 
-#: ../plugin/controllers/i18n.py:571
+#: ../plugin/controllers/i18n.py:572
 msgid "Install Package"
 msgstr "Csomag telepítése"
 
-#: ../plugin/controllers/i18n.py:573
+#: ../plugin/controllers/i18n.py:574
 msgid "Installed"
 msgstr "Telepített"
 
@@ -1227,7 +1232,7 @@ msgstr "Címke sorozat"
 msgid "Last update"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:541
+#: ../plugin/controllers/i18n.py:542
 msgid "Link Speed"
 msgstr "Link sebesség"
 
@@ -1297,15 +1302,15 @@ msgstr "Az üzenet sikeresen elküldve!"
 msgid "Method"
 msgstr "Módszer"
 
-#: ../plugin/controllers/i18n.py:567
+#: ../plugin/controllers/i18n.py:568
 msgid "Minimal EPG list"
 msgstr "Minimális EPG lista"
 
-#: ../plugin/controllers/i18n.py:565
+#: ../plugin/controllers/i18n.py:566
 msgid "Minimal movie list"
 msgstr "Minimális filmlista"
 
-#: ../plugin/controllers/i18n.py:566
+#: ../plugin/controllers/i18n.py:567
 msgid "Minimal timer list"
 msgstr "Minimális időzítő lista"
 
@@ -1343,7 +1348,7 @@ msgstr "Hétfő"
 msgid "Monthly"
 msgstr "Havi"
 
-#: ../plugin/controllers/i18n.py:574
+#: ../plugin/controllers/i18n.py:575
 msgid "More"
 msgstr "Több"
 
@@ -1356,7 +1361,7 @@ msgstr "Részletek mutatása"
 msgid "Movie database for EPG"
 msgstr "EPG filmes adatbázis"
 
-#: ../plugin/controllers/i18n.py:580
+#: ../plugin/controllers/i18n.py:581
 msgid "Movie search"
 msgstr "Filmkeresés"
 
@@ -1395,11 +1400,11 @@ msgstr "NCam Webinterface"
 msgid "Name"
 msgstr "Név"
 
-#: ../plugin/controllers/i18n.py:596
+#: ../plugin/controllers/i18n.py:597
 msgid "Name (a-z)"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:597
+#: ../plugin/controllers/i18n.py:598
 msgid "Name (z-a)"
 msgstr ""
 
@@ -1411,7 +1416,7 @@ msgstr "Namespace"
 msgid "Network Interface"
 msgstr "Hálózati felület"
 
-#: ../plugin/controllers/i18n.py:542
+#: ../plugin/controllers/i18n.py:543
 msgid "Network Shares"
 msgstr "Hálózati megosztások"
 
@@ -1424,7 +1429,7 @@ msgstr "Soha"
 msgid "New"
 msgstr "Új"
 
-#: ../plugin/controllers/i18n.py:549
+#: ../plugin/controllers/i18n.py:550
 #, fuzzy
 msgid "New Bookmark:"
 msgstr "Könyvjelző"
@@ -1509,7 +1514,7 @@ msgstr "Nincs megadva szolgáltató!"
 msgid "No service given!"
 msgstr "Nincs szolgáltatás!"
 
-#: ../plugin/controllers/i18n.py:559
+#: ../plugin/controllers/i18n.py:560
 msgid "No, cancel"
 msgstr "Nem, mégsem"
 
@@ -1541,7 +1546,7 @@ msgstr "November"
 msgid "Now"
 msgstr "Most"
 
-#: ../plugin/controllers/i18n.py:568
+#: ../plugin/controllers/i18n.py:569
 msgid "Now/Next Columns"
 msgstr ""
 
@@ -1602,7 +1607,7 @@ msgstr "Egyezés csak az időszak alatt"
 msgid "Oops, no results matched your search"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:556
+#: ../plugin/controllers/i18n.py:557
 msgid "Oops..."
 msgstr ""
 
@@ -1676,7 +1681,7 @@ msgstr "Orbitális pozíció"
 msgid "Override found with alternative service"
 msgstr "A megtalált felülbírálata alternatív szolgáltatással"
 
-#: ../plugin/controllers/i18n.py:553
+#: ../plugin/controllers/i18n.py:554
 msgid "Packages"
 msgstr "Csomagok"
 
@@ -1730,7 +1735,7 @@ msgstr ""
 msgid "Playlist"
 msgstr "Lejátszási lista"
 
-#: ../plugin/controllers/i18n.py:606
+#: ../plugin/controllers/i18n.py:607
 msgid "Playlist format"
 msgstr "Lejátszási lista formátum"
 
@@ -1750,7 +1755,7 @@ msgstr "PowerTimer funkció nem áll rendelkezésre"
 msgid "Preview"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:544
+#: ../plugin/controllers/i18n.py:545
 msgid "Primetimes"
 msgstr "Főműsoridő"
 
@@ -1828,7 +1833,7 @@ msgstr "Újratölt"
 msgid "Remote"
 msgstr "Távirányító"
 
-#: ../plugin/controllers/i18n.py:569
+#: ../plugin/controllers/i18n.py:570
 msgid "Remove Package"
 msgstr "Csomag eltávolítása"
 
@@ -1837,7 +1842,7 @@ msgstr "Csomag eltávolítása"
 msgid "Remove filter"
 msgstr "Távirányító"
 
-#: ../plugin/controllers/i18n.py:499 ../plugin/controllers/i18n.py:558
+#: ../plugin/controllers/i18n.py:499 ../plugin/controllers/i18n.py:559
 msgid "Rename"
 msgstr "Átnevezés"
 
@@ -1861,7 +1866,7 @@ msgstr "A kliens tanúsítvány megkövetelése HTTPS protokollhoz"
 msgid "Require description to be unique"
 msgstr "A leírás leírása egyedi legyen"
 
-#: ../plugin/controllers/i18n.py:602
+#: ../plugin/controllers/i18n.py:603
 #, fuzzy
 msgid "Reset"
 msgstr "Számlálás visszaállítása"
@@ -1984,11 +1989,11 @@ msgstr "Keresés KinoPoisk"
 msgid "Search type"
 msgstr "Keresés"
 
-#: ../plugin/controllers/i18n.py:582
+#: ../plugin/controllers/i18n.py:583
 msgid "Select IPK file for upload"
 msgstr "Jelölje ki az IPK fájl a feltöltéséhez"
 
-#: ../plugin/controllers/i18n.py:601
+#: ../plugin/controllers/i18n.py:602
 msgid "Select..."
 msgstr ""
 
@@ -2089,7 +2094,7 @@ msgstr "EPG mutatása ehhez"
 msgid "Show Full OpenWebif"
 msgstr "Teljes OpenWebif megjelenítése"
 
-#: ../plugin/controllers/i18n.py:589
+#: ../plugin/controllers/i18n.py:590
 msgid "Show IPTV channels in selection (eg. Autotimer)"
 msgstr ""
 
@@ -2111,7 +2116,7 @@ msgstr "Frissítse az összes csomagot"
 msgid "Show box name in header"
 msgstr "A box nevének mutatása a fejlécben"
 
-#: ../plugin/controllers/i18n.py:587
+#: ../plugin/controllers/i18n.py:588
 msgid "Show details"
 msgstr "Részletek mutatása"
 
@@ -2123,11 +2128,11 @@ msgstr "Teljes távirányító megjelenítése"
 msgid "Show in Extensions menu"
 msgstr "Megjelenítés a Bővítmények menüben"
 
-#: ../plugin/controllers/i18n.py:592
+#: ../plugin/controllers/i18n.py:593
 msgid "Show picon background"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:591
+#: ../plugin/controllers/i18n.py:592
 #, fuzzy
 msgid "Show picons"
 msgstr "Részletek mutatása"
@@ -2136,7 +2141,7 @@ msgstr "Részletek mutatása"
 msgid "Show picons in channel list"
 msgstr "A Picon megjelenítése a csatorna listában"
 
-#: ../plugin/controllers/i18n.py:588
+#: ../plugin/controllers/i18n.py:589
 msgid "Show service type in channel list"
 msgstr "A csatorna típus megjelenítése a csatornalistában"
 
@@ -2156,7 +2161,7 @@ msgstr "Szimulálás"
 msgid "Site and sources"
 msgstr "Webhely és források"
 
-#: ../plugin/controllers/i18n.py:614
+#: ../plugin/controllers/i18n.py:615
 msgid "Skins"
 msgstr ""
 
@@ -2196,6 +2201,11 @@ msgstr "Az elalvás időzítő engedélyezve van"
 msgid "Sleeptimer set to %d minutes"
 msgstr "Az elalvás időzítő beállítása %d percben"
 
+#: ../plugin/controllers/i18n.py:533
+#, fuzzy
+msgid "Small remote layout"
+msgstr "Teljes távvezérlő"
+
 #: ../plugin/controllers/i18n.py:275
 msgid "SoC family"
 msgstr ""
@@ -2212,7 +2222,7 @@ msgstr "Szoftver"
 msgid "Sorry this page is not yet implemented"
 msgstr "Sajnos ez az oldal még nem működik"
 
-#: ../plugin/controllers/i18n.py:595
+#: ../plugin/controllers/i18n.py:596
 msgid "Sort"
 msgstr ""
 
@@ -2244,7 +2254,7 @@ msgstr "Azonnali felvétel indítása"
 msgid "Start time is after end time"
 msgstr "A kezdési idő a befejező idő után van"
 
-#: ../plugin/controllers/i18n.py:581
+#: ../plugin/controllers/i18n.py:582
 msgid "Start typing..."
 msgstr "GÉPELÉS KEZDÉSE"
 
@@ -2256,7 +2266,7 @@ msgstr ""
 msgid "Stream"
 msgstr "Stream"
 
-#: ../plugin/controllers/i18n.py:612
+#: ../plugin/controllers/i18n.py:613
 msgid "Stream Clients"
 msgstr "Streamelő kliensek"
 
@@ -2269,7 +2279,7 @@ msgstr "Streamelő kliensek"
 msgid "Su"
 msgstr "Vasárnap"
 
-#: ../plugin/controllers/i18n.py:600
+#: ../plugin/controllers/i18n.py:601
 msgid "Subdirectories"
 msgstr ""
 
@@ -2300,7 +2310,7 @@ msgstr "TB"
 msgid "TV"
 msgstr "TV"
 
-#: ../plugin/controllers/i18n.py:536
+#: ../plugin/controllers/i18n.py:537
 msgid "TV Guide"
 msgstr "Műsorújság"
 
@@ -2391,7 +2401,7 @@ msgstr "Csütörtök"
 msgid "Time"
 msgstr "Idő"
 
-#: ../plugin/controllers/i18n.py:537
+#: ../plugin/controllers/i18n.py:538
 msgid "Timeline"
 msgstr "Idővonal"
 
@@ -2553,35 +2563,35 @@ msgstr "Ismeretlen parancs: '%s'"
 msgid "Upcoming Events"
 msgstr "Közelgő események"
 
-#: ../plugin/controllers/i18n.py:572
+#: ../plugin/controllers/i18n.py:573
 msgid "Update"
 msgstr "Frissítés"
 
-#: ../plugin/controllers/i18n.py:570
+#: ../plugin/controllers/i18n.py:571
 msgid "Update Package"
 msgstr "Csomag frissítése"
 
-#: ../plugin/controllers/i18n.py:575
+#: ../plugin/controllers/i18n.py:576
 msgid "Update from feed"
 msgstr "Frissítés a feedből"
 
-#: ../plugin/controllers/i18n.py:576
+#: ../plugin/controllers/i18n.py:577
 msgid "Upgrade all packages"
 msgstr "Frissítse az összes csomagot"
 
-#: ../plugin/controllers/i18n.py:585
+#: ../plugin/controllers/i18n.py:586
 msgid "Upload File Error"
 msgstr "Hiba a fájl feltöltésekor"
 
-#: ../plugin/controllers/i18n.py:584
+#: ../plugin/controllers/i18n.py:585
 msgid "Upload package"
 msgstr "Csomag feltöltése"
 
-#: ../plugin/controllers/i18n.py:583
+#: ../plugin/controllers/i18n.py:584
 msgid "Uploaded Files"
 msgstr "Feltöltött fájlok"
 
-#: ../plugin/controllers/i18n.py:590
+#: ../plugin/controllers/i18n.py:591
 msgid "Use Channelname for screenshots"
 msgstr ""
 
@@ -2589,11 +2599,11 @@ msgstr ""
 msgid "Use a custom location"
 msgstr "Használjon egyedi helyet"
 
-#: ../plugin/controllers/i18n.py:607
+#: ../plugin/controllers/i18n.py:608
 msgid "Use as PiP if possible"
 msgstr "Használat PiP módban (ha lehetséges)"
 
-#: ../plugin/controllers/i18n.py:615
+#: ../plugin/controllers/i18n.py:616
 #, fuzzy
 msgid "Use classic interface"
 msgstr "Az új kinézet használata"
@@ -2612,19 +2622,14 @@ msgstr "Használjon egyedi box nevet"
 msgid "Use custom box name"
 msgstr "Használjon egyedi box nevet"
 
-#: ../plugin/controllers/i18n.py:555
+#: ../plugin/controllers/i18n.py:556
 #, fuzzy
 msgid "Use modern design"
 msgstr "Az új kinézet használata"
 
-#: ../plugin/controllers/i18n.py:616 ../plugin/plugin.py:157
+#: ../plugin/controllers/i18n.py:617 ../plugin/plugin.py:157
 msgid "Use modern interface"
 msgstr "Az új kinézet használata"
-
-#: ../plugin/controllers/i18n.py:617
-#, fuzzy
-msgid "Use old remote"
-msgstr "Teljes táviránytó elrejtése"
 
 #: ../plugin/controllers/i18n.py:327
 msgid "VPS"
@@ -2670,7 +2675,7 @@ msgstr "Hangerőszabályozó"
 msgid "Vpid"
 msgstr "Vpid"
 
-#: ../plugin/controllers/models/info.py:620
+#: ../plugin/controllers/models/info.py:623
 msgid "W"
 msgstr "W"
 
@@ -2694,7 +2699,7 @@ msgstr "Figyelmeztetés"
 msgid "We"
 msgstr "Szerda"
 
-#: ../plugin/controllers/i18n.py:538
+#: ../plugin/controllers/i18n.py:539
 msgid "Web TV"
 msgstr "Web TV"
 
@@ -2723,7 +2728,7 @@ msgstr "Hitelesítés nélkül csak helyi hozzáférés engedélyezett!"
 msgid "Wizard"
 msgstr "Varázsló"
 
-#: ../plugin/controllers/i18n.py:557
+#: ../plugin/controllers/i18n.py:558
 msgid "Would you like to save your changes?"
 msgstr ""
 
@@ -2732,12 +2737,12 @@ msgstr ""
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Helytelen paraméter formátum 'set=%s'. Use set=set15 "
 
-#: ../plugin/controllers/i18n.py:604
+#: ../plugin/controllers/i18n.py:605
 msgid "YYYY-MM-DD"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:560
-#: ../plugin/controllers/i18n.py:577
+#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:561
+#: ../plugin/controllers/i18n.py:578
 msgid "Yes"
 msgstr "Igen"
 
@@ -2998,7 +3003,7 @@ msgstr "a %s típus nem számjegy"
 msgid "unknown"
 msgstr "ismeretlen"
 
-#: ../plugin/controllers/i18n.py:543
+#: ../plugin/controllers/i18n.py:544
 msgid "using"
 msgstr "használva"
 

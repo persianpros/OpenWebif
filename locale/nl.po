@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-12 22:55+0330\n"
+"POT-Creation-Date: 2021-12-19 12:16+0330\n"
 "PO-Revision-Date: 2021-12-02 19:57+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/nl/>\n"
@@ -68,6 +68,11 @@ msgstr "%s %s is vergrendeld."
 msgid "%s / %s"
 msgstr "%s / %s"
 
+#: ../plugin/controllers/ajax.py:258
+#, python-format
+msgid "%s Style"
+msgstr ""
+
 #: ../plugin/controllers/models/info.py:247
 #: ../plugin/controllers/models/info.py:398
 #, python-format
@@ -86,7 +91,7 @@ msgstr "(in minuten)"
 msgid "A filename is required"
 msgstr "Geef bestandsnaam in"
 
-#: ../plugin/controllers/i18n.py:563
+#: ../plugin/controllers/i18n.py:564
 msgid "A value is required"
 msgstr "U moet iets opschrijven!"
 
@@ -167,7 +172,7 @@ msgstr "Voeg een Tag aan de opname toe"
 msgid "Added %s to alternative service %s."
 msgstr "%s toegevoegd aan alternatieve zender %s."
 
-#: ../plugin/controllers/i18n.py:609
+#: ../plugin/controllers/i18n.py:610
 msgid "Adjust recording time to real event time"
 msgstr "Opname tijd aanpassen aan werkelijke programma tijd"
 
@@ -196,7 +201,7 @@ msgstr "Alle alternatieve zenders verwijderd."
 msgid "Allow IPK Upload"
 msgstr "IPK upload toestaan"
 
-#: ../plugin/controllers/i18n.py:608
+#: ../plugin/controllers/i18n.py:609
 msgid "Allow duplicates"
 msgstr "Duplicaten toestaan"
 
@@ -298,7 +303,6 @@ msgstr "AutoPoll"
 msgid "AutoTimer Edit"
 msgstr "Autotimer aanpassen"
 
-# New Autotimer Setting Windows name (not enabled to transfer atm)
 #: ../plugin/controllers/i18n.py:442
 msgid "AutoTimer Settings"
 msgstr "AutoTimer instellingen"
@@ -335,11 +339,11 @@ msgstr "Begin van de tijdspanne 'Na afloop'"
 msgid "Beginning of timespan"
 msgstr "Begintijd"
 
-#: ../plugin/controllers/i18n.py:548
+#: ../plugin/controllers/i18n.py:549
 msgid "Bookmark"
 msgstr "Markering"
 
-#: ../plugin/controllers/i18n.py:547
+#: ../plugin/controllers/i18n.py:548
 msgid "Bookmarks"
 msgstr "Markeerpunten"
 
@@ -451,7 +455,7 @@ msgstr ""
 msgid "Cable"
 msgstr "Kabel"
 
-#: ../plugin/controllers/i18n.py:539
+#: ../plugin/controllers/i18n.py:540
 msgid "Calendar Week"
 msgstr "Kalender week"
 
@@ -459,7 +463,7 @@ msgstr "Kalender week"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: ../plugin/controllers/i18n.py:561
+#: ../plugin/controllers/i18n.py:562
 msgid "Cancelled"
 msgstr "Geannuleerd"
 
@@ -491,7 +495,7 @@ msgstr "Timers opruimen"
 msgid "Close"
 msgstr "Sluiten"
 
-#: ../plugin/controllers/i18n.py:564
+#: ../plugin/controllers/i18n.py:565
 msgid "Common Settings"
 msgstr "Algemene instellingen"
 
@@ -499,7 +503,7 @@ msgstr "Algemene instellingen"
 msgid "Compiled by"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:613
+#: ../plugin/controllers/i18n.py:614
 msgid "Config"
 msgstr "Configuratie"
 
@@ -568,11 +572,11 @@ msgstr ""
 msgid "Date"
 msgstr "Datum"
 
-#: ../plugin/controllers/i18n.py:599
+#: ../plugin/controllers/i18n.py:600
 msgid "Date (newest)"
 msgstr "Datum (nieuwste)"
 
-#: ../plugin/controllers/i18n.py:598
+#: ../plugin/controllers/i18n.py:599
 msgid "Date (oldest)"
 msgstr "Datum (oudste)"
 
@@ -600,7 +604,7 @@ msgstr "Vertraag stand-by"
 msgid "Delete"
 msgstr "Verwijder"
 
-#: ../plugin/controllers/i18n.py:550
+#: ../plugin/controllers/i18n.py:551
 msgid "Delete Bookmark"
 msgstr "Markering verwijderen"
 
@@ -624,7 +628,7 @@ msgstr ""
 "Verwijderen mislukt, omdat er geen opname prullenbak is !\n"
 "De opname prullenbak uitschakelen in de instellingen om item te verwijderen"
 
-#: ../plugin/controllers/i18n.py:562
+#: ../plugin/controllers/i18n.py:563
 msgid "Deleted"
 msgstr "Verwijderd"
 
@@ -654,11 +658,11 @@ msgstr "Uitgeschakeld bij Conflict"
 msgid "Disabled on conflict"
 msgstr "Uitgeschakeld bij Conflict"
 
-#: ../plugin/controllers/i18n.py:535
+#: ../plugin/controllers/i18n.py:536
 msgid "Display Mode"
 msgstr "Weergave"
 
-#: ../plugin/controllers/i18n.py:533
+#: ../plugin/controllers/i18n.py:534
 msgid "Display duration (s)"
 msgstr "Weergave duur (s)"
 
@@ -675,7 +679,7 @@ msgstr "Distro"
 msgid "Dolby"
 msgstr "Dolby"
 
-#: ../plugin/controllers/i18n.py:610
+#: ../plugin/controllers/i18n.py:611
 msgid "Don't create timer when movie exists in database"
 msgstr "Maak geen timer aan als de film al bestaat in de database"
 
@@ -699,7 +703,7 @@ msgstr "stuurprogramma datum"
 msgid "Duration"
 msgstr "Duur"
 
-#: ../plugin/controllers/models/info.py:617
+#: ../plugin/controllers/models/info.py:620
 msgid "E"
 msgstr "E"
 
@@ -780,7 +784,7 @@ msgstr "Toegang voor VPN's inschakelen"
 msgid "Enable filtering"
 msgstr "Filters inschakelen"
 
-#: ../plugin/controllers/i18n.py:545
+#: ../plugin/controllers/i18n.py:546
 msgid "Enable/Disable Screenshot on key press or"
 msgstr "in- uitschakelen screenshot met knopdruk of"
 
@@ -835,7 +839,7 @@ msgstr "Geef de nieuwe naam van de marker"
 msgid "Enter a name for this AutoTimer"
 msgstr "Geef deze AutoTimer een naam"
 
-#: ../plugin/controllers/i18n.py:551
+#: ../plugin/controllers/i18n.py:552
 msgid "Enter path"
 msgstr "Geef het path in"
 
@@ -903,7 +907,7 @@ msgstr "Sluit uit"
 msgid "Execute \"After event\" during timespan"
 msgstr "Voer 'Na het programma' uit tijdens de tijdspanne"
 
-#: ../plugin/controllers/i18n.py:593
+#: ../plugin/controllers/i18n.py:594
 msgid "Export"
 msgstr "Exporteer"
 
@@ -983,7 +987,7 @@ msgstr "Niet na"
 msgid "Front processor"
 msgstr "Frontprocessor Versie"
 
-#: ../plugin/controllers/i18n.py:586
+#: ../plugin/controllers/i18n.py:587
 msgid "Full remote"
 msgstr "Volledige AB"
 
@@ -1027,7 +1031,7 @@ msgstr "Ontvangen van gewijzigde lijst voor maken bouquet mislukt!"
 msgid "Glibc"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:603
+#: ../plugin/controllers/i18n.py:604
 msgid "HH:MM"
 msgstr "HH:MM"
 
@@ -1100,7 +1104,7 @@ msgstr ""
 msgid "Image folder"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:594
+#: ../plugin/controllers/i18n.py:595
 msgid "Import"
 msgstr "Importeer"
 
@@ -1108,11 +1112,11 @@ msgstr "Importeer"
 msgid "Include description"
 msgstr "Beschrijving toevoegen"
 
-#: ../plugin/controllers/i18n.py:579
+#: ../plugin/controllers/i18n.py:580
 msgid "Include extended description"
 msgstr "Neem de uitgebreide beschrijvingen hierin op"
 
-#: ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/i18n.py:579
 msgid "Include short description"
 msgstr "Voeg de korte beschrijvingen toe"
 
@@ -1132,11 +1136,11 @@ msgstr "Info"
 msgid "Inherit AutoTimer"
 msgstr "Erf autotimer"
 
-#: ../plugin/controllers/i18n.py:571
+#: ../plugin/controllers/i18n.py:572
 msgid "Install Package"
 msgstr "Installeer pakket"
 
-#: ../plugin/controllers/i18n.py:573
+#: ../plugin/controllers/i18n.py:574
 msgid "Installed"
 msgstr "Geïnstalleerd"
 
@@ -1218,7 +1222,7 @@ msgstr "Label series"
 msgid "Last update"
 msgstr ""
 
-#: ../plugin/controllers/i18n.py:541
+#: ../plugin/controllers/i18n.py:542
 msgid "Link Speed"
 msgstr "Link Snelheid"
 
@@ -1287,15 +1291,15 @@ msgstr "Bericht succesvol verstuurd!"
 msgid "Method"
 msgstr "Methode"
 
-#: ../plugin/controllers/i18n.py:567
+#: ../plugin/controllers/i18n.py:568
 msgid "Minimal EPG list"
 msgstr "Minimale EPG lijst"
 
-#: ../plugin/controllers/i18n.py:565
+#: ../plugin/controllers/i18n.py:566
 msgid "Minimal movie list"
 msgstr "Kleinste opnamelijst"
 
-#: ../plugin/controllers/i18n.py:566
+#: ../plugin/controllers/i18n.py:567
 msgid "Minimal timer list"
 msgstr "Minimale timerlijst"
 
@@ -1333,7 +1337,7 @@ msgstr "maandag"
 msgid "Monthly"
 msgstr "Maandelijks"
 
-#: ../plugin/controllers/i18n.py:574
+#: ../plugin/controllers/i18n.py:575
 msgid "More"
 msgstr "Meer"
 
@@ -1345,7 +1349,7 @@ msgstr "Meer details"
 msgid "Movie database for EPG"
 msgstr "Moviedatabase t.b.v de EPG"
 
-#: ../plugin/controllers/i18n.py:580
+#: ../plugin/controllers/i18n.py:581
 msgid "Movie search"
 msgstr "Zoek naar films"
 
@@ -1384,11 +1388,11 @@ msgstr "NCam Webinterface"
 msgid "Name"
 msgstr "Naam"
 
-#: ../plugin/controllers/i18n.py:596
+#: ../plugin/controllers/i18n.py:597
 msgid "Name (a-z)"
 msgstr "Naam (a-z)"
 
-#: ../plugin/controllers/i18n.py:597
+#: ../plugin/controllers/i18n.py:598
 msgid "Name (z-a)"
 msgstr "Naam (z-a)"
 
@@ -1400,7 +1404,7 @@ msgstr "Namespace"
 msgid "Network Interface"
 msgstr "Netwerkinterface"
 
-#: ../plugin/controllers/i18n.py:542
+#: ../plugin/controllers/i18n.py:543
 msgid "Network Shares"
 msgstr "Netwerk shares"
 
@@ -1413,7 +1417,7 @@ msgstr "nooit"
 msgid "New"
 msgstr "Nieuw"
 
-#: ../plugin/controllers/i18n.py:549
+#: ../plugin/controllers/i18n.py:550
 msgid "New Bookmark:"
 msgstr "Nieuwe bladwijzer"
 
@@ -1495,7 +1499,7 @@ msgstr "Geen provider ingevoerd!"
 msgid "No service given!"
 msgstr "Geen zender ingevoerd!"
 
-#: ../plugin/controllers/i18n.py:559
+#: ../plugin/controllers/i18n.py:560
 msgid "No, cancel"
 msgstr "Nee, annuleer"
 
@@ -1527,7 +1531,7 @@ msgstr "november"
 msgid "Now"
 msgstr "Nu"
 
-#: ../plugin/controllers/i18n.py:568
+#: ../plugin/controllers/i18n.py:569
 msgid "Now/Next Columns"
 msgstr "Nu/Straks Kolommen"
 
@@ -1588,7 +1592,7 @@ msgstr "Alleen vergelijken tijdens"
 msgid "Oops, no results matched your search"
 msgstr "Oeps, er zijn geen overeengekomen resultaten gevonden"
 
-#: ../plugin/controllers/i18n.py:556
+#: ../plugin/controllers/i18n.py:557
 msgid "Oops..."
 msgstr "Oops..."
 
@@ -1661,7 +1665,7 @@ msgstr "Orbitale-positie (graden)"
 msgid "Override found with alternative service"
 msgstr "Overschrijf met alternatieve zender"
 
-#: ../plugin/controllers/i18n.py:553
+#: ../plugin/controllers/i18n.py:554
 msgid "Packages"
 msgstr "Pakketten"
 
@@ -1715,7 +1719,7 @@ msgstr "Afspelen van IPTV streams in de browser"
 msgid "Playlist"
 msgstr "Afspeellijst"
 
-#: ../plugin/controllers/i18n.py:606
+#: ../plugin/controllers/i18n.py:607
 msgid "Playlist format"
 msgstr "Afspeellijst formaat"
 
@@ -1735,7 +1739,7 @@ msgstr "PowerTimer functie niet beschikbaar"
 msgid "Preview"
 msgstr "Voorvertoning"
 
-#: ../plugin/controllers/i18n.py:544
+#: ../plugin/controllers/i18n.py:545
 msgid "Primetimes"
 msgstr "Primetimes"
 
@@ -1812,7 +1816,7 @@ msgstr "Herlaad"
 msgid "Remote"
 msgstr "Afstandsbediening"
 
-#: ../plugin/controllers/i18n.py:569
+#: ../plugin/controllers/i18n.py:570
 msgid "Remove Package"
 msgstr "Verwijder pakket"
 
@@ -1820,7 +1824,7 @@ msgstr "Verwijder pakket"
 msgid "Remove filter"
 msgstr "Verwijder het filter"
 
-#: ../plugin/controllers/i18n.py:499 ../plugin/controllers/i18n.py:558
+#: ../plugin/controllers/i18n.py:499 ../plugin/controllers/i18n.py:559
 msgid "Rename"
 msgstr "Hernoem"
 
@@ -1844,7 +1848,7 @@ msgstr "Een gebruikers certificaat is vereist voor HTTPS"
 msgid "Require description to be unique"
 msgstr "Vereist een unieke beschrijving"
 
-#: ../plugin/controllers/i18n.py:602
+#: ../plugin/controllers/i18n.py:603
 msgid "Reset"
 msgstr "Reset"
 
@@ -1962,11 +1966,11 @@ msgstr "Zoek-accuratesse"
 msgid "Search type"
 msgstr "Zoektype"
 
-#: ../plugin/controllers/i18n.py:582
+#: ../plugin/controllers/i18n.py:583
 msgid "Select IPK file for upload"
 msgstr "Kies het IPK bestand om te uploaden"
 
-#: ../plugin/controllers/i18n.py:601
+#: ../plugin/controllers/i18n.py:602
 msgid "Select..."
 msgstr "Kies..."
 
@@ -2067,7 +2071,7 @@ msgstr "Toon EPG voor"
 msgid "Show Full OpenWebif"
 msgstr "Toon volledige OpenWebif"
 
-#: ../plugin/controllers/i18n.py:589
+#: ../plugin/controllers/i18n.py:590
 msgid "Show IPTV channels in selection (eg. Autotimer)"
 msgstr "Toon de IPTV zenders in de selectie (bv. Autotimer)"
 
@@ -2088,7 +2092,7 @@ msgstr "Toon alle pakketten"
 msgid "Show box name in header"
 msgstr "Toon de naam van de box rechtsboven"
 
-#: ../plugin/controllers/i18n.py:587
+#: ../plugin/controllers/i18n.py:588
 msgid "Show details"
 msgstr "Toon de details"
 
@@ -2100,11 +2104,11 @@ msgstr "Toon volledige AB"
 msgid "Show in Extensions menu"
 msgstr "Toon in Extensions menu"
 
-#: ../plugin/controllers/i18n.py:592
+#: ../plugin/controllers/i18n.py:593
 msgid "Show picon background"
 msgstr "Toon de picon achtergrond"
 
-#: ../plugin/controllers/i18n.py:591
+#: ../plugin/controllers/i18n.py:592
 msgid "Show picons"
 msgstr "Toon de picons"
 
@@ -2112,7 +2116,7 @@ msgstr "Toon de picons"
 msgid "Show picons in channel list"
 msgstr "Toon Picon in de zenderlijst"
 
-#: ../plugin/controllers/i18n.py:588
+#: ../plugin/controllers/i18n.py:589
 msgid "Show service type in channel list"
 msgstr "Toon het zendertype in de zenderlijst"
 
@@ -2132,7 +2136,7 @@ msgstr "Simuleer"
 msgid "Site and sources"
 msgstr "Site en broncode"
 
-#: ../plugin/controllers/i18n.py:614
+#: ../plugin/controllers/i18n.py:615
 msgid "Skins"
 msgstr "Skins"
 
@@ -2172,6 +2176,11 @@ msgstr "Slaaptimer is ingeschakeld"
 msgid "Sleeptimer set to %d minutes"
 msgstr "Slaaptimer ingesteld op %d minuten"
 
+#: ../plugin/controllers/i18n.py:533
+#, fuzzy
+msgid "Small remote layout"
+msgstr "Volledige AB"
+
 #: ../plugin/controllers/i18n.py:275
 msgid "SoC family"
 msgstr ""
@@ -2188,7 +2197,7 @@ msgstr "Software"
 msgid "Sorry this page is not yet implemented"
 msgstr "Deze pagina is niet geï¿œmplementeerd"
 
-#: ../plugin/controllers/i18n.py:595
+#: ../plugin/controllers/i18n.py:596
 msgid "Sort"
 msgstr "Sorteer"
 
@@ -2220,7 +2229,7 @@ msgstr "Start opname onmiddellijk"
 msgid "Start time is after end time"
 msgstr "Starttijd ligt na de begintijd"
 
-#: ../plugin/controllers/i18n.py:581
+#: ../plugin/controllers/i18n.py:582
 msgid "Start typing..."
 msgstr "BEGIN MET TYPEN"
 
@@ -2232,7 +2241,7 @@ msgstr "Status"
 msgid "Stream"
 msgstr "Stream"
 
-#: ../plugin/controllers/i18n.py:612
+#: ../plugin/controllers/i18n.py:613
 msgid "Stream Clients"
 msgstr "Stream clients"
 
@@ -2244,7 +2253,7 @@ msgstr "Streamingpoort"
 msgid "Su"
 msgstr "zo"
 
-#: ../plugin/controllers/i18n.py:600
+#: ../plugin/controllers/i18n.py:601
 msgid "Subdirectories"
 msgstr "Subdirectories"
 
@@ -2275,7 +2284,7 @@ msgstr "TB"
 msgid "TV"
 msgstr "Tv"
 
-#: ../plugin/controllers/i18n.py:536
+#: ../plugin/controllers/i18n.py:537
 msgid "TV Guide"
 msgstr "TV gids"
 
@@ -2365,7 +2374,7 @@ msgstr "donderdag"
 msgid "Time"
 msgstr "Tijd"
 
-#: ../plugin/controllers/i18n.py:537
+#: ../plugin/controllers/i18n.py:538
 msgid "Timeline"
 msgstr "Tijdlijn"
 
@@ -2527,35 +2536,35 @@ msgstr "Onbekende opdracht: '%s'"
 msgid "Upcoming Events"
 msgstr "Komende programma's"
 
-#: ../plugin/controllers/i18n.py:572
+#: ../plugin/controllers/i18n.py:573
 msgid "Update"
 msgstr "Update"
 
-#: ../plugin/controllers/i18n.py:570
+#: ../plugin/controllers/i18n.py:571
 msgid "Update Package"
 msgstr "Actualiseer het pakket"
 
-#: ../plugin/controllers/i18n.py:575
+#: ../plugin/controllers/i18n.py:576
 msgid "Update from feed"
 msgstr "Update vanuit de feed"
 
-#: ../plugin/controllers/i18n.py:576
+#: ../plugin/controllers/i18n.py:577
 msgid "Upgrade all packages"
 msgstr "Actualiseer alle pakketten"
 
-#: ../plugin/controllers/i18n.py:585
+#: ../plugin/controllers/i18n.py:586
 msgid "Upload File Error"
 msgstr "Fout met uploaden bestand"
 
-#: ../plugin/controllers/i18n.py:584
+#: ../plugin/controllers/i18n.py:585
 msgid "Upload package"
 msgstr "Pakket uploaden"
 
-#: ../plugin/controllers/i18n.py:583
+#: ../plugin/controllers/i18n.py:584
 msgid "Uploaded Files"
 msgstr "Actualiseer de bestanden"
 
-#: ../plugin/controllers/i18n.py:590
+#: ../plugin/controllers/i18n.py:591
 msgid "Use Channelname for screenshots"
 msgstr "Gberuik de zendernaam t.b.v. screenshot"
 
@@ -2563,11 +2572,11 @@ msgstr "Gberuik de zendernaam t.b.v. screenshot"
 msgid "Use a custom location"
 msgstr "Gebruik een aangepaste locatie"
 
-#: ../plugin/controllers/i18n.py:607
+#: ../plugin/controllers/i18n.py:608
 msgid "Use as PiP if possible"
 msgstr "Gebruik indien mogelijk als PIP"
 
-#: ../plugin/controllers/i18n.py:615
+#: ../plugin/controllers/i18n.py:616
 msgid "Use classic interface"
 msgstr "Gebruik de klassieke interface"
 
@@ -2584,18 +2593,13 @@ msgstr "Gebruik een alternatieve naam voor de box"
 msgid "Use custom box name"
 msgstr "Gebruik een alternatieve naam voor de box"
 
-#: ../plugin/controllers/i18n.py:555
+#: ../plugin/controllers/i18n.py:556
 msgid "Use modern design"
 msgstr "Gebruik een modern ontwerp"
 
-#: ../plugin/controllers/i18n.py:616 ../plugin/plugin.py:157
+#: ../plugin/controllers/i18n.py:617 ../plugin/plugin.py:157
 msgid "Use modern interface"
 msgstr "Gebruik de nieuwe vormgeving"
-
-#: ../plugin/controllers/i18n.py:617
-#, fuzzy
-msgid "Use old remote"
-msgstr "Verberg volledige AB"
 
 #: ../plugin/controllers/i18n.py:327
 msgid "VPS"
@@ -2641,7 +2645,7 @@ msgstr "Volume controle"
 msgid "Vpid"
 msgstr "Vpid"
 
-#: ../plugin/controllers/models/info.py:620
+#: ../plugin/controllers/models/info.py:623
 msgid "W"
 msgstr "W"
 
@@ -2665,7 +2669,7 @@ msgstr "Waarschuwing"
 msgid "We"
 msgstr "Wij"
 
-#: ../plugin/controllers/i18n.py:538
+#: ../plugin/controllers/i18n.py:539
 msgid "Web TV"
 msgstr "Web TV"
 
@@ -2694,7 +2698,7 @@ msgstr "Zonder authentificatie is alléén lokale toegang mogelijk!"
 msgid "Wizard"
 msgstr "Wizard"
 
-#: ../plugin/controllers/i18n.py:557
+#: ../plugin/controllers/i18n.py:558
 msgid "Would you like to save your changes?"
 msgstr "Wilt u de wijzigingen opslaan?"
 
@@ -2703,12 +2707,12 @@ msgstr "Wilt u de wijzigingen opslaan?"
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Verkeerd parameterformaat 'set=%s'. Gebruik set=set15 "
 
-#: ../plugin/controllers/i18n.py:604
+#: ../plugin/controllers/i18n.py:605
 msgid "YYYY-MM-DD"
 msgstr "YYYY-MM-DD"
 
-#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:560
-#: ../plugin/controllers/i18n.py:577
+#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:561
+#: ../plugin/controllers/i18n.py:578
 msgid "Yes"
 msgstr "Ja"
 
@@ -2964,7 +2968,7 @@ msgstr "type %s is geen getal"
 msgid "unknown"
 msgstr "onbekend"
 
-#: ../plugin/controllers/i18n.py:543
+#: ../plugin/controllers/i18n.py:544
 msgid "using"
 msgstr "gebruikt"
 
