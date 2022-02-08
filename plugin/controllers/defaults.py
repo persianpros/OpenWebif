@@ -15,6 +15,7 @@ try:
 except ImportError:
 	# fallback for old images
 	from Tools.Directories import resolveFilename, SCOPE_PLUGINS
+
 	def isPluginInstalled(p, plugin="plugin"):
 		for ext in ['', 'c', 'o']:
 			if os.path.exists(resolveFilename(SCOPE_PLUGINS, "SystemPlugins/%s/%s.py%s" % (p, plugin, ext))):
@@ -22,8 +23,10 @@ except ImportError:
 			if os.path.exists(resolveFilename(SCOPE_PLUGINS, "Extensions/%s/%s.py%s" % (p, plugin, ext))):
 				return True
 
+
 def _isPluginInstalled(p, plugin="plugin"):
 	return isPluginInstalled(p, plugin)
+
 
 from Components.SystemInfo import BoxInfo
 
