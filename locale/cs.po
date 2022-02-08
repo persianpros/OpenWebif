@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-19 12:16+0330\n"
+"POT-Creation-Date: 2022-02-08 14:39+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: IMS <ims@openpli.org>\n"
 "Language-Team: PLi <ims@openpli.org>\n"
@@ -220,11 +220,11 @@ msgstr "Vždy"
 msgid "Amlogic remote"
 msgstr "Úplný ovladač"
 
-#: ../plugin/controllers/models/message.py:52
+#: ../plugin/controllers/models/message.py:58
 msgid "Answer is NO!"
 msgstr "Odpověď je NE!"
 
-#: ../plugin/controllers/models/message.py:52
+#: ../plugin/controllers/models/message.py:58
 msgid "Answer is YES!"
 msgstr "Odpověď je ANO!"
 
@@ -308,7 +308,7 @@ msgstr "Upravit AutoTimer"
 msgid "AutoTimer Settings"
 msgstr "Autotimer - nastavení"
 
-#: ../plugin/controllers/base.py:347 ../plugin/controllers/i18n.py:343
+#: ../plugin/controllers/base.py:349 ../plugin/controllers/i18n.py:343
 msgid "AutoTimers"
 msgstr "Přehled AutoTimerů"
 
@@ -409,7 +409,7 @@ msgstr "Přehled úspěšně přejmenován."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Nastavení přehledu byla úspěšně obnovena"
 
-#: ../plugin/controllers/base.py:350
+#: ../plugin/controllers/base.py:351
 msgid "BouquetEditor"
 msgstr "Editor přehledů"
 
@@ -460,7 +460,7 @@ msgstr "Kabelové"
 msgid "Calendar Week"
 msgstr "Týden"
 
-#: ../plugin/controllers/i18n.py:98 ../plugin/plugin.py:126
+#: ../plugin/plugin.py:126 ../plugin/controllers/i18n.py:98
 msgid "Cancel"
 msgstr "Zavřít"
 
@@ -556,8 +556,8 @@ msgstr "Vlastní název přijímače"
 msgid "Custom offset"
 msgstr "Vlastní posun"
 
-#: ../plugin/controllers/models/info.py:69
-#: ../plugin/controllers/models/info.py:88 ../plugin/controllers/i18n.py:122
+#: ../plugin/controllers/i18n.py:122 ../plugin/controllers/models/info.py:69
+#: ../plugin/controllers/models/info.py:88
 msgid "DHCP"
 msgstr ""
 
@@ -720,7 +720,7 @@ msgstr "Hledat v EPG"
 msgid "EPG encoding"
 msgstr "Kódování EPG"
 
-#: ../plugin/controllers/base.py:354
+#: ../plugin/controllers/base.py:355
 msgid "EPGRefresh"
 msgstr ""
 
@@ -970,8 +970,8 @@ msgstr "Volná paměť"
 msgid "Free/Total Memory"
 msgstr "Volná paměť"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:52
+#: ../plugin/controllers/i18n.py:52 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Fri"
 msgstr "Pá"
 
@@ -992,13 +992,13 @@ msgstr "Verze frontprocesoru"
 msgid "Full remote"
 msgstr "Úplný ovladač"
 
+#: ../plugin/controllers/models/movies.py:279
+#: ../plugin/controllers/models/movies.py:409
+#: ../plugin/controllers/models/movies.py:837
 #: ../plugin/controllers/models/info.py:364
 #: ../plugin/controllers/models/info.py:370
 #: ../plugin/controllers/models/info.py:385
 #: ../plugin/controllers/models/info.py:388
-#: ../plugin/controllers/models/movies.py:279
-#: ../plugin/controllers/models/movies.py:409
-#: ../plugin/controllers/models/movies.py:837
 msgid "GB"
 msgstr ""
 
@@ -1076,11 +1076,11 @@ msgstr "IPTV / URL název"
 msgid "IPv4 address"
 msgstr "IPv4 adresa"
 
-#: ../plugin/controllers/models/info.py:153 ../plugin/controllers/i18n.py:179
+#: ../plugin/controllers/i18n.py:179 ../plugin/controllers/models/info.py:153
 msgid "IPv4-only Python/Twisted"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:149 ../plugin/controllers/i18n.py:177
+#: ../plugin/controllers/i18n.py:177 ../plugin/controllers/models/info.py:149
 msgid "IPv4-only kernel"
 msgstr ""
 
@@ -1201,7 +1201,7 @@ msgstr ""
 msgid "LCD"
 msgstr ""
 
-#: ../plugin/controllers/base.py:320
+#: ../plugin/controllers/base.py:322
 msgid "LCD4Linux Setup"
 msgstr "Nastavení LCD4Linux"
 
@@ -1246,12 +1246,12 @@ msgstr "Zamknuto"
 msgid "MAC address"
 msgstr "MAC adresa"
 
-#: ../plugin/controllers/models/info.py:361
-#: ../plugin/controllers/models/info.py:372
-#: ../plugin/controllers/models/info.py:390
 #: ../plugin/controllers/models/movies.py:281
 #: ../plugin/controllers/models/movies.py:411
 #: ../plugin/controllers/models/movies.py:839
+#: ../plugin/controllers/models/info.py:361
+#: ../plugin/controllers/models/info.py:372
+#: ../plugin/controllers/models/info.py:390
 msgid "MB"
 msgstr ""
 
@@ -1283,7 +1283,7 @@ msgstr "Max dnů"
 msgid "May"
 msgstr "Květen"
 
-#: ../plugin/controllers/models/message.py:36
+#: ../plugin/controllers/models/message.py:42
 msgid "Message sent successfully!"
 msgstr "Zpráva úspěšně odeslána!"
 
@@ -1324,8 +1324,8 @@ msgstr "Po"
 msgid "Model"
 msgstr "Model"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:48
+#: ../plugin/controllers/i18n.py:48 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Mon"
 msgstr "Po"
 
@@ -1379,7 +1379,7 @@ msgstr ""
 msgid "MultiTranscoding"
 msgstr "Transkódování"
 
-#: ../plugin/controllers/base.py:344
+#: ../plugin/controllers/base.py:346
 msgid "NCam Webinterface"
 msgstr ""
 
@@ -1411,8 +1411,8 @@ msgstr "Sdílení v síti"
 msgid "Never"
 msgstr "nikdy"
 
-#: ../plugin/controllers/models/services.py:382
 #: ../plugin/controllers/i18n.py:430
+#: ../plugin/controllers/models/services.py:382
 msgid "New"
 msgstr "Nový"
 
@@ -1424,7 +1424,7 @@ msgstr "Nová záložka:"
 msgid "New Name"
 msgstr "Nový název"
 
-#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:396
+#: ../plugin/controllers/i18n.py:396 ../plugin/controllers/models/info.py:265
 msgid "No"
 msgstr "Ne"
 
@@ -1436,7 +1436,7 @@ msgstr "EPG data nejsou k dispozici"
 msgid "No Parent Control Setup Pin given!"
 msgstr ""
 
-#: ../plugin/controllers/models/message.py:47
+#: ../plugin/controllers/models/message.py:53
 msgid "No answer in time"
 msgstr "Žádná odpověď v čase"
 
@@ -1543,7 +1543,7 @@ msgstr "Zbývá nahrávek"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:342
+#: ../plugin/controllers/base.py:344
 msgid "OSCam Webinterface"
 msgstr ""
 
@@ -1655,8 +1655,8 @@ msgstr "Nastavení OpenWebif"
 msgid "OpenWebif url:"
 msgstr "OpenWebif URL:"
 
-#: ../plugin/controllers/models/services.py:276
 #: ../plugin/controllers/i18n.py:521
+#: ../plugin/controllers/models/services.py:276
 msgid "Orbital Position"
 msgstr "Orbitální pozice"
 
@@ -1906,8 +1906,8 @@ msgstr "So"
 msgid "Safe mode"
 msgstr "Bezpečný mód"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:53
+#: ../plugin/controllers/i18n.py:53 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Sat"
 msgstr "So"
 
@@ -1923,8 +1923,8 @@ msgstr "Satfinder"
 msgid "Saturday"
 msgstr "Sobota"
 
-#: ../plugin/controllers/i18n.py:254 ../plugin/controllers/i18n.py:423
-#: ../plugin/controllers/i18n.py:485 ../plugin/plugin.py:127
+#: ../plugin/plugin.py:127 ../plugin/controllers/i18n.py:254
+#: ../plugin/controllers/i18n.py:423 ../plugin/controllers/i18n.py:485
 msgid "Save"
 msgstr "Uložit"
 
@@ -2052,7 +2052,7 @@ msgstr "Programy"
 msgid "Set maximum duration"
 msgstr "Nastavit maximální délku trvání"
 
-#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:266
+#: ../plugin/controllers/base.py:315 ../plugin/controllers/i18n.py:266
 #: ../plugin/controllers/i18n.py:427
 msgid "Settings"
 msgstr "Nastavení"
@@ -2263,8 +2263,8 @@ msgstr "Maska"
 msgid "Subservices"
 msgstr "Podprogramy"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:47
+#: ../plugin/controllers/i18n.py:47 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Sun"
 msgstr "Ne"
 
@@ -2306,7 +2306,7 @@ msgstr "Televize"
 msgid "Template Engine"
 msgstr ""
 
-#: ../plugin/controllers/base.py:390
+#: ../plugin/controllers/base.py:391
 msgid "Terminal"
 msgstr ""
 
@@ -2351,7 +2351,7 @@ msgstr "Časovač '%s' je právě nahráván! Nelze zakázat!"
 msgid "Theme"
 msgstr "Vzhled"
 
-#: ../plugin/controllers/i18n.py:316 ../plugin/plugin.py:159
+#: ../plugin/plugin.py:159 ../plugin/controllers/i18n.py:316
 msgid "Theme mode"
 msgstr "Vzhled"
 
@@ -2359,8 +2359,8 @@ msgstr "Vzhled"
 msgid "This service can not be added."
 msgstr "Tento program nemůže být přidán."
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:51
+#: ../plugin/controllers/i18n.py:51 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Thu"
 msgstr "Čt"
 
@@ -2475,8 +2475,8 @@ msgstr ""
 msgid "Tu"
 msgstr "Út"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:49
+#: ../plugin/controllers/i18n.py:49 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Tue"
 msgstr "Út"
 
@@ -2595,7 +2595,7 @@ msgstr "Použít vlastní název přijímače"
 msgid "Use modern design"
 msgstr "Použít nový vzhled"
 
-#: ../plugin/controllers/i18n.py:617 ../plugin/plugin.py:157
+#: ../plugin/plugin.py:157 ../plugin/controllers/i18n.py:617
 msgid "Use modern interface"
 msgstr "Použít nový vzhled"
 
@@ -2671,8 +2671,8 @@ msgstr "St"
 msgid "Web TV"
 msgstr ""
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:50
+#: ../plugin/controllers/i18n.py:50 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Wed"
 msgstr "St"
 
@@ -2709,8 +2709,8 @@ msgstr "Špatný formát parametru 'set=%s'. Použijte set=set15 "
 msgid "YYYY-MM-DD"
 msgstr "RRRR-MM-DD"
 
-#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:561
-#: ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/i18n.py:561 ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/models/info.py:265
 msgid "Yes"
 msgstr "Ano"
 
@@ -2815,11 +2815,11 @@ msgstr "přejít do pohotovostního režimu"
 msgid "hour"
 msgstr "hodina"
 
-#: ../plugin/controllers/models/info.py:243
-#: ../plugin/controllers/models/info.py:246
 #: ../plugin/controllers/models/movies.py:283
 #: ../plugin/controllers/models/movies.py:413
 #: ../plugin/controllers/models/movies.py:841
+#: ../plugin/controllers/models/info.py:243
+#: ../plugin/controllers/models/info.py:246
 msgid "kB"
 msgstr ""
 
@@ -2844,7 +2844,7 @@ msgstr "minuta"
 msgid "no description available"
 msgstr "popis není k dispozici"
 
-#: ../plugin/controllers/models/info.py:182 ../plugin/controllers/i18n.py:178
+#: ../plugin/controllers/i18n.py:178 ../plugin/controllers/models/info.py:182
 msgid "none/IPv4-only network"
 msgstr "žádná/pouze IPv4 síť"
 

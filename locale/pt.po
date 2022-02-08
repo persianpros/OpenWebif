@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-19 12:16+0330\n"
+"POT-Creation-Date: 2022-02-08 14:39+0330\n"
 "PO-Revision-Date: 2021-12-02 19:58+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/pt/>\n"
@@ -222,11 +222,11 @@ msgstr "Sempre"
 msgid "Amlogic remote"
 msgstr "Ocultar comando"
 
-#: ../plugin/controllers/models/message.py:52
+#: ../plugin/controllers/models/message.py:58
 msgid "Answer is NO!"
 msgstr "A resposta é NÂO!"
 
-#: ../plugin/controllers/models/message.py:52
+#: ../plugin/controllers/models/message.py:58
 msgid "Answer is YES!"
 msgstr "A resposta é SIM!"
 
@@ -312,7 +312,7 @@ msgstr "Editar AutoTimer"
 msgid "AutoTimer Settings"
 msgstr "Definições AutoTimer"
 
-#: ../plugin/controllers/base.py:347 ../plugin/controllers/i18n.py:343
+#: ../plugin/controllers/base.py:349 ../plugin/controllers/i18n.py:343
 msgid "AutoTimers"
 msgstr "Lista de AutoTimers"
 
@@ -414,7 +414,7 @@ msgstr "Bouquet renomeado com sucesso."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Bouquet - definições restauradas com sucesso."
 
-#: ../plugin/controllers/base.py:350
+#: ../plugin/controllers/base.py:351
 msgid "BouquetEditor"
 msgstr "Editor de Bouquets"
 
@@ -465,7 +465,7 @@ msgstr "Cabo"
 msgid "Calendar Week"
 msgstr "Calendário Semanal"
 
-#: ../plugin/controllers/i18n.py:98 ../plugin/plugin.py:126
+#: ../plugin/plugin.py:126 ../plugin/controllers/i18n.py:98
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -563,8 +563,8 @@ msgstr "Nome do receptor personalizado"
 msgid "Custom offset"
 msgstr "Deslocamento Customizado"
 
-#: ../plugin/controllers/models/info.py:69
-#: ../plugin/controllers/models/info.py:88 ../plugin/controllers/i18n.py:122
+#: ../plugin/controllers/i18n.py:122 ../plugin/controllers/models/info.py:69
+#: ../plugin/controllers/models/info.py:88
 msgid "DHCP"
 msgstr "DHCP"
 
@@ -728,7 +728,7 @@ msgstr "Epg Procura"
 msgid "EPG encoding"
 msgstr "Codificação do EPG"
 
-#: ../plugin/controllers/base.py:354
+#: ../plugin/controllers/base.py:355
 msgid "EPGRefresh"
 msgstr "EPGRefresh"
 
@@ -983,8 +983,8 @@ msgstr "Memória Livre"
 msgid "Free/Total Memory"
 msgstr "Memória Livre"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:52
+#: ../plugin/controllers/i18n.py:52 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Fri"
 msgstr "Sex"
 
@@ -1006,13 +1006,13 @@ msgstr "Versão do Processador"
 msgid "Full remote"
 msgstr "Ocultar comando"
 
+#: ../plugin/controllers/models/movies.py:279
+#: ../plugin/controllers/models/movies.py:409
+#: ../plugin/controllers/models/movies.py:837
 #: ../plugin/controllers/models/info.py:364
 #: ../plugin/controllers/models/info.py:370
 #: ../plugin/controllers/models/info.py:385
 #: ../plugin/controllers/models/info.py:388
-#: ../plugin/controllers/models/movies.py:279
-#: ../plugin/controllers/models/movies.py:409
-#: ../plugin/controllers/models/movies.py:837
 msgid "GB"
 msgstr "GB"
 
@@ -1091,11 +1091,11 @@ msgstr ""
 msgid "IPv4 address"
 msgstr "Endereço IPv4"
 
-#: ../plugin/controllers/models/info.py:153 ../plugin/controllers/i18n.py:179
+#: ../plugin/controllers/i18n.py:179 ../plugin/controllers/models/info.py:153
 msgid "IPv4-only Python/Twisted"
 msgstr "IPv4-só Python/Twisted"
 
-#: ../plugin/controllers/models/info.py:149 ../plugin/controllers/i18n.py:177
+#: ../plugin/controllers/i18n.py:177 ../plugin/controllers/models/info.py:149
 msgid "IPv4-only kernel"
 msgstr "IPv4-só kernel"
 
@@ -1219,7 +1219,7 @@ msgstr ""
 msgid "LCD"
 msgstr ""
 
-#: ../plugin/controllers/base.py:320
+#: ../plugin/controllers/base.py:322
 msgid "LCD4Linux Setup"
 msgstr "Definições LCD4Linux"
 
@@ -1265,12 +1265,12 @@ msgstr "Bloqueado"
 msgid "MAC address"
 msgstr "Endereço MAC"
 
-#: ../plugin/controllers/models/info.py:361
-#: ../plugin/controllers/models/info.py:372
-#: ../plugin/controllers/models/info.py:390
 #: ../plugin/controllers/models/movies.py:281
 #: ../plugin/controllers/models/movies.py:411
 #: ../plugin/controllers/models/movies.py:839
+#: ../plugin/controllers/models/info.py:361
+#: ../plugin/controllers/models/info.py:372
+#: ../plugin/controllers/models/info.py:390
 msgid "MB"
 msgstr "MB"
 
@@ -1302,7 +1302,7 @@ msgstr "Máx Dias"
 msgid "May"
 msgstr "Maio"
 
-#: ../plugin/controllers/models/message.py:36
+#: ../plugin/controllers/models/message.py:42
 msgid "Message sent successfully!"
 msgstr "Mensagem enviada com sucesso!"
 
@@ -1344,8 +1344,8 @@ msgstr "Seg"
 msgid "Model"
 msgstr "Modelo"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:48
+#: ../plugin/controllers/i18n.py:48 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Mon"
 msgstr "Seg"
 
@@ -1401,7 +1401,7 @@ msgstr "Multi EPG"
 msgid "MultiTranscoding"
 msgstr "Transcodificar"
 
-#: ../plugin/controllers/base.py:344
+#: ../plugin/controllers/base.py:346
 #, fuzzy
 msgid "NCam Webinterface"
 msgstr "Interface Web para OSCam"
@@ -1434,8 +1434,8 @@ msgstr "Partilhas de Rede"
 msgid "Never"
 msgstr "Nunca"
 
-#: ../plugin/controllers/models/services.py:382
 #: ../plugin/controllers/i18n.py:430
+#: ../plugin/controllers/models/services.py:382
 msgid "New"
 msgstr "Novo"
 
@@ -1448,7 +1448,7 @@ msgstr "Apagar Timer"
 msgid "New Name"
 msgstr "Novo Nome"
 
-#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:396
+#: ../plugin/controllers/i18n.py:396 ../plugin/controllers/models/info.py:265
 msgid "No"
 msgstr "Não"
 
@@ -1461,7 +1461,7 @@ msgstr "sem descrição disponível"
 msgid "No Parent Control Setup Pin given!"
 msgstr "Sem PIN na definição do Controlo paternal!"
 
-#: ../plugin/controllers/models/message.py:47
+#: ../plugin/controllers/models/message.py:53
 msgid "No answer in time"
 msgstr "Sem reposta no tempo"
 
@@ -1570,7 +1570,7 @@ msgstr "Espaço para gravações possível"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:342
+#: ../plugin/controllers/base.py:344
 msgid "OSCam Webinterface"
 msgstr "Interface Web para OSCam"
 
@@ -1683,8 +1683,8 @@ msgstr "Definições OpenWebif"
 msgid "OpenWebif url:"
 msgstr "OpenWebif URL:"
 
-#: ../plugin/controllers/models/services.py:276
 #: ../plugin/controllers/i18n.py:521
+#: ../plugin/controllers/models/services.py:276
 msgid "Orbital Position"
 msgstr "Posição Orbital"
 
@@ -1940,8 +1940,8 @@ msgstr "Sáb"
 msgid "Safe mode"
 msgstr "Modo de segurança"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:53
+#: ../plugin/controllers/i18n.py:53 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Sat"
 msgstr "Sáb"
 
@@ -1957,8 +1957,8 @@ msgstr "Procura Satélites"
 msgid "Saturday"
 msgstr "Sábado"
 
-#: ../plugin/controllers/i18n.py:254 ../plugin/controllers/i18n.py:423
-#: ../plugin/controllers/i18n.py:485 ../plugin/plugin.py:127
+#: ../plugin/plugin.py:127 ../plugin/controllers/i18n.py:254
+#: ../plugin/controllers/i18n.py:423 ../plugin/controllers/i18n.py:485
 msgid "Save"
 msgstr "Salvar"
 
@@ -2090,7 +2090,7 @@ msgstr "Serviços"
 msgid "Set maximum duration"
 msgstr "Definir a duração máxima"
 
-#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:266
+#: ../plugin/controllers/base.py:315 ../plugin/controllers/i18n.py:266
 #: ../plugin/controllers/i18n.py:427
 msgid "Settings"
 msgstr "Definições"
@@ -2304,8 +2304,8 @@ msgstr "Máscara de Rede"
 msgid "Subservices"
 msgstr "Subserviços"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:47
+#: ../plugin/controllers/i18n.py:47 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Sun"
 msgstr "Dom"
 
@@ -2347,7 +2347,7 @@ msgstr "Televisão"
 msgid "Template Engine"
 msgstr "Mecanismo modelo"
 
-#: ../plugin/controllers/base.py:390
+#: ../plugin/controllers/base.py:391
 msgid "Terminal"
 msgstr "Terminal Linux"
 
@@ -2392,7 +2392,7 @@ msgstr "O Timer '%s' agora gravado! Não desativado!"
 msgid "Theme"
 msgstr "Tema"
 
-#: ../plugin/controllers/i18n.py:316 ../plugin/plugin.py:159
+#: ../plugin/plugin.py:159 ../plugin/controllers/i18n.py:316
 #, fuzzy
 msgid "Theme mode"
 msgstr "Tema"
@@ -2401,8 +2401,8 @@ msgstr "Tema"
 msgid "This service can not be added."
 msgstr "O serviço não pode ser adicionado."
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:51
+#: ../plugin/controllers/i18n.py:51 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Thu"
 msgstr "Qui"
 
@@ -2517,8 +2517,8 @@ msgstr "Tsid"
 msgid "Tu"
 msgstr "Ter"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:49
+#: ../plugin/controllers/i18n.py:49 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Tue"
 msgstr "Ter"
 
@@ -2641,7 +2641,7 @@ msgstr "Usar o nome do receptor personalizado"
 msgid "Use modern design"
 msgstr "Usar a nova interface"
 
-#: ../plugin/controllers/i18n.py:617 ../plugin/plugin.py:157
+#: ../plugin/plugin.py:157 ../plugin/controllers/i18n.py:617
 msgid "Use modern interface"
 msgstr "Usar a nova interface"
 
@@ -2718,8 +2718,8 @@ msgstr "Qua"
 msgid "Web TV"
 msgstr "Web TV"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:50
+#: ../plugin/controllers/i18n.py:50 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Wed"
 msgstr "Qua"
 
@@ -2756,8 +2756,8 @@ msgstr "Formato de parâmetro errado, set=%s'. Usar set=set15 "
 msgid "YYYY-MM-DD"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:561
-#: ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/i18n.py:561 ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/models/info.py:265
 msgid "Yes"
 msgstr "Sim"
 
@@ -2866,11 +2866,11 @@ msgstr "Ir para Standy"
 msgid "hour"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:243
-#: ../plugin/controllers/models/info.py:246
 #: ../plugin/controllers/models/movies.py:283
 #: ../plugin/controllers/models/movies.py:413
 #: ../plugin/controllers/models/movies.py:841
+#: ../plugin/controllers/models/info.py:243
+#: ../plugin/controllers/models/info.py:246
 msgid "kB"
 msgstr "kB"
 
@@ -2896,7 +2896,7 @@ msgstr "Minuto"
 msgid "no description available"
 msgstr "sem descrição disponível"
 
-#: ../plugin/controllers/models/info.py:182 ../plugin/controllers/i18n.py:178
+#: ../plugin/controllers/i18n.py:178 ../plugin/controllers/models/info.py:182
 msgid "none/IPv4-only network"
 msgstr "nenhum/IPv4-só rede"
 

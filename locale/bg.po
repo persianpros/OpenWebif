@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-19 12:16+0330\n"
+"POT-Creation-Date: 2022-02-08 14:39+0330\n"
 "PO-Revision-Date: 2021-12-02 19:55+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/bg/>\n"
@@ -221,11 +221,11 @@ msgstr "Винаги"
 msgid "Amlogic remote"
 msgstr "Пълно дистанционно"
 
-#: ../plugin/controllers/models/message.py:52
+#: ../plugin/controllers/models/message.py:58
 msgid "Answer is NO!"
 msgstr "Отговора е НЕ!"
 
-#: ../plugin/controllers/models/message.py:52
+#: ../plugin/controllers/models/message.py:58
 msgid "Answer is YES!"
 msgstr "Отговора е ДА!"
 
@@ -310,7 +310,7 @@ msgstr "Автотаймер Редактор"
 msgid "AutoTimer Settings"
 msgstr "Автотаймер - настройки"
 
-#: ../plugin/controllers/base.py:347 ../plugin/controllers/i18n.py:343
+#: ../plugin/controllers/base.py:349 ../plugin/controllers/i18n.py:343
 msgid "AutoTimers"
 msgstr "Списък с Автотаймери"
 
@@ -412,7 +412,7 @@ msgstr "Букета е преименуван успешно."
 msgid "Bouquet-settings were restored successfully"
 msgstr "Настройките за букетите са възстановени успешно"
 
-#: ../plugin/controllers/base.py:350
+#: ../plugin/controllers/base.py:351
 msgid "BouquetEditor"
 msgstr "Букет Редактор"
 
@@ -463,7 +463,7 @@ msgstr "Кабелен"
 msgid "Calendar Week"
 msgstr "Седмичен Календар"
 
-#: ../plugin/controllers/i18n.py:98 ../plugin/plugin.py:126
+#: ../plugin/plugin.py:126 ../plugin/controllers/i18n.py:98
 msgid "Cancel"
 msgstr "Отмяна"
 
@@ -561,8 +561,8 @@ msgstr "Потребителско име на приемника"
 msgid "Custom offset"
 msgstr "Потребителско преместване"
 
-#: ../plugin/controllers/models/info.py:69
-#: ../plugin/controllers/models/info.py:88 ../plugin/controllers/i18n.py:122
+#: ../plugin/controllers/i18n.py:122 ../plugin/controllers/models/info.py:69
+#: ../plugin/controllers/models/info.py:88
 msgid "DHCP"
 msgstr "DHCP"
 
@@ -726,7 +726,7 @@ msgstr "Търсене в EPG"
 msgid "EPG encoding"
 msgstr "EPG Кодировка"
 
-#: ../plugin/controllers/base.py:354
+#: ../plugin/controllers/base.py:355
 msgid "EPGRefresh"
 msgstr "EPG Обновяване"
 
@@ -981,8 +981,8 @@ msgstr "Свободна Памет"
 msgid "Free/Total Memory"
 msgstr "Свободна Памет"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:52
+#: ../plugin/controllers/i18n.py:52 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Fri"
 msgstr "Пет"
 
@@ -1003,13 +1003,13 @@ msgstr "Версия на фронтпроцесора"
 msgid "Full remote"
 msgstr "Пълно дистанционно"
 
+#: ../plugin/controllers/models/movies.py:279
+#: ../plugin/controllers/models/movies.py:409
+#: ../plugin/controllers/models/movies.py:837
 #: ../plugin/controllers/models/info.py:364
 #: ../plugin/controllers/models/info.py:370
 #: ../plugin/controllers/models/info.py:385
 #: ../plugin/controllers/models/info.py:388
-#: ../plugin/controllers/models/movies.py:279
-#: ../plugin/controllers/models/movies.py:409
-#: ../plugin/controllers/models/movies.py:837
 msgid "GB"
 msgstr "ГБ"
 
@@ -1088,11 +1088,11 @@ msgstr ""
 msgid "IPv4 address"
 msgstr "IPv4 адрес"
 
-#: ../plugin/controllers/models/info.py:153 ../plugin/controllers/i18n.py:179
+#: ../plugin/controllers/i18n.py:179 ../plugin/controllers/models/info.py:153
 msgid "IPv4-only Python/Twisted"
 msgstr "IPv4-само Python/Twisted"
 
-#: ../plugin/controllers/models/info.py:149 ../plugin/controllers/i18n.py:177
+#: ../plugin/controllers/i18n.py:177 ../plugin/controllers/models/info.py:149
 msgid "IPv4-only kernel"
 msgstr "IPv4-само ядро"
 
@@ -1215,7 +1215,7 @@ msgstr ""
 msgid "LCD"
 msgstr "LCD"
 
-#: ../plugin/controllers/base.py:320
+#: ../plugin/controllers/base.py:322
 msgid "LCD4Linux Setup"
 msgstr "LCD4Linux Настройки"
 
@@ -1261,12 +1261,12 @@ msgstr "Заключен"
 msgid "MAC address"
 msgstr "MAC адрес"
 
-#: ../plugin/controllers/models/info.py:361
-#: ../plugin/controllers/models/info.py:372
-#: ../plugin/controllers/models/info.py:390
 #: ../plugin/controllers/models/movies.py:281
 #: ../plugin/controllers/models/movies.py:411
 #: ../plugin/controllers/models/movies.py:839
+#: ../plugin/controllers/models/info.py:361
+#: ../plugin/controllers/models/info.py:372
+#: ../plugin/controllers/models/info.py:390
 msgid "MB"
 msgstr "МБ"
 
@@ -1298,7 +1298,7 @@ msgstr "Максимум Дни"
 msgid "May"
 msgstr "Май"
 
-#: ../plugin/controllers/models/message.py:36
+#: ../plugin/controllers/models/message.py:42
 msgid "Message sent successfully!"
 msgstr "Съобщението беше успешно изпратено!"
 
@@ -1339,8 +1339,8 @@ msgstr "Пн"
 msgid "Model"
 msgstr "Модел"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:48
+#: ../plugin/controllers/i18n.py:48 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Mon"
 msgstr "Пон"
 
@@ -1396,7 +1396,7 @@ msgstr "Мулти EPG"
 msgid "MultiTranscoding"
 msgstr "Транскодиране"
 
-#: ../plugin/controllers/base.py:344
+#: ../plugin/controllers/base.py:346
 msgid "NCam Webinterface"
 msgstr "NCam Уеб-интерфейс"
 
@@ -1428,8 +1428,8 @@ msgstr "Мрежови Споделяния"
 msgid "Never"
 msgstr "Никога"
 
-#: ../plugin/controllers/models/services.py:382
 #: ../plugin/controllers/i18n.py:430
+#: ../plugin/controllers/models/services.py:382
 msgid "New"
 msgstr "Нов"
 
@@ -1442,7 +1442,7 @@ msgstr "Отметка"
 msgid "New Name"
 msgstr "Ново Име"
 
-#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:396
+#: ../plugin/controllers/i18n.py:396 ../plugin/controllers/models/info.py:265
 msgid "No"
 msgstr "Не"
 
@@ -1455,7 +1455,7 @@ msgstr "няма достъпно описание"
 msgid "No Parent Control Setup Pin given!"
 msgstr "Не е зададен ПИН за родителския контрол!"
 
-#: ../plugin/controllers/models/message.py:47
+#: ../plugin/controllers/models/message.py:53
 msgid "No answer in time"
 msgstr "Няма отговор навреме"
 
@@ -1563,7 +1563,7 @@ msgstr "Количество оставащи записи"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:342
+#: ../plugin/controllers/base.py:344
 msgid "OSCam Webinterface"
 msgstr "OSCam Уеб-интерфейс"
 
@@ -1676,8 +1676,8 @@ msgstr "OpenWebif Настройки"
 msgid "OpenWebif url:"
 msgstr "OpenWebif URL:"
 
-#: ../plugin/controllers/models/services.py:276
 #: ../plugin/controllers/i18n.py:521
+#: ../plugin/controllers/models/services.py:276
 msgid "Orbital Position"
 msgstr "Орбитална Позиция"
 
@@ -1932,8 +1932,8 @@ msgstr "Сб"
 msgid "Safe mode"
 msgstr "Безопасен режим"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:53
+#: ../plugin/controllers/i18n.py:53 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Sat"
 msgstr "Съб"
 
@@ -1949,8 +1949,8 @@ msgstr "Търсене на сигнал"
 msgid "Saturday"
 msgstr "Събота"
 
-#: ../plugin/controllers/i18n.py:254 ../plugin/controllers/i18n.py:423
-#: ../plugin/controllers/i18n.py:485 ../plugin/plugin.py:127
+#: ../plugin/plugin.py:127 ../plugin/controllers/i18n.py:254
+#: ../plugin/controllers/i18n.py:423 ../plugin/controllers/i18n.py:485
 msgid "Save"
 msgstr "Запис"
 
@@ -2082,7 +2082,7 @@ msgstr "Канали"
 msgid "Set maximum duration"
 msgstr "Задайте максимална продължителност"
 
-#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:266
+#: ../plugin/controllers/base.py:315 ../plugin/controllers/i18n.py:266
 #: ../plugin/controllers/i18n.py:427
 msgid "Settings"
 msgstr "Настройки"
@@ -2298,8 +2298,8 @@ msgstr "Маска на подмрежата"
 msgid "Subservices"
 msgstr "Подканали"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:47
+#: ../plugin/controllers/i18n.py:47 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Sun"
 msgstr "Нед"
 
@@ -2341,7 +2341,7 @@ msgstr "Телевизия"
 msgid "Template Engine"
 msgstr "Шаблон на Двигателя"
 
-#: ../plugin/controllers/base.py:390
+#: ../plugin/controllers/base.py:391
 msgid "Terminal"
 msgstr "Терминал"
 
@@ -2386,7 +2386,7 @@ msgstr "Таймер '%s' записва в момента! Не може да �
 msgid "Theme"
 msgstr "Тема"
 
-#: ../plugin/controllers/i18n.py:316 ../plugin/plugin.py:159
+#: ../plugin/plugin.py:159 ../plugin/controllers/i18n.py:316
 #, fuzzy
 msgid "Theme mode"
 msgstr "Тема"
@@ -2395,8 +2395,8 @@ msgstr "Тема"
 msgid "This service can not be added."
 msgstr "Този канал не може да се добави."
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:51
+#: ../plugin/controllers/i18n.py:51 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Thu"
 msgstr "Чтв"
 
@@ -2511,8 +2511,8 @@ msgstr "Tsid"
 msgid "Tu"
 msgstr "Вт"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:49
+#: ../plugin/controllers/i18n.py:49 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Tue"
 msgstr "Вто"
 
@@ -2634,7 +2634,7 @@ msgstr "Използвай потребителско име на приемни
 msgid "Use modern design"
 msgstr "Използвай новия дизайн"
 
-#: ../plugin/controllers/i18n.py:617 ../plugin/plugin.py:157
+#: ../plugin/plugin.py:157 ../plugin/controllers/i18n.py:617
 msgid "Use modern interface"
 msgstr "Използвай новия дизайн"
 
@@ -2711,8 +2711,8 @@ msgstr "Ср"
 msgid "Web TV"
 msgstr "Уеб ТВ"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:50
+#: ../plugin/controllers/i18n.py:50 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Wed"
 msgstr "Сря"
 
@@ -2749,8 +2749,8 @@ msgstr "Неправилен формат на параметъра 'set=%s'. И
 msgid "YYYY-MM-DD"
 msgstr ""
 
-#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:561
-#: ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/i18n.py:561 ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/models/info.py:265
 msgid "Yes"
 msgstr "Да"
 
@@ -2859,11 +2859,11 @@ msgstr "към режим готовност"
 msgid "hour"
 msgstr "час"
 
-#: ../plugin/controllers/models/info.py:243
-#: ../plugin/controllers/models/info.py:246
 #: ../plugin/controllers/models/movies.py:283
 #: ../plugin/controllers/models/movies.py:413
 #: ../plugin/controllers/models/movies.py:841
+#: ../plugin/controllers/models/info.py:243
+#: ../plugin/controllers/models/info.py:246
 msgid "kB"
 msgstr "КБ"
 
@@ -2888,7 +2888,7 @@ msgstr "минута"
 msgid "no description available"
 msgstr "няма достъпно описание"
 
-#: ../plugin/controllers/models/info.py:182 ../plugin/controllers/i18n.py:178
+#: ../plugin/controllers/i18n.py:178 ../plugin/controllers/models/info.py:182
 msgid "none/IPv4-only network"
 msgstr "нищо/IPv4-само мрежа"
 

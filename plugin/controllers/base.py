@@ -34,14 +34,14 @@ from twisted.internet import defer
 from twisted.protocols.basic import FileSender
 
 from Plugins.Extensions.OpenWebif.controllers.i18n import _
-from Tools.Directories import fileExists, resolveFilename, SCOPE_PLUGINS, isPluginInstalled
+from Tools.Directories import fileExists
 from Cheetah.Template import Template
 from enigma import eEPGCache
 from Components.config import config
 
 from Plugins.Extensions.OpenWebif.controllers.models.info import getInfo
 from Plugins.Extensions.OpenWebif.controllers.models.config import getCollapsedMenus, getConfigsSections, getShowName, getCustomName, getBoxName
-from Plugins.Extensions.OpenWebif.controllers.defaults import getPublicPath, getViewsPath, EXT_EVENT_INFO_SOURCE, STB_LANG, getIP, HASAUTOTIMER, TEXTINPUTSUPPORT
+from Plugins.Extensions.OpenWebif.controllers.defaults import getPublicPath, getViewsPath, EXT_EVENT_INFO_SOURCE, STB_LANG, getIP, HASAUTOTIMER, TEXTINPUTSUPPORT, _isPluginInstalled
 from Components.SystemInfo import BoxInfo
 
 
@@ -109,9 +109,11 @@ class BaseController(resource.Resource):
 		request.finish()
 
 	def loadTemplate(self, path, module, args):
-		if fileExists(getViewsPath(path + ".py")) or fileExists(getViewsPath(path + ".pyo")):
+		if fileExists(getViewsPath(path + ".py")) or fileExists(getViewsPath(path + ".pyo")) or fileExists(getViewsPath(path + ".pyc")):
 			if fileExists(getViewsPath(path + ".pyo")):
 				template = imp.load_compiled(module, getViewsPath(path + ".pyo"))
+			elif fileExists(getViewsPath(path + ".pyc")):
+				template = imp.load_compiled(module, getViewsPath(path + ".pyc"))
 			else:
 				template = imp.load_source(module, getViewsPath(path + ".py"))
 			mod = getattr(template, module, None)
@@ -314,7 +316,7 @@ class BaseController(resource.Resource):
 
 		ip = getIP()
 		if ip != None:
-			if isPluginInstalled("LCD4linux"):
+			if _isPluginInstalled("LCD4linux"):
 				lcd4linux_key = "lcd4linux/config"
 				if lcd4linux_key:
 					extras.append({'key': lcd4linux_key, 'description': _("LCD4Linux Setup"), 'nw': '1'})
@@ -346,8 +348,7 @@ class BaseController(resource.Resource):
 		if HASAUTOTIMER:
 			extras.append({'key': 'ajax/at', 'description': _('AutoTimers')})
 
-		if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/bqe.tmpl")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/bqe.pyo")):
-			extras.append({'key': 'ajax/bqe', 'description': _('BouquetEditor')})
+		extras.append({'key': 'ajax/bqe', 'description': _('BouquetEditor')})
 
 		try:
 			from Plugins.Extensions.EPGRefresh.EPGRefresh import epgrefresh  # noqa: F401
@@ -386,7 +387,7 @@ class BaseController(resource.Resource):
 		except ImportError:
 			pass
 
-		if os.path.exists('/usr/bin/shellinaboxd') and (fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/terminal.tmpl")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/terminal.pyo"))):
+		if os.path.exists('/usr/bin/shellinaboxd'):
 			extras.append({'key': 'ajax/terminal', 'description': _('Terminal')})
 
 		ret['extras'] = extras

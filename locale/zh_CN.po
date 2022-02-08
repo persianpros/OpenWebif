@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-19 12:16+0330\n"
+"POT-Creation-Date: 2022-02-08 14:39+0330\n"
 "PO-Revision-Date: 2021-12-02 19:58+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/zh_Hans/>\n"
@@ -220,11 +220,11 @@ msgstr "始终"
 msgid "Amlogic remote"
 msgstr "全遥"
 
-#: ../plugin/controllers/models/message.py:52
+#: ../plugin/controllers/models/message.py:58
 msgid "Answer is NO!"
 msgstr "否！"
 
-#: ../plugin/controllers/models/message.py:52
+#: ../plugin/controllers/models/message.py:58
 msgid "Answer is YES!"
 msgstr "是！"
 
@@ -308,7 +308,7 @@ msgstr "自动定时器编辑"
 msgid "AutoTimer Settings"
 msgstr "自动定时器设置"
 
-#: ../plugin/controllers/base.py:347 ../plugin/controllers/i18n.py:343
+#: ../plugin/controllers/base.py:349 ../plugin/controllers/i18n.py:343
 msgid "AutoTimers"
 msgstr "自动定时器"
 
@@ -409,7 +409,7 @@ msgstr "节目分组改名完成."
 msgid "Bouquet-settings were restored successfully"
 msgstr "节目分组设置已成功恢复"
 
-#: ../plugin/controllers/base.py:350
+#: ../plugin/controllers/base.py:351
 msgid "BouquetEditor"
 msgstr "编辑节目分组"
 
@@ -460,7 +460,7 @@ msgstr "有线"
 msgid "Calendar Week"
 msgstr "本周"
 
-#: ../plugin/controllers/i18n.py:98 ../plugin/plugin.py:126
+#: ../plugin/plugin.py:126 ../plugin/controllers/i18n.py:98
 msgid "Cancel"
 msgstr "取消"
 
@@ -556,8 +556,8 @@ msgstr "自定义机顶盒名称"
 msgid "Custom offset"
 msgstr "自定义偏移"
 
-#: ../plugin/controllers/models/info.py:69
-#: ../plugin/controllers/models/info.py:88 ../plugin/controllers/i18n.py:122
+#: ../plugin/controllers/i18n.py:122 ../plugin/controllers/models/info.py:69
+#: ../plugin/controllers/models/info.py:88
 msgid "DHCP"
 msgstr "DHCP服务器"
 
@@ -720,7 +720,7 @@ msgstr "EPG搜索"
 msgid "EPG encoding"
 msgstr "EPG编码"
 
-#: ../plugin/controllers/base.py:354
+#: ../plugin/controllers/base.py:355
 msgid "EPGRefresh"
 msgstr "EPG刷新"
 
@@ -970,8 +970,8 @@ msgstr "可用内存"
 msgid "Free/Total Memory"
 msgstr "可用内存"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:52
+#: ../plugin/controllers/i18n.py:52 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Fri"
 msgstr "星期五"
 
@@ -992,13 +992,13 @@ msgstr "前处理器版本"
 msgid "Full remote"
 msgstr "全遥"
 
+#: ../plugin/controllers/models/movies.py:279
+#: ../plugin/controllers/models/movies.py:409
+#: ../plugin/controllers/models/movies.py:837
 #: ../plugin/controllers/models/info.py:364
 #: ../plugin/controllers/models/info.py:370
 #: ../plugin/controllers/models/info.py:385
 #: ../plugin/controllers/models/info.py:388
-#: ../plugin/controllers/models/movies.py:279
-#: ../plugin/controllers/models/movies.py:409
-#: ../plugin/controllers/models/movies.py:837
 msgid "GB"
 msgstr "GB"
 
@@ -1077,11 +1077,11 @@ msgstr "IPTV/URL名称"
 msgid "IPv4 address"
 msgstr "IPv4地址"
 
-#: ../plugin/controllers/models/info.py:153 ../plugin/controllers/i18n.py:179
+#: ../plugin/controllers/i18n.py:179 ../plugin/controllers/models/info.py:153
 msgid "IPv4-only Python/Twisted"
 msgstr "仅IPV4"
 
-#: ../plugin/controllers/models/info.py:149 ../plugin/controllers/i18n.py:177
+#: ../plugin/controllers/i18n.py:177 ../plugin/controllers/models/info.py:149
 msgid "IPv4-only kernel"
 msgstr "仅IPv4内核"
 
@@ -1202,7 +1202,7 @@ msgstr ""
 msgid "LCD"
 msgstr "LCD"
 
-#: ../plugin/controllers/base.py:320
+#: ../plugin/controllers/base.py:322
 msgid "LCD4Linux Setup"
 msgstr "LCD设置"
 
@@ -1247,12 +1247,12 @@ msgstr "锁定"
 msgid "MAC address"
 msgstr "MAC地址"
 
-#: ../plugin/controllers/models/info.py:361
-#: ../plugin/controllers/models/info.py:372
-#: ../plugin/controllers/models/info.py:390
 #: ../plugin/controllers/models/movies.py:281
 #: ../plugin/controllers/models/movies.py:411
 #: ../plugin/controllers/models/movies.py:839
+#: ../plugin/controllers/models/info.py:361
+#: ../plugin/controllers/models/info.py:372
+#: ../plugin/controllers/models/info.py:390
 msgid "MB"
 msgstr "MB"
 
@@ -1284,7 +1284,7 @@ msgstr "最大天数"
 msgid "May"
 msgstr "五月"
 
-#: ../plugin/controllers/models/message.py:36
+#: ../plugin/controllers/models/message.py:42
 msgid "Message sent successfully!"
 msgstr "消息发送成功！"
 
@@ -1325,8 +1325,8 @@ msgstr "星期一"
 msgid "Model"
 msgstr "型号"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:48
+#: ../plugin/controllers/i18n.py:48 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Mon"
 msgstr "星期一"
 
@@ -1381,7 +1381,7 @@ msgstr "多重EPG"
 msgid "MultiTranscoding"
 msgstr "转码"
 
-#: ../plugin/controllers/base.py:344
+#: ../plugin/controllers/base.py:346
 msgid "NCam Webinterface"
 msgstr "NCam网络接口"
 
@@ -1413,8 +1413,8 @@ msgstr "网络共享"
 msgid "Never"
 msgstr "从不"
 
-#: ../plugin/controllers/models/services.py:382
 #: ../plugin/controllers/i18n.py:430
+#: ../plugin/controllers/models/services.py:382
 msgid "New"
 msgstr "新发现"
 
@@ -1426,7 +1426,7 @@ msgstr "新书签:"
 msgid "New Name"
 msgstr "新名称"
 
-#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:396
+#: ../plugin/controllers/i18n.py:396 ../plugin/controllers/models/info.py:265
 msgid "No"
 msgstr "否"
 
@@ -1438,7 +1438,7 @@ msgstr "没有可用的EPG数据."
 msgid "No Parent Control Setup Pin given!"
 msgstr "没有给到家长控制设置PIN码!"
 
-#: ../plugin/controllers/models/message.py:47
+#: ../plugin/controllers/models/message.py:53
 msgid "No answer in time"
 msgstr "无响应"
 
@@ -1545,7 +1545,7 @@ msgstr "剩余录制数"
 msgid "OE"
 msgstr "E"
 
-#: ../plugin/controllers/base.py:342
+#: ../plugin/controllers/base.py:344
 msgid "OSCam Webinterface"
 msgstr "OSCam网络接口"
 
@@ -1657,8 +1657,8 @@ msgstr "OpenWebif设置"
 msgid "OpenWebif url:"
 msgstr "OpenWebif 网址："
 
-#: ../plugin/controllers/models/services.py:276
 #: ../plugin/controllers/i18n.py:521
+#: ../plugin/controllers/models/services.py:276
 msgid "Orbital Position"
 msgstr "轨道位置"
 
@@ -1910,8 +1910,8 @@ msgstr "星期六"
 msgid "Safe mode"
 msgstr "安全模式"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:53
+#: ../plugin/controllers/i18n.py:53 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Sat"
 msgstr "星期六"
 
@@ -1927,8 +1927,8 @@ msgstr "寻星仪"
 msgid "Saturday"
 msgstr "星期六"
 
-#: ../plugin/controllers/i18n.py:254 ../plugin/controllers/i18n.py:423
-#: ../plugin/controllers/i18n.py:485 ../plugin/plugin.py:127
+#: ../plugin/plugin.py:127 ../plugin/controllers/i18n.py:254
+#: ../plugin/controllers/i18n.py:423 ../plugin/controllers/i18n.py:485
 msgid "Save"
 msgstr "保存"
 
@@ -2056,7 +2056,7 @@ msgstr "频道"
 msgid "Set maximum duration"
 msgstr "设置最大持续时间"
 
-#: ../plugin/controllers/base.py:313 ../plugin/controllers/i18n.py:266
+#: ../plugin/controllers/base.py:315 ../plugin/controllers/i18n.py:266
 #: ../plugin/controllers/i18n.py:427
 msgid "Settings"
 msgstr "设置"
@@ -2268,8 +2268,8 @@ msgstr "子网掩码"
 msgid "Subservices"
 msgstr "子频道"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:47
+#: ../plugin/controllers/i18n.py:47 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Sun"
 msgstr "星期日"
 
@@ -2311,7 +2311,7 @@ msgstr "电视"
 msgid "Template Engine"
 msgstr "模板引擎"
 
-#: ../plugin/controllers/base.py:390
+#: ../plugin/controllers/base.py:391
 msgid "Terminal"
 msgstr "终端设备"
 
@@ -2356,7 +2356,7 @@ msgstr "定时器 '%s' 正在录制!不能禁用!"
 msgid "Theme"
 msgstr "主题"
 
-#: ../plugin/controllers/i18n.py:316 ../plugin/plugin.py:159
+#: ../plugin/plugin.py:159 ../plugin/controllers/i18n.py:316
 msgid "Theme mode"
 msgstr "主题模式"
 
@@ -2364,8 +2364,8 @@ msgstr "主题模式"
 msgid "This service can not be added."
 msgstr "无法添加此频道."
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:51
+#: ../plugin/controllers/i18n.py:51 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Thu"
 msgstr "星期四"
 
@@ -2480,8 +2480,8 @@ msgstr "Tsid"
 msgid "Tu"
 msgstr "星期二"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:49
+#: ../plugin/controllers/i18n.py:49 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Tue"
 msgstr "星期二"
 
@@ -2600,7 +2600,7 @@ msgstr "使用自定义机顶盒名称"
 msgid "Use modern design"
 msgstr "使用现代设计"
 
-#: ../plugin/controllers/i18n.py:617 ../plugin/plugin.py:157
+#: ../plugin/plugin.py:157 ../plugin/controllers/i18n.py:617
 msgid "Use modern interface"
 msgstr "使用现代界面"
 
@@ -2676,8 +2676,8 @@ msgstr "星期三"
 msgid "Web TV"
 msgstr "网络电视"
 
-#: ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44 ../plugin/controllers/i18n.py:50
+#: ../plugin/controllers/i18n.py:50 ../plugin/controllers/models/movies.py:55
+#: ../plugin/controllers/models/timers.py:44
 msgid "Wed"
 msgstr "星期三"
 
@@ -2714,8 +2714,8 @@ msgstr "错误的参数格式设置'set=%s', 使用 set=set15"
 msgid "YYYY-MM-DD"
 msgstr "YYYY-MM-DD"
 
-#: ../plugin/controllers/models/info.py:265 ../plugin/controllers/i18n.py:561
-#: ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/i18n.py:561 ../plugin/controllers/i18n.py:578
+#: ../plugin/controllers/models/info.py:265
 msgid "Yes"
 msgstr "是"
 
@@ -2820,11 +2820,11 @@ msgstr "转到待机状态"
 msgid "hour"
 msgstr "小时"
 
-#: ../plugin/controllers/models/info.py:243
-#: ../plugin/controllers/models/info.py:246
 #: ../plugin/controllers/models/movies.py:283
 #: ../plugin/controllers/models/movies.py:413
 #: ../plugin/controllers/models/movies.py:841
+#: ../plugin/controllers/models/info.py:243
+#: ../plugin/controllers/models/info.py:246
 msgid "kB"
 msgstr "kB"
 
@@ -2849,7 +2849,7 @@ msgstr "分钟"
 msgid "no description available"
 msgstr "无可用描述"
 
-#: ../plugin/controllers/models/info.py:182 ../plugin/controllers/i18n.py:178
+#: ../plugin/controllers/i18n.py:178 ../plugin/controllers/models/info.py:182
 msgid "none/IPv4-only network"
 msgstr "无/仅IPv4网络"
 
