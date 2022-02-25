@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-08 14:39+0330\n"
+"POT-Creation-Date: 2022-02-23 23:12+0330\n"
 "PO-Revision-Date: \n"
 "Last-Translator: IMS <ims@openpli.org>\n"
 "Language-Team: PLi <ims@openpli.org>\n"
@@ -69,7 +69,7 @@ msgstr "%s %s je uzamčen."
 msgid "%s / %s"
 msgstr "%s / %s"
 
-#: ../plugin/controllers/ajax.py:258
+#: ../plugin/controllers/ajax.py:262
 #, python-format
 msgid "%s Style"
 msgstr ""
@@ -156,7 +156,7 @@ msgstr "Přidat filtry"
 msgid "Add selection to bouquet"
 msgstr "Přidat kanál(y) do přehledu"
 
-#: ../plugin/plugin.py:181
+#: ../plugin/plugin.py:184
 msgid "Add service name to stream information"
 msgstr "Přidat název programu do streamu"
 
@@ -198,7 +198,7 @@ msgstr "Všechny soubory tohoto software jsou open source software; můžete je 
 msgid "All alternative services deleted."
 msgstr "Všechny alternativní programy odstraněny."
 
-#: ../plugin/plugin.py:182
+#: ../plugin/plugin.py:185
 msgid "Allow IPK Upload"
 msgstr "Umožnit nahrát IPK"
 
@@ -460,7 +460,7 @@ msgstr "Kabelové"
 msgid "Calendar Week"
 msgstr "Týden"
 
-#: ../plugin/plugin.py:126 ../plugin/controllers/i18n.py:98
+#: ../plugin/plugin.py:129 ../plugin/controllers/i18n.py:98
 msgid "Cancel"
 msgstr "Zavřít"
 
@@ -548,7 +548,7 @@ msgstr "Aktuální událost"
 msgid "Custom STB name"
 msgstr "Vlastní název přijímače"
 
-#: ../plugin/plugin.py:165
+#: ../plugin/plugin.py:168
 msgid "Custom box name"
 msgstr "Vlastní název přijímače"
 
@@ -581,7 +581,7 @@ msgstr "Datum (nejnovější)"
 msgid "Date (oldest)"
 msgstr "Datum (nejstarší)"
 
-#: ../plugin/plugin.py:184
+#: ../plugin/plugin.py:187
 msgid "Debug - Display Tracebacks in browser"
 msgstr ""
 
@@ -645,7 +645,7 @@ msgstr "Zakázat"
 msgid "Disable Timer"
 msgstr "Zakázat časovač"
 
-#: ../plugin/plugin.py:175
+#: ../plugin/plugin.py:178
 msgid "Disable remote access for user root"
 msgstr "Zakázat přístup pro uživatele root"
 
@@ -749,19 +749,19 @@ msgstr ""
 msgid "Enable"
 msgstr "Povolit"
 
-#: ../plugin/plugin.py:174
+#: ../plugin/plugin.py:177
 msgid "Enable Authentication for streaming"
 msgstr "Povolit ověřování pro streamování"
 
-#: ../plugin/plugin.py:167
+#: ../plugin/plugin.py:170
 msgid "Enable HTTP Authentication"
 msgstr "Povolit HTTP ověřování"
 
-#: ../plugin/plugin.py:168
+#: ../plugin/plugin.py:171
 msgid "Enable HTTPS"
 msgstr "Povolit HTTPS"
 
-#: ../plugin/plugin.py:171
+#: ../plugin/plugin.py:174
 msgid "Enable HTTPS Authentication"
 msgstr "Povolit HTTPS ověřování"
 
@@ -769,7 +769,7 @@ msgstr "Povolit HTTPS ověřování"
 msgid "Enable Messages"
 msgstr "Povolit zprávy"
 
-#: ../plugin/plugin.py:179
+#: ../plugin/plugin.py:182
 msgid "Enable Parental Control"
 msgstr "Povolit rodičovskou kontrolu"
 
@@ -777,7 +777,7 @@ msgstr "Povolit rodičovskou kontrolu"
 msgid "Enable Timer"
 msgstr "Povolit časovač"
 
-#: ../plugin/plugin.py:178
+#: ../plugin/plugin.py:181
 msgid "Enable access from VPNs"
 msgstr "Povolit přístup z VPN"
 
@@ -1035,11 +1035,11 @@ msgstr ""
 msgid "HH:MM"
 msgstr "HH:MM"
 
-#: ../plugin/plugin.py:166
+#: ../plugin/plugin.py:169
 msgid "HTTP port"
 msgstr "HTTP port"
 
-#: ../plugin/plugin.py:170
+#: ../plugin/plugin.py:173
 msgid "HTTPS port"
 msgstr "HTTPS port"
 
@@ -1635,7 +1635,7 @@ msgstr "Otevřít v novém okně"
 msgid "OpenSSL"
 msgstr ""
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:156
 msgid "OpenWebInterface Enabled"
 msgstr "Povolit OpenWebIf"
 
@@ -1643,7 +1643,7 @@ msgstr "Povolit OpenWebIf"
 msgid "OpenWebif Browser Settings"
 msgstr "Nastavení prohlížeče OpenWebif"
 
-#: ../plugin/plugin.py:193 ../plugin/plugin.py:261 ../plugin/plugin.py:263
+#: ../plugin/plugin.py:196 ../plugin/plugin.py:264 ../plugin/plugin.py:266
 msgid "OpenWebif Configuration"
 msgstr "Nastavení OpenWebif"
 
@@ -1651,7 +1651,7 @@ msgstr "Nastavení OpenWebif"
 msgid "OpenWebif Settings"
 msgstr "Nastavení OpenWebif"
 
-#: ../plugin/plugin.py:139
+#: ../plugin/plugin.py:142
 msgid "OpenWebif url:"
 msgstr "OpenWebif URL:"
 
@@ -1710,7 +1710,7 @@ msgstr "Formát playlistu"
 msgid "Playback"
 msgstr "Přehrát"
 
-#: ../plugin/plugin.py:183
+#: ../plugin/plugin.py:186
 msgid "Playback IPTV Streams in browser"
 msgstr "Přehrávat IPTV Streamy prohlížeči"
 
@@ -1839,7 +1839,7 @@ msgstr "Přejmenovat nahrávku"
 msgid "Repeated"
 msgstr "Opakování"
 
-#: ../plugin/plugin.py:172
+#: ../plugin/plugin.py:175
 msgid "Require client cert for HTTPS"
 msgstr "Požadovat klientskou certifikaci pro HTTPS"
 
@@ -1923,7 +1923,7 @@ msgstr "Satfinder"
 msgid "Saturday"
 msgstr "Sobota"
 
-#: ../plugin/plugin.py:127 ../plugin/controllers/i18n.py:254
+#: ../plugin/plugin.py:130 ../plugin/controllers/i18n.py:254
 #: ../plugin/controllers/i18n.py:423 ../plugin/controllers/i18n.py:485
 msgid "Save"
 msgstr "Uložit"
@@ -2057,7 +2057,7 @@ msgstr "Nastavit maximální délku trvání"
 msgid "Settings"
 msgstr "Nastavení"
 
-#: ../plugin/plugin.py:155
+#: ../plugin/plugin.py:158
 msgid "Show CPU benchmark in STB information"
 msgstr ""
 
@@ -2073,7 +2073,7 @@ msgstr "Zobrazit plný OpenWebif"
 msgid "Show IPTV channels in selection (eg. Autotimer)"
 msgstr "IPTV kanály ve výběru (např. Autotimer)"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:159
 msgid "Show RAM benchmark in STB information"
 msgstr ""
 
@@ -2086,7 +2086,7 @@ msgstr "Zobrazovat v záhlaví název přijímače"
 msgid "Show all packages"
 msgstr "Zobrazit všechny balíčky"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:164
 msgid "Show box name in header"
 msgstr "Zobrazovat v záhlaví název přijímače"
 
@@ -2243,7 +2243,7 @@ msgstr "Streamovat"
 msgid "Stream Clients"
 msgstr "Streamující klienti"
 
-#: ../plugin/plugin.py:180
+#: ../plugin/plugin.py:183
 msgid "Streaming port"
 msgstr "Streamovací port"
 
@@ -2351,7 +2351,7 @@ msgstr "Časovač '%s' je právě nahráván! Nelze zakázat!"
 msgid "Theme"
 msgstr "Vzhled"
 
-#: ../plugin/plugin.py:159 ../plugin/controllers/i18n.py:316
+#: ../plugin/plugin.py:162 ../plugin/controllers/i18n.py:316
 msgid "Theme mode"
 msgstr "Vzhled"
 
@@ -2578,7 +2578,7 @@ msgstr "Použít jako PiP, jestliže je to možné"
 msgid "Use classic interface"
 msgstr "Použít klasický vzhled"
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:163
 msgid "Use custom Color"
 msgstr "Použít uživatelské barvy"
 
@@ -2587,7 +2587,7 @@ msgstr "Použít uživatelské barvy"
 msgid "Use custom STB name"
 msgstr "Použít vlastní název přijímače"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:166
 msgid "Use custom box name"
 msgstr "Použít vlastní název přijímače"
 
@@ -2595,7 +2595,7 @@ msgstr "Použít vlastní název přijímače"
 msgid "Use modern design"
 msgstr "Použít nový vzhled"
 
-#: ../plugin/plugin.py:157 ../plugin/controllers/i18n.py:617
+#: ../plugin/plugin.py:160 ../plugin/controllers/i18n.py:617
 msgid "Use modern interface"
 msgstr "Použít nový vzhled"
 
@@ -2688,7 +2688,7 @@ msgstr "týdně (pondělí)"
 msgid "Weekly (Sunday)"
 msgstr "týdně (neděle)"
 
-#: ../plugin/plugin.py:177
+#: ../plugin/plugin.py:180
 msgid "Without auth only local access is allowed!"
 msgstr "Bez ověřování je povolen pouze lokální přístup"
 
@@ -2751,7 +2751,7 @@ msgstr "libovolný čas"
 msgid "auto"
 msgstr "automaticky"
 
-#: ../plugin/plugin.py:133
+#: ../plugin/plugin.py:136
 msgid "box_ip"
 msgstr ""
 

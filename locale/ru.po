@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-08 14:39+0330\n"
+"POT-Creation-Date: 2022-02-23 23:12+0330\n"
 "PO-Revision-Date: 2021-12-02 19:58+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/ru/>\n"
@@ -68,7 +68,7 @@ msgstr "%s %s заблокирован."
 msgid "%s / %s"
 msgstr "%s / %s"
 
-#: ../plugin/controllers/ajax.py:258
+#: ../plugin/controllers/ajax.py:262
 #, python-format
 msgid "%s Style"
 msgstr ""
@@ -155,7 +155,7 @@ msgstr "Добавить фильтры"
 msgid "Add selection to bouquet"
 msgstr "Добавить канал(ы) в букет"
 
-#: ../plugin/plugin.py:181
+#: ../plugin/plugin.py:184
 msgid "Add service name to stream information"
 msgstr "Добавить название сервиса в информацию стрима"
 
@@ -197,7 +197,7 @@ msgstr "Все файлы данного ПО являются открытым 
 msgid "All alternative services deleted."
 msgstr "Все альтернативные сервисы удалены."
 
-#: ../plugin/plugin.py:182
+#: ../plugin/plugin.py:185
 msgid "Allow IPK Upload"
 msgstr "Разрешить загрузку IPK"
 
@@ -459,7 +459,7 @@ msgstr "Кабельный"
 msgid "Calendar Week"
 msgstr "Календарь недели"
 
-#: ../plugin/plugin.py:126 ../plugin/controllers/i18n.py:98
+#: ../plugin/plugin.py:129 ../plugin/controllers/i18n.py:98
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -547,7 +547,7 @@ msgstr "Текущее событие"
 msgid "Custom STB name"
 msgstr "Пользовательское имя ресивера"
 
-#: ../plugin/plugin.py:165
+#: ../plugin/plugin.py:168
 msgid "Custom box name"
 msgstr "Пользовательское имя ресивера"
 
@@ -580,7 +580,7 @@ msgstr "Дата (новейшая) "
 msgid "Date (oldest)"
 msgstr "Дата (самая старая)"
 
-#: ../plugin/plugin.py:184
+#: ../plugin/plugin.py:187
 msgid "Debug - Display Tracebacks in browser"
 msgstr "Отладка - показать лог в браузере"
 
@@ -644,7 +644,7 @@ msgstr "Отключено"
 msgid "Disable Timer"
 msgstr "Отключить таймер"
 
-#: ../plugin/plugin.py:175
+#: ../plugin/plugin.py:178
 msgid "Disable remote access for user root"
 msgstr "Отключить доступ для пользователя root"
 
@@ -748,19 +748,19 @@ msgstr "Редактор"
 msgid "Enable"
 msgstr "Включить"
 
-#: ../plugin/plugin.py:174
+#: ../plugin/plugin.py:177
 msgid "Enable Authentication for streaming"
 msgstr "Включить аутентификацию для стриминга"
 
-#: ../plugin/plugin.py:167
+#: ../plugin/plugin.py:170
 msgid "Enable HTTP Authentication"
 msgstr "Применить HTTP аутентификацию"
 
-#: ../plugin/plugin.py:168
+#: ../plugin/plugin.py:171
 msgid "Enable HTTPS"
 msgstr "Применить HTTPS"
 
-#: ../plugin/plugin.py:171
+#: ../plugin/plugin.py:174
 msgid "Enable HTTPS Authentication"
 msgstr "Применить HTTPS аутентификацию"
 
@@ -768,7 +768,7 @@ msgstr "Применить HTTPS аутентификацию"
 msgid "Enable Messages"
 msgstr "Включить сообщения"
 
-#: ../plugin/plugin.py:179
+#: ../plugin/plugin.py:182
 msgid "Enable Parental Control"
 msgstr "Включить родительский контроль"
 
@@ -776,7 +776,7 @@ msgstr "Включить родительский контроль"
 msgid "Enable Timer"
 msgstr "Включить таймер"
 
-#: ../plugin/plugin.py:178
+#: ../plugin/plugin.py:181
 msgid "Enable access from VPNs"
 msgstr "Включить доступ из VPN"
 
@@ -1035,11 +1035,11 @@ msgstr ""
 msgid "HH:MM"
 msgstr "HH:MM"
 
-#: ../plugin/plugin.py:166
+#: ../plugin/plugin.py:169
 msgid "HTTP port"
 msgstr "Порт HTTP"
 
-#: ../plugin/plugin.py:170
+#: ../plugin/plugin.py:173
 msgid "HTTPS port"
 msgstr "Порт HTTPS"
 
@@ -1636,7 +1636,7 @@ msgstr "Открыть в новом окне"
 msgid "OpenSSL"
 msgstr ""
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:156
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWebif включен"
 
@@ -1644,7 +1644,7 @@ msgstr "OpenWebif включен"
 msgid "OpenWebif Browser Settings"
 msgstr "Настройки браузера OpenWebif"
 
-#: ../plugin/plugin.py:193 ../plugin/plugin.py:261 ../plugin/plugin.py:263
+#: ../plugin/plugin.py:196 ../plugin/plugin.py:264 ../plugin/plugin.py:266
 msgid "OpenWebif Configuration"
 msgstr "Настройки OpenWebif"
 
@@ -1652,7 +1652,7 @@ msgstr "Настройки OpenWebif"
 msgid "OpenWebif Settings"
 msgstr "Настройки OpenWebif"
 
-#: ../plugin/plugin.py:139
+#: ../plugin/plugin.py:142
 msgid "OpenWebif url:"
 msgstr "OpenWebif айпи:"
 
@@ -1711,7 +1711,7 @@ msgstr "Формат плейлиста"
 msgid "Playback"
 msgstr "Воспроизвести"
 
-#: ../plugin/plugin.py:183
+#: ../plugin/plugin.py:186
 msgid "Playback IPTV Streams in browser"
 msgstr "Воспроизведение стрима IPTV в браузере"
 
@@ -1841,7 +1841,7 @@ msgstr "Переименовать запись"
 msgid "Repeated"
 msgstr "Повторить"
 
-#: ../plugin/plugin.py:172
+#: ../plugin/plugin.py:175
 msgid "Require client cert for HTTPS"
 msgstr "Требовать клиентский сертификат для HTTPS"
 
@@ -1926,7 +1926,7 @@ msgstr "Сигнал спутника"
 msgid "Saturday"
 msgstr "Суббота"
 
-#: ../plugin/plugin.py:127 ../plugin/controllers/i18n.py:254
+#: ../plugin/plugin.py:130 ../plugin/controllers/i18n.py:254
 #: ../plugin/controllers/i18n.py:423 ../plugin/controllers/i18n.py:485
 msgid "Save"
 msgstr "Сохранить"
@@ -2060,7 +2060,7 @@ msgstr "Установите максимальную продолжительн
 msgid "Settings"
 msgstr "Настройки"
 
-#: ../plugin/plugin.py:155
+#: ../plugin/plugin.py:158
 msgid "Show CPU benchmark in STB information"
 msgstr ""
 
@@ -2076,7 +2076,7 @@ msgstr "Показать весь OpenWebif"
 msgid "Show IPTV channels in selection (eg. Autotimer)"
 msgstr "Показывать выделенные каналы IPTV (например Автотаймер)"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:159
 msgid "Show RAM benchmark in STB information"
 msgstr ""
 
@@ -2090,7 +2090,7 @@ msgstr "Показывать имя ресивера в заголовке"
 msgid "Show all packages"
 msgstr "Обновление всех пакетов"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:164
 msgid "Show box name in header"
 msgstr "Показывать имя ресивера в заголовке"
 
@@ -2247,7 +2247,7 @@ msgstr "Стрим"
 msgid "Stream Clients"
 msgstr "Стрим клиенты"
 
-#: ../plugin/plugin.py:180
+#: ../plugin/plugin.py:183
 msgid "Streaming port"
 msgstr "Порт стрима"
 
@@ -2355,7 +2355,7 @@ msgstr "Таймер '%s' сейчас записывается! Невозмо�
 msgid "Theme"
 msgstr "Тема"
 
-#: ../plugin/plugin.py:159 ../plugin/controllers/i18n.py:316
+#: ../plugin/plugin.py:162 ../plugin/controllers/i18n.py:316
 msgid "Theme mode"
 msgstr "Режим темы"
 
@@ -2582,7 +2582,7 @@ msgstr "Использовать как PiP при возможности"
 msgid "Use classic interface"
 msgstr "Использование классического интерфейса"
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:163
 msgid "Use custom Color"
 msgstr "Использовать пользовательский цвет"
 
@@ -2591,7 +2591,7 @@ msgstr "Использовать пользовательский цвет"
 msgid "Use custom STB name"
 msgstr "Использовать пользовательское имя ресивера"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:166
 msgid "Use custom box name"
 msgstr "Использовать пользовательское имя ресивера"
 
@@ -2599,7 +2599,7 @@ msgstr "Использовать пользовательское имя рес�
 msgid "Use modern design"
 msgstr "Использование нового дизайна"
 
-#: ../plugin/plugin.py:157 ../plugin/controllers/i18n.py:617
+#: ../plugin/plugin.py:160 ../plugin/controllers/i18n.py:617
 msgid "Use modern interface"
 msgstr "Использование нового интерфейса"
 
@@ -2692,7 +2692,7 @@ msgstr "Еженедельно (понедельник)"
 msgid "Weekly (Sunday)"
 msgstr "Еженедельно (воскресенье)"
 
-#: ../plugin/plugin.py:177
+#: ../plugin/plugin.py:180
 msgid "Without auth only local access is allowed!"
 msgstr "Без аутентификации разрешен только локальный доступ!"
 
@@ -2755,7 +2755,7 @@ msgstr "любое время"
 msgid "auto"
 msgstr "авто"
 
-#: ../plugin/plugin.py:133
+#: ../plugin/plugin.py:136
 msgid "box_ip"
 msgstr "ресиер_айпи"
 

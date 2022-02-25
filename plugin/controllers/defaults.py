@@ -30,7 +30,7 @@ def _isPluginInstalled(p, plugin="plugin"):
 
 from Components.SystemInfo import BoxInfo
 
-OPENWEBIFVER = "OWIF 1.5.0.2 for Open Vision"
+OPENWEBIFVER = "OWIF 1.5.0.3 for Open Vision"
 
 PLUGIN_NAME = 'OpenWebif'
 PLUGIN_DESCRIPTION = "OpenWebif Configuration"
@@ -238,6 +238,18 @@ def getTextInputSupport():
 		return False
 
 
+def getDefaultRcu():
+	remotetype = "standard"
+	try:
+		from Components.SystemInfo import BoxInfo
+		model = BoxInfo.getItem("model")
+		if model in ("xp1000", "formuler1", "formuler3", "et9x00", "hd1100", "hd1200"):
+			remotetype = "advanced"
+	except:  # nosec # noqa: E722
+		print("[OpenWebIf] wrong hw detection")
+	return remotetype
+
+
 OPENWEBIFPACKAGEVERSION = getOpenwebifPackageVersion()
 
 USERCSSCLASSIC = getUserCSS('/etc/enigma2/owfclassic.css')
@@ -257,3 +269,5 @@ HASSERIES = getSeriesPlugin()
 ATSEARCHTYPES = getATSearchtypes()
 
 TEXTINPUTSUPPORT = getTextInputSupport()
+
+DEFAULT_RCU = getDefaultRcu()

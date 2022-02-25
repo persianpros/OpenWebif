@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-08 14:39+0330\n"
+"POT-Creation-Date: 2022-02-23 23:12+0330\n"
 "PO-Revision-Date: 2021-12-02 19:58+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/zh_Hans/>\n"
@@ -69,7 +69,7 @@ msgstr "%s %s 已加锁."
 msgid "%s / %s"
 msgstr "%s / %s"
 
-#: ../plugin/controllers/ajax.py:258
+#: ../plugin/controllers/ajax.py:262
 #, python-format
 msgid "%s Style"
 msgstr ""
@@ -156,7 +156,7 @@ msgstr "添加筛选器"
 msgid "Add selection to bouquet"
 msgstr "添加频道到节目分组"
 
-#: ../plugin/plugin.py:181
+#: ../plugin/plugin.py:184
 msgid "Add service name to stream information"
 msgstr "添加频道名称到数据流信息"
 
@@ -198,7 +198,7 @@ msgstr "本软件所有文件均为开源软件;您可以在自由软件基金�
 msgid "All alternative services deleted."
 msgstr "已删除所有替代频道."
 
-#: ../plugin/plugin.py:182
+#: ../plugin/plugin.py:185
 msgid "Allow IPK Upload"
 msgstr "允许IPK上传"
 
@@ -460,7 +460,7 @@ msgstr "有线"
 msgid "Calendar Week"
 msgstr "本周"
 
-#: ../plugin/plugin.py:126 ../plugin/controllers/i18n.py:98
+#: ../plugin/plugin.py:129 ../plugin/controllers/i18n.py:98
 msgid "Cancel"
 msgstr "取消"
 
@@ -548,7 +548,7 @@ msgstr "当前事件"
 msgid "Custom STB name"
 msgstr "自定义机顶盒名称"
 
-#: ../plugin/plugin.py:165
+#: ../plugin/plugin.py:168
 msgid "Custom box name"
 msgstr "自定义机顶盒名称"
 
@@ -581,7 +581,7 @@ msgstr "日期(最新)"
 msgid "Date (oldest)"
 msgstr "日期(最旧）"
 
-#: ../plugin/plugin.py:184
+#: ../plugin/plugin.py:187
 msgid "Debug - Display Tracebacks in browser"
 msgstr "调试-在浏览器中显示错误信息和回跟踪"
 
@@ -645,7 +645,7 @@ msgstr "禁用"
 msgid "Disable Timer"
 msgstr "禁用定时器"
 
-#: ../plugin/plugin.py:175
+#: ../plugin/plugin.py:178
 msgid "Disable remote access for user root"
 msgstr "禁用用户根目录的远程访问"
 
@@ -749,19 +749,19 @@ msgstr "编辑"
 msgid "Enable"
 msgstr "启用"
 
-#: ../plugin/plugin.py:174
+#: ../plugin/plugin.py:177
 msgid "Enable Authentication for streaming"
 msgstr "为流媒体启用身份验证"
 
-#: ../plugin/plugin.py:167
+#: ../plugin/plugin.py:170
 msgid "Enable HTTP Authentication"
 msgstr "启用HTTP身份验证"
 
-#: ../plugin/plugin.py:168
+#: ../plugin/plugin.py:171
 msgid "Enable HTTPS"
 msgstr "启用HTTPS"
 
-#: ../plugin/plugin.py:171
+#: ../plugin/plugin.py:174
 msgid "Enable HTTPS Authentication"
 msgstr "启用HTTPS身份验证"
 
@@ -769,7 +769,7 @@ msgstr "启用HTTPS身份验证"
 msgid "Enable Messages"
 msgstr "启用消息"
 
-#: ../plugin/plugin.py:179
+#: ../plugin/plugin.py:182
 msgid "Enable Parental Control"
 msgstr "启用家长控制"
 
@@ -777,7 +777,7 @@ msgstr "启用家长控制"
 msgid "Enable Timer"
 msgstr "启用定时器"
 
-#: ../plugin/plugin.py:178
+#: ../plugin/plugin.py:181
 msgid "Enable access from VPNs"
 msgstr "启用VPN接入"
 
@@ -1036,11 +1036,11 @@ msgstr ""
 msgid "HH:MM"
 msgstr "小时:分钟"
 
-#: ../plugin/plugin.py:166
+#: ../plugin/plugin.py:169
 msgid "HTTP port"
 msgstr "HTTP端口"
 
-#: ../plugin/plugin.py:170
+#: ../plugin/plugin.py:173
 msgid "HTTPS port"
 msgstr "HTTPS端口"
 
@@ -1637,7 +1637,7 @@ msgstr "在新窗口中打开"
 msgid "OpenSSL"
 msgstr ""
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:156
 msgid "OpenWebInterface Enabled"
 msgstr "启用开放的Web界面"
 
@@ -1645,7 +1645,7 @@ msgstr "启用开放的Web界面"
 msgid "OpenWebif Browser Settings"
 msgstr "OpenWebif浏览器设置"
 
-#: ../plugin/plugin.py:193 ../plugin/plugin.py:261 ../plugin/plugin.py:263
+#: ../plugin/plugin.py:196 ../plugin/plugin.py:264 ../plugin/plugin.py:266
 msgid "OpenWebif Configuration"
 msgstr "网页管理配置"
 
@@ -1653,7 +1653,7 @@ msgstr "网页管理配置"
 msgid "OpenWebif Settings"
 msgstr "OpenWebif设置"
 
-#: ../plugin/plugin.py:139
+#: ../plugin/plugin.py:142
 msgid "OpenWebif url:"
 msgstr "OpenWebif 网址："
 
@@ -1712,7 +1712,7 @@ msgstr "播放列表格式"
 msgid "Playback"
 msgstr "回放"
 
-#: ../plugin/plugin.py:183
+#: ../plugin/plugin.py:186
 msgid "Playback IPTV Streams in browser"
 msgstr "在浏览器中播放IPTV流"
 
@@ -1842,7 +1842,7 @@ msgstr "重命名录制"
 msgid "Repeated"
 msgstr "重复"
 
-#: ../plugin/plugin.py:172
+#: ../plugin/plugin.py:175
 msgid "Require client cert for HTTPS"
 msgstr "HTTPS需要客户端证书"
 
@@ -1927,7 +1927,7 @@ msgstr "寻星仪"
 msgid "Saturday"
 msgstr "星期六"
 
-#: ../plugin/plugin.py:127 ../plugin/controllers/i18n.py:254
+#: ../plugin/plugin.py:130 ../plugin/controllers/i18n.py:254
 #: ../plugin/controllers/i18n.py:423 ../plugin/controllers/i18n.py:485
 msgid "Save"
 msgstr "保存"
@@ -2061,7 +2061,7 @@ msgstr "设置最大持续时间"
 msgid "Settings"
 msgstr "设置"
 
-#: ../plugin/plugin.py:155
+#: ../plugin/plugin.py:158
 msgid "Show CPU benchmark in STB information"
 msgstr ""
 
@@ -2077,7 +2077,7 @@ msgstr "显示完整的OpenWebif"
 msgid "Show IPTV channels in selection (eg. Autotimer)"
 msgstr "在选择中显示IPTV频道(如自动定时器)"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:159
 msgid "Show RAM benchmark in STB information"
 msgstr ""
 
@@ -2091,7 +2091,7 @@ msgstr "在标题中显示机顶盒名称"
 msgid "Show all packages"
 msgstr "升级全部软件包"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:164
 msgid "Show box name in header"
 msgstr "在标题中显示机顶盒名称"
 
@@ -2248,7 +2248,7 @@ msgstr "串流"
 msgid "Stream Clients"
 msgstr "流客户端"
 
-#: ../plugin/plugin.py:180
+#: ../plugin/plugin.py:183
 msgid "Streaming port"
 msgstr "流媒体端口"
 
@@ -2356,7 +2356,7 @@ msgstr "定时器 '%s' 正在录制!不能禁用!"
 msgid "Theme"
 msgstr "主题"
 
-#: ../plugin/plugin.py:159 ../plugin/controllers/i18n.py:316
+#: ../plugin/plugin.py:162 ../plugin/controllers/i18n.py:316
 msgid "Theme mode"
 msgstr "主题模式"
 
@@ -2583,7 +2583,7 @@ msgstr "如果可能,可用作画中画"
 msgid "Use classic interface"
 msgstr "使用经典界面"
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:163
 msgid "Use custom Color"
 msgstr "使用自定义颜色"
 
@@ -2592,7 +2592,7 @@ msgstr "使用自定义颜色"
 msgid "Use custom STB name"
 msgstr "使用自定义机顶盒名称"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:166
 msgid "Use custom box name"
 msgstr "使用自定义机顶盒名称"
 
@@ -2600,7 +2600,7 @@ msgstr "使用自定义机顶盒名称"
 msgid "Use modern design"
 msgstr "使用现代设计"
 
-#: ../plugin/plugin.py:157 ../plugin/controllers/i18n.py:617
+#: ../plugin/plugin.py:160 ../plugin/controllers/i18n.py:617
 msgid "Use modern interface"
 msgstr "使用现代界面"
 
@@ -2693,7 +2693,7 @@ msgstr "每周（星期一）"
 msgid "Weekly (Sunday)"
 msgstr "每周（星期日）"
 
-#: ../plugin/plugin.py:177
+#: ../plugin/plugin.py:180
 msgid "Without auth only local access is allowed!"
 msgstr "没有认证只有本地访问是允许的！"
 
@@ -2756,7 +2756,7 @@ msgstr "任何时候"
 msgid "auto"
 msgstr "自动"
 
-#: ../plugin/plugin.py:133
+#: ../plugin/plugin.py:136
 msgid "box_ip"
 msgstr "box_ip"
 

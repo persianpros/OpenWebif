@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-08 14:39+0330\n"
+"POT-Creation-Date: 2022-02-23 23:12+0330\n"
 "PO-Revision-Date: 2021-12-04 17:29+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/nb_NO/>\n"
@@ -70,7 +70,7 @@ msgstr "%s %s er låst."
 msgid "%s / %s"
 msgstr "%s/%s"
 
-#: ../plugin/controllers/ajax.py:258
+#: ../plugin/controllers/ajax.py:262
 #, python-format
 msgid "%s Style"
 msgstr ""
@@ -159,7 +159,7 @@ msgstr "Legg til timer"
 msgid "Add selection to bouquet"
 msgstr "Legg til kanal(er) i kanalliste"
 
-#: ../plugin/plugin.py:181
+#: ../plugin/plugin.py:184
 msgid "Add service name to stream information"
 msgstr "Legg til leverandørnavn i stream informasjon"
 
@@ -201,7 +201,7 @@ msgstr "Alle filer fra denne software er åpen kildekode; du kan gjengi dette og
 msgid "All alternative services deleted."
 msgstr "Alle alternative kanaler er slettet."
 
-#: ../plugin/plugin.py:182
+#: ../plugin/plugin.py:185
 msgid "Allow IPK Upload"
 msgstr "Tillat last opp IPK"
 
@@ -465,7 +465,7 @@ msgstr "Kabel-TV"
 msgid "Calendar Week"
 msgstr "Uke kallender"
 
-#: ../plugin/plugin.py:126 ../plugin/controllers/i18n.py:98
+#: ../plugin/plugin.py:129 ../plugin/controllers/i18n.py:98
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -553,7 +553,7 @@ msgstr "Gjeldende aktivitet"
 msgid "Custom STB name"
 msgstr "Egendefinert mottakernavn"
 
-#: ../plugin/plugin.py:165
+#: ../plugin/plugin.py:168
 msgid "Custom box name"
 msgstr "Egendefinert mottakernavn"
 
@@ -586,7 +586,7 @@ msgstr "Dato (nyeste)"
 msgid "Date (oldest)"
 msgstr "Dato (eldste)"
 
-#: ../plugin/plugin.py:184
+#: ../plugin/plugin.py:187
 msgid "Debug - Display Tracebacks in browser"
 msgstr "Avlusning - Vis tilbakesporing i nettleser"
 
@@ -651,7 +651,7 @@ msgstr "frakoblet"
 msgid "Disable Timer"
 msgstr "Deaktiver timer"
 
-#: ../plugin/plugin.py:175
+#: ../plugin/plugin.py:178
 msgid "Disable remote access for user root"
 msgstr "Koble fra fjerntilgang for bruker root"
 
@@ -757,19 +757,19 @@ msgstr "Redigerer"
 msgid "Enable"
 msgstr "Aktivert"
 
-#: ../plugin/plugin.py:174
+#: ../plugin/plugin.py:177
 msgid "Enable Authentication for streaming"
 msgstr "Aktiver autentisering for streaming"
 
-#: ../plugin/plugin.py:167
+#: ../plugin/plugin.py:170
 msgid "Enable HTTP Authentication"
 msgstr "Aktiver HTTP autentisering"
 
-#: ../plugin/plugin.py:168
+#: ../plugin/plugin.py:171
 msgid "Enable HTTPS"
 msgstr "Aktiver HTTPS"
 
-#: ../plugin/plugin.py:171
+#: ../plugin/plugin.py:174
 msgid "Enable HTTPS Authentication"
 msgstr "Aktiver HTTPS autentisering"
 
@@ -777,7 +777,7 @@ msgstr "Aktiver HTTPS autentisering"
 msgid "Enable Messages"
 msgstr "Aktiver beskjeder"
 
-#: ../plugin/plugin.py:179
+#: ../plugin/plugin.py:182
 msgid "Enable Parental Control"
 msgstr "Aktiver foreldrekontroll"
 
@@ -785,7 +785,7 @@ msgstr "Aktiver foreldrekontroll"
 msgid "Enable Timer"
 msgstr "Aktiver timer"
 
-#: ../plugin/plugin.py:178
+#: ../plugin/plugin.py:181
 msgid "Enable access from VPNs"
 msgstr "Aktiver tilgang fra VPN"
 
@@ -1047,11 +1047,11 @@ msgstr ""
 msgid "HH:MM"
 msgstr "TT:MM"
 
-#: ../plugin/plugin.py:166
+#: ../plugin/plugin.py:169
 msgid "HTTP port"
 msgstr "HTTP port"
 
-#: ../plugin/plugin.py:170
+#: ../plugin/plugin.py:173
 msgid "HTTPS port"
 msgstr "HTTPS port"
 
@@ -1653,7 +1653,7 @@ msgstr "Åpne i et nytt vindu"
 msgid "OpenSSL"
 msgstr ""
 
-#: ../plugin/plugin.py:153
+#: ../plugin/plugin.py:156
 msgid "OpenWebInterface Enabled"
 msgstr "OpenWebInterface er aktivert"
 
@@ -1661,7 +1661,7 @@ msgstr "OpenWebInterface er aktivert"
 msgid "OpenWebif Browser Settings"
 msgstr "OpenWebif nettleser innstilling"
 
-#: ../plugin/plugin.py:193 ../plugin/plugin.py:261 ../plugin/plugin.py:263
+#: ../plugin/plugin.py:196 ../plugin/plugin.py:264 ../plugin/plugin.py:266
 msgid "OpenWebif Configuration"
 msgstr "OpenWebif innstilling"
 
@@ -1669,7 +1669,7 @@ msgstr "OpenWebif innstilling"
 msgid "OpenWebif Settings"
 msgstr "OpenWebif innstilling"
 
-#: ../plugin/plugin.py:139
+#: ../plugin/plugin.py:142
 #, fuzzy
 msgid "OpenWebif url:"
 msgstr "OpenWebif URL:"
@@ -1729,7 +1729,7 @@ msgstr "Opptaksliste"
 msgid "Playback"
 msgstr "Avspilling"
 
-#: ../plugin/plugin.py:183
+#: ../plugin/plugin.py:186
 msgid "Playback IPTV Streams in browser"
 msgstr "Spill av IPTV-strømmer i nettleseren"
 
@@ -1861,7 +1861,7 @@ msgstr "Bytt navn på opptaket"
 msgid "Repeated"
 msgstr "Gjentatt"
 
-#: ../plugin/plugin.py:172
+#: ../plugin/plugin.py:175
 msgid "Require client cert for HTTPS"
 msgstr "Krev klientsertifikat for HTTPS"
 
@@ -1948,7 +1948,7 @@ msgstr "Satellittsøker"
 msgid "Saturday"
 msgstr "Lørdag"
 
-#: ../plugin/plugin.py:127 ../plugin/controllers/i18n.py:254
+#: ../plugin/plugin.py:130 ../plugin/controllers/i18n.py:254
 #: ../plugin/controllers/i18n.py:423 ../plugin/controllers/i18n.py:485
 msgid "Save"
 msgstr "Lagre"
@@ -2086,7 +2086,7 @@ msgstr "Still inn maksimal varighet (i min)"
 msgid "Settings"
 msgstr "Innstillinger"
 
-#: ../plugin/plugin.py:155
+#: ../plugin/plugin.py:158
 msgid "Show CPU benchmark in STB information"
 msgstr ""
 
@@ -2102,7 +2102,7 @@ msgstr "Vis full OpenWebif"
 msgid "Show IPTV channels in selection (eg. Autotimer)"
 msgstr "Vis IPTV-kanaler i utvalg (f.eks. automatisk tidsur)"
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:159
 msgid "Show RAM benchmark in STB information"
 msgstr ""
 
@@ -2116,7 +2116,7 @@ msgstr "Vis mottakernavn i overskrift"
 msgid "Show all packages"
 msgstr "Oppdater alle pakker"
 
-#: ../plugin/plugin.py:161
+#: ../plugin/plugin.py:164
 msgid "Show box name in header"
 msgstr "Vis mottakernavn i overskrift"
 
@@ -2276,7 +2276,7 @@ msgstr "Stream"
 msgid "Stream Clients"
 msgstr "Stream"
 
-#: ../plugin/plugin.py:180
+#: ../plugin/plugin.py:183
 #, fuzzy
 msgid "Streaming port"
 msgstr "Stream"
@@ -2385,7 +2385,7 @@ msgstr "Timeren '%s' er nå registrert! Ikke deaktivert!"
 msgid "Theme"
 msgstr "Tema"
 
-#: ../plugin/plugin.py:159 ../plugin/controllers/i18n.py:316
+#: ../plugin/plugin.py:162 ../plugin/controllers/i18n.py:316
 #, fuzzy
 msgid "Theme mode"
 msgstr "Tema"
@@ -2615,7 +2615,7 @@ msgstr "Bruk bilde-i-bilde hvis mulig"
 msgid "Use classic interface"
 msgstr "Bruk ny utforming"
 
-#: ../plugin/plugin.py:160
+#: ../plugin/plugin.py:163
 #, fuzzy
 msgid "Use custom Color"
 msgstr "Bruk en egendefinert lagringsplass"
@@ -2625,7 +2625,7 @@ msgstr "Bruk en egendefinert lagringsplass"
 msgid "Use custom STB name"
 msgstr "Bruk egendefinert mottakernavn"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:166
 msgid "Use custom box name"
 msgstr "Bruk egendefinert mottakernavn"
 
@@ -2634,7 +2634,7 @@ msgstr "Bruk egendefinert mottakernavn"
 msgid "Use modern design"
 msgstr "Bruk ny utforming"
 
-#: ../plugin/plugin.py:157 ../plugin/controllers/i18n.py:617
+#: ../plugin/plugin.py:160 ../plugin/controllers/i18n.py:617
 msgid "Use modern interface"
 msgstr "Bruk ny utforming"
 
@@ -2727,7 +2727,7 @@ msgstr "Ukentlig (Mandag)"
 msgid "Weekly (Sunday)"
 msgstr "Ukentlig (Søndag)"
 
-#: ../plugin/plugin.py:177
+#: ../plugin/plugin.py:180
 msgid "Without auth only local access is allowed!"
 msgstr "Kun lokal adgang er tillat uten godkjenning!"
 
@@ -2792,7 +2792,7 @@ msgstr "Legg til timer"
 msgid "auto"
 msgstr "auto"
 
-#: ../plugin/plugin.py:133
+#: ../plugin/plugin.py:136
 #, fuzzy
 msgid "box_ip"
 msgstr "boks-IP"

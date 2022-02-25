@@ -156,7 +156,11 @@ class AjaxController(BaseController):
 	def P_screenshot(self, request):
 		box = {}
 		box['brand'] = BoxInfo.getItem("brand")
-		return {"box": box}
+		return {"box": box,
+				"high_resolution": config.OpenWebif.webcache.screenshot_high_resolution.value,
+				"refresh_auto": config.OpenWebif.webcache.screenshot_refresh_auto.value,
+				"refresh_time": config.OpenWebif.webcache.screenshot_refresh_time.value
+				}
 
 	def P_movies(self, request):
 		movies = getMovieList(request.args)

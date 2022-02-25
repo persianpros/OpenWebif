@@ -25,6 +25,7 @@ from __future__ import print_function
 from Components.config import config
 from enigma import eServiceReference, eActionMap, eServiceCenter
 from Plugins.Extensions.OpenWebif.controllers.models.services import getProtection
+from Plugins.Extensions.OpenWebif.controllers.defaults import DEFAULT_RCU
 from Screens.InfoBar import InfoBar, MoviePlayer
 import NavigationInstance
 import os
@@ -166,21 +167,12 @@ def zapService(session, id, title="", stream=False):
 	}
 
 
-def remoteControl(key, type="", rcu=""):
-	# TODO: do something better here
-	if rcu == "standard":
-		remotetype = "dreambox remote control (native)"
-	elif rcu == "advanced":
+def remoteControl(key, type="", rcu=DEFAULT_RCU):
+	remotetype = "dreambox remote control (native)"
+	if rcu == "advanced":
 		remotetype = "dreambox advanced remote control (native)"
 	elif rcu == "keyboard":
 		remotetype = "dreambox ir keyboard"
-	else:
-		try:
-			remotetype = "dreambox advanced remote control (native)"
-			print("[OpenWebIf] wrong hw detection?")
-		except:  # nosec # noqa: E722
-			remotetype = "dreambox remote control (native)"
-			print("[OpenWebIf] wrong hw detection?")
 
 	amap = eActionMap.getInstance()
 
