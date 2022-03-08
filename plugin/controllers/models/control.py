@@ -221,7 +221,7 @@ def setPowerState(session, state):
 	elif state == 3:  # Restart Enigma
 		session.open(TryQuitMainloop, state)
 	elif state == 4:  # Wakeup
-		if inStandby is not None:
+		if inStandby != None:
 			inStandby.Power()
 	elif state == 5:  # Standby
 		if inStandby is None:
@@ -232,7 +232,7 @@ def setPowerState(session, state):
 
 	return {
 		"result": True,
-		"instandby": inStandby is not None
+		"instandby": inStandby != None
 	}
 
 
@@ -240,5 +240,5 @@ def getStandbyState(session):
 	from Screens.Standby import inStandby
 	return {
 		"result": True,
-		"instandby": inStandby is not None
+		"instandby": inStandby != None
 	}

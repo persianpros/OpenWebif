@@ -56,7 +56,7 @@ def whoami(request):
 		proto = 'https'
 	ourhost = request.getHeader('host')
 	m = re.match('.+\:(\d+)$', ourhost)
-	if m is not None:
+	if m != None:
 		port = m.group(1)
 	return {'proto': proto, 'port': port}
 
@@ -530,7 +530,7 @@ class WebController(BaseController):
 		services = getServices(bRef, False)
 		if comp_config.OpenWebif.auth_for_streaming.value:
 			session = GetSession()
-			if session.GetAuth(request) is not None:
+			if session.GetAuth(request) != None:
 				auth = ':'.join(session.GetAuth(request)) + "@"
 			else:
 				auth = '-sid:' + str(session.GetSID(request)) + "@"
@@ -569,7 +569,7 @@ class WebController(BaseController):
 		services = getServices(bRef, False)
 		if comp_config.OpenWebif.auth_for_streaming.value:
 			session = GetSession()
-			if session.GetAuth(request) is not None:
+			if session.GetAuth(request) != None:
 				auth = ':'.join(session.GetAuth(request)) + "@"
 			else:
 				auth = '-sid:' + str(session.GetSID(request)) + "@"
@@ -1069,7 +1069,7 @@ class WebController(BaseController):
 			queryTime = int(request.args[b"begin"][0]) + (int(request.args[b"end"][0]) - int(request.args[b"begin"][0])) // 2
 			event = eEPGCache.getInstance().lookupEventTime(eServiceReference(sRef), queryTime)
 			eventid = event and event.getEventId()
-			if eventid is not None:
+			if eventid != None:
 				eit = int(eventid)
 
 		always_zap = int(getUrlArg(request, "always_zap", "-1"))
@@ -1410,7 +1410,7 @@ class WebController(BaseController):
 		info = getInfo()['ifaces']
 		for iface in info:
 			public = iface['firstpublic']
-			if public is not None:
+			if public != None:
 				firstpublic = public
 				break
 
@@ -1719,7 +1719,7 @@ class WebController(BaseController):
 				mnow = now
 		elif mnow["sref"] == '':
 			serviceref = self.session.nav.getCurrentlyPlayingServiceReference()
-			if serviceref is not None:
+			if serviceref != None:
 				try:
 					if serviceref.toString().startswith('4097:0:0:0:0:0:0:0:0:0:/'):
 						from enigma import eServiceCenter
@@ -2381,7 +2381,7 @@ class WebController(BaseController):
 		sRef = getUrlArg(request, "sRef")
 		json = getUrlArg(request, "json")
 		pp = getPicon(sRef, path, False)
-		if pp is not None:
+		if pp != None:
 			if path is None:
 				path = PICON_PATH
 			link = pp

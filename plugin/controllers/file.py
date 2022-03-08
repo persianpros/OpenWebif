@@ -69,7 +69,7 @@ class FileController(resource.Resource):
 					proto = 'https'
 				ourhost = request.getHeader('host')
 				m = re.match('.+\:(\d+)$', ourhost)
-				if m is not None:
+				if m != None:
 					port = m.group(1)
 
 				response = "#EXTM3U\n#EXTVLCOPT:http-reconnect=true\n#EXTINF:-1,%s\n%s://%s:%s/file?action=download&file=%s" % (name, proto, request.getRequestHostname(), port, quote(filename))

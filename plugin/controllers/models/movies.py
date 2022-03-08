@@ -92,7 +92,7 @@ def checkParentalProtection(directory):
 			if directory[-1] != "/":
 				directory += "/"
 			is_protected = config.movielist.moviedirs_config.getConfigValue(directory, "protect")
-			if is_protected is not None and is_protected == 1:
+			if is_protected != None and is_protected == 1:
 				return True
 	return False
 
@@ -178,7 +178,7 @@ def getMovieList(rargs=None, locations=None):
 				folders.append(ff)
 	else:
 		# get all locations
-		if locations is not None:
+		if locations != None:
 			folders = []
 
 			for f in locations:
@@ -203,7 +203,7 @@ def getMovieList(rargs=None, locations=None):
 		else:
 			movielist = MovieList(None)
 		for root in folders:
-			if tag is not None:
+			if tag != None:
 				movielist.load(root=root, filter_tags=[tag])
 			else:
 				movielist.load(root=root, filter_tags=None)
@@ -329,9 +329,9 @@ def getMovieSearchList(rargs=None, locations=None):
 		extended = getUrlArg2(rargs, "extended")
 
 	s = {'title': str(searchstr)}
-	if short is not None:
+	if short != None:
 		s['shortDesc'] = str(searchstr)
-	if extended is not None:
+	if extended != None:
 		s['extDesc'] = str(searchstr)
 
 	movielist = MovieList(None)
@@ -436,13 +436,13 @@ def removeMovie(session, sRef, Force=False):
 	deleted = False
 	message = "service error"
 
-	if service is not None:
+	if service != None:
 		serviceHandler = eServiceCenter.getInstance()
 		offline = serviceHandler.offlineOperations(service.ref)
 		info = serviceHandler.info(service.ref)
 		name = info and info.getName(service.ref) or "this recording"
 
-	if offline is not None:
+	if offline != None:
 		if Force is True:
 			message = "force delete"
 		elif hasattr(config.usage, 'movielist_trashcan'):
@@ -523,10 +523,10 @@ def _moveMovie(session, sRef, destpath=None, newname=None):
 	result = True
 	errText = 'unknown Error'
 
-	if destpath is not None and not destpath[-1] == '/':
+	if destpath != None and not destpath[-1] == '/':
 		destpath = destpath + '/'
 
-	if service is not None:
+	if service != None:
 		serviceHandler = eServiceCenter.getInstance()
 		info = serviceHandler.info(service.ref)
 		name = info and info.getName(service.ref) or "this recording"
@@ -534,7 +534,7 @@ def _moveMovie(session, sRef, destpath=None, newname=None):
 		srcpath = '/'.join(fullpath.split('/')[:-1]) + '/'
 		fullfilename = fullpath.split('/')[-1]
 		fileName, fileExt = os.path.splitext(fullfilename)
-		if newname is not None:
+		if newname != None:
 			newfullpath = srcpath + newname + fileExt
 
 		# TODO: check splitted recording
@@ -552,7 +552,7 @@ def _moveMovie(session, sRef, destpath=None, newname=None):
 				src = srcpath + fileName + suffix
 				if exists(src):
 					try:
-						if newname is not None:
+						if newname != None:
 							# rename title in meta file
 							if suffix == '.ts.meta':
 								# todo error handling
@@ -637,7 +637,7 @@ def renameMovie(session, sRef, newname):
 
 def getMovieInfo(sRef=None, addtag=None, deltag=None, title=None, cuts=None, description=None, NewFormat=False):
 
-	if sRef is not None:
+	if sRef != None:
 		sRef = unquote(sRef)
 		result = False
 		service = ServiceReference(sRef)
@@ -645,7 +645,7 @@ def getMovieInfo(sRef=None, addtag=None, deltag=None, title=None, cuts=None, des
 		newtitle = ''
 		newdesc = ''
 		newcuts = []
-		if service is not None:
+		if service != None:
 			fullpath = service.ref.getPath()
 			filename = '/'.join(fullpath.split("/")[1:])
 			metafilename = '/' + filename + '.meta'
@@ -663,12 +663,12 @@ def getMovieInfo(sRef=None, addtag=None, deltag=None, title=None, cuts=None, des
 					newdesc = meta[2]
 					deltags = []
 
-					if addtag is not None:
+					if addtag != None:
 						for _add in addtag.split(','):
 							__add = _add.replace(' ', '_')
 							if __add not in oldtags:
 								oldtags.append(__add)
-					if deltag is not None:
+					if deltag != None:
 						for _del in deltag.split(','):
 							__del = _del.replace(' ', '_')
 							deltags.append(__del)
@@ -679,11 +679,11 @@ def getMovieInfo(sRef=None, addtag=None, deltag=None, title=None, cuts=None, des
 
 					lines[4] = ' '.join(newtags)
 
-					if title is not None and len(title) > 0:
+					if title != None and len(title) > 0:
 						lines[1] = title
 						newtitle = title
 
-					if description is not None and len(description) > 0:
+					if description != None and len(description) > 0:
 						lines[2] = description
 						newdesc = description
 
@@ -715,7 +715,7 @@ def getMovieInfo(sRef=None, addtag=None, deltag=None, title=None, cuts=None, des
 						print('Error')
 						pass
 
-					if cuts is not None:
+					if cuts != None:
 						newcuts = []
 						cutsFileName = '/' + filename + '.cuts'
 						f = open(cutsFileName, 'wb')
@@ -752,9 +752,9 @@ def getMovieInfo(sRef=None, addtag=None, deltag=None, title=None, cuts=None, des
 					tags.append(tag.strip())
 				if addtag == tag:
 					addtag = None
-		if deltag is not None:
+		if deltag != None:
 			wr = True
-	if addtag is not None:
+	if addtag != None:
 		tags.append(addtag)
 		wr = True
 	if wr:
@@ -769,7 +769,7 @@ def getMovieInfo(sRef=None, addtag=None, deltag=None, title=None, cuts=None, des
 def getMovieDetails(sRef=None):
 
 	service = ServiceReference(sRef)
-	if service is not None:
+	if service != None:
 
 		serviceref = service.ref
 		length_minutes = 0

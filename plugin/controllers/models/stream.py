@@ -28,7 +28,7 @@ class GetSession(Resource):
 
 	def GetAuth(self, request):
 		session = request.getSession().sessionNamespaces
-		if "pwd" in list(session.keys()) and session["pwd"] is not None:
+		if "pwd" in list(session.keys()) and session["pwd"] != None:
 			return (session["user"], session["pwd"])
 		else:
 			return None
@@ -116,7 +116,7 @@ def getStream(session, request, m3ufile):
 
 	if config.OpenWebif.auth_for_streaming.value:
 		asession = GetSession()
-		if asession.GetAuth(request) is not None:
+		if asession.GetAuth(request) != None:
 			auth = ':'.join(asession.GetAuth(request)) + "@"
 		else:
 			auth = '-sid:' + str(asession.GetSID(request)) + "@"
@@ -229,12 +229,12 @@ def getTS(self, request):
 				proto = 'https'
 			ourhost = request.getHeader('host')
 			m = re.match('.+\:(\d+)$', ourhost)
-			if m is not None:
+			if m != None:
 				portNumber = m.group(1)
 
 		if config.OpenWebif.auth_for_streaming.value:
 			asession = GetSession()
-			if asession.GetAuth(request) is not None:
+			if asession.GetAuth(request) != None:
 				auth = ':'.join(asession.GetAuth(request)) + "@"
 			else:
 				auth = '-sid:' + str(asession.GetSID(request)) + "@"
@@ -260,7 +260,7 @@ def getStreamSubservices(session, request):
 	if sRef != None:
 		currentServiceRef = eServiceReference(sRef)
 
-	if currentServiceRef is not None:
+	if currentServiceRef != None:
 		currentService = session.nav.getCurrentService()
 		subservices = currentService.subServices()
 

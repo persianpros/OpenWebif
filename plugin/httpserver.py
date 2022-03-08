@@ -428,7 +428,7 @@ class StopServer:
 			self.doCallback()
 
 	def doCallback(self):
-		if self.callback is not None:
+		if self.callback != None:
 			self.callback(self.session)
 
 #

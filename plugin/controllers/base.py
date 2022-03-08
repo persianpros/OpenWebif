@@ -327,7 +327,7 @@ class BaseController(resource.Resource):
 		proto = "http"
 
 		# config file exists
-		if oscamwebif and oscamconf is not None:
+		if oscamwebif and oscamconf != None:
 			# oscam defaults to NOT to start the web interface unless a section for it exists, so reset port to None until we find one
 			port = None
 			data = open(oscamconf, "r").readlines()
@@ -338,7 +338,7 @@ class BaseController(resource.Resource):
 						proto = "https"
 						port = port[1:]
 
-		if oscamwebif and port is not None:
+		if oscamwebif and port != None:
 			url = "%s://%s:%s" % (proto, request.getRequestHostname(), port)
 			if variant == "oscam":
 				extras.append({'key': url, 'description': _("OSCam Webinterface"), 'nw': '1'})
