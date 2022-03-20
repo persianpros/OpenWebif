@@ -304,7 +304,7 @@ def getUrlArg2(args, key, default=None):
 
 
 def removeBad(val):
-	if val != None:
+	if val is not None:
 		if PY3:
 			return val.replace('\x86', '').replace('\x87', '')
 		else:
@@ -313,7 +313,7 @@ def removeBad(val):
 
 
 def removeBad2(val):
-	if val != None:
+	if val is not None:
 		if PY3:
 			return val.replace('\x86', '').replace('\x87', '').replace('\xc2\x8a', '\n')
 		else:

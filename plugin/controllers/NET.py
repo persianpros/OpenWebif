@@ -96,7 +96,7 @@ class NetController(resource.Resource):
 			iAutoMount.writeMountsConfig()
 			self.result["result"] = True
 			self.result["message"] = "mount removed"
-		if self.callback != None:
+		if self.callback is not None:
 			self.callback()
 
 	def PC_removemount(self):

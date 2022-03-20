@@ -122,7 +122,7 @@ class AutoTimerDoRestoreResource(resource.Resource):
 				lines = os.popen('tar xvf %s -C /' % ATFN).readlines()
 
 				from Plugins.Extensions.AutoTimer.plugin import autotimer
-				if autotimer != None:
+				if autotimer is not None:
 					try:
 						# Force config reload
 						autotimer.configMtime = -1
@@ -189,7 +189,7 @@ class ATController(resource.Resource):
 		try:
 			from Plugins.Extensions.AutoTimer.plugin import autotimer
 			try:
-				if autotimer != None:
+				if autotimer is not None:
 					autotimer.readXml()
 					return six.ensure_binary(''.join(autotimer.getXml()))
 			except Exception:

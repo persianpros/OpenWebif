@@ -76,7 +76,7 @@ def getIPTVLink(ref):
 
 
 def filterName(name, encode=True):
-	if name != None:
+	if name is not None:
 		name = six.ensure_str(removeBadChars(six.ensure_binary(name)))
 		if encode is True:
 			return html_escape(name, quote=True)
@@ -95,7 +95,7 @@ def convertUnicode(val):
 
 
 def convertDesc(val, encode=True):
-	if val != None:
+	if val is not None:
 		if encode is True:
 			if PY3:
 				return html_escape(val, quote=True).replace(u'\x8a', '\n')
@@ -112,7 +112,7 @@ def convertDesc(val, encode=True):
 
 
 def convertGenre(val):
-	if val != None and len(val) > 0:
+	if val is not None and len(val) > 0:
 		val = val[0]
 		if len(val) > 1:
 			if val[0] > 0:
@@ -136,7 +136,7 @@ def getCurrentService(session):
 		ref = str(getServiceInfoString(info, iServiceInformation.sServiceref))
 		if len(ref) < 10:
 			serviceref = session.nav.getCurrentlyPlayingServiceReference()
-			if serviceref != None:
+			if serviceref is not None:
 				ref = serviceref.toString()
 
 		ns = getServiceInfoString(info, iServiceInformation.sNamespace)
@@ -228,7 +228,7 @@ def getCurrentFullInfo(session):
 	except:  # nosec # noqa: E722
 		ref = None
 
-	if ref != None:
+	if ref is not None:
 		inf['sref'] = '_'.join(ref.split(':', 10)[:10])
 		inf['srefv2'] = ref
 		inf['picon'] = getPicon(ref)
@@ -263,7 +263,7 @@ def getCurrentFullInfo(session):
 
 	frontendData = feinfo and feinfo.getAll(True)
 
-	if frontendData != None:
+	if frontendData is not None:
 		cur_info = feinfo.getTransponderData(True)
 		inf['tunertype'] = frontendData.get("tuner_type", "UNKNOWN")
 		if frontendData.get("system", -1) == 1:
@@ -283,19 +283,19 @@ def getCurrentFullInfo(session):
 	except:  # nosec # noqa: E722
 		frontendStatus = None
 
-	if frontendStatus != None:
+	if frontendStatus is not None:
 		percent = frontendStatus.get("tuner_signal_quality")
-		if percent != None:
+		if percent is not None:
 			inf['snr'] = int(percent * 100 / 65535)
 			inf['snr_db'] = inf['snr']
 		percent = frontendStatus.get("tuner_signal_quality_db")
-		if percent != None:
+		if percent is not None:
 			inf['snr_db'] = "%3.02f dB" % (percent / 100.0)
 		percent = frontendStatus.get("tuner_signal_power")
-		if percent != None:
+		if percent is not None:
 			inf['agc'] = int(percent * 100 / 65535)
 		percent = frontendStatus.get("tuner_bit_error_rate")
-		if percent != None:
+		if percent is not None:
 			inf['ber'] = int(percent * 100 / 65535)
 	else:
 		inf['snr'] = 0
@@ -366,7 +366,7 @@ def getSatellites(stype):
 	ref = eServiceReference(refstr)
 	serviceHandler = eServiceCenter.getInstance()
 	servicelist = serviceHandler.list(ref)
-	if servicelist != None:
+	if servicelist is not None:
 		while True:
 			service = servicelist.getNext()
 			if not service.valid():
@@ -486,7 +486,7 @@ def getChannels(idbouquet, stype):
 			else:
 				chan['protection'] = "0"
 			nowevent = epgcache.lookupEvent(['TBDCIXS', (channel[0], 0, -1)])
-			if len(nowevent) > 0 and nowevent[0][0] != None:
+			if len(nowevent) > 0 and nowevent[0][0] is not None:
 				chan['now_title'] = filterName(nowevent[0][0])
 				chan['now_begin'] = strftime("%H:%M", (localtime(nowevent[0][1])))
 				chan['now_end'] = strftime("%H:%M", (localtime(nowevent[0][1] + nowevent[0][2])))
@@ -497,7 +497,7 @@ def getChannels(idbouquet, stype):
 				chan['now_shortdesc'] = nowevent[0][5].strip()
 				nextevent = epgcache.lookupEvent(['TBDIXS', (channel[0], +1, -1)])
 # Some fields have been seen to be missing from the next event...
-				if len(nextevent) > 0 and nextevent[0][0] != None:
+				if len(nextevent) > 0 and nextevent[0][0] is not None:
 					if nextevent[0][1] is None:
 						nextevent[0][1] = time()
 					if nextevent[0][2] is None:
@@ -663,7 +663,7 @@ def getPlayableService(sRef, sRefPlaying):
 def getSubServices(session):
 	services = []
 	service = session.nav.getCurrentService()
-	if service != None:
+	if service is not None:
 		services.append({
 			"servicereference": service.info().getInfoString(iServiceInformation.sServiceref),
 			"servicename": service.info().getName()
@@ -780,7 +780,7 @@ def getChannelEpg(ref, begintime=-1, endtime=-1, encode=True):
 		picon = getPicon(_ref)
 		epgcache = eEPGCache.getInstance()
 		events = epgcache.lookupEvent(['IBDTSENCW', (_ref, 0, begintime, endtime)])
-		if events != None:
+		if events is not None:
 			for event in events:
 				ev = {}
 				ev['picon'] = picon
@@ -853,7 +853,7 @@ def getBouquetEpg(ref, begintime=-1, endtime=None, encode=False):
 
 	epgcache = eEPGCache.getInstance()
 	events = epgcache.lookupEvent(search)
-	if events != None:
+	if events is not None:
 		for event in events:
 			ev = {}
 			ev['id'] = event[0]
@@ -884,7 +884,7 @@ def getServicesNowNextEpg(sList, encode=False):
 
 	epgcache = eEPGCache.getInstance()
 	events = epgcache.lookupEvent(search)
-	if events != None:
+	if events is not None:
 		for event in events:
 			ev = {}
 			ev['id'] = event[0]
@@ -893,7 +893,7 @@ def getServicesNowNextEpg(sList, encode=False):
 			ev['title'] = filterName(event[4], encode)
 			ev['shortdesc'] = convertDesc(event[5], encode)
 			ev['longdesc'] = convertDesc(event[6], encode)
-			# if event[7] != None:
+			# if event[7] is not None:
 			#  achannels = GetWithAlternative(event[7], False)
 			#   if achannels:
 			#    ev['asrefs'] = achannels
@@ -923,7 +923,7 @@ def getBouquetNowNextEpg(ref, servicetype, encode=False):
 
 	epgcache = eEPGCache.getInstance()
 	events = epgcache.lookupEvent(search)
-	if events != None:
+	if events is not None:
 		for event in events:
 			ev = {}
 			ev['id'] = event[0]
@@ -932,7 +932,7 @@ def getBouquetNowNextEpg(ref, servicetype, encode=False):
 			ev['title'] = filterName(event[4], encode)
 			ev['shortdesc'] = convertDesc(event[5], encode)
 			ev['longdesc'] = convertDesc(event[6], encode)
-			if event[7] != None:
+			if event[7] is not None:
 				achannels = GetWithAlternative(event[7], False)
 				if achannels:
 					ev['asrefs'] = achannels
@@ -950,7 +950,7 @@ def getNowNextEpg(ref, servicetype, encode=False):
 	ret = []
 	epgcache = eEPGCache.getInstance()
 	events = epgcache.lookupEvent(['IBDCTSERNWX', (ref, servicetype, -1)])
-	if events != None:
+	if events is not None:
 		for event in events:
 			ev = {}
 			ev['id'] = event[0]
@@ -999,7 +999,7 @@ def getSearchEpg(sstr, endtime=None, fulldesc=False, bouquetsonly=False, encode=
 		elif hasattr(eEPGCache, 'PARTIAL_DESCRIPTION_SEARCH'):
 			search_type = eEPGCache.PARTIAL_DESCRIPTION_SEARCH
 	events = epgcache.search(('IBDTSENRW', 128, search_type, sstr, 1))
-	if events != None:
+	if events is not None:
 		# TODO : discuss #677
 		# events.sort(key = lambda x: (x[1],x[6])) # sort by date,sname
 		# events.sort(key = lambda x: x[1]) # sort by date
@@ -1056,7 +1056,7 @@ def getSearchSimilarEpg(ref, eventid, encode=False):
 	ev = {}
 	epgcache = eEPGCache.getInstance()
 	events = epgcache.search(('IBDTSENRW', 128, eEPGCache.SIMILAR_BROADCASTINGS_SEARCH, ref, eventid))
-	if events != None:
+	if events is not None:
 		# TODO : discuss #677
 		# events.sort(key = lambda x: (x[1],x[6])) # sort by date,sname
 		# events.sort(key = lambda x: x[1]) # sort by date
@@ -1145,7 +1145,7 @@ def getMultiEpg(self, ref, begintime=-1, endtime=None, Mode=1):
 	offset = None
 	picons = {}
 
-	if events != None:
+	if events is not None:
 		# We want to display if an event is covered by a timer.
 		# To keep the costs low for a nested loop against the timer list, we
 		# partition the timers by service reference. For an event we then only
@@ -1212,7 +1212,7 @@ def getPicon(sname, pp=None, defaultpicon=True):
 
 	if pp is None:
 		pp = PICON_PATH
-	if pp != None:
+	if pp is not None:
 		# remove URL part
 		if ("://" in sname) or ("%3a//" in sname) or ("%3A//" in sname):
 			cname = unquote(sname.split(":")[-1])
@@ -1236,7 +1236,7 @@ def getPicon(sname, pp=None, defaultpicon=True):
 					return "/picon/" + series + ".png"
 
 		sname = GetWithAlternative(sname)
-		if sname != None:
+		if sname is not None:
 			pos = sname.rfind(':')
 		else:
 			return "/images/default_picon.png"
@@ -1269,7 +1269,7 @@ def getPicon(sname, pp=None, defaultpicon=True):
 			filename = pp + sname
 			if fileExists(filename):
 				return "/picon/" + sname
-		if cname != None:  # picon by channel name
+		if cname is not None:  # picon by channel name
 			cname1 = filterName(cname).replace('/', '_')
 			if not PY3:
 				cname1 = cname1.encode('utf-8', 'ignore')
@@ -1305,7 +1305,7 @@ def getParentalControlList():
 	else:
 		tservices = parentalControl.blacklist
 	services = []
-	if tservices != None:
+	if tservices is not None:
 		for service in tservices:
 			tservice = ServiceReference(service)
 			services.append({

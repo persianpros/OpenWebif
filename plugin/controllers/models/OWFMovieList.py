@@ -144,7 +144,7 @@ class MovieList():
 			# filter_tags is either None (which means no filter at all), or
 			# a set. In this case, all elements of filter_tags must be present,
 			# otherwise the entry will be dropped.
-			if filter_tags != None:
+			if filter_tags is not None:
 				this_tags_fullname = [" ".join(this_tags)]
 				this_tags_fullname = set(this_tags_fullname)
 				this_tags = set(this_tags)

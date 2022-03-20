@@ -338,7 +338,7 @@ class AjaxController(BaseController):
 		streaming_port = int(config.OpenWebif.streamport.value)
 		if config.OpenWebif.auth_for_streaming.value:
 			session = GetSession()
-			if session.GetAuth(request) != None:
+			if session.GetAuth(request) is not None:
 				auth = ':'.join(session.GetAuth(request)) + "@"
 			else:
 				auth = '-sid:' + str(session.GetSID(request)) + "@"

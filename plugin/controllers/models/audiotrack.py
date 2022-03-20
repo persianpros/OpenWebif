@@ -8,7 +8,7 @@ def getAudioTracks(session):
 	service = session.nav.getCurrentService()
 	audio = service and service.audioTracks()
 	ret = {"tracklist": [], "result": False}
-	if audio != None and service != None:
+	if audio is not None and service is not None:
 		current = audio.getCurrentTrack()
 		for i in list(range(0, audio.getNumberOfTracks())):
 			track = audio.getTrackInfo(i)
@@ -43,7 +43,7 @@ def getAudioTracks(session):
 def setAudioTrack(session, id):
 	service = session.nav.getCurrentService()
 	audio = service and service.audioTracks()
-	if audio != None and service != None:
+	if audio is not None and service is not None:
 		if audio.getNumberOfTracks() > id and id >= 0:
 			audio.selectTrack(id)
 			return {"result": True}

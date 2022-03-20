@@ -139,7 +139,7 @@ class OpkgController(BaseController):
 		ret = []
 		for name in keys:
 			ignore = False
-			if self.filter != None:
+			if self.filter is not None:
 				for f in self.filter:
 					if name.endswith('-' + f):
 						ignore = True
@@ -237,7 +237,7 @@ class OpkgController(BaseController):
 							nresult += a + "\n"
 				nresult = nresult.replace("\n\n", "\n")
 				nresult = nresult.replace("\n ", " ")
-				if self.filter != None:
+				if self.filter is not None:
 					pl = nresult.split("\n")
 					add = True
 					rpl = []

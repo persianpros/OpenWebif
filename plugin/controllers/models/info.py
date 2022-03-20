@@ -459,7 +459,7 @@ def getInfo(session=None, need_fullinfo=False):
 							pass
 
 					friendlyaddress = server
-					if ipaddress != None and not ipaddress == server:
+					if ipaddress is not None and not ipaddress == server:
 						friendlyaddress = server + " (" + ipaddress + ")"
 					info['shares'].append({
 						"name": name,
@@ -497,7 +497,7 @@ def getInfo(session=None, need_fullinfo=False):
 						feinfo = timer_rs and hasattr(timer_rs, "frontendInfo") and timer_rs.frontendInfo()
 						fedata = feinfo and hasattr(feinfo, "getFrontendData") and feinfo.getFrontendData()
 						tuner_num = fedata and "tuner_number" in fedata and fedata.get("tuner_number")
-						if tuner_num != None:
+						if tuner_num is not None:
 							if tuner_num in serviceNames: # this tuner is recording more than one timer
 								serviceNames[tuner_num] += ", " + removeBad(timer.service_ref.getServiceName())
 							else:
@@ -509,7 +509,7 @@ def getInfo(session=None, need_fullinfo=False):
 				for rec in recs:
 					feinfo = rec.frontendInfo()
 					frontendData = feinfo and feinfo.getAll(True)
-					if frontendData != None:
+					if frontendData is not None:
 						cur_info = feinfo.getTransponderData(True)
 						if cur_info:
 							nr = frontendData['tuner_number']
@@ -519,11 +519,11 @@ def getInfo(session=None, need_fullinfo=False):
 								info['tuners'][nr]['rec'] = getOrbitalText(cur_info) + ' / ' + s_name
 
 			service = session.nav.getCurrentService()
-			if service != None:
+			if service is not None:
 				sname = service.info().getName()
 				feinfo = service.frontendInfo()
 				frontendData = feinfo and feinfo.getAll(True)
-				if frontendData != None:
+				if frontendData is not None:
 					cur_info = feinfo.getTransponderData(True)
 					if cur_info:
 						nr = frontendData['tuner_number']
@@ -569,7 +569,7 @@ def GetStreamInfo():
 	try:
 		from enigma import eStreamServer
 		streamServer = eStreamServer.getInstance()
-		if streamServer != None:
+		if streamServer is not None:
 			nostreamServer = False
 			for x in streamServer.getConnectedClients():
 				servicename, eventname = getStreamServiceAndEvent(x[1])
@@ -645,24 +645,24 @@ def getFrontendStatus(session):
 	feinfo = service.frontendInfo()
 	frontendData = feinfo and feinfo.getAll(True)
 
-	if frontendData != None:
+	if frontendData is not None:
 		inf['tunertype'] = frontendData.get("tuner_type", "UNKNOWN")
 		inf['tunernumber'] = frontendData.get("tuner_number")
 
 	frontendStatus = feinfo and feinfo.getFrontendStatus()
-	if frontendStatus != None:
+	if frontendStatus is not None:
 		percent = frontendStatus.get("tuner_signal_quality")
-		if percent != None:
+		if percent is not None:
 			inf['snr'] = int(percent * 100 / 65535)
 			inf['snr_db'] = inf['snr']
 		percent = frontendStatus.get("tuner_signal_quality_db")
-		if percent != None:
+		if percent is not None:
 			inf['snr_db'] = "%3.02f" % (percent / 100.0)
 		percent = frontendStatus.get("tuner_signal_power")
-		if percent != None:
+		if percent is not None:
 			inf['agc'] = int(percent * 100 / 65535)
 		percent = frontendStatus.get("tuner_bit_error_rate")
-		if percent != None:
+		if percent is not None:
 			inf['ber'] = int(percent * 100 / 65535)
 
 	return inf
@@ -692,7 +692,7 @@ def getStatusInfo(self):
 	serviceref = NavigationInstance.instance.getCurrentlyPlayingServiceReference()
 	serviceref_string = None
 	currservice_station = None
-	if serviceref != None:
+	if serviceref is not None:
 		serviceHandler = eServiceCenter.getInstance()
 		serviceHandlerInfo = serviceHandler.info(serviceref)
 
@@ -705,7 +705,7 @@ def getStatusInfo(self):
 		event = None
 		serviceHandlerInfo = None
 
-	if event != None:
+	if event is not None:
 		# (begin, end, name, description, eit)
 		curEvent = parseEvent(event)
 		begin_timestamp = int(curEvent[0]) + (config.recording.margin_before.value * 60)
@@ -784,7 +784,7 @@ def getStatusInfo(self):
 			e = stream["eventname"]
 			i = stream["ip"]
 			del stream
-			if i != None:
+			if i is not None:
 				st += i + ": "
 			st += s + ' - ' + e
 			if st != '':

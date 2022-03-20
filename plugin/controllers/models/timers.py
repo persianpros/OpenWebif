@@ -296,7 +296,7 @@ def addTimer(session, serviceref, begin, end, name, description, disabled, justp
 				"conflicts": conflictinfo
 			}
 		# VPS
-		if vpsinfo != None:
+		if vpsinfo is not None:
 			timer.vpsplugin_enabled = vpsinfo["vpsplugin_enabled"]
 			timer.vpsplugin_overwrite = vpsinfo["vpsplugin_overwrite"]
 			timer.vpsplugin_time = vpsinfo["vpsplugin_time"]
@@ -406,7 +406,7 @@ def editTimer(session, serviceref, begin, end, name, description, disabled, just
 			timer.tags = tags
 			timer.repeated = repeated
 			timer.processRepeated()
-			if vpsinfo != None:
+			if vpsinfo is not None:
 				timer.vpsplugin_enabled = vpsinfo["vpsplugin_enabled"]
 				timer.vpsplugin_overwrite = vpsinfo["vpsplugin_overwrite"]
 				timer.vpsplugin_time = vpsinfo["vpsplugin_time"]
@@ -446,7 +446,7 @@ def editTimer(session, serviceref, begin, end, name, description, disabled, just
 			conflicts = None
 			if not sanity.check():
 				conflicts = sanity.getSimulTimerList()
-				if conflicts != None:
+				if conflicts is not None:
 					for conflict in conflicts:
 						if conflict.setAutoincreaseEnd(timer):
 							rt.timeChanged(conflict)
@@ -864,7 +864,7 @@ def getSleepTimer(session):
 				"result": False,
 				"message": _("SleepTimer error")
 			}
-	elif InfoBar.instance != None and hasattr(InfoBar.instance, 'sleepTimer'):
+	elif InfoBar.instance is not None and hasattr(InfoBar.instance, 'sleepTimer'):
 		try:
 			active = InfoBar.instance.sleepTimer.isActive()
 			time = config.usage.sleep_timer.value
@@ -926,7 +926,7 @@ def setSleepTimer(session, time, action, enabled):
 		try:
 			ret = getSleepTimer(session)
 			from Screens.Standby import inStandby
-			if inStandby != None:
+			if inStandby is not None:
 				ret["message"] = _("ERROR: Cannot set SleepTimer while device is in Standby-Mode")
 				return ret
 			if enabled is False:
@@ -945,7 +945,7 @@ def setSleepTimer(session, time, action, enabled):
 				"result": False,
 				"message": _("SleepTimer error")
 			}
-	elif InfoBar.instance != None and hasattr(InfoBar.instance, 'sleepTimer'):
+	elif InfoBar.instance is not None and hasattr(InfoBar.instance, 'sleepTimer'):
 		try:
 			if time == None:
 				time = 60

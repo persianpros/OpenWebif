@@ -85,7 +85,7 @@ if architecture == "sh4":
 			except:
 				ref = None
 
-			if ref != None:
+			if ref is not None:
 				self.sref = '_'.join(ref.split(':', 10)[:10])
 				if config.OpenWebif.webcache.screenshotchannelname.value:
 					self.sref = ServiceReference(ref).getServiceName()
