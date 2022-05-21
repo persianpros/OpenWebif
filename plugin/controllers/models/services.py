@@ -612,7 +612,7 @@ def getServices(sRef, showAll=True, showHidden=False, pos=0, showProviders=False
 	timeelapsed = datetime.now() - starttime
 	return {
 		"result": True,
-		"processingtime" : "{}".format(timeelapsed),
+		"processingtime": "{}".format(timeelapsed),
 		"pos": pos,
 		"services": services
 	}
@@ -640,7 +640,7 @@ def getAllServices(type, noiptv=False, nolastscanned=False, removeNameFromsref=F
 
 	return {
 		"result": True,
-		"processingtime" : "{}".format(timeelapsed),
+		"processingtime": "{}".format(timeelapsed),
 		"services": services
 	}
 
