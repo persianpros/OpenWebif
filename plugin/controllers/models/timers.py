@@ -867,8 +867,18 @@ def getSleepTimer(session):
 	elif InfoBar.instance is not None and hasattr(InfoBar.instance, 'sleepTimer'):
 		try:
 			active = InfoBar.instance.sleepTimer.isActive()
-			time = config.usage.sleep_timer.value
+			if hasattr(config.usage, 'sleepTimer'):
+				time = config.usage.sleepTimer.value
+			if hasattr(config.usage, 'sleep_timer'):
+				time = config.usage.sleep_timer.value
 			action = "shutdown"
+			if hasattr(config.usage, 'sleepTimerAction'):
+				action = config.usage.sleepTimerAction.value
+			if hasattr(config.usage, 'sleep_timer_action'):
+				action = config.usage.sleep_timer_action.value
+			if action == "deepstandby":
+				action = "shutdown"
+
 			if time != None and int(time) > 0:
 				try:
 					time = int(int(time) / 60)
@@ -949,17 +959,35 @@ def setSleepTimer(session, time, action, enabled):
 		try:
 			if time == None:
 				time = 60
+			info = getInfo()
+			cfgaction = None
+			if hasattr(config.usage, 'sleepTimerAction'):
+				cfgaction = config.usage.sleepTimerAction
+			if hasattr(config.usage, 'sleep_timer_action'):
+				cfgaction = config.usage.sleep_timer_action
+			if cfgaction:
+				if action == "shutdown":
+					cfgaction.value = "deepstandby"
+				else:
+					cfgaction.value = action
+				cfgaction.save()
 			active = enabled
 			time = int(time)
-			config.usage.sleep_timer.value = str(time * 60)
-			if config.usage.sleep_timer.value == '0':
-				time = 60
-				config.usage.sleep_timer.value = str(time * 60)
-			config.usage.sleep_timer.save()
-			if enabled:
-				InfoBar.instance.setSleepTimer(time * 60, False)
-			else:
-				InfoBar.instance.setSleepTimer(0, False)
+			cfgtimer = None
+			if hasattr(config.usage, 'sleepTimer'):
+				cfgtimer = config.usage.sleepTimer
+			elif hasattr(config.usage, 'sleep_timer'):
+				cfgtimer = config.usage.sleep_timer
+			if cfgtimer:
+				if active:
+					cfgtimer.value = str(time * 60)
+				else:
+					cfgtimer.value = '0'
+				cfgtimer.save()
+				if enabled:
+					InfoBar.instance.setSleepTimer(time * 60, False)
+				else:
+					InfoBar.instance.setSleepTimer(0, False)
 			return {
 				"enabled": active,
 				"minutes": time,

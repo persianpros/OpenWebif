@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-06 21:42+0430\n"
+"POT-Creation-Date: 2022-05-21 16:32+0430\n"
 "PO-Revision-Date: 2021-12-02 19:55+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/bg/>\n"
@@ -32,9 +32,9 @@ msgid "%02d:%02d"
 msgstr ""
 
 #: ../plugin/controllers/models/services.py:247
-#: ../plugin/controllers/models/services.py:799
-#: ../plugin/controllers/models/services.py:1030
-#: ../plugin/controllers/models/services.py:1076
+#: ../plugin/controllers/models/services.py:809
+#: ../plugin/controllers/models/services.py:1040
+#: ../plugin/controllers/models/services.py:1086
 msgid "%d.%m.%Y"
 msgstr ""
 
@@ -58,7 +58,7 @@ msgstr ""
 msgid "%s %02d.%02d.%d"
 msgstr ""
 
-#: ../plugin/controllers/BouquetEditor.py:550
+#: ../plugin/controllers/BouquetEditor.py:578
 #, python-format
 msgid "%s %s is locked."
 msgstr "%s %s е заключен."
@@ -169,7 +169,7 @@ msgstr "Добави аналогичен при конфликт"
 msgid "Add tags to recordings"
 msgstr ""
 
-#: ../plugin/controllers/BouquetEditor.py:467
+#: ../plugin/controllers/BouquetEditor.py:495
 #, python-format
 msgid "Added %s to alternative service %s."
 msgstr "Добавен %s към алтернативен канал %s."
@@ -195,7 +195,7 @@ msgstr "Всички канали"
 msgid "All Files of this Software are open source software; you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation."
 msgstr "Всички файлове от този Софтуер са с отворен изходен код; Вие можете да го разпространявате и / или изменяте в съответствие с условията на GNU General Public License версия 3, публикувана от Free Software Foundation."
 
-#: ../plugin/controllers/BouquetEditor.py:506
+#: ../plugin/controllers/BouquetEditor.py:534
 msgid "All alternative services deleted."
 msgstr "Всички алтернативни канали са изтрити."
 
@@ -207,7 +207,7 @@ msgstr "Позволи IPK Kачване"
 msgid "Allow duplicates"
 msgstr "Позволи дублирани"
 
-#: ../plugin/controllers/BouquetEditor.py:453
+#: ../plugin/controllers/BouquetEditor.py:481
 #, python-format
 msgid "Alternative %s created failed."
 msgstr "Грешка при създаване на %s алтернативи."
@@ -228,6 +228,10 @@ msgstr "Отговора е НЕ!"
 #: ../plugin/controllers/models/message.py:58
 msgid "Answer is YES!"
 msgstr "Отговора е ДА!"
+
+#: ../plugin/controllers/i18n.py:641
+msgid "Any"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:439
 msgid "Any day"
@@ -283,9 +287,8 @@ msgid "Ask, default Yes"
 msgstr "Питай, по подразбиране - Да"
 
 #: ../plugin/controllers/i18n.py:84
-#, fuzzy
 msgid "Audio Encoding"
-msgstr "Изтрий Запис"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:516
 msgid "Audio PID (APID)"
@@ -364,47 +367,47 @@ msgstr "Отметка"
 msgid "Bookmarks"
 msgstr "Отметки"
 
-#: ../plugin/controllers/BouquetEditor.py:129
+#: ../plugin/controllers/BouquetEditor.py:131
 #, python-format
 msgid "Bouquet %s already exists."
 msgstr "Букета %s вече съществува."
 
-#: ../plugin/controllers/BouquetEditor.py:220
+#: ../plugin/controllers/BouquetEditor.py:222
 #, python-format
 msgid "Bouquet %s can not be moved."
 msgstr "Букета %s не може да се премести."
 
-#: ../plugin/controllers/BouquetEditor.py:124
+#: ../plugin/controllers/BouquetEditor.py:126
 #, python-format
 msgid "Bouquet %s created."
 msgstr "Букета %s е създаден."
 
-#: ../plugin/controllers/BouquetEditor.py:193
+#: ../plugin/controllers/BouquetEditor.py:195
 #, python-format
 msgid "Bouquet %s deleted."
 msgstr "Букета %s е изтрит."
 
-#: ../plugin/controllers/BouquetEditor.py:548
+#: ../plugin/controllers/BouquetEditor.py:576
 #, python-format
 msgid "Bouquet %s is locked."
 msgstr "Букета %s е заключен."
 
-#: ../plugin/controllers/BouquetEditor.py:556
+#: ../plugin/controllers/BouquetEditor.py:584
 #, python-format
 msgid "Bouquet %s is unlocked."
 msgstr "Букета %s е отключен."
 
-#: ../plugin/controllers/BouquetEditor.py:218
+#: ../plugin/controllers/BouquetEditor.py:220
 #, python-format
 msgid "Bouquet %s moved."
 msgstr "Букета %s е преместен."
 
-#: ../plugin/controllers/BouquetEditor.py:188
+#: ../plugin/controllers/BouquetEditor.py:190
 #, python-format
 msgid "Bouquet %s removed failed, sevicerefence or mutable list is not valid."
 msgstr "Грешка при изтриване на букета %s, референса или изменяемия списък не е действителен."
 
-#: ../plugin/controllers/BouquetEditor.py:186
+#: ../plugin/controllers/BouquetEditor.py:188
 #, python-format
 msgid "Bouquet %s removed failed."
 msgstr "Грешка при изтриване на букета %s"
@@ -417,11 +420,11 @@ msgstr "Букет Редактор"
 msgid "Bouquet name"
 msgstr "Име на Букета"
 
-#: ../plugin/controllers/BouquetEditor.py:389
+#: ../plugin/controllers/BouquetEditor.py:415
 msgid "Bouquet renamed successfully."
 msgstr "Букета е преименуван успешно."
 
-#: ../plugin/controllers/BouquetEditor.py:650
+#: ../plugin/controllers/BouquetEditor.py:678
 msgid "Bouquet-settings were restored successfully"
 msgstr "Настройките за букетите са възстановени успешно"
 
@@ -429,8 +432,8 @@ msgstr "Настройките за букетите са възстановен
 msgid "BouquetEditor"
 msgstr "Букет Редактор"
 
-#: ../plugin/controllers/BouquetEditor.py:131
-#: ../plugin/controllers/BouquetEditor.py:455
+#: ../plugin/controllers/BouquetEditor.py:133
+#: ../plugin/controllers/BouquetEditor.py:483
 msgid "Bouquetlist is not editable!"
 msgstr "Списъка с букети не може да се редактира!"
 
@@ -441,6 +444,10 @@ msgstr "Букети"
 #: ../plugin/controllers/i18n.py:98
 msgid "Brand"
 msgstr "Марка"
+
+#: ../plugin/controllers/i18n.py:637
+msgid "Build"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:97
 #, fuzzy
@@ -561,6 +568,10 @@ msgstr "Текущ"
 msgid "Current Event"
 msgstr "Текущо Предаване"
 
+#: ../plugin/controllers/i18n.py:632
+msgid "Currently recording"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:228
 #, fuzzy
 msgid "Custom STB name"
@@ -655,6 +666,10 @@ msgstr "Изтрит"
 msgid "Description"
 msgstr "Описание"
 
+#: ../plugin/controllers/i18n.py:646
+msgid "Device"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:142 ../plugin/controllers/i18n.py:423
 #, fuzzy
 msgid "Disable"
@@ -731,10 +746,6 @@ msgstr "E"
 msgid "EPG"
 msgstr "EPG"
 
-#: ../plugin/controllers/i18n.py:149
-msgid "EPG Search"
-msgstr "Търсене в EPG"
-
 #: ../plugin/controllers/i18n.py:349
 msgid "EPG encoding"
 msgstr "EPG Кодировка"
@@ -743,7 +754,7 @@ msgstr "EPG Кодировка"
 msgid "EPGRefresh"
 msgstr "EPG Обновяване"
 
-#: ../plugin/controllers/models/timers.py:930
+#: ../plugin/controllers/models/timers.py:940
 msgid "ERROR: Cannot set SleepTimer while device is in Standby-Mode"
 msgstr "ГРЕШКА: не може да се настрои таймера за сън, приемника е в режим готовност"
 
@@ -845,11 +856,6 @@ msgstr ""
 msgid "Enigma2 revision"
 msgstr "Имидж версия"
 
-#: ../plugin/controllers/i18n.py:629
-#, fuzzy
-msgid "Enter Text"
-msgstr "Тип на Тунера"
-
 #: ../plugin/controllers/i18n.py:507
 msgid "Enter a name for the new bouquet"
 msgstr "Въведете ново име на букета"
@@ -867,6 +873,10 @@ msgstr "Въведете ново име на маркера"
 msgid "Enter path"
 msgstr ""
 
+#: ../plugin/controllers/i18n.py:629
+msgid "Enter text"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:434
 msgid "Enter the text to find in the EPG"
 msgstr ""
@@ -875,7 +885,7 @@ msgstr ""
 msgid "Error"
 msgstr "Грешка"
 
-#: ../plugin/controllers/models/timers.py:1084
+#: ../plugin/controllers/models/timers.py:1112
 msgid "Error parsing vps.xml"
 msgstr "Грешка при четене на vps.xml"
 
@@ -883,12 +893,12 @@ msgstr "Грешка при четене на vps.xml"
 msgid "Error upload File"
 msgstr "Грешка при зареждане на файла"
 
-#: ../plugin/controllers/BouquetEditor.py:593
+#: ../plugin/controllers/BouquetEditor.py:621
 #, python-format
 msgid "Error while preparing backup file, %s does not exists."
 msgstr "Грешка при подготовка за създаване на backup файла, %s не съществува."
 
-#: ../plugin/controllers/BouquetEditor.py:599
+#: ../plugin/controllers/BouquetEditor.py:627
 msgid "Error while preparing backup file."
 msgstr "Грешка при подготовка за създаване на backup файла."
 
@@ -896,17 +906,17 @@ msgstr "Грешка при подготовка за създаване на ba
 msgid "Error writing File"
 msgstr "Грешка при запис на файла"
 
-#: ../plugin/controllers/BouquetEditor.py:654
+#: ../plugin/controllers/BouquetEditor.py:682
 #, python-format
 msgid "Error, %s does not exists, restore is not possible..."
 msgstr "Грешка, %s не съществува, възстановяването не е възможно..."
 
-#: ../plugin/controllers/BouquetEditor.py:652
+#: ../plugin/controllers/BouquetEditor.py:680
 #, python-format
 msgid "Error, %s was not created with WebBouquetEditor..."
 msgstr "Грешка, %s не е бил създаден с Редактора на букети..."
 
-#: ../plugin/controllers/BouquetEditor.py:195
+#: ../plugin/controllers/BouquetEditor.py:197
 #, python-format
 msgid "Error: Bouquet %s could not deleted, OSError."
 msgstr "Грешка: Букет %s не може да се изтрие, OSError."
@@ -989,9 +999,13 @@ msgstr "Свободно"
 msgid "Free Memory"
 msgstr "Свободна Памет"
 
+#: ../plugin/controllers/i18n.py:647
+msgid "Free space"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:302
 #, fuzzy
-msgid "Free/Total Memory"
+msgid "Free/Total memory"
 msgstr "Свободна Памет"
 
 #: ../plugin/controllers/i18n.py:52 ../plugin/controllers/models/movies.py:55
@@ -1044,11 +1058,11 @@ msgstr ""
 msgid "Gateway"
 msgstr "Шлюз"
 
-#: ../plugin/controllers/BouquetEditor.py:451
+#: ../plugin/controllers/BouquetEditor.py:479
 msgid "Get mutable list for new created alternative failed!"
 msgstr "Грешка при получаването на изменяемия списък за ново-създадени алтернативи!"
 
-#: ../plugin/controllers/BouquetEditor.py:126
+#: ../plugin/controllers/BouquetEditor.py:128
 msgid "Get mutable list for new created bouquet failed!"
 msgstr "Грешка при получаването на изменяемия списък за ново-създадени букет!"
 
@@ -1072,6 +1086,10 @@ msgstr "HTTPS Порт"
 msgid "Hard disk model"
 msgstr "Модел на твърдия диск"
 
+#: ../plugin/controllers/i18n.py:643
+msgid "Hardware"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:173
 #, fuzzy
 msgid "Hardware serial"
@@ -1088,6 +1106,10 @@ msgstr "Скрий пълното дистанционно"
 #: ../plugin/controllers/i18n.py:170
 msgid "High Resolution"
 msgstr "Висока Резолюция"
+
+#: ../plugin/controllers/i18n.py:642
+msgid "Hold to drag"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:172
 msgid "Hour"
@@ -1159,6 +1181,10 @@ msgstr "Безкраен Незабавен Запис започна"
 msgid "Info"
 msgstr "Информация"
 
+#: ../plugin/controllers/i18n.py:638
+msgid "Information"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:475
 msgid "Inherit AutoTimer"
 msgstr "Наследен Автотаймер"
@@ -1179,9 +1205,13 @@ msgstr "Незабавен Запис"
 msgid "Instant record for current Event started"
 msgstr "Незабавен запис за текущото предаване започна"
 
-#: ../plugin/controllers/BouquetEditor.py:351
+#: ../plugin/controllers/BouquetEditor.py:377
 msgid "Internal error!"
 msgstr "Вътрешна грешка!"
+
+#: ../plugin/controllers/i18n.py:644
+msgid "Internal flash memory"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:446
 #, fuzzy, python-format
@@ -1232,10 +1262,6 @@ msgstr "LCD"
 msgid "LCD4Linux Setup"
 msgstr "LCD4Linux Настройки"
 
-#: ../plugin/controllers/i18n.py:191
-msgid "LICENSE"
-msgstr "ЛИЦЕНЗ"
-
 #: ../plugin/controllers/models/info.py:294
 #, fuzzy
 msgid "LIRC remote"
@@ -1249,8 +1275,12 @@ msgstr "Серия етикети"
 msgid "Last update"
 msgstr ""
 
+#: ../plugin/controllers/i18n.py:191
+msgid "License"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:545
-msgid "Link Speed"
+msgid "Link speed"
 msgstr "Скорост на Връзката"
 
 #: ../plugin/controllers/models/timers.py:561
@@ -1291,7 +1321,7 @@ msgstr "Главна"
 msgid "March"
 msgstr "Март"
 
-#: ../plugin/controllers/BouquetEditor.py:349
+#: ../plugin/controllers/BouquetEditor.py:375
 msgid "Marker added."
 msgstr "Добавен е Маркер."
 
@@ -1374,6 +1404,10 @@ msgstr "Повече"
 msgid "More details"
 msgstr "Покажи детайли"
 
+#: ../plugin/controllers/i18n.py:648
+msgid "Mount point"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:530
 msgid "Movie database for EPG"
 msgstr "Филмова база данни за EPG"
@@ -1390,8 +1424,8 @@ msgstr "Списък с филми"
 msgid "Movies"
 msgstr "Записи"
 
-#: ../plugin/controllers/BouquetEditor.py:133
-#: ../plugin/controllers/BouquetEditor.py:757
+#: ../plugin/controllers/BouquetEditor.py:135
+#: ../plugin/controllers/BouquetEditor.py:785
 msgid "Multi-Bouquet is not enabled!"
 msgstr "Мулти-Букет не е включен!"
 
@@ -1408,6 +1442,10 @@ msgstr "Мулти EPG"
 #, fuzzy
 msgid "MultiTranscoding"
 msgstr "Транскодиране"
+
+#: ../plugin/controllers/i18n.py:634
+msgid "Mute/Unmute"
+msgstr ""
 
 #: ../plugin/controllers/base.py:346
 msgid "NCam Webinterface"
@@ -1465,7 +1503,7 @@ msgstr "Не"
 msgid "No EPG data available."
 msgstr "няма достъпно описание"
 
-#: ../plugin/controllers/BouquetEditor.py:525
+#: ../plugin/controllers/BouquetEditor.py:553
 msgid "No Parent Control Setup Pin given!"
 msgstr "Не е зададен ПИН за родителския контрол!"
 
@@ -1473,21 +1511,21 @@ msgstr "Не е зададен ПИН за родителския контрол
 msgid "No answer in time"
 msgstr "Няма отговор навреме"
 
-#: ../plugin/controllers/BouquetEditor.py:226
-#: ../plugin/controllers/BouquetEditor.py:256
-#: ../plugin/controllers/BouquetEditor.py:282
-#: ../plugin/controllers/BouquetEditor.py:325
-#: ../plugin/controllers/BouquetEditor.py:475
+#: ../plugin/controllers/BouquetEditor.py:228
+#: ../plugin/controllers/BouquetEditor.py:258
+#: ../plugin/controllers/BouquetEditor.py:284
+#: ../plugin/controllers/BouquetEditor.py:351
+#: ../plugin/controllers/BouquetEditor.py:503
 msgid "No bouquet given!"
 msgstr "Не е зададен букет!"
 
 #: ../plugin/controllers/BouquetEditor.py:94
-#: ../plugin/controllers/BouquetEditor.py:155
-#: ../plugin/controllers/BouquetEditor.py:201
+#: ../plugin/controllers/BouquetEditor.py:157
+#: ../plugin/controllers/BouquetEditor.py:203
 msgid "No bouquet name given!"
 msgstr "Не е зададено име на букета!"
 
-#: ../plugin/controllers/BouquetEditor.py:420
+#: ../plugin/controllers/BouquetEditor.py:446
 msgid "No current service given!"
 msgstr "Не е зададен текущ канал!"
 
@@ -1495,7 +1533,7 @@ msgstr "Не е зададен текущ канал!"
 msgid "No event found! Not recording!"
 msgstr "Не е открито предаване! Не се записва!"
 
-#: ../plugin/controllers/BouquetEditor.py:332
+#: ../plugin/controllers/BouquetEditor.py:358
 msgid "No marker-name given!"
 msgstr "Не е зададено име на маркера!"
 
@@ -1509,26 +1547,30 @@ msgstr "Не е открит съответстващ таймер"
 msgid "No matching Timer found"
 msgstr "Не е открит съответстващ таймер"
 
-#: ../plugin/controllers/BouquetEditor.py:365
+#: ../plugin/controllers/i18n.py:640
+msgid "No network connection"
+msgstr ""
+
+#: ../plugin/controllers/BouquetEditor.py:391
 msgid "No new servicename given!"
 msgstr "Не е зададено ново име на канала!"
 
-#: ../plugin/controllers/BouquetEditor.py:211
-#: ../plugin/controllers/BouquetEditor.py:268
+#: ../plugin/controllers/BouquetEditor.py:213
+#: ../plugin/controllers/BouquetEditor.py:270
 msgid "No position given!"
 msgstr "Не е зададена позиция!"
 
-#: ../plugin/controllers/BouquetEditor.py:139
+#: ../plugin/controllers/BouquetEditor.py:141
 msgid "No provider given!"
 msgstr "Не е зададен провайдър!"
 
-#: ../plugin/controllers/BouquetEditor.py:232
-#: ../plugin/controllers/BouquetEditor.py:262
-#: ../plugin/controllers/BouquetEditor.py:298
-#: ../plugin/controllers/BouquetEditor.py:359
-#: ../plugin/controllers/BouquetEditor.py:417
-#: ../plugin/controllers/BouquetEditor.py:481
-#: ../plugin/controllers/BouquetEditor.py:518
+#: ../plugin/controllers/BouquetEditor.py:234
+#: ../plugin/controllers/BouquetEditor.py:264
+#: ../plugin/controllers/BouquetEditor.py:304
+#: ../plugin/controllers/BouquetEditor.py:385
+#: ../plugin/controllers/BouquetEditor.py:443
+#: ../plugin/controllers/BouquetEditor.py:509
+#: ../plugin/controllers/BouquetEditor.py:546
 msgid "No service given!"
 msgstr "Не е зададен канал!"
 
@@ -1710,12 +1752,12 @@ msgstr ""
 msgid "Packages"
 msgstr "Пакети"
 
-#: ../plugin/controllers/BouquetEditor.py:529
-#: ../plugin/controllers/BouquetEditor.py:531
+#: ../plugin/controllers/BouquetEditor.py:557
+#: ../plugin/controllers/BouquetEditor.py:559
 msgid "Parent Control Setup Pin is wrong!"
 msgstr "Грешен ПИН на родителския контрол!"
 
-#: ../plugin/controllers/BouquetEditor.py:512
+#: ../plugin/controllers/BouquetEditor.py:540
 msgid "Parent Control is not activated."
 msgstr "Родителския контрол не е активиран."
 
@@ -1938,7 +1980,7 @@ msgstr "Информация за приемника"
 
 #: ../plugin/controllers/i18n.py:95
 #, fuzzy
-msgid "STB Uptime"
+msgid "STB uptime"
 msgstr "Непрекъсната работа на приемника"
 
 #: ../plugin/controllers/i18n.py:44
@@ -1984,6 +2026,10 @@ msgstr "Търсене"
 msgid "Search CSFD"
 msgstr "Търсене в IMDb"
 
+#: ../plugin/controllers/i18n.py:149
+msgid "Search EPG"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:260
 msgid "Search IMDb"
 msgstr "Търсене в IMDb"
@@ -2019,6 +2065,10 @@ msgstr "Изберете IPK файл за качване"
 msgid "Select..."
 msgstr ""
 
+#: ../plugin/controllers/i18n.py:635
+msgid "Send"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:264
 msgid "Send Message"
 msgstr "Изпрати Съобщение"
@@ -2035,42 +2085,42 @@ msgstr "Септември"
 msgid "Service"
 msgstr "Канал"
 
-#: ../plugin/controllers/BouquetEditor.py:315
+#: ../plugin/controllers/BouquetEditor.py:341
 #, python-format
 msgid "Service %s added."
 msgstr "Канал %s е добавен."
 
-#: ../plugin/controllers/BouquetEditor.py:318
+#: ../plugin/controllers/BouquetEditor.py:344
 #, python-format
 msgid "Service %s already exists in bouquet %s."
 msgstr "Канал %s вече съществува в букет %s"
 
-#: ../plugin/controllers/BouquetEditor.py:250
+#: ../plugin/controllers/BouquetEditor.py:252
 #, python-format
 msgid "Service %s can not be removed."
 msgstr "Канал %s не може да се изтрие."
 
-#: ../plugin/controllers/BouquetEditor.py:546
+#: ../plugin/controllers/BouquetEditor.py:574
 #, python-format
 msgid "Service %s is locked."
 msgstr "Канал %s е заключен."
 
-#: ../plugin/controllers/BouquetEditor.py:554
+#: ../plugin/controllers/BouquetEditor.py:582
 #, python-format
 msgid "Service %s is unlocked."
 msgstr "Канал %s е отключен."
 
-#: ../plugin/controllers/BouquetEditor.py:275
+#: ../plugin/controllers/BouquetEditor.py:277
 #, python-format
 msgid "Service %s moved."
 msgstr "Канал %s е преместен."
 
-#: ../plugin/controllers/BouquetEditor.py:249
+#: ../plugin/controllers/BouquetEditor.py:251
 #, python-format
 msgid "Service %s removed from bouquet %s."
 msgstr "Канал %s е изтрит от букет %s."
 
-#: ../plugin/controllers/BouquetEditor.py:241
+#: ../plugin/controllers/BouquetEditor.py:243
 #, python-format
 msgid "Service %s removed."
 msgstr "Канал %s е изтрит."
@@ -2079,25 +2129,29 @@ msgstr "Канал %s е изтрит."
 msgid "Service ID (SID)"
 msgstr ""
 
-#: ../plugin/controllers/BouquetEditor.py:276
+#: ../plugin/controllers/BouquetEditor.py:278
 msgid "Service can not be moved."
 msgstr "Канала не може да се премести."
 
-#: ../plugin/controllers/BouquetEditor.py:406
+#: ../plugin/controllers/BouquetEditor.py:432
 msgid "Service can not be renamed."
 msgstr "Канала не може да се преименува."
 
-#: ../plugin/controllers/BouquetEditor.py:498
+#: ../plugin/controllers/BouquetEditor.py:526
 msgid "Service is not an alternative."
 msgstr "Канала не е алтернативен."
 
-#: ../plugin/controllers/BouquetEditor.py:405
+#: ../plugin/controllers/BouquetEditor.py:431
 msgid "Service renamed successfully."
 msgstr "Канала бе переименуван успешно."
 
 #: ../plugin/controllers/models/services.py:394
 msgid "Services"
 msgstr "Канали"
+
+#: ../plugin/controllers/i18n.py:633
+msgid "Serving stream"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:380
 msgid "Set maximum duration"
@@ -2201,45 +2255,44 @@ msgid "Skins"
 msgstr ""
 
 #: ../plugin/controllers/models/timers.py:865
-#: ../plugin/controllers/models/timers.py:891
-#: ../plugin/controllers/models/timers.py:917
-#: ../plugin/controllers/models/timers.py:946
-#: ../plugin/controllers/models/timers.py:973
-#: ../plugin/controllers/models/timers.py:1055
+#: ../plugin/controllers/models/timers.py:901
+#: ../plugin/controllers/models/timers.py:927
+#: ../plugin/controllers/models/timers.py:956
+#: ../plugin/controllers/models/timers.py:1001
+#: ../plugin/controllers/models/timers.py:1083
 msgid "SleepTimer error"
 msgstr "Грешка в таймера за сън"
 
-#: ../plugin/controllers/models/timers.py:935
-#: ../plugin/controllers/models/timers.py:1031
-#: ../plugin/controllers/models/timers.py:1050
+#: ../plugin/controllers/models/timers.py:945
+#: ../plugin/controllers/models/timers.py:1059
+#: ../plugin/controllers/models/timers.py:1078
 msgid "Sleeptimer has been disabled"
 msgstr "Таймера за сън беше спрян"
 
 #: ../plugin/controllers/models/timers.py:860
-#: ../plugin/controllers/models/timers.py:885
-#: ../plugin/controllers/models/timers.py:912
-#: ../plugin/controllers/models/timers.py:967
+#: ../plugin/controllers/models/timers.py:895
+#: ../plugin/controllers/models/timers.py:922
+#: ../plugin/controllers/models/timers.py:995
 msgid "Sleeptimer is disabled"
 msgstr "Таймера за сън е спрян"
 
 #: ../plugin/controllers/models/timers.py:860
-#: ../plugin/controllers/models/timers.py:885
-#: ../plugin/controllers/models/timers.py:912
-#: ../plugin/controllers/models/timers.py:967
+#: ../plugin/controllers/models/timers.py:895
+#: ../plugin/controllers/models/timers.py:922
+#: ../plugin/controllers/models/timers.py:995
 msgid "Sleeptimer is enabled"
 msgstr "Таймера за сън е включен"
 
-#: ../plugin/controllers/models/timers.py:941
-#: ../plugin/controllers/models/timers.py:1031
-#: ../plugin/controllers/models/timers.py:1045
+#: ../plugin/controllers/models/timers.py:951
+#: ../plugin/controllers/models/timers.py:1059
+#: ../plugin/controllers/models/timers.py:1073
 #, python-format
 msgid "Sleeptimer set to %d minutes"
 msgstr "Таймера за сън е настроен на %d минути"
 
 #: ../plugin/controllers/i18n.py:536
-#, fuzzy
 msgid "Small remote layout"
-msgstr "Пълно дистанционно"
+msgstr ""
 
 #: ../plugin/controllers/i18n.py:277
 msgid "SoC family"
@@ -2269,10 +2322,6 @@ msgstr "Спинър"
 msgid "Standby"
 msgstr "Готовност"
 
-#: ../plugin/controllers/i18n.py:280
-msgid "Standby Toggle"
-msgstr "Режим Готовност"
-
 #: ../plugin/controllers/i18n.py:139
 msgid "Start"
 msgstr "Старт"
@@ -2291,6 +2340,10 @@ msgstr ""
 
 #: ../plugin/controllers/i18n.py:438
 msgid "State"
+msgstr ""
+
+#: ../plugin/controllers/i18n.py:645
+msgid "Storage"
 msgstr ""
 
 #: ../plugin/controllers/i18n.py:284
@@ -2390,7 +2443,7 @@ msgstr "Текст"
 msgid "Th"
 msgstr "Чт"
 
-#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1568
+#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1577
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Параметър '%s' не може да бъде празен"
@@ -2424,7 +2477,7 @@ msgstr "Тема"
 msgid "Theme mode"
 msgstr "Тема"
 
-#: ../plugin/controllers/BouquetEditor.py:319
+#: ../plugin/controllers/BouquetEditor.py:345
 msgid "This service can not be added."
 msgstr "Този канал не може да се добави."
 
@@ -2482,6 +2535,10 @@ msgstr "Таймер '%s' не може да се запише поради ко
 msgid "Timer Added"
 msgstr "Таймера е добавен"
 
+#: ../plugin/controllers/i18n.py:639
+msgid "Timer Conflict"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:295
 msgid "Timer added"
 msgstr "Таймера е добавен"
@@ -2517,6 +2574,10 @@ msgstr "Не преди"
 #: ../plugin/controllers/models/movies.py:58
 #: ../plugin/controllers/models/timers.py:48
 msgid "Today"
+msgstr ""
+
+#: ../plugin/controllers/i18n.py:280
+msgid "Toggle Standby"
 msgstr ""
 
 #: ../plugin/controllers/i18n.py:305
@@ -2655,7 +2716,7 @@ msgstr "Използвай новия дизайн"
 msgid "VPS"
 msgstr "VPS"
 
-#: ../plugin/controllers/models/timers.py:1089
+#: ../plugin/controllers/models/timers.py:1117
 msgid "VPS plugin not found"
 msgstr "VPS плъгина не е открит"
 
@@ -2933,6 +2994,10 @@ msgstr "r/o"
 msgid "r/w"
 msgstr "r/w"
 
+#: ../plugin/controllers/i18n.py:636
+msgid "receiver"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:368
 msgid "record"
 msgstr "запис"
@@ -3014,7 +3079,7 @@ msgstr ""
 msgid "transcoded"
 msgstr "транскодиран"
 
-#: ../plugin/controllers/web.py:716
+#: ../plugin/controllers/web.py:725
 #, python-format
 msgid "type %s is not a number"
 msgstr "тип %s не е число"

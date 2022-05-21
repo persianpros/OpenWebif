@@ -30,7 +30,7 @@ def _isPluginInstalled(p, plugin="plugin"):
 
 from Components.SystemInfo import BoxInfo
 
-OPENWEBIFVER = "OWIF 1.5.0.4 for Open Vision"
+OPENWEBIFVER = "OWIF 1.5.1.5 for Open Vision"
 
 PLUGIN_NAME = 'OpenWebif'
 PLUGIN_DESCRIPTION = "OpenWebif Configuration"
