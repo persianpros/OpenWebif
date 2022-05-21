@@ -1114,7 +1114,7 @@ def getMultiEpg(self, ref, begintime=-1, endtime=None, Mode=1):
 			# Cut description
 			f = serviceref.rfind("::")
 			if f != -1:
-				serviceref = serviceref[:f+1]
+				serviceref = serviceref[:f + 1]
 				if serviceref not in timerlist:
 					return None
 			else:
