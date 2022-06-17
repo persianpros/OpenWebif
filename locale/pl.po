@@ -1,11 +1,12 @@
 # pololoko111 <peciek83@gmail.com>, 2021, 2022.
 # Karol Sz <kaolsz@interia.pl>, 2022.
+# T-Rex <t-rex@t.pl>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-21 16:32+0430\n"
-"PO-Revision-Date: 2022-03-16 09:59+0000\n"
+"POT-Creation-Date: 2022-06-17 15:01+0430\n"
+"PO-Revision-Date: 2022-05-21 06:18+0000\n"
 "Last-Translator: Karol Sz <kaolsz@interia.pl>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/pl/>\n"
 "Language: pl\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #: ../plugin/controllers/models/timers.py:61
 #, python-format
@@ -31,10 +32,10 @@ msgstr "%02d.%02d.%d"
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../plugin/controllers/models/services.py:247
-#: ../plugin/controllers/models/services.py:809
-#: ../plugin/controllers/models/services.py:1040
-#: ../plugin/controllers/models/services.py:1086
+#: ../plugin/controllers/models/services.py:248
+#: ../plugin/controllers/models/services.py:811
+#: ../plugin/controllers/models/services.py:1042
+#: ../plugin/controllers/models/services.py:1088
 msgid "%d.%m.%Y"
 msgstr "%d.%m.%Y"
 
@@ -71,7 +72,7 @@ msgstr "%s / %s"
 #: ../plugin/controllers/ajax.py:262
 #, python-format
 msgid "%s Style"
-msgstr ""
+msgstr "Styl %s"
 
 #: ../plugin/controllers/models/info.py:247
 #: ../plugin/controllers/models/info.py:398
@@ -117,7 +118,7 @@ msgstr "Dodaj nazwę AutoTimera do tagów"
 
 #: ../plugin/controllers/i18n.py:495
 msgid "Add Bouquet"
-msgstr "Dodaj pakiet"
+msgstr "Dodaj listę kanałów"
 
 #: ../plugin/controllers/i18n.py:498
 msgid "Add IPTV/URL"
@@ -153,7 +154,7 @@ msgstr "Dodaj filtry"
 
 #: ../plugin/controllers/i18n.py:491
 msgid "Add selection to bouquet"
-msgstr "Dodaj wybrane elementy do pakietu"
+msgstr "Dodaj wybrane elementy do listy kanałów"
 
 #: ../plugin/plugin.py:184
 msgid "Add service name to stream information"
@@ -229,7 +230,7 @@ msgstr "Odpowiedź brzmi TAK!"
 
 #: ../plugin/controllers/i18n.py:641
 msgid "Any"
-msgstr ""
+msgstr "Dowolny"
 
 #: ../plugin/controllers/i18n.py:439
 msgid "Any day"
@@ -245,7 +246,7 @@ msgstr "Kwiecień"
 
 #: ../plugin/controllers/i18n.py:503
 msgid "Are you sure you want to delete the selected bouquet?"
-msgstr "Czy na pewno chcesz usunąć pakiet?"
+msgstr "Czy na pewno chcesz usunąć listę kanałów?"
 
 #: ../plugin/controllers/i18n.py:502
 msgid "Are you sure you want to delete the selected item(s)?"
@@ -285,15 +286,15 @@ msgstr "Zapytaj, domyślnie Tak"
 
 #: ../plugin/controllers/i18n.py:84
 msgid "Audio Encoding"
-msgstr ""
+msgstr "Kodowanie audio"
 
 #: ../plugin/controllers/i18n.py:516
 msgid "Audio PID (APID)"
-msgstr ""
+msgstr "Audio PID (APID)"
 
 #: ../plugin/controllers/i18n.py:85
 msgid "Audio Track"
-msgstr ""
+msgstr "Ścieżka audio"
 
 #: ../plugin/controllers/i18n.py:70
 msgid "August"
@@ -353,7 +354,7 @@ msgstr "Początek okresu"
 
 #: ../plugin/controllers/i18n.py:307
 msgid "Bit Error Rate (BER)"
-msgstr ""
+msgstr "Bitowa stopa błędów (BER)"
 
 #: ../plugin/controllers/i18n.py:552
 msgid "Bookmark"
@@ -366,76 +367,76 @@ msgstr "Zakładki"
 #: ../plugin/controllers/BouquetEditor.py:131
 #, python-format
 msgid "Bouquet %s already exists."
-msgstr "Pakiet %s już istnieje."
+msgstr "Lista kanałów %s już istnieje."
 
 #: ../plugin/controllers/BouquetEditor.py:222
 #, python-format
 msgid "Bouquet %s can not be moved."
-msgstr "Pakietu %s nie można przenieść."
+msgstr "Listy kanałów %s nie można przenieść."
 
 #: ../plugin/controllers/BouquetEditor.py:126
 #, python-format
 msgid "Bouquet %s created."
-msgstr "Utworzono pakiet %s."
+msgstr "Lista kanałów %s została utworzona."
 
 #: ../plugin/controllers/BouquetEditor.py:195
 #, python-format
 msgid "Bouquet %s deleted."
-msgstr "Pakiet %s usunięty."
+msgstr "Lista kanałów %s została usunięta."
 
 #: ../plugin/controllers/BouquetEditor.py:576
 #, python-format
 msgid "Bouquet %s is locked."
-msgstr "Pakiet %s jest zablokowany."
+msgstr "Lista kanałów %s jest zablokowana."
 
 #: ../plugin/controllers/BouquetEditor.py:584
 #, python-format
 msgid "Bouquet %s is unlocked."
-msgstr "Pakiet %s jest odblokowany."
+msgstr "Lista kanałów %s jest odblokowana."
 
 #: ../plugin/controllers/BouquetEditor.py:220
 #, python-format
 msgid "Bouquet %s moved."
-msgstr "Przeniesiono pakiet %s."
+msgstr "Przeniesiono listę kanałów %s."
 
 #: ../plugin/controllers/BouquetEditor.py:190
 #, python-format
 msgid "Bouquet %s removed failed, sevicerefence or mutable list is not valid."
-msgstr "Usunięcie pakietu %s nie powiodło się, wartość odniesienia lub lista zmiennych jest niepoprawna."
+msgstr "Usunięcie listy kanałów %s nie powiodło się, wartość odniesienia lub lista zmiennych jest niepoprawna."
 
 #: ../plugin/controllers/BouquetEditor.py:188
 #, python-format
 msgid "Bouquet %s removed failed."
-msgstr "Usunięcie pakietu %s nie powiodło się."
+msgstr "Usunięcie listy kanałów %s nie powiodło się."
 
 #: ../plugin/controllers/i18n.py:269
 msgid "Bouquet Editor"
-msgstr "Edytor pakietów"
+msgstr "Edytor listy kanałów"
 
 #: ../plugin/controllers/i18n.py:505
 msgid "Bouquet name"
-msgstr "Nazwa pakietu"
+msgstr "Nazwa listy kanałów"
 
 #: ../plugin/controllers/BouquetEditor.py:415
 msgid "Bouquet renamed successfully."
-msgstr "Nazwa pakietu została zmieniona."
+msgstr "Nazwa listy kanałów została zmieniona."
 
 #: ../plugin/controllers/BouquetEditor.py:678
 msgid "Bouquet-settings were restored successfully"
-msgstr "Ustawienia pakietów zostały pomyślnie przywrócone"
+msgstr "Ustawienia listy kanałów zostały pomyślnie przywrócone"
 
 #: ../plugin/controllers/base.py:351
 msgid "BouquetEditor"
-msgstr "Edytor pakietów"
+msgstr "Edytor listy kanałów"
 
 #: ../plugin/controllers/BouquetEditor.py:133
 #: ../plugin/controllers/BouquetEditor.py:483
 msgid "Bouquetlist is not editable!"
-msgstr "Lista pakietów nie jest edytowalna!"
+msgstr "Zestawienie List kanałów nie jest edytowalne!"
 
 #: ../plugin/controllers/i18n.py:91
 msgid "Bouquets"
-msgstr "Pakiety"
+msgstr "Listy kanałów"
 
 #: ../plugin/controllers/i18n.py:98
 msgid "Brand"
@@ -443,7 +444,7 @@ msgstr "Marka"
 
 #: ../plugin/controllers/i18n.py:637
 msgid "Build"
-msgstr ""
+msgstr "Wersja pakietu"
 
 #: ../plugin/controllers/i18n.py:97
 #, fuzzy
@@ -453,11 +454,12 @@ msgstr "Marka"
 #: ../plugin/controllers/i18n.py:199
 #, fuzzy
 msgid "Build Model"
-msgstr "Model"
+msgstr "Wersja pakietu"
 
 #: ../plugin/controllers/i18n.py:99
+#, fuzzy
 msgid "Build date"
-msgstr ""
+msgstr "Wersja pakietu"
 
 #: ../plugin/controllers/i18n.py:109
 msgid "CPU architecture"
@@ -471,7 +473,7 @@ msgstr ""
 msgid "CPU brand"
 msgstr ""
 
-#: ../plugin/controllers/models/services.py:399
+#: ../plugin/controllers/models/services.py:400
 msgid "Cable"
 msgstr "Kablówka"
 
@@ -552,7 +554,7 @@ msgstr "Nie można znaleźć timera '%s' o podanym czasie rozpoczęcia i zakońc
 
 #: ../plugin/controllers/i18n.py:490
 msgid "Create bouquet from selection"
-msgstr "Stwórz pakiet z wybranego elementu(ów)"
+msgstr "Stwórz listę kanałów z wybranego elementu(ów)"
 
 #: ../plugin/controllers/i18n.py:112
 msgid "Current"
@@ -564,7 +566,7 @@ msgstr "Bieżące wydarzenie"
 
 #: ../plugin/controllers/i18n.py:632
 msgid "Currently recording"
-msgstr ""
+msgstr "Aktualnie nagrywane"
 
 #: ../plugin/controllers/i18n.py:228
 #, fuzzy
@@ -634,7 +636,7 @@ msgstr "Usuń zakładkę"
 
 #: ../plugin/controllers/i18n.py:497
 msgid "Delete Bouquet"
-msgstr "Usuń pakiet"
+msgstr "Usuń listę kanałów"
 
 #: ../plugin/controllers/i18n.py:118
 msgid "Delete Recording"
@@ -662,7 +664,7 @@ msgstr "Opis"
 
 #: ../plugin/controllers/i18n.py:646
 msgid "Device"
-msgstr ""
+msgstr "Urządzenie"
 
 #: ../plugin/controllers/i18n.py:142 ../plugin/controllers/i18n.py:423
 msgid "Disable"
@@ -847,7 +849,7 @@ msgstr "Wersja oprogramowania"
 
 #: ../plugin/controllers/i18n.py:507
 msgid "Enter a name for the new bouquet"
-msgstr "Wpisz nazwę nowego pakietu"
+msgstr "Wpisz nazwę nowej listy kanałów"
 
 #: ../plugin/controllers/i18n.py:508
 msgid "Enter a name for the new marker"
@@ -863,7 +865,7 @@ msgstr "Wpisz ścieżkę"
 
 #: ../plugin/controllers/i18n.py:629
 msgid "Enter text"
-msgstr ""
+msgstr "Wpisz tekst"
 
 #: ../plugin/controllers/i18n.py:434
 msgid "Enter the text to find in the EPG"
@@ -902,12 +904,12 @@ msgstr "Błąd, %s nie istnieje, przywracanie nie jest możliwe..."
 #: ../plugin/controllers/BouquetEditor.py:680
 #, python-format
 msgid "Error, %s was not created with WebBouquetEditor..."
-msgstr "Błąd, %s nie został utworzony za pomocą Edytora pakietów..."
+msgstr "Błąd, %s nie została utworzona za pomocą Edytora List kanałów..."
 
 #: ../plugin/controllers/BouquetEditor.py:197
 #, python-format
 msgid "Error: Bouquet %s could not deleted, OSError."
-msgstr "Błąd: Nie można usunąć pakietu %s, błąd OSError."
+msgstr "Błąd: Nie udało się usunąć listy kanałów %s, OSError."
 
 #: ../plugin/controllers/i18n.py:528
 msgid "Event not found"
@@ -988,7 +990,7 @@ msgstr "Wolna pamięć"
 
 #: ../plugin/controllers/i18n.py:647
 msgid "Free space"
-msgstr ""
+msgstr "Wolne miejsce"
 
 #: ../plugin/controllers/i18n.py:302
 #, fuzzy
@@ -1051,7 +1053,7 @@ msgstr "Nie udało się uzyskać zmiennej listy dla nowo utworzonej alternatywy!
 
 #: ../plugin/controllers/BouquetEditor.py:128
 msgid "Get mutable list for new created bouquet failed!"
-msgstr "Nie udało się uzyskać zmiennej listy dla nowo utworzonego pakietu!"
+msgstr "Nie udało się uzyskać zmiennej listy dla nowo utworzonej listy kanałów!"
 
 #: ../plugin/controllers/i18n.py:218
 msgid "Glibc"
@@ -1075,16 +1077,17 @@ msgstr "Model dysku twardego"
 
 #: ../plugin/controllers/i18n.py:643
 msgid "Hardware"
-msgstr ""
+msgstr "Sprzęt"
 
 #: ../plugin/controllers/i18n.py:173
 #, fuzzy
 msgid "Hardware serial"
-msgstr "Naziemna"
+msgstr "Sprzęt"
 
 #: ../plugin/controllers/i18n.py:237
+#, fuzzy
 msgid "Hardware type"
-msgstr ""
+msgstr "Sprzęt"
 
 #: ../plugin/controllers/i18n.py:169
 msgid "Hide full remote"
@@ -1096,7 +1099,7 @@ msgstr "Wysoka rozdzielczość"
 
 #: ../plugin/controllers/i18n.py:642
 msgid "Hold to drag"
-msgstr ""
+msgstr "Przytrzymaj aby przeciągnąć"
 
 #: ../plugin/controllers/i18n.py:172
 msgid "Hour"
@@ -1168,7 +1171,7 @@ msgstr "Informacje"
 
 #: ../plugin/controllers/i18n.py:638
 msgid "Information"
-msgstr ""
+msgstr "Informacja"
 
 #: ../plugin/controllers/i18n.py:475
 msgid "Inherit AutoTimer"
@@ -1196,7 +1199,7 @@ msgstr "Błąd wewnętrzny!"
 
 #: ../plugin/controllers/i18n.py:644
 msgid "Internal flash memory"
-msgstr ""
+msgstr "Wewnętrzna pamięć flash"
 
 #: ../plugin/controllers/i18n.py:446
 #, python-format
@@ -1236,8 +1239,9 @@ msgid "Kernel"
 msgstr "Jądro"
 
 #: ../plugin/controllers/i18n.py:189
+#, fuzzy
 msgid "Kernel module layout"
-msgstr ""
+msgstr "Mały pilot"
 
 #: ../plugin/controllers/i18n.py:190
 msgid "LCD"
@@ -1262,7 +1266,7 @@ msgstr ""
 
 #: ../plugin/controllers/i18n.py:191
 msgid "License"
-msgstr ""
+msgstr "Licencja"
 
 #: ../plugin/controllers/i18n.py:545
 msgid "Link speed"
@@ -1389,7 +1393,7 @@ msgstr "Więcej szczegółów"
 
 #: ../plugin/controllers/i18n.py:648
 msgid "Mount point"
-msgstr ""
+msgstr "Punkt montowania"
 
 #: ../plugin/controllers/i18n.py:530
 msgid "Movie database for EPG"
@@ -1410,7 +1414,7 @@ msgstr "Nagrania"
 #: ../plugin/controllers/BouquetEditor.py:135
 #: ../plugin/controllers/BouquetEditor.py:785
 msgid "Multi-Bouquet is not enabled!"
-msgstr "Multi-Pakiet nie jest włączony!"
+msgstr "Multi-Lista kanałów nie jest włączona!"
 
 #: ../plugin/controllers/i18n.py:204
 msgid "MultiEPG"
@@ -1428,7 +1432,7 @@ msgstr "Transkoduj"
 
 #: ../plugin/controllers/i18n.py:634
 msgid "Mute/Unmute"
-msgstr ""
+msgstr "Wycisz/Wyłącz wyciszenie"
 
 #: ../plugin/controllers/base.py:346
 msgid "NCam Webinterface"
@@ -1463,7 +1467,7 @@ msgid "Never"
 msgstr "Nigdy"
 
 #: ../plugin/controllers/i18n.py:432
-#: ../plugin/controllers/models/services.py:392
+#: ../plugin/controllers/models/services.py:393
 msgid "New"
 msgstr "Nowy"
 
@@ -1498,13 +1502,13 @@ msgstr "Brak odpowiedzi na czas"
 #: ../plugin/controllers/BouquetEditor.py:351
 #: ../plugin/controllers/BouquetEditor.py:503
 msgid "No bouquet given!"
-msgstr "Nie podano pakietu!"
+msgstr "Nie podano listy kanałów!"
 
 #: ../plugin/controllers/BouquetEditor.py:94
 #: ../plugin/controllers/BouquetEditor.py:157
 #: ../plugin/controllers/BouquetEditor.py:203
 msgid "No bouquet name given!"
-msgstr "Nie podano nazwy pakietu!"
+msgstr "Nie podano nazwy listy kanałów!"
 
 #: ../plugin/controllers/BouquetEditor.py:446
 msgid "No current service given!"
@@ -1529,7 +1533,7 @@ msgstr "Nie znaleziono pasującego timera"
 
 #: ../plugin/controllers/i18n.py:640
 msgid "No network connection"
-msgstr ""
+msgstr "Brak połączenia z siecią"
 
 #: ../plugin/controllers/BouquetEditor.py:391
 msgid "No new servicename given!"
@@ -1601,7 +1605,7 @@ msgstr "E"
 
 #: ../plugin/controllers/i18n.py:521
 msgid "ONID"
-msgstr ""
+msgstr "ONID"
 
 #: ../plugin/controllers/base.py:344
 msgid "OSCam Webinterface"
@@ -1693,7 +1697,7 @@ msgstr ""
 
 #: ../plugin/plugin.py:156
 msgid "OpenWebInterface Enabled"
-msgstr "Włącz OpenWebif"
+msgstr "Interfejs OpenWebif włączony"
 
 #: ../plugin/controllers/i18n.py:532
 msgid "OpenWebif Browser Settings"
@@ -1721,11 +1725,11 @@ msgstr "Znaleziono zastąpienie w usłudze alternatywnej"
 
 #: ../plugin/controllers/i18n.py:519
 msgid "PCR PID"
-msgstr ""
+msgstr "PCR PID"
 
 #: ../plugin/controllers/i18n.py:515
 msgid "PMT PID"
-msgstr ""
+msgstr "PMT PID"
 
 #: ../plugin/controllers/i18n.py:557
 msgid "Packages"
@@ -1834,13 +1838,17 @@ msgstr "Radio"
 msgid "Reboot STB"
 msgstr "Zrestartuj odbiornik"
 
+#: ../plugin/controllers/i18n.py:636
+msgid "Receiver"
+msgstr "Odbiornik"
+
 #: ../plugin/controllers/i18n.py:390
 msgid "Record a maximum of # times"
 msgstr "Nagraj maksymalnie x razy"
 
 #: ../plugin/controllers/i18n.py:243
 msgid "Recording"
-msgstr ""
+msgstr "Nagrywanie"
 
 #: ../plugin/controllers/i18n.py:624
 msgid "Recording Type"
@@ -1884,7 +1892,7 @@ msgstr "Zmień nazwę"
 
 #: ../plugin/controllers/i18n.py:496
 msgid "Rename Bouquet"
-msgstr "Zmień nazwę pakietu"
+msgstr "Zmień nazwę listy kanałów"
 
 #: ../plugin/controllers/i18n.py:248
 msgid "Rename Recording"
@@ -1916,7 +1924,7 @@ msgstr "Uruchom ponownie GUI"
 
 #: ../plugin/controllers/i18n.py:151 ../plugin/controllers/i18n.py:409
 msgid "Restrict to bouquets"
-msgstr "Ogranicz do pakietów"
+msgstr "Ogranicz do list kanałów"
 
 #: ../plugin/controllers/i18n.py:410
 msgid "Restrict to channels"
@@ -1936,7 +1944,7 @@ msgstr "SNR"
 
 #: ../plugin/controllers/i18n.py:523
 msgid "SRef"
-msgstr ""
+msgstr "SRef"
 
 #: ../plugin/controllers/i18n.py:93
 #, fuzzy
@@ -2002,7 +2010,7 @@ msgstr "Szukaj w CSFD"
 
 #: ../plugin/controllers/i18n.py:149
 msgid "Search EPG"
-msgstr ""
+msgstr "Szukaj w EPG"
 
 #: ../plugin/controllers/i18n.py:260
 msgid "Search IMDb"
@@ -2038,7 +2046,7 @@ msgstr "Wybierz..."
 
 #: ../plugin/controllers/i18n.py:635
 msgid "Send"
-msgstr ""
+msgstr "Wyślij"
 
 #: ../plugin/controllers/i18n.py:264
 msgid "Send Message"
@@ -2064,7 +2072,7 @@ msgstr "Usługa %s została dodana."
 #: ../plugin/controllers/BouquetEditor.py:344
 #, python-format
 msgid "Service %s already exists in bouquet %s."
-msgstr "Usługa %s już istnieje w pakiecie %s."
+msgstr "Usługa %s już istnieje na liście kanałów %s."
 
 #: ../plugin/controllers/BouquetEditor.py:252
 #, python-format
@@ -2089,7 +2097,7 @@ msgstr "Usługa %s została przeniesiona."
 #: ../plugin/controllers/BouquetEditor.py:251
 #, python-format
 msgid "Service %s removed from bouquet %s."
-msgstr "Usługa %s została usunięta z pakietu %s."
+msgstr "Usługa %s została usunięta z listy kanałów %s."
 
 #: ../plugin/controllers/BouquetEditor.py:243
 #, python-format
@@ -2098,7 +2106,7 @@ msgstr "Usługa %s została usunięta."
 
 #: ../plugin/controllers/i18n.py:522
 msgid "Service ID (SID)"
-msgstr ""
+msgstr "Service ID (SID)"
 
 #: ../plugin/controllers/BouquetEditor.py:278
 msgid "Service can not be moved."
@@ -2116,13 +2124,13 @@ msgstr "Usługa nie jest alternatywą."
 msgid "Service renamed successfully."
 msgstr "Nazwa usługi została zmieniona."
 
-#: ../plugin/controllers/models/services.py:394
+#: ../plugin/controllers/models/services.py:395
 msgid "Services"
 msgstr "Usługi"
 
 #: ../plugin/controllers/i18n.py:633
 msgid "Serving stream"
-msgstr ""
+msgstr "Strumień obsługujący"
 
 #: ../plugin/controllers/i18n.py:380
 msgid "Set maximum duration"
@@ -2200,15 +2208,15 @@ msgstr "Wyłącz"
 
 #: ../plugin/controllers/i18n.py:312
 msgid "Signal Power (AGC)"
-msgstr ""
+msgstr "Moc sygnału (AGC)"
 
 #: ../plugin/controllers/i18n.py:311
 msgid "Signal Quality (SNR DB)"
-msgstr ""
+msgstr "Jakość sygnału (SNR DB)"
 
 #: ../plugin/controllers/i18n.py:310
 msgid "Signal Quality (SNR)"
-msgstr ""
+msgstr "Jakość sygnału (SNR)"
 
 #: ../plugin/controllers/i18n.py:427
 msgid "Simulate"
@@ -2260,7 +2268,7 @@ msgstr "Wyłącznik czasowy ustawiony na %d minut(y)"
 
 #: ../plugin/controllers/i18n.py:536
 msgid "Small remote layout"
-msgstr ""
+msgstr "Mały pilot"
 
 #: ../plugin/controllers/i18n.py:277
 msgid "SoC family"
@@ -2312,7 +2320,7 @@ msgstr "Stan"
 
 #: ../plugin/controllers/i18n.py:645
 msgid "Storage"
-msgstr ""
+msgstr "Magazyn danych"
 
 #: ../plugin/controllers/i18n.py:284
 msgid "Stream"
@@ -2359,7 +2367,7 @@ msgstr "TB"
 
 #: ../plugin/controllers/i18n.py:520
 msgid "TSID"
-msgstr ""
+msgstr "TSID"
 
 #: ../plugin/controllers/i18n.py:315
 msgid "TV"
@@ -2397,7 +2405,7 @@ msgstr "Silnik szablonów"
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../plugin/controllers/models/services.py:401
+#: ../plugin/controllers/models/services.py:402
 msgid "Terrestrial"
 msgstr "Naziemna"
 
@@ -2502,7 +2510,7 @@ msgstr "Dodano timer"
 
 #: ../plugin/controllers/i18n.py:639
 msgid "Timer Conflict"
-msgstr ""
+msgstr "Konflikt timera"
 
 #: ../plugin/controllers/i18n.py:295
 msgid "Timer added"
@@ -2543,7 +2551,7 @@ msgstr "Dzisiaj"
 
 #: ../plugin/controllers/i18n.py:280
 msgid "Toggle Standby"
-msgstr ""
+msgstr "Przełącznik trybu czuwania"
 
 #: ../plugin/controllers/i18n.py:305
 msgid "Transcode"
@@ -2696,7 +2704,7 @@ msgstr "Wysokość wideo"
 
 #: ../plugin/controllers/i18n.py:517
 msgid "Video PID (VPID)"
-msgstr ""
+msgstr "Wideo PID (VPID)"
 
 #: ../plugin/controllers/i18n.py:325
 msgid "Video Width"
@@ -2761,7 +2769,7 @@ msgstr "Tygodniowo (Niedziela)"
 
 #: ../plugin/controllers/i18n.py:324
 msgid "Widescreen"
-msgstr ""
+msgstr "Obraz panoramiczny"
 
 #: ../plugin/plugin.py:180
 msgid "Without auth only local access is allowed!"
@@ -2951,10 +2959,6 @@ msgstr "r/o"
 msgid "r/w"
 msgstr "r/w"
 
-#: ../plugin/controllers/i18n.py:636
-msgid "receiver"
-msgstr ""
-
 #: ../plugin/controllers/i18n.py:368
 msgid "record"
 msgstr "nagraj"
@@ -2977,7 +2981,7 @@ msgstr "sekund(y)"
 
 #: ../plugin/controllers/i18n.py:407
 msgid "select bouquets"
-msgstr "wybierz pakiety"
+msgstr "wybierz listy kanałów"
 
 #: ../plugin/controllers/i18n.py:406
 msgid "select channels"

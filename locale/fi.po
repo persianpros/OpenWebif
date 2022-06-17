@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-21 16:32+0430\n"
+"POT-Creation-Date: 2022-06-17 15:01+0430\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Samzam\n"
 "Language-Team: \n"
@@ -30,10 +30,10 @@ msgstr "%02d.%02d.%d"
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../plugin/controllers/models/services.py:247
-#: ../plugin/controllers/models/services.py:809
-#: ../plugin/controllers/models/services.py:1040
-#: ../plugin/controllers/models/services.py:1086
+#: ../plugin/controllers/models/services.py:248
+#: ../plugin/controllers/models/services.py:811
+#: ../plugin/controllers/models/services.py:1042
+#: ../plugin/controllers/models/services.py:1088
 msgid "%d.%m.%Y"
 msgstr "%d.%m.%Y"
 
@@ -470,7 +470,7 @@ msgstr ""
 msgid "CPU brand"
 msgstr ""
 
-#: ../plugin/controllers/models/services.py:399
+#: ../plugin/controllers/models/services.py:400
 msgid "Cable"
 msgstr "Kaapeliverkko"
 
@@ -1463,7 +1463,7 @@ msgid "Never"
 msgstr "Ei koskaan"
 
 #: ../plugin/controllers/i18n.py:432
-#: ../plugin/controllers/models/services.py:392
+#: ../plugin/controllers/models/services.py:393
 msgid "New"
 msgstr "Uusi"
 
@@ -1834,6 +1834,10 @@ msgstr "Radio"
 msgid "Reboot STB"
 msgstr "Käynnistä uudelleen"
 
+#: ../plugin/controllers/i18n.py:636
+msgid "Receiver"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:390
 msgid "Record a maximum of # times"
 msgstr "Tallenna enintään X-kertaa"
@@ -2117,7 +2121,7 @@ msgstr "Kanava ei ole vaihtoehtoinen."
 msgid "Service renamed successfully."
 msgstr "Kanavan uudelleen nimeäminen onnistui."
 
-#: ../plugin/controllers/models/services.py:394
+#: ../plugin/controllers/models/services.py:395
 msgid "Services"
 msgstr "Kanavat"
 
@@ -2399,7 +2403,7 @@ msgstr "Teema"
 msgid "Terminal"
 msgstr "Terminaali"
 
-#: ../plugin/controllers/models/services.py:401
+#: ../plugin/controllers/models/services.py:402
 msgid "Terrestrial"
 msgstr "Antenniverkko"
 
@@ -2952,10 +2956,6 @@ msgstr "r/o"
 #: ../plugin/controllers/models/info.py:427
 msgid "r/w"
 msgstr "r/w"
-
-#: ../plugin/controllers/i18n.py:636
-msgid "receiver"
-msgstr ""
 
 #: ../plugin/controllers/i18n.py:368
 msgid "record"

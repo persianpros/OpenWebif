@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-21 16:32+0430\n"
+"POT-Creation-Date: 2022-06-17 15:01+0430\n"
 "PO-Revision-Date: 2021-12-02 19:58+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/zh_Hans/>\n"
@@ -32,10 +32,10 @@ msgstr "%02d.%02d.%d"
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../plugin/controllers/models/services.py:247
-#: ../plugin/controllers/models/services.py:809
-#: ../plugin/controllers/models/services.py:1040
-#: ../plugin/controllers/models/services.py:1086
+#: ../plugin/controllers/models/services.py:248
+#: ../plugin/controllers/models/services.py:811
+#: ../plugin/controllers/models/services.py:1042
+#: ../plugin/controllers/models/services.py:1088
 msgid "%d.%m.%Y"
 msgstr "%d.%m.%Y"
 
@@ -472,7 +472,7 @@ msgstr ""
 msgid "CPU brand"
 msgstr ""
 
-#: ../plugin/controllers/models/services.py:399
+#: ../plugin/controllers/models/services.py:400
 msgid "Cable"
 msgstr "有线"
 
@@ -1465,7 +1465,7 @@ msgid "Never"
 msgstr "从不"
 
 #: ../plugin/controllers/i18n.py:432
-#: ../plugin/controllers/models/services.py:392
+#: ../plugin/controllers/models/services.py:393
 msgid "New"
 msgstr "新发现"
 
@@ -1836,6 +1836,10 @@ msgstr "广播"
 msgid "Reboot STB"
 msgstr "重启机顶盒"
 
+#: ../plugin/controllers/i18n.py:636
+msgid "Receiver"
+msgstr ""
+
 #: ../plugin/controllers/i18n.py:390
 msgid "Record a maximum of # times"
 msgstr "最多录制#次"
@@ -2119,7 +2123,7 @@ msgstr "当前频道不是替代频道。"
 msgid "Service renamed successfully."
 msgstr "频道改名完成."
 
-#: ../plugin/controllers/models/services.py:394
+#: ../plugin/controllers/models/services.py:395
 msgid "Services"
 msgstr "频道"
 
@@ -2401,7 +2405,7 @@ msgstr "模板引擎"
 msgid "Terminal"
 msgstr "终端设备"
 
-#: ../plugin/controllers/models/services.py:401
+#: ../plugin/controllers/models/services.py:402
 msgid "Terrestrial"
 msgstr "地面波"
 
@@ -2954,10 +2958,6 @@ msgstr "r/o"
 #: ../plugin/controllers/models/info.py:427
 msgid "r/w"
 msgstr "读/写"
-
-#: ../plugin/controllers/i18n.py:636
-msgid "receiver"
-msgstr ""
 
 #: ../plugin/controllers/i18n.py:368
 msgid "record"
