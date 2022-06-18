@@ -279,7 +279,7 @@ class BaseController(resource.Resource):
 
 				conffile = file.split('/')[-1].replace("version", "conf")
 
-				data = open(file, "r").readlines()  # nosec
+				data = open(file, "r").readlines() if six.PY2 else open(file, "r", encoding="UTF-8").readlines()  # nosec
 				for i in data:
 					if "configdir:" in i.lower():
 						opath = i.split(":")[1].strip() + "/" + conffile
@@ -330,7 +330,7 @@ class BaseController(resource.Resource):
 		if oscamwebif and oscamconf is not None:
 			# oscam defaults to NOT to start the web interface unless a section for it exists, so reset port to None until we find one
 			port = None
-			data = open(oscamconf, "r").readlines()
+			data = open(oscamconf, "r").readlines() if six.PY2 else open(oscamconf, "r", encoding="UTF-8").readlines()
 			for i in data:
 				if "httpport" in i.lower():
 					port = i.split("=")[1].strip()
