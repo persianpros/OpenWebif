@@ -266,7 +266,7 @@ def getInfo(session=None, need_fullinfo=False):
 
 	info['enigmaver'] = getEnigmaVersionString()
 	info['enigmarev'] = getE2Rev()
-	info['driverdate'] = about.getDriverInstalledDate()
+	info['driverdate'] = BoxInfo.getItem("driverdate")
 	info['kernelver'] = BoxInfo.getItem("kernel")
 	info['modulelayout'] = BoxInfo.getItem("ModuleLayout")
 	info['dvbapitype'] = about.getDVBAPI()
