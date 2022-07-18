@@ -452,7 +452,7 @@ class Epg():
 		# debug(json.dumps(epgEvent, indent = 2)) # Object of type eServiceEvent is not JSON serializable
 		debug(epgEvent)
 		return epgEvent
-	
+
 	# /web/loadepg
 
 	def load(self):
