@@ -102,7 +102,7 @@ class Epg():
 		criteria = ('IBDTSENRW', MAX_RESULTS, queryType, queryString, CASE_INSENSITIVE_QUERY)
 		epgEvents = self._instance.search(criteria)
 
-		debug(json.dumps(epgEvents, indent = 2))
+		debug(json.dumps(epgEvents, indent=2))
 		return epgEvents
 
 
@@ -114,7 +114,7 @@ class Epg():
 		criteria = (eventFields, MAX_RESULTS, eEPGCache.SIMILAR_BROADCASTINGS_SEARCH, sRef, eventId)
 		epgEvents = self._instance.search(criteria)
 
-		debug(json.dumps(epgEvents, indent = 2))
+		debug(json.dumps(epgEvents, indent=2))
 		return epgEvents
 
 
@@ -285,7 +285,7 @@ class Epg():
 
 		epgEvents = self._queryEPG(criteria)
 
-		debug(json.dumps(epgEvents, indent = 2))
+		debug(json.dumps(epgEvents, indent=2))
 		debug(epgEvents)
 		return epgEvents
 
