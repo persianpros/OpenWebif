@@ -30,7 +30,7 @@ def _isPluginInstalled(p, plugin="plugin"):
 
 from Components.SystemInfo import BoxInfo
 
-OPENWEBIFVER = "OWIF 1.5.1.6 for Open Vision"
+OPENWEBIFVER = "OWIF 1.5.2.1 for Open Vision"
 
 PLUGIN_NAME = 'OpenWebif'
 PLUGIN_DESCRIPTION = "OpenWebif Configuration"
@@ -48,7 +48,14 @@ STB_LANG = language.getLanguage()
 
 MOBILEDEVICE = False
 
+DEBUG_ENABLED = False
+
 #: get transcoding feature
+
+
+def setDebugEnabled(enabled):
+	global DEBUG_ENABLED
+	DEBUG_ENABLED = enabled
 
 
 def getTranscoding():

@@ -40,7 +40,7 @@ from RecordTimer import parseEvent, RecordTimerEntry
 from timer import TimerEntry
 from Screens.InfoBar import InfoBar
 from Tools.Directories import fileExists
-from enigma import eDVBVolumecontrol, eServiceCenter, eServiceReference, getEnigmaVersionString, eEPGCache, eGetEnigmaDebugLvl, getE2Rev
+from enigma import eDVBVolumecontrol, eServiceCenter, eServiceReference, getEnigmaVersionString, eGetEnigmaDebugLvl, getE2Rev
 from Tools.StbHardware import getFPVersion, getBoxProc, getBoxProcType, getHWSerial, getBoxRCType
 from Plugins.Extensions.OpenWebif.controllers.i18n import _
 from Plugins.Extensions.OpenWebif.controllers.defaults import OPENWEBIFVER, TRANSCODING, TEXTINPUTSUPPORT
@@ -556,8 +556,8 @@ def getStreamServiceAndEvent(ref):
 	servicereference = ServiceReference(ref)
 	if servicereference:
 		sname = removeBad(servicereference.getServiceName())
-	epg = eEPGCache.getInstance()
-	event = epg and epg.lookupEventTime(ref, -1, 0)
+	epg = Epg()
+	event = epg.getCurrentEvent(ref)
 	if event:
 		eventname = event.getEventName()
 	return sname, eventname

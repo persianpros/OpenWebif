@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-03 04:37+0430\n"
+"POT-Creation-Date: 2022-07-18 17:49+0430\n"
 "PO-Revision-Date: 2021-12-02 19:58+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/zh_Hans/>\n"
@@ -16,26 +16,26 @@ msgstr ""
 "X-Poedit-SearchPath-0: plugin\n"
 "X-Poedit-SearchPath-1: U\n"
 
-#: ../plugin/controllers/models/timers.py:61
+#: ../plugin/controllers/models/timers.py:62
 #, python-format
 msgid "%02d.%02d."
 msgstr "%02d.%02d."
 
-#: ../plugin/controllers/models/timers.py:63
+#: ../plugin/controllers/models/timers.py:64
 #, python-format
 msgid "%02d.%02d.%d"
 msgstr "%02d.%02d.%d"
 
 #: ../plugin/controllers/models/movies.py:70
-#: ../plugin/controllers/models/timers.py:65
+#: ../plugin/controllers/models/timers.py:66
 #, python-format
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../plugin/controllers/models/services.py:248
-#: ../plugin/controllers/models/services.py:811
-#: ../plugin/controllers/models/services.py:1042
-#: ../plugin/controllers/models/services.py:1088
+#: ../plugin/controllers/models/services.py:249
+#: ../plugin/controllers/models/services.py:819
+#: ../plugin/controllers/models/services.py:1041
+#: ../plugin/controllers/models/services.py:1089
 msgid "%d.%m.%Y"
 msgstr "%d.%m.%Y"
 
@@ -43,13 +43,13 @@ msgstr "%d.%m.%Y"
 #: ../plugin/controllers/models/timers.py:199
 #: ../plugin/controllers/models/timers.py:289
 #: ../plugin/controllers/models/timers.py:290
-#: ../plugin/controllers/models/timers.py:472
 #: ../plugin/controllers/models/timers.py:473
+#: ../plugin/controllers/models/timers.py:474
 msgid "%d.%m.%Y %H:%M"
 msgstr "%d.%m.%Y %H:%M"
 
 #: ../plugin/controllers/models/movies.py:66
-#: ../plugin/controllers/models/timers.py:59
+#: ../plugin/controllers/models/timers.py:60
 #, python-format
 msgid "%s %02d.%02d."
 msgstr "%s %02d.%02d."
@@ -69,7 +69,7 @@ msgstr "%s %s 已加锁."
 msgid "%s / %s"
 msgstr "%s / %s"
 
-#: ../plugin/controllers/ajax.py:262
+#: ../plugin/controllers/ajax.py:264
 #, python-format
 msgid "%s Style"
 msgstr ""
@@ -156,7 +156,7 @@ msgstr "添加筛选器"
 msgid "Add selection to bouquet"
 msgstr "添加频道到节目分组"
 
-#: ../plugin/plugin.py:184
+#: ../plugin/plugin.py:187
 msgid "Add service name to stream information"
 msgstr "添加频道名称到数据流信息"
 
@@ -198,7 +198,7 @@ msgstr "本软件所有文件均为开源软件;您可以在自由软件基金�
 msgid "All alternative services deleted."
 msgstr "已删除所有替代频道."
 
-#: ../plugin/plugin.py:185
+#: ../plugin/plugin.py:188
 msgid "Allow IPK Upload"
 msgstr "允许IPK上传"
 
@@ -472,7 +472,7 @@ msgstr ""
 msgid "CPU brand"
 msgstr ""
 
-#: ../plugin/controllers/models/services.py:400
+#: ../plugin/controllers/models/services.py:401
 msgid "Cable"
 msgstr "有线"
 
@@ -480,7 +480,7 @@ msgstr "有线"
 msgid "Calendar Week"
 msgstr "本周"
 
-#: ../plugin/plugin.py:129 ../plugin/controllers/i18n.py:100
+#: ../plugin/plugin.py:132 ../plugin/controllers/i18n.py:100
 msgid "Cancel"
 msgstr "取消"
 
@@ -546,7 +546,7 @@ msgstr "控制"
 msgid "Could not add timer '%s'!"
 msgstr "无法添加定时器“%s”!"
 
-#: ../plugin/controllers/models/timers.py:484
+#: ../plugin/controllers/models/timers.py:485
 #, python-format
 msgid "Could not find timer '%s' with given start and end time!"
 msgstr "未找到指定开始时间和结束时间的定时器 '%s' ！"
@@ -572,7 +572,7 @@ msgstr ""
 msgid "Custom STB name"
 msgstr "自定义机顶盒名称"
 
-#: ../plugin/plugin.py:168
+#: ../plugin/plugin.py:171
 msgid "Custom box name"
 msgstr "自定义机顶盒名称"
 
@@ -605,7 +605,7 @@ msgstr "日期(最新)"
 msgid "Date (oldest)"
 msgstr "日期(最旧）"
 
-#: ../plugin/plugin.py:187
+#: ../plugin/plugin.py:190
 msgid "Debug - Display Tracebacks in browser"
 msgstr "调试-在浏览器中显示错误信息和回跟踪"
 
@@ -673,7 +673,7 @@ msgstr "禁用"
 msgid "Disable Timer"
 msgstr "禁用定时器"
 
-#: ../plugin/plugin.py:178
+#: ../plugin/plugin.py:181
 msgid "Disable remote access for user root"
 msgstr "禁用用户根目录的远程访问"
 
@@ -748,7 +748,7 @@ msgstr "EPG编码"
 msgid "EPGRefresh"
 msgstr "EPG刷新"
 
-#: ../plugin/controllers/models/timers.py:940
+#: ../plugin/controllers/models/timers.py:941
 msgid "ERROR: Cannot set SleepTimer while device is in Standby-Mode"
 msgstr "错误:设备处于待机模式时无法设置休眠定时器"
 
@@ -773,19 +773,19 @@ msgstr "编辑"
 msgid "Enable"
 msgstr "启用"
 
-#: ../plugin/plugin.py:177
+#: ../plugin/plugin.py:180
 msgid "Enable Authentication for streaming"
 msgstr "为流媒体启用身份验证"
 
-#: ../plugin/plugin.py:170
+#: ../plugin/plugin.py:173
 msgid "Enable HTTP Authentication"
 msgstr "启用HTTP身份验证"
 
-#: ../plugin/plugin.py:171
+#: ../plugin/plugin.py:174
 msgid "Enable HTTPS"
 msgstr "启用HTTPS"
 
-#: ../plugin/plugin.py:174
+#: ../plugin/plugin.py:177
 msgid "Enable HTTPS Authentication"
 msgstr "启用HTTPS身份验证"
 
@@ -793,7 +793,7 @@ msgstr "启用HTTPS身份验证"
 msgid "Enable Messages"
 msgstr "启用消息"
 
-#: ../plugin/plugin.py:182
+#: ../plugin/plugin.py:185
 msgid "Enable Parental Control"
 msgstr "启用家长控制"
 
@@ -801,7 +801,7 @@ msgstr "启用家长控制"
 msgid "Enable Timer"
 msgstr "启用定时器"
 
-#: ../plugin/plugin.py:181
+#: ../plugin/plugin.py:184
 msgid "Enable access from VPNs"
 msgstr "启用VPN接入"
 
@@ -875,7 +875,7 @@ msgstr "输入要在EPG中查找的文本"
 msgid "Error"
 msgstr "错误"
 
-#: ../plugin/controllers/models/timers.py:1112
+#: ../plugin/controllers/models/timers.py:1113
 msgid "Error parsing vps.xml"
 msgstr "分析vps.xml时出错"
 
@@ -915,7 +915,7 @@ msgstr "错误:节目分组%s不能被删除,,系统错误"
 msgid "Event not found"
 msgstr "事件未找到"
 
-#: ../plugin/controllers/models/timers.py:352
+#: ../plugin/controllers/models/timers.py:353
 msgid "EventId not found"
 msgstr "未找到事件ID"
 
@@ -998,7 +998,7 @@ msgid "Free/Total memory"
 msgstr "可用内存"
 
 #: ../plugin/controllers/i18n.py:52 ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/timers.py:45
 msgid "Fri"
 msgstr "星期五"
 
@@ -1063,11 +1063,11 @@ msgstr ""
 msgid "HH:MM"
 msgstr "小时:分钟"
 
-#: ../plugin/plugin.py:169
+#: ../plugin/plugin.py:172
 msgid "HTTP port"
 msgstr "HTTP端口"
 
-#: ../plugin/plugin.py:173
+#: ../plugin/plugin.py:176
 msgid "HTTPS port"
 msgstr "HTTPS端口"
 
@@ -1160,7 +1160,7 @@ msgstr "包含简短描述"
 msgid "Include when"
 msgstr "包含"
 
-#: ../plugin/controllers/models/timers.py:600
+#: ../plugin/controllers/models/timers.py:601
 msgid "Infinite Instant recording started"
 msgstr "无限即时录制已开始"
 
@@ -1188,7 +1188,7 @@ msgstr "安装"
 msgid "Instant Record"
 msgstr "即时记录"
 
-#: ../plugin/controllers/models/timers.py:591
+#: ../plugin/controllers/models/timers.py:592
 msgid "Instant record for current Event started"
 msgstr "当前事件的即时记录已启动"
 
@@ -1270,7 +1270,7 @@ msgstr ""
 msgid "Link speed"
 msgstr "链路速度"
 
-#: ../plugin/controllers/models/timers.py:561
+#: ../plugin/controllers/models/timers.py:562
 msgid "List of Timers has been cleaned"
 msgstr "定时器列表已被清理"
 
@@ -1351,12 +1351,12 @@ msgstr "最小定时器列表"
 msgid "Minute"
 msgstr "分钟"
 
-#: ../plugin/controllers/web.py:85
+#: ../plugin/controllers/web.py:87
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "缺少必需参数 '%s'"
 
-#: ../plugin/controllers/models/timers.py:692
+#: ../plugin/controllers/models/timers.py:693
 msgid "Missing requesteter: sRef"
 msgstr "缺少请求者:参考信息"
 
@@ -1369,7 +1369,7 @@ msgid "Model"
 msgstr "型号"
 
 #: ../plugin/controllers/i18n.py:48 ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/timers.py:45
 msgid "Mon"
 msgstr "星期一"
 
@@ -1465,7 +1465,7 @@ msgid "Never"
 msgstr "从不"
 
 #: ../plugin/controllers/i18n.py:432
-#: ../plugin/controllers/models/services.py:393
+#: ../plugin/controllers/models/services.py:394
 msgid "New"
 msgstr "新发现"
 
@@ -1512,7 +1512,7 @@ msgstr "没有指定节目分组名称!"
 msgid "No current service given!"
 msgstr "没有指定当前频道!"
 
-#: ../plugin/controllers/models/timers.py:585
+#: ../plugin/controllers/models/timers.py:586
 msgid "No event found! Not recording!"
 msgstr "定时器事件未找到！未录制！"
 
@@ -1524,8 +1524,8 @@ msgstr "没有指定标记名称"
 msgid "No matches were found in the EPG"
 msgstr "在EPG中没有找到匹配项."
 
-#: ../plugin/controllers/models/timers.py:508
-#: ../plugin/controllers/models/timers.py:553
+#: ../plugin/controllers/models/timers.py:509
+#: ../plugin/controllers/models/timers.py:554
 msgid "No matching Timer found"
 msgstr "找不到匹配的定时器"
 
@@ -1693,7 +1693,7 @@ msgstr "在新窗口中打开"
 msgid "OpenSSL"
 msgstr ""
 
-#: ../plugin/plugin.py:156
+#: ../plugin/plugin.py:159
 msgid "OpenWebInterface Enabled"
 msgstr "启用开放的Web界面"
 
@@ -1701,7 +1701,7 @@ msgstr "启用开放的Web界面"
 msgid "OpenWebif Browser Settings"
 msgstr "OpenWebif浏览器设置"
 
-#: ../plugin/plugin.py:196 ../plugin/plugin.py:264 ../plugin/plugin.py:266
+#: ../plugin/plugin.py:199 ../plugin/plugin.py:267 ../plugin/plugin.py:269
 msgid "OpenWebif Configuration"
 msgstr "网页管理配置"
 
@@ -1709,7 +1709,7 @@ msgstr "网页管理配置"
 msgid "OpenWebif Settings"
 msgstr "OpenWebif设置"
 
-#: ../plugin/plugin.py:142
+#: ../plugin/plugin.py:145
 msgid "OpenWebif url:"
 msgstr "OpenWebif 网址："
 
@@ -1771,7 +1771,7 @@ msgstr "播放列表格式"
 msgid "Playback"
 msgstr "回放"
 
-#: ../plugin/plugin.py:186
+#: ../plugin/plugin.py:189
 msgid "Playback IPTV Streams in browser"
 msgstr "在浏览器中播放IPTV流"
 
@@ -1787,7 +1787,7 @@ msgstr "播放列表格式"
 msgid "Power Control"
 msgstr "电源控制"
 
-#: ../plugin/controllers/models/timers.py:781
+#: ../plugin/controllers/models/timers.py:782
 msgid "PowerTimer feature not available"
 msgstr "电源定时器功能不可用"
 
@@ -1901,7 +1901,7 @@ msgstr "重命名录制"
 msgid "Repeated"
 msgstr "重复"
 
-#: ../plugin/plugin.py:175
+#: ../plugin/plugin.py:178
 msgid "Require client cert for HTTPS"
 msgstr "HTTPS需要客户端证书"
 
@@ -1974,7 +1974,7 @@ msgid "Safe mode"
 msgstr "安全模式"
 
 #: ../plugin/controllers/i18n.py:53 ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/timers.py:45
 msgid "Sat"
 msgstr "星期六"
 
@@ -1990,7 +1990,7 @@ msgstr "寻星仪"
 msgid "Saturday"
 msgstr "星期六"
 
-#: ../plugin/plugin.py:130 ../plugin/controllers/i18n.py:256
+#: ../plugin/plugin.py:133 ../plugin/controllers/i18n.py:256
 #: ../plugin/controllers/i18n.py:425 ../plugin/controllers/i18n.py:487
 msgid "Save"
 msgstr "保存"
@@ -2123,7 +2123,7 @@ msgstr "当前频道不是替代频道。"
 msgid "Service renamed successfully."
 msgstr "频道改名完成."
 
-#: ../plugin/controllers/models/services.py:395
+#: ../plugin/controllers/models/services.py:396
 msgid "Services"
 msgstr "频道"
 
@@ -2140,7 +2140,7 @@ msgstr "设置最大持续时间"
 msgid "Settings"
 msgstr "设置"
 
-#: ../plugin/plugin.py:158
+#: ../plugin/plugin.py:161
 msgid "Show CPU benchmark in STB information"
 msgstr ""
 
@@ -2156,7 +2156,7 @@ msgstr "显示完整的OpenWebif"
 msgid "Show IPTV channels in selection (eg. Autotimer)"
 msgstr "在选择中显示IPTV频道(如自动定时器)"
 
-#: ../plugin/plugin.py:159
+#: ../plugin/plugin.py:162
 msgid "Show RAM benchmark in STB information"
 msgstr ""
 
@@ -2170,7 +2170,7 @@ msgstr "在标题中显示机顶盒名称"
 msgid "Show all packages"
 msgstr "升级全部软件包"
 
-#: ../plugin/plugin.py:164
+#: ../plugin/plugin.py:167
 msgid "Show box name in header"
 msgstr "在标题中显示机顶盒名称"
 
@@ -2230,38 +2230,38 @@ msgstr "来源站点"
 msgid "Skins"
 msgstr "皮肤"
 
-#: ../plugin/controllers/models/timers.py:865
-#: ../plugin/controllers/models/timers.py:901
-#: ../plugin/controllers/models/timers.py:927
-#: ../plugin/controllers/models/timers.py:956
-#: ../plugin/controllers/models/timers.py:1001
-#: ../plugin/controllers/models/timers.py:1083
+#: ../plugin/controllers/models/timers.py:866
+#: ../plugin/controllers/models/timers.py:902
+#: ../plugin/controllers/models/timers.py:928
+#: ../plugin/controllers/models/timers.py:957
+#: ../plugin/controllers/models/timers.py:1002
+#: ../plugin/controllers/models/timers.py:1084
 msgid "SleepTimer error"
 msgstr "睡眠计时器错误"
 
-#: ../plugin/controllers/models/timers.py:945
-#: ../plugin/controllers/models/timers.py:1059
-#: ../plugin/controllers/models/timers.py:1078
+#: ../plugin/controllers/models/timers.py:946
+#: ../plugin/controllers/models/timers.py:1060
+#: ../plugin/controllers/models/timers.py:1079
 msgid "Sleeptimer has been disabled"
 msgstr "睡眠计时器已被禁用"
 
-#: ../plugin/controllers/models/timers.py:860
-#: ../plugin/controllers/models/timers.py:895
-#: ../plugin/controllers/models/timers.py:922
-#: ../plugin/controllers/models/timers.py:995
+#: ../plugin/controllers/models/timers.py:861
+#: ../plugin/controllers/models/timers.py:896
+#: ../plugin/controllers/models/timers.py:923
+#: ../plugin/controllers/models/timers.py:996
 msgid "Sleeptimer is disabled"
 msgstr "睡眠定时器已禁用"
 
-#: ../plugin/controllers/models/timers.py:860
-#: ../plugin/controllers/models/timers.py:895
-#: ../plugin/controllers/models/timers.py:922
-#: ../plugin/controllers/models/timers.py:995
+#: ../plugin/controllers/models/timers.py:861
+#: ../plugin/controllers/models/timers.py:896
+#: ../plugin/controllers/models/timers.py:923
+#: ../plugin/controllers/models/timers.py:996
 msgid "Sleeptimer is enabled"
 msgstr "睡眠计时器已启用"
 
-#: ../plugin/controllers/models/timers.py:951
-#: ../plugin/controllers/models/timers.py:1059
-#: ../plugin/controllers/models/timers.py:1073
+#: ../plugin/controllers/models/timers.py:952
+#: ../plugin/controllers/models/timers.py:1060
+#: ../plugin/controllers/models/timers.py:1074
 #, python-format
 msgid "Sleeptimer set to %d minutes"
 msgstr "睡眠计时器设置为%d分钟"
@@ -2330,7 +2330,7 @@ msgstr "串流"
 msgid "Stream Clients"
 msgstr "流客户端"
 
-#: ../plugin/plugin.py:183
+#: ../plugin/plugin.py:186
 msgid "Streaming port"
 msgstr "流媒体端口"
 
@@ -2351,7 +2351,7 @@ msgid "Subservices"
 msgstr "子频道"
 
 #: ../plugin/controllers/i18n.py:47 ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/timers.py:45
 msgid "Sun"
 msgstr "星期日"
 
@@ -2405,7 +2405,7 @@ msgstr "模板引擎"
 msgid "Terminal"
 msgstr "终端设备"
 
-#: ../plugin/controllers/models/services.py:402
+#: ../plugin/controllers/models/services.py:403
 msgid "Terrestrial"
 msgstr "地面波"
 
@@ -2417,27 +2417,27 @@ msgstr "文本"
 msgid "Th"
 msgstr "星期四"
 
-#: ../plugin/controllers/web.py:91 ../plugin/controllers/web.py:1577
+#: ../plugin/controllers/web.py:93 ../plugin/controllers/web.py:1599
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "参数 “%s” 不能为空"
 
-#: ../plugin/controllers/web.py:345
+#: ../plugin/controllers/web.py:347
 msgid "The parameter 'command' must be a number"
 msgstr "'命令'参数必须是数字"
 
-#: ../plugin/controllers/models/timers.py:547
+#: ../plugin/controllers/models/timers.py:548
 #, python-format
 msgid "The timer '%s' has been %s successfully"
 msgstr "定时器 '%s' 已成功设置为 %s"
 
-#: ../plugin/controllers/models/timers.py:497
-#: ../plugin/controllers/models/timers.py:503
+#: ../plugin/controllers/models/timers.py:498
+#: ../plugin/controllers/models/timers.py:504
 #, python-format
 msgid "The timer '%s' has been deleted successfully"
 msgstr "定时器'%s'已被成功删除"
 
-#: ../plugin/controllers/models/timers.py:539
+#: ../plugin/controllers/models/timers.py:540
 #, python-format
 msgid "The timer '%s' now recorded! Not disabled!"
 msgstr "定时器 '%s' 正在录制!不能禁用!"
@@ -2446,7 +2446,7 @@ msgstr "定时器 '%s' 正在录制!不能禁用!"
 msgid "Theme"
 msgstr "主题"
 
-#: ../plugin/plugin.py:162 ../plugin/controllers/i18n.py:318
+#: ../plugin/plugin.py:165 ../plugin/controllers/i18n.py:318
 msgid "Theme mode"
 msgstr "主题模式"
 
@@ -2455,7 +2455,7 @@ msgid "This service can not be added."
 msgstr "无法添加此频道."
 
 #: ../plugin/controllers/i18n.py:51 ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/timers.py:45
 msgid "Thu"
 msgstr "星期四"
 
@@ -2484,22 +2484,22 @@ msgstr "定时器"
 msgid "Timer '%s' added"
 msgstr "定时器 '%s' 已添加"
 
-#: ../plugin/controllers/models/timers.py:533
+#: ../plugin/controllers/models/timers.py:534
 #, python-format
 msgid "Timer '%s' already exists!"
 msgstr "定时器 '%s' 已存在!"
 
-#: ../plugin/controllers/models/timers.py:459
+#: ../plugin/controllers/models/timers.py:460
 #, python-format
 msgid "Timer '%s' changed"
 msgstr "定时器 '%s' 已更改"
 
-#: ../plugin/controllers/models/timers.py:527
+#: ../plugin/controllers/models/timers.py:528
 #, python-format
 msgid "Timer '%s' not enabled while Conflict"
 msgstr "冲突时未启用计时器 '%s'"
 
-#: ../plugin/controllers/models/timers.py:478
+#: ../plugin/controllers/models/timers.py:479
 #, python-format
 msgid "Timer '%s' not saved while Conflict"
 msgstr "定时器 '%s' 在冲突时不保存"
@@ -2516,7 +2516,7 @@ msgstr ""
 msgid "Timer added"
 msgstr "定时器已添加"
 
-#: ../plugin/controllers/models/timers.py:619
+#: ../plugin/controllers/models/timers.py:620
 msgid "Timer conflict detected! Not recording!"
 msgstr "检测到定时器冲突!停止录制!"
 
@@ -2524,7 +2524,7 @@ msgstr "检测到定时器冲突!停止录制!"
 msgid "Timer type"
 msgstr "定时器类型"
 
-#: ../plugin/controllers/models/timers.py:569
+#: ../plugin/controllers/models/timers.py:570
 msgid "TimerList has been saved"
 msgstr "定时器列表已保存"
 
@@ -2545,7 +2545,7 @@ msgid "To date"
 msgstr "迄今为止"
 
 #: ../plugin/controllers/models/movies.py:58
-#: ../plugin/controllers/models/timers.py:48
+#: ../plugin/controllers/models/timers.py:49
 msgid "Today"
 msgstr "今天"
 
@@ -2575,7 +2575,7 @@ msgid "Tu"
 msgstr "星期二"
 
 #: ../plugin/controllers/i18n.py:49 ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/timers.py:45
 msgid "Tue"
 msgstr "星期二"
 
@@ -2603,12 +2603,12 @@ msgstr "调谐器"
 msgid "Type"
 msgstr "类型"
 
-#: ../plugin/controllers/web.py:247
+#: ../plugin/controllers/web.py:249
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr "未知音量命令 %s"
 
-#: ../plugin/controllers/models/timers.py:714
+#: ../plugin/controllers/models/timers.py:715
 #, python-format
 msgid "Unknown command: '%s'"
 msgstr "未知命令: '%s'"
@@ -2661,7 +2661,7 @@ msgstr "如果可能,可用作画中画"
 msgid "Use classic interface"
 msgstr "使用经典界面"
 
-#: ../plugin/plugin.py:163
+#: ../plugin/plugin.py:166
 msgid "Use custom Color"
 msgstr "使用自定义颜色"
 
@@ -2670,7 +2670,7 @@ msgstr "使用自定义颜色"
 msgid "Use custom STB name"
 msgstr "使用自定义机顶盒名称"
 
-#: ../plugin/plugin.py:166
+#: ../plugin/plugin.py:169
 msgid "Use custom box name"
 msgstr "使用自定义机顶盒名称"
 
@@ -2678,7 +2678,7 @@ msgstr "使用自定义机顶盒名称"
 msgid "Use modern design"
 msgstr "使用现代设计"
 
-#: ../plugin/plugin.py:160 ../plugin/controllers/i18n.py:621
+#: ../plugin/plugin.py:163 ../plugin/controllers/i18n.py:621
 msgid "Use modern interface"
 msgstr "使用现代界面"
 
@@ -2686,7 +2686,7 @@ msgstr "使用现代界面"
 msgid "VPS"
 msgstr "VPS"
 
-#: ../plugin/controllers/models/timers.py:1117
+#: ../plugin/controllers/models/timers.py:1118
 msgid "VPS plugin not found"
 msgstr "未找到VPS插件"
 
@@ -2751,7 +2751,7 @@ msgid "Web TV"
 msgstr "网络电视"
 
 #: ../plugin/controllers/i18n.py:50 ../plugin/controllers/models/movies.py:55
-#: ../plugin/controllers/models/timers.py:44
+#: ../plugin/controllers/models/timers.py:45
 msgid "Wed"
 msgstr "星期三"
 
@@ -2771,7 +2771,7 @@ msgstr "每周（星期日）"
 msgid "Widescreen"
 msgstr ""
 
-#: ../plugin/plugin.py:180
+#: ../plugin/plugin.py:183
 msgid "Without auth only local access is allowed!"
 msgstr "没有认证只有本地访问是允许的！"
 
@@ -2783,7 +2783,7 @@ msgstr "向导"
 msgid "Would you like to save your changes?"
 msgstr "是否保存更改?"
 
-#: ../plugin/controllers/web.py:242
+#: ../plugin/controllers/web.py:244
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "错误的参数格式设置'set=%s', 使用 set=set15"
@@ -2802,7 +2802,7 @@ msgid "Yes/No"
 msgstr "是/否"
 
 #: ../plugin/controllers/models/movies.py:60
-#: ../plugin/controllers/models/timers.py:51
+#: ../plugin/controllers/models/timers.py:52
 msgid "Yesterday"
 msgstr "昨天"
 
@@ -2834,7 +2834,7 @@ msgstr "任何时候"
 msgid "auto"
 msgstr "自动"
 
-#: ../plugin/plugin.py:136
+#: ../plugin/plugin.py:139
 msgid "box_ip"
 msgstr "box_ip"
 
@@ -3037,7 +3037,7 @@ msgstr "标题以开头"
 msgid "transcoded"
 msgstr "转码"
 
-#: ../plugin/controllers/web.py:725
+#: ../plugin/controllers/web.py:727
 #, python-format
 msgid "type %s is not a number"
 msgstr "类型 %s 的不是数字"
