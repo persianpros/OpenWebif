@@ -96,7 +96,6 @@ tstrings = {
 	'boxrctype': _("Factory RC type"),
 	'brand': _("Build Brand"),
 	'displaybrand': _("Brand"),
-	'builddatestring': _("Build date"),
 	'cancel': _("Cancel"),
 	'capacity': _("Capacity"),
 	'channel': _("Channel"),

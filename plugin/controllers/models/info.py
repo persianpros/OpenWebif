@@ -255,9 +255,9 @@ def getInfo(session=None, need_fullinfo=False):
 	info["webifver"] = OPENWEBIFVER
 	info['imagedistro'] = BoxInfo.getItem("distro")
 	info['oever'] = BoxInfo.getItem("oe")
-	info['gccver'] = about.getGccVersion()
-	info['glibcver'] = about.getGlibcVersion()
-	info['openssl'] = BoxInfo.getItem("OpenSSLVersion")
+	info['gccver'] = BoxInfo.getItem("gcc")
+	info['glibcver'] = BoxInfo.getItem("glibc")
+	info['openssl'] = BoxInfo.getItem("openssl")
 	info['visionversion'] = BoxInfo.getItem("imgversion")
 	info['visionrevision'] = BoxInfo.getItem("imgrevision")
 	info['visionmodule'] = about.getVisionModule()
@@ -270,9 +270,9 @@ def getInfo(session=None, need_fullinfo=False):
 	info['kernelver'] = BoxInfo.getItem("kernel")
 	info['modulelayout'] = BoxInfo.getItem("ModuleLayout")
 	info['dvbapitype'] = about.getDVBAPI()
-	info['gstreamerversion'] = about.getGStreamerVersionString()
-	info['ffmpegversion'] = about.getFFmpegVersionString()
-	info['pythonversion'] = about.getPythonVersionString()
+	info['gstreamerversion'] = BoxInfo.getItem("gstreamer")
+	info['ffmpegversion'] = BoxInfo.getItem("ffmpeg")
+	info['pythonversion'] = BoxInfo.getItem("python")
 
 	try:
 		info['hwserial'] = getHWSerial()
@@ -310,7 +310,6 @@ def getInfo(session=None, need_fullinfo=False):
 	info['imagefilesystem'] = BoxInfo.getItem("imagefs")
 	info['feedsurl'] = BoxInfo.getItem("feedsurl")
 	info['developername'] = BoxInfo.getItem("developername")
-	info['builddatestring'] = about.getBuildDateString()
 	info['imagefpu'] = BoxInfo.getItem("fpu")
 	info['havemultilib'] = BoxInfo.getItem("multilib")
 
