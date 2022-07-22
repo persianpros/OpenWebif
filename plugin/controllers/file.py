@@ -110,6 +110,6 @@ class FileController(resource.Resource):
 						files.remove(x)
 				if nofiles:
 					files = []
-				return json.dumps({"result": True, "dirs": directories, "files": files}, indent=2)
+				return six.ensure_binary(json.dumps({"result": True, "dirs": directories, "files": files}, indent=2))
 			else:
-				return json.dumps({"result": False, "message": "path %s not exits" % (path)}, indent=2)
+				return six.ensure_binary(json.dumps({"result": False, "message": "path %s not exits" % (path)}, indent=2))
