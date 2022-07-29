@@ -23,7 +23,7 @@ from __future__ import print_function
 ##########################################################################
 
 import os
-import six
+from six import PY2
 import time
 from twisted import version
 from socket import has_ipv6, AF_INET6, AF_INET, inet_ntop, inet_pton, getaddrinfo
@@ -716,11 +716,11 @@ def getStatusInfo(self):
 		statusinfo['currservice_end'] = time.strftime("%H:%M", (time.localtime(end_timestamp)))
 		statusinfo['currservice_end_timestamp'] = end_timestamp
 		desc = curEvent[3]
-		if six.PY2:
+		if PY2:
 			desc = desc.decode('utf-8')
 		if len(desc) > 220:
 			desc = desc + u"..."
-		if six.PY2:
+		if PY2:
 			desc = desc.encode('utf-8')
 		statusinfo['currservice_description'] = desc
 		statusinfo['currservice_station'] = currservice_station

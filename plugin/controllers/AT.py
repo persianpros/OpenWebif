@@ -25,7 +25,7 @@ from __future__ import print_function
 from twisted.web import static, resource, http
 import os
 import json
-import six
+from six import ensure_binary
 
 ATFN = "/tmp/autotimer_backup.tar"  # nosec
 
@@ -57,7 +57,7 @@ class ATUploadFile(resource.Resource):
 				result = [False, 'Error writing File']
 			else:
 				result = [True, ATFN]
-		return six.ensure_binary(json.dumps({"Result": result}))
+		return ensure_binary(json.dumps({"Result": result}))
 
 
 class AutoTimerDoBackupResource(resource.Resource):
@@ -66,7 +66,7 @@ class AutoTimerDoBackupResource(resource.Resource):
 		request.setHeader('Content-type', 'application/xhtml+xml')
 		request.setHeader('charset', 'UTF-8')
 		state, statetext = self.backupFiles()
-		return six.ensure_binary("""<?xml version=\"1.0\" encoding=\"UTF-8\" ?>
+		return ensure_binary("""<?xml version=\"1.0\" encoding=\"UTF-8\" ?>
 <e2simplexmlresult>
 	<e2state>%s</e2state>
 	<e2statetext>%s</e2statetext>
@@ -103,7 +103,7 @@ class AutoTimerDoRestoreResource(resource.Resource):
 
 		state, statetext = self.restoreFiles()
 
-		return six.ensure_binary("""<?xml version=\"1.0\" encoding=\"UTF-8\" ?>
+		return ensure_binary("""<?xml version=\"1.0\" encoding=\"UTF-8\" ?>
 <e2simplexmlresult>
 	<e2state>%s</e2state>
 	<e2statetext>%s</e2statetext>
@@ -191,7 +191,7 @@ class ATController(resource.Resource):
 			try:
 				if autotimer is not None:
 					autotimer.readXml()
-					return six.ensure_binary(''.join(autotimer.getXml()))
+					return ensure_binary(''.join(autotimer.getXml()))
 			except Exception:
 				return b'<?xml version="1.0" encoding="UTF-8" ?><e2simplexmlresult><e2state>false</e2state><e2statetext>AutoTimer Config not found</e2statetext></e2simplexmlresult>'
 		except ImportError:

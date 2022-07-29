@@ -22,7 +22,7 @@
 ##########################################################################
 
 from __future__ import print_function
-import six
+from six import PY2, text_type
 from enigma import eServiceReference
 from Components.UsageConfig import preferredTimerPath, preferredInstantRecordPath
 from Components.config import config
@@ -173,8 +173,8 @@ def getTimers(session):
 			else:
 				isAutoTimer = 0
 
-		if six.PY2:
-			descriptionextended = six.text_type(descriptionextended, 'utf_8', errors='ignore').encode('utf_8', 'ignore')
+		if PY2:
+			descriptionextended = text_type(descriptionextended, 'utf_8', errors='ignore').encode('utf_8', 'ignore')
 
 		recordingtype = "normal"
 

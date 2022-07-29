@@ -9,7 +9,7 @@
 #               published by the Free Software Foundation.                   #
 #                                                                            #
 ##############################################################################
-import six
+from six import ensure_text, ensure_binary
 from twisted.web import resource
 from Components.config import config
 from Plugins.Extensions.OpenWebif.controllers.utilities import getUrlArg
@@ -78,11 +78,11 @@ class TranscodingController(resource.Resource):
 				return '<?xml version="1.0" encoding="UTF-8" ?><e2simplexmlresult><e2state>false</e2state><e2statetext>choosen encoder is not available</e2statetext></e2simplexmlresult>'
 
 			for arg in request.args:
-				a = six.ensure_text(arg)
+				a = ensure_text(arg)
 				if a in encoder_features:
 					attr = encoder_features[arg]
-					aa = six.ensure_binary(arg)
-					new_value = six.ensure_text(request.args[aa][0])
+					aa = ensure_binary(arg)
+					new_value = ensure_text(request.args[aa][0])
 					if self.setcheck(attr, new_value):
 						config_changed = True
 					else:

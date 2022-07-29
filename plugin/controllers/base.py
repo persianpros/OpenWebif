@@ -22,10 +22,10 @@ from __future__ import print_function
 # Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
 ##########################################################################
 
-import os
+from os.path import basename, exists
 import imp
 import json
-import six
+from six import ensure_str, ensure_binary, ensure_text, PY2
 
 from twisted.web import server, http, resource
 from twisted.web.resource import EncodingResourceWrapper
@@ -54,8 +54,8 @@ def new_getRequestHostname(self):
 			host = host.split(b':', 1)[0]
 	else:
 		host = self.getHost().host
-	host = six.ensure_str(host).encode('ascii')
-	return six.ensure_str(host)
+	host = ensure_str(host).encode('ascii')
+	return ensure_str(host)
 
 
 http.Request.getRequestHostname = new_getRequestHostname
@@ -86,7 +86,7 @@ class BaseController(resource.Resource):
 		"""
 		resource.Resource.__init__(self)
 
-		self.path = six.ensure_str(path)
+		self.path = ensure_str(path)
 		self.session = kwargs.get("session")
 		self.withMainTemplate = kwargs.get("withMainTemplate", False)
 		self.isJson = kwargs.get("isJson", False)
@@ -126,11 +126,11 @@ class BaseController(resource.Resource):
 		return None
 
 	def putChild2(self, path, child):
-		self.putChild(six.ensure_binary(path), child)
+		self.putChild(ensure_binary(path), child)
 
 	def putGZChild(self, path, child):
 		child.isGZ = True
-		self.putChild(six.ensure_binary(path), EncodingResourceWrapper(child, [GzipEncoderFactory()]))
+		self.putChild(ensure_binary(path), EncodingResourceWrapper(child, [GzipEncoderFactory()]))
 
 	def getChild(self, path, request):
 		if self.isGZ:
@@ -151,7 +151,7 @@ class BaseController(resource.Resource):
 
 			@defer.inlineCallbacks
 			def _setContentDispositionAndSend(file_path):
-				filename = os.path.basename(file_path)
+				filename = basename(file_path)
 				request.setHeader('content-disposition', 'filename="%s"' % filename)
 				request.setHeader('content-type', "image/png")
 				f = open(file_path, "rb")
@@ -159,7 +159,7 @@ class BaseController(resource.Resource):
 				f.close()
 				defer.returnValue(0)
 
-			if os.path.exists(data):
+			if exists(data):
 				yield _setContentDispositionAndSend(data)
 			else:
 				request.setResponseCode(http.NOT_FOUND)
@@ -206,27 +206,27 @@ class BaseController(resource.Resource):
 			elif self.isCustom:
 				# if not self.suppresslog:
 					# print("[OpenWebif] page '%s' ok (custom)" % request.uri)
-				request.write(six.ensure_binary(data))
+				request.write(ensure_binary(data))
 				request.finish()
 			elif self.isImage:
 				_showImage(data)
 			elif self.isJson:
 				request.setHeader("content-type", "application/json; charset=utf-8")
 				try:
-					return six.ensure_binary(json.dumps(data, indent=1))
+					return ensure_binary(json.dumps(data, indent=1))
 				except Exception as exc:
 					request.setResponseCode(http.INTERNAL_SERVER_ERROR)
-					return six.ensure_binary(json.dumps({"result": False, "request": request.path, "exception": repr(exc)}))
+					return ensure_binary(json.dumps({"result": False, "request": request.path, "exception": repr(exc)}))
 					pass
 			elif isinstance(data, str):
 				# if not self.suppresslog:
 					# print("[OpenWebif] page '%s' ok (simple string)" % request.uri)
 				request.setHeader("content-type", "text/plain")
-				request.write(six.ensure_binary(data))
+				request.write(ensure_binary(data))
 				request.finish()
 			else:
 				# print("[OpenWebif] page '%s' ok (cheetah template)" % request.uri)
-				module = six.ensure_text(request.path)
+				module = ensure_text(request.path)
 				if module[-1:] == "/":
 					module += "index"
 				elif module[-5:] != "index" and self.path == "index":
@@ -249,7 +249,7 @@ class BaseController(resource.Resource):
 							out = nout
 					elif self.isGZ:
 						return out
-					request.write(six.ensure_binary(out))
+					request.write(ensure_binary(out))
 					request.finish()
 
 		else:
@@ -280,7 +280,7 @@ class BaseController(resource.Resource):
 
 				conffile = file.split('/')[-1].replace("version", "conf")
 
-				data = open(file, "r").readlines() if six.PY2 else open(file, "r", encoding="UTF-8").readlines()  # nosec
+				data = open(file, "r").readlines() if PY2 else open(file, "r", encoding="UTF-8").readlines()  # nosec
 				for i in data:
 					if "configdir:" in i.lower():
 						opath = i.split(":")[1].strip() + "/" + conffile
@@ -331,7 +331,7 @@ class BaseController(resource.Resource):
 		if oscamwebif and oscamconf is not None:
 			# oscam defaults to NOT to start the web interface unless a section for it exists, so reset port to None until we find one
 			port = None
-			data = open(oscamconf, "r").readlines() if six.PY2 else open(oscamconf, "r", encoding="UTF-8").readlines()
+			data = open(oscamconf, "r").readlines() if PY2 else open(oscamconf, "r", encoding="UTF-8").readlines()
 			for i in data:
 				if "httpport" in i.lower():
 					port = i.split("=")[1].strip()
@@ -388,14 +388,14 @@ class BaseController(resource.Resource):
 		except ImportError:
 			pass
 
-		if os.path.exists('/usr/bin/shellinaboxd'):
+		if exists('/usr/bin/shellinaboxd'):
 			extras.append({'key': 'ajax/terminal', 'description': _('Terminal')})
 
 		ret['extras'] = extras
 		theme = 'original'
 		if config.OpenWebif.webcache.theme.value:
 			theme = config.OpenWebif.webcache.theme.value
-		if not os.path.exists(getPublicPath('themes')):
+		if not exists(getPublicPath('themes')):
 			if not (theme == 'original' or theme == 'clear'):
 				theme = 'original'
 				config.OpenWebif.webcache.theme.value = theme
@@ -407,7 +407,7 @@ class BaseController(resource.Resource):
 		ret['moviedb'] = moviedb
 		imagedistro = getInfo()['imagedistro']
 		ret['vti'] = "0"
-		ret['webtv'] = os.path.exists(getPublicPath('webtv'))
+		ret['webtv'] = exists(getPublicPath('webtv'))
 		ret['stbLang'] = STB_LANG
 		smallremote = config.OpenWebif.webcache.smallremote.value if config.OpenWebif.webcache.smallremote.value else 'new'
 		ret['smallremote'] = smallremote

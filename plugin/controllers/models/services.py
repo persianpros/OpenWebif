@@ -24,7 +24,7 @@
 from __future__ import print_function
 from datetime import datetime
 import re
-import six
+from six import ensure_str, ensure_binary, text_type
 from six.moves.urllib.parse import quote, unquote
 from time import time, localtime, strftime, mktime
 from unicodedata import normalize
@@ -79,7 +79,7 @@ def getIPTVLink(ref):
 
 def filterName(name, encode=True):
 	if name is not None:
-		name = six.ensure_str(removeBadChars(six.ensure_binary(name)))
+		name = ensure_str(removeBadChars(ensure_binary(name)))
 		if encode is True:
 			return html_escape(name, quote=True)
 	return name
@@ -93,7 +93,7 @@ def convertUnicode(val):
 	if PY3:
 		return val
 	else:
-		return six.text_type(val, 'utf_8', errors='ignore').encode('utf_8', 'ignore')
+		return text_type(val, 'utf_8', errors='ignore').encode('utf_8', 'ignore')
 
 
 def convertDesc(val, encode=True):
@@ -102,14 +102,14 @@ def convertDesc(val, encode=True):
 			if PY3:
 				return html_escape(val, quote=True).replace(u'\x8a', '\n')
 			else:
-				return html_escape(six.text_type(val, 'utf_8', errors='ignore').encode('utf_8', 'ignore'), quote=True).replace(u'\x8a', '\n')
+				return html_escape(text_type(val, 'utf_8', errors='ignore').encode('utf_8', 'ignore'), quote=True).replace(u'\x8a', '\n')
 		else:
 			# remove control chars
-			val = removeBadChars(six.ensure_binary(val))
+			val = removeBadChars(ensure_binary(val))
 			if PY3:
 				return val.decode('utf_8', errors='ignore')
 			else:
-				return six.text_type(val, 'utf_8', errors='ignore').encode('utf_8', 'ignore')
+				return text_type(val, 'utf_8', errors='ignore').encode('utf_8', 'ignore')
 	return val
 
 
@@ -1242,7 +1242,7 @@ def getPicon(sname, pp=None, defaultpicon=True):
 			if PY3:
 				cname = normalize('NFKD', cname)
 			else:
-				cname = normalize('NFKD', six.text_type(cname, 'utf_8', errors='ignore')).encode('ASCII', 'ignore')
+				cname = normalize('NFKD', text_type(cname, 'utf_8', errors='ignore')).encode('ASCII', 'ignore')
 			cname = re.sub('[^a-z0-9]', '', cname.replace('&', 'and').replace('+', 'plus').replace('*', 'star').replace(':', '').lower())
 			# picon by channel name for URL
 			if len(cname) > 0 and fileExists(pp + cname + ".png"):
@@ -1298,7 +1298,7 @@ def getPicon(sname, pp=None, defaultpicon=True):
 			if PY3:
 				cname = normalize('NFKD', cname)
 			else:
-				cname = normalize('NFKD', six.text_type(cname, 'utf_8', errors='ignore')).encode('ASCII', 'ignore')
+				cname = normalize('NFKD', text_type(cname, 'utf_8', errors='ignore')).encode('ASCII', 'ignore')
 			cname = re.sub('[^a-z0-9]', '', cname.replace('&', 'and').replace('+', 'plus').replace('*', 'star').lower())
 			if len(cname) > 0:
 				filename = pp + cname + ".png"

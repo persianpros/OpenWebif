@@ -30,7 +30,7 @@ from Plugins.Extensions.OpenWebif.controllers.utilities import getUrlArg
 from Plugins.Extensions.OpenWebif.controllers.models.services import getPicon
 import os
 import json
-import six
+from six import ensure_binary, ensure_str
 
 # FIXME:
 # remove #from Screens.ChannelSelection import service_types_tv
@@ -64,9 +64,9 @@ class BQEWebController(BaseController):
 		paramlist = ids.split(",")
 		list = {}
 		for key in paramlist:
-			k = six.ensure_binary(key)
+			k = ensure_binary(key)
 			if k in args:
-				list[key] = six.ensure_str(args[k][0])
+				list[key] = ensure_str(args[k][0])
 			else:
 				list[key] = None
 		return list
@@ -199,7 +199,7 @@ class BQEWebController(BaseController):
 		try:
 			from Plugins.Extensions.OpenWebif.controllers.BouquetEditor import BouquetEditor
 			bqe = BouquetEditor(self.session, func=BouquetEditor.BACKUP)
-			bqe.handleCommand(six.ensure_str(request.args[b'Filename'][0]))
+			bqe.handleCommand(ensure_str(request.args[b'Filename'][0]))
 			return self.returnResult(request, bqe.result)
 		except ImportError:
 			return self.returnResult(request, [False, 'BouquetEditor plugin not found'])
@@ -209,7 +209,7 @@ class BQEWebController(BaseController):
 		try:
 			from Plugins.Extensions.OpenWebif.controllers.BouquetEditor import BouquetEditor
 			bqe = BouquetEditor(self.session, func=BouquetEditor.RESTORE)
-			bqe.handleCommand(six.ensure_str(request.args[b'Filename'][0]))
+			bqe.handleCommand(ensure_str(request.args[b'Filename'][0]))
 			return self.returnResult(request, bqe.result)
 		except ImportError:
 			return self.returnResult(request, [False, 'BouquetEditor plugin not found'])
@@ -392,7 +392,7 @@ class BQEUploadFile(resource.Resource):
 				result = [False, 'Error writing File']
 			else:
 				result = [True, self.FN]
-		return six.ensure_binary(json.dumps({"Result": result}))
+		return ensure_binary(json.dumps({"Result": result}))
 
 
 class BQEImport(resource.Resource):
@@ -414,7 +414,7 @@ class BQEImport(resource.Resource):
 			except ImportError:
 				result = [False, 'BouquetEditor plugin not found']
 
-		return six.ensure_binary(json.dumps({"Result": result}))
+		return ensure_binary(json.dumps({"Result": result}))
 
 
 class BQEApiController(BQEWebController):

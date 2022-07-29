@@ -23,7 +23,7 @@ from __future__ import print_function
 ##########################################################################
 
 from twisted.web import resource, http
-import six
+from six import ensure_binary
 
 
 class ERController(resource.Resource):
@@ -57,6 +57,6 @@ class ERController(resource.Resource):
 
 		try:
 			from Plugins.Extensions.EPGRefresh.EPGRefresh import epgrefresh
-			return six.ensure_binary(''.join(epgrefresh.buildConfiguration(webif=True)))
+			return ensure_binary(''.join(epgrefresh.buildConfiguration(webif=True)))
 		except ImportError:
 			return b'<?xml version="1.0" encoding="UTF-8" ?><e2simplexmlresult><e2state>false</e2state><e2statetext>EPG Refresh Plugin not found</e2statetext></e2simplexmlresult>'

@@ -2,10 +2,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 import re
-import six
-import sys
-
-PY3 = sys.version_info[0] == 3
+from six import PY3, iteritems, text_type, ensure_binary, ensure_str
 
 MANY_SLASHES_PATTERN = r'[\/]+'
 MANY_SLASHES_REGEX = re.compile(MANY_SLASHES_PATTERN)
@@ -48,7 +45,7 @@ SERVICE_TYPE = {
 	SERVICE_TYPE_OPT: 'OPT',
 }
 
-SERVICE_TYPE_LOOKUP = {k: v for k, v in six.iteritems(SERVICE_TYPE)}
+SERVICE_TYPE_LOOKUP = {k: v for k, v in iteritems(SERVICE_TYPE)}
 
 #: Namespace - DVB-C services
 NS_DVB_C = 0xffff0000
@@ -67,7 +64,7 @@ NS = {
 }
 
 #: Namespace:Label lookup map
-NS_LOOKUP = {v: k for k, v in six.iteritems(NS)}
+NS_LOOKUP = {v: k for k, v in iteritems(NS)}
 
 
 def lenient_decode(value, encoding=None):
@@ -87,7 +84,7 @@ def lenient_decode(value, encoding=None):
 	>>> lenient_decode("HällöÜ")
 	u'H\\xe4ll\\xf6\\xdc'
 	"""
-	if isinstance(value, six.text_type):
+	if isinstance(value, text_type):
 		return value
 
 	if encoding is None:
@@ -111,7 +108,7 @@ def lenient_force_utf_8(value):
 	>>> lenient_force_utf_8("HällöÜ")
 	'H\\xc3\\xa4ll\\xc3\\xb6\\xc3\\x9c'
 	"""
-	if isinstance(value, six.text_type):
+	if isinstance(value, text_type):
 		return value
 	return lenient_decode(value).encode('utf_8')
 
@@ -283,9 +280,9 @@ def _moviePlayState(cutsFileName, ref, length):
 
 def getUrlArg(request, key, default=None):
 	if PY3:
-		k = six.ensure_binary(key)
+		k = ensure_binary(key)
 		if k in list(request.args.keys()):
-			return six.ensure_str(request.args[k][0])
+			return ensure_str(request.args[k][0])
 	else:
 		if key in request.args.keys():
 			return request.args[key][0]
@@ -294,9 +291,9 @@ def getUrlArg(request, key, default=None):
 
 def getUrlArg2(args, key, default=None):
 	if PY3:
-		k = six.ensure_binary(key)
+		k = ensure_binary(key)
 		if k in list(args.keys()):
-			return six.ensure_str(args[k][0])
+			return ensure_str(args[k][0])
 	else:
 		if key in args.keys():
 			return args[key][0]

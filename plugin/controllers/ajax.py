@@ -24,8 +24,7 @@
 from Tools.Directories import fileExists
 from Components.config import config
 from time import mktime, localtime
-import os
-import six
+from os.path import exists
 
 from Plugins.Extensions.OpenWebif.controllers.models.info import getInfo
 from Plugins.Extensions.OpenWebif.controllers.models.services import getBouquets, getChannels, getSatellites, getProviders, getEventDesc, getChannelEpg, getSearchEpg, getCurrentFullInfo, getMultiEpg, getEvent
@@ -240,7 +239,7 @@ class AjaxController(BaseController):
 		}
 		ret['configsections'] = getConfigsSections()['sections']
 		if config.OpenWebif.webcache.theme.value:
-			if os.path.exists(getPublicPath('themes')):
+			if exists(getPublicPath('themes')):
 				ret['themes'] = config.OpenWebif.webcache.theme.choices
 			else:
 				ret['themes'] = ['original', 'clear']
@@ -265,7 +264,7 @@ class AjaxController(BaseController):
 		ret['smallremote'] = config.OpenWebif.webcache.smallremote.value
 		loc = getLocations()
 		ret['locations'] = loc['locations']
-		if os.path.exists(VIEWS_PATH + "/responsive"):
+		if exists(VIEWS_PATH + "/responsive"):
 			ret['responsivedesign'] = config.OpenWebif.responsive_enabled.value
 		return ret
 

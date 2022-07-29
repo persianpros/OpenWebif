@@ -22,7 +22,7 @@
 ##########################################################################
 
 import os
-import six
+from six import ensure_binary
 
 from twisted.web import static, http, proxy
 from Components.config import config
@@ -62,10 +62,10 @@ class RootController(BaseController):
 			self.putChild2("mobile", MobileController(session))
 			self.putChild2("m", static.File(getPublicPath() + "/mobile"))
 		for static_val in ('js', 'css', 'static', 'images', 'fonts'):
-			self.putChild2(static_val, static.File(six.ensure_binary(getPublicPath() + '/' + static_val)))
+			self.putChild2(static_val, static.File(ensure_binary(getPublicPath() + '/' + static_val)))
 		for static_val in ('modern', 'themes', 'webtv', 'vxg'):
 			if os.path.exists(getPublicPath(static_val)):
-				self.putChild2(static_val, static.File(six.ensure_binary(getPublicPath() + '/' + static_val)))
+				self.putChild2(static_val, static.File(ensure_binary(getPublicPath() + '/' + static_val)))
 
 		if os.path.exists('/usr/bin/shellinaboxd'):
 			self.putChild2("terminal", proxy.ReverseProxyResource('::1', 4200, b'/'))
@@ -95,7 +95,7 @@ class RootController(BaseController):
 			self.setPiconChild(PICON_PATH)
 
 	def setPiconChild(self, pp):
-		self.putChild2("picon", static.File(six.ensure_binary(pp)))
+		self.putChild2("picon", static.File(ensure_binary(pp)))
 
 	# this function will be called before a page is loaded
 	def prePageLoad(self, request):

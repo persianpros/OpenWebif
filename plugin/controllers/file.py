@@ -21,12 +21,12 @@
 # Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
 ##########################################################################
 
-import os
+from os.path import realpath, exists, isdir
 import re
 import glob
 from six.moves.urllib.parse import quote
 import json
-import six
+from six import ensure_binary
 
 from twisted.web import static, resource, http
 
@@ -55,9 +55,9 @@ class FileController(resource.Resource):
 
 		if file != None:
 			filename = lenient_force_utf_8(file)
-			filename = sanitise_filename_slashes(os.path.realpath(filename))
+			filename = sanitise_filename_slashes(realpath(filename))
 
-			if not os.path.exists(filename):
+			if not exists(filename):
 				return "File '%s' not found" % (filename)
 
 			if action == "stream":
@@ -81,7 +81,7 @@ class FileController(resource.Resource):
 				return "TODO: DELETE FILE: %s" % (filename)
 			elif action == "download":
 				request.setHeader("Content-Disposition", "attachment;filename=\"%s\"" % (filename.split('/')[-1]))
-				rfile = static.File(six.ensure_binary(filename), defaultType="application/octet-stream")
+				rfile = static.File(ensure_binary(filename), defaultType="application/octet-stream")
 				return rfile.render(request)
 			else:
 				return "wrong action parameter"
@@ -105,11 +105,11 @@ class FileController(resource.Resource):
 				files.sort()
 				tmpfiles = files[:]
 				for x in tmpfiles:
-					if os.path.isdir(x):
+					if isdir(x):
 						directories.append(x + '/')
 						files.remove(x)
 				if nofiles:
 					files = []
-				return six.ensure_binary(json.dumps({"result": True, "dirs": directories, "files": files}, indent=2))
+				return ensure_binary(json.dumps({"result": True, "dirs": directories, "files": files}, indent=2))
 			else:
-				return six.ensure_binary(json.dumps({"result": False, "message": "path %s not exits" % (path)}, indent=2))
+				return ensure_binary(json.dumps({"result": False, "message": "path %s not exits" % (path)}, indent=2))

@@ -26,7 +26,7 @@ from twisted.web import server, resource, http
 
 import os
 import json
-import six
+from six import ensure_binary, ensure_str
 
 from Components.config import config
 from Plugins.Extensions.OpenWebif.controllers.base import BaseController
@@ -209,17 +209,17 @@ class OpkgController(BaseController):
 				self.request.setHeader("content-type", "application/json; charset=utf-8")
 				try:
 					data = self.parseAll()
-					self.request.write(six.ensure_binary(json.dumps(data)))
+					self.request.write(ensure_binary(json.dumps(data)))
 				except Exception as exc:
 					self.request.setResponseCode(http.INTERNAL_SERVER_ERROR)
-					self.request.write(six.ensure_binary(json.dumps({"result": False, "request": self.request.path, "exception": repr(exc)})))
+					self.request.write(ensure_binary(json.dumps({"result": False, "request": self.request.path, "exception": repr(exc)})))
 			elif self.action == "full":
 				try:
 					data = open("/tmp/opkg.tmp", 'r').read()
-					self.request.write(six.ensure_binary(data))
+					self.request.write(ensure_binary(data))
 				except Exception as exc:
 					self.request.setResponseCode(http.INTERNAL_SERVER_ERROR)
-					self.request.write(six.ensure_binary(repr(exc)))
+					self.request.write(ensure_binary(repr(exc)))
 			else:
 				nresult = ""
 				if self.action == "list":
@@ -254,11 +254,11 @@ class OpkgController(BaseController):
 					data = []
 					data.append({"result": True, "packages": rpl})
 					self.request.setHeader("content-type", "application/json; charset=utf-8")
-					self.request.write(six.ensure_binary(json.dumps(data)))
+					self.request.write(ensure_binary(json.dumps(data)))
 				else:
 					nresult = '\n'.join(rpl)
 					nresult.replace('\n', '<br>\n')
-					nresult = six.ensure_binary(nresult)
+					nresult = ensure_binary(nresult)
 					self.request.write(b"<html><body>\n")
 					self.request.write(nresult)
 					self.request.write(b"</body></html>\n")
@@ -267,12 +267,12 @@ class OpkgController(BaseController):
 
 	def Moredata(self, data):
 		if data != self.olddata or self.olddata is None and self.IsAlive:
-			data = six.ensure_str(data)
+			data = ensure_str(data)
 			self.ResultString += data
 
 	def ShowError(self, request, text):
 		request.setResponseCode(http.OK)
-		request.write(six.ensure_binary(text))
+		request.write(ensure_binary(text))
 		request.finish()
 		return server.NOT_DONE_YET
 
@@ -286,7 +286,7 @@ class OpkgController(BaseController):
 		html += "FILTER :<br>dev,staticdev,...<br>"
 		html += "</body></html>"
 		request.setResponseCode(http.OK)
-		request.write(six.ensure_binary(html))
+		request.write(ensure_binary(html))
 		request.finish()
 		return server.NOT_DONE_YET
 
@@ -328,4 +328,4 @@ class OPKGUpload(resource.Resource):
 					result = [False, _('Error writing File')]
 				else:
 					result = [True, FN]
-		return six.ensure_binary(json.dumps({"Result": result}))
+		return ensure_binary(json.dumps({"Result": result}))

@@ -3,7 +3,7 @@
 from __future__ import print_function
 import sys
 import os
-import six
+from six import ensure_str
 import re
 from xml.sax import make_parser
 from xml.sax.handler import ContentHandler, property_lexical_handler
@@ -31,7 +31,7 @@ class parseXML(ContentHandler, LexicalHandler):
 	def startElement(self, name, attrs):
 		for x in ["text", "title", "value", "caption", "description"]:
 			try:
-				k = six.ensure_str(attrs[x])
+				k = ensure_str(attrs[x])
 				if k.strip() != "" and not self.ishex.match(k):
 					attrlist.add((k, self.last_comment))
 					self.last_comment = None
@@ -66,7 +66,7 @@ for arg in sys.argv[1:]:
 		if c:
 			for l in c.split('\n'):
 				print("#. ", l)
-		print('msgid "' + six.ensure_str(k) + '"')
+		print('msgid "' + ensure_str(k) + '"')
 		print('msgstr ""')
 
 	attrlist = set()

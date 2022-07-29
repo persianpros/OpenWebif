@@ -24,7 +24,7 @@ from __future__ import print_function
 
 import os
 import struct
-import six
+from six import ensure_str, text_type
 from time import localtime, time
 from six.moves.urllib.parse import unquote
 
@@ -101,7 +101,7 @@ def ConvertDesc(desc):
 	if PY3:
 		return desc
 	else:
-		return six.text_type(desc, 'utf_8', errors='ignore').encode('utf_8', 'ignore')
+		return text_type(desc, 'utf_8', errors='ignore').encode('utf_8', 'ignore')
 
 
 def getMovieList(rargs=None, locations=None):
@@ -260,7 +260,7 @@ def getMovieList(rargs=None, locations=None):
 					txtfile = name + '.txt'
 					if ext.lower() != '.ts' and os.path.isfile(txtfile):
 						with open(txtfile, "rb") as handle:
-							txtdesc = six.ensure_str(b''.join(handle.readlines()))
+							txtdesc = ensure_str(b''.join(handle.readlines()))
 
 					event = info.getEvent(serviceref)
 					extended_description = event and event.getExtendedDescription() or ""
@@ -391,7 +391,7 @@ def getMovieSearchList(rargs=None, locations=None):
 			txtfile = name + '.txt'
 			if ext.lower() != '.ts' and os.path.isfile(txtfile):
 				with open(txtfile, "rb") as handle:
-					txtdesc = six.ensure_str(b''.join(handle.readlines()))
+					txtdesc = ensure_str(b''.join(handle.readlines()))
 
 			event = info.getEvent(serviceref)
 			extended_description = event and event.getExtendedDescription() or ""
@@ -820,7 +820,7 @@ def getMovieDetails(sRef=None):
 		txtfile = name + '.txt'
 		if ext.lower() != '.ts' and os.path.isfile(txtfile):
 			with open(txtfile, "rb") as handle:
-				txtdesc = six.ensure_str(b''.join(handle.readlines()))
+				txtdesc = ensure_str(b''.join(handle.readlines()))
 
 		event = info.getEvent(serviceref)
 		extended_description = event and event.getExtendedDescription() or ""

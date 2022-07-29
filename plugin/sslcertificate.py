@@ -28,8 +28,8 @@ from time import time
 
 from Tools.Directories import resolveFilename, SCOPE_CONFIG
 
-import os
-import six
+from os.path import exists
+from six import ensure_str, iteritems
 
 CA_FILE = resolveFilename(SCOPE_CONFIG, "ca.pem")
 KEY_FILE = resolveFilename(SCOPE_CONFIG, "key.pem")
@@ -52,13 +52,13 @@ class SSLCertificateGenerator:
 
 	# generate and install a self signed SSL certificate if none exists
 	def installCertificates(self):
-		if os.path.exists(CERT_FILE) and os.path.exists(KEY_FILE):
+		if exists(CERT_FILE) and exists(KEY_FILE):
 			return
 		keypair = self.__genKeyPair()
 		certificate = self.__genCertificate(keypair)
 		print("[OpenWebif] Install newly generated key pair and certificate")
-		open(KEY_FILE, "wt").write(six.ensure_str(crypto.dump_privatekey(crypto.FILETYPE_PEM, keypair)))
-		open(CERT_FILE, "wt").write(six.ensure_str(crypto.dump_certificate(crypto.FILETYPE_PEM, certificate)))
+		open(KEY_FILE, "wt").write(ensure_str(crypto.dump_privatekey(crypto.FILETYPE_PEM, keypair)))
+		open(CERT_FILE, "wt").write(ensure_str(crypto.dump_certificate(crypto.FILETYPE_PEM, certificate)))
 
 	# generate a key pair
 	def __genKeyPair(self):
@@ -70,7 +70,7 @@ class SSLCertificateGenerator:
 	def __genCertificate(self, keypair):
 		certificate = crypto.X509()
 		subject = certificate.get_subject()
-		for key, val in six.iteritems(self.certSubjectOptions):
+		for key, val in iteritems(self.certSubjectOptions):
 			setattr(subject, key, val)
 		certificate.set_serial_number(int(time()))
 		certificate.gmtime_adj_notBefore(0)
