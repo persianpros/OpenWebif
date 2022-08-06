@@ -1,11 +1,9 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 ##########################################################################
 # OpenWebif: MovieList / copy of OpenATV MovieList.py
 ##########################################################################
 
-from __future__ import print_function
 import os
 import struct
 

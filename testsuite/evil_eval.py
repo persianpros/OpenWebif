@@ -1,6 +1,4 @@
-#!/usr/bin/python
 # -*- coding: utf-8 -*-
-from __future__ import print_function
 """
 Unit Test for Code Trying to Mitigate a Remote Code Execution Vulnerability
 (CVE-2017-9807).
