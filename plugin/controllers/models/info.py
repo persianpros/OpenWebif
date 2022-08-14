@@ -255,9 +255,11 @@ def getInfo(session=None, need_fullinfo=False):
 	info['oever'] = BoxInfo.getItem("oe")
 	info['gccver'] = BoxInfo.getItem("gcc")
 	info['glibcver'] = BoxInfo.getItem("glibc")
+	info['binutilsver'] = BoxInfo.getItem("binutils")
 	info['openssl'] = BoxInfo.getItem("openssl")
 	info['visionversion'] = BoxInfo.getItem("imgversion")
 	info['visionrevision'] = BoxInfo.getItem("imgrevision")
+	info['visiontype'] = BoxInfo.getItem("imagetype")
 	info['visionmodule'] = about.getVisionModule()
 
 	info['multiboot'] = _("Yes") if BoxInfo.getItem("multiboot", False) else _("No")
@@ -268,9 +270,9 @@ def getInfo(session=None, need_fullinfo=False):
 	info['kernelver'] = BoxInfo.getItem("kernel")
 	info['modulelayout'] = BoxInfo.getItem("ModuleLayout")
 	info['dvbapitype'] = about.getDVBAPI()
+	info['pythonversion'] = BoxInfo.getItem("python")
 	info['gstreamerversion'] = BoxInfo.getItem("gstreamer")
 	info['ffmpegversion'] = BoxInfo.getItem("ffmpeg")
-	info['pythonversion'] = BoxInfo.getItem("python")
 
 	try:
 		info['hwserial'] = getHWSerial()
