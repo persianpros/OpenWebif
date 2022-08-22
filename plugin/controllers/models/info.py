@@ -44,6 +44,7 @@ from Plugins.Extensions.OpenWebif.controllers.i18n import _
 from Plugins.Extensions.OpenWebif.controllers.defaults import OPENWEBIFVER, TRANSCODING, TEXTINPUTSUPPORT
 from Plugins.Extensions.OpenWebif.controllers.utilities import removeBad, removeBad2
 from Plugins.Extensions.OpenWebif.controllers.models.owibranding import getLcd, getGrabPip
+from Plugins.Extensions.OpenWebif.controllers.epg import EPG
 
 
 def getEnigmaVersionString():
@@ -555,7 +556,7 @@ def getStreamServiceAndEvent(ref):
 	servicereference = ServiceReference(ref)
 	if servicereference:
 		sname = removeBad(servicereference.getServiceName())
-	epg = Epg()
+	epg = EPG()
 	event = epg.getCurrentEvent(ref)
 	if event:
 		eventname = event.getEventName()

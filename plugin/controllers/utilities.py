@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 import re
 from six import PY3, iteritems, text_type, ensure_binary, ensure_str
+try:  # this is only for the testsuite
+	from Plugins.Extensions.OpenWebif.controllers.defaults import DEBUG_ENABLED
+except Exception:
+	DEBUG_ENABLED = False
 
 MANY_SLASHES_PATTERN = r'[\/]+'
 MANY_SLASHES_REGEX = re.compile(MANY_SLASHES_PATTERN)
@@ -345,6 +349,21 @@ def getEventInfoProvider(moviedb):
 	except KeyError:
 		pass
 	return providerData
+
+
+def error(text, context=""):
+	if context:
+		print("[OpenWebif] [%s] Error: %s" % (context, text))
+	else:
+		print("[OpenWebif] Error: %s" % text)
+
+
+def debug(text, context=""):
+	if DEBUG_ENABLED:
+		if context:
+			print("[OpenWebif] [%s] %s" % (context, text))
+		else:
+			print("[OpenWebif] %s" % text)
 
 
 if __name__ == '__main__':

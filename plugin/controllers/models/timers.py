@@ -33,7 +33,15 @@ from six.moves.urllib.parse import unquote
 from Plugins.Extensions.OpenWebif.controllers.models.info import GetWithAlternative
 from Plugins.Extensions.OpenWebif.controllers.i18n import _
 from Plugins.Extensions.OpenWebif.controllers.utilities import removeBad
-from Plugins.Extensions.OpenWebif.controllers.epg import Epg
+from Plugins.Extensions.OpenWebif.controllers.epg import EPG
+
+
+def adjustStartEndTimes(event):
+	begin = event.start['timestamp']
+	end = event.end['timestamp']
+	begin -= config.recording.margin_before.value * 60
+	end += config.recording.margin_after.value * 60
+	return (begin, end)  # We should also report the margins!
 
 
 def FuzzyTime(t, inPast=False):
@@ -68,7 +76,7 @@ def FuzzyTime(t, inPast=False):
 
 def getTimers(session):
 	rt = session.nav.RecordTimer
-	epg = Epg()
+	epg = EPG()
 	timers = []
 	for timer in rt.timer_list + rt.processed_timers:
 		if hasattr(timer, "wakeup_t"):
@@ -343,7 +351,7 @@ def addTimer(session, serviceref, begin, end, name, description, disabled, justp
 
 
 def addTimerByEventId(session, eventid, serviceref, justplay, dirname, tags, vpsinfo, always_zap, afterevent, pipzap, allow_duplicate, autoadjust, recordingtype):
-	epg = Epg()
+	epg = EPG()
 	event = epg.getEventById(serviceref, eventid)
 	if event is None:
 		return {
@@ -351,7 +359,7 @@ def addTimerByEventId(session, eventid, serviceref, justplay, dirname, tags, vps
 			"message": _("EventId not found")
 		}
 
-	(begin, end, name, description, eit) = parseEvent(event)
+	(begin, end) = adjustStartEndTimes(event)
 
 	if justplay:
 		begin += config.recording.margin_before.value * 60
@@ -362,8 +370,8 @@ def addTimerByEventId(session, eventid, serviceref, justplay, dirname, tags, vps
 		serviceref,
 		begin,
 		end,
-		name,
-		description,
+		event.title,
+		event.description,
 		False,
 		justplay,
 		afterevent,
@@ -373,7 +381,7 @@ def addTimerByEventId(session, eventid, serviceref, justplay, dirname, tags, vps
 		recordingtype,
 		vpsinfo,
 		None,
-		eit,
+		event.eventId,
 		always_zap,
 		pipzap,
 		allow_duplicate,

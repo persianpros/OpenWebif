@@ -151,6 +151,7 @@ tstrings = {
 	'error': _("Error"),
 	'every_timer': _("Every"),
 	'extras': _("Extras"),
+	'find_similar_events': _("Find similar events"),
 	'feedsurl': _("Feed URL"),
 	'ffmpeg_version': _("FFmpeg"),
 	'finished': _("finished"),
