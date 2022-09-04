@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenWebif\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-22 12:12+0430\n"
+"POT-Creation-Date: 2022-09-04 12:04+0430\n"
 "PO-Revision-Date: 2021-12-02 19:58+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/e2openplugin-openwebif/e2openplugin-openwebif/ru/>\n"
@@ -1352,7 +1352,7 @@ msgstr "Минимальный список таймеров"
 msgid "Minute"
 msgstr "Mинута"
 
-#: ../plugin/controllers/web.py:87
+#: ../plugin/controllers/web.py:86
 #, python-format
 msgid "Missing mandatory parameter '%s'"
 msgstr "Отсутствует обязательный параметр '%s'"
@@ -2422,12 +2422,12 @@ msgstr "Текст"
 msgid "Th"
 msgstr "Чт"
 
-#: ../plugin/controllers/web.py:93 ../plugin/controllers/web.py:1606
+#: ../plugin/controllers/web.py:92 ../plugin/controllers/web.py:1605
 #, python-format
 msgid "The parameter '%s' can't be empty"
 msgstr "Параметр '%s' не может быть пустым"
 
-#: ../plugin/controllers/web.py:347
+#: ../plugin/controllers/web.py:346
 msgid "The parameter 'command' must be a number"
 msgstr "Параметр 'command' должен быть численным"
 
@@ -2608,7 +2608,7 @@ msgstr "Тюнеры"
 msgid "Type"
 msgstr "Тип"
 
-#: ../plugin/controllers/web.py:249
+#: ../plugin/controllers/web.py:248
 #, python-format
 msgid "Unknown Volume command %s"
 msgstr "Неизвестная команда громкости %s"
@@ -2788,7 +2788,7 @@ msgstr "Мастер"
 msgid "Would you like to save your changes?"
 msgstr "Вы хотите сохранить изменения?"
 
-#: ../plugin/controllers/web.py:244
+#: ../plugin/controllers/web.py:243
 #, python-format
 msgid "Wrong parameter format 'set=%s'. Use set=set15 "
 msgstr "Неправильный формат параметра 'set=%s'. Используйте set=set15 "
@@ -3042,7 +3042,7 @@ msgstr "название начинается на"
 msgid "transcoded"
 msgstr "транскодировать"
 
-#: ../plugin/controllers/web.py:727
+#: ../plugin/controllers/web.py:726
 #, python-format
 msgid "type %s is not a number"
 msgstr "тип %s не численный"
