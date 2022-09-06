@@ -19,7 +19,8 @@ commit_files() {
   ./CI/PEP8.sh
   ./CI/futurize.sh
   ./CI/header.sh
-  ./CI/npm.sh
+  ./CI/skin.sh
+  ./CI/pyskin.sh
 }
 
 upload_files() {
