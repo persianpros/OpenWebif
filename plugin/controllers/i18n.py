@@ -237,6 +237,7 @@ tstrings = {
 	'procmodeltype': _("Hardware type"),
 	'provider': _("Provider"),
 	'providers': _("Providers"),
+	'python_benchmark': _("Python benchmark"),
 	'python_version': _("Python"),
 	'radio': _("Radio"),
 	'reboot_box': _("Reboot STB"),

@@ -45,8 +45,9 @@ THEMES = [
 
 config.OpenWebif = ConfigSubsection()
 config.OpenWebif.enabled = ConfigYesNo(default=True)
-config.OpenWebif.about_benchmark = ConfigYesNo(default=False)
+config.OpenWebif.about_benchmarkcpu = ConfigYesNo(default=False)
 config.OpenWebif.about_benchmarkram = ConfigYesNo(default=False)
+config.OpenWebif.about_benchmarkpython = ConfigYesNo(default=False)
 config.OpenWebif.identifier = ConfigYesNo(default=True)
 config.OpenWebif.identifier_custom = ConfigYesNo(default=False)
 config.OpenWebif.identifier_text = ConfigText(default="", fixed_size=False)
@@ -157,8 +158,9 @@ class OpenWebifConfig(Screen, ConfigListScreen):
 		self.list = []
 		self.list.append(getConfigListEntry(_("OpenWebInterface Enabled"), config.OpenWebif.enabled))
 		if config.OpenWebif.enabled.value:
-			self.list.append(getConfigListEntry(_("Show CPU benchmark in STB information"), config.OpenWebif.about_benchmark))
+			self.list.append(getConfigListEntry(_("Show CPU benchmark in STB information"), config.OpenWebif.about_benchmarkcpu))
 			self.list.append(getConfigListEntry(_("Show RAM benchmark in STB information"), config.OpenWebif.about_benchmarkram))
+			self.list.append(getConfigListEntry(_("Show Python benchmark in STB information"), config.OpenWebif.about_benchmarkpython))
 			self.list.append(getConfigListEntry(_("Use modern interface"), config.OpenWebif.responsive_enabled))
 			if config.OpenWebif.responsive_enabled.value:
 				self.list.append(getConfigListEntry(_("Theme mode"), config.OpenWebif.responsive_themeMode))

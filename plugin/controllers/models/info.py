@@ -228,7 +228,7 @@ def getInfo(session=None, need_fullinfo=False):
 	info['cpubrand'] = about.getCPUBrand()
 	info['socfamily'] = BoxInfo.getItem("socfamily")
 	info['cpuarch'] = about.getCPUArch()
-	if config.OpenWebif.about_benchmark.value is True:
+	if config.OpenWebif.about_benchmarkcpu.value:
 		info['cpubenchmark'] = about.getCPUBenchmark()
 	else:
 		info['cpubenchmark'] = _("Disabled in configuration")
@@ -244,10 +244,15 @@ def getInfo(session=None, need_fullinfo=False):
 			memFree += int(parts[1].strip().split(' ', 1)[0])
 	info['mem2'] = "%s %s" % (memFree, _("kB"))
 	info['mem3'] = _("%s free / %s total") % (info['mem2'], info['mem1'])
-	if config.OpenWebif.about_benchmarkram.value is True:
+	if config.OpenWebif.about_benchmarkram.value:
 		info['rambenchmark'] = about.getRAMBenchmark()
 	else:
 		info['rambenchmark'] = _("Disabled in configuration")
+
+	if config.OpenWebif.about_benchmarkpython.value:
+		info['pythonbenchmark'] = about.getPythonBenchmark()
+	else:
+		info['pythonbenchmark'] = _("Disabled in configuration")
 
 	info['uptime'] = about.getBoxUptime()
 
