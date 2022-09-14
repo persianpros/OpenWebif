@@ -113,7 +113,7 @@ class WebController(BaseController):
 			InfoBar.instance.startTimeshift()
 		except Exception:  # nosec # noqa: E722
 			success = False
-		return self.P_tstate(request, success)
+		return self.P_tsstate(request, success)
 
 	def P_tsstop(self, request):
 		"""
@@ -134,19 +134,24 @@ class WebController(BaseController):
 		"""
 		success = True
 		oldcheck = False
+		configItem = None
+		if hasattr(comp_config.timeshift, "check"):
+			configItem = comp_config.timeshift.check
+		elif hasattr(comp_config.usage, "check_timeshift"):
+			configItem = comp_config.usage.check_timeshift
 		try:
-			if comp_config.usage.check_timeshift.value:
-				oldcheck = comp_config.usage.check_timeshift.value
+			if configItem and configItem.value:
+				oldcheck = configItem.value
 				# don't ask but also don't save
-				comp_config.usage.check_timeshift.value = False
-				comp_config.usage.check_timeshift.save()
+				configItem.value = False
+				configItem.save()
 			InfoBar.instance.stopTimeshift()
 		except Exception:  # nosec # noqa: E722
 			success = False
-		if comp_config.usage.check_timeshift.value:
-			comp_config.usage.check_timeshift.value = oldcheck
-			comp_config.usage.check_timeshift.save()
-		return self.P_tstate(request, success)
+		if configItem and configItem.value:
+			configItem.value = oldcheck
+			configItem.save()
+		return self.P_tsstate(request, success)
 
 	def P_tsstate(self, request, success=True):
 		"""
@@ -1074,11 +1079,9 @@ class WebController(BaseController):
 		elif b"eit" in list(request.args.keys()) and isinstance(request.args[b"eit"][0], int):
 			eit = int(request.args[b"eit"][0])
 		else:
-			# TODO : move this code to timers.py
 			queryTime = int(request.args[b"begin"][0]) + (int(request.args[b"end"][0]) - int(request.args[b"begin"][0])) // 2
 			epg = EPG()
-			event = epg.getEventByTime(sRef, queryTime)
-			eventid = event and event.eventId
+			eventid = epg.getEventIdByTime(sRef, queryTime)
 			if eventid is not None:
 				eit = int(eventid)
 

@@ -264,8 +264,8 @@ def addTimer(session, serviceref, begin, end, name, description, disabled, justp
 	try:
 		timer = RecordTimerEntry(
 			ServiceReference(serviceref),
-			begin,
-			end,
+			int(float(begin)),
+			int(float(end)),
 			name,
 			description,
 			eit,
@@ -316,14 +316,13 @@ def addTimer(session, serviceref, begin, end, name, description, disabled, justp
 		if hasattr(timer, "autoadjust"):
 			if autoadjust == -1:
 				autoadjust = config.recording.adjust_time_to_event.value and 1 or 0
-			autoadjust = autoadjust
+			timer.autoadjust = autoadjust
 
 		if hasattr(timer, "allow_duplicate"):
-			allow_duplicate = allow_duplicate
+			timer.allow_duplicate = allow_duplicate
 
-		if pipzap != -1:
-			if hasattr(timer, "pipzap"):
-				timer.pipzap = pipzap == 1
+		if pipzap != -1 and hasattr(timer, "pipzap"):
+			timer.pipzap = pipzap == 1
 
 		if recordingtype:
 			timer.descramble = {

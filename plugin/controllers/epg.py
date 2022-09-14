@@ -96,9 +96,9 @@ class TimedProcess:
 
 
 class EPG():
-	NOW = 10
-	NEXT = 11
-	NOW_NEXT = 21
+	NOW = 0
+	NEXT = 1
+	NOW_NEXT = 2
 
 	def __init__(self):
 		self._instance = eEPGCache.getInstance()
@@ -188,6 +188,7 @@ class EPG():
 		debug(epgEvents[-1].toJSON(indent=2) if epgEvents and len(epgEvents) else epgEvents)
 		return epgEvents
 
+	# this function is wrong
 	def _getBouquetNowOrNext(self, bqRef, nowOrNext):
 		if not bqRef:
 			debug("A required parameter 'bqRef' is missing!", "EPG")
@@ -271,22 +272,6 @@ class EPG():
 
 		return self.getMultiChannelEvents(sRefs, startTime, endTime, BOUQUET_FIELDS)
 
-	def getBouquetNowEvents(self, bqRef):
-		debug("[[[   getBouquetNowEvents(%s)   ]]]" % (bqRef), "EPG")
-
-		return self._getBouquetNowOrNext(bqRef, NOW_EVENT)
-
-	def getBouquetNextEvents(self, bqRef):
-		debug("[[[   getBouquetNowEvents(%s)   ]]]" % (bqRef), "EPG")
-
-		return self._getBouquetNowOrNext(bqRef, NEXT_EVENT)
-
-	def getBouquetNowNextEvents(self, bqRef):
-		debug("[[[   getBouquetNowNextEvents(%s)   ]]]" % (bqRef), "EPG")
-		sRefs = getBouquetServices(bqRef, 'S')
-
-		return self.getMultiChannelNowNextEvents(sRefs, BOUQUET_NOWNEXT_FIELDS)
-
 	def getCurrentEvent(self, sRef):
 		debug("[[[   getCurrentEvent(%s)   ]]]" % (sRef), "EPG")
 		if not sRef:
@@ -330,22 +315,13 @@ class EPG():
 		# epgEvent.getExtraEventData(),
 		# epgEvent.getPdcPil()
 
-	def getEventByTime(self, sRef, eventTime, direction=NOW_EVENT):
-		debug("[[[   getEventByTime(%s, %s)   ]]]" % (sRef, eventTime), "EPG")
+	def getEventIdByTime(self, sRef, eventTime):
 		if not sRef or not eventTime:
 			error("A required parameter 'sRef' or eventTime is missing!", "EPG")
-			# return None
-		elif not isinstance(sRef, eServiceReference):
-			sRef = eServiceReference(sRef)
-
-		with TimedProcess() as tp:
-			epgEvent = self._instance.lookupEventTime(sRef, eventTime, direction)
-
-		epgEvent = EPGEvent(epgEvent)
-		epgEvent.service = getServiceDetails(sRef)
-
-		debug(epgEvent.toJSON(indent=2), "EPG")
-		return epgEvent
+			return None
+		event = self._instance.lookupEventTime(eServiceReference(sRef), eventTime)
+		eventid = event and event.getEventId()
+		return eventid
 
 	def getEvent(self, sRef, eventId):
 		debug("[[[   getEvent(%s, %s)   ]]]" % (sRef, eventId), "EPG")
