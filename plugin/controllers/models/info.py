@@ -312,13 +312,11 @@ def getInfo(session=None, need_fullinfo=False):
 	info['enigmadebuglvl'] = eGetEnigmaDebugLvl()
 
 	info['imagearch'] = BoxInfo.getItem("architecture")
-	info['imagefolder'] = BoxInfo.getItem("imagedir")
-	info['imagefilesystem'] = BoxInfo.getItem("imagefs")
 	info['feedsurl'] = BoxInfo.getItem("feedsurl")
 	info['developername'] = BoxInfo.getItem("developername")
 	info['imagefpu'] = BoxInfo.getItem("fpu")
-	info['havemultilib'] = BoxInfo.getItem("multilib")
 
+	# Needed for about.tmpl and deviceinfo.tmpl
 	try:
 		info['fp_version'] = getFPVersion()
 	except:  # nosec # noqa: E722
