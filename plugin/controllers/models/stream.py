@@ -278,7 +278,7 @@ def getStreamSubservices(session, request):
 				})
 				z += 1
 	else:
-		services.append = ({
+		services.append({
 			"servicereference": "N/A",
 			"servicename": "N/A"
 		})
