@@ -768,7 +768,7 @@ function setOSD( statusinfo )
 			}
 			stream +="</div>";
 			$("#osd").html(stream + "<a href='#' onclick='load_maincontent(\"ajax/tv\");return false;'>" + _beginend + "<a style='text-decoration:none;' href=\"#\" onclick=\"open_epg_pop('" + sref + "')\" title='" + statusinfo['currservice_fulldescription'] + "'>" + statusinfo['currservice_name'] + "</a>");
-		} else if ((sref.indexOf("1:0:2") !== -1) || (sref.indexOf("1:134:2") !== -1)) {
+		} else if ((sref.indexOf("1:0:2") !== -1) || (sref.indexOf("1:0:A") !== -1) || (sref.indexOf("1:134:2") !== -1)) {
 			stream += "<a target='_blank' href='/web/stream.m3u?ref=" + sref + "&name=" + station + "&fname=" + station + "' title='" + streamtitle;
 			stream +="</div>";
 			$("#osd").html(stream + "<a href='#' onclick='load_maincontent(\"ajax/radio\");return false;'>" + _beginend + "<a style='text-decoration:none;' href=\"#\" onclick=\"open_epg_pop('" + sref + "')\" title='" + statusinfo['currservice_fulldescription'] + "'>" + statusinfo['currservice_name'] + "</a>");
@@ -1143,16 +1143,23 @@ function initTimerEditBegin()
 	});
 }
 
+function isRadio(serviceref) {
+	var ret = false;
+	if (typeof serviceref !== 'undefined') {
+		if (serviceref.length > 6) {
+			ret = (serviceref.substring(0,6) == '1:0:2:') || (serviceref.substring(0,6) == '1:0:A:');
+		}
+	}
+	return ret;
+}
+
 function editTimer(serviceref, begin, end) {
 	serviceref=decodeURI(serviceref);
 	current_serviceref = serviceref;
 	current_begin = begin;
 	current_end = end;
 	
-	var radio = false;
-	if (typeof serviceref !== 'undefined') {
-		radio = ( serviceref.substring(0,6) == '1:0:2:');
-	}
+	var radio = isRadio(serviceref);
 	
 	$('#cbtv').prop('checked',!radio);
 	$('#cbradio').prop('checked',radio);
@@ -1294,15 +1301,22 @@ function editTimer(serviceref, begin, end) {
 	else
 	{
 		var _chsref=$("#bouquet_select option:last").val();
-		if(radio && _chsref.substring(0,6) !== '1:0:2:') {
-			initTimerEdit(radio, bottomhalf);
-		} else if(!radio && _chsref.substring(0,6) == '1:0:2:') {
+		if(radio != isRadio(_chsref)) {
 			initTimerEdit(radio, bottomhalf);
 		} else {
 			bottomhalf();
 		} 
 	}
 	
+}
+
+function unEscape(htmlStr) {
+    htmlStr = htmlStr.replace(/&lt;/g , "<");	 
+    htmlStr = htmlStr.replace(/&gt;/g , ">");     
+    htmlStr = htmlStr.replace(/&quot;/g , "\"");  
+    htmlStr = htmlStr.replace(/&#39;/g , "\'");   
+    htmlStr = htmlStr.replace(/&amp;/g , "&");
+    return htmlStr;
 }
 
 function addTimer(evt,chsref,chname,top,isradio) {
@@ -1324,8 +1338,8 @@ function addTimer(evt,chsref,chname,top,isradio) {
 		end = evt.begin+evt.duration;
 		serviceref = evt.sref;
 		servicename = evt.channel;
-		title = evt.title;
-		desc = evt.shortdesc;
+		title = unEscape(evt.title);
+		desc = unEscape(evt.shortdesc);
 		margin_before = evt.recording_margin_before;
 		margin_after = evt.recording_margin_after;
 	}
@@ -1337,7 +1351,7 @@ function addTimer(evt,chsref,chname,top,isradio) {
 		radio = true;
 	
 	if (typeof chsref !== 'undefined') {
-		radio = ( chsref.substring(0,6) == '1:0:2:');
+		radio = isRadio(chsref);
 	}
 
 	$('#cbtv').prop('checked',!radio);
@@ -1394,9 +1408,7 @@ function addTimer(evt,chsref,chname,top,isradio) {
 	else
 	{
 		var _chsref=$("#bouquet_select option:last").val();
-		if(radio && _chsref.substring(0,6) !== '1:0:2:') {
-			initTimerEdit(radio, bottomhalf);
-		} else if(!radio && _chsref.substring(0,6) == '1:0:2:') {
+		if(radio != isRadio(_chsref)) {
 			initTimerEdit(radio, bottomhalf);
 		} else {
 			bottomhalf();

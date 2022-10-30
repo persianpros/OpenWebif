@@ -562,7 +562,7 @@ def getStreamServiceAndEvent(ref):
 	epg = EPG()
 	event = epg.getCurrentEvent(ref)
 	if event:
-		eventname = event.getEventName()
+		eventname = event.title
 	return sname, eventname
 
 
