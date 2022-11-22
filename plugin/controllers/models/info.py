@@ -45,6 +45,7 @@ from Plugins.Extensions.OpenWebif.controllers.defaults import OPENWEBIFVER, TRAN
 from Plugins.Extensions.OpenWebif.controllers.utilities import removeBad, removeBad2
 from Plugins.Extensions.OpenWebif.controllers.models.owibranding import getLcd, getGrabPip
 from Plugins.Extensions.OpenWebif.controllers.epg import EPG
+from Tools.OEMInfo import getOEMShowDisplayModel, getOEMShowDisplayBrand, getOEMShowModel
 
 
 def getEnigmaVersionString():
@@ -198,18 +199,19 @@ def getInfo(session=None, need_fullinfo=False):
 		return STATICBOXINFO
 
 	info['brand'] = BoxInfo.getItem("brand")
-	info['displaybrand'] = BoxInfo.getItem("displaybrand")
-	info['model'] = BoxInfo.getItem("model")
-	info['displaymodel'] = BoxInfo.getItem("displaymodel")
+	info['displaybrand'] = getOEMShowDisplayBrand()
+	info['model'] = getOEMShowModel()
+	info['buildmodel'] = BoxInfo.getItem("model")
+	info['displaymodel'] = getOEMShowDisplayModel()
 	info['platform'] = BoxInfo.getItem("platform")
 
 	try:
-		info['procmodel'] = getBoxProc()
+		info['procmodel'] = getBoxProc() if getBoxProc() != "unknown" else None
 	except:  # nosec # noqa: E722
 		info['procmodel'] = None
 
 	try:
-		info['procmodeltype'] = getBoxProcType()
+		info['procmodeltype'] = getBoxProcType() if getBoxProcType() != "unknown" else None
 	except:  # nosec # noqa: E722
 		info['procmodeltype'] = None
 
@@ -281,15 +283,15 @@ def getInfo(session=None, need_fullinfo=False):
 	info['ffmpegversion'] = BoxInfo.getItem("ffmpeg")
 
 	try:
-		info['hwserial'] = getHWSerial()
+		info['hwserial'] = getHWSerial() if getHWSerial() != "unknown" else None
 	except:  # nosec # noqa: E722
 		info['hwserial'] = None
 
 	if (info['hwserial'] is None or info['hwserial'] == "unknown"):
-		info['hwserial'] = about.getCPUSerial()
+		info['hwserial'] = about.getCPUSerial() if about.getCPUSerial() != "unknown" else None
 
 	try:
-		info['boxrctype'] = getBoxRCType()
+		info['boxrctype'] = getBoxRCType() if getBoxRCType() != "unknown" else None
 	except:  # nosec # noqa: E722
 		info['boxrctype'] = None
 
@@ -318,7 +320,7 @@ def getInfo(session=None, need_fullinfo=False):
 
 	# Needed for about.tmpl and deviceinfo.tmpl
 	try:
-		info['fp_version'] = getFPVersion()
+		info['fp_version'] = getFPVersion() if getFPVersion() != "unknown" else None
 	except:  # nosec # noqa: E722
 		info['fp_version'] = None
 
