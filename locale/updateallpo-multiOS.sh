@@ -38,7 +38,7 @@
 #
 remote="origin"
 branch="master"
-python="python"
+python="python2"
 localgsed="sed"
 findoptions=""
 delete=1
