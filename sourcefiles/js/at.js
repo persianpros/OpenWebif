@@ -1,8 +1,8 @@
 //******************************************************************************
 //* at.js: openwebif Autotimer plugin
-//* Version 2.13
+//* Version 2.14
 //******************************************************************************
-//* Copyright (C) 2014-2022 Joerg Bleyel
+//* Copyright (C) 2014-2022 jbleyel
 //* Copyright (C) 2014-2022 E2OpenPlugins
 //*
 //* V 1.0 - Initial Version
@@ -29,20 +29,21 @@
 //* V 2.11 - improve getallservices
 //* V 2.12 - fix test request
 //* V 2.13 - improve FillAllServices
+//* V 2.14 - use let instead of var
 //*
-//* Authors: Joerg Bleyel <jbleyel # gmx.net>
+//* Authors: jbleyel
 //* 		 plnick
 //*			 rdamas
 //*
 //* License GPL V2
-//* https://github.com/E2OpenPlugins/e2openplugin-OpenWebif/blob/master/LICENSE.txt
+//* https://github.com/oe-alliance/OpenWebif/blob/main/LICENSE.txt
 //*******************************************************************************
 
 // TODO: some error handler
 
 function toUnixDate(date){
-	var datea = date.split('.');
-	var d = new Date();
+	let datea = date.split('.');
+	let d = new Date();
 	d.setFullYear(datea[2],datea[1]-1,datea[0]);
 	d.setHours( 0 );
 	d.setMinutes( 0 );
@@ -51,20 +52,20 @@ function toUnixDate(date){
 }
 
 function initValues () {
-	var _sel3 = $('#maxduration');
-	var _sel4 = $('#counter');
-	var _sel5 = $('#left');
-	for (var x=0;x<100;x++)
+	let _sel3 = $('#maxduration');
+	let _sel4 = $('#counter');
+	let _sel5 = $('#left');
+	for (let x=0;x<100;x++)
 	{
-		var sx=x.toString();
+		let sx=x.toString();
 		if(x<10)
 			sx='0'+sx;
 		_sel4.append($('<option></option>').val(x).html(sx));
 		_sel5.append($('<option></option>').val(x).html(sx));
 	}
-	for (var x=0;x<1000;x++)
+	for (let x=0;x<1000;x++)
 	{
-		var sx=x.toString();
+		let sx=x.toString();
 		if(x<10)
 			sx='0'+sx;
 		_sel3.append($('<option></option>').val(x).html(sx));
@@ -72,10 +73,10 @@ function initValues () {
 	$('#tafter').val('5');
 	$('#tbefore').val('5');
 	$('#maxduration').val('70');
-	var _dateb = new Date();
-	var _db = $.datepicker.formatDate('dd.mm.yy', _dateb);
+	let _dateb = new Date();
+	let _db = $.datepicker.formatDate('dd.mm.yy', _dateb);
 	$('#after').val(_db);
-	var _datea = new Date();
+	let _datea = new Date();
 	_datea.setDate(_dateb.getDate()+7);
 	_db = $.datepicker.formatDate('dd.mm.yy', _datea);
 	$('#before').val(_db);
@@ -141,8 +142,8 @@ function initValues () {
 
 function AddFilter(a,b,c)
 {
-	var rc = $('#filterlist tr').length;
-	var nf = $("#dummyfilter").clone(true);
+	let rc = $('#filterlist tr').length;
+	let nf = $("#dummyfilter").clone(true);
 	nf.show();
 	nf.attr({
 	'id': 'f' + rc.toString(),
@@ -169,17 +170,17 @@ function AddFilter(a,b,c)
 function timeFrameAfterCheck() {
 
 	if ($('#timeFrameAfter').is(':checked') === true) {
-		var _da = $('#after').datepicker('getDate');
-		var _datea = new Date(_da);
-		var _dateb = new Date();
+		let _da = $('#after').datepicker('getDate');
+		let _datea = new Date(_da);
+		let _dateb = new Date();
 		_dateb.setDate(_datea.getDate()+7);
 		_da = $.datepicker.formatDate('dd.mm.yy', _dateb);
 		$('#before').val(_da);
 		$('#beforeE').show();
 	}
 	else {
-		var _datea = new Date(2038,0,1);
-		var _da = $.datepicker.formatDate('dd.mm.yy', _datea);
+		let _datea = new Date(2038,0,1);
+		let _da = $.datepicker.formatDate('dd.mm.yy', _datea);
 		$('#before').val(_da);
 		$('#beforeE').hide();
 	}
@@ -298,11 +299,11 @@ function InitPage(noiptv) {
 	});
 	
 	
-	var buttons = {};
+	let buttons = {};
 	buttons["Save"] = function() {setAutoTimerSettings(); $(this).dialog("close");};
 	buttons["Cancel"] = function() {$(this).dialog("close");};
 	
-	var t = $("#atbutton8").data('title');
+	let t = $("#atbutton8").data('title');
 	
 	$("#atsettingdlg").dialog({
 		modal : true, 
@@ -316,7 +317,7 @@ function InitPage(noiptv) {
 	
 	$( ".FM" ).change(function() {
 	
-		var nf = $(this).parent().parent();
+		let nf = $(this).parent().parent();
 		if($(this).val()=="dayofweek") {
 			nf.find(".FS").show();
 			nf.find(".FI").hide();
@@ -346,9 +347,9 @@ function isBQ(sref)
 function Parse() {
 	$("#atlist").empty();
 	
-	var atlist = [];
+	let atlist = [];
 	
-	var state=$(atxml).find("e2state").first();
+	let state=$(atxml).find("e2state").first();
 	if (state.text() == 'false') {
 		showError($(atxml).find("e2statetext").first().text());
 	}
@@ -358,7 +359,7 @@ function Parse() {
 	});
 
 	atlist.sort(function(a, b){
-		var a1= a.attr("name"), b1=b.attr("name");
+		let a1= a.attr("name"), b1=b.attr("name");
 		if(a1==b1) return 0;
 		return a1> b1? 1: -1;
 	});
@@ -370,11 +371,11 @@ function Parse() {
 	if(at2add)
 	{
 		addAT(at2add);
-		at2add=null;
+		at2add=null; //NOSONAR
 	}
 	else
 	{
-		var item = $("#atlist").find("li").first();
+		let item = $("#atlist").find("li").first();
 		if(item) {
 			FillAT(item.data('id'));
 			item.addClass('ui-selected');
@@ -395,8 +396,8 @@ function getTags()
 {
 	// TODO: Errorhandling
 	$.getJSON( "/api/gettags", function( data ) {
-		var bqs = data['tags'];
-		var options = "";
+		let bqs = data['tags'];
+		let options = "";
 		$.each( bqs, function( key, val ) {
 			options += "<option value='" + encodeURIComponent(val) + "'>" + val + "</option>";
 		});
@@ -412,27 +413,20 @@ function ATGetAllServices(callback,radio)
 		return;
 	if (typeof radio === 'undefined')
 		radio = false;
-	
-	ru = "";
-	if (radio)
-	{
-		v += "r";
-		vd += "r";
-		ru = "&type=radio";
-	}
 
-	niptv = "";
+	let ru = (radio)? "&type=radio":"";
+
 	if(ATnoiptv)
 	{
-		ru = "&noiptv=1";
+		ru += "&noiptv=1";
 	}
 	
 	$.ajax({
-		url: '/api/getallservices?nolastscanned=1'+ ru + niptv,
+		url: '/api/getallservices?nolastscanned=1'+ ru,
 		dataType: "json",
 		success: function ( data ) {
-			var sdata = JSON.stringify(data);
-			var bqs = data['services'];
+			let sdata = JSON.stringify(data);
+			let bqs = data['services'];
 			FillAllServices(bqs,true,callback);
 		}
 	});
@@ -457,7 +451,7 @@ function getData()
 
 function FillAT(autotimerid)
 {
-	var def = $(atxml).find("defaults");
+	let defaults = $(atxml).find("defaults");
 	$(atxml).find("timer").each(function () {
 		if($(this).attr("id")==autotimerid) {
 			CurrentAT = new AutoTimerObj($(this));
@@ -500,7 +494,7 @@ function AutoTimerObj (xml) {
 
 	if(xml.attr("always_zap"))
 	{
-		var az = xml.attr("always_zap");
+		let az = xml.attr("always_zap");
 		if(az == "1")
 			this.justplay = "2";
 	}
@@ -521,9 +515,9 @@ function AutoTimerObj (xml) {
 	
 	if(xml.attr("after") && xml.attr("before"))
 	{
-		var _i=parseInt(xml.attr("after"));
-		var _date = new Date(_i*1000);
-		var _dt = $.datepicker.formatDate('dd.mm.yy', _date);
+		let _i=parseInt(xml.attr("after"));
+		let _date = new Date(_i*1000);
+		let _dt = $.datepicker.formatDate('dd.mm.yy', _date);
 		this.after = _dt;
 
 		_i=parseInt(xml.attr("before"));
@@ -550,9 +544,9 @@ function AutoTimerObj (xml) {
 	this.timerOffset=false;
 	if(xml.attr("offset"))
 	{
-		var fields = xml.attr("offset").split(',');
-		var _b = fields[0];
-		var _a = fields[1];
+		let fields = xml.attr("offset").split(',');
+		let _b = fields[0];
+		let _a = fields[1];
 		if (typeof _a === "undefined") {
 			this.timerOffsetAfter=_b;
 			this.timerOffsetBefore=_b;
@@ -563,7 +557,7 @@ function AutoTimerObj (xml) {
 		this.timerOffset=true;
 	}
 	
-	var _ae = xml.find('afterevent');
+	let _ae = xml.find('afterevent');
 	this.afterevent=null;
 	if(_ae.text())
 	{
@@ -580,33 +574,33 @@ function AutoTimerObj (xml) {
 		}
 	}
 
-	var _c = [];
-	var _b = [];
+	let _ch = [];
+	let _bq = [];
 	xml.find("e2service").each(function () {
-		var ref = $(this).find("e2servicereference").text();
+		let ref = $(this).find("e2servicereference").text();
 		if (isBQ(ref))
-			_b.push(encodeURIComponent(ref));
+			_bq.push(encodeURIComponent(ref));
 		else
-			_c.push(ref);
+			_ch.push(ref);
 	});
 	
-	this.Channels = _c.slice();
-	this.Bouquets = _b.slice();
+	this.Channels = _ch.slice();
+	this.Bouquets = _bq.slice();
 
 	// Tags
-	_b = [];
+	_bq = [];
 	xml.find("e2tags").each(function () {
-		var tag = $(this).text();
+		let tag = $(this).text();
 		_b.push(encodeURIComponent(tag));
 	});
 
-	this.Tags = _b.slice();
+	this.Tags = _bq.slice();
 	
 	// Filters
-	var _f = [];
+	_bq = [];
 	
 	xml.find("include").each(function () {
-		_f.push (
+		_bq.push (
 			{ 	"t" : "include",
 				"w": $(this).attr("where"),
 				"v": $(this).text()
@@ -615,7 +609,7 @@ function AutoTimerObj (xml) {
 	});
 
 	xml.find("exclude").each(function () {
-		_f.push (
+		_bq.push (
 			{ 	"t" : "exclude",
 				"w": $(this).attr("where"),
 				"v": $(this).text()
@@ -623,7 +617,7 @@ function AutoTimerObj (xml) {
 		); 
 	});
 
-	this.Filters = _f.slice();
+	this.Filters = _bq.slice();
 
 	this.counter = xml.attr("counter");
 	if(!this.counter)
@@ -679,8 +673,8 @@ AutoTimerObj.prototype.UpdateUI = function(){
 	{
 		$('#after').val(this.after);
 		$('#before').val(this.before);
-		var _dateb= $('#before').datepicker('getDate');
-		var _maxd=new Date(2038,0,1);
+		let _dateb= $('#before').datepicker('getDate');
+		let _maxd=new Date(2038,0,1);
 		if (_dateb < _maxd) {
 			$('#timeFrameAfter').prop('checked',true);
 			$('#beforeE').show();
@@ -695,7 +689,7 @@ AutoTimerObj.prototype.UpdateUI = function(){
 	if(this.location) {
 		$('#location').val(this.location);
 		if(this.location !== $('#location').val()) {
-			current_location = "<option value='" + this.location + "'>" + this.location + "</option>";
+			let current_location = "<option value='" + this.location + "'>" + this.location + "</option>";
 			$('#location').append(current_location);
 			$('#location').val(this.location);
 		}
@@ -736,13 +730,13 @@ AutoTimerObj.prototype.UpdateUI = function(){
 	$('#bouquets').trigger("chosen:updated");
 	$('#channels').trigger("chosen:updated");
 	$('#tags').trigger("chosen:updated");
-	var rc = $('#filterlist tr').length;
+	let rc = $('#filterlist tr').length;
 	if(rc>1)
 	{
-		for(var x=1;x<rc;x++)
+		for(let x=1;x<rc;x++)
 			$('#f' + x.toString()).remove();
 	}
-	var c=0;
+	let c=0;
 	$.each(this.Filters, function(index, value) {
 		c++;
 		AddFilter(value.t,value.w,value.v);
@@ -764,15 +758,15 @@ function addAT(evt)
 		showError("please save the current autotimer first");
 		return;
 	}
-	var _id=1;
+	let _id=1;
 	$(atxml).find("timer").each(function () {
-		var li = parseInt($(this).attr("id"));
+		let li = parseInt($(this).attr("id"));
 		if(li>=_id)
 			_id=li+1;
 	});
-	var name = tstr_timernewname;
-	var id = _id.toString();
-	var xml = '<timers><timer name="'+name+'" match="'+name+'" enabled="yes" id="'+id+'" justplay="0" overrideAlternatives="1"></timer></timers>';
+	let name = tstr_timernewname;
+	let id = _id.toString();
+	let xml = '<timers><timer name="'+name+'" match="'+name+'" enabled="yes" id="'+id+'" justplay="0" overrideAlternatives="1"></timer></timers>';
 	if (typeof evt !== 'undefined') 
 	{
 		xml = '<timers><timer name="'+evt.name+'" match="'+evt.name+'" enabled="yes" id="'+id+'" from="'+evt.from+'" to="'+evt.to+'"';
@@ -780,7 +774,7 @@ function addAT(evt)
 		xml += '><e2service><e2servicereference>'+evt.sref+'</e2servicereference><e2servicename>'+evt.sname+'</e2servicename></e2service>';
 		xml += '</timer></timers>';
 	}
-	var xmlDoc = $.parseXML( xml );
+	let xmlDoc = $.parseXML( xml );
 	
 	$(xmlDoc).find("timer").each(function () {
 		$( "#atlist" ).append($('<li></li>').html($(this).attr("name")).data('id',$(this).attr("id")));
@@ -808,8 +802,8 @@ function delAT()
 			dataType: "xml",
 			success: function (xml)
 			{
-				var state=$(xml).find("e2state").first();
-				var txt=$(xml).find("e2statetext").first();
+				let state=$(xml).find("e2state").first();
+				let txt=$(xml).find("e2statetext").first();
 				showError(txt.text(),state);
 				readAT();
 			},
@@ -843,7 +837,7 @@ function saveAT()
 	if(CurrentAT) // && CurrentAT.MustSave)
 	{
 
-		var reqs = "/autotimer/edit?";
+		let reqs = "/autotimer/edit?";
 		CurrentAT.enabled = $('#enabled').is(':checked');
 		CurrentAT.name = $('#name').val();
 		CurrentAT.match = $('#match').val();
@@ -879,15 +873,15 @@ function saveAT()
 		CurrentAT.aftereventto = $('#aeto').val();
 		CurrentAT.Bouquets = $("#bouquets").chosen().val();
 		CurrentAT.Channels = $("#channels").chosen().val();
-		var _f = [];
+		let _f = [];
 		$.each($('#filterlist tr'), function(index, value) {
-			var tr = $(value);
+			let tr = $(value);
 			if(tr.prop('id') !== "dummyfilter") {
-				var FT = tr.find(".FT");
-				var FM = tr.find(".FM");
-				var FI = tr.find(".FI");
-				var FS = tr.find(".FS");
-				var FR = tr.find(".FR");
+				let FT = tr.find(".FT");
+				let FM = tr.find(".FM");
+				let FI = tr.find(".FI");
+				let FS = tr.find(".FS");
+				let FR = tr.find(".FR");
 				if (FR.is(':checked') === false){
 					if (FM.val() === 'dayofweek'){
 						_f.push (
@@ -985,7 +979,7 @@ function saveAT()
 
 		reqs += "&services=";
 		if(CurrentAT.Channels && CurrentAT.Channels.length > 0) {
-			var _s = [];
+			let _s = [];
 			$.each( CurrentAT.Channels, function( index, value ){
 				_s.push(encodeURIComponent(value));
 			});
@@ -999,7 +993,7 @@ function saveAT()
 
 		if(CurrentAT.Filters && CurrentAT.Filters.length > 0) {
 			$.each( CurrentAT.Filters, function( index, value ){
-				var fr = "&";
+				let fr = "&";
 				if(value.t === "exclude")
 					fr+="!";
 				fr += value.w;
@@ -1021,7 +1015,7 @@ function saveAT()
 		reqs += (CurrentAT.vpso) ? "1" : "0";
 		reqs += "&series_labeling=";
 		reqs += (CurrentAT.series_labeling) ? "1" : "0";
-		var _ae = CurrentAT.afterevent;
+		let _ae = CurrentAT.afterevent;
 		if (_ae == "") {
 			_ae = "default";
 		} else if (_ae == "none") {
@@ -1044,8 +1038,8 @@ function saveAT()
 			dataType: "xml",
 			success: function (xml)
 			{
-				var state=$(xml).find("e2state").first();
-				var txt=$(xml).find("e2statetext").first();
+				let state=$(xml).find("e2state").first();
+				let txt=$(xml).find("e2statetext").first();
 				showError(txt.text(),state.text());
 				readAT();
 			},
@@ -1062,7 +1056,7 @@ function test_simulateAT(simulate)
 	$("#simdlg").dialog( "open" );
 	$("#simtb").append("<tr><td COLSPAN=6>"+loadspinner+"</td></tr>");
 
-	var link = simulate ? "simulate":"test";
+	let link = simulate ? "simulate":"test";
 
 	if(!simulate && CurrentAT)
 	{
@@ -1074,28 +1068,28 @@ function test_simulateAT(simulate)
 		dataType: "xml",
 		success: function (xml)
 		{
-			var lines = [];
+			let lines = [];
 			
 			$(xml).find('e2simulatedtimer,e2testtimer').each(function () {
-				var line = '<tr>';
+				let line = '<tr>';
 				line += '<td>' + $(this).find('e2state').text() + '</td>';
 				line += '<td>' + $(this).find('e2autotimername').text() + '</td>';
 				line += '<td>' + $(this).find('e2name').text() + '</td>';
 				line += '<td>' + $(this).find('e2servicename').text() + '</td>';
-				var s = $(this).find('e2timebegin').text();
-				var d = new Date(Math.round(s) * 1000);
-				var h = d.getHours();
-				var m = d.getMinutes();
-				var _h = ((h>9) ? '':'0') + h.toString();
-				var _m = ((m>9) ? '':'0') + m.toString();
+				let s = $(this).find('e2timebegin').text();
+				let d = new Date(Math.round(s) * 1000);
+				let h = d.getHours();
+				let m = d.getMinutes();
+				let _h = ((h>9) ? '':'0') + h.toString();
+				let _m = ((m>9) ? '':'0') + m.toString();
 				s = (d.getMonth()+1) + '/' + d.getDate() + '/' + d.getFullYear() + ' ' + _h + ':' + _m;
 				line += '<td>' + s + '</td>';
 				s = $(this).find('e2timeend').text();
 				d = new Date(Math.round(s) * 1000);
 				h = d.getHours();
 				m = d.getMinutes();
-				var _h = ((h>9) ? '':'0') + h.toString();
-				var _m = ((m>9) ? '':'0') + m.toString();
+				_h = ((h>9) ? '':'0') + h.toString();
+				_m = ((m>9) ? '':'0') + m.toString();
 				s = (d.getMonth()+1) + '/' + d.getDate() + '/' + d.getFullYear() + ' ' + _h + ':' + _m;
 				line += '<td>' + s + '</td>';
 				line += '</tr>';
@@ -1123,8 +1117,8 @@ function parseAT()
 		dataType: "xml",
 		success: function (xml)
 		{
-			var state=$(xml).find("e2state").first();
-			var txt=$(xml).find("e2statetext").first();
+			let state=$(xml).find("e2state").first();
+			let txt=$(xml).find("e2statetext").first();
 			showError(txt.text(),state.text());
 		},
 		error: function (request, status, error) {
@@ -1139,7 +1133,7 @@ function reloadAT()
 	readAT();
 	$( "#atlist" ).selectable({
 		selected: function( event, ui ) {
-			var ids = $('#atlist .ui-selected').map(function() {
+			let ids = $('#atlist .ui-selected').map(function() {
 				FillAT($(this).data('id'));
 			});
 		},
@@ -1165,10 +1159,10 @@ function getAutoTimerSettings()
 		dataType: "xml",
 		success: function (xml)
 		{
-			var settings = [];
+			let settings = [];
 			$(xml).find("e2setting").each(function () {
-				var name = $(this).find("e2settingname").text();
-				var val = $(this).find("e2settingvalue").text();
+				let name = $(this).find("e2settingname").text();
+				let val = $(this).find("e2settingvalue").text();
 				if(name.indexOf("config.plugins.autotimer.") === 0)
 				{
 					name = name.substring(25);
@@ -1190,7 +1184,7 @@ function getAutoTimerSettings()
 
 function setAutoTimerSettings()
 {
-	var reqs = "/autotimer/set?&autopoll=";
+	let reqs = "/autotimer/set?&autopoll=";
 	reqs += $('#ats_autopoll').is(':checked') ? "true":"";
 	reqs += "&interval=" + $('#ats_interval').val();
 	reqs += "&try_guessing=";
@@ -1208,7 +1202,7 @@ function setAutoTimerSettings()
 	reqs += "&notifsimilar=";
 	reqs += $('#ats_notifsimilar').is(':checked') ? "true":"";
 	reqs += "&maxdaysinfuture=" + $('#ats_maxdaysinfuture').val();
-	var v = $('#ats_add_autotimer_to_tags').is(':checked') ? "true":"";
+	let v = $('#ats_add_autotimer_to_tags').is(':checked') ? "true":"";
 	reqs += "&add_autotimer_to_tags=" + v;
 	v = $('#ats_add_name_to_tags').is(':checked') ? "true":"";
 	reqs += "&add_name_to_tags=" + v;
@@ -1220,8 +1214,8 @@ function setAutoTimerSettings()
 		dataType: "xml",
 		success: function (xml)
 		{
-			var state=$(xml).find("e2state").first();
-			var txt=$(xml).find("e2statetext").first();
+			let state=$(xml).find("e2state").first();
+			let txt=$(xml).find("e2statetext").first();
 			showError(txt.text(),state.text());
 		},
 		error: function (request, status, error) {
@@ -1257,7 +1251,7 @@ function importAT () {
 }
 
 function prepareRestore (ff) {
-	var fn = ff.val();
+	let fn = ff.val();
 	fn = fn.replace('C:\\fakepath\\','');
 	if (confirm(tstr_bqe_restore_question + ' ( ' + fn + ') ?') === false) {
 		return;
@@ -1267,7 +1261,7 @@ function prepareRestore (ff) {
 		.unbind('submit')
 		.submit(function (_e) 
 	{
-		var formData = new FormData(this);
+		let formData = new FormData(this);
 		$.ajax({
 			url: '/autotimer/uploadfile',
 			type: 'POST',
@@ -1278,7 +1272,7 @@ function prepareRestore (ff) {
 			processData:false,
 			dataType: 'json',
 			success: function (data, textStatus, jqXHR) {
-				var r = data.Result;
+				let r = data.Result;
 				if (r[0]) {
 					doRestore(r[1]);
 				} else {
@@ -1304,8 +1298,8 @@ function doRestore (fn) {
 			dataType: 'xml',
 			cache: false,
 			success: function ( xml ) {
-				var state=$(xml).find("e2state").first();
-				var txt=$(xml).find("e2statetext").first();
+				let state=$(xml).find("e2state").first();
+				let txt=$(xml).find("e2statetext").first();
 				showError(txt.text(),state.text());
 			}
 		});
@@ -1322,11 +1316,11 @@ function exportAT () {
 		cache: false,
 		data: { }, 
 		success: function ( xml ) {
-			var state=$(xml).find("e2state").first();
+			let state=$(xml).find("e2state").first();
 			if (state.text() == 'false') {
 				showError($(xml).find("e2statetext").first().text());
 			} else {
-				var url = "/autotimer/tmp/autotimer_backup.tar";
+				let url = "/autotimer/tmp/autotimer_backup.tar";
 				window.open(url,'Download');
 			}
 		}

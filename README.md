@@ -3,3 +3,5 @@ OpenWebif [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.sv
 OpenWebif is an open source browser-based interface for Enigma2-based set-top boxes (STBs).
 
 More information: https://github.com/E2OpenPlugins/e2openplugin-OpenWebif/blob/master/README.md
+
+v2.x information: https://github.com/oe-alliance/OpenWebif/blob/main/README.md

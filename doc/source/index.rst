@@ -1,4 +1,4 @@
-Welcome to e2openplugin-OpenWebif's documentation!
+Welcome to OpenWebif's documentation!
 ==================================================
 
 .. toctree::
@@ -11,11 +11,7 @@ Welcome to e2openplugin-OpenWebif's documentation!
 
 Links
 ==================
-
-* `Flake 8 Report <flake8_report.txt>`_
-* `Bandit Report <bandit.html>`_
-* `JSHint Report 1 <jshint1_report.txt>`_
-* `JSHint Report 2 <jshint2_report.txt>`_
+* `Latest ipk <enigma2-plugin-extensions-openwebif_latest_all.ipk>`_
 
 Indices and tables
 ==================

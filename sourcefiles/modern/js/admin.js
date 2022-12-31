@@ -25,13 +25,13 @@ $.AdminBSB.options = {
 */
 $.AdminBSB.leftSideBar = {
     activate: function () {
-        var _this = this;
-        var $body = $('body');
-        var $overlay = $('.overlay');
+        let _this = this;
+        let $body = $('body');
+        let $overlay = $('.overlay');
 
         //Close sidebar
         $(window).click(function (e) {
-            var $target = $(e.target);
+            let $target = $(e.target);
             if (e.target.nodeName.toLowerCase() === 'i') { $target = $(e.target).parent(); }
 
             if (!$target.hasClass('bars') && _this.isOpen() && $target.parents('#leftsidebar').length === 0) {
@@ -46,7 +46,7 @@ $.AdminBSB.leftSideBar = {
 
         //When page load
         $.each($('.menu .list li.active'), function (i, val) {
-            var $activeAnchors = $(val).find('a:eq(0)');
+            let $activeAnchors = $(val).find('a:eq(0)');
 
             $activeAnchors.addClass('toggled');
             $activeAnchors.next().show();
@@ -54,11 +54,11 @@ $.AdminBSB.leftSideBar = {
 
         //Collapse or Expand Menu
         $('.menu-toggle').on('click', function (e) {
-            var $this = $(this);
-            var $content = $this.next();
+            let $this = $(this);
+            let $content = $this.next();
 
             if ($($this.parents('ul')[0]).hasClass('list')) {
-                var $not = $(e.target).hasClass('menu-toggle') ? e.target : $(e.target).parents('.menu-toggle');
+                let $not = $(e.target).hasClass('menu-toggle') ? e.target : $(e.target).parents('.menu-toggle');
 
                 $.each($('.menu-toggle.toggled').not($not).next(), function (i, val) {
                     if ($(val).is(':visible')) {
@@ -83,9 +83,9 @@ $.AdminBSB.leftSideBar = {
         Waves.init();
     },
     checkStatuForResize: function (firstTime) {
-        var $body = $('body');
-        var $openCloseBar = $('#leftsidebarin');
-        var width = $body.width();
+        let $body = $('body');
+        let $openCloseBar = $('#leftsidebarin');
+        let width = $body.width();
 
         if (firstTime) {
             $body.find('.content, .sidebar').addClass('no-animate').delay(1000).queue(function () {
@@ -115,13 +115,13 @@ $.AdminBSB.leftSideBar = {
 
 $.AdminBSB.rightSideBar = {
     activate: function () {
-        var _this = this;
-        var $sidebar = $('#rightsidebar');
-        var $overlay = $('.overlay');
+        let _this = this;
+        let $sidebar = $('#rightsidebar');
+        let $overlay = $('.overlay');
 
         //Close sidebar
         $(window).click(function (e) {
-            var $target = $(e.target);
+            let $target = $(e.target);
             if (e.target.nodeName.toLowerCase() === 'i') { $target = $(e.target).parent(); }
 
             if (!$target.hasClass('js-right-sidebar') && _this.isOpen() && $target.parents('#rightsidebar').length === 0) {
@@ -148,8 +148,8 @@ $.AdminBSB.rightSideBar = {
 */
 $.AdminBSB.navbar = {
 	activate: function () {
-		var $body = $('body');
-		var $overlay = $('.overlay');
+		let $body = $('body');
+		let $overlay = $('.overlay');
         //Open left sidebar panel
 		$('.bars').on('click', function () {
 			$body.toggleClass('overlay-open');
@@ -157,7 +157,7 @@ $.AdminBSB.navbar = {
 		});
 
 		$('.leftnav [data-close="true"]').on('click', function () {
-			var isVisible = $('#leftsidebarin').is(':visible');
+			let isVisible = $('#leftsidebarin').is(':visible');
 			if (isVisible) {
 				$body.toggleClass('overlay-open');
 				$overlay.fadeOut();
@@ -174,7 +174,7 @@ $.AdminBSB.navbar = {
 */
 $.AdminBSB.input = {
     activate: function () {
-        var formControls = $('.form-control');
+        let formControls = $('.form-control');
         //On focus event
         formControls.focus(function () {
             $(this).parent().addClass('focused');
@@ -182,7 +182,7 @@ $.AdminBSB.input = {
 
         //On focusout event
         formControls.focusout(function () {
-            var $this = $(this);
+            let $this = $(this);
             if ($this.parents('.form-group').hasClass('form-float')) {
                 if ($this.val() == '') { $this.parents('.form-line').removeClass('focused'); }
             }
@@ -217,21 +217,21 @@ $.AdminBSB.select = {
 
 $.AdminBSB.dropdownMenu = {
     activate: function () {
-        var _this = this;
+        let _this = this;
 
         $('.dropdown, .dropup, .btn-group').on({
             "show.bs.dropdown": function () {
-                var dropdown = _this.dropdownEffect(this);
+                let dropdown = _this.dropdownEffect(this);
                 _this.dropdownEffectStart(dropdown, dropdown.effectIn);
             },
             "shown.bs.dropdown": function () {
-                var dropdown = _this.dropdownEffect(this);
+                let dropdown = _this.dropdownEffect(this);
                 if (dropdown.effectIn && dropdown.effectOut) {
                     _this.dropdownEffectEnd(dropdown, function () { });
                 }
             },
             "hide.bs.dropdown": function (e) {
-                var dropdown = _this.dropdownEffect(this);
+                let dropdown = _this.dropdownEffect(this);
                 if (dropdown.effectOut) {
                     e.preventDefault();
                     _this.dropdownEffectStart(dropdown, dropdown.effectOut);
@@ -247,12 +247,12 @@ $.AdminBSB.dropdownMenu = {
         Waves.init();
     },
     dropdownEffect: function (target) {
-        var effectIn = $.AdminBSB.options.dropdownMenu.effectIn, effectOut = $.AdminBSB.options.dropdownMenu.effectOut;
-        var dropdown = $(target), dropdownMenu = $('.dropdown-menu', target);
+        let effectIn = $.AdminBSB.options.dropdownMenu.effectIn, effectOut = $.AdminBSB.options.dropdownMenu.effectOut;
+        let dropdown = $(target), dropdownMenu = $('.dropdown-menu', target);
 
         if (dropdown.length > 0) {
-            var udEffectIn = dropdown.data('effect-in');
-            var udEffectOut = dropdown.data('effect-out');
+            let udEffectIn = dropdown.data('effect-in');
+            let udEffectOut = dropdown.data('effect-out');
             if (udEffectIn !== undefined) { effectIn = udEffectIn; }
             if (udEffectOut !== undefined) { effectOut = udEffectOut; }
         }
@@ -273,7 +273,7 @@ $.AdminBSB.dropdownMenu = {
         }
     },
     dropdownEffectEnd: function (data, callback) {
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        let animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
         data.dropdown.one(animationEnd, function () {
             data.dropdown.removeClass('dropdown-animating');
             data.dropdownMenu.removeClass('animated dropdown-animated');

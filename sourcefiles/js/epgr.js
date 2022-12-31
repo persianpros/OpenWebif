@@ -1,8 +1,8 @@
 //******************************************************************************
 //* epgr.js: openwebif EPGRefresh plugin
-//* Version 1.7
+//* Version 1.8
 //******************************************************************************
-//* Copyright (C) 2016-2022 Joerg Bleyel
+//* Copyright (C) 2016-2022 jbleyel
 //* Copyright (C) 2016-2022 E2OpenPlugins
 //*
 //* V 1.0 - Initial Version
@@ -13,18 +13,19 @@
 //* V 1.5 - improve getallservices
 //* V 1.6 - improve getallservices
 //* V 1.7 - improve FillAllServices
+//* V 1.8 - use let instead of var
 //*
-//* Authors: Joerg Bleyel <jbleyel # gmx.net>
+//* Authors: jbleyel
 //*
 //* License GPL V2
-//* https://github.com/E2OpenPlugins/e2openplugin-OpenWebif/blob/master/LICENSE.txt
+//* https://github.com/oe-alliance/OpenWebif/blob/main/LICENSE.txt
 //*******************************************************************************
 
 //var epgxml;
 
 function toUnixDate(date){
-	var datea = date.split('.');
-	var d = new Date();
+	let datea = date.split('.');
+	let d = new Date();
 	d.setFullYear(datea[2],datea[1]-1,datea[0]);
 	d.setHours( 0 );
 	d.setMinutes( 0 );
@@ -76,13 +77,13 @@ function isAlter(sref) {return (sref.indexOf("1:134:1") == 0);}
 
 			}, getAllServices: function () {
 			
-				niptv = (EPGRnoiptv) ? "&noiptv=1" : "";
+				let niptv = (EPGRnoiptv) ? "&noiptv=1" : "";
 				$.ajax({
 					url: '/api/getallservices?nolastscanned=1' + niptv,
 					dataType: "json",
 					success: function ( data ) {
-						var sdata = JSON.stringify(data);
-						var bqs = data.services;
+						let sdata = JSON.stringify(data);
+						let bqs = data.services;
 
 						FillAllServices(bqs, false, function ( options , boptions) {
 							$("#channels").append( options);
@@ -121,10 +122,10 @@ function isAlter(sref) {return (sref.indexOf("1:134:1") == 0);}
 					dataType: "xml",
 					success: function (xml)
 					{
-						var settings = [];
+						let settings = [];
 						$(xml).find("e2setting").each(function () {
-							var name = $(this).find("e2settingname").text();
-							var val = $(this).find("e2settingvalue").text();
+							let name = $(this).find("e2settingname").text();
+							let val = $(this).find("e2settingvalue").text();
 							if(name.indexOf("config.plugins.epgrefresh.") === 0)
 							{
 								name = name.substring(26);
@@ -162,10 +163,10 @@ function isAlter(sref) {return (sref.indexOf("1:134:1") == 0);}
 
 			}, UpdateCHBQ: function (chbq,begin,end) {
 
-				var _i=parseInt(begin);
-				var _date = new Date(_i*1000);
-				var h = addZero(_date.getHours());
-				var m = addZero(_date.getMinutes());
+				let _i=parseInt(begin);
+				let _date = new Date(_i*1000);
+				let h = addZero(_date.getHours());
+				let m = addZero(_date.getMinutes());
 				
 				$("#er_begin").val(h+":"+m);
 				
@@ -175,11 +176,11 @@ function isAlter(sref) {return (sref.indexOf("1:134:1") == 0);}
 				m = addZero(_date.getMinutes());
 				$("#er_end").val(h+":"+m);
 			
-				var _c = [];
-				var _b = [];
+				let _c = [];
+				let _b = [];
 				
 				$(chbq).find("e2service").each(function () {
-					var ref = $(this).find("e2servicereference").text();
+					let ref = $(this).find("e2servicereference").text();
 					if (isBQ(ref)) {
 						_b.push(encodeURIComponent(ref));
 					}
@@ -191,8 +192,8 @@ function isAlter(sref) {return (sref.indexOf("1:134:1") == 0);}
 					}
 				});
 				
-				var Channels = _c.slice();
-				var Bouquets = _b.slice();
+				let Channels = _c.slice();
+				let Bouquets = _b.slice();
 				
 				$('#channels').val(null);
 				$('#bouquets').val(null);
@@ -225,7 +226,7 @@ function isAlter(sref) {return (sref.indexOf("1:134:1") == 0);}
 
 			}, saveEPGR: function() {
 
-				var reqs = "/epgrefresh/set?&enabled=";
+				let reqs = "/epgrefresh/set?&enabled=";
 				reqs += $('#er_enabled').is(':checked') ? "true":"";
 				reqs += "&enablemessage=";
 				reqs += $('#er_enablemessage').is(':checked') ? "true":"";
@@ -258,8 +259,8 @@ function isAlter(sref) {return (sref.indexOf("1:134:1") == 0);}
 					dataType: "xml",
 					success: function (xml)
 					{
-						var state=$(xml).find("e2state").first();
-						var txt=$(xml).find("e2statetext").first();
+						let state=$(xml).find("e2state").first();
+						let txt=$(xml).find("e2statetext").first();
 						self.showError(txt.text(),state.text());
 						if(state)
 							self.SaveCHBQ();
@@ -274,9 +275,9 @@ function isAlter(sref) {return (sref.indexOf("1:134:1") == 0);}
 				if(self.er_bqchchanged === false)
 					return;
 				
-				var reqs = "";
-				var Bouquets = $("#bouquets").chosen().val();
-				var Channels = $("#channels").chosen().val();
+				let reqs = "";
+				let Bouquets = $("#bouquets").chosen().val();
+				let Channels = $("#channels").chosen().val();
 			
 				if(Channels && Channels.length > 0) {
 					$.each( Channels, function( index, value ){
@@ -295,7 +296,7 @@ function isAlter(sref) {return (sref.indexOf("1:134:1") == 0);}
 					});
 				}
 			
-				var reqss = "/epgrefresh/add?multi=1";
+				let reqss = "/epgrefresh/add?multi=1";
 				
 				if (reqs!="")
 					reqss+= reqs;
@@ -307,8 +308,8 @@ function isAlter(sref) {return (sref.indexOf("1:134:1") == 0);}
 					dataType: "xml",
 					success: function (xml)
 					{
-						var state=$(xml).find("e2state").first();
-						var txt=$(xml).find("e2statetext").first();
+						let state=$(xml).find("e2state").first();
+						let txt=$(xml).find("e2statetext").first();
 						self.showError(txt.text(),state.text());
 					},
 					error: function (request, status, error) {
@@ -323,8 +324,8 @@ function isAlter(sref) {return (sref.indexOf("1:134:1") == 0);}
 					dataType: "xml",
 					success: function (xml)
 					{
-						var state=$(xml).find("e2state").first();
-						var txt=$(xml).find("e2statetext").first();
+						let state=$(xml).find("e2state").first();
+						let txt=$(xml).find("e2statetext").first();
 						self.showError(txt.text(),state.text());
 					},
 					error: function (request, status, error) {
@@ -354,7 +355,7 @@ function isAlter(sref) {return (sref.indexOf("1:134:1") == 0);}
 		 };
 	};
 
-	var epgr = new EPGR();
+	let epgr = new EPGR();
 	epgr.setup();
 
 })();

@@ -1,5 +1,33 @@
+## Version 2.0.1
+* move about to left menu
+* fix ldc screenshot
+* fix screenhot javascript error
+* show webtv only if transcoding and vgx is available
+* enable pip grab for arm
+
+## Version 2.0.0
+* remove all remote control images
+* remove all box images
+* remove six
+* remove python 2 support
+* remove tpm
+* remove old mobile interface
+* remove branding
+* remove owibranding
+* remove Transcoding controller
+* remove timer autoadjust
+* update jquery.inputmask to 4.0.9
+* use Setup instead of ConfigList
+* use BoxInfo instead of branding
+* massive code cleanups
+* several fixes
+* add new general universal remote
+* remove duplicate openwebif.js
+* move material icon font to core 
+* update jQuery UI to 1.13.2
+* fix shift key for long press
+
 ## Version 1.5.2
-## (in development)
 * improve wol
 * split epg to separate module
 * improve channel number calulation

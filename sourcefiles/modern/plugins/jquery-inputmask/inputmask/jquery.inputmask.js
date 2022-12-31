@@ -1,60 +1,97 @@
 /*!
 * jquery.inputmask.js
-* https://github.com/RobinHerbots/jquery.inputmask
-* Copyright (c) 2010 - 2016 Robin Herbots
+* https://github.com/RobinHerbots/Inputmask
+* Copyright (c) 2010 - 2019 Robin Herbots
 * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php)
-* Version: 3.3.1
+* Version: 4.0.9
 */
-!function(factory) {
-    "function" == typeof define && define.amd ? define([ "jquery", "inputmask" ], factory) : "object" == typeof exports ? module.exports = factory(require("jquery"), require("./inputmask")) : factory(jQuery, window.Inputmask);
-}(function($, Inputmask) {
-    return void 0 === $.fn.inputmask && ($.fn.inputmask = function(fn, options) {
-        var nptmask, input = this[0];
-        if (void 0 === options && (options = {}), "string" == typeof fn) switch (fn) {
-          case "unmaskedvalue":
-            return input && input.inputmask ? input.inputmask.unmaskedvalue() : $(input).val();
 
-          case "remove":
-            return this.each(function() {
-                this.inputmask && this.inputmask.remove();
-            });
+(function(factory) {
+    if (typeof define === "function" && define.amd) {
+        define([ "jquery", "./inputmask" ], factory);
+    } else if (typeof exports === "object") {
+        module.exports = factory(require("jquery"), require("./inputmask"));
+    } else {
+        factory(jQuery, window.Inputmask);
+    }
+})(function($, Inputmask) {
+    if ($.fn.inputmask === undefined) {
+        $.fn.inputmask = function(fn, options) {
+            var nptmask, input = this[0];
+            if (options === undefined) options = {};
+            if (typeof fn === "string") {
+                switch (fn) {
+                  case "unmaskedvalue":
+                    return input && input.inputmask ? input.inputmask.unmaskedvalue() : $(input).val();
 
-          case "getemptymask":
-            return input && input.inputmask ? input.inputmask.getemptymask() : "";
+                  case "remove":
+                    return this.each(function() {
+                        if (this.inputmask) this.inputmask.remove();
+                    });
 
-          case "hasMaskedValue":
-            return input && input.inputmask ? input.inputmask.hasMaskedValue() : !1;
+                  case "getemptymask":
+                    return input && input.inputmask ? input.inputmask.getemptymask() : "";
 
-          case "isComplete":
-            return input && input.inputmask ? input.inputmask.isComplete() : !0;
+                  case "hasMaskedValue":
+                    return input && input.inputmask ? input.inputmask.hasMaskedValue() : false;
 
-          case "getmetadata":
-            return input && input.inputmask ? input.inputmask.getmetadata() : void 0;
+                  case "isComplete":
+                    return input && input.inputmask ? input.inputmask.isComplete() : true;
 
-          case "setvalue":
-            $(input).val(options), input && void 0 !== input.inputmask && $(input).triggerHandler("setvalue");
-            break;
+                  case "getmetadata":
+                    return input && input.inputmask ? input.inputmask.getmetadata() : undefined;
 
-          case "option":
-            if ("string" != typeof options) return this.each(function() {
-                return void 0 !== this.inputmask ? this.inputmask.option(options) : void 0;
-            });
-            if (input && void 0 !== input.inputmask) return input.inputmask.option(options);
-            break;
+                  case "setvalue":
+                    Inputmask.setValue(input, options);
+                    break;
 
-          default:
-            return options.alias = fn, nptmask = new Inputmask(options), this.each(function() {
-                nptmask.mask(this);
-            });
-        } else {
-            if ("object" == typeof fn) return nptmask = new Inputmask(fn), void 0 === fn.mask && void 0 === fn.alias ? this.each(function() {
-                return void 0 !== this.inputmask ? this.inputmask.option(fn) : void nptmask.mask(this);
-            }) : this.each(function() {
-                nptmask.mask(this);
-            });
-            if (void 0 === fn) return this.each(function() {
-                nptmask = new Inputmask(options), nptmask.mask(this);
-            });
-        }
-    }), $.fn.inputmask;
+                  case "option":
+                    if (typeof options === "string") {
+                        if (input && input.inputmask !== undefined) {
+                            return input.inputmask.option(options);
+                        }
+                    } else {
+                        return this.each(function() {
+                            if (this.inputmask !== undefined) {
+                                return this.inputmask.option(options);
+                            }
+                        });
+                    }
+                    break;
+
+                  default:
+                    options.alias = fn;
+                    nptmask = new Inputmask(options);
+                    return this.each(function() {
+                        nptmask.mask(this);
+                    });
+                }
+            } else if (Array.isArray(fn)) {
+                options.alias = fn;
+                nptmask = new Inputmask(options);
+                return this.each(function() {
+                    nptmask.mask(this);
+                });
+            } else if (typeof fn == "object") {
+                nptmask = new Inputmask(fn);
+                if (fn.mask === undefined && fn.alias === undefined) {
+                    return this.each(function() {
+                        if (this.inputmask !== undefined) {
+                            return this.inputmask.option(fn);
+                        } else nptmask.mask(this);
+                    });
+                } else {
+                    return this.each(function() {
+                        nptmask.mask(this);
+                    });
+                }
+            } else if (fn === undefined) {
+                return this.each(function() {
+                    nptmask = new Inputmask(options);
+                    nptmask.mask(this);
+                });
+            }
+        };
+    }
+    return $.fn.inputmask;
 });

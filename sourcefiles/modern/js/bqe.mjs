@@ -6,10 +6,10 @@
 //* bqe.js: openwebif Bouqueteditor plugin
 //* Version 3.0
 //******************************************************************************
-//* Copyright (C) 2014-2018 Joerg Bleyel
-//* Copyright (C) 2014-2018 E2OpenPlugins
+//* Copyright (C) 2014-2022 Joerg Bleyel
+//* Copyright (C) 2014-2022 E2OpenPlugins
 //*
-//* Authors: Joerg Bleyel <jbleyel # gmx.net>
+//* Authors: jbleyel
 //*          Robert Damas <https://github.com/rdamas>
 //*          Web Dev Ben <https://github.com/wedebe>
 //*
@@ -35,7 +35,7 @@
 //*         search channels: ^ - starts with; ends with - $; accented characters
 //*
 //* License GPL V2
-//* https://github.com/E2OpenPlugins/e2openplugin-OpenWebif/blob/master/LICENSE.txt
+//* https://github.com/oe-alliance/OpenWebif/blob/master/LICENSE.txt
 //*******************************************************************************
 // TODO: alternatives
 
@@ -813,7 +813,6 @@
             type: 'input',
             showCancelButton: true,
             closeOnConfirm: false,
-            animation: 'fade',
             inputValue: '',
             input: 'text',
             animation: 'none',

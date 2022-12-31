@@ -1,11 +1,11 @@
 //******************************************************************************
 //* bqe.js: openwebif Bouqueteditor plugin
-//* Version 2.9
+//* Version 2.10
 //******************************************************************************
-//* Copyright (C) 2014-2018 Joerg Bleyel
-//* Copyright (C) 2014-2018 E2OpenPlugins
+//* Copyright (C) 2014-2022 jbleyel
+//* Copyright (C) 2014-2022 E2OpenPlugins
 //*
-//* Authors: Joerg Bleyel <jbleyel # gmx.net>
+//* Authors: jbleyel
 //*          Robert Damas <https://github.com/rdamas>
 
 //* V 2.0 - complete refactored
@@ -18,9 +18,10 @@
 //* V 2.7 - improve channel numbers
 //* V 2.8 - show ns text #840
 //* V 2.9 - fix ns text, show provider as tooltip #840
+//* V 2.10 - use let instead of var
 
 //* License GPL V2
-//* https://github.com/E2OpenPlugins/e2openplugin-OpenWebif/blob/master/LICENSE.txt
+//* https://github.com/oe-alliance/OpenWebif/blob/main/LICENSE.txt
 //*******************************************************************************
 // TODO: alternatives
 
@@ -114,11 +115,9 @@
 			// @param type int which list to use
 			// @return string
 			buildRefStr: function (type) {
-				var r;
+				let r = '1:7:2:0:0:0:0:0:0:0:(type == 2) || (type == 10) ';
 				if (self.Mode === 0) {
 					r = '1:7:1:0:0:0:0:0:0:0:(type == 1) || (type == 17) || (type == 195) || (type == 25) || (type == 22) || (type == 31) || (type == 211) ';
-				} else {
-					r = '1:7:2:0:0:0:0:0:0:0:(type == 2) || (type == 10) ';
 				}
 				if (type === 0) {
 					r += 'FROM BOUQUET "bouquets.';
@@ -139,7 +138,7 @@
 			// @param nmode int 
 			//        0: TV, 1: Radio, 2: Option, 3: initial setup, triggers reload
 			setTvRadioMode: function (nmode) {
-				var reload = false;
+				let reload = false;
 				if (nmode !== self.Mode || nmode === 3) {
 					reload = true;
 				}
@@ -169,19 +168,19 @@
 			// @param callback function
 			getSatellites: function (callback) {
 				self.cType = 0;
-				var ref = self.buildRefStr(2);
-				var stype = (self.Mode === 0) ? 'tv' : 'radio';
+				let ref = self.buildRefStr(2);
+				let stype = (self.Mode === 0) ? 'tv' : 'radio';
 				$.ajax({
 					url: '/api/getsatellites',
 					dataType: 'json',
 					cache: true,
 					data: { sRef: ref, stype: stype, date: self.date },
 					success: function ( data ) {
-						var options = [];
-						var s = data['satellites'];
+						let options = [];
+						let s = data['satellites'];
 						$.each( s, function ( key, val ) {
-							var sref = val['service'];
-							var name = val['name'];
+							let sref = val['service'];
+							let name = val['name'];
 							options.push( $("<li/>", {
 								class: "ui-widget-content",
 								data: { sref: sref }
@@ -199,18 +198,18 @@
 			// @param callback function
 			getProviders: function (callback) {
 				self.cType = 1;
-				var ref = self.buildRefStr(1);
+				let ref = self.buildRefStr(1);
 				$.ajax({
 					url: '/api/getservices', 
 					dataType: 'json',
 					cache: true,
 					data: { sRef: ref, date: self.date },
 					success: function ( data ) {
-						var options = [];
-						var s = data['services'];
+						let options = [];
+						let s = data['services'];
 						$.each( s, function ( key, val ) {
-							var sref = val['servicereference'];
-							var name = val['servicename'];
+							let sref = val['servicereference'];
+							let name = val['servicename'];
 							options.push( $('<li/>', {
 								class: "ui-widget-content",
 								data: { sref: sref }
@@ -228,7 +227,7 @@
 			// @param callback function
 			getChannels: function (callback) {
 				self.cType = 2;
-				var ref = self.buildRefStr(3);
+				let ref = self.buildRefStr(3);
 				$.ajax({
 					url: '/api/getservices?sRef=' + ref + "&showproviders=1", 
 					dataType: 'json',
@@ -244,15 +243,15 @@
 			
 			fillChannels: function (callback)
 			{
-				var options = [];
+				let options = [];
 				$.each( self.filterChannelsCache, function ( key, val ) {
-					var sref = val['servicereference'];
-					var name = val['servicename'];
-					var prov = val['provider'];
-					var stype = sref.split(':')[2];
-					var ns = sref.split(':')[6];
-					var _ns = self.getNS(ns);
-					var m = '<span title="'+prov+'" class="marker">' + _ns + ' ' + (self.sType[stype] || '') + '</span>';
+					let sref = val['servicereference'];
+					let name = val['servicename'];
+					let prov = val['provider'];
+					let stype = sref.split(':')[2];
+					let ns = sref.split(':')[6];
+					let _ns = self.getNS(ns);
+					let m = '<span title="'+prov+'" class="marker">' + _ns + ' ' + (self.sType[stype] || '') + '</span>';
 					options.push( $('<li/>', {
 						class: "ui-widget-content",
 						data: { stype: stype, sref: sref }
@@ -267,19 +266,19 @@
 			// @param callback function display bouquets list
 			getBouquets: function (callback) {
 				self.bqStartPositions = {};
-				var ref = self.buildRefStr(0);
+				let ref = self.buildRefStr(0);
 				$.ajax({
 					url: '/bouqueteditor/api/getservices', 
 					dataType: 'json',
 					cache: false,
 					data: { sRef: ref },
 					success: function ( data ) {
-						var options = [];
-						var s = data['services'];
+						let options = [];
+						let s = data['services'];
 						$.each( s, function ( key, val ) {
 							self.bqStartPositions[val['servicereference']] = val['startpos'];
-							var sref = val['servicereference'];
-							var name = val['servicename'];
+							let sref = val['servicereference'];
+							let name = val['servicename'];
 							options.push( $('<li/>', {
 								class: "ui-widget-content",
 								data: { sref: sref }
@@ -315,7 +314,7 @@
 			// @param bref string selected bouquet reference string 
 			// @param callback function display services list
 			changeBouquet: function (bref, callback) {
-				var spos=0;
+				let spos=0;
 				if(self.bqStartPositions[bref])
 					spos = self.bqStartPositions[bref];
 				$.ajax({
@@ -324,13 +323,13 @@
 					cache: false,
 					data: { sRef: bref },
 					success: function ( data ) {
-						var options = [];
-						var s = data['services'];
+						let options = [];
+						let s = data['services'];
 						$.each( s, function ( key, val ) {
-							var sref = val['servicereference'];
-							var m = (val['ismarker'] == 1) ? '<span style="float:right">(M)</span>' : '';
-							var name=val['servicename'];
-							var pos = spos + val['pos'];
+							let sref = val['servicereference'];
+							let m = (val['ismarker'] == 1) ? '<span style="float:right">(M)</span>' : '';
+							let name=val['servicename'];
+							let pos = spos + val['pos'];
 							if(val['ismarker'] == 2)
 								m= '<span style="float:right">(S)</span>';
 							name = pos.toString() + ' - ' + name;
@@ -353,14 +352,14 @@
 			// Callback function for adding selecting provider in left panel
 			// providers list to bouquets list
 			addProvider: function () {
-				var sref = $('#provider li.ui-selected').data('sref');
+				let sref = $('#provider li.ui-selected').data('sref');
 				$.ajax({
 					url: '/bouqueteditor/api/addprovidertobouquetlist', 
 					dataType: 'json',
 					cache: true,
 					data: { sProviderRef: sref, mode: self.Mode, date: self.date },
 					success: function ( data ) {
-						var r = data.Result;
+						let r = data.Result;
 						if (r.length == 2) {
 							self.showError(r[1],r[0]);
 						}
@@ -383,7 +382,7 @@
 			// Callback function for bouquet add button in right pane
 			// Prompts for bouquet name
 			addBouquet: function () {
-				var newname = prompt(tstr_bqe_name_bouquet + ':');
+				let newname = prompt(tstr_bqe_name_bouquet + ':');
 				if (newname.length) {
 					$.ajax({
 						url: '/bouqueteditor/api/addbouquet',
@@ -391,7 +390,7 @@
 						cache: false,
 						data: { name: newname, mode: self.Mode }, 
 						success: function ( data ) {
-							var r = data.Result;
+							let r = data.Result;
 							if (r.length == 2) {
 								self.showError(r[1],r[0]);
 							}
@@ -407,12 +406,12 @@
 				if ($('#bql li.ui-selected').length !== 1) {
 					return;
 				}
-				var item = $('#bql li.ui-selected');
-				var pos = item.index();
-				var sname = item.text();
-				var sref = item.data('sref');
+				let item = $('#bql li.ui-selected');
+				let pos = item.index();
+				let sname = item.text();
+				let sref = item.data('sref');
 
-				var newname=prompt(tstr_bqe_rename_bouquet + ':', sname);
+				let newname=prompt(tstr_bqe_rename_bouquet + ':', sname);
 				if (newname && newname!=sname){
 					$.ajax({
 						url: '/bouqueteditor/api/renameservice',
@@ -420,7 +419,7 @@
 						cache: false,
 						data: { sRef: sref, mode: self.Mode, newName: newname }, 
 						success: function ( data ) {
-							var r = data.Result;
+							let r = data.Result;
 							if (r.length == 2) {
 								self.showError(r[1],r[0]);
 							}
@@ -436,8 +435,8 @@
 				if ($('#bql li.ui-selected').length !== 1) {
 					return;
 				}
-				var sname = $('#bql li.ui-selected').text();
-				var sref = $('#bql li.ui-selected').data('sref');
+				let sname = $('#bql li.ui-selected').text();
+				let sref = $('#bql li.ui-selected').data('sref');
 				if (confirm(tstr_bqe_del_bouquet_question + "\n" + sname + ' ?') === false) {
 					return;
 				}
@@ -448,7 +447,7 @@
 					cache: false,
 					data: { sBouquetRef: sref, mode: self.Mode }, 
 					success: function ( data ) {
-						var r = data.Result;
+						let r = data.Result;
 						if (r.length == 2) {
 							self.showError(r[1],r[0]);
 						}
@@ -459,15 +458,15 @@
 
 			// Disable/enable left pane channel buttons on selection state
 			setChannelButtons: function () {
-				var enabled = $('#channels li.ui-selected').length == 0;
+				let enabled = $('#channels li.ui-selected').length == 0;
 				$('#btn-channel-add').prop( 'disabled', enabled );
 				$('#btn-alternative-add').prop( 'disabled', enabled );
 			},
 
 			// Disable/enable right pane channel buttons on selection state
 			setBouquetChannelButtons: function () {
-				var item = $('#bqs li.ui-selected');
-				var state = item.length == 0;
+				let item = $('#bqs li.ui-selected');
+				let state = item.length == 0;
 				$('#btn-channel-delete').prop( 'disabled', state );
 				$('#btn-marker-add').prop( 'disabled', state );
 				$('#btn-spacer-add').prop( 'disabled', state );
@@ -500,9 +499,9 @@
 			// Add selected services from left pane channels list to right pane channels list
 			// Services will be added before selected service in right pane.
 			addChannel: function () {
-				var reqjobs = [];
-				var bref = $('#bql li.ui-selected').data('sref');
-				var dstref = $('#bqs li.ui-selected').data('sref') || '';
+				let reqjobs = [];
+				let bref = $('#bql li.ui-selected').data('sref');
+				let dstref = $('#bqs li.ui-selected').data('sref') || '';
 			
 				$('#channels li.ui-selected').each(function () {
 					reqjobs.push($.ajax({
@@ -538,9 +537,9 @@
 					return;
 				}
 
-				var bref = $('#bql li.ui-selected').data('sref');
-				var snames = [];
-				var jobs = [];
+				let bref = $('#bql li.ui-selected').data('sref');
+				let snames = [];
+				let jobs = [];
 
 				$('#bqs li.ui-selected').each(function () { 
 					snames.push( $(this).text() );
@@ -555,7 +554,7 @@
 					return;
 				}
 
-				var reqjobs = [];
+				let reqjobs = [];
 				$.each( jobs, function ( key, jobdata ) {
 					reqjobs.push($.ajax({
 						url: '/bouqueteditor/api/removeservice',
@@ -581,13 +580,13 @@
 			// Callback function for right pane add marker button
 			// Prompts for marker name, marker will be added before selected service
 			_addMarker: function (sp) {
-				var newname = '';
+				let newname = '';
 				if (!sp)
 					newname = prompt(tstr_bqe_name_marker + ':');
 				if (newname.length || sp) {
-					var bref = $('#bql li.ui-selected').data('sref');
-					var dstref = $('#bqs li.ui-selected').data('sref') || '';
-					var params = { sBouquetRef: bref, Name: newname, sRefBefore: dstref };
+					let bref = $('#bql li.ui-selected').data('sref');
+					let dstref = $('#bqs li.ui-selected').data('sref') || '';
+					let params = { sBouquetRef: bref, Name: newname, sRefBefore: dstref };
 					if(sp)
 						params = { sBouquetRef: bref, SP: '1', sRefBefore: dstref };
 					$.ajax({
@@ -596,7 +595,7 @@
 						cache: false,
 						data: params, 
 						success: function ( data ) {
-							var r = data.Result;
+							let r = data.Result;
 							if (r.length == 2) {
 								self.showError(r[1],r[0]);
 							}
@@ -610,7 +609,7 @@
 			// At the moment only markers will be renamed. Prompts for new marker name.
 			renameMarkerGroup: function () {
 				// rename marker or group
-				var item = $('#bqs li.ui-selected');
+				let item = $('#bqs li.ui-selected');
 				if (item.length !== 1) {
 					return;
 				}
@@ -620,13 +619,13 @@
 					return;
 				}
 			
-				var pos = item.index();
-				var sname = item.text();
-				var sref = item.data('sref');
-				var bref = $('#bql li.ui-selected').data('sref');
-				var dstref = $('#bqs li.ui-selected').next().data('sref') || '';
+				let pos = item.index();
+				let sname = item.text();
+				let sref = item.data('sref');
+				let bref = $('#bql li.ui-selected').data('sref');
+				let dstref = $('#bqs li.ui-selected').next().data('sref') || '';
 
-				var newname = prompt(tstr_bqe_rename_marker + ': ', sname);
+				let newname = prompt(tstr_bqe_rename_marker + ': ', sname);
 				if (newname && newname !== sname) {
 					$.ajax({
 						url: '/bouqueteditor/api/renameservice',
@@ -634,7 +633,7 @@
 						cache: false,
 						data: { sBouquetRef: bref, sRef: sref, newName: newname, sRefBefore: dstref }, 
 						success: function ( data ) {
-							var r = data.Result;
+							let r = data.Result;
 							if (r.length == 2) {
 								self.showError(r[1],r[0]);
 							}
@@ -647,11 +646,11 @@
 			// Callback function for search box in left pane
 			// Filters matching services in channels list. 
 			searchChannel: function (txt) {
-				var t = txt.toLowerCase();
+				let t = txt.toLowerCase();
 				
 				self.filterChannelsCache = [];
 				$.each( self.allChannelsCache, function ( key, val ) {
-					var name = val['servicename'];
+					let name = val['servicename'];
 					if (name.toLowerCase().indexOf(t) !== -1)
 						self.filterChannelsCache.push({
 							servicename: val['servicename'],
@@ -690,7 +689,7 @@
 			// Callback function for export button in right pane.
 			// Prompts for backup file name
 			exportBouquets: function () {
-				var fn = prompt(tstr_bqe_filename + ': ', 'bouquets_backup');
+				let fn = prompt(tstr_bqe_filename + ': ', 'bouquets_backup');
 				if (fn) {
 					$.ajax({
 						url: '/bouqueteditor/api/backup',
@@ -698,11 +697,11 @@
 						cache: false,
 						data: { Filename: fn }, 
 						success: function ( data ) {
-							var r = data.Result;
+							let r = data.Result;
 							if (r[0] === false) {
 								self.showError(r[1],r[0]);
 							} else {
-								var url =  "/bouqueteditor/tmp/" + r[1];
+								let url =  "/bouqueteditor/tmp/" + r[1];
 								window.open(url,'Download');
 							}
 						}
@@ -720,7 +719,7 @@
 			// Called after file upload dialog. Prompts for confirmation of upload,
 			// uploads backup file.
 			prepareRestore: function () {
-				var fn = $(this).val();
+				let fn = $(this).val();
 				fn = fn.replace('C:\\fakepath\\','');
 				if (confirm(tstr_bqe_restore_question + ' ( ' + fn + ') ?') === false) {
 					return;
@@ -730,7 +729,7 @@
 					.unbind('submit')
 					.submit(function (_e) 
 				{
-					var formData = new FormData(this);
+					let formData = new FormData(this);
 					$.ajax({
 						url: '/bouqueteditor/uploadrestore',
 						type: 'POST',
@@ -741,7 +740,7 @@
 						processData:false,
 						dataType: 'json',
 						success: function (data, textStatus, jqXHR) {
-							var r = data.Result;
+							let r = data.Result;
 							if (r[0]) {
 								self.doRestore(r[1]);
 							} else {
@@ -770,7 +769,7 @@
 						data: { Filename: fn }, 
 						success: function ( data ) {
 							// console.log(data);
-							var r = data.Result;
+							let r = data.Result;
 							if (r.length == 2) {
 								self.showError(r[1],r[0]);
 							}
@@ -834,8 +833,8 @@
 				$('#bql').sortable({
 					handle: '.handle',
 					stop: function ( event, ui ) {
-						var sref = $(ui.item).data('sref');
-						var position = ui.item.index();
+						let sref = $(ui.item).data('sref');
+						let position = ui.item.index();
 						self.moveBouquet({ sBouquetRef: sref, mode: self.Mode, position: position});
 					}
 				}).selectable({
@@ -854,9 +853,9 @@
 				$('#bqs').sortable({
 					handle: '.handle',
 					stop: function ( event, ui ) {
-						var bref = $('#bql li.ui-selected').data('sref');
-						var sref = $(ui.item).data('sref');
-						var position = ui.item.index();
+						let bref = $('#bql li.ui-selected').data('sref');
+						let sref = $(ui.item).data('sref');
+						let position = ui.item.index();
 						self.moveChannel({ sBouquetRef: bref, sRef: sref, mode: self.Mode, position: position});
 					}
 				}).selectable({
@@ -915,7 +914,7 @@
 				);
 			},getNS : function(ns)
 			{
-				var _ns = ns.toLowerCase();
+				let _ns = ns.toLowerCase();
 				if (_ns.startsWith("ffff",0))
 				{
 					return "DVB-C";
@@ -924,8 +923,8 @@
 				{
 					return "DVB-T";
 				}
-				var __ns = parseInt(_ns,16) >> 16 & 0xFFF;
-				var d = " E";
+				let __ns = parseInt(_ns,16) >> 16 & 0xFFF;
+				let d = " E";
 				if(__ns > 1800)
 				{
 					d = " W";
@@ -937,8 +936,8 @@
 		 };
 	};
 
-	var bqe = new BQE();
-	var date = new Date();
+	let bqe = new BQE();
+	let date = new Date();
 	bqe.date = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate();
 	bqe.setup();
 

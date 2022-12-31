@@ -1,6 +1,6 @@
 //******************************************************************************
 //* openwebif.js: openwebif base module
-//* Version 1.2.28
+//* Version 2.0.0
 //******************************************************************************
 //* Copyright (C) 2011-2022 E2OpenPlugins
 //*
@@ -41,21 +41,22 @@
 //* V 1.2.26 - improve save config 
 //* V 1.2.27 - improve FillAllServices
 //* V 1.2.28 - improve timeredit
+//* V 2.0.0 - use let instead of var
 //*
-//* Authors: skaman <sandro # skanetwork.com>
+//* Authors: jbleyel
+//*			 skaman <sandro # skanetwork.com>
 //* 		 meo
 //* 		 Homey-GER
 //* 		 Cimarast
-//* 		 jbleyel
 //* 		 Schimmelreiter
 //* 		 plnick
 //*
 //* License GPL V2
-//* https://github.com/E2OpenPlugins/e2openplugin-OpenWebif/blob/master/LICENSE.txt
+//* https://github.com/oe-alliance/OpenWebif/blob/main/LICENSE.txt
 //*******************************************************************************
 
 $.fx.speeds._default = 1000;
-var theme='original',loadspinner = "<div id='spinner'><div class='fa fa-spinner fa-spin'></div></div>",mutestatus = 0,lastcontenturl = null,screenshotMode = 'all',MessageAnswerCounter=0,shiftbutton = false,grabTimer = 0,at2add = null,_location = [],_tags = [],current_ref=null,current_name=null;
+var theme='original',loadspinner = "<div id='spinner'><div class='fa fa-spinner fa-spin'></div></div>",mutestatus = 0,lastcontenturl = null,screenshotMode = 'all',MessageAnswerCounter=0,grabTimer = 0,at2add = null,_locations = [],_tags = [],current_ref=null,current_name=null,selectedfolder="",pipstatus=false;
 
 $(function() {
 	
@@ -103,7 +104,7 @@ try {
 			} else  {
 				$("#volimage").attr("src","/images/volume.png");
 			} 
-			var jqxhr = $.ajax( "web/vol?set=set" + ui.value );
+			let jqxhr = $.ajax( "web/vol?set=set" + ui.value );
 			return false;
 		}
 	});
@@ -115,8 +116,8 @@ try {
 				}
 		});
 
-	_locations = loadLocations();
-	_tags = loadTags();
+	loadLocations();
+	loadTags();
 
 }
 catch(err) {}
@@ -125,16 +126,16 @@ catch(err) {}
 
 
 (function($) {
-	var defaults = {height: 500,width: 500,toolbar: false,scrollbars: false,status: false,resizable: false,left: 0,top: 0,center: true,createNew: true,location: false,menubar: false,onUnload: null};
+	let defaults = {height: 500,width: 500,toolbar: false,scrollbars: false,status: false,resizable: false,left: 0,top: 0,center: true,createNew: true,location: false,menubar: false,onUnload: null};
 
 	$.popupWindow = function(url, opts) {
-		var options = $.extend({}, defaults, opts);
+		let options = $.extend({}, defaults, opts);
 		if (options.center) {
 			options.top = ((screen.height - options.height) / 2) - 50;
 			options.left = (screen.width - options.width) / 2;
 		}
 
-	var params = [];
+	let params = [];
 	params.push('location=' + (options.location ? 'yes' : 'no'));
 	params.push('menubar=' + (options.menubar ? 'yes' : 'no'));
 	params.push('toolbar=' + (options.toolbar ? 'yes' : 'no'));
@@ -146,12 +147,12 @@ catch(err) {}
 	params.push('left=' + options.left);
 	params.push('top=' + options.top);
 
-	var random = new Date().getTime();
-	var name = options.createNew ? 'popup_window_' + random : 'popup_window';
-	var win = window.open(url, name, params.join(','));
+	let random = new Date().getTime();
+	let name = options.createNew ? 'popup_window_' + random : 'popup_window';
+	let win = window.open(url, name, params.join(','));
 
 	if (options.onUnload && typeof options.onUnload === 'function') {
-		var unloadInterval = setInterval(function() {
+		let unloadInterval = setInterval(function() {
 			if (!win || win.closed) {
 				clearInterval(unloadInterval);
 				options.onUnload();
@@ -253,7 +254,7 @@ function initJsTranslation(strings) {
 }
 
 function wait_for_openwebif() {
-	var restartCheck = window.setInterval(function() {
+	let restartCheck = window.setInterval(function() {
 		webapi_execute('/api/statusinfo',
 			function() {
 				window.clearInterval(restartCheck);
@@ -264,8 +265,8 @@ function wait_for_openwebif() {
 }
 
 function handle_power_state_dialog(new_power_state) {
-	var timeout = 0;
-	var sp = loadspinner.replace("'spinner'","'spinner1'");
+	let timeout = 0;
+	let sp = loadspinner.replace("'spinner'","'spinner1'");
 	$("#modaldialog").dialog('close');
 	if ( new_power_state === 2 ) {
 		load_reboot_dialog(sp,tstr_reboot_box);
@@ -301,7 +302,7 @@ function load_reboot_dialog(data,title){
 
 
 function load_dm_spinner(url,title,w,h,buttons){
-	var width = 'auto',height='auto';
+	let width = 'auto',height='auto';
 	if (typeof w !== 'undefined')
 		width = w;
 	if (typeof h !== 'undefined')
@@ -337,9 +338,9 @@ function load_dm_spinner(url,title,w,h,buttons){
 }
 
 function load_dm(url,title,w,h){
-	var buttons = {};
+	let buttons = {};
 	buttons[tstr_close] = function() { $(this).dialog("close");};
-	var width = 'auto',height='auto';
+	let width = 'auto',height='auto';
 	if (typeof w !== 'undefined')
 		width = w;
 	if (typeof h !== 'undefined')
@@ -371,7 +372,7 @@ function load_dm(url,title,w,h){
 }
 
 function load_message_dm(url,title){
-	var buttons = {};
+	let buttons = {};
 	buttons[tstr_send_message] = function() { sendMessage();};
 	buttons[tstr_cancel] = function() { $(this).dialog("close");};
 
@@ -418,7 +419,7 @@ function load_maincontent(url) {
 
 function load_maincontent_spin(url) {
 	if (lastcontenturl != url) {
-		var sp = '<div id="content_main" style="min-height: 500px;">'+loadspinner+'</div>';
+		let sp = '<div id="content_main" style="min-height: 500px;">'+loadspinner+'</div>';
 		$("#content_container").html(sp).load(url);
 		lastcontenturl = url;
 	}
@@ -426,7 +427,7 @@ function load_maincontent_spin(url) {
 }
 
 function webapi_execute(url, callback) {
-	var jqxhr = $.ajax({ url: url, cache: false, async: false}).done(function() { 
+	let jqxhr = $.ajax({ url: url, cache: false, async: false}).done(function() { 
 	if (typeof callback !== 'undefined') {
 			callback();
 		}
@@ -435,19 +436,19 @@ function webapi_execute(url, callback) {
 }
 
 function toggle_chan_des(evId, sRef, idp) {
-	var url = 'ajax/eventdescription?sref=' + escape(sRef) + '&idev=' + evId;
-	var iddiv = "#" + idp;
+	let url = 'ajax/eventdescription?sref=' + escape(sRef) + '&idev=' + evId;
+	let iddiv = "#" + idp;
 	$(iddiv).load(url);
 	$(iddiv).slideToggle(200);
 }
 
 function open_epg_dialog(sRef,Name) {
-	var url = "ajax/epgdialog?sref=" + escape(sRef);
+	let url = "ajax/epgdialog?sref=" + escape(sRef);
 	
-	var w = $(window).width() -100;
-	var h = $(window).height() -100;
+	let w = $(window).width() -100;
+	let h = $(window).height() -100;
 	
-	var buttons = {};
+	let buttons = {};
 	buttons[tstr_close] = function() { $(this).dialog("close");};
 	buttons[tstr_open_in_new_window] = function() { $(this).dialog("close"); open_epg_pop(sRef);};
 	
@@ -455,16 +456,16 @@ function open_epg_dialog(sRef,Name) {
 }
 
 function open_epg_search_dialog() {
-	var spar = $("#epgSearch").val();
-	var full = GetLSValue('epgsearchtype',false) ? '&full=1' : '';
-	var bouquetsonly = GetLSValue('epgsearchbouquetsonly',false) ? '&bouquetsonly=1' : '';
-	var url = "ajax/epgdialog?sstr=" + encodeURIComponent(spar) + full + bouquetsonly;
+	let spar = $("#epgSearch").val();
+	let full = GetLSValue('epgsearchtype',false) ? '&full=1' : '';
+	let bouquetsonly = GetLSValue('epgsearchbouquetsonly',false) ? '&bouquetsonly=1' : '';
+	let url = "ajax/epgdialog?sstr=" + encodeURIComponent(spar) + full + bouquetsonly;
 	$("#epgSearch").val("");
 	
-	var w = $(window).width() -100;
-	var h = $(window).height() -100;
+	let w = $(window).width() -100;
+	let h = $(window).height() -100;
 	
-	var buttons = {};
+	let buttons = {};
 	buttons[tstr_close] = function() { $(this).dialog("close");};
 	buttons[tstr_open_in_new_window] = function() { $(this).dialog("close"); open_epg_search_pop(spar,full);};
 	
@@ -494,13 +495,13 @@ function TimerConflict(conflicts,sRef, eventId, justplay)
 	// the first conflict entry is the new timer but this new timer don't exits
 	// If there is a deactivate button we need to create the new timer again
 	// sRef, eventId, justplay are needed to create the new timer
-	var SplitText = "<div class='tbltc'><div><div>Name</div><div>"+tstr_channel+"</div><div>"+tstr_end+"</div><div>"+tstr_begin+"</div></div>";
+	let SplitText = "<div class='tbltc'><div><div>Name</div><div>"+tstr_channel+"</div><div>"+tstr_end+"</div><div>"+tstr_begin+"</div></div>";
 	conflicts.forEach(function(entry) {
 		SplitText +="<div><div>"+entry.name+"</div><div>"+entry.servicename+"</div><div>"+entry.realbegin+"</div><div>"+entry.realend+"</div></div>";
 	});
 
 	SplitText +="</div>";
-	var buttons = {};
+	let buttons = {};
 	buttons[tstr_close] = function() { $(this).dialog("close");};
 	$('<div></div>').dialog({
 		modal: true,
@@ -540,7 +541,7 @@ function cbAddTimerEvent(state) {
 
 function addTimerEvent(sRef, eventId, justplay, callback) {
 	
-	var url = "/api/timeraddbyeventid?sRef=" + sRef + "&eventid=" + eventId;
+	let url = "/api/timeraddbyeventid?sRef=" + sRef + "&eventid=" + eventId;
 	if(justplay)
 		url += "&eit=0&disabled=0&justplay=1&afterevent=3";
 
@@ -577,7 +578,7 @@ function addTimerEventPlay(sRef, eventId) {
 */
 
 function addEditTimerEvent(sRef, eventId) {
-	var url="/api/event?sRef=" + sRef + "&idev=" + eventId;
+	let url="/api/event?sRef=" + sRef + "&idev=" + eventId;
 	$.ajax({
 		url: url,
 		dataType: "json",
@@ -626,16 +627,16 @@ function addAutoTimerEvent(sRef, sname, title ,begin, end) {
 
 function delTimerEvent(sRef,eventId) {
 
-	var url="/api/event?sRef=" + sRef + "&idev=" + eventId;
+	let url="/api/event?sRef=" + sRef + "&idev=" + eventId;
 	$.ajax({
 		url: url,
 		dataType: "json",
 		success: function(result) { 
 			if (typeof result !== 'undefined' && typeof result.event !== 'undefined') {
 				// FIXME : this will not work if the timer is modified
-				var begin = result.event.begin - 60 * result.event.recording_margin_before;
-				var end = result.event.begin + result.event.duration + 60 * result.event.recording_margin_after;
-				var t = decodeURIComponent(result.event.title);
+				let begin = result.event.begin - 60 * result.event.recording_margin_before;
+				let end = result.event.begin + result.event.duration + 60 * result.event.recording_margin_after;
+				let t = decodeURIComponent(result.event.title);
 				if (confirm(tstr_del_timer + ": " + t) === true) {
 					webapi_execute("/api/timerdelete?sRef=" + sRef + "&begin=" + begin + "&end=" + end + "&eit=" + eventId, 
 						function() { $('.event[data-id='+eventId+'] .timer').remove(); } 
@@ -651,8 +652,8 @@ function delTimerEvent(sRef,eventId) {
 }
 
 function toggleTimerStatus(sRef, begin, end) {
-	var url="/api/timertogglestatus?";
-	var data = { sRef: sRef, begin: begin, end: end };
+	let url="/api/timertogglestatus?";
+	let data = { sRef: sRef, begin: begin, end: end };
 	
 	$.ajax({
 		url: url,
@@ -673,7 +674,7 @@ function toggleTimerStatus(sRef, begin, end) {
 }
 
 function deleteTimer(sRef, begin, end, title) {
-	var t = decodeURIComponent(title);
+	let t = decodeURIComponent(title);
 	if (confirm(tstr_del_timer + ": " + t) === true) {
 		webapi_execute("/api/timerdelete?sRef=" + sRef + "&begin=" + begin + "&end=" + end, 
 			function() { $('#'+begin+'-'+end).remove(); } 
@@ -704,7 +705,7 @@ function webapi_execute_movie(url,callback)
 }
 
 function renameMovie(sRef, title) {
-	var newname=prompt(tstr_ren_recording, title);
+	let newname=prompt(tstr_ren_recording, title);
 	if (newname && newname!=title){
 		webapi_execute_movie("/api/movierename?sRef=" + sRef+"&newname="+newname);
 		// TODO reload if success
@@ -723,10 +724,10 @@ function deleteMovie(sRef, divid, title) {
 }
 
 function playRecording(sRef) {
-	var sr = sRef.replace(/-/g,'%2D').replace(/_/g,'%5F').replace(/\//g,'%2F');
+	let sr = sRef.replace(/-/g,'%2D').replace(/_/g,'%5F').replace(/\//g,'%2F');
 	// for debugging 
 	console.debug(sr);
-	var url = '/api/zap?sRef=' + sr;
+	let url = '/api/zap?sRef=' + sr;
 	
 	webapi_execute(url,
 	function() {
@@ -736,7 +737,7 @@ function playRecording(sRef) {
 }
 
 function zapChannel(sRef, sname) {
-	var url = '/api/zap?sRef=' + escape(sRef);
+	let url = '/api/zap?sRef=' + escape(sRef);
 	webapi_execute(url,
 	function() {
 		$("#osd").html(tstr_zap_to + ': ' + sname);
@@ -744,8 +745,8 @@ function zapChannel(sRef, sname) {
 	});
 }
 
-function toggleStandby() {
-	var sh = (shiftbutton) ? '&shift=1':'';
+function toggleStandby(shift) {
+	let sh = (shift) ? '&shift=1':'';
 	webapi_execute('api/powerstate?newstate=0'+sh);
 	setTimeout(getStatusInfo, 1500);
 }
@@ -753,20 +754,20 @@ function toggleStandby() {
 function setOSD( statusinfo )
 {
 
-	var sref = statusinfo.currservice_serviceref;
-	var station = statusinfo.currservice_station;
+	let sref = statusinfo.currservice_serviceref;
+	let station = statusinfo.currservice_station;
 
 	current_ref = sref;
 	current_name = station;
 	
 	if (station) {
-		var stationA = station.replace(/'/g,"\\'");
-		var stream = "<div id='osdicon'>";
-		var streamtitle = tstr_stream + ": " + station + "'><i class='fa fa-desktop'></i></a>";
-		var streamtitletrans = tstr_stream + " (" + tstr_transcoded + "): " + station + "'><i class='fa fa-mobile'></i></a>";
-		var _osdch = "<span class='osdch'>" + station + "</span></a>&nbsp;&nbsp;";
-		var _beginend = _osdch + statusinfo.currservice_begin + " - " + statusinfo.currservice_end + "&nbsp;&nbsp;";
-		var desc = statusinfo.currservice_fulldescription;
+		let stationA = station.replace(/'/g,"\\'");
+		let stream = "<div id='osdicon'>";
+		let streamtitle = tstr_stream + ": " + station + "'><i class='fa fa-desktop'></i></a>";
+		let streamtitletrans = tstr_stream + " (" + tstr_transcoded + "): " + station + "'><i class='fa fa-mobile'></i></a>";
+		let _osdch = "<span class='osdch'>" + station + "</span></a>&nbsp;&nbsp;";
+		let _beginend = _osdch + statusinfo.currservice_begin + " - " + statusinfo.currservice_end + "&nbsp;&nbsp;";
+		let desc = statusinfo.currservice_fulldescription;
 		desc = desc.replace(/'/g,"\\'");
 
 		if ((sref.indexOf("1:0:1") !== -1) || (sref.indexOf("1:134:1") !== -1)) {
@@ -783,7 +784,7 @@ function setOSD( statusinfo )
 			stream +="</div>";
 			$("#osd").html(stream + "<a href='#' onclick='load_maincontent(\"ajax/radio\");return false;'>" + _beginend + "<a style='text-decoration:none;' href=\"#\" onclick=\"open_epg_pop('" + sref + "')\" title='" + desc + "'>" + statusinfo.currservice_name + "</a>");
 		} else if (sref.indexOf("1:0:0") !== -1) {
-			var fn = statusinfo.currservice_filename.replaceAll("'","%27").replaceAll("\"","%22");
+			let fn = statusinfo.currservice_filename.replaceAll("'","%27").replaceAll("\"","%22");
 			if (statusinfo.transcoding) {
 				stream += "<a href='#' onclick=\"jumper80('" + fn + "')\"; title='" + streamtitle;
 				stream += "<a href='#' onclick=\"jumper8003('" + fn + "')\"; title='" + streamtitletrans;
@@ -827,14 +828,14 @@ function getStatusInfo() {
 		
 		setOSD(statusinfo);
 		
-		var sb = '';
-		var tit = tstr_standby;
+		let sb = '';
+		let tit = tstr_standby;
 		if (statusinfo.inStandby !== 'true') {
 			sb=' checked';
 			tit = tstr_on;
 		}
 
-		var status = "";
+		let status = "";
 		if (statusinfo['isRecording'] == 'true') {
 			status = "<a href='#' onclick='load_maincontent(\"ajax/timers\"); return false;'><div title='" + tstr_rec_status + statusinfo.Recording_list + "' class='led-box'><div class='led-red'></div></div></a>";
 		}
@@ -905,9 +906,9 @@ function countdowngetMessage() {
 }
 
 function sendMessage() {
-	var text = $('#messageText').val();
-	var type = $('#messageType').val();
-	var timeout = $('#messageTimeout').val();
+	let text = $('#messageText').val();
+	let type = $('#messageType').val();
+	let timeout = $('#messageTimeout').val();
 
 	$.ajax({
 		url: '/api/message?text=' + text + '&type=' + type + '&timeout=' + timeout,
@@ -925,8 +926,8 @@ function sendMessage() {
 }
 
 function toggleMenu(name) {
-	var expander_id = "#leftmenu_expander_" + name;
-	var container_id = "#leftmenu_container_" + name;
+	let expander_id = "#leftmenu_expander_" + name;
+	let container_id = "#leftmenu_container_" + name;
 	if ($(expander_id).hasClass("ui-icon-caret-1-w")) {
 		$(expander_id).removeClass("ui-icon-caret-1-w");
 		$(expander_id).addClass("ui-icon-caret-1-s");
@@ -980,16 +981,6 @@ $(function() {
 	}
 });
 
-$(window).keydown(function(evt) {
-	if (evt.which == 16) { 
-		shiftbutton = true;
-	}
-}).keyup(function(evt) {
-	if (evt.which == 16) { 
-		shiftbutton = false;
-	}
-});
-
 function callScreenShot(){
 	testPipStatus();
 	if(GetLSValue('remotegrabscreen',true))
@@ -1002,9 +993,9 @@ function callScreenShot(){
 	}
 }
 
-function pressMenuRemote(code) {
+function pressMenuRemote(code, shift) {
 	
-	var url = "/api/remotecontrol?" + ((shiftbutton) ? "type=long&" : "") + "command=" + code;
+	let url = "/api/remotecontrol?" + ((shift) ? "type=long&" : "") + "command=" + code;
 	webapi_execute(url);
 	
 	if (grabTimer > 0) {
@@ -1063,17 +1054,17 @@ function initTimerBQ(radio, callback) {
 
 function initTimerEdit(radio, callback) {
 
-	var bottomhalf = function() {
+	let bottomhalf = function() {
 		$('#dirname').find('option').remove().end();
 		$('#dirname').append($("<option></option>").attr("value", "None").text("Default"));
-		for (var id in _locations) {
-			var loc = _locations[id];
+		for (let id in _locations) {
+			let loc = _locations[id];
 			$('#dirname').append($("<option></option>").attr("value", loc).text(loc));
 		}
 
 		$('#tagsnew').html('');
-		for (var id in _tags) {
-			var tag = _tags[id];
+		for (let id in _tags) {
+			let tag = _tags[id];
 			$('#tagsnew').append("<input type='checkbox' name='"+tag+"' value='"+tag+"' id='tag_"+tag+"'/><label for='tag_"+tag+"'>"+tag+"</label>");
 		}
 
@@ -1143,8 +1134,8 @@ function initTimerEditBegin()
 		onClose: function(dateText, inst) {
 			if ($('#timerend').val() != '' &&
 				$(this).datetimepicker('getDate') > $('#timerend').datetimepicker('getDate')) {
-					var begindate = new Date($(this).datetimepicker('getDate'));
-					var enddate = new Date(begindate.getTime() + (60*60*1000));
+					let begindate = new Date($(this).datetimepicker('getDate'));
+					let enddate = new Date(begindate.getTime() + (60*60*1000));
 					$('#timerend').datetimepicker('setDate', enddate);
 			}
 			else
@@ -1154,7 +1145,7 @@ function initTimerEditBegin()
 }
 
 function isRadio(serviceref) {
-	var ret = false;
+	let ret = false;
 	if (typeof serviceref !== 'undefined') {
 		if (serviceref.length > 6) {
 			ret = (serviceref.substring(0,6) == '1:0:2:') || (serviceref.substring(0,6) == '1:0:A:');
@@ -1169,12 +1160,12 @@ function editTimer(serviceref, begin, end) {
 	current_begin = begin;
 	current_end = end;
 	
-	var radio = isRadio(serviceref);
+	let radio = isRadio(serviceref);
 	
 	$('#cbtv').prop('checked',!radio);
 	$('#cbradio').prop('checked',radio);
 	
-	var bottomhalf = function() {
+	let bottomhalf = function() {
 	
 	if (timeredit_begindestroy) {
 		initTimerEditBegin();
@@ -1186,7 +1177,7 @@ function editTimer(serviceref, begin, end) {
 		dataType: "json",
 		success: function(timers) {
 			if (timers.result) {
-				for (var id in timers.timers) {
+				for (let id in timers.timers) {
 					timer = timers.timers[id];
 					if (timer.serviceref == serviceref &&
 						Math.round(timer.begin) == Math.round(begin) &&
@@ -1201,7 +1192,7 @@ function editTimer(serviceref, begin, end) {
 							}
 							$('#dirname').val(timer.dirname);
 							if(timer.dirname !== $('#dirname').val()) {
-								current_location = "<option value='" + timer.dirname + "'>" + timer.dirname + "</option>";
+								let current_location = "<option value='" + timer.dirname + "'>" + timer.dirname + "</option>";
 								$('#dirname').append(current_location);
 								$('#dirname').val(timer.dirname);
 							}
@@ -1210,17 +1201,17 @@ function editTimer(serviceref, begin, end) {
 							$('#afterevent').val(timer.afterevent);
 							$('#recordingtype').val(timer.recordingtype);
 							$('#errorbox').hide();
-							var flags=timer.repeated;
-							for (var i=0; i<7; i++) {
+							let flags=timer.repeated;
+							for (let i=0; i<7; i++) {
 								$('#day'+i).prop('checked', ((flags & 1)==1)).checkboxradio("refresh");
 								flags >>= 1;
 							}
 							
 							$('#tagsnew > input').prop('checked',false).checkboxradio("refresh");
 							
-							var tags = timer.tags.split(' ');
-							for (var j=0; j<tags.length; j++) {
-								var tag = tags[j].replace(/\(/g,'_').replace(/\)/g,'_').replace(/\'/g,'_');
+							let tags = timer.tags.split(' ');
+							for (let j=0; j<tags.length; j++) {
+								let tag = tags[j].replace(/\(/g,'_').replace(/\)/g,'_').replace(/\'/g,'_');
 								if (tag.length>0)
 								{
 									if($('#tag_'+tag).length)
@@ -1238,7 +1229,7 @@ function editTimer(serviceref, begin, end) {
 							$('#timerbegin').datetimepicker('setDate', (new Date(Math.round(timer.begin) * 1000)));
 							$('#timerend').datetimepicker('setDate', (new Date(Math.round(timer.end) * 1000)));
 							
-							var r = (timer.state === 2);
+							let r = (timer.state === 2);
 							// don't allow edit some fields if running
 							if(r) {
 								$('#timerbegin').datetimepicker('destroy');
@@ -1288,11 +1279,6 @@ function editTimer(serviceref, begin, end) {
 							if (typeof timer.allow_duplicate !== 'undefined')
 							{
 								$('#allow_duplicate').prop("checked", timer.allow_duplicate==1);
-								//autoadjust: ($('#autoadjust').is(':checked')?"1":"0"),
-							}
-							if (typeof timer.autoadjust !== 'undefined')
-							{
-								$('#autoadjust').prop("checked", timer.autoadjust==1);
 							}
 
 							openTimerDlg(tstr_edit_timer + " - " + timer.name);
@@ -1310,8 +1296,8 @@ function editTimer(serviceref, begin, end) {
 	}
 	else
 	{
-		var _chsref=$("#bouquet_select option:last").val();
-		if(radio != isRadio(_chsref)) {
+		let _chsref=$("#bouquet_select option:last").val();
+		if (radio != isRadio(_chsref)) {
 			initTimerEdit(radio, bottomhalf);
 		} else {
 			bottomhalf();
@@ -1319,6 +1305,7 @@ function editTimer(serviceref, begin, end) {
 	}
 	
 }
+
 function unEscape(htmlStr) {
     htmlStr = htmlStr.replace(/&lt;/g , "<");	 
     htmlStr = htmlStr.replace(/&gt;/g , ">");     
@@ -1334,13 +1321,15 @@ function addTimer(evt,chsref,chname,top,isradio) {
 	current_end = -1;
 	servicename = '';
 
-	var begin = -1;
-	var end = -1;
-	var serviceref = '';
-	var title = '';
-	var desc = '';
-	var margin_before = 0;
-	var margin_after = 0;
+	let begin = -1;
+	let end = -1;
+	let serviceref = '';
+	let title = '';
+	let desc = '';
+	let margin_before = 0;
+	let margin_after = 0;
+
+	let radio = (typeof isradio !== 'undefined');
 
 	if (typeof evt !== 'undefined' && evt != '') {
 		begin = evt.begin;
@@ -1351,22 +1340,18 @@ function addTimer(evt,chsref,chname,top,isradio) {
 		desc = unEscape(evt.shortdesc);
 		margin_before = evt.recording_margin_before;
 		margin_after = evt.recording_margin_after;
+		radio = isRadio(serviceref);
 	}
 
-	var lch=$('#bouquet_select > optgroup').length;
+	let lch=$('#bouquet_select > optgroup').length;
 
-	var radio = false;
-	if (typeof isradio !== 'undefined')
-		radio = true;
-	
-	if (typeof chsref !== 'undefined') {
+	if (typeof chsref !== 'undefined')
 		radio = isRadio(chsref);
-	}
 
 	$('#cbtv').prop('checked',!radio);
 	$('#cbradio').prop('checked',radio);
 
-	var bottomhalf = function() {
+	let bottomhalf = function() {
 	if (typeof chsref !== 'undefined' && typeof chname !== 'undefined') {
 		serviceref = chsref;
 		title = chname;
@@ -1381,20 +1366,19 @@ function addTimer(evt,chsref,chname,top,isradio) {
 	$('#enabled').prop("checked", true);
 	$('#justplay').prop("checked", false);
 	$('#allow_duplicate').prop("checked", true);
-	$('#autoadjust').prop("checked", false);
 	$('#afterevent').val(3);
 	$('#recordingtype').val("");
 	$('#errorbox').hide();
 
-	for (var i=0; i<7; i++) {
+	for (let i=0; i<7; i++) {
 		$('#day'+i).prop('checked', false).checkboxradio('refresh');
 	}
 	
 	$('#tagsnew > input').prop('checked',false).checkboxradio("refresh");
 
-	var begindate = begin !== -1 ? new Date( (Math.round(begin) - margin_before*60) * 1000) : new Date();
+	let begindate = begin !== -1 ? new Date( (Math.round(begin) - margin_before*60) * 1000) : new Date();
 	$('#timerbegin').datetimepicker('setDate', begindate);
-	var enddate = end !== -1 ? new Date( (Math.round(end) + margin_after*60) * 1000) : new Date(begindate.getTime() + (60*60*1000));
+	let enddate = end !== -1 ? new Date( (Math.round(end) + margin_after*60) * 1000) : new Date(begindate.getTime() + (60*60*1000));
 	$('#timerend').datetimepicker('setDate', enddate);
 
 	$('#bouquet_select').val(serviceref);
@@ -1416,8 +1400,8 @@ function addTimer(evt,chsref,chname,top,isradio) {
 	}
 	else
 	{
-		var _chsref=$("#bouquet_select option:last").val();
-		if(radio != isRadio(_chsref)) {
+		let _chsref=$("#bouquet_select option:last").val();
+		if (radio != isRadio(_chsref)) {
 			initTimerEdit(radio, bottomhalf);
 		} else {
 			bottomhalf();
@@ -1468,9 +1452,9 @@ function InitAccordeon(obj)
 
 function RefreshMEPG(mode)
 {
-	var full = ($("#compressmepg").is(":visible"));
-	var bq = '';
-	var lbq=GetLSValue('lastmbq_'+mode,'');
+	let full = ($("#compressmepg").is(":visible"));
+	let bq = '';
+	let lbq=GetLSValue('lastmbq_'+mode,'');
 	if(lbq!='')
 		bq= "&bref=" + lbq;
 	$("#tvcontent").html(loadspinner).load('ajax/multiepg?epgmode=' + mode + bq,function() {
@@ -1527,7 +1511,7 @@ var mepgdirect=0;
 function InitTVRadio(epgmode)
 {
 
-	var mode = (epgmode == 'radio') ? '?stype=radio':'';
+	let mode = (epgmode == 'radio') ? '?stype=radio':'';
 	
 	$('#btn0').click(function(){
 		$("#expandmepg").hide();
@@ -1536,8 +1520,8 @@ function InitTVRadio(epgmode)
 	});
 
 	$('#btn5').click(function(){
-		var bq = '';
-		var lbq=GetLSValue('lastmbq_'+epgmode,'');
+		let bq = '';
+		let lbq=GetLSValue('lastmbq_'+epgmode,'');
 		if(lbq!='')
 			bq= "&bref=" + lbq;
 		$("#tvcontent").html(loadspinner).load('ajax/multiepg?epgmode='+epgmode+bq);
@@ -1568,10 +1552,10 @@ function InitTVRadio(epgmode)
 	
 	$("#tvbutton").buttonset();
 
-	var link = "ajax/bouquets" + mode;
+	let link = "ajax/bouquets" + mode;
 
 	if (tv===true) {
-		var parts=window.location.href.toLowerCase().split("#");
+		let parts=window.location.href.toLowerCase().split("#");
 		if (parts[1] == 'tv') {
 			if(parts[2] == 'mepg' || parts[2] == 'mepgfull')
 			{
@@ -1598,7 +1582,7 @@ function InitTVRadio(epgmode)
 
 function InitBouquets(tv)
 {
-	var mode="";
+	let mode="";
 	if (tv===true) {
 		$('#btn0').click(function(){
 			$("#expandmepg").hide();
@@ -1616,9 +1600,9 @@ function InitBouquets(tv)
 	}
 	
 	$('#btn5').click(function(){
-		var emode = (tv===true) ? 'tv':'radio';
-		var bq = '';
-		var lbq=GetLSValue('lastmbq_'+emode,'');
+		let emode = (tv===true) ? 'tv':'radio';
+		let bq = '';
+		let lbq=GetLSValue('lastmbq_'+emode,'');
 		if(lbq!='')
 			bq= "&bref=" + lbq;
 		$("#tvcontent").html(loadspinner).load('ajax/multiepg?epgmode='+emode+bq);
@@ -1649,10 +1633,10 @@ function InitBouquets(tv)
 	
 	$("#tvbutton").buttonset();
 
-	var link = "ajax/bouquets" + mode;
+	let link = "ajax/bouquets" + mode;
 
 	if (tv===true) {
-		var parts=window.location.href.toLowerCase().split("#");
+		let parts=window.location.href.toLowerCase().split("#");
 		if (parts[1] == 'tv') {
 			if(parts[2] == 'mepg' || parts[2] == 'mepgfull')
 			{
@@ -1681,7 +1665,7 @@ function InitBouquets(tv)
 
 function getWinSize(win) {
 	if(!win) win = window;
-	var s = {};
+	let s = {};
 	if(typeof win.innerWidth != "undefined") {
 		s.screenWidth = win.screen.width;
 		s.screenHeight = win.screen.height;
@@ -1693,13 +1677,13 @@ function getWinSize(win) {
 }
 
 function getDeviceType() {
-	var ss = getWinSize();
-	var screenLen = ( ss.screenHeight > ss.screenWdith ) ? ss.screenHeight : ss.screenWidth;
+	let ss = getWinSize();
+	let screenLen = ( ss.screenHeight > ss.screenWdith ) ? ss.screenHeight : ss.screenWidth;
 	return ( screenLen < 500 ) ? "phone":"tab";
 }
 
 function getOSType() {
-	var agentStr = navigator.userAgent;
+	let agentStr = navigator.userAgent;
 
 	if(agentStr.indexOf("iPod") > -1 || agentStr.indexOf("iPhone") > -1 || agentStr.indexOf("iPad") > -1 || agentStr.indexOf("ipod") > -1 || agentStr.indexOf("iphone") > -1 || agentStr.indexOf("ipad") > -1)
 		return "ios";
@@ -1712,21 +1696,21 @@ function getOSType() {
 }
 
 function jumper80( file ) {
-	var deviceType = getDeviceType();
+	let deviceType = getDeviceType();
 	document.portFormTs.file.value = file;
 	document.portFormTs.device.value = "etc";
 	document.portFormTs.submit();
 }
 
 function jumper8003( file ) {
-	var deviceType = getDeviceType();
+	let deviceType = getDeviceType();
 	document.portFormTs.file.value = file;
 	document.portFormTs.device.value = "phone";
 	document.portFormTs.submit();
 }
 
 function jumper8002( sref, sname ) {
-	var deviceType = getDeviceType();
+	let deviceType = getDeviceType();
 	document.portForm.ref.value = sref;
 	document.portForm.name.value = sname;
 	document.portForm.fname.value = sname;
@@ -1735,7 +1719,7 @@ function jumper8002( sref, sname ) {
 }
 
 function jumper8001( sref, sname ) {
-	var deviceType = getDeviceType();
+	let deviceType = getDeviceType();
 	document.portForm.ref.value = sref;
 	document.portForm.name.value = sname;
 	document.portForm.fname.value = sname;
@@ -1760,10 +1744,10 @@ function ChangeTheme(theme)
 function directlink()
 {
 	// #myepg?epgmode=tv
-	var hashParts = window.location.hash.match(/^#((.*?[^\?]*)(\?.*)*)/) || [null, '', ''];
-	var page = hashParts[2]; // myepg
-	var hash = hashParts[1]; // myepg?epgmode=tv
-	var lnk = 'ajax/tv';
+	let hashParts = window.location.hash.match(/^#((.*?[^\?]*)(\?.*)*)/) || [null, '', ''];
+	let page = hashParts[2]; // myepg
+	let hash = hashParts[1]; // myepg?epgmode=tv
+	let lnk = 'ajax/tv';
 	
 	switch (page)
 	{
@@ -1795,25 +1779,25 @@ function ShowTimers(timers)
 	if (timers.length > 0)
 	{
 		$( ".ETV tbody" ).each(function( index ) {
-			var parts=$( this ).data('id').split(';');
+			let parts=$( this ).data('id').split(';');
 			if (parts.length == 3)
 			{
-				var sref = parts[0];
-				var begin = parseInt(parts[1]);
-				var end = begin + ( parseInt(parts[2]) * 60 );
-				var evt = $( this );
+				let sref = parts[0];
+				let begin = parseInt(parts[1]);
+				let end = begin + ( parseInt(parts[2]) * 60 );
+				let evt = $( this );
 				timers.forEach(function(entry) {
 					if(entry.sref == sref || sref.indexOf(entry.sref) === 0)
 					{
-						var b = parseInt(entry.begin);
-						var e = parseInt(entry.end);
+						let b = parseInt(entry.begin);
+						let e = parseInt(entry.end);
 						
 						// event end > timerbegin & event begin < timer end
 						if ( end > b && begin < e ) {
 							
-							var addt = evt.find('.addtimer').first();
-							var delt = evt.find('.deltimer').first();
-							var pan = evt.find('.timerpanel').first();
+							let addt = evt.find('.addtimer').first();
+							let delt = evt.find('.deltimer').first();
+							let pan = evt.find('.timerpanel').first();
 							
 							if ( begin >= b && end <= e )
 							{
@@ -1855,7 +1839,7 @@ var MLHelper;
 				currentsort = newsort;
 				$.widget( "custom.iconselectmenu", $.ui.selectmenu, {
 					_renderItem: function( ul, item ) {
-						var li = $( "<li>" ),
+						let li = $( "<li>" ),
 						wrapper = $( "<div>",{ text: item.label } ).prepend (
 						$( "<span class='sortimg'>").append (
 							$( "<i>", { "class": "fa " + item.element.data("class") })
@@ -1880,12 +1864,12 @@ var MLHelper;
 			
 				$("#moviesort option").each(function()
 				{
-					var simg='';
+					let simg='';
 					if( $(this).val() == $( "#moviesort" ).val() )
 					{
 						simg=$(this).data("class");
 						if (simg) {
-							var img = $( "<span class='sortimg'>").append (
+							let img = $( "<span class='sortimg'>").append (
 								$( "<i>", { "class": "fa " + simg })
 								);
 							$("#moviesort-button .ui-selectmenu-text").prepend(img);
@@ -1895,21 +1879,21 @@ var MLHelper;
 			},
 			SortMovies: function(idx)
 			{
-				var sorted = self._movies.slice(0);
+				let sorted = self._movies.slice(0);
 
 				if(idx=='name')
 				{
 					// sort by name
 					sorted.sort(function(a,b) {
-						var x = a.title.toLowerCase();
-						var y = b.title.toLowerCase();
+						let x = a.title.toLowerCase();
+						let y = b.title.toLowerCase();
 						return x < y ? -1 : x > y ? 1 : 0;
 					});
 				}
 				// sort by name desc
 				if(idx=='named')
 				{
-					sorted.sort(function(a,b){var x = b.title.toLowerCase();var y = a.title.toLowerCase();return x < y ? -1 : x > y ? 1 : 0;});
+					sorted.sort(function(a,b){let x = b.title.toLowerCase();let y = a.title.toLowerCase();return x < y ? -1 : x > y ? 1 : 0;});
 				}
 				if(idx=='date')
 				{
@@ -1928,7 +1912,7 @@ var MLHelper;
 				
 				$('#movies').empty();
 				
-				for (var i = 0, len = sorted.length; i < len; i++) {
+				for (let i = 0, len = sorted.length; i < len; i++) {
 					$('#movies').append ( 
 						sorted[i].html
 					);
@@ -1953,8 +1937,8 @@ var MLHelper;
 				
 				$('#movies').children('.tm_row').each(function() { 
 				
-				var d = $(this).data('start');
-				var t = $(this).data('title');
+				let d = $(this).data('start');
+				let t = $(this).data('title');
 			
 				self._movies.push (
 					{
@@ -1999,7 +1983,7 @@ function getActiveCls()
 
 function setHover(obj)
 {
-	var cls=getHoverCls();
+	let cls=getHoverCls();
 	
 	$(obj).hover(
 		function(){ $(this).addClass(cls); },
@@ -2009,7 +1993,7 @@ function setHover(obj)
 
 function setTMHover()
 {
-	var cls='ui-state-active';
+	let cls='ui-state-active';
 	if (theme=='pepper-grinder') {
 		$('.tm_row').removeClass('ui-state-default');
 		$('.tm_row').addClass('ui-state-hover');
@@ -2032,9 +2016,9 @@ function SetLSValue(t,val)
 
 function GetLSValue(t,def)
 {
-	var ret = def;
+	let ret = def;
 	if(typeof(Storage) !== "undefined") {
-		var value = localStorage.getItem(t);
+		let value = localStorage.getItem(t);
 		if (value !== undefined && value !== null)
 		{
 			if(value === "true")
@@ -2050,7 +2034,7 @@ function GetLSValue(t,def)
 
 function SetSpinner()
 {
-	var spin = GetLSValue('spinner','fa-spinner');
+	let spin = GetLSValue('spinner','fa-spinner');
 	loadspinner = "<div id='spinner'><div class='fa " + spin + " fa-spin'></div></div>";
 }
 
@@ -2058,24 +2042,24 @@ function isInArray(array, search) { return (array.indexOf(search) >= 0) ? true :
 
 function FillAllServices(bqs,cuttitle,callback)
 {
-	var options = "";
-	var boptions = "";
-	var refs = [];
+	let options = "";
+	let boptions = "";
+	let refs = [];
 	$.each( bqs, function( key, val ) {
-		var bref = val.servicereference;
-		var bname = val.servicename;
+		let bref = val.servicereference;
+		let bname = val.servicename;
 		boptions += "<option value='" + encodeURIComponent(bref) + "'>" + bname + "</option>";
-		var slist = val.subservices;
-		var items = [];
+		let slist = val.subservices;
+		let items = [];
 		$.each( slist, function( key, val ) {
-			var ref = val.servicereference;
-			var sname = val.servicename;
+			let ref = val.servicereference;
+			let sname = val.servicename;
 			if (!isInArray(refs,ref)) {
 				refs.push(ref);
 				if(ref.substring(0, 4) == "1:0:")
 				{
 					if(cuttitle) {
-						var li = ref.lastIndexOf("::");
+						let li = ref.lastIndexOf("::");
 						if(li>0) {
 							ref = ref.substring(0,li-1);
 						}
@@ -2103,9 +2087,9 @@ function GetAllServices(callback,radio)
 	if (typeof radio === 'undefined')
 		radio = false;
 	
-	var v = "gas-date";
-	var vd = "gas-data";
-	var ru = "";
+	let v = "gas-date";
+	let vd = "gas-data";
+	let ru = "";
 
 	if (radio)
 	{
@@ -2114,24 +2098,24 @@ function GetAllServices(callback,radio)
 		ru = "&type=radio";
 	}
 	
-	var date = new Date();
+	let date = new Date();
 	date = date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate();
 
 	// load allservices only once a day
-	var cache = GetLSValue(vd,'');
+	let cache = GetLSValue(vd,'');
 	if(cache === date) {
 		cache = GetLSValue(v,null);
 		if(cache != null) {
-			var js = JSON.parse(cache);
+			let js = JSON.parse(cache);
 			FillAllServices(js.services,false,callback);
 			return;
 		}
 	}
 	$.ajax({
-		url: '/api/getallservices?renameserviceforxmbc=1&nolastscanned=1'+ru,
+		url: '/api/getallservices?renameserviceforxmbc=1&exclude=lastscanned,vod,program'+ru,
 		dataType: "json",
 		success: function ( data ) {
-			var sdata = JSON.stringify(data);
+			let sdata = JSON.stringify(data);
 			SetLSValue(v,sdata);
 			SetLSValue(vd,date);
 			FillAllServices(data.services,false,callback);
@@ -2145,9 +2129,9 @@ function testPipStatus() {
 		dataType: "json",
 		cache: false,
 		success: function(pipinfo) {
-			if(pipinfo.pip != pip){
-				pip = pipinfo.pip;
-                                buttonsSwitcher(pipinfo.pip);
+			if(pipinfo.pip != pipstatus){
+				pipstatus = pipinfo.pip;
+                buttonsSwitcher(pipinfo.pip);
 			}
 		}
 	});
@@ -2188,7 +2172,7 @@ var SSHelperObj = function () {
 		
 			$('#ssr_i').change(function() {
 				testPipStatus();
-				var t = $('#ssr_i').val();
+				let t = $('#ssr_i').val();
 				webapi_execute("/api/setwebconfig?screenshot_refresh_time=" + t);
 				self.ssr_i = parseInt(t);
 				if($('#ssr_s').is(':checked'))
@@ -2200,7 +2184,7 @@ var SSHelperObj = function () {
 			
 			$('#ssr_s').change(function() {
 				testPipStatus();
-				var v = $('#ssr_s').is(':checked');
+				let v = $('#ssr_s').is(':checked');
 				if (v) {
 					self.setSInterval();
 				} else {
@@ -2228,9 +2212,9 @@ var SSHelper = new SSHelperObj();
 
 function editmovie(sref, mt, directory) {
 
-	var url = "ajax/editmovie?sRef=" + sref;
-	var title = tstr_edit_recording;
-	var buttons = {};
+	let url = "ajax/editmovie?sRef=" + sref;
+	let title = tstr_edit_recording;
+	let buttons = {};
 	buttons[tstr_rename_recording] = function() { renameMovie(sref, mt);};
 	buttons[tstr_save] = function() { editmovieAction(sref, directory);};
 	buttons[tstr_cancel] = function() { $(this).dialog("close");};
@@ -2256,7 +2240,7 @@ function editmovie(sref, mt, directory) {
 
 function editmovieAction(sref, directory) {
 
-	var title = $('#movieTitle').val();
+	let title = $('#movieTitle').val();
 	if(title == undefined || title == "")
 	{
 		$("#modaldialog").dialog("close");

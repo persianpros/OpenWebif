@@ -355,7 +355,6 @@ form p:last-child {
 	height: 15px;
 	background-color: #818181;
 	border-radius: 15px;
-	margin-right: 10px;
 	transition: background 0.3s ease;
 	vertical-align: middle;
 	margin: 0 16px;
@@ -429,7 +428,7 @@ input[type='checkbox']:not(:disabled).tabbed:focus ~ .lever::after {
 
 .ls-closed button.bars::after,
 .ls-closed button.bars::before {
-	font-family: 'Material Icons';
+	font-family: 'Material Icons',sans-serif;
 	font-size: 24px;
 	position: absolute;
   top: 0;
@@ -2397,7 +2396,7 @@ input[type='checkbox']:not(:disabled).tabbed:focus ~ .lever::after {
 }
 
 .skin-switcher input[name="skinpref"]:checked + .color-swatch::after {
-	font-family: 'Material Icons';
+	font-family: 'Material Icons', sans-serif;
 	position: relative;
 	left: 3px;
 	content: '\E876';
@@ -4365,7 +4364,7 @@ section.content {
 
 .bootstrap-select .bs-searchbox:after {
 	content: '\E8B6';
-	font-family: 'Material Icons';
+	font-family: 'Material Icons', sans-serif;
 	position: absolute;
 	top: 0;
 	left: 10px;
@@ -5833,7 +5832,7 @@ fieldset[disabled] .form-control {
 
 .sidebar .menu .list .ml-menu li.active a.toggled:not(.menu-toggle):before {
 	content: '\E315';
-	font-family: 'Material Icons';
+	font-family: 'Material Icons', sans-serif;
 	position: relative;
 	font-size: 21px;
 	height: 20px;

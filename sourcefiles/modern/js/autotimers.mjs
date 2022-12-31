@@ -3,7 +3,7 @@
  * AutoTimers plugin for OpenWebif
  *
  * @license GPL-3
- * https://github.com/E2OpenPlugins/e2openplugin-OpenWebif/blob/master/LICENSE.txt
+ * https://github.com/oe-alliance/OpenWebif/blob/main/LICENSE.txt
  *
  * @see https://github.com/oe-alliance/enigma2-plugins/tree/master/autotimer
  *

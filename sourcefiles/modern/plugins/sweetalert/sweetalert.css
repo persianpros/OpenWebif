@@ -3,10 +3,6 @@ body.stop-scrolling {
   overflow: hidden; }
 
 .sweet-overlay {
-  background-color: black;
-  /* IE8 */
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-  /* IE8 */
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   left: 0;
@@ -52,7 +48,6 @@ body.stop-scrolling {
   .sweet-alert p {
     color: #797979;
     font-size: 16px;
-    text-align: center;
     font-weight: 300;
     position: relative;
     text-align: inherit;
@@ -70,12 +65,12 @@ body.stop-scrolling {
     overflow: hidden;
     padding: 0 10px;
     max-height: 0;
-    webkit-transition: padding 0.15s, max-height 0.15s;
+    -webkit-transition: padding 0.15s, max-height 0.15s;
     transition: padding 0.15s, max-height 0.15s; }
     .sweet-alert .sa-error-container.show {
       padding: 10px 0;
       max-height: 100px;
-      webkit-transition: padding 0.2s, max-height 0.2s;
+      -webkit-transition: padding 0.2s, max-height 0.2s;
       transition: padding 0.25s, max-height 0.25s; }
     .sweet-alert .sa-error-container .icon {
       display: inline-block;
