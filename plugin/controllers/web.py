@@ -230,27 +230,27 @@ class WebController(BaseController):
 		Returns:
 			HTTP response with headers
 		"""
-		set = getUrlArg(request, "set")
-		if set == None or set == "state":
+		_set = getUrlArg(request, "set")
+		if _set == None or _set == "state":
 			return getVolumeStatus()
-		elif set == "up":
+		elif _set == "up":
 			return setVolumeUp()
-		elif set == "down":
+		elif _set == "down":
 			return setVolumeDown()
-		elif set == "mute":
+		elif _set == "mute":
 			return setVolumeMute()
-		elif set[:3] == "set":
+		elif _set[:3] == "set":
 			try:
-				return setVolume(int(set[3:]))
-			except Exception:  # nosec # noqa: E722
+				return setVolume(int(_set[3:]))
+			except (Exception, ValueError):  # nosec # noqa: E722
 				res = getVolumeStatus()
 				res["result"] = False
-				res["message"] = _("Wrong parameter format 'set=%s'. Use set=set15 ") % set
+				res["message"] = _("Wrong parameter format 'set=%s'. Use set=set15 ") % _set
 				return res
 
 		res = getVolumeStatus()
 		res["result"] = False
-		res["message"] = _("Unknown Volume command %s") % set
+		res["message"] = _("Unknown Volume command %s") % _set
 		return res
 
 	def P_getaudiotracks(self, request):
@@ -286,11 +286,11 @@ class WebController(BaseController):
 			:query int id: audio track ID
 		"""
 		try:
-			id = int(request.args[b"id"][0])
+			audioid = int(request.args[b"id"][0])
 		except Exception:  # nosec # noqa: E722
-			id = -1
+			audioid = -1
 
-		return setAudioTrack(self.session, id)
+		return setAudioTrack(self.session, audioid)
 
 	def P_zap(self, request):
 		"""
@@ -342,19 +342,19 @@ class WebController(BaseController):
 		if res:
 			return res
 
-		id = -1
+		key = -1
 		try:
-			id = int(request.args[b"command"][0])
+			key = int(request.args[b"command"][0])
 		except Exception:  # nosec # noqa: E722
 			return {
 				"result": False,
 				"message": _("The parameter 'command' must be a number")
 			}
 
-		type = getUrlArg(request, "type", "")
+		rctype = getUrlArg(request, "type", "")
 		rcu = getUrlArg(request, "rcu", "")
 
-		return remoteControl(id, type, rcu)
+		return remoteControl(key, rctype, rcu)
 
 	def P_powerstate(self, request):
 		"""
@@ -375,7 +375,7 @@ class WebController(BaseController):
 		newstate = getUrlArg(request, "newstate")
 		if newstate != None:
 			return setPowerState(self.session, newstate)
-		return getStandbyState(self.session)
+		return getStandbyState()
 
 	def P_supports_powerup_without_waking_tv(self, request):
 		"""
@@ -393,14 +393,13 @@ class WebController(BaseController):
 		"""
 		try:
 			# returns 'True' if the image supports the function "Power on without TV":
-			f = open("/tmp/powerup_without_waking_tv.txt", "r")  # nosec
-			powerupWithoutWakingTv = f.read()
-			f.close()
+			with open("/tmp/powerup_without_waking_tv.txt", "r") as fd:  # nosec
+				powerupwithoutwakingtv = fd.read()
 			if ((powerupWithoutWakingTv == 'True') or (powerupWithoutWakingTv == 'False')):
 				return True
 			else:
 				return False
-		except:  # nosec # noqa: E722
+		except OSError:  # nosec # noqa: E722
 			return False
 
 	def P_set_powerup_without_waking_tv(self, request):
@@ -420,11 +419,10 @@ class WebController(BaseController):
 		if self.P_supports_powerup_without_waking_tv(request):
 			try:
 				# write "True" to file so that the box will power on ONCE skipping the HDMI-CEC communication:
-				f = open("/tmp/powerup_without_waking_tv.txt", "w")  # nosec
-				f.write('True')
-				f.close()
+				with open("/tmp/powerup_without_waking_tv.txt", "w") as fd:  # nosec
+					fd.write('True')
 				return True
-			except:  # nosec # noqa: E722
+			except OSError:  # nosec # noqa: E722
 				return False
 		else:
 			return False
@@ -475,9 +473,9 @@ class WebController(BaseController):
 		Returns:
 			HTTP response with headers
 		"""
-		type = "tv"
+		mode = "tv"
 		if b"type" in list(request.args.keys()):
-			type = "radio"
+			mode = "radio"
 
 		noiptv = True if getUrlArg(request, "noiptv", "0") in ("1", "true") else False
 
@@ -489,13 +487,19 @@ class WebController(BaseController):
 
 		showProviders = True if getUrlArg(request, "showproviders", "0") in ("1", "true") else False
 
-		bouquets = getAllServices(type=type, noiptv=noiptv, nolastscanned=nolastscanned, removeNameFromsref=removeNameFromsref, showAll=showAll, showProviders=showProviders)
+		excludes = getUrlArg(request, "exclude", "").lower()
+		excludes = excludes.split(",")
+		excludeprogram = "program" in excludes
+		excludevod = "vod" in excludes
+		excludeiptv = "iptv" in excludes
+		excludelastscanned = "lastscanned" in excludes
+
+		bouquets = getAllServices(mode, noiptv=noiptv or excludeiptv, nolastscanned=nolastscanned or excludelastscanned, removenamefromsref=removenamefromsref, showall=showall, showproviders=showproviders, excludeprogram=excludeprogram, excludevod=excludevod)
 		if b"renameserviceforxmbc" in list(request.args.keys()):
 			for bouquet in bouquets["services"]:
 				for service in bouquet["subservices"]:
 					if not int(service["servicereference"].split(":")[1]) & 64:
 						service["servicename"] = "%d - %s" % (service["pos"], service["servicename"])
-			return bouquets
 		return bouquets
 
 	def P_getservices(self, request):
@@ -1072,7 +1076,7 @@ class WebController(BaseController):
 		if mode == 1:
 			try:
 				eventid = int(request.args[b"eventid"][0])
-			except Exception:  # nosec # noqa: E722
+			except (Exception, ValueError):  # nosec # noqa: E722
 				return {
 					"result": False,
 					"message": "The parameter 'eventid' must be a number"
@@ -1089,10 +1093,6 @@ class WebController(BaseController):
 		always_zap = int(getUrlArg(request, "always_zap", "-1"))
 		pipzap = int(getUrlArg(request, "pipzap", "-1"))
 		allow_duplicate = getUrlArg(request, "allow_duplicate") == "1"
-		_autoadjust = getUrlArg(request, "autoadjust")
-		autoadjust = -1
-		if _autoadjust != None:
-			autoadjust = _autoadjust == "1"
 
 		recordingtype = getUrlArg(request, "recordingtype")
 		if recordingtype:
@@ -1113,13 +1113,12 @@ class WebController(BaseController):
 				afterevent,
 				pipzap,
 				allow_duplicate,
-				autoadjust,
 				recordingtype
 			)
 		elif mode == 2:
 			try:
 				beginOld = int(request.args[b"beginOld"][0])
-			except Exception:  # nosec # noqa: E722
+			except (Exception, ValueError):  # nosec # noqa: E722
 				return {
 					"result": False,
 					"message": "The parameter 'beginOld' must be a number"
@@ -1127,7 +1126,7 @@ class WebController(BaseController):
 
 			try:
 				endOld = int(request.args[b"endOld"][0])
-			except Exception:  # nosec # noqa: E722
+			except (Exception, ValueError):  # nosec # noqa: E722
 				return {
 					"result": False,
 					"message": "The parameter 'endOld' must be a number"
@@ -1152,8 +1151,7 @@ class WebController(BaseController):
 				self.vpsparams(request),
 				always_zap,
 				pipzap,
-				allow_duplicate,
-				autoadjust
+				allow_duplicate
 			)
 		else:
 			return addTimer(
@@ -1175,8 +1173,7 @@ class WebController(BaseController):
 				eit,
 				always_zap,
 				pipzap,
-				allow_duplicate,
-				autoadjust
+				allow_duplicate
 			)
 
 	def P_timeradd(self, request):
@@ -2114,11 +2111,7 @@ class WebController(BaseController):
 
 		action = getUrlArg(request, "action", "standby")
 		enabled = getUrlArg(request, "enabled")
-		if enabled != None:
-			if enabled == "True" or enabled == "true":
-				enabled = True
-			elif enabled == "False" or enabled == "false":
-				enabled = False
+		enabled = enabled and enabled.lower() == "true"
 
 		ret = getSleepTimer(self.session)
 
@@ -2314,7 +2307,7 @@ class WebController(BaseController):
 					cfgs = getConfigs(sect[3])
 					resultcfgs = []
 					for cfg in cfgs['configs']:
-						min = -1
+						_min = -1
 						kv = []
 						data = cfg['data']
 						if 'choices' in data:
@@ -2329,14 +2322,13 @@ class WebController(BaseController):
 									kv = []
 									break
 
-						if len(kv) > 1:
-							if kv[1] == (kv[0] + 1):
-								min = kv[0]
-								max = kv[len(kv) - 1]
+						if len(kv) > 1 and kv[1] == (kv[0] + 1):
+							_min = kv[0]
+							_max = kv[len(kv) - 1]
 
-						if min > -1:
-							data['min'] = min
-							data['max'] = max
+						if _min > -1:
+							data['min'] = _min
+							data['max'] = _max
 							del data['choices']
 							cfg['data'] = data
 							resultcfgs.append(cfg)
@@ -2349,75 +2341,32 @@ class WebController(BaseController):
 		return {}
 
 	def P_setwebconfig(self, request):
-		if b"responsivedesign" in list(request.args.keys()):
-			val = (getUrlArg(request, "responsivedesign") == 'true')
-			comp_config.OpenWebif.responsive_enabled.value = val
-			comp_config.OpenWebif.responsive_enabled.save()
-		elif b"moviedb" in list(request.args.keys()):
-			try:
-				comp_config.OpenWebif.webcache.moviedb.value = getUrlArg(request, "moviedb")
-				comp_config.OpenWebif.webcache.moviedb.save()
-			except Exception:
-				pass
-		elif b"showpicons" in list(request.args.keys()):
-			val = (getUrlArg(request, "showpicons") == 'true')
-			comp_config.OpenWebif.webcache.showpicons.value = val
-			comp_config.OpenWebif.webcache.showpicons.save()
-		elif b"showchanneldetails" in list(request.args.keys()):
-			val = (getUrlArg(request, "showchanneldetails") == 'true')
-			comp_config.OpenWebif.webcache.showchanneldetails.value = val
-			comp_config.OpenWebif.webcache.showchanneldetails.save()
-		elif b"showiptvchannelsinselection" in list(request.args.keys()):
-			val = (getUrlArg(request, "showiptvchannelsinselection") == 'true')
-			comp_config.OpenWebif.webcache.showiptvchannelsinselection.value = val
-			comp_config.OpenWebif.webcache.showiptvchannelsinselection.save()
-		elif b"screenshotchannelname" in list(request.args.keys()):
-			val = (getUrlArg(request, "screenshotchannelname") == 'true')
-			comp_config.OpenWebif.webcache.screenshotchannelname.value = val
-			comp_config.OpenWebif.webcache.screenshotchannelname.save()
-		elif b"showallpackages" in list(request.args.keys()):
-			val = (getUrlArg(request, "showallpackages") == 'true')
-			comp_config.OpenWebif.webcache.showallpackages.value = val
-			comp_config.OpenWebif.webcache.showallpackages.save()
-		elif b"zapstream" in list(request.args.keys()):
-			val = (getUrlArg(request, "zapstream") == 'true')
-			comp_config.OpenWebif.webcache.zapstream.value = val
-			comp_config.OpenWebif.webcache.zapstream.save()
-		elif b"smallremote" in list(request.args.keys()):
-			try:
-				comp_config.OpenWebif.webcache.smallremote.value = getUrlArg(request, "smallremote")
-				comp_config.OpenWebif.webcache.smallremote.save()
-			except Exception:
-				pass
-		elif b"theme" in list(request.args.keys()):
-			try:
-				comp_config.OpenWebif.webcache.theme.value = getUrlArg(request, "theme")
-				comp_config.OpenWebif.webcache.theme.save()
-			except Exception:
-				pass
-		elif b"mepgmode" in list(request.args.keys()):
-			try:
-				comp_config.OpenWebif.webcache.mepgmode.value = int(request.args[b"mepgmode"][0])
-				comp_config.OpenWebif.webcache.mepgmode.save()
-			except ValueError:
-				pass
-		elif b"screenshot_high_resolution" in list(request.args.keys()):
-			val = (getUrlArg(request, "screenshot_high_resolution") == 'true')
-			comp_config.OpenWebif.webcache.screenshot_high_resolution.value = val
-			comp_config.OpenWebif.webcache.screenshot_high_resolution.save()
-		elif b"screenshot_refresh_auto" in list(request.args.keys()):
-			val = (getUrlArg(request, "screenshot_refresh_auto") == 'true')
-			comp_config.OpenWebif.webcache.screenshot_refresh_auto.value = val
-			comp_config.OpenWebif.webcache.screenshot_refresh_auto.save()
-		elif b"screenshot_refresh_time" in list(request.args.keys()):
-			try:
-				comp_config.OpenWebif.webcache.screenshot_refresh_time.value = int(request.args[b"screenshot_refresh_time"][0])
-				comp_config.OpenWebif.webcache.screenshot_refresh_time.save()
-			except ValueError:
-				pass
-		else:
-			return {"result": False}
-		return {"result": True}
+		args = list(request.args.keys())
+		for arg in args:
+			sarg = ensure_str(arg)
+			if sarg in ("minmovielist", "mintimerlist", "minepglist", "rcu_full_view", "epgsearch_full", "epgsearch_only_bq", "nownext_columns", "responsive_enabled", "showpicons", "showchanneldetails", "showiptvchannelsinselection", "screenshotchannelname", "showallpackages", "zapstream", "screenshot_high_resolution", "screenshot_refresh_auto"):
+				val = request.args[arg][0] in (b"true", b"1")
+				configitem = getattr(comp_config.OpenWebif.webcache, sarg)
+				configitem.value = val
+				configitem.save()
+				return {"result": True}
+			elif sarg in ("moviedb", "smallremote", "theme"):
+				try:
+					configitem = getattr(comp_config.OpenWebif.webcache, sarg)
+					configitem.value = getUrlArg(request, sarg)
+					configitem.save()
+				except Exception:
+					pass
+				return {"result": True}
+			elif sarg in ("mepgmode", "screenshot_refresh_time"):
+				try:
+					configitem = getattr(comp_config.OpenWebif.webcache, sarg)
+					configitem.value = int(request.args[arg][0])
+					configitem.save()
+				except Exception:
+					pass
+				return {"result": True}
+		return {"result": False}
 
 	def P_getserviceref(self, request):
 		"""
@@ -2465,6 +2414,22 @@ class WebController(BaseController):
 			self.isImage = True
 			return pp
 
+	def P_setthememode(self, request):
+		thememode = getUrlArg(request, "themeMode")
+		if thememode:
+			print("save theme mode: %s" % thememode)
+			comp_config.OpenWebif.responsive_themeMode.value = thememode
+			comp_config.OpenWebif.responsive_themeMode.save()
+		return {}
+
+	def P_setskincolor(self, request):
+		skincolor = getUrlArg(request, "skincolor")
+		if skincolor:
+			print("save color: %s" % skincolor)
+			comp_config.OpenWebif.responsive_skinColor.value = skincolor
+			comp_config.OpenWebif.responsive_skinColor.save()
+		return {}
+
 
 class ApiController(WebController):
 	def __init__(self, session, path=""):
@@ -2472,6 +2437,3 @@ class ApiController(WebController):
 
 	def prePageLoad(self, request):
 		self.isJson = True
-
-
-from Plugins.Extensions.OpenWebif.vtiaddon import expand_basecontroller  # noqa: F401

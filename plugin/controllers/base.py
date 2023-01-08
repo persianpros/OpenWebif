@@ -3,7 +3,7 @@
 ##########################################################################
 # OpenWebif: BaseController
 ##########################################################################
-# Copyright (C) 2011 - 2020 E2OpenPlugins
+# Copyright (C) 2011 - 2022 E2OpenPlugins
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -32,14 +32,14 @@ from twisted.internet import defer
 from twisted.protocols.basic import FileSender
 
 from Plugins.Extensions.OpenWebif.controllers.i18n import _
-from Tools.Directories import fileExists
+from Tools.Directories import fileExists, isPluginInstalled
 from Cheetah.Template import Template
 from enigma import eEPGCache
 from Components.config import config
 
 from Plugins.Extensions.OpenWebif.controllers.models.info import getInfo
 from Plugins.Extensions.OpenWebif.controllers.models.config import getCollapsedMenus, getConfigsSections, getShowName, getCustomName, getBoxName
-from Plugins.Extensions.OpenWebif.controllers.defaults import getPublicPath, getViewsPath, EXT_EVENT_INFO_SOURCE, STB_LANG, getIP, HASAUTOTIMER, TEXTINPUTSUPPORT, _isPluginInstalled
+from Plugins.Extensions.OpenWebif.controllers.defaults import getPublicPath, getViewsPath, EXT_EVENT_INFO_SOURCE, STB_LANG, getIP, HASAUTOTIMER, TEXTINPUTSUPPORT
 from Components.SystemInfo import BoxInfo
 
 
@@ -315,7 +315,7 @@ class BaseController(resource.Resource):
 
 		ip = getIP()
 		if ip != None:
-			if _isPluginInstalled("LCD4linux"):
+			if isPluginInstalled("LCD4linux"):
 				lcd4linux_key = "lcd4linux/config"
 				if lcd4linux_key:
 					extras.append({'key': lcd4linux_key, 'description': _("LCD4Linux Setup"), 'nw': '1'})

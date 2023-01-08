@@ -2,7 +2,7 @@
 ##########################################################################
 # OpenWebif: OpkgController
 ##########################################################################
-# Copyright (C) 2011 - 2020 E2OpenPlugins
+# Copyright (C) 2011 - 2022 E2OpenPlugins
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -22,8 +22,8 @@
 from enigma import eConsoleAppContainer
 from twisted.web import server, resource, http
 
-import os
-import json
+from os import remove, stat
+from json import dumps
 from six import ensure_binary, ensure_str
 
 from Components.config import config
@@ -62,29 +62,27 @@ class OpkgController(BaseController):
 			elif self.action in ("full", "listall", "list", "list_installed", "list_upgradable"):
 				return self.CallOPKList(request)
 			elif self.action in ("tmp"):
-				import glob
-				tmpfiles = glob.glob('/tmp/*.ipk')  # nosec
+				from glob import glob
+				tmpfiles = glob('/tmp/*.ipk')  # nosec
 				ipks = []
 				for tmpfile in tmpfiles:
 					ipks.append({
 						'path': tmpfile,
 						'name': (tmpfile.split('/')[-1]),
-						'size': os.stat(tmpfile).st_size,
-						'date': os.stat(tmpfile).st_mtime,
+						'size': stat(tmpfile).st_size,
+						'date': stat(tmpfile).st_mtime,
 					})
 				request.setHeader("content-type", "text/plain")
 				if PY3:
-					request.write(json.dumps({'ipkfiles': ipks}).encode("ISO-8859-1"))
+					request.write(dumps({'ipkfiles': ipks}).encode("ISO-8859-1"))
 				else:
-					request.write(json.dumps({'ipkfiles': ipks}, encoding="ISO-8859-1"))
+					request.write(dumps({'ipkfiles': ipks}, encoding="ISO-8859-1"))
 				request.finish()
 				return server.NOT_DONE_YET
 			else:
 				return self.ShowError(request, "Unknown command: " + self.action)
 		else:
 			return self.ShowHint(request)
-
-		return self.ShowError(request, "Error")
 
 	def parseAll(self):
 		map = {}
@@ -128,7 +126,7 @@ class OpkgController(BaseController):
 					else:
 						map.update({package: [version, description.strip(), installed, "0", section]})
 					package = None
-		except IOError:
+		except (IOError, OSError):
 			pass
 
 		keys = sorted(map.keys())
@@ -207,10 +205,10 @@ class OpkgController(BaseController):
 				self.request.setHeader("content-type", "application/json; charset=utf-8")
 				try:
 					data = self.parseAll()
-					self.request.write(ensure_binary(json.dumps(data)))
+					self.request.write(ensure_binary(dumps(data)))
 				except Exception as exc:
 					self.request.setResponseCode(http.INTERNAL_SERVER_ERROR)
-					self.request.write(ensure_binary(json.dumps({"result": False, "request": self.request.path, "exception": repr(exc)})))
+					self.request.write(ensure_binary(dumps({"result": False, "request": self.request.path, "exception": repr(exc)})))
 			elif self.action == "full":
 				try:
 					data = open("/tmp/opkg.tmp", 'r').read()
@@ -252,7 +250,7 @@ class OpkgController(BaseController):
 					data = []
 					data.append({"result": True, "packages": rpl})
 					self.request.setHeader("content-type", "application/json; charset=utf-8")
-					self.request.write(ensure_binary(json.dumps(data)))
+					self.request.write(ensure_binary(dumps(data)))
 				else:
 					nresult = '\n'.join(rpl)
 					nresult.replace('\n', '<br>\n')
@@ -313,17 +311,15 @@ class OPKGUpload(resource.Resource):
 				result = [False, _('wrong filetype')]
 			else:
 				FN = "/tmp/" + filename  # nosec
-				fileh = os.open(FN, os.O_WRONLY | os.O_CREAT)
-				bytes = 0
-				if fileh:
-					bytes = os.write(fileh, content)
-					os.close(fileh)
-				if bytes <= 0:
+				bytecount = 0
+				with open(FN, "wb") as fd:
+					bytecount = fd.write(content)
+				if bytecount <= 0:
 					try:
-						os.remove(FN)
+						remove(FN)
 					except OSError:
 						pass
 					result = [False, _('Error writing File')]
 				else:
 					result = [True, FN]
-		return ensure_binary(json.dumps({"Result": result}))
+		return ensure_binary(dumps({"Result": result}))

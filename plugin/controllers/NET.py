@@ -3,7 +3,7 @@
 ##########################################################################
 # OpenWebif: NetController
 ##########################################################################
-# Copyright (C) 2018-2020 jbleyel and E2OpenPlugins
+# Copyright (C) 2018-2022 jbleyel and E2OpenPlugins
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -21,13 +21,16 @@
 ##########################################################################
 
 from twisted.web import server, http, resource
-import json
+from json import dumps
 from six import ensure_text, ensure_binary
 from re import sub as re_sub
 from Plugins.SystemPlugins.NetworkBrowser.AutoMount import iAutoMount
 
 
 class NetController(resource.Resource):
+
+	NOSSHARE = "No sharename given!"
+
 	def __init__(self, session, path=""):
 		resource.Resource.__init__(self)
 		self.path = ensure_text(path)
@@ -42,7 +45,7 @@ class NetController(resource.Resource):
 
 	def parsecallback(self):
 		self.request.setResponseCode(http.OK)
-		self.request.write(json.dumps(self.result))
+		self.request.write(dumps(self.result))
 		self.request.finish()
 
 	def render(self, request):
@@ -52,7 +55,7 @@ class NetController(resource.Resource):
 			request.setResponseCode(http.OK)
 			request.setHeader("content-type", "application/json")
 			func()
-			request.write(json.dumps(self.result))
+			request.write(dumps(self.result))
 			request.finish()
 		else:
 			func = getattr(self, "PC_" + self.path, None)
@@ -68,26 +71,26 @@ class NetController(resource.Resource):
 	def buildCommand(self, ids):
 		args = self.request.args
 		paramlist = ids.split(",")
-		list = {}
+		_list = {}
 		for key in paramlist:
 			if key in args:
 				k = ensure_binary(key)
-				list[key] = ensure_text(args[k][0])
+				_list[key] = ensure_text(args[k][0])
 			else:
-				list[key] = None
-		return list
+				_list[key] = None
+		return _list
 
 	def failed(self, text):
 		self.result["message"] = text
 
 	def P_listmounts(self):
-		list = []
+		_list = []
 		mounts = iAutoMount.getMountsList()
 		for sharename in list(mounts.keys()):
 			mountentry = iAutoMount.automounts[sharename]
-			list.append(mountentry)
+			_list.append(mountentry)
 		self.result["result"] = True
-		self.result["mounts"] = list
+		self.result["mounts"] = _list
 
 # Todo: check result
 	def removeCallback(self, data):
@@ -102,7 +105,7 @@ class NetController(resource.Resource):
 		param = self.buildCommand('sharename')
 		sharename = param["sharename"]
 		if sharename is None:
-			self.failed("No sharename given!")
+			self.failed(self.NOSSHARE)
 		else:
 			mounts = iAutoMount.getMountsList()
 			if sharename not in mounts:
@@ -122,7 +125,7 @@ class NetController(resource.Resource):
 		param = self.buildCommand('sharename,newsharename')
 		sharename = param["sharename"]
 		if sharename is None:
-			return self.failed("No sharename given!")
+			return self.failed(self.NOSSHARE)
 		newsharename = param["newsharename"]
 		if newsharename is None:
 			return self.failed("No newsharename given!")
@@ -155,7 +158,7 @@ class NetController(resource.Resource):
 			return self.failed("No sharedir given!")
 		sharename = param["sharename"]
 		if sharename is None:
-			return self.failed("No sharename given!")
+			return self.failed(self.NOSSHARE)
 		mounttype = param["mounttype"]
 		if mounttype is None:
 			mounttype = "nfs"

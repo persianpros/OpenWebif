@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-import json
-import copy
+from json import dumps
+from copy import copy
 
 from twisted.web import resource
 
@@ -38,7 +38,7 @@ def json_response(request, data, indent=1):
         JSON representation of *data* with appropriate HTTP headers
     """
     request.setHeader("content-type", "application/json; charset=utf-8")
-    return json.dumps(data, indent=indent)
+    return dumps(data, indent=indent)
 
 
 class RESTControllerSkeleton(resource.Resource):
@@ -46,7 +46,7 @@ class RESTControllerSkeleton(resource.Resource):
 
     def __init__(self, *args, **kwargs):
         resource.Resource.__init__(self)
-        self._cors_header = copy.copy(CORS_DEFAULT)
+        self._cors_header = copy(CORS_DEFAULT)
         http_verbs = []
         self.session = kwargs.get("session")
 

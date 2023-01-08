@@ -3,7 +3,7 @@
 ##########################################################################
 # OpenWebif: info
 ##########################################################################
-# Copyright (C) 2011 - 2021 E2OpenPlugins
+# Copyright (C) 2011 - 2022 E2OpenPlugins
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by

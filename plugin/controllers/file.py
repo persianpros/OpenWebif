@@ -3,7 +3,7 @@
 ##########################################################################
 # OpenWebif: FileController
 ##########################################################################
-# Copyright (C) 2011 - 2020 E2OpenPlugins
+# Copyright (C) 2011 - 2022 E2OpenPlugins
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -20,17 +20,17 @@
 # Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
 ##########################################################################
 
-from os.path import realpath, exists, isdir
-import re
-import glob
+from os.path import realpath, exists, isdir, basename
+from re import match
+from glob import glob
 from six.moves.urllib.parse import quote
-import json
+from json import dumps
 from six import ensure_binary
 
 from twisted.web import static, resource, http
 
+from Screens.LocationBox import defaultInhibitDirs
 from Components.config import config
-from Tools.Directories import fileExists
 from Plugins.Extensions.OpenWebif.controllers.utilities import lenient_force_utf_8, sanitise_filename_slashes, getUrlArg
 
 
@@ -67,7 +67,7 @@ class FileController(resource.Resource):
 					port = config.OpenWebif.https_port.value
 					proto = 'https'
 				ourhost = request.getHeader('host')
-				m = re.match('.+\:(\d+)$', ourhost)
+				m = match('.+\:(\d+)$', ourhost)
 				if m is not None:
 					port = m.group(1)
 
@@ -94,12 +94,12 @@ class FileController(resource.Resource):
 			directories = []
 			files = []
 			request.setHeader("content-type", "application/json; charset=utf-8")
-			if fileExists(path):
+			if exists(path):
 				if path == '/':
 					path = ''
 				try:
-					files = glob.glob(path + '/' + pattern)
-				except:  # nosec # noqa: E722
+					files = glob(path + '/' + pattern)
+				except OSError:
 					files = []
 				files.sort()
 				tmpfiles = files[:]
@@ -109,6 +109,30 @@ class FileController(resource.Resource):
 						files.remove(x)
 				if nofiles:
 					files = []
-				return ensure_binary(json.dumps({"result": True, "dirs": directories, "files": files}, indent=2))
+				return ensure_binary(dumps({"result": True, "dirs": directories, "files": files}, indent=2))
 			else:
-				return ensure_binary(json.dumps({"result": False, "message": "path %s not exits" % (path)}, indent=2))
+				return ensure_binary(dumps({"result": False, "message": "path %s not exits" % (path)}, indent=2))
+
+		tree = "tree" in request.args
+		path = getUrlArg(request, "id")
+		if tree:
+			request.setHeader("content-type", "application/json; charset=utf-8")
+			directories = []
+			if path is None or path == "#":
+				path = "/"
+			if exists(path):
+				if path == "/":
+					path = ""
+				try:
+					files = glob(path + '/*')
+				except OSError:
+					files = []
+				files.sort()
+				tmpfiles = files[:]
+				for x in tmpfiles:
+					if isdir(x) and x not in defaultInhibitDirs:
+						directories.append({"id": x, "text": basename(x), "children": True})
+			if path == "":
+				return ensure_binary(dumps([{"id": "/", "text": "Root", "children": directories}]))
+			else:
+				return ensure_binary(dumps([{"id": path, "text": basename(path), "children": directories}]))

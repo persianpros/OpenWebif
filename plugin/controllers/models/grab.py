@@ -3,7 +3,7 @@
 ##########################################################################
 # OpenWebif: grab
 ##########################################################################
-# Copyright (C) 2011 - 2020 E2OpenPlugins
+# Copyright (C) 2011 - 2022 E2OpenPlugins
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -156,11 +156,11 @@ else:
 					if InfoBar.instance.session.pipshown:
 						graboptions.append("-i 1")
 				elif mode == "lcd":
-					eDBoxLCD.getInstance().dumpLCD()
+					eDBoxLCD.getInstance().setDump(True)
 					fileformat = "png"
-					command = "cat /tmp/lcdshot.%s" % fileformat
+					command = "cat /tmp/lcd.png"
 
-			self.filepath = "/tmp/screenshot." + fileformat
+			self.filepath = "/tmp/screenshot.%s" % fileformat
 			self.container = eConsoleAppContainer()
 			self.container.appClosed.append(self.grabFinished)
 			self.container.stdoutAvail.append(request.write)
@@ -179,9 +179,9 @@ else:
 					sref = '_'.join(ref.split(':', 10)[:10])
 					if config.OpenWebif.webcache.screenshotchannelname.value:
 						sref = ServiceReference(ref).getServiceName()
-				except:  # nosec # noqa: E722
-					sref = 'screenshot'
-			sref = sref + '_' + time.strftime("%Y%m%d%H%M%S", time.localtime(time.time()))
+				except Exception:  # nosec # noqa: E722
+				sref = "screenshot"
+			sref = "%s_%s" % (sref, time.strftime("%Y%m%d%H%M%S", time.localtime(time.time())))
 			request.notifyFinish().addErrback(self.requestAborted)
 			request.setHeader('Content-Disposition', 'inline; filename=%s.%s;' % (sref, fileformat))
 			request.setHeader('Content-Type', 'image/%s' % fileformat.replace("jpg", "jpeg"))

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ##############################################################################
-#                        2011 - 2017 E2OpenPlugin                            #
+#                        2011 - 2012 E2OpenPlugin                            #
 #                                                                            #
 #  This file is open source software; you can redistribute it and/or modify  #
 #     it under the terms of the GNU General Public License version 2 as      #
@@ -9,7 +9,7 @@
 #                                                                            #
 ##############################################################################
 from Components.config import config
-import os
+from os.path import exists
 
 
 def getLocations():
@@ -22,7 +22,7 @@ def getLocations():
 
 def getCurrentLocation():
 	path = config.movielist.last_videodir.value or "/hdd/movie"
-	if not os.path.exists(path):
+	if not exists(path):
 		path = "/hdd/movie"
 
 	return {
@@ -32,11 +32,12 @@ def getCurrentLocation():
 
 
 def addLocation(dirname, create):
-	if not os.path.exists(dirname):
+	if not exists(dirname):
 		if create:
+			from os import makedirs
 			try:
-				os.makedirs(dirname)
-			except Exception:
+				makedirs(dirname)
+			except (Exception, OSError):
 				return {
 					"result": False,
 					"message": "Creation of folder '%s' failed" % dirname
@@ -73,11 +74,12 @@ def removeLocation(dirname, remove):
 		locations.remove(dirname)
 		config.movielist.videodirs.value = locations
 		config.movielist.videodirs.save()
-		if os.path.exists(dirname) and remove:
+		if exists(dirname) and remove:
+			from os import rmdir
 			try:
-				os.rmdir(dirname)
+				rmdir(dirname)
 				msg = "Location and Folder '%s' removed succesfully" % dirname
-			except Exception:
+			except (Exception, OSError):
 				msg = "Location '%s' removed succesfully but the Folder not exists or is not empty" % dirname
 		else:
 			msg = "Location '%s' removed succesfully" % dirname

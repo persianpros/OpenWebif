@@ -1,12 +1,19 @@
 # -*- coding: utf-8 -*-
 
-from Tools.Directories import fileExists, resolveFilename, SCOPE_PLAYLIST
+from Tools.Directories import resolveFilename, SCOPE_PLAYLIST
 from Components.FileList import FileList
 from enigma import eServiceReference
 
-import os
+from os import walk
+from os.path import isdir, isfile
 import fnmatch
 
+
+def mpNi():
+	return {
+		"result": False,
+		"message": "Mediaplayer not installed"
+	}
 
 def getMpInstance(session):
 	try:
@@ -40,10 +47,10 @@ def mediaPlayerAdd(session, filename):
 	if mp is None:
 		return {
 			"result": False,
-			"message": "Mediaplayer not installed"
+			"message": mpNi()
 		}
 
-	if fileExists(filename):
+	if isfile(filename):
 		service = eServiceReference(4097, 0, filename)
 	else:
 		service = eServiceReference(filename)
@@ -66,10 +73,7 @@ def mediaPlayerAdd(session, filename):
 def mediaPlayerRemove(session, filename):
 	mp = getOrCreateMpInstance(session)
 	if mp is None:
-		return {
-			"result": False,
-			"message": "Mediaplayer not installed"
-		}
+		return mpNi()
 
 	service = eServiceReference(filename)
 	if not service.valid():
@@ -106,12 +110,9 @@ def mediaPlayerRemove(session, filename):
 def mediaPlayerPlay(session, filename, root):
 	mp = getOrCreateMpInstance(session)
 	if mp is None:
-		return {
-			"result": False,
-			"message": "Mediaplayer not installed"
-		}
+		return mpNi()
 
-	if fileExists(filename):
+	if isfile(filename):
 		service = eServiceReference(4097, 0, filename)
 	else:
 		service = eServiceReference(filename)
@@ -224,7 +225,7 @@ def mediaPlayerList(session, path, types):
 			"result": True,
 			"files": files
 		}
-	elif rpath is None or os.path.isdir(rpath):
+	elif rpath is None or isdir(rpath):
 		files = []
 		filelist = FileList(rpath, matchingPattern=mpattern, useServiceRef=mserviceref, additionalExtensions="4098:m3u 4098:e2pls 4098:pls")
 		for item in filelist.getFileList():
@@ -261,13 +262,10 @@ def mediaPlayerList(session, path, types):
 def mediaPlayerLoad(session, filename):
 	mp = getOrCreateMpInstance(session)
 	if mp is None:
-		return {
-			"result": False,
-			"message": "Mediaplayer not installed"
-		}
+		return mpNi()
 
 	path = resolveFilename(SCOPE_PLAYLIST, filename)
-	if not fileExists(path):
+	if not isfile(path):
 		return {
 			"result": False,
 			"message": "Playlist '%s' does not exist" % path
@@ -283,10 +281,7 @@ def mediaPlayerLoad(session, filename):
 def mediaPlayerSave(session, filename):
 	mp = getOrCreateMpInstance(session)
 	if mp is None:
-		return {
-			"result": False,
-			"message": "Mediaplayer not installed"
-		}
+		return mpNi()
 
 	path = resolveFilename(SCOPE_PLAYLIST, filename)
 	mp.playlistIOInternal.save(path)
@@ -298,7 +293,7 @@ def mediaPlayerSave(session, filename):
 
 def mediaPlayerFindFile(session, path, pattern):
 	rfiles = []
-	for root, dirs, files in os.walk(path):
+	for root, dirs, files in walk(path):
 		for filename in fnmatch.filter(files, pattern):
 			rfiles.append({
 				"name": filename,

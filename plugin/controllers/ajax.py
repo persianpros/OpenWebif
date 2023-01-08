@@ -3,7 +3,7 @@
 ##########################################################################
 # OpenWebif: AjaxController
 ##########################################################################
-# Copyright (C) 2011 - 2020 E2OpenPlugins
+# Copyright (C) 2011 - 2022 E2OpenPlugins
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -27,17 +27,17 @@ from os.path import exists
 
 from Plugins.Extensions.OpenWebif.controllers.models.info import getInfo
 from Plugins.Extensions.OpenWebif.controllers.models.services import getBouquets, getChannels, getAllServices, getSatellites, getProviders, getEventDesc, getSimilarEpg, getChannelEpg, getSearchEpg, getCurrentFullInfo, getMultiEpg, getEvent
-from Plugins.Extensions.OpenWebif.controllers.models.movies import getMovieList, getMovieSearchList, getMovieInfo
+from Plugins.Extensions.OpenWebif.controllers.models.movies import getMovieList, getMovieInfo
 from Plugins.Extensions.OpenWebif.controllers.models.timers import getTimers
 from Plugins.Extensions.OpenWebif.controllers.models.config import getConfigs, getConfigsSections
 from Plugins.Extensions.OpenWebif.controllers.models.stream import GetSession
 from Plugins.Extensions.OpenWebif.controllers.base import BaseController
 from Plugins.Extensions.OpenWebif.controllers.models.locations import getLocations
-from Plugins.Extensions.OpenWebif.controllers.defaults import OPENWEBIFVER, getPublicPath, VIEWS_PATH, TRANSCODING, EXT_EVENT_INFO_SOURCE, HASAUTOTIMER, HASAUTOTIMERTEST, HASAUTOTIMERCHANGE, HASVPS, HASSERIES, ATSEARCHTYPES
+from Plugins.Extensions.OpenWebif.controllers.defaults import OPENWEBIFVER, getPublicPath, VIEWS_PATH, TRANSCODING, EXT_EVENT_INFO_SOURCE, HASAUTOTIMER, HASAUTOTIMERTEST, HASAUTOTIMERCHANGE, HASVPS, HASSERIES, ATSEARCHTYPES, VXGENABLED
 from Plugins.Extensions.OpenWebif.controllers.utilities import getUrlArg, getEventInfoProvider
 from Components.SystemInfo import BoxInfo
 
-type = BoxInfo.getItem("model")
+model = BoxInfo.getItem("model")
 
 
 class AjaxController(BaseController):
@@ -54,10 +54,14 @@ class AjaxController(BaseController):
 		"""
 		return ['powerstate', 'message', 'myepg', 'radio', 'terminal', 'bqe', 'tv', 'satfinder']
 
+	def P_foldertree(self, request):
+		showbookmarks = getUrlArg(request, "showbookmarks", "false") != "false"
+		return {"locations": getLocations()['locations'], "showbookmarks": showbookmarks}
+
 	def P_edittimer(self, request):
 		pipzap = getInfo()['timerpipzap']
-		autoadjust = getInfo()['timerautoadjust']
-		return {"autoadjust": autoadjust, "pipzap": pipzap}
+		allow_duplicate = getInfo()['allow_duplicate']
+		return {"allow_duplicate": allow_duplicate, "pipzap": pipzap}
 
 	def P_current(self, request):
 		return getCurrentFullInfo(self.session)
@@ -97,13 +101,12 @@ class AjaxController(BaseController):
 	def P_event(self, request):
 		event = getEvent(getUrlArg(request, "sref"), getUrlArg(request, "idev"))
 		if event:
-			# TODO: this shouldn't really be part of an event's data
 			event['event']['recording_margin_before'] = config.recording.margin_before.value
 			event['event']['recording_margin_after'] = config.recording.margin_after.value
 			event['at'] = HASAUTOTIMER
 			event['transcoding'] = TRANSCODING
 			event['moviedb'] = config.OpenWebif.webcache.moviedb.value if config.OpenWebif.webcache.moviedb.value else EXT_EVENT_INFO_SOURCE
-			event['extEventInfoProvider'] = extEventInfoProvider = getEventInfoProvider(event['moviedb'])
+			event['extEventInfoProvider'] = getEventInfoProvider(event['moviedb'])
 		return event
 
 	def P_about(self, request):
@@ -113,11 +116,12 @@ class AjaxController(BaseController):
 
 	def P_boxinfo(self, request):
 		info = getInfo(self.session, need_fullinfo=True)
-
-		if fileExists(getPublicPath("/images/boxes/" + type + ".png")):
-			info["boximage"] = type + ".png"
-		elif fileExists(getPublicPath("/images/boxes/" + type + ".jpg")):
-			info["boximage"] = type + ".jpg"
+#		boxtype = info["boxtype"]
+#		info["boximage"] = "%s_front.png" % boxtype
+		if fileExists(getPublicPath("/images/boxes/" + model + ".png")):
+			info["boximage"] = model + ".png"
+		elif fileExists(getPublicPath("/images/boxes/" + model + ".jpg")):
+			info["boximage"] = model + ".jpg"
 		else:
 			info["boximage"] = "unknown.png"
 		return info
@@ -172,26 +176,17 @@ class AjaxController(BaseController):
 				}
 
 	def P_movies(self, request):
-		movies = getMovieList(request.args)
-		movies['transcoding'] = TRANSCODING
+		directory = getUrlArg(request, "dirname")
+		if directory is None:
+			if config.OpenWebif.webcache.moviedir.value and exists(config.OpenWebif.webcache.moviedir.value):
+				directory = config.OpenWebif.webcache.moviedir.value
+		elif exists(directory):
+			config.OpenWebif.webcache.moviedir.value = directory
+			config.OpenWebif.webcache.moviedir.save()
+		else:
+			directory = None
 
-		sorttype = config.OpenWebif.webcache.moviesort.value
-		unsort = movies['movies']
-
-		if sorttype == 'name':
-			movies['movies'] = sorted(unsort, key=lambda k: k['eventname'])
-		elif sorttype == 'named':
-			movies['movies'] = sorted(unsort, key=lambda k: k['eventname'], reverse=True)
-		elif sorttype == 'date':
-			movies['movies'] = sorted(unsort, key=lambda k: k['recordingtime'])
-		elif sorttype == 'dated':
-			movies['movies'] = sorted(unsort, key=lambda k: k['recordingtime'], reverse=True)
-
-		movies['sort'] = sorttype
-		return movies
-
-	def P_moviesearch(self, request):
-		movies = getMovieSearchList(request.args)
+		movies = getMovieList(request.args, directory=directory)
 		movies['transcoding'] = TRANSCODING
 
 		sorttype = config.OpenWebif.webcache.moviesort.value
@@ -275,7 +270,7 @@ class AjaxController(BaseController):
 		loc = getLocations()
 		ret['locations'] = loc['locations']
 		if exists(VIEWS_PATH + "/responsive"):
-			ret['responsivedesign'] = config.OpenWebif.responsive_enabled.value
+			ret['responsivedesign'] = config.OpenWebif.webcache.responsive_enabled.value
 		return ret
 
 	# http://enigma2/ajax/multiepg
@@ -335,7 +330,7 @@ class AjaxController(BaseController):
 		ret['hasSeriesPlugin'] = 1 if HASSERIES else 0
 		ret['test'] = 1 if HASAUTOTIMERTEST else 0
 		ret['hasChange'] = 1 if HASAUTOTIMERCHANGE else 0
-		ret['autoadjust'] = getInfo()['timerautoadjust']
+		ret['allow_duplicate'] = getInfo()['allow_duplicate']
 		ret['searchTypes'] = ATSEARCHTYPES
 
 		if config.OpenWebif.autotimer_regex_searchtype.value:
@@ -356,19 +351,16 @@ class AjaxController(BaseController):
 				auth = '-sid:' + str(session.GetSID(request)) + "@"
 		else:
 			auth = ''
-		vxgenabled = False
-		if fileExists(getPublicPath("/vxg/media_player.pexe")):
-			vxgenabled = True
 		transcoding = TRANSCODING
 		transcoder_port = 0
 		if transcoding:
 			try:
 				transcoder_port = int(config.plugins.transcodingsetup.port.value)
-				if BoxInfo.getItem("platform") in ("inihdp", "8100s") or type in ("hd2400", "et10000", "et13000", "beyonwizu4", "sf5008", "x2plus", "formuler1", "tiviaraplus"):
+				if BoxInfo.getItem("platform") in ("inihdp", "8100s") or model in ("hd2400", "et10000", "et13000", "beyonwizu4", "sf5008", "x2plus", "formuler1", "tiviaraplus"):
 					transcoder_port = int(config.OpenWebif.streamport.value)
 			except Exception:
 				transcoder_port = 0
-		return {"transcoder_port": transcoder_port, "vxgenabled": vxgenabled, "auth": auth, "streaming_port": streaming_port}
+		return {"transcoder_port": transcoder_port, "vxgenabled": VXGENABLED, "auth": auth, "streaming_port": streaming_port}
 
 	def P_editmovie(self, request):
 		sref = getUrlArg(request, "sRef")

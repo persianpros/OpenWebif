@@ -3,7 +3,7 @@
 ##########################################################################
 # OpenWebif: httpserver
 ##########################################################################
-# Copyright (C) 2011 - 2020 E2OpenPlugins
+# Copyright (C) 2011 - 2022 E2OpenPlugins
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 # Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
 ##########################################################################
 
-import enigma
+from enigma import eEnv
 from Screens.MessageBox import MessageBox
 from Components.config import config
 from Tools.Directories import fileExists, pathExists
@@ -36,7 +36,8 @@ from OpenSSL import SSL
 from OpenSSL import crypto
 from Components.Network import iNetwork
 
-import os
+from os import listdir, remove
+from os.path import exists
 import imp
 import ipaddress
 from six import text_type, ensure_str
@@ -45,13 +46,15 @@ import shutil
 global listener, server_to_stop, site, sslsite
 listener = []
 
+INET6 = "/proc/net/if_inet6"
+
 
 def getAllNetworks():
 	tempaddrs = []
 	# Get all IP networks
-	if fileExists('/proc/net/if_inet6'):
+	if fileExists(INET6):
 		if has_ipv6 and version.major >= 12:
-			proc = '/proc/net/if_inet6'
+			proc = INET6
 			for line in open(proc).readlines():
 				# Skip localhost
 				if line.startswith('00000000000000000000000000000001'):
@@ -85,31 +88,31 @@ def getAllNetworks():
 
 def verifyCallback(connection, x509, errnum, errdepth, ok):
 	if not ok:
-		print('[OpenWebif] Invalid cert from subject: ', x509.get_subject())
+		print('[OpenWebif] Invalid cert from subject: %s' % str(x509.get_subject()))
 		return False
 	else:
-		print('[OpenWebif] Successful cert authed as: ', x509.get_subject())
+		print('[OpenWebif] Successful cert authed as: %s' % str(x509.get_subject()))
 	return True
 
 
 def buildRootTree(session):
 	root = RootController(session)
 
-	origwebifpath = enigma.eEnv.resolve('${libdir}/enigma2/python/Plugins/Extensions/WebInterface')
+	origwebifpath = eEnv.resolve('${libdir}/enigma2/python/Plugins/Extensions/WebInterface')
 	if pathExists(origwebifpath):
 		shutil.rmtree(origwebifpath)
 
 	# import modules
 	print("[OpenWebif] loading external plugins...")
 	from Plugins.Extensions.OpenWebif.WebChilds.Toplevel import loaded_plugins
-	openwebifpath = enigma.eEnv.resolve('${libdir}/enigma2/python/Plugins/Extensions/OpenWebif')
+	openwebifpath = eEnv.resolve('${libdir}/enigma2/python/Plugins/Extensions/OpenWebif')
 	if len(loaded_plugins) == 0:
-		externals = os.listdir(openwebifpath + "/WebChilds/External")
+		externals = listdir(openwebifpath + "/WebChilds/External")
 		loaded = []
 		for external in externals:
 			if external[-3:] == ".py":
 				modulename = external[:-3]
-			elif external[-4:] == ".pyo":
+			elif external[-4:] == ".pyo" or external[-4:] == ".pyc":
 				modulename = external[:-4]
 			else:
 				continue
@@ -157,7 +160,7 @@ def HttpdStart(session):
 
 		# start http webserver on configured port
 		try:
-			if has_ipv6 and fileExists('/proc/net/if_inet6') and version.major >= 12:
+			if has_ipv6 and fileExists(INET6) and version.major >= 12:
 				# use ipv6
 				listener.append(reactor.listenTCP(port, site, interface='::'))
 			else:
@@ -168,7 +171,7 @@ def HttpdStart(session):
 		except CannotListenError:
 			print("[OpenWebif] failed to listen on Port %i" % (port))
 
-		if config.OpenWebif.https_clientcert.value is True and not os.path.exists(CA_FILE):
+		if config.OpenWebif.https_clientcert.value is True and not exists(CA_FILE):
 			# Disable https
 			config.OpenWebif.https_enabled.value = False
 			config.OpenWebif.https_enabled.save()
@@ -185,7 +188,7 @@ def HttpdStart(session):
 					cert = crypto.load_certificate(crypto.FILETYPE_PEM, open(CERT_FILE, 'rt').read())
 					print("[OpenWebif] CHAIN_FILE = %s" % CHAIN_FILE)
 					chain = None
-					if os.path.exists(CHAIN_FILE):
+					if exists(CHAIN_FILE):
 						chain = [crypto.load_certificate(crypto.FILETYPE_PEM, open(CHAIN_FILE, 'rt').read())]
 						print("[OpenWebif] ssl chain file found - loading")
 					context = ssl.CertificateOptions(privateKey=key, certificate=cert, extraCertChain=chain)
@@ -193,10 +196,10 @@ def HttpdStart(session):
 					# THIS EXCEPTION IS ONLY CATCHED WHEN CERT FILES ARE BAD (look below for error)
 					print("[OpenWebif] failed to get valid cert files. (It could occure bad file save or format, removing...)")
 					# removing bad files
-					if os.path.exists(KEY_FILE):
-						os.remove(KEY_FILE)
-					if os.path.exists(CERT_FILE):
-						os.remove(CERT_FILE)
+					if exists(KEY_FILE):
+						remove(KEY_FILE)
+					if exists(CERT_FILE):
+						remove(CERT_FILE)
 					# regenerate new ones
 					installCertificates(session)
 					context = ssl.DefaultOpenSSLContextFactory(KEY_FILE, CERT_FILE)
@@ -212,13 +215,13 @@ def HttpdStart(session):
 				sslroot = AuthResource(session, temproot)
 				sslsite = server.Site(sslroot)
 
-				if has_ipv6 and fileExists('/proc/net/if_inet6') and version.major >= 12:
+				if has_ipv6 and fileExists(INET6) and version.major >= 12:
 					# use ipv6
 					listener.append(reactor.listenSSL(httpsPort, sslsite, context, interface='::'))
 				else:
 					# ipv4 only
 					listener.append(reactor.listenSSL(httpsPort, sslsite, context))
-				print("[OpenWebif] started on", httpsPort)
+				print("[OpenWebif] started on port:%s" % str(httpsport))
 				BJregisterService('https', httpsPort)
 			except CannotListenError:
 				print("[OpenWebif] failed to listen on Port", httpsPort)
@@ -231,7 +234,7 @@ def HttpdStart(session):
 		# Streaming requires listening on 127.0.0.1:80
 		if port != 80:
 			try:
-				if has_ipv6 and fileExists('/proc/net/if_inet6') and version.major >= 12:
+				if has_ipv6 and fileExists(INET6) and version.major >= 12:
 					# use ipv6
 					# Dear Twisted devs: Learning English, lesson 1 - interface != address
 					listener.append(reactor.listenTCP(80, site, interface='::1'))
@@ -409,7 +412,7 @@ class StopServer:
 		global listener
 		self.server_to_stop = 0
 		for interface in listener:
-			print("[OpenWebif] Stopping server on port", interface.port)
+			print("[OpenWebif] Stopping server on port:%s" % str(interface.port))
 			deferred = interface.stopListening()
 			try:
 				self.server_to_stop += 1
@@ -438,7 +441,7 @@ def installCertificates(session):
 	certGenerator = SSLCertificateGenerator()
 	try:
 		certGenerator.installCertificates()
-	except IOError as e:
+	except (IOError, OSError) as e:
 		# Disable https
 		config.OpenWebif.https_enabled.value = False
 		config.OpenWebif.https_enabled.save()
@@ -455,7 +458,7 @@ def BJregisterService(protocol, port):
 	except:  # nosec # noqa: E722
 		pass
 	try:
-		servicetype = '_' + protocol + '._tcp'
-		enigma.e2avahi_announce(None, servicetype, port)
+		from enigma import e2avahi_announce
+		e2avahi_announce(None, "_%s._tcp" % protocol, port)
 	except:  # nosec # noqa: E722
 		pass

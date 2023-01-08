@@ -3,7 +3,7 @@
 ##########################################################################
 # OpenWebif: ERController
 ##########################################################################
-# Copyright (C) 2013 - 2020 jbleyel and E2OpenPlugins
+# Copyright (C) 2013 - 2022 jbleyel and E2OpenPlugins
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -22,6 +22,7 @@
 
 from twisted.web import resource, http
 from six import ensure_binary
+from Plugins.Extensions.OpenWebif.controllers.utilities import e2simplexmlresult
 
 
 class ERController(resource.Resource):
@@ -57,4 +58,4 @@ class ERController(resource.Resource):
 			from Plugins.Extensions.EPGRefresh.EPGRefresh import epgrefresh
 			return ensure_binary(''.join(epgrefresh.buildConfiguration(webif=True)))
 		except ImportError:
-			return b'<?xml version="1.0" encoding="UTF-8" ?><e2simplexmlresult><e2state>false</e2state><e2statetext>EPG Refresh Plugin not found</e2statetext></e2simplexmlresult>'
+			return e2simplexmlresult(False, b"EPG Refresh Plugin not found")

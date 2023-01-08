@@ -39,12 +39,12 @@ def getAudioTracks(session):
 	return ret
 
 
-def setAudioTrack(session, id):
+def setAudioTrack(session, audioid):
 	service = session.nav.getCurrentService()
 	audio = service and service.audioTracks()
 	if audio is not None and service is not None:
-		if audio.getNumberOfTracks() > id and id >= 0:
-			audio.selectTrack(id)
+		if audio.getNumberOfTracks() > audioid and audioid >= 0:
+			audio.selectTrack(audioid)
 			return {"result": True}
 
 	return {"result": False}

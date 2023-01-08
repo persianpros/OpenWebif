@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import re
+from re import compile as recompile, sub
 from six import PY3, iteritems, text_type, ensure_binary, ensure_str
 try:  # this is only for the testsuite
 	from Plugins.Extensions.OpenWebif.controllers.defaults import DEBUG_ENABLED
@@ -7,12 +7,12 @@ except Exception:
 	DEBUG_ENABLED = False
 
 MANY_SLASHES_PATTERN = r'[\/]+'
-MANY_SLASHES_REGEX = re.compile(MANY_SLASHES_PATTERN)
+MANY_SLASHES_REGEX = recompile(MANY_SLASHES_PATTERN)
 
 PATTERN_ITEM_OR_KEY_ACCESS = r'^(?P<attr_name>[a-zA-Z][\w\d]*)' \
 							r'\[((?P<index>\d+)|' \
 							r'[\'\"](?P<key>[\s\w\d]+)[\'\"])\]$'
-REGEX_ITEM_OR_KEY_ACCESS = re.compile(PATTERN_ITEM_OR_KEY_ACCESS)
+REGEX_ITEM_OR_KEY_ACCESS = recompile(PATTERN_ITEM_OR_KEY_ACCESS)
 
 # stolen from enigma2_http_api ...
 # https://wiki.neutrino-hd.de/wiki/Enigma:Services:Formatbeschreibung
@@ -124,11 +124,11 @@ def sanitise_filename_slashes(value):
 		value w/o multiple slashes
 
 	>>> in_value = "///tmp/x/y/z"
-	>>> expected = re.sub("^/+", "/", "///tmp/x/y/z")
+	>>> expected = sub("^/+", "/", "///tmp/x/y/z")
 	>>> sanitise_filename_slashes(in_value) == expected
 	True
 	"""
-	return re.sub(MANY_SLASHES_REGEX, '/', value)
+	return sub(MANY_SLASHES_REGEX, '/', value)
 
 
 def get_config_attribute(path, root_obj, head=None):
@@ -273,11 +273,17 @@ def create_servicereference(*args, **kwargs):
 def getGenreStringLong(hn, ln):
 	return ""
 
-# Fallback moviePlayState
+
+def toBinary(s):
+	if not isinstance(s, bytes):
+		return s.encode(encoding='utf-8', errors='strict')
+	return s
 
 
-def _moviePlayState(cutsFileName, ref, length):
-	return 0
+def toString(s):
+	if isinstance(s, bytes):
+		return s.decode(encoding='utf-8', errors='strict')
+	return s
 
 
 def getUrlArg(request, key, default=None):
@@ -364,6 +370,12 @@ def debug(text, context=""):
 			print("[OpenWebif] [%s] %s" % (context, text))
 		else:
 			print("[OpenWebif] %s" % text)
+
+
+def e2simplexmlresult(result, resulttext):
+#	if not isinstance(resulttext, bytes):
+#		resulttext = resulttext.encode()
+	return b'<?xml version="1.0" encoding="UTF-8" ?><e2simplexmlresult><e2state>%s</e2state><e2statetext>%s</e2statetext></e2simplexmlresult>' % (b"true" if result else b"false", resulttext)
 
 
 if __name__ == '__main__':

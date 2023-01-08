@@ -3,7 +3,7 @@
 ##########################################################################
 # OpenWebif: config
 ##########################################################################
-# Copyright (C) 2011 - 2020 E2OpenPlugins
+# Copyright (C) 2011 - 2022 E2OpenPlugins
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -24,12 +24,13 @@ from enigma import eEnv
 from Components.SystemInfo import BoxInfo
 from Components.config import config
 from os import path, listdir
-import xml.etree.cElementTree  # nosec
+from os.path import exists
+from xml.etree.ElementTree import parse
 
 from Plugins.Extensions.OpenWebif.controllers.i18n import _
 from Plugins.Extensions.OpenWebif.controllers.utilities import get_config_attribute
 from datetime import datetime
-import time
+from time import time
 
 
 def addCollapsedMenu(name):
@@ -152,7 +153,7 @@ def getJsonFromConfig(cnf):
 	elif cnf.__class__.__name__ == "ConfigNothing":
 		return None
 
-	print("[OpenWebif] Unknown class ", cnf.__class__.__name__)
+	print("[OpenWebif] Unknown class '%s'" % cnf.__class__.__name__)
 	return {
 		"result": False,
 		"type": "unknown"
@@ -163,7 +164,7 @@ def saveConfig(path, value):
 	try:
 		cnf = get_config_attribute(path, root_obj=config)
 	except Exception as exc:
-		print("[OpenWebif] ", exc)
+		print("[OpenWebif] saveConfig Error : %s" % str(exc))
 		return {
 			"result": False,
 			"message": "I'm sorry Dave, I'm afraid I can't do that"
@@ -204,7 +205,7 @@ def saveConfig(path, value):
 		cnf.save()
 		configfiles.reload()
 	except Exception as e:
-		print("[OpenWebif] ", e)
+		print("[OpenWebif] saveConfig Error : %s" % str(e))
 		return {
 			"result": False
 		}
@@ -218,7 +219,7 @@ def getConfigs(key):
 	configs = []
 	title = None
 	config_entries = None
-	if not len(configfiles.sections):
+	if len(configfiles.sections) == 0:
 		configfiles.parseConfigFiles()
 	if key in configfiles.section_config:
 		config_entries = configfiles.section_config[key][1]
@@ -229,7 +230,7 @@ def getConfigs(key):
 				data = getJsonFromConfig(eval(entry.text or ""))  # nosec
 				if data is None:
 					continue
-				# print("[OpenWebif] -D- config entry: ", entry.text)
+				# print("[OpenWebif] -D- config entry: %s" % entry.text)
 				text = _(entry.get("text", ""))
 				if "limits" in data:
 					text = "%s (%d - %d)" % (text, data["limits"][0], data["limits"][1])
@@ -249,7 +250,7 @@ def getConfigs(key):
 
 
 def getConfigsSections():
-	if not len(configfiles.sections):
+	if len(configfiles.sections) == 0:
 		configfiles.parseConfigFiles()
 	return {
 		"result": True,
@@ -278,7 +279,7 @@ def getSettings():
 
 
 def getUtcOffset():
-	now = time.time()
+	now = time()
 	offset = (datetime.fromtimestamp(now) - datetime.utcfromtimestamp(now)).total_seconds()
 	hours = round(offset / 3600)
 	minutes = (offset - (hours * 3600))
@@ -312,7 +313,7 @@ class ConfigFiles:
 			for plugin in plugins:
 				setupfiles.append(('%s/enigma2/python/Plugins/%s/%s/setup.xml' % (libdir, location, plugin)))
 		for setupfile in setupfiles:
-			if path.exists(setupfile):
+			if exists(setupfile):
 				self.setupfiles.append(setupfile)
 
 	def includeElement(self, element):
@@ -332,7 +333,7 @@ class ConfigFiles:
 					except Exception:
 						return False
 				else:
-					result = SystemInfo.get(requires, False)
+					result = BoxInfo.get(requires, False)
 				if require and negate == result:  # The item requirements are not met.
 					return False
 		conditional = element.get("conditional")
@@ -365,9 +366,9 @@ class ConfigFiles:
 	def parseConfigFiles(self):
 		sections = []
 		for setupfile in self.setupfiles:
-			# print("[OpenWebif] loading configuration file :", setupfile)
+			# print("[OpenWebif] loading configuration file : %s" % setupfile)
 			setupfile = open(setupfile, 'r')
-			setupdom = xml.etree.cElementTree.parse(setupfile)  # nosec
+			setupdom = parse(setupfile)  # nosec
 			setupfile.close()
 			xmldata = setupdom.getroot()
 			for section in xmldata.findall("setup"):
@@ -378,16 +379,16 @@ class ConfigFiles:
 				key = section.get("key")
 				if key not in self.allowedsections:
 					showOpenWebif = section.get("showOpenWebif") or section.get("showOpenWebIf") or section.get("showOpenWebIF") or "0"
-					if showOpenWebif.lower() in ("1", "showopenwebif", "enabled", "on", "true", "yes"):
+					if showOpenWebif.lower() in ("1", "showopenwebif", "enabled", "enable", "on", "true", "yes"):
 						self.allowedsections.append(key)
 					else:
 						continue
-				# print("[OpenWebif] loading configuration section :", key)
+				# print("[OpenWebif] loading configuration section : %s" % key)
 				self.itemstoadd = []
 				self.addItems(section)
 				for entry in self.itemstoadd:
 					configs.append(entry)
-				if len(configs):
+				if configs:
 					sections.append({
 						"key": key,
 						"description": _(section.get("title"))

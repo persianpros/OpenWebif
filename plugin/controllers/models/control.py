@@ -3,7 +3,7 @@
 ##########################################################################
 # OpenWebif: control
 ##########################################################################
-# Copyright (C) 2011 - 2020 E2OpenPlugins
+# Copyright (C) 2011 - 2022 E2OpenPlugins
 #
 # This program is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -23,10 +23,10 @@
 from Components.config import config
 from enigma import eServiceReference, eActionMap, eServiceCenter
 from Plugins.Extensions.OpenWebif.controllers.models.services import getProtection
-from Plugins.Extensions.OpenWebif.controllers.defaults import DEFAULT_RCU
+from Plugins.Extensions.OpenWebif.controllers.defaults import DEFAULT_RCU, ROOTTV, ROOTRADIO, service_types_radio, service_types_tv
 from Screens.InfoBar import InfoBar, MoviePlayer
 import NavigationInstance
-import os
+from os import access, F_OK
 from six.moves.urllib.parse import unquote
 
 ENABLE_QPIP_PROCPATH = "/proc/stb/video/decodermode"
@@ -38,11 +38,10 @@ except ImportError:
 
 
 def checkIsQPiP():
-	if os.access(ENABLE_QPIP_PROCPATH, os.F_OK):
-		fd = open(ENABLE_QPIP_PROCPATH, "r")
-		data = fd.read()
-		fd.close()
-
+	if access(ENABLE_QPIP_PROCPATH, F_OK):
+		data = ""
+		with open(ENABLE_QPIP_PROCPATH, "r") as fd:
+			data = fd.read()
 		return data.strip() == "mosaic"
 	return False
 
@@ -65,9 +64,9 @@ def zapInServiceList(service):
 	InfoBar_Instance = InfoBar.instance
 	servicelist = InfoBar_Instance.servicelist
 	if config.usage.multibouquet.value:
-		rootstrings = ('1:7:1:0:0:0:0:0:0:0:FROM BOUQUET "bouquets.tv" ORDER BY bouquet', '1:7:1:0:0:0:0:0:0:0:FROM BOUQUET "bouquets.radio" ORDER BY bouquet')
+		rootstrings = (ROOTTV, ROOTRADIO)
 	else:
-		rootstrings = ('1:7:1:0:0:0:0:0:0:0:(type == 1) || (type == 17) || (type == 22) || (type == 25) || (type == 134) || (type == 195) FROM BOUQUET "userbouquet.favourites.tv" ORDER BY bouquet', '1:7:2:0:0:0:0:0:0:0:(type == 2) || (type == 10) FROM BOUQUET "userbouquet.favourites.radio" ORDER BY bouquet')
+		rootstrings = (service_types_tv + ' FROM BOUQUET "userbouquet.favourites.tv" ORDER BY bouquet', service_types_radio + ' FROM BOUQUET "userbouquet.favourites.radio" ORDER BY bouquet')
 	bouquet_found = False
 	for bouquet_rootstr in rootstrings:
 		servicelist.bouquet_root = eServiceReference(bouquet_rootstr)
@@ -107,7 +106,7 @@ def zapInServiceList(service):
 	servicelist.zap()
 
 
-def zapService(session, id, title="", stream=False):
+def zapService(session, sref, title="", stream=False):
 	if checkIsQPiP():
 		return {
 			"result": False,
@@ -115,12 +114,12 @@ def zapService(session, id, title="", stream=False):
 		}
 
 	# Must NOT unquote id here, breaks zap to streams
-	service = eServiceReference(id)
+	service = eServiceReference(sref)
 
-	if len(title) > 0:
+	if title:
 		service.setName(title)
 	else:
-		title = id
+		title = sref
 
 	isRecording = service.getPath()
 	isRecording = isRecording and isRecording.startswith("/")
@@ -165,7 +164,7 @@ def zapService(session, id, title="", stream=False):
 	}
 
 
-def remoteControl(key, type="", rcu=DEFAULT_RCU):
+def remoteControl(key, rctype="", rcu=DEFAULT_RCU):
 	remotetype = "dreambox remote control (native)"
 	if rcu == "advanced":
 		remotetype = "dreambox advanced remote control (native)"
@@ -174,7 +173,7 @@ def remoteControl(key, type="", rcu=DEFAULT_RCU):
 
 	amap = eActionMap.getInstance()
 
-	if type == "text" and rcu != "":
+	if rctype == "text" and rcu != "":
 		message = "RC command text not supported"
 		result = False
 		if setPrevAsciiCode:
@@ -188,10 +187,10 @@ def remoteControl(key, type="", rcu=DEFAULT_RCU):
 			"result": result,
 			"message": message
 		}
-	elif type == "long":
+	elif rctype == "long":
 		amap.keyPressed(remotetype, key, 0)
 		amap.keyPressed(remotetype, key, 3)
-	elif type == "ascii":
+	elif rctype == "ascii":
 		amap.keyPressed(remotetype, key, 4)
 	else:
 		amap.keyPressed(remotetype, key, 0)
@@ -234,7 +233,7 @@ def setPowerState(session, state):
 	}
 
 
-def getStandbyState(session):
+def getStandbyState():
 	from Screens.Standby import inStandby
 	return {
 		"result": True,

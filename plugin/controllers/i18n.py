@@ -2,7 +2,7 @@
 import gettext
 
 from Components.Language import language
-from Components.config import config as comp_config
+from Components.config import config
 from Tools.Directories import resolveFilename, SCOPE_PLUGINS
 
 LOCALES_DOMAIN = "OpenWebif"
@@ -30,7 +30,7 @@ language.addCallback(_locale_init)
 
 
 try:
-	AT_unit = comp_config.plugins.autotimer.unit.value == "hour" and _("hour") or _("minute")
+	AT_unit = config.plugins.autotimer.unit.value == "hour" and _("hour") or _("minute")
 except:  # nosec # noqa: E722
 	AT_unit = "hour"
 
@@ -111,6 +111,7 @@ tstrings = {
 	'cpu_brand': _("CPU brand"),
 	'current': _("Current"),
 	'current_event': _("Current Event"),
+	'next_event': _("Next Event"),
 	'date': _("Date"),
 	'deep_standby': _("Deep Standby"),
 	'default': _("Default"),
@@ -379,7 +380,6 @@ tstrings = {
 	'at_timer_offset_before': _("Offset before recording (mins)"),
 	'at_timer_offset_after': _("Offset after recording (mins)"),
 	'at_max_duration': _("Set maximum duration"),
-	'at_after_event': _("After event"),
 	'at_after_event_standard': _("standard"),
 	'at_after_event_auto': _("auto"),
 	'at_after_event_nothing': _("do nothing"),
@@ -583,7 +583,6 @@ tstrings = {
 	'no': _("No"),
 	'inc_shortdesc': _("Include short description"),
 	'inc_extdesc': _("Include extended description"),
-	'moviesearch': _("Movie search"),
 	'start_typing': _("Start typing..."),
 	'select_ipk_upload': _("Select IPK file for upload"),
 	'uploaded_files': _("Uploaded Files"),
@@ -612,8 +611,6 @@ tstrings = {
 	'playlistformat': _("Playlist format"),
 	'pipifposible': _("Use as PiP if possible"),
 	'allow_duplicate': _("Allow duplicates"),
-	'autoadjust': _("Adjust recording time to real event time"),
-	'avoidDuplicateMovies': _("Don't create timer when movie exists in database"),
 
 	'streamclients': _("Stream Clients"),
 	'config': _("Config"),
@@ -646,5 +643,6 @@ tstrings = {
 	'storage': _("Storage"),
 	'device': _("Device"),
 	'free_space': _("Free space"),
-	'mount_point': _("Mount point")
+	'mount_point': _("Mount point"),
+	'folders': _("Folders")
 }

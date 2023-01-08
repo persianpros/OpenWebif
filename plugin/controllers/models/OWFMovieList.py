@@ -9,11 +9,8 @@ import struct
 
 from enigma import iServiceInformation, eServiceReference, eServiceCenter
 
-from Tools.FuzzyDate import FuzzyTime
 from Components.config import config
-from Tools.Directories import resolveFilename
 from Screens.LocationBox import defaultInhibitDirs
-from ServiceReference import ServiceReference
 
 cutsParser = struct.Struct('>QI')  # big-endian, 64-bit PTS and 32-bit type
 
@@ -66,9 +63,8 @@ class MovieList():
 		self._char = ''
 
 	def getItem(self, index):
-		if self.list:
-			if len(self.list) > index:
-				return self.list[index] and self.list[index][0]
+		if self.list and len(self.list) > index:
+			return self.list[index] and self.list[index][0]
 
 	def __len__(self):
 		return len(self.list)
@@ -215,7 +211,6 @@ class MovieList():
 						break
 			if match:
 				self.tags[match] = set(tags)
-				continue
 			else:
 				match = ' '.join(tags)
 				if len(match) > 2:  # Omit small words

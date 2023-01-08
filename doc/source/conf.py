@@ -19,14 +19,14 @@ sys.path.insert(0, os.path.abspath('../../plugin'))
 
 # -- Project information -----------------------------------------------------
 
-project = u'e2openplugin-OpenWebif'
-copyright = u'2018, E2OpenPlugins'
+project = u'OpenWebif'
+copyright = u'2022, E2OpenPlugins'
 author = u'E2OpenPlugins'
 
 # The short X.Y version
-version = u'1.3.2'
+version = u'2.0.1'
 # The full version, including alpha/beta/rc tags
-release = u'1.3.1'
+release = u'2.0.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -137,7 +137,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'e2openplugin-OpenWebif.tex', u'e2openplugin-OpenWebif Documentation',
+    (master_doc, 'OpenWebif.tex', u'OpenWebif Documentation',
      u'E2OpenPlugins', 'manual'),
 ]
 
@@ -147,7 +147,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'e2openplugin-openwebif', u'e2openplugin-OpenWebif Documentation',
+    (master_doc, 'openwebif', u'OpenWebif Documentation',
      [author], 1)
 ]
 
@@ -158,8 +158,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'e2openplugin-OpenWebif', u'e2openplugin-OpenWebif Documentation',
-     author, 'e2openplugin-OpenWebif', 'One line description of project.',
+    (master_doc, 'OpenWebif', u'OpenWebif Documentation',
+     author, 'OpenWebif', 'One line description of project.',
      'Miscellaneous'),
 ]
 

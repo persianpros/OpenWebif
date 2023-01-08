@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ##############################################################################
-#                        2011 E2OpenPlugins                                  #
+#                        2011-2022 E2OpenPlugins                                  #
 #                                                                            #
 #  This file is open source software; you can redistribute it and/or modify  #
 #     it under the terms of the GNU General Public License version 2 as      #
@@ -11,13 +11,16 @@
 from enigma import eServiceReference, getBestPlayableServiceReference
 from ServiceReference import ServiceReference
 from six.moves.urllib.parse import unquote, quote
-import os
-import re
+from os.path import exists
 from Components.config import config
 from twisted.web.resource import Resource
-from Tools.Directories import fileExists
 from Plugins.Extensions.OpenWebif.controllers.models.info import getInfo
 from Plugins.Extensions.OpenWebif.controllers.utilities import getUrlArg, PY3
+
+BMC0 = "/dev/bcm_enc0"
+ENC0 = "/dev/encoder0"
+ENC0APPLY = "/proc/stb/encoder/0/apply"
+ENC0VCODEC = "/proc/stb/encoder/0/vcodec"
 
 
 class GetSession(Resource):
@@ -62,9 +65,8 @@ def getStream(session, request, m3ufile):
 	# #EXTINF:-1,%s\n adding back to show service name in programs like VLC
 	progopt = ''
 	name = getUrlArg(request, "name")
-	if name != None:
-		if config.OpenWebif.service_name_for_stream.value:
-			progopt = "#EXTINF:-1,%s\n" % name
+	if name is not None and config.OpenWebif.service_name_for_stream.value:
+		progopt = "#EXTINF:-1,%s\n" % name
 
 	name = "stream"
 	portNumber = config.OpenWebif.streamport.value
@@ -77,7 +79,7 @@ def getStream(session, request, m3ufile):
 
 	device = getUrlArg(request, "device")
 
-	if fileExists("/dev/bcm_enc0"):
+	if exists(BMC0):
 		try:
 			transcoder_port = int(config.plugins.transcodingsetup.port.value)
 		except Exception:
@@ -88,26 +90,25 @@ def getStream(session, request, m3ufile):
 		_port = getUrlArg(request, "port")
 		if _port != None:
 			portNumber = _port
-	elif fileExists("/dev/encoder0") or fileExists("/proc/stb/encoder/0/apply"):
+	elif exists(ENC0) or exists(ENC0APPLY):
 		transcoder_port = portNumber
 
-	if fileExists("/dev/bcm_enc0") or fileExists("/dev/encoder0") or fileExists("/proc/stb/encoder/0/apply"):
-		if device == "phone":
-			try:
-				bitrate = config.plugins.transcodingsetup.bitrate.value
-				resolution = config.plugins.transcodingsetup.resolution.value
-				(width, height) = tuple(resolution.split('x'))
-				# framerate = config.plugins.transcodingsetup.framerate.value
-				aspectratio = config.plugins.transcodingsetup.aspectratio.value
-				interlaced = config.plugins.transcodingsetup.interlaced.value
-				if fileExists("/proc/stb/encoder/0/vcodec"):
-					vcodec = config.plugins.transcodingsetup.vcodec.value
-					args = "?bitrate=%s__width=%s__height=%s__vcodec=%s__aspectratio=%s__interlaced=%s" % (bitrate, width, height, vcodec, aspectratio, interlaced)
-				else:
-					args = "?bitrate=%s__width=%s__height=%s__aspectratio=%s__interlaced=%s" % (bitrate, width, height, aspectratio, interlaced)
-				args = args.replace('__', urlparam)
-			except Exception:
-				pass
+	if device == "phone" and (exists(BMC0) or exists(ENC0) or exists(ENC0APPLY)):
+		try:
+			bitrate = config.plugins.transcodingsetup.bitrate.value
+			resolution = config.plugins.transcodingsetup.resolution.value
+			(width, height) = tuple(resolution.split('x'))
+			# framerate = config.plugins.transcodingsetup.framerate.value
+			aspectratio = config.plugins.transcodingsetup.aspectratio.value
+			interlaced = config.plugins.transcodingsetup.interlaced.value
+			if exists(ENC0VCODEC):
+				vcodec = config.plugins.transcodingsetup.vcodec.value
+				args = "?bitrate=%s__width=%s__height=%s__vcodec=%s__aspectratio=%s__interlaced=%s" % (bitrate, width, height, vcodec, aspectratio, interlaced)
+			else:
+				args = "?bitrate=%s__width=%s__height=%s__aspectratio=%s__interlaced=%s" % (bitrate, width, height, aspectratio, interlaced)
+			args = args.replace('__', urlparam)
+		except Exception:
+			pass
 
 	# When you use EXTVLCOPT:program in a transcoded stream, VLC does not play stream
 	if config.OpenWebif.service_name_for_stream.value and sRef != '' and portNumber != transcoder_port:
@@ -142,14 +143,14 @@ def getTS(self, request):
 			filename = unquote(file)
 		else:
 			filename = unquote(file).decode('utf-8', 'ignore').encode('utf-8')
-		if not os.path.exists(filename):
+		if not exists(filename):
 			return "File '%s' not found" % (filename)
 
 # ServiceReference is not part of filename so look in the '.ts.meta' file
 		sRef = ""
 		progopt = ''
 
-		if os.path.exists(filename + '.meta'):
+		if exists(filename + '.meta'):
 			metafile = open(filename + '.meta', "r")
 			name = ''
 			seconds = -1  # unknown duration default
@@ -183,7 +184,7 @@ def getTS(self, request):
 
 		device = getUrlArg(request, "device")
 
-		if fileExists("/dev/bcm_enc0") or fileExists("/dev/encoder0") or fileExists("/proc/stb/encoder/0/apply"):
+		if exists(BMC0) or exists(ENC0) or exists(ENC0APPLY):
 			try:
 				transcoder_port = int(config.plugins.transcodingsetup.port.value)
 			except Exception:
@@ -195,7 +196,7 @@ def getTS(self, request):
 			if _port != None:
 				portNumber = _port
 
-		if fileExists("/dev/bcm_enc0") or fileExists("/dev/encoder0") or fileExists("/proc/stb/encoder/0/apply"):
+		if exists(BMC0) or exists(ENC0) or exists(ENC0APPLY):
 			if device == "phone":
 				try:
 					bitrate = config.plugins.transcodingsetup.bitrate.value
@@ -204,7 +205,7 @@ def getTS(self, request):
 					# framerate = config.plugins.transcodingsetup.framerate.value
 					aspectratio = config.plugins.transcodingsetup.aspectratio.value
 					interlaced = config.plugins.transcodingsetup.interlaced.value
-					if fileExists("/proc/stb/encoder/0/vcodec"):
+					if exists(ENC0VCODEC):
 						vcodec = config.plugins.transcodingsetup.vcodec.value
 						args = "?bitrate=%s__width=%s__height=%s__vcodec=%s__aspectratio=%s__interlaced=%s" % (bitrate, width, height, vcodec, aspectratio, interlaced)
 					else:
@@ -222,12 +223,13 @@ def getTS(self, request):
 			progopt = "%s#EXTVLCOPT:program=%d\n" % (progopt, int(sRef.split(':')[3], 16))
 
 		if portNumber is None:
+			from re import match
 			portNumber = config.OpenWebif.port.value
 			if request.isSecure():
 				portNumber = config.OpenWebif.https_port.value
 				proto = 'https'
 			ourhost = request.getHeader('host')
-			m = re.match('.+\:(\d+)$', ourhost)
+			m = match('.+\:(\d+)$', ourhost)
 			if m is not None:
 				portNumber = m.group(1)
 
@@ -240,7 +242,7 @@ def getTS(self, request):
 		else:
 			auth = ''
 
-		response = "#EXTM3U \n#EXTVLCOPT:http-reconnect=true \n%s%s://%s%s:%s/file?file=%s%s\n" % ((progopt, proto, auth, request.getRequestHostname(), portNumber, quote(filename), args))
+		response = "#EXTM3U \n#EXTVLCOPT:http-reconnect=true \n%s%s://%s%s:%s/file?file=%s%s\n" % (progopt, proto, auth, request.getRequestHostname(), portNumber, quote(filename), args)
 		request.setHeader('Content-Type', 'application/x-mpegurl')
 		return response
 	else:

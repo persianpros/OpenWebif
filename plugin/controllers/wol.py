@@ -26,11 +26,7 @@ from struct import pack
 from twisted.web import resource
 
 from Components.config import config
-from Plugins.Extensions.OpenWebif.controllers.utilities import getUrlArg
-
-
-def createResult(result, resulttext):
-	return b'<?xml version="1.0" encoding="UTF-8" ?><e2simplexmlresult><e2state>%s</e2state><e2statetext>%s</e2statetext></e2simplexmlresult>' % (b"true" if result else b"false", resulttext)
+from Plugins.Extensions.OpenWebif.controllers.utilities import getUrlArg, e2simplexmlresult
 
 
 class WOLSetupController(resource.Resource):
@@ -46,7 +42,7 @@ class WOLSetupController(resource.Resource):
 			wol_active = config.plugins.wolconfig.activate.value
 			wol_location = config.plugins.wolconfig.location.value
 		except:  # nosec # noqa: E722
-			return createResult(False, b"WOLSetup plugin is not installed or your STB does not support WOL")
+			return e2simplexmlresult(False, b"WOLSetup plugin is not installed or your STB does not support WOL")
 
 		if len(request.args):
 			config_changed = False
@@ -74,7 +70,7 @@ class WOLSetupController(resource.Resource):
 						from Plugins.SystemPlugins.WOLSetup.plugin import WOLSetup, _deviseWOL, _flagForceEnable, _flagSupportWol, _tryQuitTable, _ethDevice  # noqa: F401
 						from Screens.Standby import TryQuitMainloop
 					except ImportError:
-						return createResult(False, b"WOLSetup plugin is not installed or your STB does not support WOL")
+						return e2simplexmlresult(False, b"WOLSetup plugin is not installed or your STB does not support WOL")
 					WOLSetup.ActivateWOL(self.session, writeDevice=True)
 					self.session.open(TryQuitMainloop, _tryQuitTable["deepstandby"])
 			if config_changed:
@@ -118,18 +114,18 @@ class WOLClientController(resource.Resource):
 				mac = str(mac).lower()
 				mac = mac.split(':')
 				if len(mac) != 6:
-					return createResult(False, b"MAC address invalid see example: AA:BB:CC:DD:EE:FF")
+					return e2simplexmlresult(False, b"MAC address invalid see example: AA:BB:CC:DD:EE:FF")
 			ip = getUrlArg(request, "ip")
 			if ip != None:
 				ip = str(ip).lower()
 				ip = ip.split('.')
 				if len(ip) != 4:
-					return createResult(False, b"IP address invalid see example: 192.168.2.10")
+					return e2simplexmlresult(False, b"IP address invalid see example: 192.168.2.10")
 				try:
 					for digit in ip:
 						is_int = int(digit)  # noqa: F841
 				except ValueError:
-					return createResult(False, b"IP address invalid see example: 192.168.2.10")
+					return e2simplexmlresult(False, b"IP address invalid see example: 192.168.2.10")
 				ip = ip[0] + "." + ip[1] + "." + ip[2] + ".255"
 			if ip and mac:
 				mac_struct = pack('BBBBBB', int(mac[0], 16), int(mac[1], 16), int(mac[2], 16), int(mac[3], 16), int(mac[4], 16), int(mac[5], 16))
@@ -138,5 +134,5 @@ class WOLClientController(resource.Resource):
 				my_socket.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
 				my_socket.sendto(magic, (ip, port))
 				my_socket.close()
-				return createResult(True, ensure_binary("MagicPacket send to IP %s at port %d" % (ip, port)))
-		return createResult(False, b"'ip' and 'mac' are mandatory arguments")
+				return e2simplexmlresult(True, ensure_binary("MagicPacket send to IP %s at port %d" % (ip, port)))
+		return e2simplexmlresult(False, b"'ip' and 'mac' are mandatory arguments")
