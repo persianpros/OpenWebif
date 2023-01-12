@@ -20,7 +20,8 @@
 # Inc., 51 Franklin Street, Fifth Floor, Boston MA 02110-1301, USA.
 ##########################################################################
 
-import os
+from os import popen, statvfs
+from os.path import isdir, realpath, exists
 from six import PY2
 import time
 from twisted import version
@@ -41,9 +42,8 @@ from Tools.Directories import fileExists
 from enigma import eDVBVolumecontrol, eServiceCenter, eServiceReference, getEnigmaVersionString, eGetEnigmaDebugLvl, getE2Rev
 from Tools.StbHardware import getFPVersion, getBoxProc, getBoxProcType, getHWSerial, getBoxRCType
 from Plugins.Extensions.OpenWebif.controllers.i18n import _
-from Plugins.Extensions.OpenWebif.controllers.defaults import OPENWEBIFVER, TRANSCODING, TEXTINPUTSUPPORT
+from Plugins.Extensions.OpenWebif.controllers.defaults import OPENWEBIFVER, TRANSCODING, TEXTINPUTSUPPORT, LCD, GRABPIP
 from Plugins.Extensions.OpenWebif.controllers.utilities import removeBad, removeBad2
-from Plugins.Extensions.OpenWebif.controllers.models.owibranding import getLcd, getGrabPip
 from Plugins.Extensions.OpenWebif.controllers.epg import EPG
 from Tools.OEMInfo import getOEMShowDisplayModel, getOEMShowDisplayBrand, getOEMShowModel
 
@@ -54,12 +54,15 @@ def getEnigmaVersionString():
 
 STATICBOXINFO = None
 
+NI = "/etc/network/interfaces"
+INET6 = "/proc/net/if_inet6"
+
 
 def getIPMethod(iface):
 	# iNetwork.getAdapterAttribute is crap and not portable
 	ipmethod = _("SLAAC")
-	if fileExists('/etc/network/interfaces'):
-		ifaces = '/etc/network/interfaces'
+	if fileExists(NI):
+		ifaces = NI
 		for line in open(ifaces).readlines():
 			if not line.startswith('#'):
 				if line.startswith('iface') and "inet6" in line and iface in line:
@@ -77,8 +80,8 @@ def getIPMethod(iface):
 def getIPv4Method(iface):
 	# iNetwork.getAdapterAttribute is crap and not portable
 	ipv4method = _("static")
-	if fileExists('/etc/network/interfaces'):
-		ifaces = '/etc/network/interfaces'
+	if fileExists(NI):
+		ifaces = NI
 		for line in open(ifaces).readlines():
 			if not line.startswith('#'):
 				if line.startswith('iface') and "inet " in line and iface in line:
@@ -94,12 +97,12 @@ def getIPv4Method(iface):
 def getLinkSpeed(iface):
 	speed = _("unknown")
 	try:
-		with open('/sys/class/net/' + iface + '/speed', 'r') as f:
+		with open('/sys/class/net/%s/speed' % iface, 'r') as f:
 			speed = f.read().strip()
 	except:  # nosec # noqa: E722
-		if os.path.isdir('/sys/class/net/' + iface + '/wireless'):
+		if isdir('/sys/class/net/%s/wireless' % iface):
 			try:
-				speed = os.popen('iwlist ' + iface + ' bitrate | grep "Bit Rate"').read().split(':')[1].split(' ')[0]
+				speed = popen('iwlist %s bitrate | grep "Bit Rate"' % iface).read().split(':')[1].split(' ')[0]
 			except:  # nosec # noqa: E722
 				pass
 	speed = str(speed) + " MBit/s"
@@ -111,7 +114,7 @@ def getLinkSpeed(iface):
 def getNICChipSet(iface):
 	nic = _("unknown")
 	try:
-		nic = os.path.realpath('/sys/class/net/' + iface + '/device/driver').split('/')[-1]
+		nic = realpath('/sys/class/net/' + iface + '/device/driver').split('/')[-1]
 		nic = str(nic)
 	except:  # nosec # noqa: E722
 		pass
@@ -149,11 +152,11 @@ def getAdapterIPv6(ifname):
 	addr = _("IPv4-only kernel")
 	firstpublic = None
 
-	if fileExists('/proc/net/if_inet6'):
+	if fileExists(INET6):
 		addr = _("IPv4-only Python/Twisted")
 
 		if has_ipv6 and version.major >= 12:
-			proc = '/proc/net/if_inet6'
+			proc = INET6
 			tempaddrs = []
 			for line in open(proc).readlines():
 				if line.startswith('fe80'):
@@ -215,15 +218,8 @@ def getInfo(session=None, need_fullinfo=False):
 	except:  # nosec # noqa: E722
 		info['procmodeltype'] = None
 
-	try:
-		info['lcd'] = getLcd()
-	except:  # nosec # noqa: E722
-		info['lcd'] = 0
-
-	try:
-		info['grabpip'] = getGrabPip()
-	except:  # nosec # noqa: E722
-		info['grabpip'] = 0
+	info['lcd'] = int(LCD)
+	info['grabpip'] = int(GRABPIP)
 
 	cpu = about.getCPUInfoString()
 	info['chipset'] = cpu
@@ -357,7 +353,7 @@ def getInfo(session=None, need_fullinfo=False):
 	for hdd in harddiskmanager.hdd:
 		dev = hdd.findMount()
 		if dev:
-			stat = os.statvfs(dev)
+			stat = statvfs(dev)
 			free = stat.f_bavail * stat.f_frsize / 1048576.
 		else:
 			free = -1
@@ -404,7 +400,7 @@ def getInfo(session=None, need_fullinfo=False):
 		})
 
 	info['shares'] = []
-	autofiles = ('/etc/auto.network', '/etc/auto.network_vti')
+	autofiles = ('/etc/auto.network')
 	for autofs in autofiles:
 		if fileExists(autofs):
 			method = "autofs"
@@ -414,19 +410,19 @@ def getInfo(session=None, need_fullinfo=False):
 					# Not elegant but we wouldn't want to expose credentials on the OWIF anyways
 					tmpline = line.replace("\ ", "_")
 					tmp = tmpline.split()
-					if not len(tmp) == 3:
+					if len(tmp) != 3:
 						continue
 					name = tmp[0].strip()
-					type = "unknown"
+					ntype = "unknown"
 					if "cifs" in tmp[1]:
 						# Linux still defaults to SMBv1
-						type = "SMBv1.0"
+						ntype = "SMBv1.0"
 						settings = tmp[1].split(",")
 						for setting in settings:
 							if setting.startswith("vers="):
-								type = setting.replace("vers=", "SMBv")
+								ntype = setting.replace("vers=", "SMBv")
 					elif "nfs" in tmp[1]:
-						type = "NFS"
+						ntype = "NFS"
 
 					# Default is r/w
 					mode = _("r/w")
@@ -464,12 +460,12 @@ def getInfo(session=None, need_fullinfo=False):
 							pass
 
 					friendlyaddress = server
-					if ipaddress is not None and not ipaddress == server:
+					if ipaddress is not None and ipaddress != server:
 						friendlyaddress = server + " (" + ipaddress + ")"
 					info['shares'].append({
 						"name": name,
 						"method": method,
-						"type": type,
+						"type": ntype,
 						"mode": mode,
 						"path": uri,
 						"host": server,
@@ -477,6 +473,8 @@ def getInfo(session=None, need_fullinfo=False):
 						"friendlyaddress": friendlyaddress
 					})
 	# TODO: fstab
+
+	info["transcoding"] = TRANSCODING
 
 	info['EX'] = ''
 
@@ -492,7 +490,7 @@ def getInfo(session=None, need_fullinfo=False):
 				s_name = ''
 				if len(info['streams']) == 1:
 					sinfo = info['streams'][0]
-					s_name = sinfo["name"] + ' (' + sinfo["ip"] + ')'
+					s_name = "%s (%s)" % (sinfo["name"], sinfo["ip"])
 					print("[OpenWebif] -D- s_name '%s'" % s_name)
 
 				serviceNames = {}
@@ -519,9 +517,9 @@ def getInfo(session=None, need_fullinfo=False):
 						if cur_info:
 							nr = frontendData['tuner_number']
 							if nr in serviceNames:
-								info['tuners'][nr]['rec'] = getOrbitalText(cur_info) + ' / ' + serviceNames[nr]
+								info['tuners'][nr]['rec'] = "%s / %s" % (getOrbitalText(cur_info), serviceNames[nr])
 							else:
-								info['tuners'][nr]['rec'] = getOrbitalText(cur_info) + ' / ' + s_name
+								info['tuners'][nr]['rec'] = "%s / %s" % (getOrbitalText(cur_info), s_name)
 
 			service = session.nav.getCurrentService()
 			if service is not None:
@@ -532,19 +530,19 @@ def getInfo(session=None, need_fullinfo=False):
 					cur_info = feinfo.getTransponderData(True)
 					if cur_info:
 						nr = frontendData['tuner_number']
-						info['tuners'][nr]['live'] = getOrbitalText(cur_info) + ' / ' + sname
+						info['tuners'][nr]['live'] = "%s / %s" % (getOrbitalText(cur_info), sname)
 		except Exception as error:
 			info['EX'] = error
 
 	info['timerpipzap'] = False
-	info['timerautoadjust'] = False
+	info['allow_duplicate'] = False
 
 	try:
 		timer = RecordTimerEntry(ServiceReference("1:0:1:0:0:0:0:0:0:0"), 0, 0, '', '', 0)
 		if hasattr(timer, "pipzap"):
 			info['timerpipzap'] = True
-		if hasattr(timer, "autoadjust"):
-			info['timerautoadjust'] = True
+		if hasattr(timer, "allow_duplicate"):
+			info['allow_duplicate'] = True
 	except Exception as error:
 		print("[OpenWebif] -D- RecordTimerEntry check %s" % error)
 
@@ -564,7 +562,7 @@ def getStreamServiceAndEvent(ref):
 	epg = EPG()
 	event = epg.getCurrentEvent(ref)
 	if event:
-		eventname = event.title
+		eventname = event.getEventName()
 	return sname, eventname
 
 
@@ -589,7 +587,7 @@ def GetStreamInfo():
 					"ip": x[0],  # TODO: ip Address format
 					"type": strtype
 				})
-	except Exception as error:  # nosec # noqa: E722
+	except Exception:  # nosec # noqa: E722
 #		print("[OpenWebif] -D- no eStreamServer %s" % error)
 		pass
 
@@ -747,7 +745,7 @@ def getStatusInfo(self):
 			statusinfo['currservice_serviceref'] = serviceref_string
 			if statusinfo['currservice_serviceref'].startswith('1:0:0') or statusinfo['currservice_serviceref'].startswith('4097:0:0'):
 				this_path = '/' + '/'.join(serviceref_string.split("/")[1:])
-				if os.path.exists(this_path):
+				if exists(this_path):
 					statusinfo['currservice_filename'] = this_path
 			if serviceHandlerInfo:
 				statusinfo['currservice_station'] = currservice_station
@@ -769,9 +767,8 @@ def getStatusInfo(self):
 		statusinfo['isRecording'] = "true"
 		statusinfo['Recording_list'] = "\n"
 		for timer in NavigationInstance.instance.RecordTimer.timer_list:
-			if timer.state == TimerEntry.StateRunning:
-				if not timer.justplay:
-					statusinfo['Recording_list'] += removeBad(timer.service_ref.getServiceName()) + ": " + timer.name + "\n"
+			if timer.state == TimerEntry.StateRunning and not timer.justplay:
+				statusinfo['Recording_list'] += removeBad(timer.service_ref.getServiceName()) + ": " + timer.name + "\n"
 		if statusinfo['Recording_list'] == "\n":
 			statusinfo['isRecording'] = "false"
 	else:
@@ -807,25 +804,6 @@ def getStatusInfo(self):
 		statusinfo['isStreaming'] = 'false'
 
 	return statusinfo
-
-
-def getAlternativeChannels(service):
-	alternativeServices = eServiceCenter.getInstance().list(eServiceReference(service))
-	return alternativeServices and alternativeServices.getContent("S", True)
-
-
-def GetWithAlternative(service, onlyFirst=True):
-	if service.startswith('1:134:'):
-		channels = getAlternativeChannels(service)
-		if channels:
-			if onlyFirst:
-				return channels[0]
-			else:
-				return channels
-	if onlyFirst:
-		return service
-	else:
-		return None
 
 
 def getPipStatus():

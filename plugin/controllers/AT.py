@@ -21,11 +21,27 @@
 ##########################################################################
 
 from twisted.web import static, resource, http
-import os
-import json
+from os.path import exists
+from os import remove
+from json import dumps
 from six import ensure_binary
+from Plugins.Extensions.OpenWebif.controllers.utilities import e2simplexmlresult
 
 ATFN = "/tmp/autotimer_backup.tar"  # nosec
+
+
+class ATBaseController(resource.Resource):
+	def __init__(self, session=None):
+		resource.Resource.__init__(self)
+		self.session = session
+
+	def setHeader(self, request, xml):
+		request.setResponseCode(http.OK)
+		if xml:
+			request.setHeader('Content-type', 'application/xhtml+xml')
+		else:
+			request.setHeader('content-type', 'text/plain')
+		request.setHeader('charset', 'UTF-8')
 
 
 class ATUploadFile(resource.Resource):
@@ -42,94 +58,76 @@ class ATUploadFile(resource.Resource):
 		if not content:
 			result = [False, 'Error upload File']
 		else:
-			fileh = os.open(ATFN, os.O_WRONLY | os.O_CREAT)
 			bytes = 0
-			if fileh:
-				bytes = os.write(fileh, content)
-				os.close(fileh)
+			with open(ATFN, "wb") as fd:
+				bytes = fd.write(content)
 			if bytes <= 0:
 				try:
-					os.remove(ATFN)
+					remove(ATFN)
 				except OSError:
 					pass
-				result = [False, 'Error writing File']
+				result = [False, _('Error writing File')]
 			else:
 				result = [True, ATFN]
-		return ensure_binary(json.dumps({"Result": result}))
+		return ensure_binary(dumps({"Result": result}))
 
 
-class AutoTimerDoBackupResource(resource.Resource):
+class AutoTimerDoBackupResource(ATBaseController):
 	def render(self, request):
-		request.setResponseCode(http.OK)
-		request.setHeader('Content-type', 'application/xhtml+xml')
-		request.setHeader('charset', 'UTF-8')
+		self.setHeader(request, True)
 		state, statetext = self.backupFiles()
-		return ensure_binary("""<?xml version=\"1.0\" encoding=\"UTF-8\" ?>
-<e2simplexmlresult>
-	<e2state>%s</e2state>
-	<e2statetext>%s</e2statetext>
-</e2simplexmlresult>""" % ('True' if state else 'False', statetext))
+		return e2simplexmlresult(state, statetext)
 
 	def backupFiles(self):
-		if os.path.exists(ATFN):
-			os.remove(ATFN)
+		if exists(ATFN):
+			remove(ATFN)
 		checkfile = '/tmp/.autotimeredit'
-		f = os.open(checkfile, os.O_WRONLY | os.O_CREAT)
-		if f:
-			files = []
-			os.write(f, b'created with AutoTimerWebEditor')
-			os.close(f)
-			files.append(checkfile)
-			files.append("/etc/enigma2/autotimer.xml")
-			tarFiles = ""
-			for arg in files:
-				if not os.path.exists(arg):
-					return (False, "Error while preparing backup file, %s does not exists." % arg)
-				tarFiles += "%s " % arg
-			lines = os.popen("tar cvf %s %s" % (ATFN, tarFiles)).readlines()
-			os.remove(checkfile)
+		try:
+			with open(checkfile, "w") as fd:
+				fd.write("created with AutoTimerWebEditor")
+
+			with tarfile.open(ATFN, "w:gz") as tar:
+				tar.add(checkfile)
+				tar.add("/etc/enigma2/autotimer.xml")
+
+			remove(checkfile)
 			return (True, ATFN)
-		else:
+
+		except Exception as err:
+			print("[OpenWebif] Error: create autotimer backup '%s'" % str(err))
 			return (False, "Error while preparing backup file.")
 
 
-class AutoTimerDoRestoreResource(resource.Resource):
+class AutoTimerDoRestoreResource(ATBaseController):
 	def render(self, request):
-		request.setResponseCode(http.OK)
-		request.setHeader('Content-type', 'application/xhtml+xml')
-		request.setHeader('charset', 'UTF-8')
-
+		self.setHeader(request, True)
 		state, statetext = self.restoreFiles()
-
-		return ensure_binary("""<?xml version=\"1.0\" encoding=\"UTF-8\" ?>
-<e2simplexmlresult>
-	<e2state>%s</e2state>
-	<e2statetext>%s</e2statetext>
-</e2simplexmlresult>""" % ('True' if state else 'False', statetext))
+		return e2simplexmlresult(state, statetext)
 
 	def restoreFiles(self):
-		if os.path.exists(ATFN):
+		if exists(ATFN):
 			check_tar = False
-			lines = os.popen('tar -tf %s' % ATFN).readlines()
-			for line in lines:
-				pos = line.find('tmp/.autotimeredit')
-				if pos != -1:
-					check_tar = True
-					break
-			if check_tar:
-				lines = os.popen('tar xvf %s -C /' % ATFN).readlines()
+			try:
+				with tarfile.open(ATFN) as tar:
+					check_tar = tar.getmember("tmp/.autotimeredit")
+					if check_tar:
+						tar.extract("etc/enigma2/autotimer.xml", "/")
+			except Exception as err:
+				print("[OpenWebif] Error: extract autotimer.xml from backup '%s'" % str(err))
+				return (False, "Error, %s was not created with AutoTimerWebEditor..." % ATFN)
 
+			if check_tar:
 				from Plugins.Extensions.AutoTimer.plugin import autotimer
-				if autotimer is not None:
+				if autotimer:
 					try:
 						# Force config reload
 						autotimer.configMtime = -1
 						autotimer.readXml()
-					except Exception:
-						# TODO: proper error handling
-						pass
-
-				os.remove(ATFN)
+					except Exception as err:
+						print("[OpenWebif] Error: read autotimer.xml from backup '%s'" % str(err))
+						remove(ATFN)
+						return (False, "Error in autotimer.xml ...")
+					remove(ATFN)
 				return (True, "AutoTimer-settings were restored successfully")
 			else:
 				return (False, "Error, %s was not created with AutoTimerWebEditor..." % ATFN)
@@ -137,18 +135,16 @@ class AutoTimerDoRestoreResource(resource.Resource):
 			return (False, "Error, %s does not exists, restore is not possible..." % ATFN)
 
 
-class ATController(resource.Resource):
+class ATController(ATBaseController):
 	def __init__(self, session):
-		resource.Resource.__init__(self)
-		self.session = session
-
+		ATBaseController.__init__(self, session)
 		try:
 			from Plugins.Extensions.AutoTimer.AutoTimerResource import AutoTimerDoParseResource, \
 				AutoTimerAddOrEditAutoTimerResource, AutoTimerChangeSettingsResource, \
 				AutoTimerRemoveAutoTimerResource, AutoTimerSettingsResource, \
 				AutoTimerSimulateResource
-		except ImportError as e:
-			# print("AT plugin not found")
+		except ImportError:
+			print("[OpenWebif] AT plugin not found")
 			return
 		self.putChild(b'parse', AutoTimerDoParseResource())
 		self.putChild(b'remove', AutoTimerRemoveAutoTimerResource())
@@ -159,14 +155,12 @@ class ATController(resource.Resource):
 		try:
 			from Plugins.Extensions.AutoTimer.AutoTimerResource import AutoTimerTestResource
 			self.putChild(b'test', AutoTimerTestResource())
-		except ImportError as e:
-			# this is not an error
+		except ImportError:
 			pass
 		try:
 			from Plugins.Extensions.AutoTimer.AutoTimerResource import AutoTimerChangeResource
 			self.putChild(b'change', AutoTimerChangeResource())
-		except ImportError as e:
-			# this is not an error
+		except ImportError:
 			pass
 		self.putChild(b'uploadfile', ATUploadFile(session))
 		self.putChild(b'restore', AutoTimerDoRestoreResource())
@@ -176,14 +170,11 @@ class ATController(resource.Resource):
 			from Plugins.Extensions.AutoTimer.AutoTimerResource import AutoTimerUploadXMLConfigurationAutoTimerResource, AutoTimerAddXMLAutoTimerResource
 			self.putChild(b'upload_xmlconfiguration', AutoTimerUploadXMLConfigurationAutoTimerResource())
 			self.putChild(b'add_xmltimer', AutoTimerAddXMLAutoTimerResource())
-		except ImportError as e:
-			# this is not an error
+		except ImportError:
 			pass
 
 	def render(self, request):
-		request.setResponseCode(http.OK)
-		request.setHeader('Content-type', 'application/xhtml+xml')
-		request.setHeader('charset', 'UTF-8')
+		self.setHeader(request, True)
 		try:
 			from Plugins.Extensions.AutoTimer.plugin import autotimer
 			try:
@@ -191,6 +182,6 @@ class ATController(resource.Resource):
 					autotimer.readXml()
 					return ensure_binary(''.join(autotimer.getXml()))
 			except Exception:
-				return b'<?xml version="1.0" encoding="UTF-8" ?><e2simplexmlresult><e2state>false</e2state><e2statetext>AutoTimer Config not found</e2statetext></e2simplexmlresult>'
+				return e2simplexmlresult(False, b"AutoTimer Config not found")
 		except ImportError:
-			return b'<?xml version="1.0" encoding="UTF-8" ?><e2simplexmlresult><e2state>false</e2state><e2statetext>AutoTimer Plugin not found</e2statetext></e2simplexmlresult>'
+			return e2simplexmlresult(False, b"AutoTimer Plugin not found")

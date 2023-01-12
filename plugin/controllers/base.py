@@ -22,7 +22,7 @@
 
 from os.path import basename, exists
 import imp
-import json
+from json import dumps
 from six import ensure_str, ensure_binary, ensure_text, PY2
 
 from twisted.web import server, http, resource
@@ -39,28 +39,24 @@ from Components.config import config
 
 from Plugins.Extensions.OpenWebif.controllers.models.info import getInfo
 from Plugins.Extensions.OpenWebif.controllers.models.config import getCollapsedMenus, getConfigsSections, getShowName, getCustomName, getBoxName
-from Plugins.Extensions.OpenWebif.controllers.defaults import getPublicPath, getViewsPath, EXT_EVENT_INFO_SOURCE, STB_LANG, getIP, HASAUTOTIMER, TEXTINPUTSUPPORT
+from Plugins.Extensions.OpenWebif.controllers.defaults import getPublicPath, getViewsPath, EXT_EVENT_INFO_SOURCE, STB_LANG, getIP, HASAUTOTIMER, TEXTINPUTSUPPORT, WEBTV
 from Components.SystemInfo import BoxInfo
 
 
 def new_getRequestHostname(self):
 	host = self.getHeader(b'host')
 	if host:
-		if host[0] == b'[':
-			host = host.split(b']', 1)[0] + b"]"
+		host = host.decode('ascii')
+		if host.startswith("["):
+			host = host.split("]")[0] + "]"
 		else:
-			host = host.split(b':', 1)[0]
+			host = host.split(":")[0]
 	else:
 		host = self.getHost().host
-	host = ensure_str(host).encode('ascii')
 	return ensure_str(host)
 
 
 http.Request.getRequestHostname = new_getRequestHostname
-
-REMOTE = ''
-from Plugins.Extensions.OpenWebif.controllers.models.owibranding import rc_model
-REMOTE = rc_model().getRcFolder()
 
 
 class BaseController(resource.Resource):
@@ -79,7 +75,6 @@ class BaseController(resource.Resource):
 			* isJson: responses shall be JSON encoded
 			* isCustom: (?)
 			* isGZ: responses shall be GZIP compressed
-			* isMobile: (?) responses shall be optimised for mobile devices
 			* isImage: (?) responses shall image
 		"""
 		resource.Resource.__init__(self)
@@ -90,7 +85,6 @@ class BaseController(resource.Resource):
 		self.isJson = kwargs.get("isJson", False)
 		self.isCustom = kwargs.get("isCustom", False)
 		self.isGZ = kwargs.get("isGZ", False)
-		self.isMobile = kwargs.get("isMobile", False)
 		self.isImage = kwargs.get("isImage", False)
 
 	def error404(self, request):
@@ -166,11 +160,10 @@ class BaseController(resource.Resource):
 			defer.returnValue(0)
 
 		# cache data
-		withMainTemplate = self.withMainTemplate
-		path = self.path
-		isCustom = self.isCustom
-		isMobile = self.isMobile
-		isImage = self.isImage
+		_withmaintemplate = self.withMainTemplate
+		_path = self.path
+		_iscustom = self.isCustom
+		_isimage = self.isImage
 
 		if self.path == "":
 			self.path = "index"
@@ -211,10 +204,10 @@ class BaseController(resource.Resource):
 			elif self.isJson:
 				request.setHeader("content-type", "application/json; charset=utf-8")
 				try:
-					return ensure_binary(json.dumps(data, indent=1))
+					return ensure_binary(dumps(data, indent=1))
 				except Exception as exc:
 					request.setResponseCode(http.INTERNAL_SERVER_ERROR)
-					return ensure_binary(json.dumps({"result": False, "request": request.path, "exception": repr(exc)}))
+					return ensure_binary(dumps({"result": False, "request": request.path, "exception": repr(exc)}))
 					pass
 			elif isinstance(data, str):
 				# if not self.suppresslog:
@@ -236,10 +229,7 @@ class BaseController(resource.Resource):
 					print("[OpenWebif] ERROR! Template not found for page '%s'" % request.uri)
 					self.error404(request)
 				else:
-					if self.isMobile:
-						head = self.loadTemplate('mobile/head', 'head', [])
-						out = head + out
-					elif self.withMainTemplate:
+					if self.withMainTemplate:
 						args = self.prepareMainTemplate(request)
 						args["content"] = out
 						nout = self.loadTemplate("main", "main", args)
@@ -255,11 +245,10 @@ class BaseController(resource.Resource):
 			self.error404(request)
 
 		# restore cached data
-		self.withMainTemplate = withMainTemplate
-		self.path = path
-		self.isCustom = isCustom
-		self.isMobile = isMobile
-		self.isImage = isImage
+		self.withMainTemplate = _withmaintemplate
+		self.path = _path
+		self.isCustom = _iscustom
+		self.isImage = _isimage
 
 		return server.NOT_DONE_YET
 
@@ -306,7 +295,6 @@ class BaseController(resource.Resource):
 		if not ret['boxname'] or not ret['customname']:
 			ret['boxname'] = getInfo()['brand'] + " " + getInfo()['model']
 		ret['box'] = BoxInfo.getItem("model")
-		ret["remote"] = REMOTE
 		if hasattr(eEPGCache, 'FULL_DESCRIPTION_SEARCH'):
 			ret['epgsearchcaps'] = True
 		else:
@@ -314,11 +302,10 @@ class BaseController(resource.Resource):
 		extras = [{'key': 'ajax/settings', 'description': _("Settings")}]
 
 		ip = getIP()
-		if ip != None:
-			if isPluginInstalled("LCD4linux"):
-				lcd4linux_key = "lcd4linux/config"
-				if lcd4linux_key:
-					extras.append({'key': lcd4linux_key, 'description': _("LCD4Linux Setup"), 'nw': '1'})
+		if ip != None and isPluginInstalled("LCD4linux", "WebSite"):
+			lcd4linux_key = "lcd4linux/config"
+			if lcd4linux_key:
+				extras.append({'key': lcd4linux_key, 'description': _("LCD4Linux Setup"), 'nw': '1'})
 
 		oscamwebif, port, oscamconf, variant = self.oscamconfPath()
 
@@ -329,13 +316,17 @@ class BaseController(resource.Resource):
 		if oscamwebif and oscamconf is not None:
 			# oscam defaults to NOT to start the web interface unless a section for it exists, so reset port to None until we find one
 			port = None
-			data = open(oscamconf, "r").readlines() if PY2 else open(oscamconf, "r", encoding="UTF-8").readlines()
-			for i in data:
-				if "httpport" in i.lower():
-					port = i.split("=")[1].strip()
-					if port[0] == '+':
-						proto = "https"
-						port = port[1:]
+			try:
+				with open(oscamconf, "r") as fd:
+					data = fd.readlines()
+					for i in data:
+						if "httpport" in i.lower():
+							port = i.split("=")[1].strip()
+							if port[0] == '+':
+								proto = "https"
+								port = port[1:]
+			except OSError:
+				pass
 
 		if oscamwebif and port is not None:
 			url = "%s://%s:%s" % (proto, request.getRequestHostname(), port)
@@ -374,15 +365,15 @@ class BaseController(resource.Resource):
 						extras.append({'key': plugins[0], 'description': plugins[2], 'nw': '2'})
 					except KeyError:
 						pass
-				elif len(plugins) > 4:
-					if plugins[4] == True:
-						try:
-							if len(plugins) > 5 and plugins[5] == "_self":
-								extras.append({'key': plugins[0], 'description': plugins[2]})
-							else:
-								extras.append({'key': plugins[0], 'description': plugins[2], 'nw': '1'})
-						except KeyError:
-							pass
+				elif len(plugins) > 4 and plugins[4] is True:
+					try:
+						if len(plugins) > 5 and plugins[5] == "_self":
+							extras.append({'key': plugins[0], 'description': plugins[2]})
+						else:
+							extras.append({'key': plugins[0], 'description': plugins[2], 'nw': '1'})
+					except KeyError:
+						pass
+
 		except ImportError:
 			pass
 
@@ -403,9 +394,7 @@ class BaseController(resource.Resource):
 		config.OpenWebif.webcache.moviedb.value = moviedb
 		config.OpenWebif.webcache.moviedb.save()
 		ret['moviedb'] = moviedb
-		imagedistro = getInfo()['imagedistro']
-		ret['vti'] = "0"
-		ret['webtv'] = exists(getPublicPath('webtv'))
+		ret['webtv'] = WEBTV
 		ret['stbLang'] = STB_LANG
 		smallremote = config.OpenWebif.webcache.smallremote.value if config.OpenWebif.webcache.smallremote.value else 'new'
 		ret['smallremote'] = smallremote
